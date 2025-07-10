@@ -40,7 +40,7 @@
         <aixm:ApronTimeSlice gml:id="ID_TS_0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_TS_VT_0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -53,11 +53,11 @@
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <aixm:name>APRON</aixm:name>
+          <aixm:name>APRON A</aixm:name>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_TS_SC_0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
-              <aixm:composition>CONC</aixm:composition>
+              <aixm:composition>ASPH</aixm:composition>
               <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
@@ -70,6 +70,22 @@
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="ID_TS_AAA_0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="ID_AAU_0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
+                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
         </aixm:ApronTimeSlice>

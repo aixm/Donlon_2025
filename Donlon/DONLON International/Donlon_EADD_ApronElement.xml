@@ -40,7 +40,7 @@
         <aixm:ApronElementTimeSlice gml:id="ID_TS_285fd2af-599a-4f9b-b812-fd24a68416c4">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_TS_VT_285fd2af-599a-4f9b-b812-fd24a68416c4">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -56,17 +56,6 @@
           <aixm:type>NORMAL</aixm:type>
           <aixm:length uom="M">640</aixm:length>
           <aixm:associatedApron xlink:href="urn:uuid:0dac7a5f-4cb6-41a2-b0eb-dac1c555351c"/>
-          <aixm:surfaceProperties>
-            <aixm:SurfaceCharacteristics gml:id="ID_TS_SC_285fd2af-599a-4f9b-b812-fd24a68416c4">
-              <aixm:composition>CONC</aixm:composition>
-              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
-              <aixm:classPCN>80</aixm:classPCN>
-              <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
-              <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
-              <aixm:maxTyrePressurePCN>W</aixm:maxTyrePressurePCN>
-              <aixm:evaluationMethodPCN>TECH</aixm:evaluationMethodPCN>
-            </aixm:SurfaceCharacteristics>
-          </aixm:surfaceProperties>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_TS_ES_285fd2af-599a-4f9b-b812-fd24a68416c4">
               <gml:patches>
@@ -223,13 +212,13 @@
                   </gml:exterior>
                 </gml:PolygonPatch>
               </gml:patches>
+              <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedSurface>
           </aixm:extent>
-          <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="ID_TS_AAA_285fd2af-599a-4f9b-b812-fd24a68416c4">
-              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
-            </aixm:ApronAreaAvailability>
-          </aixm:availability>
         </aixm:ApronElementTimeSlice>
       </aixm:timeSlice>
     </aixm:ApronElement>
@@ -241,7 +230,7 @@
         <aixm:ApronElementTimeSlice gml:id="ID_TS_8e306929-e4cb-4d15-a758-62cc6c3ff60c">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_TS_VT_8e306929-e4cb-4d15-a758-62cc6c3ff60c">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -255,24 +244,13 @@
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>PARKING</aixm:type>
-          <aixm:jetwayAvailability>NO</aixm:jetwayAvailability>
+          <aixm:jetwayAvailability>YES</aixm:jetwayAvailability>
           <aixm:towingAvailability>YES</aixm:towingAvailability>
           <aixm:dockingAvailability>YES</aixm:dockingAvailability>
           <aixm:groundPowerAvailability>YES</aixm:groundPowerAvailability>
           <aixm:length uom="M">474</aixm:length>
           <aixm:width uom="M">104</aixm:width>
           <aixm:associatedApron xlink:href="urn:uuid:0dac7a5f-4cb6-41a2-b0eb-dac1c555351c"/>
-          <aixm:surfaceProperties>
-            <aixm:SurfaceCharacteristics gml:id="ID_TS_SC_8e306929-e4cb-4d15-a758-62cc6c3ff60c">
-              <aixm:composition>CONC</aixm:composition>
-              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
-              <aixm:classPCN>80</aixm:classPCN>
-              <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
-              <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
-              <aixm:maxTyrePressurePCN>W</aixm:maxTyrePressurePCN>
-              <aixm:evaluationMethodPCN>TECH</aixm:evaluationMethodPCN>
-            </aixm:SurfaceCharacteristics>
-          </aixm:surfaceProperties>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_TS_ES_8e306929-e4cb-4d15-a758-62cc6c3ff60c">
               <gml:patches>
@@ -302,16 +280,27 @@
                   </gml:exterior>
                 </gml:PolygonPatch>
               </gml:patches>
+              <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedSurface>
           </aixm:extent>
           <aixm:supplyService xlink:href="urn:uuid:e2bcd976-30e9-4bf0-862e-3b817abe9288" xlink:title="DONLON/INTL FUEL SUPPLY SERVICE"/>
           <aixm:supplyService xlink:href="urn:uuid:77285e58-a395-43ad-8c22-05fbebaf2190" xlink:title="DONLON/INTL OIL SUPPLY SERVICE"/>
           <aixm:supplyService xlink:href="urn:uuid:b5fb5962-3023-4103-9f2f-a3a536c9bc5f" xlink:title="DONLON/INTL OXYGEN AND NITROGEN SUPPLY SERVICE"/>
-          <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="ID_TS_AAA_8e306929-e4cb-4d15-a758-62cc6c3ff60c">
-              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
-            </aixm:ApronAreaAvailability>
-          </aixm:availability>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_8e306929-e4cb-4d15-a758-62cc6c3ff60c">
+              <aixm:propertyName>jetwayAvailability</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_N_LN_8e306929-e4cb-4d15-a758-62cc6c3ff60c">
+                  <aixm:note lang="eng">Passenger loading bridge (jetway) available for stands 9 to 12</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
         </aixm:ApronElementTimeSlice>
       </aixm:timeSlice>
     </aixm:ApronElement>
@@ -323,7 +312,7 @@
         <aixm:ApronElementTimeSlice gml:id="ID_TS_80c0f575-275d-4e73-9643-da049e6913be">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_TS_VT_80c0f575-275d-4e73-9643-da049e6913be">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -344,17 +333,6 @@
           <aixm:length uom="M">474</aixm:length>
           <aixm:width uom="M">104</aixm:width>
           <aixm:associatedApron xlink:href="urn:uuid:0dac7a5f-4cb6-41a2-b0eb-dac1c555351c"/>
-          <aixm:surfaceProperties>
-            <aixm:SurfaceCharacteristics gml:id="ID_TS_SC_80c0f575-275d-4e73-9643-da049e6913be">
-              <aixm:composition>CONC</aixm:composition>
-              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
-              <aixm:classPCN>80</aixm:classPCN>
-              <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
-              <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
-              <aixm:maxTyrePressurePCN>W</aixm:maxTyrePressurePCN>
-              <aixm:evaluationMethodPCN>TECH</aixm:evaluationMethodPCN>
-            </aixm:SurfaceCharacteristics>
-          </aixm:surfaceProperties>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_TS_ES_80c0f575-275d-4e73-9643-da049e6913be">
               <gml:patches>
@@ -376,16 +354,16 @@
                   </gml:exterior>
                 </gml:PolygonPatch>
               </gml:patches>
+              <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedSurface>
           </aixm:extent>
           <aixm:supplyService xlink:href="urn:uuid:e2bcd976-30e9-4bf0-862e-3b817abe9288" xlink:title="DONLON/INTL FUEL SUPPLY SERVICE"/>
           <aixm:supplyService xlink:href="urn:uuid:77285e58-a395-43ad-8c22-05fbebaf2190" xlink:title="DONLON/INTL OIL SUPPLY SERVICE"/>
           <aixm:supplyService xlink:href="urn:uuid:b5fb5962-3023-4103-9f2f-a3a536c9bc5f" xlink:title="DONLON/INTL OXYGEN AND NITROGEN SUPPLY SERVICE"/>
-          <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="ID_TS_AAA_80c0f575-275d-4e73-9643-da049e6913be">
-              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
-            </aixm:ApronAreaAvailability>
-          </aixm:availability>
         </aixm:ApronElementTimeSlice>
       </aixm:timeSlice>
     </aixm:ApronElement>

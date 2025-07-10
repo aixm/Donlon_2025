@@ -40,12 +40,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_B">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_17">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="lt_17">
@@ -56,11 +56,13 @@
           <aixm:designator>B</aixm:designator>
           <aixm:type>GND</aixm:type>
           <aixm:width uom="M">20.0</aixm:width>
+          <aixm:widthShoulder uom="M">4</aixm:widthShoulder>
           <aixm:length uom="M">174.0</aixm:length>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_18">
               <aixm:composition>CONC_ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
@@ -72,6 +74,27 @@
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_TS_MAA_78396f68-9c03-438a-a6b4-331157b1a79c">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_78396f68-9c03-438a-a6b4-331157b1a79c">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_78396f68-9c03-438a-a6b4-331157b1a79c">
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC1_78396f68-9c03-438a-a6b4-331157b1a79c">
+                          <aixm:classWingSpan>V</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC2_78396f68-9c03-438a-a6b4-331157b1a79c">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
             </aixm:ManoeuvringAreaAvailability>
           </aixm:availability>
         </aixm:TaxiwayTimeSlice>
@@ -85,12 +108,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_A">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_1">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_2">
@@ -101,11 +124,13 @@
           <aixm:designator>A</aixm:designator>
           <aixm:type>PARALLEL</aixm:type>
           <aixm:width uom="M">23.0</aixm:width>
+          <aixm:widthShoulder uom="M">4</aixm:widthShoulder>
           <aixm:length uom="M">2180.0</aixm:length>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_DCH_01_17_2023_N_3">
               <aixm:composition>ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
@@ -117,6 +142,22 @@
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_TS_MAA_25cdac1e-175a-42d8-b1b7-3aee50a86ab1">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_25cdac1e-175a-42d8-b1b7-3aee50a86ab1">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_25cdac1e-175a-42d8-b1b7-3aee50a86ab1">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_25cdac1e-175a-42d8-b1b7-3aee50a86ab1">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
             </aixm:ManoeuvringAreaAvailability>
           </aixm:availability>
         </aixm:TaxiwayTimeSlice>
@@ -130,12 +171,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_D">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_4">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_5">
@@ -146,11 +187,13 @@
           <aixm:designator>D</aixm:designator>
           <aixm:type>FASTEXIT</aixm:type>
           <aixm:width uom="M">23.0</aixm:width>
+          <aixm:widthShoulder uom="M">4</aixm:widthShoulder>
           <aixm:length uom="M">355.0</aixm:length>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_DCH_01_17_2023_N_6">
               <aixm:composition>ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
@@ -162,6 +205,22 @@
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_TS_MAA_82b7e50a-6c64-4b4b-99a0-697c558960ca">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_82b7e50a-6c64-4b4b-99a0-697c558960ca">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_82b7e50a-6c64-4b4b-99a0-697c558960ca">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_82b7e50a-6c64-4b4b-99a0-697c558960ca">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
             </aixm:ManoeuvringAreaAvailability>
           </aixm:availability>
         </aixm:TaxiwayTimeSlice>
@@ -175,12 +234,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_C">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_7">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_8">
@@ -191,11 +250,13 @@
           <aixm:designator>C</aixm:designator>
           <aixm:type>FASTEXIT</aixm:type>
           <aixm:width uom="M">23.0</aixm:width>
+          <aixm:widthShoulder uom="M">4</aixm:widthShoulder>
           <aixm:length uom="M">355.0</aixm:length>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_DCH_01_17_2023_N_9">
               <aixm:composition>ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
@@ -207,6 +268,22 @@
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_TS_MAA_5c751c44-d570-4dfc-b5b1-e62fdaf36b5e">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5c751c44-d570-4dfc-b5b1-e62fdaf36b5e">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_5c751c44-d570-4dfc-b5b1-e62fdaf36b5e">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_5c751c44-d570-4dfc-b5b1-e62fdaf36b5e">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
             </aixm:ManoeuvringAreaAvailability>
           </aixm:availability>
         </aixm:TaxiwayTimeSlice>
@@ -220,12 +297,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_F">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_10">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_11">
@@ -236,11 +313,13 @@
           <aixm:designator>F</aixm:designator>
           <aixm:type>PARALLEL</aixm:type>
           <aixm:width uom="M">23.0</aixm:width>
+          <aixm:widthShoulder uom="M">0</aixm:widthShoulder>
           <aixm:length uom="M">1522.0</aixm:length>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_DCH_01_17_2023_N_12">
               <aixm:composition>ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
@@ -249,6 +328,27 @@
             </aixm:SurfaceCharacteristics>
           </aixm:surfaceProperties>
           <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="AHP_EADD"/>
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_4f71b0f7-524c-4838-a6f8-5383de5c0d95">
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_4f71b0f7-524c-4838-a6f8-5383de5c0d95">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_4f71b0f7-524c-4838-a6f8-5383de5c0d95">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_4f71b0f7-524c-4838-a6f8-5383de5c0d95">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
         </aixm:TaxiwayTimeSlice>
       </aixm:timeSlice>
     </aixm:Taxiway>
@@ -260,12 +360,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_H">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_13">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_14">
@@ -276,11 +376,13 @@
           <aixm:designator>H</aixm:designator>
           <aixm:type>FASTEXIT</aixm:type>
           <aixm:width uom="M">23.0</aixm:width>
+          <aixm:widthShoulder uom="M">0</aixm:widthShoulder>
           <aixm:length uom="M">369.0</aixm:length>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_DCH_01_17_2023_N_15">
               <aixm:composition>ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
@@ -289,6 +391,27 @@
             </aixm:SurfaceCharacteristics>
           </aixm:surfaceProperties>
           <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="AHP_EADD"/>
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_2ced3f84-9616-4fdd-a508-cf827a919583">
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_2ced3f84-9616-4fdd-a508-cf827a919583">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_2ced3f84-9616-4fdd-a508-cf827a919583">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_2ced3f84-9616-4fdd-a508-cf827a919583">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
         </aixm:TaxiwayTimeSlice>
       </aixm:timeSlice>
     </aixm:Taxiway>
@@ -300,12 +423,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_E">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_16">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_17">
@@ -316,11 +439,13 @@
           <aixm:designator>E</aixm:designator>
           <aixm:type>PARALLEL</aixm:type>
           <aixm:width uom="M">23.0</aixm:width>
+          <aixm:widthShoulder uom="M">4</aixm:widthShoulder>
           <aixm:length uom="M">1345.0</aixm:length>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_DCH_01_17_2023_N_18">
               <aixm:composition>ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
@@ -332,6 +457,22 @@
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_TS_MAA_197fdb64-992d-4afc-80c0-70defd1c7224">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_197fdb64-992d-4afc-80c0-70defd1c7224">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_197fdb64-992d-4afc-80c0-70defd1c7224">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_197fdb64-992d-4afc-80c0-70defd1c7224">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
             </aixm:ManoeuvringAreaAvailability>
           </aixm:availability>
         </aixm:TaxiwayTimeSlice>
@@ -345,12 +486,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_G">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_19">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_DCH_01_17_2023_N_20">
@@ -361,22 +502,29 @@
           <aixm:designator>G</aixm:designator>
           <aixm:type>GND</aixm:type>
           <aixm:width uom="M">23.0</aixm:width>
+          <aixm:widthShoulder uom="M">0</aixm:widthShoulder>
           <aixm:length uom="M">188.0</aixm:length>
           <aixm:abandoned>NO</aixm:abandoned>
-          <aixm:surfaceProperties>
-            <aixm:SurfaceCharacteristics gml:id="ID_DCH_01_17_2023_N_21">
-              <aixm:composition>ASPH</aixm:composition>
-              <aixm:classPCN>80</aixm:classPCN>
-              <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
-              <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
-              <aixm:maxTyrePressurePCN>W</aixm:maxTyrePressurePCN>
-              <aixm:evaluationMethodPCN>TECH</aixm:evaluationMethodPCN>
-            </aixm:SurfaceCharacteristics>
-          </aixm:surfaceProperties>
           <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="AHP_EADD"/>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_d243752a-7859-41a5-bbc6-3de39c07fe90">
-              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_d243752a-7859-41a5-bbc6-3de39c07fe90">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_d243752a-7859-41a5-bbc6-3de39c07fe90">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_d243752a-7859-41a5-bbc6-3de39c07fe90">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
             </aixm:ManoeuvringAreaAvailability>
           </aixm:availability>
         </aixm:TaxiwayTimeSlice>
@@ -390,12 +538,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_R">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_01_18_2023_N_1">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_DCH_01_18_2023_N_2">
@@ -406,9 +554,13 @@
           <aixm:designator>R</aixm:designator>
           <aixm:type>GND</aixm:type>
           <aixm:width uom="M">23.0</aixm:width>
+          <aixm:widthShoulder xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:length uom="M">640</aixm:length>
+          <aixm:abandoned>NO</aixm:abandoned>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_DCH_01_18_2023_N_3">
               <aixm:composition>ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
@@ -420,6 +572,23 @@
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_TS_MAA_3767df92-7d0d-4f93-bef0-aaf0418efeac">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_3767df92-7d0d-4f93-bef0-aaf0418efeac">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_3767df92-7d0d-4f93-bef0-aaf0418efeac">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_3767df92-7d0d-4f93-bef0-aaf0418efeac">
+                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
             </aixm:ManoeuvringAreaAvailability>
           </aixm:availability>
         </aixm:TaxiwayTimeSlice>
@@ -433,12 +602,12 @@
         <aixm:TaxiwayTimeSlice gml:id="EADD_TWY_I">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_TS_VT_9efb4d2b-26ee-46c3-b1ca-e9651ef7cec7">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_TS_FL_9efb4d2b-26ee-46c3-b1ca-e9651ef7cec7">
@@ -449,9 +618,12 @@
           <aixm:designator>I</aixm:designator>
           <aixm:type>AIR</aixm:type>
           <aixm:width uom="M">10.0</aixm:width>
+          <aixm:widthShoulder uom="M">0</aixm:widthShoulder>
+          <aixm:length uom="M">184</aixm:length>
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_TS_SC_9efb4d2b-26ee-46c3-b1ca-e9651ef7cec7">
               <aixm:composition>ASPH</aixm:composition>
+              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>

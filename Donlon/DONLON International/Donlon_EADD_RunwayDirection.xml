@@ -45,7 +45,7 @@
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ltILURU95">
@@ -58,31 +58,81 @@
           <aixm:trueBearingAccuracy>0.01</aixm:trueBearingAccuracy>
           <aixm:magneticBearing>86.23</aixm:magneticBearing>
           <aixm:patternVFR>LEFT</aixm:patternVFR>
-          <aixm:slopeTDZ>+0.5</aixm:slopeTDZ>
+          <aixm:slopeTDZ>-0.5</aixm:slopeTDZ>
           <aixm:elevationTDZ uom="M">29.25</aixm:elevationTDZ>
           <aixm:elevationTDZAccuracy uom="M">0.25</aixm:elevationTDZAccuracy>
           <aixm:approachMarkingType>PRECISION</aixm:approachMarkingType>
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>FALS</aixm:classLightingJAR>
+          <aixm:precisionApproachGuidance>ILS_PRECISION_CAT_II</aixm:precisionApproachGuidance>
           <aixm:usedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:title="RWY_EADD_09L/27R"/>
           <aixm:startingElement xlink:href="urn:uuid:861e2544-30ad-40c0-80e7-d596fd0dc9aa"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_TS_N_c8455a6b-9319-4bb7-b797-08e644342d64">
+              <aixm:propertyName>magneticBearing</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_TS_N_LN_c8455a6b-9319-4bb7-b797-08e644342d64">
+                  <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_c8455a6b-9319-4bb7-b797-08e644342d64_1">
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_c8455a6b-9319-4bb7-b797-08e644342d64_5">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_c8455a6b-9319-4bb7-b797-08e644342d64_5">
-                      <aixm:logicalOperator>NOT</aixm:logicalOperator>
-                      <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_c8455a6b-9319-4bb7-b797-08e644342d64_5">
-                          <aixm:purpose>AIR_TRAINING</aixm:purpose>
-                        </aixm:FlightCharacteristic>
-                      </aixm:flight>
+                      <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC1_CC_c8455a6b-9319-4bb7-b797-08e644342d64_5">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC1_c8455a6b-9319-4bb7-b797-08e644342d64_5">
+                              <aixm:aircraftLandingCategory>A</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC2_c8455a6b-9319-4bb7-b797-08e644342d64_5">
+                              <aixm:aircraftLandingCategory>B</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC3_c8455a6b-9319-4bb7-b797-08e644342d64_5">
+                              <aixm:aircraftLandingCategory>C</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC4_c8455a6b-9319-4bb7-b797-08e644342d64_5">
+                              <aixm:aircraftLandingCategory>D</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC2_CC_c8455a6b-9319-4bb7-b797-08e644342d64_4">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:weather>
+                            <aixm:Meteorology gml:id="ID_M1_c8455a6b-9319-4bb7-b797-08e644342d64_4">
+                              <aixm:flightConditions>VMC</aixm:flightConditions>
+                            </aixm:Meteorology>
+                          </aixm:weather>
+                          <aixm:weather>
+                            <aixm:Meteorology gml:id="ID_M2_c8455a6b-9319-4bb7-b797-08e644342d64_4">
+                              <aixm:flightConditions>IMC</aixm:flightConditions>
+                              <aixm:runwayVisualRange uom="M">350</aixm:runwayVisualRange>
+                              <aixm:runwayVisualRangeInterpretation>AT_OR_ABOVE</aixm:runwayVisualRangeInterpretation>
+                            </aixm:Meteorology>
+                          </aixm:weather>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
-                  <aixm:operation>ALL</aixm:operation>
+                  <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
@@ -321,7 +371,7 @@
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ltILURU96">
@@ -334,7 +384,7 @@
           <aixm:trueBearingAccuracy>0.01</aixm:trueBearingAccuracy>
           <aixm:magneticBearing>268.27</aixm:magneticBearing>
           <aixm:patternVFR>LEFT</aixm:patternVFR>
-          <aixm:slopeTDZ>-0.5</aixm:slopeTDZ>
+          <aixm:slopeTDZ>+0.5</aixm:slopeTDZ>
           <aixm:elevationTDZ uom="M">20.5</aixm:elevationTDZ>
           <aixm:elevationTDZAccuracy uom="M">0.25</aixm:elevationTDZAccuracy>
           <aixm:approachMarkingType>PRECISION</aixm:approachMarkingType>
@@ -343,23 +393,72 @@
           <aixm:precisionApproachGuidance>ILS_PRECISION_CAT_II</aixm:precisionApproachGuidance>
           <aixm:usedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:title="RWY_EADD_09L/27R"/>
           <aixm:startingElement xlink:href="urn:uuid:81c87aec-9243-4be0-9d16-33df1deb6d38"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_TS_N_b802d439-e9f3-49f9-96e1-0153b837e113">
+              <aixm:propertyName>magneticBearing</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_TS_N_LN_b802d439-e9f3-49f9-96e1-0153b837e113">
+                  <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_b802d439-e9f3-49f9-96e1-0153b837e113_1">
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_b802d439-e9f3-49f9-96e1-0153b837e113_4">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_b802d439-e9f3-49f9-96e1-0153b837e113_4">
-                      <aixm:logicalOperator>NOT</aixm:logicalOperator>
-                      <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_b802d439-e9f3-49f9-96e1-0153b837e113_4">
-                          <aixm:purpose>AIR_TRAINING</aixm:purpose>
-                        </aixm:FlightCharacteristic>
-                      </aixm:flight>
+                      <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC1_CC_b802d439-e9f3-49f9-96e1-0153b837e113_4">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC1_b802d439-e9f3-49f9-96e1-0153b837e113_4">
+                              <aixm:aircraftLandingCategory>A</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC2_b802d439-e9f3-49f9-96e1-0153b837e113_4">
+                              <aixm:aircraftLandingCategory>B</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC3_b802d439-e9f3-49f9-96e1-0153b837e113_4">
+                              <aixm:aircraftLandingCategory>C</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC4_b802d439-e9f3-49f9-96e1-0153b837e113_4">
+                              <aixm:aircraftLandingCategory>D</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC2_CC_b802d439-e9f3-49f9-96e1-0153b837e113_4">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:weather>
+                            <aixm:Meteorology gml:id="ID_M1_b802d439-e9f3-49f9-96e1-0153b837e113_4">
+                              <aixm:flightConditions>VMC</aixm:flightConditions>
+                            </aixm:Meteorology>
+                          </aixm:weather>
+                          <aixm:weather>
+                            <aixm:Meteorology gml:id="ID_M2_b802d439-e9f3-49f9-96e1-0153b837e113_4">
+                              <aixm:flightConditions>IMC</aixm:flightConditions>
+                              <aixm:runwayVisualRange uom="M">350</aixm:runwayVisualRange>
+                              <aixm:runwayVisualRangeInterpretation>AT_OR_ABOVE</aixm:runwayVisualRangeInterpretation>
+                            </aixm:Meteorology>
+                          </aixm:weather>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
-                  <aixm:operation>ALL</aixm:operation>
+                  <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
@@ -505,7 +604,7 @@
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="lt_10">
@@ -524,33 +623,95 @@
           <aixm:approachMarkingType>PRECISION</aixm:approachMarkingType>
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>FALS</aixm:classLightingJAR>
+          <aixm:precisionApproachGuidance>OTHER:GLS_PRECISION_CAT_I</aixm:precisionApproachGuidance>
           <aixm:usedRunway xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a" xlink:title="RWY_EADD_09R/27L"/>
+          <aixm:startingElement xlink:href="urn:uuid:a2d3919c-8625-412a-84d1-791eeb513dbb"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_TS_N_5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
+              <aixm:propertyName>magneticBearing</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_TS_N_LN_5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
+                  <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
-                      <aixm:logicalOperator>NOT</aixm:logicalOperator>
+                    <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                      <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC1_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC1_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                              <aixm:aircraftLandingCategory>A</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC2_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                              <aixm:aircraftLandingCategory>B</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC3_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                              <aixm:aircraftLandingCategory>C</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC2_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:weather>
+                            <aixm:Meteorology gml:id="ID_M1_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                              <aixm:flightConditions>VMC</aixm:flightConditions>
+                            </aixm:Meteorology>
+                          </aixm:weather>
+                          <aixm:weather>
+                            <aixm:Meteorology gml:id="ID_M2_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                              <aixm:flightConditions>IMC</aixm:flightConditions>
+                              <aixm:runwayVisualRange uom="M">550</aixm:runwayVisualRange>
+                              <aixm:runwayVisualRangeInterpretation>AT_OR_ABOVE</aixm:runwayVisualRangeInterpretation>
+                            </aixm:Meteorology>
+                          </aixm:weather>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>LANDING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
+                        <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
                     </aixm:ConditionCombination>
                   </aixm:selection>
-                  <aixm:operation>ALL</aixm:operation>
+                  <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                    <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                        <aixm:Timesheet gml:id="ID_T1_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:dayTil>ANY</aixm:dayTil>
@@ -561,7 +722,7 @@
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
+                        <aixm:Timesheet gml:id="ID_T2_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -572,7 +733,7 @@
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
+                        <aixm:Timesheet gml:id="ID_T3_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -584,7 +745,7 @@
                       </aixm:timeInterval>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                        <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
@@ -594,13 +755,13 @@
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
+                    <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
+                        <aixm:Timesheet gml:id="ID_T1_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:startTime>06:00</aixm:startTime>
@@ -610,7 +771,7 @@
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_5">
+                        <aixm:Timesheet gml:id="ID_T2_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -621,7 +782,7 @@
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_6">
+                        <aixm:Timesheet gml:id="ID_T3_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -633,40 +794,24 @@
                       </aixm:timeInterval>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
+                        <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
-                    <aixm:Note gml:id="ID_N_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                    <aixm:Note gml:id="ID_N_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>DESCRIPTION</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="ID_LN_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
+                        <aixm:LinguisticNote gml:id="ID_LN_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
                           <aixm:note lang="eng">School and training flights must only be made after permission has been obtained from ATS</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>
                     </aixm:Note>
                   </aixm:annotation>
                   <aixm:operation>TAKEOFF</aixm:operation>
-                </aixm:ManoeuvringAreaUsage>
-              </aixm:usage>
-              <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
-                  <aixm:type>FORBID</aixm:type>
-                  <aixm:selection>
-                    <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
-                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
-                      <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
-                          <aixm:purpose>AIR_TRAINING</aixm:purpose>
-                        </aixm:FlightCharacteristic>
-                      </aixm:flight>
-                    </aixm:ConditionCombination>
-                  </aixm:selection>
-                  <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
             </aixm:ManoeuvringAreaAvailability>
@@ -687,7 +832,7 @@
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="lt_12">
@@ -700,41 +845,85 @@
           <aixm:trueBearingAccuracy>0.01</aixm:trueBearingAccuracy>
           <aixm:magneticBearing>265.47</aixm:magneticBearing>
           <aixm:patternVFR>LEFT</aixm:patternVFR>
-          <aixm:slopeTDZ>-1</aixm:slopeTDZ>
+          <aixm:slopeTDZ>+1</aixm:slopeTDZ>
           <aixm:elevationTDZ uom="M">29.20</aixm:elevationTDZ>
           <aixm:elevationTDZAccuracy uom="M">0.25</aixm:elevationTDZAccuracy>
           <aixm:approachMarkingType>PRECISION</aixm:approachMarkingType>
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>FALS</aixm:classLightingJAR>
-          <aixm:precisionApproachGuidance>ILS_PRECISION_CAT_II</aixm:precisionApproachGuidance>
+          <aixm:precisionApproachGuidance>OTHER:GLS_PRECISION_CAT_I</aixm:precisionApproachGuidance>
           <aixm:usedRunway xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a" xlink:title="RWY_EADD_09R/27L"/>
+          <aixm:startingElement xlink:href="urn:uuid:64402b85-258f-4317-b053-9e51fc64287e"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_TS_N_ee6019d6-29f7-404d-8cee-b6819f325aed">
+              <aixm:propertyName>magneticBearing</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_TS_N_LN_ee6019d6-29f7-404d-8cee-b6819f325aed">
+                  <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
               <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
-                      <aixm:logicalOperator>NOT</aixm:logicalOperator>
-                      <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
-                          <aixm:purpose>AIR_TRAINING</aixm:purpose>
-                        </aixm:FlightCharacteristic>
-                      </aixm:flight>
+                    <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
+                      <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC1_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC1_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
+                              <aixm:aircraftLandingCategory>A</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC2_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
+                              <aixm:aircraftLandingCategory>B</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC3_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
+                              <aixm:aircraftLandingCategory>C</aixm:aircraftLandingCategory>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC2_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:weather>
+                            <aixm:Meteorology gml:id="ID_M1_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
+                              <aixm:flightConditions>VMC</aixm:flightConditions>
+                            </aixm:Meteorology>
+                          </aixm:weather>
+                          <aixm:weather>
+                            <aixm:Meteorology gml:id="ID_M2_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
+                              <aixm:flightConditions>IMC</aixm:flightConditions>
+                              <aixm:runwayVisualRange uom="M">550</aixm:runwayVisualRange>
+                              <aixm:runwayVisualRangeInterpretation>AT_OR_ABOVE</aixm:runwayVisualRangeInterpretation>
+                            </aixm:Meteorology>
+                          </aixm:weather>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
-                  <aixm:operation>ALL</aixm:operation>
+                  <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
+                    <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
+                        <aixm:Timesheet gml:id="ID_T1_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:dayTil>ANY</aixm:dayTil>
@@ -745,7 +934,7 @@
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
+                        <aixm:Timesheet gml:id="ID_T2_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -756,7 +945,7 @@
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
+                        <aixm:Timesheet gml:id="ID_T3_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -764,55 +953,6 @@
                           <aixm:endTime>00:00</aixm:endTime>
                           <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
                           <aixm:excluded>NO</aixm:excluded>
-                        </aixm:Timesheet>
-                      </aixm:timeInterval>
-                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
-                      <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
-                          <aixm:purpose>AIR_TRAINING</aixm:purpose>
-                        </aixm:FlightCharacteristic>
-                      </aixm:flight>
-                    </aixm:ConditionCombination>
-                  </aixm:selection>
-                  <aixm:operation>TAKEOFF</aixm:operation>
-                </aixm:ManoeuvringAreaUsage>
-              </aixm:usage>
-              <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
-                  <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
-                  <aixm:selection>
-                    <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
-                      <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
-                          <aixm:timeReference>UTC</aixm:timeReference>
-                          <aixm:day>ANY</aixm:day>
-                          <aixm:startTime>06:00</aixm:startTime>
-                          <aixm:endTime>18:00</aixm:endTime>
-                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                          <aixm:excluded>NO</aixm:excluded>
-                        </aixm:Timesheet>
-                      </aixm:timeInterval>
-                      <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
-                          <aixm:timeReference>UTC</aixm:timeReference>
-                          <aixm:day>SUN</aixm:day>
-                          <aixm:dayTil>MON</aixm:dayTil>
-                          <aixm:startTime>00:00</aixm:startTime>
-                          <aixm:endTime>00:00</aixm:endTime>
-                          <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                          <aixm:excluded>YES</aixm:excluded>
-                        </aixm:Timesheet>
-                      </aixm:timeInterval>
-                      <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_6">
-                          <aixm:timeReference>UTC</aixm:timeReference>
-                          <aixm:day>HOL</aixm:day>
-                          <aixm:dayTil>AFT_HOL</aixm:dayTil>
-                          <aixm:startTime>00:00</aixm:startTime>
-                          <aixm:endTime>00:00</aixm:endTime>
-                          <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                          <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
@@ -823,56 +963,45 @@
                       </aixm:flight>
                     </aixm:ConditionCombination>
                   </aixm:selection>
-                  <aixm:annotation>
-                    <aixm:Note gml:id="ID_N_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
-                      <aixm:propertyName>priorPermission</aixm:propertyName>
-                      <aixm:purpose>DESCRIPTION</aixm:purpose>
-                      <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="ID_LN_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
-                          <aixm:note lang="eng">School and training flights must only be made after permission has been obtained from ATS</aixm:note>
-                        </aixm:LinguisticNote>
-                      </aixm:translatedNote>
-                    </aixm:Note>
-                  </aixm:annotation>
                   <aixm:operation>TAKEOFF</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
-                  <aixm:type>FORBID</aixm:type>
+                  <aixm:type>CONDITIONAL</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_7">
+                        <aixm:Timesheet gml:id="ID_T1_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
-                          <aixm:dayTil>ANY</aixm:dayTil>
-                          <aixm:startTime>18:00</aixm:startTime>
-                          <aixm:endTime>06:00</aixm:endTime>
+                          <aixm:startTime>06:00</aixm:startTime>
+                          <aixm:endTime>18:00</aixm:endTime>
                           <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_8">
+                        <aixm:Timesheet gml:id="ID_T2_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
                           <aixm:startTime>00:00</aixm:startTime>
                           <aixm:endTime>00:00</aixm:endTime>
                           <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                          <aixm:excluded>NO</aixm:excluded>
+                          <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_9">
+                        <aixm:Timesheet gml:id="ID_T3_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
                           <aixm:startTime>00:00</aixm:startTime>
                           <aixm:endTime>00:00</aixm:endTime>
                           <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                          <aixm:excluded>NO</aixm:excluded>
+                          <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
@@ -883,17 +1012,77 @@
                       </aixm:flight>
                     </aixm:ConditionCombination>
                   </aixm:selection>
-                  <aixm:operation>LANDING</aixm:operation>
+                  <aixm:annotation>
+                    <aixm:Note gml:id="ID_N_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
+                      <aixm:propertyName>priorPermission</aixm:propertyName>
+                      <aixm:purpose>DESCRIPTION</aixm:purpose>
+                      <aixm:translatedNote>
+                        <aixm:LinguisticNote gml:id="ID_LN_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
+                          <aixm:note lang="eng">School and training flights must only be made after permission has been obtained from ATS</aixm:note>
+                        </aixm:LinguisticNote>
+                      </aixm:translatedNote>
+                    </aixm:Note>
+                  </aixm:annotation>
+                  <aixm:operation>TAKEOFF</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
-                  <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
+                  <aixm:type>FORBID</aixm:type>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_10">
+                        <aixm:Timesheet gml:id="ID_T1_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>ANY</aixm:day>
+                          <aixm:dayTil>ANY</aixm:dayTil>
+                          <aixm:startTime>18:00</aixm:startTime>
+                          <aixm:endTime>06:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>NO</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T2_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>SUN</aixm:day>
+                          <aixm:dayTil>MON</aixm:dayTil>
+                          <aixm:startTime>00:00</aixm:startTime>
+                          <aixm:endTime>00:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                          <aixm:excluded>NO</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T3_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>HOL</aixm:day>
+                          <aixm:dayTil>AFT_HOL</aixm:dayTil>
+                          <aixm:startTime>00:00</aixm:startTime>
+                          <aixm:endTime>00:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                          <aixm:excluded>NO</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:flight>
+                        <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
+                          <aixm:purpose>AIR_TRAINING</aixm:purpose>
+                        </aixm:FlightCharacteristic>
+                      </aixm:flight>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>LANDING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
+                  <aixm:type>CONDITIONAL</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T1_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:startTime>06:00</aixm:startTime>
@@ -903,7 +1092,7 @@
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_11">
+                        <aixm:Timesheet gml:id="ID_T2_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -914,7 +1103,7 @@
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="ID_T_ee6019d6-29f7-404d-8cee-b6819f325aed_12">
+                        <aixm:Timesheet gml:id="ID_T3_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -926,18 +1115,18 @@
                       </aixm:timeInterval>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
+                        <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
-                    <aixm:Note gml:id="ID_N_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
+                    <aixm:Note gml:id="ID_N_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>DESCRIPTION</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="ID_LN_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
+                        <aixm:LinguisticNote gml:id="ID_LN_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
                           <aixm:note lang="eng">School and training flights must only be made after permission has been obtained from ATS</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>
@@ -975,8 +1164,44 @@
           <aixm:designator>13</aixm:designator>
           <aixm:trueBearing>123.25</aixm:trueBearing>
           <aixm:trueBearingAccuracy>0.01</aixm:trueBearingAccuracy>
-          <aixm:magneticBearing>125.2</aixm:magneticBearing>
+          <aixm:magneticBearing>125.20</aixm:magneticBearing>
+          <aixm:approachMarkingType>HELIPORT</aixm:approachMarkingType>
+          <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
+          <aixm:classLightingJAR>NALS</aixm:classLightingJAR>
           <aixm:usedRunway xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="FATO_13/31"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_TS_N_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+              <aixm:propertyName>magneticBearing</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_TS_N_LN_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+                  <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+                      <aixm:logicalOperator>NOT</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+                          <aixm:aircraftLandingCategory>H</aixm:aircraftLandingCategory>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>ALL</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
         </aixm:RunwayDirectionTimeSlice>
       </aixm:timeSlice>
     </aixm:RunwayDirection>
@@ -1004,8 +1229,44 @@
           <aixm:designator>31</aixm:designator>
           <aixm:trueBearing>303.25</aixm:trueBearing>
           <aixm:trueBearingAccuracy>0.01</aixm:trueBearingAccuracy>
-          <aixm:magneticBearing>305.2</aixm:magneticBearing>
+          <aixm:magneticBearing>305.20</aixm:magneticBearing>
+          <aixm:approachMarkingType>HELIPORT</aixm:approachMarkingType>
+          <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
+          <aixm:classLightingJAR>NALS</aixm:classLightingJAR>
           <aixm:usedRunway xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="FATO_13/31"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_TS_N_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+              <aixm:propertyName>magneticBearing</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_TS_N_LN_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+                  <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="ID_CC_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+                      <aixm:logicalOperator>NOT</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="ID_AC_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+                          <aixm:aircraftLandingCategory>H</aixm:aircraftLandingCategory>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>ALL</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
         </aixm:RunwayDirectionTimeSlice>
       </aixm:timeSlice>
     </aixm:RunwayDirection>

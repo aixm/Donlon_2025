@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file includes contributions from Solitec Software Solutions, Luciad, EUROCONTROL, Comsoft -->
+<!-- Copyright (c) 2025, EUROCONTROL & FAA
+  
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+  
+  THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gts="http://www.isotc211.org/2005/gts" 
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:gss="http://www.isotc211.org/2005/gss" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:gsr="http://www.isotc211.org/2005/gsr" 
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd" 
+  gml:id="DONLON_Route_Baseline">
+  <!-- Lower routes -->
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.80548a75-4d82-4a85-b779-40df99359a6b">
+      <gml:identifier codeSpace="urn:uuid:">80548a75-4d82-4a85-b779-40df99359a6b</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_A4">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_80548a75-4d82-4a85-b779-40df99359a6b">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_80548a75-4d82-4a85-b779-40df99359a6b">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:designatorSecondLetter>A</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>4</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator> <!-- Route situated in Amswell FIR (EAAD); added for completeness purpose -->
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse> <!-- Both military and civilian aircraft can use this route -->
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/> <!-- No military training/exercises allowed on this route -->
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.3b31528e-4c89-436f-85a5-dce41f298f20">
+      <gml:identifier codeSpace="urn:uuid:">3b31528e-4c89-436f-85a5-dce41f298f20</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_A6">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_3b31528e-4c89-436f-85a5-dce41f298f20">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_3b31528e-4c89-436f-85a5-dce41f298f20">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:designatorSecondLetter>A</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>6</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_3b31528e-4c89-436f-85a5-dce41f298f20">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_LN_3b31528e-4c89-436f-85a5-dce41f298f20">
+                  <aixm:note lang="eng">All flights between TEMPO and DONNARD shall file a flight plan, maintain two-way radio contact with Amswell ACC and report positions as instructed to eliminate or reduce the need for interception.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.bf8f73d0-7490-4ba3-acac-ba1ac697f1c6">
+      <gml:identifier codeSpace="urn:uuid:">bf8f73d0-7490-4ba3-acac-ba1ac697f1c6</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_A123">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_bf8f73d0-7490-4ba3-acac-ba1ac697f1c6">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_bf8f73d0-7490-4ba3-acac-ba1ac697f1c6">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:designatorSecondLetter>A</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>123</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.686a7367-9463-4b04-95e8-f9ca23ac08e9">
+      <gml:identifier codeSpace="urn:uuid:">686a7367-9463-4b04-95e8-f9ca23ac08e9</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_A876">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_686a7367-9463-4b04-95e8-f9ca23ac08e9">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_686a7367-9463-4b04-95e8-f9ca23ac08e9">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:designatorSecondLetter>A</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>876</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.c04c853e-c651-4553-949a-de219e4e26a9">
+      <gml:identifier codeSpace="urn:uuid:">c04c853e-c651-4553-949a-de219e4e26a9</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_G456">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_c04c853e-c651-4553-949a-de219e4e26a9">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_c04c853e-c651-4553-949a-de219e4e26a9">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:designatorSecondLetter>G</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>456</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.d507f634-43fe-4013-b912-f40bd3089502">
+      <gml:identifier codeSpace="urn:uuid:">d507f634-43fe-4013-b912-f40bd3089502</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_G789">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_d507f634-43fe-4013-b912-f40bd3089502">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_d507f634-43fe-4013-b912-f40bd3089502">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:designatorSecondLetter>G</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>789</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.e12fd35a-5d1d-4934-81c3-59a877aafd84">
+      <gml:identifier codeSpace="urn:uuid:">e12fd35a-5d1d-4934-81c3-59a877aafd84</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_R789">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_e12fd35a-5d1d-4934-81c3-59a877aafd84">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_e12fd35a-5d1d-4934-81c3-59a877aafd84">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:designatorSecondLetter>R</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>789</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <!-- Upper routes -->
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.a14a8751-5428-46bc-a2d1-32ef84d37b5c">
+      <gml:identifier codeSpace="urn:uuid:">a14a8751-5428-46bc-a2d1-32ef84d37b5c</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_UA4">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_a14a8751-5428-46bc-a2d1-32ef84d37b5c">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_a14a8751-5428-46bc-a2d1-32ef84d37b5c">
+              <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix>U</aixm:designatorPrefix>
+          <aixm:designatorSecondLetter>A</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>4</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.045339ff-6da3-4f1f-9e61-1916f63513bb">
+      <gml:identifier codeSpace="urn:uuid:">045339ff-6da3-4f1f-9e61-1916f63513bb</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_UA6">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_045339ff-6da3-4f1f-9e61-1916f63513bb">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_045339ff-6da3-4f1f-9e61-1916f63513bb">
+              <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix>U</aixm:designatorPrefix>
+          <aixm:designatorSecondLetter>A</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>6</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_045339ff-6da3-4f1f-9e61-1916f63513bb">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_LN_045339ff-6da3-4f1f-9e61-1916f63513bb">
+                  <aixm:note lang="eng">All flights between TEMPO and DONNARD shall file a flight plan, maintain two-way radio contact with Amswell ACC and report positions as instructed to eliminate or reduce the need for interception.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.7616d9cf-de5b-4554-94aa-099ef0c7dd64">
+      <gml:identifier codeSpace="urn:uuid:">7616d9cf-de5b-4554-94aa-099ef0c7dd64</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_UA345">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_7616d9cf-de5b-4554-94aa-099ef0c7dd64">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_7616d9cf-de5b-4554-94aa-099ef0c7dd64">
+              <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix>U</aixm:designatorPrefix>
+          <aixm:designatorSecondLetter>A</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>345</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.40cc05ef-3ca8-47f8-ab1f-65d05ee3d836">
+      <gml:identifier codeSpace="urn:uuid:">40cc05ef-3ca8-47f8-ab1f-65d05ee3d836</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_UL123">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_40cc05ef-3ca8-47f8-ab1f-65d05ee3d836">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_40cc05ef-3ca8-47f8-ab1f-65d05ee3d836">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix>U</aixm:designatorPrefix>
+          <aixm:designatorSecondLetter>L</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>123</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+  <!-- Helicopter routes -->
+  <message:hasMember>
+    <aixm:Route gml:id="uuid.df8d330c-c5b0-4d5b-a390-b1a2a30c31c0">
+      <gml:identifier codeSpace="urn:uuid:">df8d330c-c5b0-4d5b-a390-b1a2a30c31c0</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteTimeSlice gml:id="RTE_KH123">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_df8d330c-c5b0-4d5b-a390-b1a2a30c31c0">
+              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_df8d330c-c5b0-4d5b-a390-b1a2a30c31c0">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designatorPrefix>K</aixm:designatorPrefix>
+          <aixm:designatorSecondLetter>H</aixm:designatorSecondLetter>
+          <aixm:designatorNumber>123</aixm:designatorNumber>
+          <aixm:multipleIdentifier xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:locationDesignator>EAAD</aixm:locationDesignator>
+          <aixm:name xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:type>ATS</aixm:type>
+          <aixm:flightRule>IFR</aixm:flightRule>
+          <aixm:internationalUse>BOTH</aixm:internationalUse>
+          <aixm:militaryUse>ALL</aixm:militaryUse>
+          <aixm:militaryTrainingType xsi:nil="true" nilReason="inapplicable"/>
+        </aixm:RouteTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Route>
+  </message:hasMember>
+</message:AIXMBasicMessage>

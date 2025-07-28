@@ -45,7 +45,7 @@
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>3</aixm:sequenceNumber>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="ID_FL_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
@@ -132,6 +132,7 @@
           <aixm:altimeterSource xlink:href="urn:uuid:94c1184f-44d9-4858-9728-87d351982204"/>
           <aixm:contact>
             <aixm:ContactInformation gml:id="ID_CI_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+              <aixm:name>DONLON AIRPORT</aixm:name>
               <aixm:address>
                 <aixm:PostalAddress gml:id="ID_TS_CI_PA_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:deliveryPoint>Donlon 4 W</aixm:deliveryPoint>
@@ -161,80 +162,70 @@
           </aixm:contact>
           <aixm:availability>
             <aixm:AirportHeliportAvailability gml:id="ID_AHA_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>WORK_DAY</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>20:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>SAT</aixm:day>
-                  <aixm:startTime>07:00</aixm:startTime>
-                  <aixm:endTime>20:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>SUN</aixm:day>
-                  <aixm:startTime>07:00</aixm:startTime>
-                  <aixm:endTime>20:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>HOL</aixm:day>
-                  <aixm:startTime>07:00</aixm:startTime>
-                  <aixm:endTime>20:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:usage>
                 <aixm:AirportHeliportUsage gml:id="ID_AHU_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>WORK_DAY</aixm:day>
+                          <aixm:startTime>06:00</aixm:startTime>
+                          <aixm:endTime>20:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>NO</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>SAT</aixm:day>
+                          <aixm:startTime>07:00</aixm:startTime>
+                          <aixm:endTime>20:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>NO</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>SUN</aixm:day>
+                          <aixm:startTime>07:00</aixm:startTime>
+                          <aixm:endTime>20:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>NO</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>HOL</aixm:day>
+                          <aixm:startTime>07:00</aixm:startTime>
+                          <aixm:endTime>20:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>NO</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:flight>
+                        <aixm:FlightCharacteristic gml:id="ID_FC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                          <aixm:rule>ALL</aixm:rule>
+                        </aixm:FlightCharacteristic>
+                      </aixm:flight>
                       <aixm:subCondition>
                         <aixm:ConditionCombination gml:id="ID_sC_CC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                            <aixm:FlightCharacteristic gml:id="ID_FC2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
                               <aixm:origin>INTL</aixm:origin>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                              <aixm:origin>NTL</aixm:origin>
-                            </aixm:FlightCharacteristic>
-                          </aixm:flight>
-                        </aixm:ConditionCombination>
-                      </aixm:subCondition>
-                      <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="ID_sC_CC2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                          <aixm:logicalOperator>OR</aixm:logicalOperator>
-                          <aixm:flight>
                             <aixm:FlightCharacteristic gml:id="ID_FC3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                              <aixm:rule>IFR</aixm:rule>
-                            </aixm:FlightCharacteristic>
-                          </aixm:flight>
-                          <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                              <aixm:rule>VFR</aixm:rule>
+                              <aixm:origin>NTL</aixm:origin>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                         </aixm:ConditionCombination>
@@ -243,18 +234,18 @@
                         <aixm:ConditionCombination gml:id="ID_sC_CC3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC5_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                            <aixm:FlightCharacteristic gml:id="ID_FC4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
                               <aixm:purpose>SCHEDULED</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC6_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                            <aixm:FlightCharacteristic gml:id="ID_FC5_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
                               <aixm:purpose>NON_SCHEDULED</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC7_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
-                              <aixm:purpose>OTHER:GENERAL_AVIATION</aixm:purpose>
+                            <aixm:FlightCharacteristic gml:id="ID_FC6_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
+                              <aixm:purpose>PRIVATE</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                         </aixm:ConditionCombination>
@@ -264,96 +255,81 @@
                   <aixm:operation>ALL</aixm:operation>
                 </aixm:AirportHeliportUsage>
               </aixm:usage>
-            </aixm:AirportHeliportAvailability>
-          </aixm:availability>
-          <aixm:availability>
-            <aixm:AirportHeliportAvailability gml:id="IDAHA_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>ANY</aixm:day>
-                  <aixm:dayTil>ANY</aixm:dayTil>
-                  <aixm:startTime>20:00</aixm:startTime>
-                  <aixm:endTime>00:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>00:00</aixm:startTime>
-                  <aixm:endTime>06:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>SAT</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>SUN</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T5_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>HOL</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:00</aixm:endTime>
-                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                  <aixm:excluded>NO</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
-              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:usage>
                 <aixm:AirportHeliportUsage gml:id="ID_AHU_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>ANY</aixm:day>
+                          <aixm:dayTil>ANY</aixm:dayTil>
+                          <aixm:startTime>00:00</aixm:startTime>
+                          <aixm:endTime>00:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                          <aixm:excluded>NO</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>WORK_DAY</aixm:day>
+                          <aixm:startTime>06:00</aixm:startTime>
+                          <aixm:endTime>20:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>YES</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>SAT</aixm:day>
+                          <aixm:startTime>07:00</aixm:startTime>
+                          <aixm:endTime>20:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>YES</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>SUN</aixm:day>
+                          <aixm:startTime>07:00</aixm:startTime>
+                          <aixm:endTime>20:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>YES</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:timeInterval>
+                        <aixm:Timesheet gml:id="ID_T5_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                          <aixm:timeReference>UTC</aixm:timeReference>
+                          <aixm:day>HOL</aixm:day>
+                          <aixm:startTime>07:00</aixm:startTime>
+                          <aixm:endTime>20:00</aixm:endTime>
+                          <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                          <aixm:excluded>YES</aixm:excluded>
+                        </aixm:Timesheet>
+                      </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:flight>
+                        <aixm:FlightCharacteristic gml:id="ID_FC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                          <aixm:rule>ALL</aixm:rule>
+                        </aixm:FlightCharacteristic>
+                      </aixm:flight>
                       <aixm:subCondition>
                         <aixm:ConditionCombination gml:id="ID_sC_CC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                            <aixm:FlightCharacteristic gml:id="ID_FC2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
                               <aixm:origin>INTL</aixm:origin>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                              <aixm:origin>NTL</aixm:origin>
-                            </aixm:FlightCharacteristic>
-                          </aixm:flight>
-                        </aixm:ConditionCombination>
-                      </aixm:subCondition>
-                      <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="ID_sC_CC2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                          <aixm:logicalOperator>OR</aixm:logicalOperator>
-                          <aixm:flight>
                             <aixm:FlightCharacteristic gml:id="ID_FC3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                              <aixm:rule>IFR</aixm:rule>
-                            </aixm:FlightCharacteristic>
-                          </aixm:flight>
-                          <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                              <aixm:rule>VFR</aixm:rule>
+                              <aixm:origin>NTL</aixm:origin>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                         </aixm:ConditionCombination>
@@ -362,18 +338,18 @@
                         <aixm:ConditionCombination gml:id="ID_sC_CC3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC5_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                            <aixm:FlightCharacteristic gml:id="ID_FC4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
                               <aixm:purpose>SCHEDULED</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC6_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                            <aixm:FlightCharacteristic gml:id="ID_FC5_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
                               <aixm:purpose>NON_SCHEDULED</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC7_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
-                              <aixm:purpose>OTHER:GENERAL_AVIATION</aixm:purpose>
+                            <aixm:FlightCharacteristic gml:id="ID_FC6_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
+                              <aixm:purpose>PRIVATE</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                         </aixm:ConditionCombination>

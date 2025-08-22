@@ -19,6 +19,29 @@ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF TH
 
 Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
 
+<!-- 
+  This is a Digital NOTAM for a Surface Condition Report acc. ICAO Doc 10066 (PANS-AIM). 
+  Example is based on real live SNOWTAM (location changed to EADD, Runway designator changed to 09L, Taxiway designators changed to A, B, C, D, E)!
+  
+  Real life example:
+
+  SNOWTAM
+  ENKR
+  03100625 05 3/3/3 25/25/25 03/03/03 DRY SNOW ON TOP OF ICE/DRY SNOW ON
+  TOP OF ICE/DRY SNOW ON TOP OF ICE
+  RWY 05 DRIFTING SNOW. RWY 05 LOOSE SAND. RWY 05 DOWNGRADED / RWY 05
+  FROZEN SAND APPLIED / RWY 05 PATCHY CONTAMINANT / TWYS B/C/D/Y SANDED
+  / TWYS B/C/D/Y NO MARKING ON SNOW.
+
+  Adjusted example for EADD:
+  
+  SWEA0001 EADD 12050800
+  (SNOWTAM 0001
+  EADD
+  12050800 09L 3/3/3 25/25/25 03/03/03 dry snow on top of ice/dry snow on top of ice/dry snow on top of ice
+  RWY 09L drifting snow. RWY 09L loose sand. RWY 09L downgraded / frozen sand applied / patchy contaminant. TWYs A/B/C/D/E sanded / no marking on snow.)
+-->
+
 <message:AIXMBasicMessage 
   xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
   xmlns:gml="http://www.opengis.net/gml/3.2" 
@@ -29,28 +52,6 @@ Editorial note: this license is an instance of the BSD license template as provi
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
   gml:id="DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T">
-  
-  <!-- This is a Digital NOTAM for a Surface Condition Report acc. ICAO Doc 10066 (PANS-AIM). 
-    Example is based on real live SNOWTAM (location changed to EADD, Runway designator changed to 09L, Taxiway designators changed to A, B, C, D, E)!
-    
-    Real life example:
-
-    SNOWTAM
-    ENKR
-    03100625 05 3/3/3 25/25/25 03/03/03 DRY SNOW ON TOP OF ICE/DRY SNOW ON
-    TOP OF ICE/DRY SNOW ON TOP OF ICE
-    RWY 05 DRIFTING SNOW. RWY 05 LOOSE SAND. RWY 05 DOWNGRADED / RWY 05
-    FROZEN SAND APPLIED / RWY 05 PATCHY CONTAMINANT / TWYS B/C/D/Y SANDED
-    / TWYS B/C/D/Y NO MARKING ON SNOW.
-  
-    Adjusted example for EADD:
-    
-    SWEA0001 EADD 12050800
-    (SNOWTAM 0001
-    EADD
-    12050800 09L 3/3/3 25/25/25 03/03/03 dry snow on top of ice/dry snow on top of ice/dry snow on top of ice
-    RWY 09L drifting snow. RWY 09L loose sand. RWY 09L downgraded / frozen sand applied / patchy contaminant. TWYs A/B/C/D/E sanded / no marking on snow.)
-  -->
   
   <message:hasMember>
     <event:Event gml:id="uuid.ffabf6b3-086d-483d-a41f-599e752164f6">

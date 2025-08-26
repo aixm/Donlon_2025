@@ -25,9 +25,9 @@ Editorial note: this license is an instance of the BSD license template as provi
   F0003/25 NOTAMN
   Q) EAAD/QOLAS/IV/M/E/000/005/5222N02802W001
   A) EAAD B) 2512220500 C) 2512240700
-  D) Daily 0500-0700
-  E) Obstacle lights unserviceable on antenna identified as OBS-0001 position: 522142N 0280215W
-  elevation 150M (height 120m).
+  D) Daily 1100-1300
+  E) Obstacle lights unserviceable on antenna identified as OBST-EA-0001 position: 522142N 0280215W
+  elevation 150m (height 120m).
   Due to maintenance works.
 -->
 
@@ -62,7 +62,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <gml:endPosition>2025-12-24T07:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <event:name>ANTENNA OBS-0001</event:name>
+          <event:name>ANTENNA OBST-EA-0001</event:name>
           <event:designator>DNOTAM</event:designator>
           <event:scenario>OBL.UNS</event:scenario>
           <event:version>2.0</event:version>
@@ -90,8 +90,8 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:effectiveEnd>2512240700</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
-              <event:schedule>Daily 0500-0700</event:schedule>
-              <event:text>Obstacle lights unserviceable on antenna identified as OBS-0001 position: 522142N 0280215W
+              <event:schedule>Daily 1100-1300</event:schedule>
+              <event:text>Obstacle lights unserviceable on antenna identified as OBST-EA-0001 position: 522142N 0280215W
 elevation 150m (height 120m).
 Due to maintenance works.</event:text>
             </event:NOTAM>
@@ -146,21 +146,32 @@ Due to maintenance works.</event:text>
           </aixm:lightingAvailability>
           <aixm:lightingAvailability>
             <aixm:VerticalStructureLightingStatus gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_6">
+              <!-- Timesheets adjusted from the Baseline values (from "daily SR-SS" to "daily SR-1100 1300-SS") to avoid overlapping with event schedule -->
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_7">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endTime>11:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_8">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>13:00</aixm:startTime>
                   <aixm:endEvent>SS</aixm:endEvent>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation>
-                <aixm:Note gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_8">
+                <aixm:Note gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_9">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_9">
+                    <aixm:LinguisticNote gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_10">
                       <aixm:note>Baseline data copy. Not included in the NOTAM text generation.</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -171,22 +182,22 @@ Due to maintenance works.</event:text>
             </aixm:VerticalStructureLightingStatus>
           </aixm:lightingAvailability>
           <aixm:lightingAvailability>
-            <aixm:VerticalStructureLightingStatus gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_10">
+            <aixm:VerticalStructureLightingStatus gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_11">
+                <aixm:Timesheet gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>05:00</aixm:startTime>
-                  <aixm:endTime>07:00</aixm:endTime>
+                  <aixm:startTime>11:00</aixm:startTime>
+                  <aixm:endTime>13:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation>
-                <aixm:Note gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_12">
+                <aixm:Note gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_13">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_13">
+                    <aixm:LinguisticNote gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_14">
                       <aixm:note>Due to maintenance works</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -196,7 +207,7 @@ Due to maintenance works.</event:text>
             </aixm:VerticalStructureLightingStatus>
           </aixm:lightingAvailability>
           <aixm:extension>
-            <event:VerticalStructureExtension gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_14">
+            <event:VerticalStructureExtension gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_15">
               <event:theEvent xlink:href="urn:uuid:58df7d43-ace9-47a2-b056-49d69d2a2e01"/>
             </event:VerticalStructureExtension>
           </aixm:extension>

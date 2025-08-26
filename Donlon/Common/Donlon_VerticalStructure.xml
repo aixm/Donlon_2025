@@ -135,7 +135,7 @@
               </aixm:horizontalProjection_location>
               <aixm:lighting>
                 <aixm:LightElement gml:id="le0001-1">
-                  <!-- PANS-AIM table A-6-2 only requires information if an obstcale is lighted. 
+                  <!-- PANS-AIM table A-6-2 only requires information if an obstacle is lighted. 
 										However, colour and type are properties listed in the PANS-AIM Appendix 1 "Aeronautical Data Catalogue" and ENR 5.4, AD2/3.10. 
 										intensityLevel, intensity and availability is not explicitly required by PANS-AIM. 
 										(Note that there is also a lightingAvailability element for the VerticalStructure.)  -->
@@ -303,7 +303,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator>OBS-0003-1</aixm:designator>
+              <aixm:designator>OBST-EA-0002-1</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0002-1">
                   <gml:pos>47.74500000 -27.52583333</gml:pos>
@@ -325,7 +325,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator>OBS-0003-2</aixm:designator>
+              <aixm:designator>OBST-EA-0002-2</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0002-2">
                   <gml:pos>47.74222222 -27.52388889</gml:pos>
@@ -347,7 +347,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator>OBS-0003-3</aixm:designator>
+              <aixm:designator>OBST-EA-0002-3</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0002-3">
                   <gml:pos>47.74194444 -27.528888896</gml:pos>
@@ -369,7 +369,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator>OBS-0003-4</aixm:designator>
+              <aixm:designator>OBST-EA-0002-4</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0002-4">
                   <gml:pos>47.73888889 -27.52750000</gml:pos>
@@ -391,7 +391,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator>OBS-00003-5</aixm:designator>
+              <aixm:designator>OBST-EA-0002-5</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0002-5">
                   <gml:pos>47.73888889 -27.43361111</gml:pos>
@@ -404,12 +404,16 @@
               </aixm:horizontalProjection_location>
             </aixm:VerticalStructurePart>
           </aixm:part>
-          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for vertical structures. Because of this 'aixm:name' is used as designator
-          and if the obstacle has a name, it is encoded using an annotation, as shown below: -->
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the name of the area in which it is situated, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n0002-1">
-              <aixm:propertyName>name</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0002-1">
                   <aixm:note>WINDPARK DONLON IV</aixm:note>
@@ -551,20 +555,26 @@
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:annotation>
-            <aixm:Note gml:id="n0020">
+            <aixm:Note gml:id="n0003-0">
               <aixm:propertyName>markingICAOStandard</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ln000110">
+                <aixm:LinguisticNote gml:id="ln0003-0">
                   <aixm:note>marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the name of the area in which it is situated, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n0003-1">
-              <aixm:propertyName>name</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0003-1">
                   <aixm:note>RODSAND II</aixm:note>
@@ -572,10 +582,13 @@
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!-- The number of obstcales forming the group is coded as annotation. -->
+          <!-- The number of obstacles forming the group is coded as annotation with propertyName='type' and purpose='DESCRIPTION'. This is done in order to align
+          the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the 'description' property in the OBS.NEW
+          scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
+          This property is also used in the NOTAM text generation for the OBL.UNS scenario. -->
           <aixm:annotation>
             <aixm:Note gml:id="n0003-2">
-              <aixm:propertyName>group</aixm:propertyName>
+              <aixm:propertyName>type</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0003-2">
@@ -695,7 +708,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
-              <aixm:designator>OBS-0004-1</aixm:designator>
+              <aixm:designator>OBST-EA-0004-1</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0004-1">
                   <gml:pos>46.82722222 -27.99166667</gml:pos>
@@ -715,11 +728,11 @@
               <!-- The maximum height above ground has to be coded as a Note! 
 								For this part it cannot be coded as verticalExtent, as this part (rope) is not fixed on the ground. The meaning of verticalExtent is the height of the obstacle part from its bottom, i.e. it would be the height of the rope itself.  -->
               <aixm:annotation>
-                <aixm:Note gml:id="eqwe">
+                <aixm:Note gml:id="n0004-5">
                   <aixm:propertyName>verticalExtent</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="weqw">
+                    <aixm:LinguisticNote gml:id="ln0004-5">
                       <aixm:note>Maximum height above ground level is 280 M</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -732,9 +745,9 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator>OBS-0004-2</aixm:designator>
+              <aixm:designator>OBST-EA-0004-2</aixm:designator>
               <aixm:horizontalProjection_linearExtent>
-                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv1242">
+                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ec0004-1">
                   <gml:segments>
                     <gml:GeodesicString>
                       <gml:posList>46.82722222 -27.99166667 46.80555556 -27.98638889</gml:posList>
@@ -760,7 +773,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
-              <aixm:designator>OBS-0004-3</aixm:designator>
+              <aixm:designator>OBST-EA-0004-3</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0004-3">
                   <gml:pos>46.80555556 -27.98638889</gml:pos>
@@ -773,10 +786,16 @@
               </aixm:horizontalProjection_location>
             </aixm:VerticalStructurePart>
           </aixm:part>
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the name of the area in which it is situated, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n0004-0">
-              <aixm:propertyName>name</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0004-0">
                   <aixm:note>LANGTALERECKHUETTE - HOCHWILDEHAUS</aixm:note>
@@ -873,7 +892,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
-              <aixm:designator>OBS-0005-1</aixm:designator>
+              <aixm:designator>OBST-EA-0005-1</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-1">
                   <gml:pos>47.01055556 -26.15166667</gml:pos>
@@ -905,9 +924,9 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator>OBS-0005-2</aixm:designator>
+              <aixm:designator>OBST-EA-0005-2</aixm:designator>
               <aixm:horizontalProjection_linearExtent>
-                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv1245">
+                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ec0005-1">
                   <gml:segments>
                     <gml:GeodesicString>
                       <gml:posList>47.01055556 -26.15166667 46.99666667 -26.14027778</gml:posList>
@@ -931,9 +950,9 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
-              <aixm:designator>OBS-0005-3</aixm:designator>
+              <aixm:designator>OBST-EA-0005-3</aixm:designator>
               <aixm:horizontalProjection_location>
-                <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-3">
+                <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-2">
                   <gml:pos>46.99666667 -26.14027778</gml:pos>
                   <aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
                   <aixm:elevation uom="M">2310</aixm:elevation>
@@ -963,9 +982,9 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator>OBS-0005-4</aixm:designator>
+              <aixm:designator>OBST-EA-0005-4</aixm:designator>
               <aixm:horizontalProjection_linearExtent>
-                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv12454">
+                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ec0005-2">
                   <gml:segments>
                     <gml:GeodesicString>
                       <gml:posList>46.99666667 -26.14027778 46.98694444 -26.11638889</gml:posList>
@@ -989,7 +1008,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
-              <aixm:designator>OBS-0005-5</aixm:designator>
+              <aixm:designator>OBST-EA-0005-5</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-5">
                   <gml:pos>46.98694444 -26.11638889</gml:pos>
@@ -1002,10 +1021,16 @@
               </aixm:horizontalProjection_location>
             </aixm:VerticalStructurePart>
           </aixm:part>
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the name of the area in which it is situated, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n0005-3">
-              <aixm:propertyName>name</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0005-3">
                   <aixm:note>MUTTERBERGALM - DRESDNER HUETTE - EISGRAT</aixm:note>
@@ -1108,7 +1133,7 @@
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
               <aixm:horizontalProjection_linearExtent>
-                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv12456">
+                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ec0006-1">
                   <gml:segments>
                     <gml:GeodesicString>
                       <gml:posList>54.33333333 -26.48555556 54.33777778 -26.45777778</gml:posList>
@@ -1131,10 +1156,16 @@
               </aixm:lighting>
             </aixm:VerticalStructurePart>
           </aixm:part>
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the name of the area in which it is situated, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n0006-0">
-              <aixm:propertyName>name</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0006-0">
                   <aixm:note>TUBORG IIB</aixm:note>
@@ -1142,12 +1173,27 @@
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The number of obstacles forming the group is coded as annotation with propertyName='type' and purpose='DESCRIPTION'. This is done in order to align
+          the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the 'description' property in the OBS.NEW
+          scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
+          This property is also used in the NOTAM text generation for the OBL.UNS scenario. -->
           <aixm:annotation>
             <aixm:Note gml:id="n0006-1">
+              <aixm:propertyName>type</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ln0006-1">
+                  <aixm:note>7 Wind Turbines</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="n0006-2">
               <aixm:propertyName>markingICAOStandard</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ln0006-1">
+                <aixm:LinguisticNote gml:id="ln0006-2">
                   <aixm:note>marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -1157,10 +1203,10 @@
      		 In AIXM 5.1(1) it may only be coded as Note for an Obstacle data set.
      		 Note: For data provided by the data orginator this information will be rather coded as metadata.-->
           <aixm:annotation>
-            <aixm:Note gml:id="n0006-2">
+            <aixm:Note gml:id="n0006-3">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ln0006-2">
+                <aixm:LinguisticNote gml:id="ln0006-3">
                   <aixm:note>Obstacle Owner: DONLON WINDPARK INC, Donlon Street 253, 2020 DOLNLON, Phone: +00122256889, email: info@donlonwindinc.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -1168,10 +1214,10 @@
           </aixm:annotation>
           <!-- Horizontal Resolution required by PANS-AIM Table A6-2. -->
           <aixm:annotation>
-            <aixm:Note gml:id="n0006-3">
+            <aixm:Note gml:id="n0006-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ln0006-3">
+                <aixm:LinguisticNote gml:id="ln0006-4">
                   <aixm:note>Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -1179,10 +1225,10 @@
           </aixm:annotation>
           <!--  Vertical Resolution required by PANS-AIM Table A6-2. -->
           <aixm:annotation>
-            <aixm:Note gml:id="n0006-4">
+            <aixm:Note gml:id="n0006-5">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ln0006-4">
+                <aixm:LinguisticNote gml:id="ln0006-5">
                   <aixm:note>Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -1190,11 +1236,11 @@
           </aixm:annotation>
           <!--  Lighting availability -->
           <aixm:annotation>
-            <aixm:Note gml:id="n0006-5">
+            <aixm:Note gml:id="n0006-6">
               <aixm:propertyName>lightingAvailability</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ln0006-5">
+                <aixm:LinguisticNote gml:id="ln0006-6">
                   <aixm:note>Obstacles lighted during the night. During the day lights are de-activated.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -1216,11 +1262,11 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation>
-                <aixm:Note gml:id="n0006-6">
+                <aixm:Note gml:id="n0006-7">
                   <aixm:propertyName>timeInterval</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="ln0006-6">
+                    <aixm:LinguisticNote gml:id="ln0006-7">
                       <aixm:note>Obstacle lights operational</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -1232,7 +1278,7 @@
           <aixm:lightingAvailability>
             <aixm:VerticalStructureLightingStatus gml:id="la0006-2">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ts0006-">
+                <aixm:Timesheet gml:id="ts0006-2">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:startEvent>SR</aixm:startEvent>
@@ -1242,11 +1288,11 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation>
-                <aixm:Note gml:id="n0006-7">
+                <aixm:Note gml:id="n0006-8">
                   <aixm:propertyName>timeInterval</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="ln0006-7">
+                    <aixm:LinguisticNote gml:id="ln0006-8">
                       <aixm:note>Obstacle lights de-activated</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -1313,7 +1359,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>YES</aixm:frangible>
               <aixm:visibleMaterial>BRICK</aixm:visibleMaterial>
-              <aixm:designator xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:designator>OBST-EA-0007-1</aixm:designator>
               <aixm:horizontalProjection_surfaceExtent>
                 <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="es0007-1">
                   <gml:patches>
@@ -1364,7 +1410,7 @@
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>YES</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
-              <aixm:designator xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:designator>OBST-EA-0007-2</aixm:designator>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0007-1">
                   <gml:pos>55.52416667 -24.63888889</gml:pos>
@@ -1635,8 +1681,8 @@
           </aixm:part>
           <aixm:annotation>
             <aixm:Note gml:id="n0009-1">
-              <aixm:propertyName>name</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0009-1">
                   <aixm:note>DONLON ARENA</aixm:note>
@@ -1905,8 +1951,8 @@
           </aixm:part>
           <aixm:annotation>
             <aixm:Note gml:id="n1017-0">
-              <aixm:propertyName>name</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1017-0">
                   <aixm:note>DONLON NORTHEAST I</aixm:note>
@@ -1914,10 +1960,10 @@
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!-- The number of obstcales forming the group is coded as annotation. -->
+          <!-- The number of obstacles forming the group is coded as annotation. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1017-1">
-              <aixm:propertyName>group</aixm:propertyName>
+              <aixm:propertyName>type</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1017-1">
@@ -2089,7 +2135,7 @@
               </aixm:horizontalProjection_location>
               <aixm:lighting>
                 <aixm:LightElement gml:id="le1001">
-                  <!-- PANS-AIM table A-6-2 only requires information if an obstcale is lighted. 
+                  <!-- PANS-AIM table A-6-2 only requires information if an obstacle is lighted. 
 										However, colour and type are properties listed in the PANS-AIM Appendix 1 "Aeronautical Data Catalogue" and ENR 5.4, AD2/3.10. 
 										intensityLevel, intensity and availability is not explicitly required by PANS-AIM. 
 										(Note that there is also a lightingAvailability element for the VerticalStructure.)  -->
@@ -2213,28 +2259,17 @@
           <aixm:group>NO</aixm:group>
           <aixm:length xsi:nil="true" nilReason="inapplicable"/>
           <aixm:width xsi:nil="true" nilReason="inapplicable"/>
-          <aixm:radius uom="M">29.0</aixm:radius>
+          <aixm:radius uom="M">29</aixm:radius>
           <aixm:lightingICAOStandard>YES</aixm:lightingICAOStandard>
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1002">
               <aixm:annotation>
-                <aixm:Note gml:id="n1002-1">
-                  <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
-                  <aixm:purpose>REMARK</aixm:purpose>
-                  <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="ln1002-1">
-                      <aixm:note>150 M EAST OF CONTROL TOWER</aixm:note>
-                    </aixm:LinguisticNote>
-                  </aixm:translatedNote>
-                </aixm:Note>
-              </aixm:annotation>
-              <aixm:annotation>
-                <aixm:Note gml:id="n1002-2">
+                <aixm:Note gml:id="n1002-0">
                   <aixm:propertyName>lighting</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="ln1002-2">
+                    <aixm:LinguisticNote gml:id="ln1002-0">
                       <aixm:note>3 light elements installed</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -2266,6 +2301,28 @@
               </aixm:lighting>
             </aixm:VerticalStructurePart>
           </aixm:part>
+          <aixm:annotation>
+            <aixm:Note gml:id="n1002-1">
+              <aixm:propertyName>type</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ln1002-1">
+                  <aixm:note>jib 29m</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="n1002-2">
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ln1002-2">
+                  <aixm:note>460m S of RWY 09L/27R centerline, 150m E of control tower</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
           <aixm:annotation>
             <aixm:Note gml:id="n1002-3">
               <aixm:propertyName>markingICAOStandard</aixm:propertyName>
@@ -2407,11 +2464,16 @@
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:hostedNavaidEquipment xlink:href="urn:uuid:2e921fdb-2853-4fbe-a721-909e93fbe477" xlink:title="NDB SCONE (SCN)"/>
-          <!-- A textual description of the obstacle, also used for Digital NOTAM coding -->
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the type and name of the navaid it represents, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1004-0">
-              <aixm:propertyName>type</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1004-0">
                   <aixm:note>NDB SCONE</aixm:note>
@@ -2559,10 +2621,16 @@
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:hostedNavaidEquipment xlink:href="urn:uuid:4c46c5be-b033-4673-ac70-48a5d72793d2" xlink:title="GP 27R"/>
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the type and name of the navaid it represents, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1005-0">
-              <aixm:propertyName>type</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0005-0">
                   <aixm:note>GP 27R</aixm:note>
@@ -2710,10 +2778,16 @@
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:hostedNavaidEquipment xlink:href="urn:uuid:5cf6c6ef-f7db-4c63-9f7b-c442529bed0d" xlink:title="GP 09L"/>
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the type and name of the navaid it represents, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1015-0">
-              <aixm:propertyName>type</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1015-0">
                   <aixm:note>GP 09L</aixm:note>
@@ -2861,10 +2935,16 @@
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:hostedNavaidEquipment xlink:href="urn:uuid:066b0dfc-2c93-4098-a93a-0275965e8b73" xlink:title="DME 09L"/>
+          <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
+          with the Digital NOTAM coding, 'aixm:name' is used for encoding the alphanumerical designator (the equivalent of 'obstacle identification'
+          in the OBS.NEW scenario).
+          If the obstacle has a name besides the alphanumerical designator, such as the type and name of the navaid it represents, it will be encoded 
+          using an annotation with propertyName='horizontalProjection_location' and purpose='REMARK' (the equivalent of 'location remarks' in the 
+          OBS.NEW scenario). This annotation is also used in the NOTAM text generation for OBL.UNS scenarion. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1016-0">
-              <aixm:propertyName>type</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1016-0">
                   <aixm:note>DME 09L</aixm:note>
@@ -2977,7 +3057,7 @@
               <aixm:mobile>YES</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:horizontalProjection_linearExtent>
-                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv124567">
+                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ec1006-1">
                   <gml:segments>
                     <gml:GeodesicString>
                       <gml:posList>52.37805556 -31.91388889 52.37944444 -31.91388889</gml:posList>
@@ -3523,6 +3603,10 @@
           <aixm:hostedOrganisation xlink:href="urn:uuid:1e1bdf59-3dd6-4f96-9166-e6095e7231fc" xlink:title="DONLON INTERNATIONAL AIRPORT"/>
           <aixm:supportedService xlink:href="urn:uuid:9cbe4a99-0619-4e7e-8729-6b14b5a998f4" xlink:title="SERVICE_INFO_EADD_METAR"/>
           <aixm:supportedService xlink:href="urn:uuid:1d1cd8a6-36d9-4f27-8bcf-34b662a2fb37" xlink:title="SERVICE_INFO_EADD_TAF"/>
+          <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
+          This is done in order to align the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the
+          'description' property in the OBS.NEW scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
+          This property is also used in the NOTAM text generation for the OBL.UNS scenario. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1010-0">
               <aixm:propertyName>type</aixm:propertyName>
@@ -3743,6 +3827,10 @@
           <aixm:hostedPassengerService xlink:href="urn:uuid:f160dd5b-5c4e-4a18-ac6a-79a07af6435a" xlink:title="SERVICE_PAX_EADD_CUSTOMS_AND_IMMIGRATION"/>
           <aixm:hostedPassengerService xlink:href="urn:uuid:193607c8-2bfa-4666-958e-2abcf43d7ea1" xlink:title="SERVICE_PAX_EADD_HEALT_AND_SANITATION"/>
           <aixm:hostedPassengerService xlink:href="urn:uuid:501d2b82-3d6a-42f9-b924-2be251954c08" xlink:title="SERVICE_PAX_EADD_SECURITY"/>
+          <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
+          This is done in order to align the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the
+          'description' property in the OBS.NEW scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
+          This property is also used in the NOTAM text generation for the OBL.UNS scenario. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1011-0">
               <aixm:propertyName>type</aixm:propertyName>
@@ -3963,6 +4051,10 @@
           <aixm:supportedService xlink:href="urn:uuid:cba10482-190e-4633-9e96-f0c2d35e0a45" xlink:title="SERVICE_GROUND_EADD_GROUND_HANDLING"/>
           <aixm:supportedService xlink:href="urn:uuid:ab069075-193b-4ab8-a2de-d0ebbaf92a8b" xlink:title="SERVICE_GROUND_EADD_HANGAR"/>
           <aixm:supportedService xlink:href="urn:uuid:b4a6a0a3-43a4-4751-9ba5-5185692e78de" xlink:title="SERVICE_GROUND_EADD_REPAIR"/>
+          <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
+          This is done in order to align the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the
+          'description' property in the OBS.NEW scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
+          This property is also used in the NOTAM text generation for the OBL.UNS scenario. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1012-0">
               <aixm:propertyName>type</aixm:propertyName>
@@ -4185,6 +4277,10 @@
           <aixm:supportedService xlink:href="urn:uuid:7e97481d-739c-4b72-a180-d64756e7f7a9" xlink:title="SERVICE_CLEARANCE_EADD_AIRPORT_CLEARANCE"/>
           <aixm:supportedService xlink:href="urn:uuid:84cf33cb-05b7-4212-8e9d-48ec8751bc1f" xlink:title="SERVICE_GROUND_EADD_AIRCRAFT_REMOVAL"/>
           <aixm:supportedService xlink:href="urn:uuid:665367f5-1a43-46c7-a709-46c84709d4be" xlink:title="SERVICE_FIREFIGHTING_EADD_RFF"/>
+          <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
+          This is done in order to align the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the
+          'description' property in the OBS.NEW scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
+          This property is also used in the NOTAM text generation for the OBL.UNS scenario. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1013-0">
               <aixm:propertyName>type</aixm:propertyName>
@@ -4450,6 +4546,10 @@
               </aixm:horizontalProjection_surfaceExtent>
             </aixm:VerticalStructurePart>
           </aixm:part>
+          <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
+          This is done in order to align the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the
+          'description' property in the OBS.NEW scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
+          This property is also used in the NOTAM text generation for the OBL.UNS scenario. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1014-0">
               <aixm:propertyName>name</aixm:propertyName>

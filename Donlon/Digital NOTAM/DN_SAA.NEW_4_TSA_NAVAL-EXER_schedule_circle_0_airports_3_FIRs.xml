@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  Example of Digital NOTAM for an ad-hoc spacial activity area creation:
+  
+           Area type: TSA
+          Designator: EATSA0005
+                Name: DELTA03
+            Activity: NAVAL_EXER
+   Activation status: INTERMITTENT
+            Schedule: date
+       Location note: NNW of Donlon/Intl. Airport
+            Geometry: Circle by centerpoint and radius
+     Vertical limits: GND / FL350 (ref: STD)
+   Excluded airspace: -
+  Concerned airports: 0
+      Concerned FIRs: 3
+                Note: yes
+-->
+
+<!-- 
+  D0023/26 NOTAMN
+  Q) EAXX/QRRCA/IV/BO/W/000/350/5656N02958W051
+  A) EAAD CZQX EGGX B) 2601260500 C) 2601311500
+  D) Jan 26-28 0500-2200, 29-31 0000-1500
+  E) Temporary Segregated Area (EATSA0005) DELTA03 established for naval exercise (intermittent use) (50NM N of shoreline) within:
+  50NM radius centred on 565532N 0295828W.
+  Civilian aircraft will be coordinated between civil and military ATC.
+  F) SFC
+  G) FL350
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_SAA.NEW_4_TSA_NAVAL-EXER_schedule_circle_0_airports_3_FIRs">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.275f6067-6705-4ae8-ada4-fc164ad5f5d0">
+      <gml:identifier codeSpace="urn:uuid:">275f6067-6705-4ae8-ada4-fc164ad5f5d0</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_b389ca62-8f6b-42a9-8eac-051bdfab1539_1_0_B">
+          <gml:validTime xlink:type="simple">
+            <gml:TimePeriod gml:id="id_b389ca62-8f6b-42a9-8eac-051bdfab1539_1_0_B_1">
+              <gml:beginPosition>2026-01-26T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-31T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime xlink:type="simple">
+            <gml:TimePeriod gml:id="id_b389ca62-8f6b-42a9-8eac-051bdfab1539_1_0_B_2">
+              <gml:beginPosition>2026-01-26T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-31T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>TSA EATSA0005</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>SAA.NEW</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:0102b3c7-519a-456d-a202-e3aacac2eee4" xlink:title="CZQX FIR GANDER FLIGHT INFORMATION REGION" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:5025db3b-00c1-46f1-987f-b809e2268d17" xlink:title="EGGX FIR SHANWICK OCEANIC FIR" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_b389ca62-8f6b-42a9-8eac-051bdfab1539_1_0_B_3">
+              <event:series>D</event:series>
+              <event:number>0023</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAXX</event:affectedFIR>
+              <event:selectionCode>QRRCA</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>W</event:scope>
+              <event:minimumFL>000</event:minimumFL>
+              <event:maximumFL>350</event:maximumFL>
+              <event:coordinates>5656N02958W</event:coordinates>
+              <event:radius>051</event:radius>
+              <event:location>EAAD CZQX EGGX</event:location>
+              <event:effectiveStart>2601260500</event:effectiveStart>
+              <event:effectiveEnd>2601311500</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:schedule>Jan 26-28 0500-2200, 29-31 0000-1500</event:schedule>
+              <event:text>Temporary Segregated Area (EATSA0005) DELTA03 established for naval exercise (intermittent use) (50NM N of shoreline) within:
+50NM radius centred on 565532N 0295828W.
+Civilian aircraft will be coordinated between civil and military ATC.</event:text>
+              <event:lowerLimit>SFC</event:lowerLimit>
+              <event:upperLimit>FL350</event:upperLimit>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.0678829b-07d2-4899-8366-a96241824490">
+      <gml:identifier codeSpace="urn:uuid:">0678829b-07d2-4899-8366-a96241824490</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_1">
+              <gml:beginPosition>2026-01-26T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-31T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_2">
+              <gml:beginPosition>2026-01-26T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-31T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>TSA</aixm:type>
+          <aixm:designator>EATSA0005</aixm:designator>
+          <aixm:name>DELTA03</aixm:name>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_3">
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_4">
+                  <aixm:upperLimit uom="FL">350</aixm:upperLimit>
+                  <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_5" srsName="urn:ogc:def:crs:EPSG::4326">
+                      <gml:patches>
+                        <gml:PolygonPatch interpolation="planar">
+                          <gml:exterior>
+                            <gml:Ring>
+                              <gml:curveMember>
+                                <gml:Curve gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_6">
+                                  <gml:segments>
+                                    <gml:CircleByCenterPoint numArc="1">
+                                      <gml:pos>56.92551624 -29.97446243</gml:pos>
+                                      <gml:radius uom="[nmi_i]">50</gml:radius>
+                                    </gml:CircleByCenterPoint>
+                                  </gml:segments>
+                                </gml:Curve>
+                              </gml:curveMember>
+                            </gml:Ring>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                      <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <!-- The times when the airspace is active (NOTAM schedule) -->
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_7">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_8">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>26-01</aixm:startDate>
+                  <aixm:endDate>28-01</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>05:00</aixm:startTime>
+                  <aixm:endTime>22:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_9">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>29-01</aixm:startDate>
+                  <aixm:endDate>31-01</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>15:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_10">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_11">
+                      <aixm:note>Civilian aircraft will be coordinated between civil and military ATC</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:activity>NAVAL_EXER</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_12">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <!-- The times when the airspace is inactive -->
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_13">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_14">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>26-01</aixm:startDate>
+                  <aixm:endDate>28-01</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_15">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>26-01</aixm:startDate>
+                  <aixm:endDate>29-01</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>22:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_16">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>29-01</aixm:startDate>
+                  <aixm:endDate>01-02</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>15:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:status>INACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_17">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_18">
+              <aixm:propertyName>geometryComponent</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_19">
+                  <aixm:note>50NM N of shoreline</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_20">
+              <event:theEvent xlink:href="urn:uuid:275f6067-6705-4ae8-ada4-fc164ad5f5d0"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

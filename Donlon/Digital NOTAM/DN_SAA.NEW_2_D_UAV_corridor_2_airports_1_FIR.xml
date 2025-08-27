@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH, updated by Wolfgang Scheucher, SOLITEC Software Soltuions GmbH -->
+<!-- Example updated by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  Example of Digital NOTAM for an ad-hoc spacial activity area creation:
+  
+           Area type: D
+          Designator: EAR0012-26
+                Name: -
+            Activity: UAV
+   Activation status: ACTIVE
+            Schedule: -
+       Location note: -
+            Geometry: Corridor with straight lines and arc-by-edge
+     Vertical limits: GND / 500M (ref: SFC)
+   Excluded airspace: -
+  Concerned airports: 2
+      Concerned FIRs: 1
+                Note: -
+-->
+
+<!-- 
+  D0014/26 NOTAMN
+  Q) EAAD/QRDCA/IV/BO/AW/000/015/5218N03154W003
+  A) EADD B) 2601130845 C) 2601132000
+  E) Temporary Danger Area (EAD0012-26) established for unmanned acft system activities within:
+  area of 0.25NM either side of line: 521723N 0315604W - 521723N 0315240W arc passing through 521821N 0315107W to 521919N 0315240W - 521919N 0315609W.
+  F) SFC
+  G) 500M AGL
+  
+  D0015/26 NOTAMN
+  Q) EAAD/QFPLT/IV/BO/A/000/999/5217N03202W005
+  A) EADH B) 2601130845 C) 2601132000
+  E) Temporary Danger Area (EAD0012-26) established for unmanned acft system activities within:
+  area of 0.25NM either side of line: 521723N 0315604W - 521723N 0315240W arc passing through 521821N 0315107W to 521919N 0315240W - 521919N 0315609W.
+  From SFC to 500M AGL.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_SAA.NEW_2_D_UAV_corridor_2_airports_1_FIR">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.806a541c-ecb4-4760-bf91-cde425c86829">
+      <gml:identifier codeSpace="urn:uuid:">806a541c-ecb4-4760-bf91-cde425c86829</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_38ac456d-5d54-4320-af93-ee54eeae1157_1_0_B">
+          <gml:validTime xlink:type="simple">
+            <gml:TimePeriod gml:id="id_38ac456d-5d54-4320-af93-ee54eeae1157_1_0_B_1">
+              <gml:beginPosition>2026-01-13T08:45:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-13T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime xlink:type="simple">
+            <gml:TimePeriod gml:id="id_38ac456d-5d54-4320-af93-ee54eeae1157_1_0_B_2">
+              <gml:beginPosition>2026-01-13T08:45:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-13T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADD EADH D EAD0012-26</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>SAA.NEW</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:dd062d88-3e64-4a5d-bebd-89476db9ebea" xlink:title="EADH DONLON/DOWNTOWN HELIPORT" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_38ac456d-5d54-4320-af93-ee54eeae1157_1_0_B_3">
+              <event:series>D</event:series>
+              <event:number>0014</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QRDCA</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>AW</event:scope>
+              <event:minimumFL>000</event:minimumFL>
+              <event:maximumFL>015</event:maximumFL>
+              <event:coordinates>5218N03154W</event:coordinates>
+              <event:radius>003</event:radius>
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2601130845</event:effectiveStart>
+              <event:effectiveEnd>2601132000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Temporary Danger Area (EAD0012-26) established for unmanned acft system activities within:
+area of 0.25NM either side of line: 521723N 0315604W - 521723N 0315240W arc passing through 521821N 0315107W to 521919N 0315240W - 521919N 0315609W.</event:text>
+              <event:lowerLimit>SFC</event:lowerLimit>
+              <event:upperLimit>500M AGL</event:upperLimit>
+            </event:NOTAM>
+          </event:notification>
+          <event:notification>
+            <event:NOTAM gml:id="id_38ac456d-5d54-4320-af93-ee54eeae1157_1_0_B_4">
+              <event:series>D</event:series>
+              <event:number>0015</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QFPLT</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5217N03202W</event:coordinates>
+              <event:radius>005</event:radius>
+              <event:location>EADH</event:location>
+              <event:effectiveStart>2601130845</event:effectiveStart>
+              <event:effectiveEnd>2601132000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Temporary Danger Area (EAD0012-26) established for unmanned acft system activities within:
+area of 0.25NM either side of line: 521723N 0315604W - 521723N 0315240W arc passing through 521821N 0315107W to 521919N 0315240W - 521919N 0315609W.
+From SFC to 500M AGL.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.aafa09d4-817d-43e6-892e-d80202e5c31c">
+      <gml:identifier codeSpace="urn:uuid:">aafa09d4-817d-43e6-892e-d80202e5c31c</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_1">
+              <gml:beginPosition>2026-01-13T08:45:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-13T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_2">
+              <gml:beginPosition>2026-01-13T08:45:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-13T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>D</aixm:type>
+          <aixm:designator>EAD0012-26</aixm:designator>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_3">
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_4">
+                  <aixm:upperLimit uom="M">500</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:width uom="NM">0.5</aixm:width>
+                  <aixm:centreline>
+                    <aixm:Curve gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_5" srsName="urn:ogc:def:crs:EPSG::4326">
+                      <gml:segments>
+                        <gml:GeodesicString>
+                          <gml:posList>52.28964497 -31.93448041 52.28964497 -31.87788187</gml:posList>
+                        </gml:GeodesicString>
+                        <gml:Arc numArc="1">
+                          <gml:pos>52.28964497 -31.87788187</gml:pos>
+                          <gml:pos>52.30575289 -31.85184084</gml:pos>
+                          <gml:pos>52.3220524 -31.87788187</gml:pos>
+                        </gml:Arc>
+                        <gml:GeodesicString>
+                          <gml:posList>52.3220524 -31.87788187 52.3220524 -31.93590727</gml:posList>
+                        </gml:GeodesicString>
+                      </gml:segments>
+                    </aixm:Curve>
+                  </aixm:centreline>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_6">
+              <aixm:activity>UAV</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_7">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_8">
+              <event:theEvent xlink:href="urn:uuid:806a541c-ecb4-4760-bf91-cde425c86829"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

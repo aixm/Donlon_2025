@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH, updated by Wolfgang Scheucher, SOLITEC Software Soltuions GmbH -->
+<!-- Example updated by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  Example of Digital NOTAM for a spacial activity area activation:
+  
+                 Airspace: EAR2 R PASAOUND
+        Activation status: ACTIVE
+                 Activity: TRAINING
+                 Schedule: -
+  Changed vertical limits: -
+       Concerned airports: 0
+           Concerned FIRs: 2
+                     Note: yes
+-->
+
+<!-- 
+  D0011/26 NOTAMN
+  Q) EAXX/QRRCA/IV/BO/W/250/350/5514N04010W045
+  A) EAAD KAAD B) 2601130500 C) 2601131500
+  E) Restricted Area EAR2 PASOUND activated, training activities.
+  Aircraft not part of the exercise should avoid area.
+  F) FL250
+  G) FL350
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_SAA.ACT_1_area_activation_0_airports_2_FIRs">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.c1d4dd98-323c-4882-9de3-27a84d8e4718">
+      <gml:identifier codeSpace="urn:uuid:">c1d4dd98-323c-4882-9de3-27a84d8e4718</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_175acf59-3b75-4114-8b51-d3079b8ab035_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_175acf59-3b75-4114-8b51-d3079b8ab035_1_0_B_1">
+              <gml:beginPosition>2026-01-13T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-13T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_175acf59-3b75-4114-8b51-d3079b8ab035_1_0_B_2">
+              <gml:beginPosition>2026-01-13T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-13T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>R EAR2</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>SAA.ACT</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:6fa9b51a-ea66-40a7-a23a-058c3a034719" xlink:title="KAAD UIR YORK NEW UIR" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_175acf59-3b75-4114-8b51-d3079b8ab035_1_0_B_3">
+              <event:series>D</event:series>
+              <event:number>0011</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAXX</event:affectedFIR>
+              <event:selectionCode>QRRCA</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>W</event:scope>
+              <event:minimumFL>250</event:minimumFL>
+              <event:maximumFL>350</event:maximumFL>
+              <event:coordinates>5514N04010W</event:coordinates>
+              <event:radius>045</event:radius>
+              <event:location>EAAD KAAD</event:location>
+              <event:effectiveStart>2601130500</event:effectiveStart>
+              <event:effectiveEnd>2601131500</event:effectiveEnd>
+              <event:text>Restricted Area EAR2 PASOUND activated, training activities.
+Aircraft not part of the exercise should avoid area.</event:text>
+              <event:lowerLimit>FL250</event:lowerLimit>
+              <event:upperLimit>FL350</event:upperLimit>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- EAR2 PARSOUND -->
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.902e92df-e5cb-48cb-a339-18bc86da4999">
+      <gml:identifier codeSpace="urn:uuid:">902e92df-e5cb-48cb-a339-18bc86da4999</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_450ed666-a77b-4d8a-a39b-21fdb1f0eef8_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_450ed666-a77b-4d8a-a39b-21fdb1f0eef8_1_0_T_1">
+              <gml:beginPosition>2026-01-13T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-13T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_450ed666-a77b-4d8a-a39b-21fdb1f0eef8_1_0_T_2">
+              <aixm:activity>TRAINING</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_450ed666-a77b-4d8a-a39b-21fdb1f0eef8_1_0_T_3">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_450ed666-a77b-4d8a-a39b-21fdb1f0eef8_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:c1d4dd98-323c-4882-9de3-27a84d8e4718"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

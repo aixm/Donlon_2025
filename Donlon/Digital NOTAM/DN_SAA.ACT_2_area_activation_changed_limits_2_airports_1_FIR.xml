@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  Example of Digital NOTAM for a spacial activity area activation:
+  
+                 Airspace: EAD5 D LEIGHTON
+        Activation status: ACTIVE
+                 Activity: GLIDING
+                 Schedule: -
+  Changed vertical limits: GND / 2000M (ref: SFC)
+       Concerned airports: 2
+           Concerned FIRs: 1
+                     Note: yes
+                     
+  Baseline schedule and vertical limits: H24, FLOOR/CEILING, AVBL_FOR_ACTIVATION
+                     
+  The airspace is activated from ground to 2000m AGL for the entire duration of the event.
+  The remaining part of the airspace (from 2000m AGL to FL360) keeps its baseline status for the entire duration of the event.
+  
+  Tempdelta schedule and vertical limits: GND / 2000m AGL, ACTIVE
+                                          2000m AGL / FL360, AVBL_FOR_ACTIVATION
+  
+  The new vertical limits are both inside the baseline limits, hence there will be no aixm:geometryComponent property added,
+  because the airspace doesn't need to change its geometry.
+  
+-->
+
+<!-- 
+  D0012/26 NOTAMN
+  Q) EAAD/QRDCA/IV/BO/AW/000/068/5224N03053W012
+  A) EADD B) 2601150800 C) 2601151200
+  E) Danger Area EAD5 LEIGHTON activated, glider flying.
+  Vertical limits changed during activation.
+  Pilots must proceed with caution when entering this area below 2000M.
+  F) SFC
+  G) 2000M AGL
+  
+  D0013/26 NOTAMN
+  Q) EAAD/QFPLT/IV/BO/A/000/999/5217N03202W005
+  A) EADH B) 2601150800 C) 2601151200
+  E) Danger Area EAD5 LEIGHTON activated from SFC to 2000M AGL.
+  Pilots must proceed with caution when entering this area below 2000M.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_SAA.ACT_2_area_activation_changed_limits_2_airports_1_FIR">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.4c1a3595-90aa-44b3-81f9-78b7f41f2a76">
+      <gml:identifier codeSpace="urn:uuid:">4c1a3595-90aa-44b3-81f9-78b7f41f2a76</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_9f6fd407-d7c2-44d2-b3c1-99406bb8d402_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_9f6fd407-d7c2-44d2-b3c1-99406bb8d402_1_0_B_1">
+              <gml:beginPosition>2026-01-15T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-15T12:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_9f6fd407-d7c2-44d2-b3c1-99406bb8d402_1_0_B_2">
+              <gml:beginPosition>2026-01-15T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-15T12:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADD EADH D EAD5</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>SAA.ACT</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:dd062d88-3e64-4a5d-bebd-89476db9ebea" xlink:title="EADH DONLON/DOWNTOWN HELIPORT" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_9f6fd407-d7c2-44d2-b3c1-99406bb8d402_1_0_B_3">
+              <event:series>D</event:series>
+              <event:number>0012</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QRDCA</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>AW</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">068</event:maximumFL>
+              <event:coordinates>5224N03053W</event:coordinates>
+              <event:radius>012</event:radius>
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2601150800</event:effectiveStart>
+              <event:effectiveEnd>2601151200</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Danger Area EAD5 LEIGHTON activated, glider flying.
+Vertical limits changed during activation.
+Pilots must proceed with caution when entering this area below 2000M.</event:text>
+              <event:lowerLimit>SFC</event:lowerLimit>
+              <event:upperLimit>2000M AGL</event:upperLimit>
+            </event:NOTAM>
+          </event:notification>
+          <event:notification>
+            <event:NOTAM gml:id="id_9f6fd407-d7c2-44d2-b3c1-99406bb8d402_1_0_B_4">
+              <event:series>D</event:series>
+              <event:number>0013</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QFPLT</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5217N03202W</event:coordinates>
+              <event:radius>005</event:radius>
+              <event:location>EADH</event:location>
+              <event:effectiveStart>2601150800</event:effectiveStart>
+              <event:effectiveEnd>2601151200</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Danger Area EAD5 LEIGHTON activated from SFC to 2000M AGL.
+Pilots must proceed with caution when entering this area below 2000M.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- EAD5 LEIGHTON -->
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.5ddfb675-8980-47d1-8442-5edb4045da2e">
+      <gml:identifier codeSpace="urn:uuid:">5ddfb675-8980-47d1-8442-5edb4045da2e</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_1">
+              <gml:beginPosition>2026-01-15T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-15T12:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The times/levels when the airspace is activated during the event -->
+          <!-- GND / 2000m AGL, ACTIVE -->
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_6">
+              <aixm:annotation>
+                <aixm:Note gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_7">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_8">
+                      <aixm:note>Pilots must proceed with caution when entering this area below 2000M</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:activity>GLIDING</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_9">
+                  <aixm:upperLimit uom="M">2000</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <!-- The times/levels when the airspace remains with the baseline status -->
+          <!-- 2000m AGL / FL360, AVBL_FOR_ACTIVATION -->
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_10">
+              <aixm:annotation>
+                <aixm:Note gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_11">
+                  <aixm:propertyName>timeInterval</aixm:propertyName>
+                  <aixm:purpose>DESCRIPTION</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_12">
+                      <aixm:note lang="eng">Activity periods to be published by NOTAM</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:annotation>
+                <aixm:Note gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_13">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_14">
+                      <aixm:note>Baseline data copy. Not included in the NOTAM text generation.</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:activity>MISSILES</aixm:activity>
+              <aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_15">
+                  <aixm:upperLimit uom="FL">360</aixm:upperLimit>
+                  <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="M">2000</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_16">
+              <event:theEvent xlink:href="urn:uuid:4c1a3595-90aa-44b3-81f9-78b7f41f2a76"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

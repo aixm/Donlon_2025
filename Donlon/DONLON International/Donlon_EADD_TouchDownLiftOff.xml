@@ -34,13 +34,13 @@
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd" 
   gml:id="DONLON_EADD_TouchDownLiftOff_Baseline">
   <message:hasMember>
-    <aixm:TouchDownLiftOff gml:id="ID_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+    <aixm:TouchDownLiftOff gml:id="uuid.543cbd61-0377-4cf3-a2ab-2c20143244c9">
       <gml:identifier codeSpace="urn:uuid:">543cbd61-0377-4cf3-a2ab-2c20143244c9</gml:identifier>
       <aixm:timeSlice>
-        <aixm:TouchDownLiftOffTimeSlice gml:id="TLOF_EADD">
+        <aixm:TouchDownLiftOffTimeSlice gml:id="EADD_TLOF_13-31">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_TS_VT_543cbd61-0377-4cf3-a2ab-2c20143244c9">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+            <gml:TimePeriod gml:id="ID_VT_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -48,19 +48,19 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_TS_FL_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+            <gml:TimePeriod gml:id="ID_FL_543cbd61-0377-4cf3-a2ab-2c20143244c9">
               <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <aixm:designator>TLOF</aixm:designator>
+          <aixm:designator>TLOF 13/31</aixm:designator>
           <aixm:length uom="M">30</aixm:length>
           <aixm:width uom="M">30</aixm:width>
           <aixm:slope>0</aixm:slope>
           <aixm:helicopterClass>2</aixm:helicopterClass>
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:aimingPoint>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_TS_EP_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_543cbd61-0377-4cf3-a2ab-2c20143244c9">
               <gml:pos>52.3740660253 -31.9415527107</gml:pos>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">33</aixm:elevation>
@@ -70,7 +70,7 @@
             </aixm:ElevatedPoint>
           </aixm:aimingPoint>
           <aixm:extent>
-            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_TS_ES_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ES_543cbd61-0377-4cf3-a2ab-2c20143244c9">
               <gml:patches>
                 <gml:PolygonPatch>
                   <gml:exterior>
@@ -97,7 +97,7 @@
             </aixm:ElevatedSurface>
           </aixm:extent>
           <aixm:surfaceProperties>
-            <aixm:SurfaceCharacteristics gml:id="ID_TS_SC_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+            <aixm:SurfaceCharacteristics gml:id="ID_SC_543cbd61-0377-4cf3-a2ab-2c20143244c9">
               <aixm:composition>CONC</aixm:composition>
               <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
@@ -111,31 +111,41 @@
           <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD_DONLON/INTL"/>
           <aixm:approachTakeOffArea xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="FATO_13/31"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N1_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+            <aixm:Note gml:id="ID_N_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N1_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+                <aixm:LinguisticNote gml:id="ID_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
                   <aixm:note lang="eng">Direction of TKOF zones: 124°/304° (GEO bearings)</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N2_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+            <aixm:Note gml:id="ID_N_543cbd61-0377-4cf3-a2ab-2c20143244c9_2">
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N2_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+                <aixm:LinguisticNote gml:id="ID_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9_2">
                   <aixm:note lang="eng">Rectangle 30 x 30 M, asphalt, 10 tonnes, white edges and white letter H</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N3_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+            <aixm:Note gml:id="ID_N_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N3_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+                <aixm:LinguisticNote gml:id="ID_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
                   <aixm:note lang="eng">APP and FATO lighting: FATO area edge, air TWY to apron</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>          
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_543cbd61-0377-4cf3-a2ab-2c20143244c9_4">
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9_4">
+                  <aixm:note lang="eng">D value: 20</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -149,19 +159,31 @@
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
-                      <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
-                          <aixm:type>HELICOPTER</aixm:type>
-                          <aixm:weight uom="T">10</aixm:weight>
-                          <aixm:weightInterpretation>AT_OR_BELOW</aixm:weightInterpretation>
-                        </aixm:AircraftCharacteristic>
-                      </aixm:aircraft>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
                           <aixm:type>GAT</aixm:type>
                           <aixm:purpose>SCHEDULED</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
+                              <aixm:type>HELICOPTER</aixm:type>
+                              <aixm:weight uom="T">10</aixm:weight>
+                              <aixm:weightInterpretation>AT_OR_BELOW</aixm:weightInterpretation>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_2">
+                              <aixm:type>TILT_WING</aixm:type>
+                              <aixm:weight uom="T">10</aixm:weight>
+                              <aixm:weightInterpretation>AT_OR_BELOW</aixm:weightInterpretation>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:operation>ALL</aixm:operation>
@@ -177,15 +199,15 @@
                         <aixm:ConditionCombination gml:id="ID_sC_543cbd61-0377-4cf3-a2ab-2c20143244c9_2">
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_2">
+                            <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
                               <aixm:type>HELICOPTER</aixm:type>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
-                          <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC_543cbd61-0377-4cf3-a2ab-2c20143244c9_2">
-                              <aixm:type>GAT</aixm:type>
-                            </aixm:FlightCharacteristic>
-                          </aixm:flight>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_4">
+                              <aixm:type>TILT_WING</aixm:type>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                     </aixm:ConditionCombination>
@@ -200,25 +222,35 @@
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
-                      <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
-                          <aixm:type>HELICOPTER</aixm:type>
-                        </aixm:AircraftCharacteristic>
-                      </aixm:aircraft>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
                           <aixm:type>GAT</aixm:type>
                           <aixm:purpose>NON_SCHEDULED</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="ID_sC_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
+                          <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_5">
+                              <aixm:type>HELICOPTER</aixm:type>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="ID_AC_543cbd61-0377-4cf3-a2ab-2c20143244c9_6">
+                              <aixm:type>TILT_WING</aixm:type>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
-                    <aixm:Note gml:id="ID_TS_MAU_N_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+                    <aixm:Note gml:id="ID_N_543cbd61-0377-4cf3-a2ab-2c20143244c9_5">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>REMARK</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="ID_TS_MAU_N_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+                        <aixm:LinguisticNote gml:id="ID_LN_543cbd61-0377-4cf3-a2ab-2c20143244c9_5">
                           <aixm:note lang="eng">Non-scheduled public air traffic with helicopters is permitted only after prior approval from the Donlon Aerodrome Administration. Any contact concerning the above shall be made via the handling company or directly to the airport office during the hours of service and, if possible, not later than the day before the flight is to be carried out.</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>

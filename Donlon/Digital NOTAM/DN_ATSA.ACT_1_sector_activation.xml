@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  Example of Digital NOTAM for ATS airspace activation:
+  
+                 Airspace: MAGNETO TMA PART 1 and MAGNETO TMA PART 2
+        Activation status: ACTIVE
+                 Schedule: -
+       Concerned airports: 1
+           Concerned FIRs: 1
+                     Note: -
+-->
+
+<!-- 
+  D0243/26 NOTAMN
+  Q) EAAD/QATCA/IV/NBO/AE/210/460/5403N03638W051
+  A) EAMN B) 2602050000 C) 2602050500
+  E) TMA part MAGNETO TMA PART 1 EAMN1 (class C) and MAGNETO TMA PART 2 EAMN2 (class C) activated.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_ATSA.ACT_1_sector_activation">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.127672b9-9521-4418-9fb4-81b623ac8c6f">
+      <gml:identifier codeSpace="urn:uuid:">127672b9-9521-4418-9fb4-81b623ac8c6f</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_4e57a0e5-fe0c-4d97-83e8-916f9c48792a_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_4e57a0e5-fe0c-4d97-83e8-916f9c48792a_1_0_B_1">
+              <gml:beginPosition>2026-02-05T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-05T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_4e57a0e5-fe0c-4d97-83e8-916f9c48792a_1_0_B_2">
+              <gml:beginPosition>2026-02-05T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-05T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>TMA EAMN1 EAMN2</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>ATSA.ACT</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:d9454fe2-2a61-4112-9b20-2786e1ab4a81" xlink:title="EAMN MAGNETO" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_4e57a0e5-fe0c-4d97-83e8-916f9c48792a_1_0_B_3">
+              <event:series>D</event:series>
+              <event:number>0243</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QATCA</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">210</event:minimumFL>
+              <event:maximumFL uom="FL">460</event:maximumFL>
+              <event:coordinates>5403N03638W</event:coordinates>
+              <event:radius>051</event:radius>
+              <event:location>EAMN</event:location>
+              <event:effectiveStart>2602050000</event:effectiveStart>
+              <event:effectiveEnd>2602050500</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>TMA part MAGNETO TMA PART 1 EAMN1 (class C) and MAGNETO TMA PART 2 EAMN2 (class C) activated.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- EAMN1 MAGNETO TMA PART 1 -->
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.0df377fe-dd53-4d60-b6c4-6546ef31d26b">
+      <gml:identifier codeSpace="urn:uuid:">0df377fe-dd53-4d60-b6c4-6546ef31d26b</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_8e67ec41-73b6-4c4d-a4a0-8b76f3d24223_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_8e67ec41-73b6-4c4d-a4a0-8b76f3d24223_1_0_T_1">
+              <gml:beginPosition>2026-02-05T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-05T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_8e67ec41-73b6-4c4d-a4a0-8b76f3d24223_1_0_T_2">
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_8e67ec41-73b6-4c4d-a4a0-8b76f3d24223_1_0_T_3">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_8e67ec41-73b6-4c4d-a4a0-8b76f3d24223_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:127672b9-9521-4418-9fb4-81b623ac8c6f"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+  <!-- EAMN2 MAGNETO TMA PART 2 -->
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.010d8451-d751-4abb-9c71-f48ad024045b">
+      <gml:identifier codeSpace="urn:uuid:">010d8451-d751-4abb-9c71-f48ad024045b</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_632c0270-6200-4d0f-9568-b2394c45c92a_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_632c0270-6200-4d0f-9568-b2394c45c92a_1_0_T_1">
+              <gml:beginPosition>2026-02-05T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-05T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_632c0270-6200-4d0f-9568-b2394c45c92a_1_0_T_2">
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_632c0270-6200-4d0f-9568-b2394c45c92a_1_0_T_3">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_632c0270-6200-4d0f-9568-b2394c45c92a_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:127672b9-9521-4418-9fb4-81b623ac8c6f"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

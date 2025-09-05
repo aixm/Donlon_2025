@@ -19,14 +19,14 @@ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF TH
 
 Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
 
-<!-- Example of Digital NOTAM for the usage limitation change ("conditional for") as a consequence of an apron portion closure. -->
+<!-- Example of Digital NOTAM for the usage limitation change ("additionally allowed for") for two aircraft stands at Donlon Intl. 
+     Helicopters and tilt-wing aircraft are temporarily allowed to use stands 6 and 7. -->
 
 <!-- 
-  A0136/26 NOTAMN
-  Q) EAAD/QMPAP/IV/BO/A/000/999/5222N03157W005
-  A) EADD B) 2603160800 C) 2603161800
-  E) Acft stand 13 and 14 available for acft with wingspan less than 15 m. PPR 1 HR.
-  See NOTAM A0135/26.
+  A0147/26 NOTAMN
+  Q) EAAD/QMPAR/IV/BO/A/000/999/5222N03157W005
+  A) EADD B) 2603220900 C) 2603221700
+  E) Acft stand 6 and 7 now available for hel, tilt wing acft.
 -->
 
 <message:AIXMBasicMessage 
@@ -38,29 +38,29 @@ Editorial note: this license is an instance of the BSD license template as provi
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
-  gml:id="DN_STAND.LIM_conditional_for_due_to_APE.LIM">
+  gml:id="DN_STAND.LIM_additionally_allowed_for">
   
   <message:hasMember>
-    <event:Event gml:id="uuid.66ca0809-9226-4a4d-990f-f60771185e9d">
-      <gml:identifier codeSpace="urn:uuid:">66ca0809-9226-4a4d-990f-f60771185e9d</gml:identifier>
+    <event:Event gml:id="uuid.2109e869-379e-4281-8776-32232f65bba9">
+      <gml:identifier codeSpace="urn:uuid:">2109e869-379e-4281-8776-32232f65bba9</gml:identifier>
       <event:timeSlice>
-        <event:EventTimeSlice gml:id="id_8b5041fc-c795-4444-bf0a-de0f37f89436_1_0_B">
+        <event:EventTimeSlice gml:id="id_fdfd04fa-5387-41d7-865d-928501416c7f_1_0_B">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_8b5041fc-c795-4444-bf0a-de0f37f89436_1_0_B_1">
-              <gml:beginPosition>2026-03-16T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-03-16T18:00:00Z</gml:endPosition>
+            <gml:TimePeriod gml:id="id_fdfd04fa-5387-41d7-865d-928501416c7f_1_0_B_1">
+              <gml:beginPosition>2026-03-22T09:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-03-22T17:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_8b5041fc-c795-4444-bf0a-de0f37f89436_1_0_B_2">
-              <gml:beginPosition>2026-03-16T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-03-16T18:00:00Z</gml:endPosition>
+            <gml:TimePeriod gml:id="id_fdfd04fa-5387-41d7-865d-928501416c7f_1_0_B_2">
+              <gml:beginPosition>2026-03-22T09:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-03-22T17:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <event:name>EADD 13 14</event:name>
+          <event:name>EADD 6 7</event:name>
           <event:designator>DNOTAM</event:designator>
           <event:scenario>STAND.LIM</event:scenario>
           <event:version>2.0</event:version>
@@ -68,16 +68,15 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:activity xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
-          <event:causeEvent xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="APE.LIM EADD APRON A" xlink:type="simple"/>
           <event:notification>
-            <event:NOTAM gml:id="id_8b5041fc-c795-4444-bf0a-de0f37f89436_1_0_B_3">
+            <event:NOTAM gml:id="id_fdfd04fa-5387-41d7-865d-928501416c7f_1_0_B_3">
               <event:series>A</event:series>
-              <event:number>0136</event:number>
+              <event:number>0147</event:number>
               <event:year>2026</event:year>
               <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
-              <event:selectionCode>QMPAP</event:selectionCode>
+              <event:selectionCode>QMPAR</event:selectionCode>
               <event:traffic>IV</event:traffic>
               <event:purpose>BO</event:purpose>
               <event:scope>A</event:scope>
@@ -86,12 +85,11 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:coordinates>5222N03157W</event:coordinates>
               <event:radius>005</event:radius>
               <event:location>EADD</event:location>
-              <event:effectiveStart>2603160800</event:effectiveStart>
-              <event:effectiveEnd>2603161800</event:effectiveEnd>
+              <event:effectiveStart>2603220900</event:effectiveStart>
+              <event:effectiveEnd>2603221700</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
-              <event:text>Acft stand 13 and 14 available for acft with wingspan less than 15 m. PPR 1 HR.
-See NOTAM A0135/26.</event:text>
+              <event:text>Acft stand 6 and 7 now available for hel, tilt wing acft.</event:text>
             </event:NOTAM>
           </event:notification>
           <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
@@ -101,16 +99,16 @@ See NOTAM A0135/26.</event:text>
     </event:Event>
   </message:hasMember>
   
-  <!-- Aircraft stand 13 -->
+  <!-- Aircraft stand 6 -->
   <message:hasMember>
-    <aixm:AircraftStand gml:id="uuid.5bf7c2ce-2434-4a59-8021-1de4d1f05062">
-      <gml:identifier codeSpace="urn:uuid:">5bf7c2ce-2434-4a59-8021-1de4d1f05062</gml:identifier>
+    <aixm:AircraftStand gml:id="uuid.b5ce3423-2169-4c5c-baa3-6d4c5a476de2">
+      <gml:identifier codeSpace="urn:uuid:">b5ce3423-2169-4c5c-baa3-6d4c5a476de2</gml:identifier>
       <aixm:timeSlice>
-        <aixm:AircraftStandTimeSlice gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T">
+        <aixm:AircraftStandTimeSlice gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_1">
-              <gml:beginPosition>2026-03-20T06:30:00Z</gml:beginPosition>
-              <gml:endPosition>2026-03-20T22:00:00Z</gml:endPosition>
+            <gml:TimePeriod gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_1">
+              <gml:beginPosition>2026-03-22T09:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-03-22T17:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
@@ -118,16 +116,16 @@ See NOTAM A0135/26.</event:text>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the aircraft stand -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_2">
+            <aixm:ApronAreaAvailability gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ApronAreaUsage gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_3">
+                <aixm:ApronAreaUsage gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_4">
+                    <aixm:ConditionCombination gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_4">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_5">
+                        <aixm:AircraftCharacteristic gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_5">
                           <aixm:type>LANDPLANE</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
@@ -136,13 +134,13 @@ See NOTAM A0135/26.</event:text>
                 </aixm:ApronAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ApronAreaUsage gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_6">
+                <aixm:ApronAreaUsage gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_6">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_7">
+                    <aixm:ConditionCombination gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_7">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_8">
+                        <aixm:AircraftCharacteristic gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_8">
                           <aixm:type>HELICOPTER</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
@@ -154,31 +152,34 @@ See NOTAM A0135/26.</event:text>
           </aixm:availability>
           <!-- The status of the aircraft stand during the event -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_9">
-              <aixm:annotation>
-                <aixm:Note gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_10">
-                  <aixm:purpose>REMARK</aixm:purpose>
-                  <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_11">
-                      <aixm:note>See NOTAM A0135/26</aixm:note>
-                    </aixm:LinguisticNote>
-                  </aixm:translatedNote>
-                </aixm:Note>
-              </aixm:annotation>
-              <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+            <aixm:ApronAreaAvailability gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_9">
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ApronAreaUsage gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_12">
-                  <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission uom="HR">1</aixm:priorPermission>
+                <aixm:ApronAreaUsage gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_10">
+                  <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_13">
-                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
-                      <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_14">
-                          <aixm:wingSpan uom="M">15</aixm:wingSpan>
-                          <aixm:wingSpanInterpretation>BELOW</aixm:wingSpanInterpretation>
-                        </aixm:AircraftCharacteristic>
-                      </aixm:aircraft>
+                    <aixm:ConditionCombination gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_11">
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_12">
+                          <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_13">
+                              <aixm:type>HELICOPTER</aixm:type>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_14">
+                          <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_15">
+                              <aixm:type>TILT_WING</aixm:type>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                 </aixm:ApronAreaUsage>
@@ -186,8 +187,8 @@ See NOTAM A0135/26.</event:text>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
           <aixm:extension>
-            <event:AircraftStandExtension gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_15">
-              <event:theEvent xlink:href="urn:uuid:66ca0809-9226-4a4d-990f-f60771185e9d"/>
+            <event:AircraftStandExtension gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_16">
+              <event:theEvent xlink:href="urn:uuid:2109e869-379e-4281-8776-32232f65bba9"/>
             </event:AircraftStandExtension>
           </aixm:extension>
         </aixm:AircraftStandTimeSlice>
@@ -195,16 +196,16 @@ See NOTAM A0135/26.</event:text>
     </aixm:AircraftStand>
   </message:hasMember>
   
-  <!-- Aircraft stand 14 -->
+  <!-- Aircraft stand 7 -->
   <message:hasMember>
-    <aixm:AircraftStand gml:id="uuid.e9390a3e-d06f-4a48-933c-316acf1c2c68">
-      <gml:identifier codeSpace="urn:uuid:">e9390a3e-d06f-4a48-933c-316acf1c2c68</gml:identifier>
+    <aixm:AircraftStand gml:id="uuid.db520777-34f4-428b-a6f2-6e442dc88ff7">
+      <gml:identifier codeSpace="urn:uuid:">db520777-34f4-428b-a6f2-6e442dc88ff7</gml:identifier>
       <aixm:timeSlice>
-        <aixm:AircraftStandTimeSlice gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T">
+        <aixm:AircraftStandTimeSlice gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_1">
-              <gml:beginPosition>2026-03-20T06:30:00Z</gml:beginPosition>
-              <gml:endPosition>2026-03-20T22:00:00Z</gml:endPosition>
+            <gml:TimePeriod gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_1">
+              <gml:beginPosition>2026-03-22T09:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-03-22T17:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
@@ -212,16 +213,16 @@ See NOTAM A0135/26.</event:text>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the aircraft stand -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_2">
+            <aixm:ApronAreaAvailability gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ApronAreaUsage gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_3">
+                <aixm:ApronAreaUsage gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_4">
+                    <aixm:ConditionCombination gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_4">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_5">
+                        <aixm:AircraftCharacteristic gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_5">
                           <aixm:type>LANDPLANE</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
@@ -230,13 +231,13 @@ See NOTAM A0135/26.</event:text>
                 </aixm:ApronAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ApronAreaUsage gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_6">
+                <aixm:ApronAreaUsage gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_6">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_7">
+                    <aixm:ConditionCombination gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_7">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_8">
+                        <aixm:AircraftCharacteristic gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_8">
                           <aixm:type>HELICOPTER</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
@@ -248,31 +249,34 @@ See NOTAM A0135/26.</event:text>
           </aixm:availability>
           <!-- The status of the aircraft stand during the event -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_9">
-              <aixm:annotation>
-                <aixm:Note gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_10">
-                  <aixm:purpose>REMARK</aixm:purpose>
-                  <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_11">
-                      <aixm:note>See NOTAM A0135/26</aixm:note>
-                    </aixm:LinguisticNote>
-                  </aixm:translatedNote>
-                </aixm:Note>
-              </aixm:annotation>
-              <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+            <aixm:ApronAreaAvailability gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_9">
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ApronAreaUsage gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_12">
-                  <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission uom="HR">1</aixm:priorPermission>
+                <aixm:ApronAreaUsage gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_10">
+                  <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_13">
-                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
-                      <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_14">
-                          <aixm:wingSpan uom="M">15</aixm:wingSpan>
-                          <aixm:wingSpanInterpretation>BELOW</aixm:wingSpanInterpretation>
-                        </aixm:AircraftCharacteristic>
-                      </aixm:aircraft>
+                    <aixm:ConditionCombination gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_11">
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_12">
+                          <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_13">
+                              <aixm:type>HELICOPTER</aixm:type>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
+                      <aixm:subCondition>
+                        <aixm:ConditionCombination gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_14">
+                          <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                          <aixm:aircraft>
+                            <aixm:AircraftCharacteristic gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_15">
+                              <aixm:type>TILT_WING</aixm:type>
+                            </aixm:AircraftCharacteristic>
+                          </aixm:aircraft>
+                        </aixm:ConditionCombination>
+                      </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                 </aixm:ApronAreaUsage>
@@ -280,8 +284,8 @@ See NOTAM A0135/26.</event:text>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
           <aixm:extension>
-            <event:AircraftStandExtension gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_15">
-              <event:theEvent xlink:href="urn:uuid:66ca0809-9226-4a4d-990f-f60771185e9d"/>
+            <event:AircraftStandExtension gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_16">
+              <event:theEvent xlink:href="urn:uuid:2109e869-379e-4281-8776-32232f65bba9"/>
             </event:AircraftStandExtension>
           </aixm:extension>
         </aixm:AircraftStandTimeSlice>

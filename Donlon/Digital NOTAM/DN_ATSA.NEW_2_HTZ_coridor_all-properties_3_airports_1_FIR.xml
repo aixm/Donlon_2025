@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  Example of Digital NOTAM for ad-hoc ATS airspace creation:
+  
+                   Type: HTZ
+                  Class: C
+      Activation status: INTERMITTENT
+             Designator: EADD028826 (EADD - ATC centre providing air traffic control services, 0288 - the NOTAM number, 26 - the year)
+                   Name: DONLON HTZ
+               Schedule: Daily 0800-1200
+               Geometry: Corridor
+    Horizontal accuracy: 5M
+        Vertical limits: GND / 1500FT (ref: MSL)
+      Excluded airspace: DONLON CTR, AKVIN CTR
+     Concerned airports: 3
+         Concerned FIRs: 1
+          Location note: NW and SSE of Donlon CTR 
+  Controlling unit note: Contact DONLON TWR 118.100
+                   Note: For entry in Akvin CTR contact Akvin TWR 119.300
+-->
+
+<!-- 
+  D0288/26 NOTAMN
+  Q) EAAD/QXXXX/IV/NBO/AE/000/015/5230N03232W083
+  A) EADD B) 2602160800 C) 2602201200
+  E) Helicopter Traffic Zone DONLON HTZ EADD028826 (class C) established within:
+  area of 3km eihter side of a line: 532544N 0341225W - 525201N 0325052W - 522144N 0322018W - 515952N 0313429W - 511906N 0312502W (NW and SSE of Donlon CTR), 
+  from SFC up to 1500FT AMSL, excluding DONLON CTR and AKVIN CTR.
+  Intermittently active within the following periods: Daily 0800-1200.
+  Contact DONLON TWR 118.100.
+  For entry in Akvin CTR contact Akvin TWR 119.300.
+  
+  D0289/26 NOTAMN
+  Q) EAAD/QXXXX/IV/NBO/A/000/999/5236N03255W005
+  A) EADA B) 2602160800 C) 2602201200
+  E) Helicopter Traffic Zone DONLON HTZ EADD028826 (class C) established within:
+  area of 3km eihter side of a line: 532544N 0341225W - 525201N 0325052W - 522144N 0322018W - 515952N 0313429W - 511906N 0312502W (NW and SSE of Donlon CTR), 
+  from SFC up to 1500FT AMSL, excluding DONLON CTR and AKVIN CTR.
+  Intermittently active within the following periods: Daily 0800-1200.
+  Contact DONLON TWR 118.100.
+  For entry in Akvin CTR contact Akvin TWR 119.300.
+  
+  D0290/26 NOTAMN
+  Q) EAAD/QXXXX/IV/NBO/A/000/999/5217N03202W005
+  A) EADH B) 2602160800 C) 2602201200
+  E) Helicopter Traffic Zone DONLON HTZ EADD028826 (class C) established within:
+  area of 3km eihter side of a line: 532544N 0341225W - 525201N 0325052W - 522144N 0322018W - 515952N 0313429W - 511906N 0312502W (NW and SSE of Donlon CTR), 
+  from SFC up to 1500FT AMSL, excluding DONLON CTR and AKVIN CTR.
+  Intermittently active within the following periods: Daily 0800-1200.
+  Contact DONLON TWR 118.100.
+  For entry in Akvin CTR contact Akvin TWR 119.300.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_ATSA.NEW_2_HTZ_coridor_all-properties_3_airports_1_FIR">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.ff5d2e4e-f877-4487-ae7b-6c2fe2cf0949">
+      <gml:identifier codeSpace="urn:uuid:">ff5d2e4e-f877-4487-ae7b-6c2fe2cf0949</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_08ce998c-12ba-4ec3-8ef5-02edf0021d94_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_08ce998c-12ba-4ec3-8ef5-02edf0021d94_1_0_T_1">
+              <gml:beginPosition>2026-02-16T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-20T12:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_08ce998c-12ba-4ec3-8ef5-02edf0021d94_1_0_T_2">
+              <gml:beginPosition>2026-02-16T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-20T12:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADD EADA EADH HTZ EADD028826</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>ATSA.NEW</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:556d7442-402d-467b-81af-09f2eed71cf7" xlink:title="EADA AKVIN/Akvin" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:dd062d88-3e64-4a5d-bebd-89476db9ebea" xlink:title="EADH DONLON/DOWNTOWN HELIPORT" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_08ce998c-12ba-4ec3-8ef5-02edf0021d94_1_0_T_3">
+              <event:series>D</event:series>
+              <event:number>0288</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QXXXX</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">050</event:maximumFL>
+              <event:coordinates>5230N03232W</event:coordinates>
+              <event:radius>010</event:radius> 
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2602151000</event:effectiveStart>
+              <event:effectiveEnd>2602152000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Helicopter Traffic Zone DONLON HTZ EADD028826 (class C) established within:
+area of 3km eihter side of a line: 532544N 0341225W - 525201N 0325052W - 522144N 0322018W - 515952N 0313429W - 511906N 0312502W (NW and SSE of Donlon CTR), 
+from SFC up to 1500FT AMSL, excluding DONLON CTR and AKVIN CTR.
+Intermittently active within the following periods: Daily 0800-1200.
+Contact DONLON TWR 118.100.
+For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:notification>
+            <event:NOTAM gml:id="id_08ce998c-12ba-4ec3-8ef5-02edf0021d94_1_0_T_4">
+              <event:series>D</event:series>
+              <event:number>0289</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QXXXX</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5236N03255W</event:coordinates>
+              <event:radius>005</event:radius> 
+              <event:location>EADA</event:location>
+              <event:effectiveStart>2602151000</event:effectiveStart>
+              <event:effectiveEnd>2602152000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Helicopter Traffic Zone DONLON HTZ EADD028826 (class C) established within:
+area of 3km eihter side of a line: 532544N 0341225W - 525201N 0325052W - 522144N 0322018W - 515952N 0313429W - 511906N 0312502W (NW and SSE of Donlon CTR), 
+from SFC up to 1500FT AMSL, excluding DONLON CTR and AKVIN CTR.
+Intermittently active within the following periods: Daily 0800-1200.
+Contact DONLON TWR 118.100.
+For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:notification>
+            <event:NOTAM gml:id="id_08ce998c-12ba-4ec3-8ef5-02edf0021d94_1_0_T_5">
+              <event:series>D</event:series>
+              <event:number>0290</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QXXXX</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5217N03202W</event:coordinates>
+              <event:radius>005</event:radius> 
+              <event:location>EADH</event:location>
+              <event:effectiveStart>2602151000</event:effectiveStart>
+              <event:effectiveEnd>2602152000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Helicopter Traffic Zone DONLON HTZ EADD028826 (class C) established within:
+area of 3km eihter side of a line: 532544N 0341225W - 525201N 0325052W - 522144N 0322018W - 515952N 0313429W - 511906N 0312502W (NW and SSE of Donlon CTR), 
+from SFC up to 1500FT AMSL, excluding DONLON CTR and AKVIN CTR.
+Intermittently active within the following periods: Daily 0800-1200.
+Contact DONLON TWR 118.100.
+For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.471f6a78-7fcf-4071-a384-e7964bfd4f6f">
+      <gml:identifier codeSpace="urn:uuid:">471f6a78-7fcf-4071-a384-e7964bfd4f6f</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_1">
+              <gml:beginPosition>2026-02-16T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-20T12:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_2">
+              <gml:beginPosition>2026-02-16T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-20T12:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>HTZ</aixm:type>
+          <aixm:designator>EADD028826</aixm:designator>
+          <aixm:name>DONLON HTZ</aixm:name>
+          <aixm:class>
+            <aixm:AirspaceLayerClass gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_3">
+              <aixm:classification>C</aixm:classification>
+              <aixm:associatedLevels>
+                <aixm:AirspaceLayer gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_4">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:associatedLevels>
+            </aixm:AirspaceLayerClass>
+          </aixm:class>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_5">
+              <aixm:operation>BASE</aixm:operation>
+              <aixm:operationSequence>1</aixm:operationSequence>
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_6">
+                  <aixm:upperLimit uom="FT">1500</aixm:upperLimit>
+                  <aixm:upperLimitReference>MSL</aixm:upperLimitReference>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:width uom="KM">6</aixm:width>
+                  <aixm:centreline>
+                    <aixm:Curve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_7">
+                      <gml:segments>
+                        <gml:GeodesicString>
+                          <gml:posList>53.4290270156 -34.2069959825 52.8669590956 -32.8476570106 52.3623204352 -32.3384611949 51.9977474598 -31.5747282862 51.3182439909 -31.4172604780</gml:posList>
+                        </gml:GeodesicString>
+                      </gml:segments>
+                      <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
+                    </aixm:Curve>
+                  </aixm:centreline>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_8">
+              <aixm:operation>SUBTR</aixm:operation>
+              <aixm:operationSequence>2</aixm:operationSequence>
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_9">
+                  <aixm:contributorAirspace>
+                    <aixm:AirspaceVolumeDependency gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_10">
+                      <aixm:dependency>FULL_GEOMETRY</aixm:dependency>
+                      <aixm:theAirspace xlink:href="urn:uuid:21a13c9f-a8ff-4fdd-9aaa-5dbfd91514b9" xlink:title="EADD CTR DONLON CTR" xlink:type="simple"/>
+                    </aixm:AirspaceVolumeDependency>
+                  </aixm:contributorAirspace>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_11">
+              <aixm:operation>SUBTR</aixm:operation>
+              <aixm:operationSequence>3</aixm:operationSequence>
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_12">
+                  <aixm:contributorAirspace>
+                    <aixm:AirspaceVolumeDependency gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_13">
+                      <aixm:dependency>FULL_GEOMETRY</aixm:dependency>
+                      <aixm:theAirspace xlink:href="urn:uuid:b42efcec-d6c3-4a0c-8e29-925e0aa6b800" xlink:title="EADA CTR AKVIN CTR" xlink:type="simple"/>
+                    </aixm:AirspaceVolumeDependency>
+                  </aixm:contributorAirspace>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_14">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_15">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>08:00</aixm:startTime>
+                  <aixm:endTime>12:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_16">
+                  <aixm:propertyName>status</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_17">
+                      <aixm:note>Contact DONLON TWR 118.100</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:annotation>
+                <aixm:Note gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_18">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_19">
+                      <aixm:note>For entry in Akvin CTR contact Akvin TWR 119.300</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:activity>ATS</aixm:activity> <!-- Question: should activity="ATS" be added? Not specified in scenario coding rules at the moment. -->
+              <aixm:status>INTERMITTENT</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_20">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_21">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_22">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>12:00</aixm:startTime>
+                  <aixm:endTime>08:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:status>INACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_23">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_24">
+              <aixm:propertyName>geometryComponent</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_25">
+                  <aixm:note>NW and SSE of Donlon CTR</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_26">
+              <event:theEvent xlink:href="urn:uuid:ff5d2e4e-f877-4487-ae7b-6c2fe2cf0949"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

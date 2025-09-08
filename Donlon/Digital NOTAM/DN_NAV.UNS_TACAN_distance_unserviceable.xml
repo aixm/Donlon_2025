@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Example of Digital NOTAM for navaid (VOR/DME) unserviceable (all components):
+  
+    Runway Direction: -
+              Navaid: OSTO (OST) TACAN
+        Subcomponent: -
+         Signal Type: distance
+  Operational Status: INTERRUPT
+            Schedule: -
+  Concerned airports: 0
+      Concerned FIRs: 1
+              Reason: -
+                Note: -
+-->
+
+<!-- 
+  A0390/26 NOTAMN
+  Q) EAAD/QNNAS/IV/BO/E/000/999/5230N03315W025
+  A) EAAD B) 2604050500 C) 2604051500
+  E) OSTO TACAN distance signal OST 119X subject to interruption.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_NAV.UNS_TACAN_distance_unserviceable">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.3eed12ef-2be6-4203-8ad8-d8f27bd31eca">
+      <gml:identifier codeSpace="urn:uuid:">3eed12ef-2be6-4203-8ad8-d8f27bd31eca</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_f7f8bf8f-7868-4f52-b4bc-9caff4a53832_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_f7f8bf8f-7868-4f52-b4bc-9caff4a53832_1_0_B_1">
+              <gml:beginPosition>2026-04-05T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-04-05T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_f7f8bf8f-7868-4f52-b4bc-9caff4a53832_1_0_B_2">
+              <gml:beginPosition>2026-04-05T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-04-05T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>OST TACAN OSTO</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>NAV.UNS</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_f7f8bf8f-7868-4f52-b4bc-9caff4a53832_1_0_B_3">
+              <event:series>A</event:series>
+              <event:number>0390</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QNNAS</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>E</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5230N03315W</event:coordinates>
+              <event:radius>025</event:radius>
+              <event:location>EAAD</event:location>
+              <event:effectiveStart>2604050500</event:effectiveStart>
+              <event:effectiveEnd>2604051500</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>OSTO TACAN distance signal OST 119X subject to interruption.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- OST TACAN Navaid -->
+  <message:hasMember>
+    <aixm:Navaid gml:id="uuid.4316fc95-f2f7-4789-a249-3afc0b5cc27a">
+      <gml:identifier codeSpace="urn:uuid:">4316fc95-f2f7-4789-a249-3afc0b5cc27a</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:NavaidTimeSlice gml:id="id_e84a1f59-657e-43aa-8493-6448b9be3b48_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_e84a1f59-657e-43aa-8493-6448b9be3b48_1_0_T_1">
+              <gml:beginPosition>2026-04-05T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-04-05T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The operational status of the navaid during the event -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_e84a1f59-657e-43aa-8493-6448b9be3b48_1_0_T_2">
+              <aixm:operationalStatus>PARTIAL</aixm:operationalStatus>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The link with the event -->
+          <aixm:extension>
+            <event:NavaidExtension gml:id="id_e84a1f59-657e-43aa-8493-6448b9be3b48_1_0_T_3">
+              <event:theEvent xlink:href="urn:uuid:3eed12ef-2be6-4203-8ad8-d8f27bd31eca"/>
+            </event:NavaidExtension>
+          </aixm:extension>
+        </aixm:NavaidTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Navaid>
+  </message:hasMember>
+  
+  <!-- OST TACAN NavaidEquipment -->
+  <message:hasMember>
+    <aixm:TACAN gml:id="uuid.3e33bd78-0b9c-4d27-9060-901fcb02fa47">
+      <gml:identifier codeSpace="urn:uuid:">3e33bd78-0b9c-4d27-9060-901fcb02fa47</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TACANTimeSlice gml:id="id_2d5796e7-4434-4974-a178-8704015c170b_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_2d5796e7-4434-4974-a178-8704015c170b_1_0_T_1">
+              <gml:beginPosition>2026-04-05T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-04-05T15:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The operational status of the navaid equipment during the event -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_2d5796e7-4434-4974-a178-8704015c170b_1_0_T_2">
+              <aixm:operationalStatus>PARTIAL</aixm:operationalStatus>
+              <aixm:signalType>DISTANCE</aixm:signalType>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The link with the event -->
+          <aixm:extension>
+            <event:TACANExtension gml:id="id_2d5796e7-4434-4974-a178-8704015c170b_1_0_T_3">
+              <event:theEvent xlink:href="urn:uuid:3eed12ef-2be6-4203-8ad8-d8f27bd31eca"/>
+            </event:TACANExtension>
+          </aixm:extension>
+        </aixm:TACANTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TACAN>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

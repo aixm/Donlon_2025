@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!--  Example of Digital NOTAM for new temporary obstacle (catenary wires):
+
+                        Group: NO
+                       Mobile: NO
+                Obstacle Type: CATENARY
+                   Start Time: 2026-01-12 08:15
+                     End Time: 2026-01-16 10:00
+                     Schedule: -
+                  Description: -
+             Location Remarks: 2.9NM SW of EADD and 3NM NNE of EADH
+      Obstacle Identification: OBST-EA-TEMP-0006
+                     Geometry: Line
+        Geographical Accuracy: 0.5 M
+                    Elevation: 65 M
+                       Height: 20 M
+                     Lighting: NO
+          Marking Description: Marked with red and white marker balls
+        Affected Aerodrome(s): EADD EADH
+              Affected FIR(s): EAAD
+                         Note: -
+-->
+
+<!-- 
+  F0006/26 NOTAMN
+  Q) EAAD/QOBCE/IV/M/AE/000/999/5220N03200W001
+  A) EADD B) 2601120815 C) 2601161000
+  E) Temporary catenary erected (ID: OBST-EADD-TEMP-0006) located at 2.9NM SW of EADD and 3NM NNE of EADH
+  along a line: 522009N 0320010W - 522008N 0320007W - 522008N 0320005W - 522008N 0320002W - 522008N 0320000W - 522007N 0315957W - 522007N 0315955W - 522006N 0315952W - 522006N 0315950W - 522006N 0315947W
+  elevation 65m (height 20m).
+  Not lighted. Marked with red and white marker balls.
+
+  F0007/26 NOTAMN
+  Q) EAAD/QOBCE/IV/M/A/000/999/5217N03202W005
+  A) EADH B) 2601120815 C) 2601161000
+  E) Temporary catenary erected (ID: OBST-EADD-TEMP-0006) located at 2.9NM SW of EADD and 3NM NNE of EADH
+  along a line: 522009N 0320010W - 522008N 0320007W - 522008N 0320005W - 522008N 0320002W - 522008N 0320000W - 522007N 0315957W - 522007N 0315955W - 522006N 0315952W - 522006N 0315950W - 522006N 0315947W
+  elevation 65m (height 20m).
+  Not lighted. Marked with red and white marker balls.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_OBS.NEW_temp_catenary_line-geometry_2_airports_1_FIR">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.f57ea632-33f6-485d-8db1-19230ebe05fd">
+      <gml:identifier codeSpace="urn:uuid:">f57ea632-33f6-485d-8db1-19230ebe05fd</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_b9744f0c-a031-4987-bb1f-ff3359cae92d_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_b9744f0c-a031-4987-bb1f-ff3359cae92d_1_0_B_1">
+              <gml:beginPosition>2026-01-12T08:15:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-16T10:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_b9744f0c-a031-4987-bb1f-ff3359cae92d_1_0_B_2">
+              <gml:beginPosition>2026-01-12T08:15:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-16T10:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADD EADH CATENARY OBST-EADD-TEMP-0006</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>OBS.NEW</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:dd062d88-3e64-4a5d-bebd-89476db9ebea" xlink:title="EADH DONLON/DOWNTOWN HELIPORT" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_b9744f0c-a031-4987-bb1f-ff3359cae92d_1_0_B_3">
+              <event:series>F</event:series>
+              <event:number>0006</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOBCE</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5220N03200W</event:coordinates>
+              <event:radius>001</event:radius>
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2601120815</event:effectiveStart>
+              <event:effectiveEnd>2601161000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Temporary catenary erected (ID: OBST-EADD-TEMP-0006) located at 2.9NM SW of EADD and 3NM NNE of EADH
+along a line: 522009N 0320010W - 522008N 0320007W - 522008N 0320005W - 522008N 0320002W - 522008N 0320000W - 522007N 0315957W - 522007N 0315955W - 522006N 0315952W - 522006N 0315950W - 522006N 0315947W
+elevation 65m (height 20m).
+Not lighted. Marked with red and white marker balls.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:notification>
+            <event:NOTAM gml:id="id_b9744f0c-a031-4987-bb1f-ff3359cae92d_1_0_B_4">
+              <event:series>F</event:series>
+              <event:number>0007</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOBCE</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5217N03202W</event:coordinates>
+              <event:radius>005</event:radius>
+              <event:location>EADH</event:location>
+              <event:effectiveStart>2601120815</event:effectiveStart>
+              <event:effectiveEnd>2601161000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Temporary catenary erected (ID: OBST-EADD-TEMP-0006) located at 2.9NM SW of EADD and 3NM NNE of EADH
+along a line: 522009N 0320010W - 522008N 0320007W - 522008N 0320005W - 522008N 0320002W - 522008N 0320000W - 522007N 0315957W - 522007N 0315955W - 522006N 0315952W - 522006N 0315950W - 522006N 0315947W
+elevation 65m (height 20m).
+Not lighted. Marked with red and white marker balls.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:VerticalStructure gml:id="uuid.028fc848-2703-4e54-ae79-a3f96d5b0ea2">
+      <gml:identifier codeSpace="urn:uuid:">028fc848-2703-4e54-ae79-a3f96d5b0ea2</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:VerticalStructureTimeSlice gml:id="id_4ab42272-4dfc-452b-9b53-8811e608a8b3_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_4ab42272-4dfc-452b-9b53-8811e608a8b3_1_0_B_1">
+              <gml:beginPosition>2026-01-12T08:15:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-16T10:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_4ab42272-4dfc-452b-9b53-8811e608a8b3_1_0_B_2">
+              <gml:beginPosition>2026-01-12T08:15:00Z</gml:beginPosition>
+              <gml:endPosition>2026-01-16T10:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>OBST-EADD-TEMP-0006</aixm:name> <!-- Obstacle Identification -->
+          <aixm:type>CATENARY</aixm:type>
+          <aixm:lighted>NO</aixm:lighted>
+          <aixm:group>NO</aixm:group>
+          <aixm:part>
+            <aixm:VerticalStructurePart gml:id="id_4ab42272-4dfc-452b-9b53-8811e608a8b3_1_0_B_3">
+              <!-- Location Remarks -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_923e1f4f-fa90-4bcb-8187-5318e4a2321b_1_0_B_4">
+                  <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_923e1f4f-fa90-4bcb-8187-5318e4a2321b_1_0_B_5">
+                      <aixm:note>2.9NM SW of EADD and 3NM NNE of EADH</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:verticalExtent uom="M">20</aixm:verticalExtent> <!-- Height -->
+              <aixm:type>CATENARY</aixm:type>
+              <aixm:mobile>NO</aixm:mobile>
+              <!-- Geometry - Line -->
+              <aixm:horizontalProjection_linearExtent>
+                <aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326">
+                  <gml:segments>
+                    <gml:GeodesicString>
+                      <gml:posList>52.3357873977 -32.0027143102 52.3356830836 -32.0020161249 52.3355766488 -32.0013187930 52.3355324221 -32.0006037766 52.3354921814 -31.9998881331 52.3353425005 -31.9992122961 52.3351946857 -31.9985353652 52.3351089036 -31.9978304883 52.3350264239 -31.9971245618 52.3350155262 -31.9964061298</gml:posList>
+                    </gml:GeodesicString>
+                  </gml:segments>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation uom="M">65</aixm:elevation>
+                </aixm:ElevatedCurve>
+              </aixm:horizontalProjection_linearExtent>
+            </aixm:VerticalStructurePart>
+          </aixm:part>
+          <!-- Marking Description -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_4ab42272-4dfc-452b-9b53-8811e608a8b3_1_0_B_4">
+              <aixm:propertyName>markingICAOStandard</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_4ab42272-4dfc-452b-9b53-8811e608a8b3_1_0_B_5">
+                  <aixm:note>Marked with red and white marker balls</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:VerticalStructureExtension gml:id="id_4ab42272-4dfc-452b-9b53-8811e608a8b3_1_0_B_6">
+              <event:theEvent xlink:href="urn:uuid:f57ea632-33f6-485d-8db1-19230ebe05fd"/>
+            </event:VerticalStructureExtension>
+          </aixm:extension>
+        </aixm:VerticalStructureTimeSlice>
+      </aixm:timeSlice>
+    </aixm:VerticalStructure>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

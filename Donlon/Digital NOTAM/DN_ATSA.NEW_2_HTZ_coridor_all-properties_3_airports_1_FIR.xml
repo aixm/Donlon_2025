@@ -24,18 +24,23 @@ Editorial note: this license is an instance of the BSD license template as provi
   
                    Type: HTZ
                   Class: C
-      Activation status: INTERMITTENT
+      Activation Status: INTERMITTENT
              Designator: EADD028826 (EADD - ATC centre providing air traffic control services, 0288 - the NOTAM number, 26 - the year)
                    Name: DONLON HTZ
+             Start Time: 2026-02-16 08:00
+               End Time: 2026-02-20 12:00
                Schedule: Daily 0800-1200
                Geometry: Corridor
-    Horizontal accuracy: 5M
-        Vertical limits: GND / 1500FT (ref: MSL)
-      Excluded airspace: DONLON CTR, AKVIN CTR
-     Concerned airports: 3
-         Concerned FIRs: 1
-          Location note: NW and SSE of Donlon CTR 
-  Controlling unit note: Contact DONLON TWR 118.100
+    Horizontal Accuracy: 5 M
+            Lower Limit: GND
+  Lower Limit Reference: -
+            Upper Limit: 1500 FT
+  Upper Limit Reference: MSL
+   Excluded Airspace(s): DONLON CTR, AKVIN CTR
+  Affected Aerodrome(s): EADD EADA EADH
+        Affected FIR(s): EAAD
+          Location Note: NW and SSE of Donlon CTR 
+  Controlling Unit Note: Contact DONLON TWR 118.100
                    Note: For entry in Akvin CTR contact Akvin TWR 119.300
 -->
 
@@ -230,6 +235,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
           <aixm:type>HTZ</aixm:type>
           <aixm:designator>EADD028826</aixm:designator>
           <aixm:name>DONLON HTZ</aixm:name>
+          <!-- Class -->
           <aixm:class>
             <aixm:AirspaceLayerClass gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_3">
               <aixm:classification>C</aixm:classification>
@@ -241,6 +247,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
               </aixm:associatedLevels>
             </aixm:AirspaceLayerClass>
           </aixm:class>
+          <!-- Geometry (base) -->
           <aixm:geometryComponent>
             <aixm:AirspaceGeometryComponent gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_5">
               <aixm:operation>BASE</aixm:operation>
@@ -265,6 +272,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
+          <!-- Excluded airspace 1 -->
           <aixm:geometryComponent>
             <aixm:AirspaceGeometryComponent gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_8">
               <aixm:operation>SUBTR</aixm:operation>
@@ -281,6 +289,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
+          <!-- Excluded airspace 2 -->
           <aixm:geometryComponent>
             <aixm:AirspaceGeometryComponent gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_11">
               <aixm:operation>SUBTR</aixm:operation>
@@ -297,8 +306,10 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
+          <!-- The activation status of the airspace during the event -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_14">
+              <!-- Schedule -->
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_15">
                   <aixm:timeReference>UTC</aixm:timeReference>
@@ -309,6 +320,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <!-- Controlling Unit Note -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_16">
                   <aixm:propertyName>status</aixm:propertyName>
@@ -320,6 +332,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <!-- Note -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_18">
                   <aixm:purpose>REMARK</aixm:purpose>
@@ -330,7 +343,6 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
-              <aixm:activity>ATS</aixm:activity> <!-- Question: should activity="ATS" be added? Not specified in scenario coding rules at the moment. -->
               <aixm:status>INTERMITTENT</aixm:status>
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_20">
@@ -340,6 +352,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The times when the airspace is inactive (calculated to fill in the gaps left by the NOTAM schedule) -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_21">
               <aixm:timeInterval>
@@ -362,6 +375,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- Location Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_24">
               <aixm:propertyName>geometryComponent</aixm:propertyName>
@@ -373,6 +387,7 @@ For entry in Akvin CTR contact Akvin TWR 119.300.</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_5496e032-8fa7-4017-a3c1-9d8db4fc22c8_1_0_B_26">
               <event:theEvent xlink:href="urn:uuid:ff5d2e4e-f877-4487-ae7b-6c2fe2cf0949"/>

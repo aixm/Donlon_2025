@@ -19,17 +19,26 @@ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF TH
 
 Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
 
-<!--  This is a Digital NOTAM for obstacle lights unserviceable (with two concerned airports and one concerned FIR) -->
+<!--  This is a Digital NOTAM for obstacle lights unserviceable:
+      
+                   Obstacle: OBST-EADD-1017 WINDMILL_FARMS
+                 Start Time: 2025-12-22 10:30
+                   End Time: 2025-12-23 05:00
+                   Schedule: -
+      Affected Aerodrome(s): EADD EADH
+            Affected FIR(s): EAAD
+                       Note: Temporarily marked with flags
+-->
 
 <!--
-  F0001/25 NOTAMN
+  F2489/25 NOTAMN
   Q) EAAD/QOLAS/IV/M/AE/000/999/5220N03145W001
   A) EADD B) 2512221030 C) 2512230500
   E) Obstacle lights unserviceable on group of windmill farms (10 Wind Turbines) located at DONLON NORTHEAST I identified as OBST-EADD-1017 within area: 522142N 0314415W - 521846N 0314451W - 521849N 0314527W - 522149N 0314527W - 522142N 0314415W
   elevation 215m (height 119m).
   Temporarily marked with flags.
 
-  F0002/25 NOTAMN
+  F2490/25 NOTAMN
   Q) EAAD/QOLAS/IV/M/A/000/999/5217N03202W005
   A) EADH B) 2512221030 C) 2512230500
   E) Obstacle lights unserviceable on group of windmill farms (10 Wind Turbines) located at DONLON NORTHEAST I identified as OBST-EADD-1017 within area: 522142N 0314415W - 521846N 0314451W - 521849N 0314527W - 522149N 0314527W - 522142N 0314415W
@@ -81,7 +90,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:notification>
             <event:NOTAM gml:id="id_aa161ba4-0d4a-4299-a629-db90aa2baf25_1_0_B_3">
               <event:series>F</event:series>
-              <event:number>0001</event:number>
+              <event:number>2489</event:number>
               <event:year>2025</event:year>
               <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
               <event:type>N</event:type>
@@ -107,7 +116,7 @@ Temporarily marked with flags.</event:text>
           <event:notification>
             <event:NOTAM gml:id="id_aa161ba4-0d4a-4299-a629-db90aa2baf25_1_0_B_4">
               <event:series>F</event:series>
-              <event:number>0002</event:number>
+              <event:number>2490</event:number>
               <event:year>2025</event:year>
               <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
               <event:type>N</event:type>
@@ -151,8 +160,10 @@ Temporarily marked with flags.</event:text>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The availability status of the lighting equipment during the event -->
           <aixm:lightingAvailability>
             <aixm:VerticalStructureLightingStatus gml:id="id_b06095ae-84ba-4b41-944d-d985e92db5ea_1_0_T_2">
+              <!-- Note -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_b06095ae-84ba-4b41-944d-d985e92db5ea_1_0_T_3">
                   <aixm:purpose>REMARK</aixm:purpose>
@@ -166,6 +177,7 @@ Temporarily marked with flags.</event:text>
               <aixm:status>UNSERVICEABLE</aixm:status>
             </aixm:VerticalStructureLightingStatus>
           </aixm:lightingAvailability>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:VerticalStructureExtension gml:id="id_b06095ae-84ba-4b41-944d-d985e92db5ea_1_0_T_21">
               <event:theEvent xlink:href="urn:uuid:fc319cdb-0769-43d9-a744-1a69e162186d"/>

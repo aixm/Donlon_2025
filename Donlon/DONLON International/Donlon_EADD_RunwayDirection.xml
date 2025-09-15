@@ -37,10 +37,10 @@
     <aixm:RunwayDirection gml:id="uuid.c8455a6b-9319-4bb7-b797-08e644342d64">
       <gml:identifier codeSpace="urn:uuid:">c8455a6b-9319-4bb7-b797-08e644342d64</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_09L">
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_RWY_09L">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_VT_c8455a6b-9319-4bb7-b797-08e644342d64">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -65,14 +65,14 @@
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>FALS</aixm:classLightingJAR>
           <aixm:precisionApproachGuidance>ILS_PRECISION_CAT_II</aixm:precisionApproachGuidance>
-          <aixm:usedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:title="RWY_EADD_09L/27R"/>
-          <aixm:startingElement xlink:href="urn:uuid:861e2544-30ad-40c0-80e7-d596fd0dc9aa"/>
+          <aixm:usedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:title="EADD RWY 09L/27R"/>
+          <aixm:startingElement xlink:href="urn:uuid:861e2544-30ad-40c0-80e7-d596fd0dc9aa" xlink:title="RWE EADD RWY 09L/27R 2"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N_c8455a6b-9319-4bb7-b797-08e644342d64">
+            <aixm:Note gml:id="ID_N_c8455a6b-9319-4bb7-b797-08e644342d64">
               <aixm:propertyName>magneticBearing</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N_LN_c8455a6b-9319-4bb7-b797-08e644342d64">
+                <aixm:LinguisticNote gml:id="ID_N_LN_c8455a6b-9319-4bb7-b797-08e644342d64">
                   <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -80,11 +80,12 @@
           </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_c8455a6b-9319-4bb7-b797-08e644342d64_1">
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_c8455a6b-9319-4bb7-b797-08e644342d64_5">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_c8455a6b-9319-4bb7-b797-08e644342d64_5">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
@@ -138,6 +139,7 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_c8455a6b-9319-4bb7-b797-08e644342d64_1">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_c8455a6b-9319-4bb7-b797-08e644342d64_1">
                       <aixm:timeInterval>
@@ -173,6 +175,7 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_c8455a6b-9319-4bb7-b797-08e644342d64_1">
@@ -222,6 +225,7 @@
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_c8455a6b-9319-4bb7-b797-08e644342d64_2">
@@ -247,6 +251,7 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_c8455a6b-9319-4bb7-b797-08e644342d64_3">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_c8455a6b-9319-4bb7-b797-08e644342d64_3">
                       <aixm:timeInterval>
@@ -282,6 +287,7 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_c8455a6b-9319-4bb7-b797-08e644342d64_3">
@@ -331,6 +337,7 @@
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_c8455a6b-9319-4bb7-b797-08e644342d64_4">
@@ -363,10 +370,10 @@
     <aixm:RunwayDirection gml:id="uuid.b802d439-e9f3-49f9-96e1-0153b837e113">
       <gml:identifier codeSpace="urn:uuid:">b802d439-e9f3-49f9-96e1-0153b837e113</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_27R">
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_RWY_27R">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_VT_b802d439-e9f3-49f9-96e1-0153b837e113">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -391,14 +398,14 @@
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>FALS</aixm:classLightingJAR>
           <aixm:precisionApproachGuidance>ILS_PRECISION_CAT_II</aixm:precisionApproachGuidance>
-          <aixm:usedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:title="RWY_EADD_09L/27R"/>
-          <aixm:startingElement xlink:href="urn:uuid:81c87aec-9243-4be0-9d16-33df1deb6d38"/>
+          <aixm:usedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:title="EADD RWY 09L/27R"/>
+          <aixm:startingElement xlink:href="urn:uuid:81c87aec-9243-4be0-9d16-33df1deb6d38" xlink:title="RWE EADD RWY 09L/27R 1"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N_b802d439-e9f3-49f9-96e1-0153b837e113">
+            <aixm:Note gml:id="ID_N_b802d439-e9f3-49f9-96e1-0153b837e113">
               <aixm:propertyName>magneticBearing</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N_LN_b802d439-e9f3-49f9-96e1-0153b837e113">
+                <aixm:LinguisticNote gml:id="ID_N_LN_b802d439-e9f3-49f9-96e1-0153b837e113">
                   <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -406,11 +413,12 @@
           </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_b802d439-e9f3-49f9-96e1-0153b837e113_1">
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_b802d439-e9f3-49f9-96e1-0153b837e113_4">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_b802d439-e9f3-49f9-96e1-0153b837e113_4">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
@@ -464,6 +472,7 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_b802d439-e9f3-49f9-96e1-0153b837e113_1">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_b802d439-e9f3-49f9-96e1-0153b837e113_1">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
@@ -480,6 +489,7 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_b802d439-e9f3-49f9-96e1-0153b837e113_2">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_b802d439-e9f3-49f9-96e1-0153b837e113_2">
                       <aixm:timeInterval>
@@ -515,6 +525,7 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_b802d439-e9f3-49f9-96e1-0153b837e113_2">
@@ -564,6 +575,7 @@
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_b802d439-e9f3-49f9-96e1-0153b837e113_3">
@@ -596,10 +608,10 @@
     <aixm:RunwayDirection gml:id="uuid.5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
       <gml:identifier codeSpace="urn:uuid:">5d6513d4-a62a-49e1-9e26-0b8cbf320daf</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_09R">
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_RWY_09R">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_VT_5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -624,14 +636,14 @@
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>FALS</aixm:classLightingJAR>
           <aixm:precisionApproachGuidance>OTHER:GLS_PRECISION_CAT_I</aixm:precisionApproachGuidance>
-          <aixm:usedRunway xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a" xlink:title="RWY_EADD_09R/27L"/>
-          <aixm:startingElement xlink:href="urn:uuid:a2d3919c-8625-412a-84d1-791eeb513dbb"/>
+          <aixm:usedRunway xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a" xlink:title="EADD RWY 09R/27L"/>
+          <aixm:startingElement xlink:href="urn:uuid:a2d3919c-8625-412a-84d1-791eeb513dbb" xlink:title="RWE EADD RWY 09R/27L 1"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N_5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
+            <aixm:Note gml:id="ID_N_5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
               <aixm:propertyName>magneticBearing</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N_LN_5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
+                <aixm:LinguisticNote gml:id="ID_N_LN_5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
                   <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -639,11 +651,12 @@
           </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_1">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
@@ -692,6 +705,7 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_2">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
@@ -708,6 +722,7 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
                       <aixm:timeInterval>
@@ -743,6 +758,7 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_3">
@@ -792,6 +808,7 @@
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_5d6513d4-a62a-49e1-9e26-0b8cbf320daf_4">
@@ -824,10 +841,10 @@
     <aixm:RunwayDirection gml:id="uuid.ee6019d6-29f7-404d-8cee-b6819f325aed">
       <gml:identifier codeSpace="urn:uuid:">ee6019d6-29f7-404d-8cee-b6819f325aed</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_27L">
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_RWY_27L">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_VT_ee6019d6-29f7-404d-8cee-b6819f325aed">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -852,14 +869,14 @@
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>FALS</aixm:classLightingJAR>
           <aixm:precisionApproachGuidance>OTHER:GLS_PRECISION_CAT_I</aixm:precisionApproachGuidance>
-          <aixm:usedRunway xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a" xlink:title="RWY_EADD_09R/27L"/>
-          <aixm:startingElement xlink:href="urn:uuid:64402b85-258f-4317-b053-9e51fc64287e"/>
+          <aixm:usedRunway xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a" xlink:title="EADD RWY 09R/27L"/>
+          <aixm:startingElement xlink:href="urn:uuid:64402b85-258f-4317-b053-9e51fc64287e" xlink:title="RWE EADD RWY 09R/27L 2"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N_ee6019d6-29f7-404d-8cee-b6819f325aed">
+            <aixm:Note gml:id="ID_N_ee6019d6-29f7-404d-8cee-b6819f325aed">
               <aixm:propertyName>magneticBearing</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N_LN_ee6019d6-29f7-404d-8cee-b6819f325aed">
+                <aixm:LinguisticNote gml:id="ID_N_LN_ee6019d6-29f7-404d-8cee-b6819f325aed">
                   <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -867,11 +884,12 @@
           </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_1">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
@@ -920,6 +938,7 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
                       <aixm:timeInterval>
@@ -955,6 +974,7 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_2">
@@ -1004,6 +1024,7 @@
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_3">
@@ -1029,6 +1050,7 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
                       <aixm:timeInterval>
@@ -1064,6 +1086,7 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_4">
@@ -1113,6 +1136,7 @@
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_ee6019d6-29f7-404d-8cee-b6819f325aed_5">
@@ -1145,10 +1169,10 @@
     <aixm:RunwayDirection gml:id="uuid.425f1f4b-ef0f-4d7b-8706-aee197f124ed">
       <gml:identifier codeSpace="urn:uuid:">425f1f4b-ef0f-4d7b-8706-aee197f124ed</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayDirectionTimeSlice gml:id="ID_TS_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_FATO_13">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_TS_VT_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+            <gml:TimePeriod gml:id="ID_VT_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1156,7 +1180,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_TS_FL_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+            <gml:TimePeriod gml:id="ID_FL_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
               <gml:beginPosition>2013-04-25T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -1165,16 +1189,22 @@
           <aixm:trueBearing>123.25</aixm:trueBearing>
           <aixm:trueBearingAccuracy>0.01</aixm:trueBearingAccuracy>
           <aixm:magneticBearing>125.20</aixm:magneticBearing>
+          <aixm:patternVFR xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:slopeTDZ xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:elevationTDZ xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:elevationTDZAccuracy xsi:nil="true" nilReason="inapplicable"/>
           <aixm:approachMarkingType>HELIPORT</aixm:approachMarkingType>
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>NALS</aixm:classLightingJAR>
-          <aixm:usedRunway xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="FATO_13/31"/>
+          <aixm:precisionApproachGuidance xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:usedRunway xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="EADD FATO 13/31"/>
+          <aixm:startingElement xsi:nil="true" nilReason="inapplicable"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+            <aixm:Note gml:id="ID_N_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
               <aixm:propertyName>magneticBearing</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N_LN_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
+                <aixm:LinguisticNote gml:id="ID_N_LN_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
                   <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -1182,11 +1212,12 @@
           </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_425f1f4b-ef0f-4d7b-8706-aee197f124ed">
                       <aixm:logicalOperator>NOT</aixm:logicalOperator>
@@ -1210,10 +1241,10 @@
     <aixm:RunwayDirection gml:id="uuid.c6fd6993-78ea-4815-9089-6a711bf58a2c">
       <gml:identifier codeSpace="urn:uuid:">c6fd6993-78ea-4815-9089-6a711bf58a2c</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayDirectionTimeSlice gml:id="ID_TS_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_EADD_FATO_31">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_TS_VT_c6fd6993-78ea-4815-9089-6a711bf58a2c">
-              <gml:beginPosition>2025-09-01T00:00:00Z</gml:beginPosition>
+            <gml:TimePeriod gml:id="ID_VT_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1221,7 +1252,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_TS_FL_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+            <gml:TimePeriod gml:id="ID_FL_c6fd6993-78ea-4815-9089-6a711bf58a2c">
               <gml:beginPosition>2013-04-25T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -1230,16 +1261,22 @@
           <aixm:trueBearing>303.25</aixm:trueBearing>
           <aixm:trueBearingAccuracy>0.01</aixm:trueBearingAccuracy>
           <aixm:magneticBearing>305.20</aixm:magneticBearing>
+          <aixm:patternVFR xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:slopeTDZ xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:elevationTDZ xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:elevationTDZAccuracy xsi:nil="true" nilReason="inapplicable"/>
           <aixm:approachMarkingType>HELIPORT</aixm:approachMarkingType>
           <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
           <aixm:classLightingJAR>NALS</aixm:classLightingJAR>
-          <aixm:usedRunway xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="FATO_13/31"/>
+          <aixm:precisionApproachGuidance xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:usedRunway xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="EADD FATO 13/31"/>
+          <aixm:startingElement xsi:nil="true" nilReason="inapplicable"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+            <aixm:Note gml:id="ID_N_c6fd6993-78ea-4815-9089-6a711bf58a2c">
               <aixm:propertyName>magneticBearing</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N_LN_c6fd6993-78ea-4815-9089-6a711bf58a2c">
+                <aixm:LinguisticNote gml:id="ID_N_LN_c6fd6993-78ea-4815-9089-6a711bf58a2c">
                   <aixm:note lang="eng">Magnetic bearing value calculated for year 2025</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -1247,11 +1284,12 @@
           </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_c6fd6993-78ea-4815-9089-6a711bf58a2c">
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_c6fd6993-78ea-4815-9089-6a711bf58a2c">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_c6fd6993-78ea-4815-9089-6a711bf58a2c">
                       <aixm:logicalOperator>NOT</aixm:logicalOperator>

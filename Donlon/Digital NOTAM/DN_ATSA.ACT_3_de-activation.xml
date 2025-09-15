@@ -22,12 +22,14 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for ATS airspace DE-activation:
   
-                 Airspace: DONLON ATZ
-        Activation status: INACTIVE
-                 Schedule: -
-       Concerned airports: 1
-           Concerned FIRs: 1
-                     Note: -
+               Airspace: DONLON ATZ
+      Activation Status: INACTIVE
+             Start Time: 2026-02-11 08:00
+               End Time: 2026-02-11 16:00
+               Schedule: -
+  Affected Aerodrome(s): EADH
+        Affected FIR(s): EAAD
+                   Note: -
                       
   During the event the airspace is de-activated on 2026-02-11 (WED) from 0800 until 1600.
 -->
@@ -125,7 +127,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
-          <!-- The deactivation od the airspace -->
+          <!-- The deactivation of the airspace -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_30bde0eb-416f-4571-a034-ae1b7baa1a43_1_0_T_2">
               <aixm:status>INACTIVE</aixm:status>
@@ -137,6 +139,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_30bde0eb-416f-4571-a034-ae1b7baa1a43_1_0_T_4">
               <event:theEvent xlink:href="urn:uuid:fd7e8ec9-1a5c-4194-8ec7-63c3e7cb426a"/>

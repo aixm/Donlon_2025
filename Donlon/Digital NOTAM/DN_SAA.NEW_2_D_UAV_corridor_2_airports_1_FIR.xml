@@ -23,18 +23,24 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for an ad-hoc spacial activity area creation:
   
-           Area type: D
-          Designator: EAR0012-26
-                Name: -
-            Activity: UAV
-   Activation status: ACTIVE
-            Schedule: -
-       Location note: -
-            Geometry: Corridor with straight lines and arc-by-edge
-     Vertical limits: GND / 500M (ref: SFC)
-   Excluded airspace: -
-  Concerned airports: 2
-      Concerned FIRs: 1
+              Area type: D
+             Designator: EAR0012-26
+                   Name: -
+               Activity: UAV
+      Activation status: ACTIVE
+             Start Time: 2026-01-13 08:45
+               End Time: 2026-01-13 20:00
+               Schedule: -
+          Location Note: -
+               Geometry: Corridor with straight lines and arc-by-edge
+  Geographical Accuracy: 1 M
+            Lower Limit: GND
+  Lower Limit Reference: -
+            Upper Limit: 500 M
+  Upper Limit Reference: SFC
+   Excluded Airspace(s): -
+  Affected Aerodrome(s): EADD EADH
+        Affected FIR(s): EAAD
                 Note: -
 -->
 
@@ -201,12 +207,14 @@ From SFC to 500M AGL.</event:text>
                           <gml:posList>52.3220524 -31.87788187 52.3220524 -31.93590727</gml:posList>
                         </gml:GeodesicString>
                       </gml:segments>
+                      <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
                     </aixm:Curve>
                   </aixm:centreline>
                 </aixm:AirspaceVolume>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
+          <!-- The activation status of the airspace during the event -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_6">
               <aixm:activity>UAV</aixm:activity>
@@ -219,6 +227,7 @@ From SFC to 500M AGL.</event:text>
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_71a4b743-6f68-4142-91cc-72e881c964f5_1_0_B_8">
               <event:theEvent xlink:href="urn:uuid:806a541c-ecb4-4760-bf91-cde425c86829"/>

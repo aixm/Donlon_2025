@@ -34,13 +34,13 @@
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd" 
   gml:id="DONLON_EADD_AirportHeliport_Baseline">
   <message:hasMember>
-    <aixm:AirportHeliport gml:id="ID_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+    <aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
       <gml:identifier codeSpace="urn:uuid:">1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
       <aixm:timeSlice>
         <aixm:AirportHeliportTimeSlice gml:id="AHP_EADD">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_VT_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -79,6 +79,7 @@
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:certificationDate>2009-01-01</aixm:certificationDate>
           <aixm:certificationExpirationDate xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:contaminant xsi:nil="true" nilReason="inapplicable"/>
           <aixm:servedCity>
             <aixm:City gml:id="ID_C_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
               <aixm:name>DONLON</aixm:name>
@@ -127,15 +128,23 @@
                 </gml:PolygonPatch>
               </gml:patches>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+              <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+              <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+              <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+              <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
             </aixm:ElevatedSurface>
           </aixm:aviationBoundary>
-          <aixm:altimeterSource xlink:href="urn:uuid:94c1184f-44d9-4858-9728-87d351982204"/>
+          <aixm:altimeterSource xlink:href="urn:uuid:94c1184f-44d9-4858-9728-87d351982204" xlink:title="ALT SRC DONLON INTL"/>
           <aixm:contact>
             <aixm:ContactInformation gml:id="ID_CI_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
-              <aixm:name>DONLON AIRPORT</aixm:name>
+              <aixm:name>DONLON INTERNATIONAL AIRPORT</aixm:name>
+              <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_TS_CI_PA_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
-                  <aixm:deliveryPoint>Donlon 4 W</aixm:deliveryPoint>
+                <aixm:PostalAddress gml:id="ID_PA_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                  <aixm:deliveryPoint>4 W</aixm:deliveryPoint>
+                  <aixm:city>DONLON</aixm:city>
+                  <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
+                  <aixm:postalCode xsi:nil="true" nilReason="unknown"/>
                   <aixm:country>REPUBLIC OF DONLON</aixm:country>
                 </aixm:PostalAddress>
               </aixm:address>
@@ -143,12 +152,15 @@
                 <aixm:OnlineContact gml:id="ID_OC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EADDYDYX</aixm:linkage>
+                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:eMail xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
                 <aixm:OnlineContact gml:id="ID_OC2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.donlonairport.com</aixm:linkage>
+                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
                   <aixm:eMail>admin@donlonairport.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
@@ -163,9 +175,11 @@
           <aixm:availability>
             <aixm:AirportHeliportAvailability gml:id="ID_AHA_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:AirportHeliportUsage gml:id="ID_AHU_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
                       <aixm:timeInterval>
@@ -208,7 +222,7 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_1">
@@ -312,7 +326,7 @@
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64_2">
@@ -357,11 +371,11 @@
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
-                    <aixm:Note gml:id="ID_AHU_N_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                    <aixm:Note gml:id="ID_N0_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>DESCRIPTION</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="ID_AHU_N_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                        <aixm:LinguisticNote gml:id="ID_LN0_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                           <aixm:note lang="eng">Services are available O/R. Request to be submitted to the AD not later than 1500 (1400) UTC.</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>
@@ -373,77 +387,77 @@
             </aixm:AirportHeliportAvailability>
           </aixm:availability>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <aixm:Note gml:id="ID_N1_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
               <aixm:propertyName>fieldElevation</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N1_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                <aixm:LinguisticNote gml:id="ID_N1_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:note lang="eng">Geoid undulation at AD ELEV PSN is 12 M</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <aixm:Note gml:id="ID_N2_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
               <aixm:propertyName>altimeterCheckLocation</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N2_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                <aixm:LinguisticNote gml:id="ID_N2_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:note lang="eng">Location: At apron. Elevation: 28 M.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <aixm:Note gml:id="ID_N3_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
               <aixm:propertyName>secondaryPowerSupply</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N3_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                <aixm:LinguisticNote gml:id="ID_N3_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:note lang="eng">Secondary power supply to all lighting at AD. Switch-over time: 1 SEC.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <aixm:Note gml:id="ID_N4_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
               <aixm:propertyName>windDirectionIndicator</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N4_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                <aixm:LinguisticNote gml:id="ID_N4_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:note lang="eng">300 M from THR 09L, not lighted</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N5_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <aixm:Note gml:id="ID_N5_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
               <aixm:propertyName>landingDirectionIndicator</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N5_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                <aixm:LinguisticNote gml:id="ID_N5_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:note lang="eng">800 M W of ARP, lighted</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N6_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <aixm:Note gml:id="ID_N6_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
               <aixm:propertyName>transitionLevel</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N6_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                <aixm:LinguisticNote gml:id="ID_N6_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:note lang="eng">By ATC</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_TS_N7_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <aixm:Note gml:id="ID_N7_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
               <aixm:propertyName>ARP</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_TS_N7_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+                <aixm:LinguisticNote gml:id="ID_N7_LN_1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
                   <aixm:note lang="eng">ARP site at AD: 258°/1075 M from THR 09L. Direction and distance from (city): 045°, 9 KM from Donlon.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>

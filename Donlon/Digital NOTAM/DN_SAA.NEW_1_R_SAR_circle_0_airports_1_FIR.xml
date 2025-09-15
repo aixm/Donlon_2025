@@ -23,19 +23,26 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for an ad-hoc spacial activity area creation:
   
-           Area type: R
-          Designator: EAR0057-25
-                Name: -
-            Activity: OTHER:SAR
-   Activation status: ACTIVE
-            Schedule: -
-       Location note: -
-            Geometry: Circle by centerpoint and radius
-     Vertical limits: GND / 5000FT (ref: MSL)
-   Excluded airspace: -
-  Concerned airports: 0
-      Concerned FIRs: 1
-                Note: yes
+              Area type: R
+             Designator: EAR0057-25
+                   Name: -
+               Activity: OTHER:SAR
+      Activation status: ACTIVE
+             Start Time: 2025-12-29 17:00
+               End Time: 2025-12-29 19:00
+               Schedule: -
+          Location Note: -
+               Geometry: Circle by centerpoint and radius (4NM)
+  Geographical Accuracy: 1 M
+            Lower Limit: GND
+  Lower Limit Reference: -
+            Upper Limit: 5000 FT
+  Upper Limit Reference: MSL
+   Excluded Airspace(s): -
+  Affected Aerodrome(s): -
+        Affected FIR(s): EAAD
+                   Note: To ensure their own safety and to avoid interference with control and SAR activities, pilots are urgently requested not to fly in or near the area without the permission of aeronautical rescue and coordination center.
+                         Emergency controlling authority Tel 01 309 678377.
 -->
 
 <!-- 
@@ -181,6 +188,7 @@ Emergency controlling authority Tel 01 309 678377.</event:text>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
+          <!-- The activation status of the airspace during the event -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_ae42a017-a422-4ee5-b38c-11c57deebca9_1_0_B_7">
               <aixm:annotation>
@@ -204,6 +212,7 @@ Emergency controlling authority Tel 01 309 678377</aixm:note>
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_ae42a017-a422-4ee5-b38c-11c57deebca9_1_0_B_11">
               <event:theEvent xlink:href="urn:uuid:50dbd548-81c0-4d4e-869b-af81516aa86a"/>

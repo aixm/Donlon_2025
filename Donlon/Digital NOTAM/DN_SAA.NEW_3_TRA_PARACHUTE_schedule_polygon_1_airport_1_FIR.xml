@@ -23,19 +23,25 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for an ad-hoc spacial activity area creation:
   
-           Area type: TRA
-          Designator: -
-                Name: ALPHA04
-            Activity: PARACHUTE
-   Activation status: INTERMITTENT
-            Schedule: daily
-       Location note: NNW of Donlon/Intl. Airport
-            Geometry: Polygon with straight lines and arc-by-centerpoint
-     Vertical limits: GND / 5000FT (ref: MSL)
-   Excluded airspace: Donlon CTR
-  Concerned airports: 1
-      Concerned FIRs: 1
-                Note: -
+              Area type: TRA
+             Designator: -
+                   Name: ALPHA04
+               Activity: PARACHUTE
+      Activation status: INTERMITTENT
+             Start Time: 2026-01-05 14:00
+               End Time: 2026-01-08 22:00
+               Schedule: Daily 1400-2200
+          Location Note: NNW of Donlon/Intl. Airport
+               Geometry: Polygon with straight lines and arc-by-centerpoint
+  Geographical Accuracy: 1 M
+            Lower Limit: GND
+  Lower Limit Reference: -
+            Upper Limit: 5000 FT
+  Upper Limit Reference: MSL
+   Excluded Airspace(s): Donlon CTR
+  Affected Aerodrome(s): EADD
+        Affected FIR(s): EAAD
+                   Note: -
 -->
 
 <!-- 
@@ -86,6 +92,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:version>2.0</event:version>
           <event:estimatedValidity xsi:nil="true"/>
           <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <event:notification>
@@ -189,6 +196,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
+          <!-- Excluded Airspace -->
           <aixm:geometryComponent>
             <aixm:AirspaceGeometryComponent gml:id="id_b11b7418-cd41-46d3-abe8-396919828a2a_1_0_B_7">
               <aixm:operation>SUBTR</aixm:operation>
@@ -228,7 +236,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
-          <!-- The times when the airspace is inactive -->
+          <!-- The times when the airspace is inactive (calculated to fill in the gaps left by the NOTAM schedule) -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_b11b7418-cd41-46d3-abe8-396919828a2a_1_0_B_13">
               <aixm:timeInterval>
@@ -261,6 +269,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- Location Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_b11b7418-cd41-46d3-abe8-396919828a2a_1_0_B_17">
               <aixm:propertyName>geometryComponent</aixm:propertyName>
@@ -272,6 +281,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_b11b7418-cd41-46d3-abe8-396919828a2a_1_0_B_19">
               <event:theEvent xlink:href="urn:uuid:6c3f621f-b6cc-4b58-aeac-b0439cc9051d"/>

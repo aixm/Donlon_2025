@@ -114,6 +114,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     </event:Event>
   </message:hasMember>
   
+  <!-- EADD -->
   <message:hasMember>
     <aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
       <gml:identifier codeSpace="urn:uuid:">1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
@@ -126,8 +127,9 @@ Editorial note: this license is an instance of the BSD license template as provi
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>5</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- (J) Drifting snow whole airport -->
           <aixm:contaminant>
             <aixm:AirportHeliportContamination gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_1_0_T_2">
               <aixm:layer>
@@ -137,6 +139,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:layer>
             </aixm:AirportHeliportContamination>
           </aixm:contaminant>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirportHeliportExtension gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_1_0_T_4">
               <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014"/>
@@ -160,11 +163,12 @@ Editorial note: this license is an instance of the BSD license template as provi
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:overallContaminant>
             <aixm:RunwayContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_2">
               <aixm:observationTime>2026-02-18T15:44:00.000Z</aixm:observationTime>
+              <!-- (L) Chemical treatment  -->
               <aixm:layer>
                 <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_3">
                   <aixm:type>OTHER:CHEMICAL_TREATMENT</aixm:type>
@@ -172,6 +176,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:layer>
             </aixm:RunwayContamination>
           </aixm:overallContaminant>
+          <!-- Aeroplane performance calculation section - first section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_4">
               <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
@@ -185,6 +190,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>1_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - second section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_6">
               <aixm:depth uom="MM">6</aixm:depth>
@@ -198,6 +204,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>2_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - third section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_8">
               <aixm:depth uom="MM">6</aixm:depth>
@@ -211,6 +218,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>3_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayExtension gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_10">
               <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014"/>
@@ -234,20 +242,22 @@ Editorial note: this license is an instance of the BSD license template as provi
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>4</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:overallContaminant>
             <aixm:RunwayContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_2">
               <aixm:observationTime>2026-02-18T15:45:00.000Z</aixm:observationTime>
+              <!-- (K) Loose sand on the runway -->
               <aixm:layer>
                 <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_3">
                   <aixm:type>OTHER:LOOSE_SAND</aixm:type>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
-              <aixm:clearedLength uom="M">3000</aixm:clearedLength>
-              <aixm:clearedWidth uom="M">35</aixm:clearedWidth>
+              <aixm:clearedLength uom="M">3000</aixm:clearedLength> <!-- (I) Reduced runway length -->
+              <aixm:clearedWidth uom="M">35</aixm:clearedWidth> <!-- (H) Reduced runway width -->
             </aixm:RunwayContamination>
           </aixm:overallContaminant>
+          <!-- Aeroplane performance calculation section - first section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_4">
               <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
@@ -261,6 +271,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>1_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - second section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_6">
               <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
@@ -274,6 +285,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>2_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - third section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_8">
               <aixm:depth uom="MM">3</aixm:depth>
@@ -287,6 +299,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>3_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayExtension gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_10">
               <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014"/>
@@ -361,8 +374,8 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
               <event:text>RWY 09L THR displaced 200 m, position 522233N 0315741W. Elevation 29M.
-                LDA 3000M 
-                Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
+LDA 3000M 
+Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
             </event:NOTAM>
           </event:notification>
           <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
@@ -405,6 +418,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:declaredValue>
             </aixm:RunwayDeclaredDistance>
           </aixm:associatedDeclaredDistance>
+          <!-- Displacement Distance -->
           <aixm:annotation>
             <aixm:Note gml:id="id_35ca8110-2f39-4df8-bb57-25210ff99434_1_0_T_5">
               <aixm:propertyName>location</aixm:propertyName>
@@ -416,6 +430,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_35ca8110-2f39-4df8-bb57-25210ff99434_1_0_T_7">
               <aixm:purpose>REMARK</aixm:purpose>
@@ -441,7 +456,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   A0257/25 NOTAMN
   Q) EAAD/QMDCH/IV/NBO/A/000/999/5222N03157W005
   A) EADD B) 2602181545 C) 2602182345
-  E) RWY 09L Start of TKOF run E (TWY E) displaced 167 m, position 522233N 0315741W. Elevation 29M.
+  E) RWY 09L Start of TKOF run E (TWY E) displaced 167m, position 522233N 0315741W. Elevation 29M.
   TORA 3000M 
   TODA 3000M 
   ASDA 3000M 
@@ -499,7 +514,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:effectiveEnd>2602182345</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
-              <event:text>RWY 09L Start of TKOF run E (TWY E) displaced 167 m, position 522233N 0315741W. Elevation 29M.
+              <event:text>RWY 09L Start of TKOF run E (TWY E) displaced 167m, position 522233N 0315741W. Elevation 29M.
 TORA 3000M 
 TODA 3000M 
 ASDA 3000M  
@@ -520,8 +535,8 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
         <aixm:RunwayCentrelinePointTimeSlice gml:id="id_9f388c31-e093-4c24-8c4c-4b0cc11d5dba_1_0_T">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_9f388c31-e093-4c24-8c4c-4b0cc11d5dba_1_0_T_1">
-              <gml:beginPosition>2025-11-10T06:00:00Z</gml:beginPosition>
-              <gml:endPosition>2025-11-13T20:00:00Z</gml:endPosition>
+              <gml:beginPosition>2026-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-18T23:45:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
@@ -565,17 +580,19 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:declaredValue>
             </aixm:RunwayDeclaredDistance>
           </aixm:associatedDeclaredDistance>
+          <!-- Displacement Distance -->
           <aixm:annotation>
             <aixm:Note gml:id="id_9f388c31-e093-4c24-8c4c-4b0cc11d5dba_1_0_T_9">
               <aixm:propertyName>location</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="id_9f388c31-e093-4c24-8c4c-4b0cc11d5dba_1_0_T_10">
-                  <aixm:note>167 m</aixm:note>
+                  <aixm:note>167m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_9f388c31-e093-4c24-8c4c-4b0cc11d5dba_1_0_T_11">
               <aixm:purpose>REMARK</aixm:purpose>
@@ -586,6 +603,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- Centreline Point Location Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_9f388c31-e093-4c24-8c4c-4b0cc11d5dba_1_0_T_13">
               <aixm:propertyName>location</aixm:propertyName>
@@ -597,6 +615,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_9f388c31-e093-4c24-8c4c-4b0cc11d5dba_1_0_T_15">
               <event:theEvent xlink:href="urn:uuid:8f1f2814-fec6-4de0-9df9-2587d2030ace"/>
@@ -612,7 +631,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
   A0258/25 NOTAMN
   Q) EAAD/QMDCH/IV/NBO/A/000/999/5222N03157W005
   A) EADD B) 2602181545 C) 2602182345
-  E) RWY 09L centreline point START_09L (physical start of RWY 09L) displaced 200 m, position 522233N 0315741W. Elevation 29M.
+  E) RWY 09L centreline point START_09L (physical start of RWY 09L) displaced 200m, position 522233N 0315741W. Elevation 29M.
   TORA 3000M 
   TODA 3000M 
   ASDA 3000M 
@@ -670,7 +689,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               <event:effectiveEnd>2602182345</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
-              <event:text>RWY 09L centreline point START_09L (physical start of RWY 09L) displaced 200 m, position 522233N 0315741W. Elevation 29M.
+              <event:text>RWY 09L centreline point START_09L (physical start of RWY 09L) displaced 200m, position 522233N 0315741W. Elevation 29M.
 TORA 3000M 
 TODA 3000M 
 ASDA 3000M 
@@ -736,17 +755,19 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:declaredValue>
             </aixm:RunwayDeclaredDistance>
           </aixm:associatedDeclaredDistance>
+          <!-- Displacement Distance -->
           <aixm:annotation>
             <aixm:Note gml:id="id_4b2b59e3-beff-4495-9f9f-c2c09a1d4c5d_1_0_T_9">
               <aixm:propertyName>location</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="id_4b2b59e3-beff-4495-9f9f-c2c09a1d4c5d_1_0_T_10">
-                  <aixm:note>200 m</aixm:note>
+                  <aixm:note>200m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_4b2b59e3-beff-4495-9f9f-c2c09a1d4c5d_1_0_T_11">
               <aixm:purpose>REMARK</aixm:purpose>
@@ -757,6 +778,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- Centreline Point Location Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_4b2b59e3-beff-4495-9f9f-c2c09a1d4c5d_1_0_T_13">
               <aixm:propertyName>location</aixm:propertyName>
@@ -768,6 +790,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_4b2b59e3-beff-4495-9f9f-c2c09a1d4c5d_1_0_T_15">
               <event:theEvent xlink:href="urn:uuid:63e84ddb-4881-41a6-9ba3-a6e6344733c3"/>
@@ -904,6 +927,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:declaredValue>
             </aixm:RunwayDeclaredDistance>
           </aixm:associatedDeclaredDistance>
+          <!-- Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_50e6b3d2-f164-4ea8-a791-56e4cf785d77_1_0_T_8">
               <aixm:propertyName>associatedDeclaredDistance</aixm:propertyName>
@@ -915,6 +939,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- Centreline Point Location Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_50e6b3d2-f164-4ea8-a791-56e4cf785d77_1_0_T_10">
               <aixm:propertyName>location</aixm:propertyName>
@@ -926,6 +951,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_50e6b3d2-f164-4ea8-a791-56e4cf785d77_1_0_T_12">
               <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032"/>
@@ -982,6 +1008,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:declaredValue>
             </aixm:RunwayDeclaredDistance>
           </aixm:associatedDeclaredDistance>
+          <!-- Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_7c654c28-5a61-46e8-b1a1-7a7eb1ad3f91_1_0_T_8">
               <aixm:propertyName>associatedDeclaredDistance</aixm:propertyName>
@@ -993,6 +1020,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- Centreline Point Location Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_7c654c28-5a61-46e8-b1a1-7a7eb1ad3f91_1_0_T_10">
               <aixm:propertyName>location</aixm:propertyName>
@@ -1004,6 +1032,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_7c654c28-5a61-46e8-b1a1-7a7eb1ad3f91_1_0_T_12">
               <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032"/>
@@ -1022,8 +1051,8 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
         <aixm:RunwayCentrelinePointTimeSlice gml:id="id_83fe05ea-b947-41d9-a47f-11f41920de16_1_0_T">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_83fe05ea-b947-41d9-a47f-11f41920de16_1_0_T_1">
-              <gml:beginPosition>2025-11-10T06:00:00Z</gml:beginPosition>
-              <gml:endPosition>2025-11-13T20:00:00Z</gml:endPosition>
+              <gml:beginPosition>2026-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-18T23:45:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
@@ -1060,6 +1089,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:declaredValue>
             </aixm:RunwayDeclaredDistance>
           </aixm:associatedDeclaredDistance>
+          <!-- Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_83fe05ea-b947-41d9-a47f-11f41920de16_1_0_T_8">
               <aixm:propertyName>associatedDeclaredDistance</aixm:propertyName>
@@ -1071,6 +1101,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- Centreline Point Location Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_83fe05ea-b947-41d9-a47f-11f41920de16_1_0_T_10">
               <aixm:propertyName>location</aixm:propertyName>
@@ -1082,6 +1113,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_83fe05ea-b947-41d9-a47f-11f41920de16_1_0_T_12">
               <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032"/>
@@ -1118,6 +1150,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:declaredValue>
             </aixm:RunwayDeclaredDistance>
           </aixm:associatedDeclaredDistance>
+          <!-- Note -->
           <aixm:annotation>
             <aixm:Note gml:id="id_6e1ec0cc-be7b-4acf-9d82-b392179a2f8c_1_0_T_4">
               <aixm:propertyName>associatedDeclaredDistance</aixm:propertyName>
@@ -1129,6 +1162,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_6e1ec0cc-be7b-4acf-9d82-b392179a2f8c_1_0_T_6">
               <event:theEvent xlink:href="urn:uuid:f0bb75d2-d81c-4297-b42a-e41eb31b25bc"/>

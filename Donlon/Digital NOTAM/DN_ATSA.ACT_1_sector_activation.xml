@@ -22,12 +22,15 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for ATS airspace activation:
   
-                 Airspace: MAGNETO TMA PART 1 and MAGNETO TMA PART 2
-        Activation status: ACTIVE
-                 Schedule: -
-       Concerned airports: 1
-           Concerned FIRs: 1
-                     Note: -
+               Airspace: MAGNETO TMA PART 1
+                         MAGNETO TMA PART 2
+      Activation status: ACTIVE
+             Start Time: 2026-02-05 00:00
+               End Time: 2026-02-05 05:00
+               Schedule: -
+  Affected Aerodrome(s): EAMN
+        Affected FIR(s): EAAD
+                   Note: -
 -->
 
 <!-- 
@@ -123,6 +126,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The activation status of the airspace during the event -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_8e67ec41-73b6-4c4d-a4a0-8b76f3d24223_1_0_T_2">
               <aixm:status>ACTIVE</aixm:status>
@@ -134,6 +138,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_8e67ec41-73b6-4c4d-a4a0-8b76f3d24223_1_0_T_4">
               <event:theEvent xlink:href="urn:uuid:127672b9-9521-4418-9fb4-81b623ac8c6f"/>
@@ -159,6 +164,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The activation status of the airspace during the event -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_632c0270-6200-4d0f-9568-b2394c45c92a_1_0_T_2">
               <aixm:status>ACTIVE</aixm:status>
@@ -170,6 +176,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_632c0270-6200-4d0f-9568-b2394c45c92a_1_0_T_4">
               <event:theEvent xlink:href="urn:uuid:127672b9-9521-4418-9fb4-81b623ac8c6f"/>

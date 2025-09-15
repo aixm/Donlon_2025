@@ -19,7 +19,18 @@ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF TH
 
 Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
 
-<!-- Example of Digital NOTAM for the closure of three aircraft stands. -->
+<!-- Example of Digital NOTAM for the closure of three aircraft stands:
+  
+     Airport/Heliport: EADD DONLON/INTL.
+       Aircraft Stand: EADD DONLON/INTL. | APRON A | 1
+                       EADD DONLON/INTL. | APRON A | 4
+                       EADD DONLON/INTL. | APRON A | 5
+           Start Time: 2026-02-21 06:30
+             End Time: 2026-02-21 12:00
+             Schedule: -
+       Closure Reason: -
+                 Note: -
+-->
 
 <!-- 
   A0086/26 NOTAMN
@@ -65,6 +76,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:version>2.0</event:version>
           <event:estimatedValidity xsi:nil="true"/>
           <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <event:notification>
@@ -185,12 +197,13 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:usage>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
-          <!-- The time when the aircraft stand is closed -->
+          <!-- The availability status of the aircraft stand during the event -->
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_f15e8183-becc-4288-8ff0-bd0b88d1967d_1_0_T_14">
               <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AircraftStandExtension gml:id="id_f15e8183-becc-4288-8ff0-bd0b88d1967d_1_0_T_15">
               <event:theEvent xlink:href="urn:uuid:0e67427b-c0ed-4f03-85e2-dbb517a901f2"/>
@@ -252,12 +265,13 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:usage>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
-          <!-- The time when the aircraft stand is closed -->
+          <!-- The availability status of the aircraft stand during the event -->
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_8daddf21-39ff-4625-a369-a7aa4b2ad5cb_1_0_T_9">
               <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AircraftStandExtension gml:id="id_8daddf21-39ff-4625-a369-a7aa4b2ad5cb_1_0_T_10">
               <event:theEvent xlink:href="urn:uuid:0e67427b-c0ed-4f03-85e2-dbb517a901f2"/>
@@ -319,12 +333,13 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:usage>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
-          <!-- The time when the aircraft stand is closed -->
+          <!-- The availability status of the aircraft stand during the event -->
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_74e2eb18-ada0-4d87-848e-cc49bce58ff1_1_0_T_10">
               <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AircraftStandExtension gml:id="id_74e2eb18-ada0-4d87-848e-cc49bce58ff1_1_0_T_11">
               <event:theEvent xlink:href="urn:uuid:0e67427b-c0ed-4f03-85e2-dbb517a901f2"/>

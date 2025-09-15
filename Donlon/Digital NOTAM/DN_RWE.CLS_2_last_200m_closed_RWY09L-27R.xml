@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Example of Digital NOTAM for a runway portion closure. First 300 m of RWY 09R at DONLON/INTL. are closed:
+  
+     Runway/Runway Direction: EADD 09L/27R
+                  Start Time: 2026-07-07 10:00
+                    End Time: 2026-07-17 23:00
+                    Schedule: -
+       Geographical Accuracy: -
+                   Elevation: -
+                    Geometry: Polygon
+               Extent Closed: last 200m of RWY 09L
+              Closure Reason: -
+                        Note: -
+  
+     This event (RWE.CLS) triggers the change of Declared Distances on RWY 09L (see file DN_RDD.CHG_2_new_declared_distances_on_RWY09L_due_to_RWE.CLS_on_RWY09L-27R.xml).
+     No Runway Centreline Points are displaced on RWY 09L.
+     This event (RWE.CLS) triggers the displacement of some Runway Centreline Points on RWY 27R (START_27R and A) (see file DN_RCP.CHG_2_multiple_RCP_displaced_on_RWY27R_due_to_RWE.CLS.xml)
+     The remaining Declared Distances and RCP on RWY 27R are not affected. -->
+
+<!-- 
+  A0816/26 NOTAMN
+  Q) EAAD/QMRLL/IV/NBO/A/000/999/5222N03157W005
+  A) EADD B) 2607071000 C) 2607172300
+  E) RWY 09L/27R closed last 200m of RWY 09L.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_RWE.CLS_2_last_200m_closed_RWY09L-27R">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.06837083-a4dc-47eb-98d1-fd6af7275603">
+      <gml:identifier codeSpace="urn:uuid:">06837083-a4dc-47eb-98d1-fd6af7275603</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_1bd71769-5d29-47a6-b7c5-0e6d8ee14685_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_1bd71769-5d29-47a6-b7c5-0e6d8ee14685_1_0_B_1">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_1bd71769-5d29-47a6-b7c5-0e6d8ee14685_1_0_B_2">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADD 09L/27R</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>RWE.CLS</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="DONLON/INTL." xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_1bd71769-5d29-47a6-b7c5-0e6d8ee14685_1_0_B_3">
+              <event:series>A</event:series>
+              <event:number>0816</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMRLL</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5222N03157W</event:coordinates>
+              <event:radius>005</event:radius>
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2607071000</event:effectiveStart>
+              <event:effectiveEnd>2607172300</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>RWY 09L/27R closed last 200m of RWY 09L.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:RunwayElement gml:id="uuid.c4e5f972-e960-410c-8171-9354e32a62c2">
+      <gml:identifier codeSpace="urn:uuid:">c4e5f972-e960-410c-8171-9354e32a62c2</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayElementTimeSlice gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B_1">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B_2">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:associatedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:type="simple"/>
+          <!-- Geometry -->
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B_3" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B_4">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>52.3787243449 -31.9175054536 52.3785458324 -31.9204280431 52.3780079988 -31.9203403254 52.3781624213
+                                -31.9178126706 52.3782306720 -31.9178238305 52.3782547878 -31.9174290296 52.3787243449 -31.9175054536</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <!-- Extent Closed -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B_5">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B_6">
+                  <aixm:note>last 200m of RWY 09L</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The availability status of the runway element during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B_7">
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayElementExtension gml:id="id_41a977c4-9df0-4486-9a11-a258c08760cf_1_0_B_8">
+              <event:theEvent xlink:href="urn:uuid:06837083-a4dc-47eb-98d1-fd6af7275603"/>
+            </event:RunwayElementExtension>
+          </aixm:extension>
+        </aixm:RunwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayElement>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

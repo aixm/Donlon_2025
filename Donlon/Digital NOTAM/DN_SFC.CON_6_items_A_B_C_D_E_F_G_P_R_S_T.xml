@@ -38,7 +38,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
-  gml:id="DN_SFC.CON_5_minimum_data">
+  gml:id="DN_SFC.CON_6_items_A_B_C_D_E_F_G_P_R_S_T">
   
   <message:hasMember>
     <event:Event gml:id="uuid.ab602c81-663a-4a3d-b606-d0f82d08aecc">
@@ -66,6 +66,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:version>2.0</event:version>
           <event:estimatedValidity xsi:nil="true"/>
           <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <event:notification>
@@ -96,6 +97,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     </event:Event>
   </message:hasMember>
   
+  <!-- EADD -->
   <message:hasMember>
     <aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
       <gml:identifier codeSpace="urn:uuid:">1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
@@ -108,10 +110,11 @@ Editorial note: this license is an instance of the BSD license template as provi
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>6</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:contaminant>
             <aixm:AirportHeliportContamination gml:id="id_dc714e39-ffa5-48a4-9a57-5503528d6fed_1_0_T_2">
+              <!-- (T) Note -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_dc714e39-ffa5-48a4-9a57-5503528d6fed_1_0_T_3">
                   <aixm:purpose>REMARK</aixm:purpose>
@@ -122,6 +125,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <!-- (P) All taxiways poor -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_dc714e39-ffa5-48a4-9a57-5503528d6fed_1_0_T_5">
                   <aixm:purpose>REMARK</aixm:purpose>
@@ -132,6 +136,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <!-- (R) All aprons poor -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_dc714e39-ffa5-48a4-9a57-5503528d6fed_1_0_T_7">
                   <aixm:purpose>REMARK</aixm:purpose>
@@ -144,6 +149,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:annotation>
             </aixm:AirportHeliportContamination>
           </aixm:contaminant>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirportHeliportExtension gml:id="id_dc714e39-ffa5-48a4-9a57-5503528d6fed_1_0_T_9">
               <event:theEvent xlink:href="urn:uuid:ab602c81-663a-4a3d-b606-d0f82d08aecc"/>
@@ -154,7 +160,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     </aixm:AirportHeliport>
   </message:hasMember>
   
-  <!-- RWY 09R -->
+  <!-- RWY 09R/27L -->
   <message:hasMember>
     <aixm:Runway gml:id="uuid.4428d037-1cdf-433a-9bfa-d0857aaf448a">
       <gml:identifier codeSpace="urn:uuid:">4428d037-1cdf-433a-9bfa-d0857aaf448a</gml:identifier>
@@ -167,7 +173,7 @@ Editorial note: this license is an instance of the BSD license template as provi
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>5</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:overallContaminant>
             <aixm:RunwayContamination gml:id="id_31debadb-91b8-45c6-a527-3ae3fca564bc_1_0_T_2">
@@ -175,6 +181,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:frictionDevice>BRD</aixm:frictionDevice>
             </aixm:RunwayContamination>
           </aixm:overallContaminant>
+          <!-- Aeroplane performance calculation section - first section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_31debadb-91b8-45c6-a527-3ae3fca564bc_1_0_T_3">
               <aixm:depth uom="MM">3</aixm:depth>
@@ -189,6 +196,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>1_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - second section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_31debadb-91b8-45c6-a527-3ae3fca564bc_1_0_T_5">
               <aixm:depth uom="MM">3</aixm:depth>
@@ -203,6 +211,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>2_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - third section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_31debadb-91b8-45c6-a527-3ae3fca564bc_1_0_T_7">
               <aixm:depth uom="MM">3</aixm:depth>
@@ -217,6 +226,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>3_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayExtension gml:id="id_31debadb-91b8-45c6-a527-3ae3fca564bc_1_0_T_9">
               <event:theEvent xlink:href="urn:uuid:ab602c81-663a-4a3d-b606-d0f82d08aecc"/>

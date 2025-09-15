@@ -25,11 +25,13 @@ Editorial note: this license is an instance of the BSD license template as provi
                  Airspace: EAD5 D LEIGHTON
         Activation status: ACTIVE
                  Activity: GLIDING
+               Start Time: 2026-01-15 08:00
+                 End Time: 2026-01-15 12:00
                  Schedule: -
-  Changed vertical limits: GND / 2000M (ref: SFC)
-       Concerned airports: 2
-           Concerned FIRs: 1
-                     Note: yes
+  Changed vertical limits: GND / 2000M (SFC)
+    Affected Aerodrome(s): EADD EADH
+          Affected FIR(s): EAAD
+                     Note: Pilots must proceed with caution when entering this area below 2000M
                      
   Baseline schedule and vertical limits: H24, FLOOR/CEILING, AVBL_FOR_ACTIVATION
                      
@@ -40,8 +42,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                                           2000m AGL / FL360, AVBL_FOR_ACTIVATION
   
   The new vertical limits are both inside the baseline limits, hence there will be no aixm:geometryComponent property added,
-  because the airspace doesn't need to change its geometry.
-  
+  because the airspace isn't activated above or below the baseline vertical limits.
 -->
 
 <!-- 
@@ -239,6 +240,7 @@ Pilots must proceed with caution when entering this area below 2000M.</event:tex
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_16">
               <event:theEvent xlink:href="urn:uuid:4c1a3595-90aa-44b3-81f9-78b7f41f2a76"/>

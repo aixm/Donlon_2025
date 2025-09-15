@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Example of Digital NOTAM for runway declared distance change:
+  
+                 Runway: EADD 09L/27R
+             Start Time: 2026-07-07 10:00
+               End Time: 2026-07-17 23:00
+     Centreline Point 1: Centreline Point Designator: START_09L (START)
+                         Centreline Point Location Note: -
+                         Schedule: -
+                         Declared Distance: TORA M
+                                            TODA M
+                                            ASDA M
+     Centreline Point 2: Centreline Point Designator: 09L (THR)
+                         Centreline Point Location Note: TWY F
+                         Schedule: -
+                         Declared Distance: TORA M
+                                            TODA M
+                                            ASDA M
+     Centreline Point 3: Centreline Point Designator: C (START_RUN)
+                         Centreline Point Location Note: TWY G
+                         Schedule: -
+                         Declared Distance: TORA M
+                                            TODA M
+                                            ASDA M
+     Centreline Point 4: Centreline Point Designator: D (START_RUN)
+                         Centreline Point Location Note: -
+                         Schedule: -
+                         Declared Distance: TORA M
+                                            TODA M
+                                            ASDA M
+     Centreline Point 5: Centreline Point Designator: E (START_RUN)
+                         Centreline Point Location Note: -
+                         Schedule: -
+                         Declared Distance: TORA M
+                                            TODA M
+                                            ASDA M
+                   Note: -
+                              
+     This event (RDD.CHG) is the consequence of a runway portion closure: RWE.CLS - the closure of the last 200 m on RWY 09L at DONLON/INTL.
+     (see file DN_RWE.CLS_2_last_200m_closed_RWY09R-27R.xml) -->
+
+<!-- 
+  A0817/26 NOTAMN
+  Q) EAAD/QMDCH/IV/NBO/A/000/999/5222N03157W005
+  A) EADD B) 2607071000 C) 2607172300
+  E) Declared distances changed as follows:
+  RWY 09L 
+  (START_09L) TORA 3000M TODA 3000M ASDA 3000M
+  (C) TORA 1098M TODA 1098M ASDA 1098M
+  (D) TORA 2058M TODA 2058M ASDA 2058M
+  (E) TORA 2970M TODA 2970M ASDA 2970M
+  (09L) LDA 3000M.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_RDD.CHG_2_new_declared_distances_on_RWY09L_due_to_RCP.CHG_on_RWY09L-27R">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.2facc8ce-57d2-481f-b232-a24e53321d0b">
+      <gml:identifier codeSpace="urn:uuid:">2facc8ce-57d2-481f-b232-a24e53321d0b</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_baa7c07c-e843-4ea0-b139-e6252f65e72a_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_baa7c07c-e843-4ea0-b139-e6252f65e72a_1_0_B_1">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_baa7c07c-e843-4ea0-b139-e6252f65e72a_1_0_B_2">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADD 09L/27R</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>RDD.CHG</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="DONLON/INTL." xlink:type="simple"/>
+          <event:causeEvent xlink:href="urn:uuid:06837083-a4dc-47eb-98d1-fd6af7275603" xlink:title="EADD 09L/27R RWE.CLS" xlink:type="simple"/> <!-- the RWE.CLS event which caused the displacement -->
+          <event:notification>
+            <event:NOTAM gml:id="id_baa7c07c-e843-4ea0-b139-e6252f65e72a_1_0_B_3">
+              <event:series>A</event:series>
+              <event:number>0817</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMDCH</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5222N03157W</event:coordinates>
+              <event:radius>005</event:radius>
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2607071000</event:effectiveStart>
+              <event:effectiveEnd>2607172300</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>Declared distances changed as follows:
+RWY 09L 
+(START_09L) TORA 3000M TODA 3000M ASDA 3000M
+(C) TORA 1098M TODA 1098M ASDA 1098M
+(D) TORA 2058M TODA 2058M ASDA 2058M
+(E) TORA 2970M TODA 2970M ASDA 2970M
+(09L) LDA 3000M.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- START_09L - the physical start of RWY 09L -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.04d3c6e5-893c-4a95-89f9-1763bf6f5672">
+      <gml:identifier codeSpace="urn:uuid:">04d3c6e5-893c-4a95-89f9-1763bf6f5672</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T_1">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T_2">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T_3">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T_4">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T_5">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T_6">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T_7">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_d6a0956a-5d6d-46ad-9797-efa47006ca67_1_0_T_8">
+              <event:theEvent xlink:href="urn:uuid:2facc8ce-57d2-481f-b232-a24e53321d0b"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- C - START_RUN on RWY 09L at the intersection with TWY C -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.8f8cb54f-9ca0-4901-bdd0-86cda835e259">
+      <gml:identifier codeSpace="urn:uuid:">8f8cb54f-9ca0-4901-bdd0-86cda835e259</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T_1">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T_2">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T_3">
+                  <aixm:distance uom="M">1098</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T_4">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T_5">
+                  <aixm:distance uom="M">1098</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T_6">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T_7">
+                  <aixm:distance uom="M">1098</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_01cb5087-ade5-47a8-8305-06774fae899f_1_0_T_8">
+              <event:theEvent xlink:href="urn:uuid:2facc8ce-57d2-481f-b232-a24e53321d0b"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- D - START_RUN on RWY 09L at the intersection with TWY D -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.170d1a37-fc57-40fd-8b75-5f031bde20e4">
+      <gml:identifier codeSpace="urn:uuid:">170d1a37-fc57-40fd-8b75-5f031bde20e4</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T_1">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T_2">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T_3">
+                  <aixm:distance uom="M">2058</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T_4">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T_5">
+                  <aixm:distance uom="M">2058</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T_6">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T_7">
+                  <aixm:distance uom="M">2058</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_0bc02d02-71bf-459c-8f97-d5b3f81a6bc5_1_0_T_8">
+              <event:theEvent xlink:href="urn:uuid:2facc8ce-57d2-481f-b232-a24e53321d0b"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- E - START_RUN on RWY 09L at the intersection with TWY E -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.fcfd8876-a953-4868-8772-5acb97c51a68">
+      <gml:identifier codeSpace="urn:uuid:">fcfd8876-a953-4868-8772-5acb97c51a68</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T_1">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T_2">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T_3">
+                  <aixm:distance uom="M">2970</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T_4">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T_5">
+                  <aixm:distance uom="M">2970</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T_6">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T_7">
+                  <aixm:distance uom="M">2970</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_0c969924-d5fd-44f9-a152-f64435a2d91e_1_0_T_8">
+              <event:theEvent xlink:href="urn:uuid:2facc8ce-57d2-481f-b232-a24e53321d0b"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- 09L - THR of RWY 09L -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.2108f844-b00a-4b73-8937-0a4bbe732f00">
+      <gml:identifier codeSpace="urn:uuid:">2108f844-b00a-4b73-8937-0a4bbe732f00</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_054250c2-5b39-4863-b5ac-515788078906_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_054250c2-5b39-4863-b5ac-515788078906_1_0_T_1">
+              <gml:beginPosition>2026-07-07T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-07-17T23:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_054250c2-5b39-4863-b5ac-515788078906_1_0_T_2">
+              <aixm:type>LDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_054250c2-5b39-4863-b5ac-515788078906_1_0_T_3">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_054250c2-5b39-4863-b5ac-515788078906_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:2facc8ce-57d2-481f-b232-a24e53321d0b"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

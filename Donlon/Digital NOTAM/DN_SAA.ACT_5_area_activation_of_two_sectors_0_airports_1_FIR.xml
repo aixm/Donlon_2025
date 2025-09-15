@@ -27,20 +27,24 @@ Editorial note: this license is an instance of the BSD license template as provi
                  Airspace: EAD21A D ECLIPTA1
         Activation status: ACTIVE
                  Activity: MISSILES
+               Start Time: 2026-02-05 08:00
+                 End Time: 2026-02-05 20:00
                  Schedule: -
   Changed vertical limits: -
-       Concerned airports: 0
-           Concerned FIRs: 1
+    Affected Aerodrome(s): -
+          Affected FIR(s): EADD
                      Note: -
                      
   Event 2: 
                  Airspace: EAD21C D ECLIPTA3
         Activation status: ACTIVE
                  Activity: MISSILES
+               Start Time: 2026-02-05 08:00
+                 End Time: 2026-02-05 20:00
                  Schedule: -
   Changed vertical limits: -
-       Concerned airports: 0
-           Concerned FIRs: 1
+    Affected Aerodrome(s): -
+          Affected FIR(s): EADD
                      Note: -
 -->
 
@@ -101,10 +105,11 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
           <event:summary>
             <html xmlns="http://www.w3.org/1999/xhtml">
               <head>
-                <title>work in progress</title>
+                <title>Military exercise in D area ECLIPTA</title>
               </head>
               <body>
-                <p>work in progress</p>
+                <p>Missile firing exercise in Danger Area ECLIPTA will take place on 2026-02-05, from 08:00 UTC until 20:00 UTC.
+Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a separate NOTAM.</p>
               </body>
             </html> 
           </event:summary>
@@ -193,6 +198,7 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The activation status of the airspace during the event -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_3f612722-a25f-4ab6-a01b-cee4c8ff4681_1_0_T_2">
               <aixm:activity>MISSILES</aixm:activity>
@@ -205,6 +211,7 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to Event 1 -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_3f612722-a25f-4ab6-a01b-cee4c8ff4681_1_0_T_4">
               <event:theEvent xlink:href="urn:uuid:a6d5f5e7-d675-4813-9a52-f3e0179c9f6d"/> <!-- Event 2 -->
@@ -293,6 +300,7 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The activation status of the airspace during the event -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_118e32da-ce75-4be8-a169-2e009d857154_1_0_T_2">
               <aixm:activity>MISSILES</aixm:activity>
@@ -305,6 +313,7 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the Event 2 -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_118e32da-ce75-4be8-a169-2e009d857154_1_0_T_4">
               <event:theEvent xlink:href="urn:uuid:d9e0ef16-fbc3-4113-a88b-db0e850cb960"/> <!-- Event 2 -->

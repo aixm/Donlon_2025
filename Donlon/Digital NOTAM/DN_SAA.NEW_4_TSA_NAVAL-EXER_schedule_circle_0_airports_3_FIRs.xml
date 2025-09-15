@@ -22,19 +22,25 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for an ad-hoc spacial activity area creation:
   
-           Area type: TSA
-          Designator: EATSA0005
-                Name: DELTA03
-            Activity: NAVAL_EXER
-   Activation status: INTERMITTENT
-            Schedule: date
-       Location note: NNW of Donlon/Intl. Airport
-            Geometry: Circle by centerpoint and radius
-     Vertical limits: GND / FL350 (ref: STD)
-   Excluded airspace: -
-  Concerned airports: 0
-      Concerned FIRs: 3
-                Note: yes
+                   Type: TSA
+             Designator: EATSA0005
+                   Name: DELTA03
+               Activity: NAVAL_EXER
+      Activation status: INTERMITTENT
+             Start Time: 2026-01-26 05:00
+               End Time: 2026-01-31 15:00
+               Schedule: Jan 26-28 0500-2200, 29-31 0000-1500
+          Location Note: NNW of Donlon/Intl. Airport
+               Geometry: Circle by centerpoint and radius (50NM)
+  Geographical Accuracy: 1 M
+            Lower Limit: GND
+  Lower Limit Reference: -
+            Upper Limit: FL350
+  Upper Limit Reference: STD
+   Excluded Airspace(s): -
+  Affected Aerodrome(s): -
+        Affected FIR(s): EAAD CZQX EGGX
+                   Note: Civilian aircraft will be coordinated between civil and military ATC
 -->
 
 <!-- 
@@ -210,6 +216,7 @@ Civilian aircraft will be coordinated between civil and military ATC.</event:tex
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <!-- Note -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_10">
                   <aixm:purpose>REMARK</aixm:purpose>
@@ -230,7 +237,7 @@ Civilian aircraft will be coordinated between civil and military ATC.</event:tex
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
-          <!-- The times when the airspace is inactive -->
+          <!-- The times when the airspace is inactive (calculated to fill in the gaps left by the NOTAM schedule) -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_13">
               <aixm:timeInterval>
@@ -280,17 +287,19 @@ Civilian aircraft will be coordinated between civil and military ATC.</event:tex
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- Location Note -->
           <aixm:annotation>
-            <aixm:Note gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_18">
+            <aixm:Note gml:id="id_b11b7418-cd41-46d3-abe8-396919828a2a_1_0_B_17">
               <aixm:propertyName>geometryComponent</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_19">
-                  <aixm:note>50NM N of shoreline</aixm:note>
+                <aixm:LinguisticNote gml:id="id_b11b7418-cd41-46d3-abe8-396919828a2a_1_0_B_18">
+                  <aixm:note>NNW of Donlon/Intl. Airport</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_20">
               <event:theEvent xlink:href="urn:uuid:275f6067-6705-4ae8-ada4-fc164ad5f5d0"/>

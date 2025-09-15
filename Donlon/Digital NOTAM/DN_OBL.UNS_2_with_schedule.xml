@@ -19,10 +19,19 @@ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF TH
 
 Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
 
-<!--  This is a Digital NOTAM for obstacle lights unserviceable (with two concerned airports and one concerned FIR) -->
+<!--  This is a Digital NOTAM for obstacle lights unserviceable:
+      
+                   Obstacle: OBST-EA-0001 ANTENNA
+                 Start Time: 2025-12-22 05:00
+                   End Time: 2025-12-24 07:00
+                   Schedule: Daily 1100-1300
+      Affected Aerodrome(s): -
+            Affected FIR(s): EAAD
+                       Note: Due to maintenance works
+-->
 
 <!--
-  F0003/25 NOTAMN
+  F2503/25 NOTAMN
   Q) EAAD/QOLAS/IV/M/E/000/005/5222N02802W001
   A) EAAD B) 2512220500 C) 2512240700
   D) Daily 1100-1300
@@ -72,7 +81,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:notification>
             <event:NOTAM gml:id="id_c6d46fd9-bd34-4e6d-a049-e13f9b1dc758_1_0_B_3">
               <event:series>F</event:series>
-              <event:number>0003</event:number>
+              <event:number>2503</event:number>
               <event:year>2025</event:year>
               <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
               <event:type>N</event:type>
@@ -117,6 +126,7 @@ Due to maintenance works.</event:text>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline availability of the lighting equipment -->
           <aixm:lightingAvailability>
             <aixm:VerticalStructureLightingStatus gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_2">
               <aixm:timeInterval>
@@ -144,6 +154,7 @@ Due to maintenance works.</event:text>
               <aixm:status>NORMAL</aixm:status>
             </aixm:VerticalStructureLightingStatus>
           </aixm:lightingAvailability>
+          <!-- The baseline availability of the lighting equipment (with schedule calculated to fill any gaps left by the NOTAM schedule) -->
           <aixm:lightingAvailability>
             <aixm:VerticalStructureLightingStatus gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_6">
               <!-- Timesheets adjusted from the Baseline values (from "daily SR-SS" to "daily SR-1100 1300-SS") to avoid overlapping with event schedule -->
@@ -181,6 +192,7 @@ Due to maintenance works.</event:text>
               <aixm:status>OTHER:DYNAMIC</aixm:status>
             </aixm:VerticalStructureLightingStatus>
           </aixm:lightingAvailability>
+          <!-- The availability status of the lighting equipment during the event -->
           <aixm:lightingAvailability>
             <aixm:VerticalStructureLightingStatus gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_11">
               <aixm:timeInterval>
@@ -193,6 +205,7 @@ Due to maintenance works.</event:text>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <!-- Note -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_13">
                   <aixm:purpose>REMARK</aixm:purpose>
@@ -206,6 +219,7 @@ Due to maintenance works.</event:text>
               <aixm:status>UNSERVICEABLE</aixm:status>
             </aixm:VerticalStructureLightingStatus>
           </aixm:lightingAvailability>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:VerticalStructureExtension gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_15">
               <event:theEvent xlink:href="urn:uuid:58df7d43-ace9-47a2-b056-49d69d2a2e01"/>

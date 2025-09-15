@@ -79,6 +79,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:version>2.0</event:version>
           <event:estimatedValidity xsi:nil="true"/>
           <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <event:notification>
@@ -109,6 +110,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     </event:Event>
   </message:hasMember>
   
+  <!-- EADD -->
   <message:hasMember>
     <aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
       <gml:identifier codeSpace="urn:uuid:">1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
@@ -121,10 +123,11 @@ Editorial note: this license is an instance of the BSD license template as provi
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>4</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:contaminant>
             <aixm:AirportHeliportContamination gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T_2">
+              <!-- (T) Note -->
               <aixm:annotation>
                 <aixm:Note gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T_3">
                   <aixm:purpose>REMARK</aixm:purpose>
@@ -137,6 +140,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:annotation>
             </aixm:AirportHeliportContamination>
           </aixm:contaminant>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirportHeliportExtension gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T_5">
               <event:theEvent xlink:href="urn:uuid:ffabf6b3-086d-483d-a41f-599e752164f6"/>
@@ -147,7 +151,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     </aixm:AirportHeliport>
   </message:hasMember>
   
-  <!-- RWY 09L -->
+  <!-- RWY 09L/27R -->
   <message:hasMember>
     <aixm:Runway gml:id="uuid.9e51668f-bf8a-4f5b-ba6e-27087972b9b8">
       <gml:identifier codeSpace="urn:uuid:">9e51668f-bf8a-4f5b-ba6e-27087972b9b8</gml:identifier>
@@ -164,12 +168,14 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:overallContaminant>
             <aixm:RunwayContamination gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_2">
-              <aixm:observationTime>2025-12-05T08:00:00.000Z</aixm:observationTime>
+              <aixm:observationTime>2025-12-05T08:00:00.000Z</aixm:observationTime> <!-- (B) Date and time of assessment -->
+              <!-- (J) Drifting snow on th runway -->
               <aixm:layer>
                 <aixm:SurfaceContaminationLayer gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_3">
                   <aixm:type>OTHER:DRIFTING_SNOW</aixm:type>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
+              <!-- (K) Loose sand on the runway -->
               <aixm:layer>
                 <aixm:SurfaceContaminationLayer gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_4">
                   <aixm:type>OTHER:LOOSE_SAND</aixm:type>
@@ -177,11 +183,13 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:layer>
             </aixm:RunwayContamination>
           </aixm:overallContaminant>
+          <!-- Aeroplane performance calculation section - first section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_5">
-              <aixm:depth uom="MM">3</aixm:depth>
-              <aixm:frictionEstimation>OTHER:RWYCC_3</aixm:frictionEstimation>
-              <aixm:proportion>25</aixm:proportion>
+              <aixm:depth uom="MM">3</aixm:depth> <!-- (F) Depth (mm) of loose contaminant -->
+              <aixm:frictionEstimation>OTHER:RWYCC_3</aixm:frictionEstimation> <!-- (D) Runway Condition Code  -->
+              <aixm:proportion>25</aixm:proportion> <!-- (E) Per cent coverage of contaminant -->
+              <!-- (G) Condition description -->
               <aixm:layer>
                 <aixm:SurfaceContaminationLayer gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_6">
                   <aixm:layerOrder>1</aixm:layerOrder>
@@ -197,11 +205,13 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>1_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - second section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_8">
-              <aixm:depth uom="MM">3</aixm:depth>
-              <aixm:frictionEstimation>OTHER:RWYCC_3</aixm:frictionEstimation>
-              <aixm:proportion>25</aixm:proportion>
+              <aixm:depth uom="MM">3</aixm:depth> <!-- (F) Depth (mm) of loose contaminant -->
+              <aixm:frictionEstimation>OTHER:RWYCC_3</aixm:frictionEstimation> <!-- (D) Runway Condition Code  -->
+              <aixm:proportion>25</aixm:proportion> <!-- (E) Per cent coverage of contaminant -->
+              <!-- (G) Condition description -->
               <aixm:layer>
                 <aixm:SurfaceContaminationLayer gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_9">
                   <aixm:layerOrder>1</aixm:layerOrder>
@@ -217,11 +227,13 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>2_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - third section -->
           <aixm:areaContaminant>
             <aixm:RunwaySectionContamination gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_11">
-              <aixm:depth uom="MM">3</aixm:depth>
-              <aixm:frictionEstimation>OTHER:RWYCC_3</aixm:frictionEstimation>
-              <aixm:proportion>25</aixm:proportion>
+              <aixm:depth uom="MM">3</aixm:depth> <!-- (F) Depth (mm) of loose contaminant -->
+              <aixm:frictionEstimation>OTHER:RWYCC_3</aixm:frictionEstimation> <!-- (D) Runway Condition Code  -->
+              <aixm:proportion>25</aixm:proportion> <!-- (E) Per cent coverage of contaminant -->
+              <!-- (G) Condition description -->
               <aixm:layer>
                 <aixm:SurfaceContaminationLayer gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_12">
                   <aixm:layerOrder>1</aixm:layerOrder>
@@ -237,6 +249,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:section>3_THIRD</aixm:section>
             </aixm:RunwaySectionContamination>
           </aixm:areaContaminant>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayExtension gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_14">
               <event:theEvent xlink:href="urn:uuid:ffabf6b3-086d-483d-a41f-599e752164f6"/>

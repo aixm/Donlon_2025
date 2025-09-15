@@ -20,15 +20,17 @@ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF TH
 Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
 
 <!-- 
-  Example of Digital NOTAM for a spacial activity area activation:
+  Example of Digital NOTAM for a spacial activity area activation, with changed vertical limits during the activation:
  
                  Airspace: EAV13 D_OTHER LONBURG
         Activation status: ACTIVE
                  Activity: ULM
-                 Schedule: daily 1200-1800
-  Changed vertical limits: 500M (ref: SFC) / 2500M (ref: SFC)
-       Concerned airports: 0
-           Concerned FIRs: 1
+               Start Time: 2026-01-21 10:00
+                 End Time: 2026-01-25 14:00
+                 Schedule: Daily 1200-1800
+  Changed vertical limits: 500M (SFC) / 2500M (SFC)
+    Affected Aerodrome(s): -
+          Affected FIR(s): EAAD
                      Note: -
                      
          Baseline schedule: Daily 0800-1800 AVBL_FOR_ACTIVATION
@@ -343,6 +345,7 @@ Vertical limits changed during activation.</event:text>
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_06ec4828-7cb1-4aa9-9513-4ed05d925d8e_1_0_T_29">
               <event:theEvent xlink:href="urn:uuid:56385583-a819-4ee0-8490-382ac543f103"/>

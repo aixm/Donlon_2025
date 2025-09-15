@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Example of Digital NOTAM for navaid (ILS/DME) partially unserviceable (DME component on test):
+  
+          Runway Direction: RWY 09L
+                    Navaid: EADD ILS/DME 09L
+              Subcomponent: DME
+               Signal Type: -
+        Operational Status: ONTEST
+                Start Time: 2026-03-28 05:00
+                  End Time: 2026-03-28 07:30
+                  Schedule: Apr 1 7 13 0600-0750
+     Affected Aerodrome(s): EADD
+           Affected FIR(s): EAAD
+                    Reason: calibration and in flight testing
+                      Note: Precision approaches for RWY 09L suspended.
+-->
+
+<!-- 
+  A0383/26 NOTAMN
+  Q) EAAD/QIDCT/I/NBO/AE/000/999/5223N03155W025
+  A) EADD B) 2604010600 C) 2604130750
+  D) Apr 1 7 13 0600-0750
+  E) ILS/DME 09L ILS/DME DME part OSL RWY-09L On test, do not use. False indication possible.
+  Due to calibration and in flight testing.
+  Precision approaches for RWY 09L suspended.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_NAV.UNS_ILS-DME_DME_on-test">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.5592d667-f9bd-46f7-87d0-aa1cc9909acb">
+      <gml:identifier codeSpace="urn:uuid:">5592d667-f9bd-46f7-87d0-aa1cc9909acb</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_07967eaf-5dcf-4ea7-b833-43a774e63eb5_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_07967eaf-5dcf-4ea7-b833-43a774e63eb5_1_0_B_1">
+              <gml:beginPosition>2026-04-01T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-04-13T07:50:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_07967eaf-5dcf-4ea7-b833-43a774e63eb5_1_0_B_2">
+              <gml:beginPosition>2026-04-01T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-04-13T07:50:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>OSL ILS/DME ILS/DME 09R</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>NAV.UNS</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_07967eaf-5dcf-4ea7-b833-43a774e63eb5_1_0_B_3">
+              <event:series>A</event:series>
+              <event:number>0383</event:number>
+              <event:year>2026</event:year>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QIDCT</event:selectionCode>
+              <event:traffic>I</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5223N03155W</event:coordinates>
+              <event:radius>025</event:radius>
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2604010600</event:effectiveStart>
+              <event:effectiveEnd>2604130750</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:schedule>Apr 1 7 13 0600-0750</event:schedule>
+              <event:text>ILS/DME 09L ILS/DME DME part OSL RWY-09L On test, do not use. False indication possible.
+Due to calibration and in flight testing.
+Precision approaches for RWY 09L suspended.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- OSL ILS/DME Navaid -->
+  <message:hasMember>
+    <aixm:Navaid gml:id="uuid.843cce95-5f76-486d-ba61-ae10220f75fe">
+      <gml:identifier codeSpace="urn:uuid:">843cce95-5f76-486d-ba61-ae10220f75fe</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:NavaidTimeSlice gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_1">
+              <gml:beginPosition>2026-04-01T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-04-13T07:50:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:type>ILS</aixm:type> <!-- Temporary change of navaid type from ILS_DME to ILS due to DME u/s during the event -->
+          <!-- The baseline operational status of the navaid (hours calculated to fill in the gaps left by the NOTAM schedule) -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_4">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-04</aixm:startDate>
+                  <aixm:endDate>01-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_5">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>07-04</aixm:startDate>
+                  <aixm:endDate>07-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_6">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>13-04</aixm:startDate>
+                  <aixm:endDate>13-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_7">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_8">
+                      <aixm:note>Baseline data copy. Not included in the NOTAM text generation.</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The operational status of the navaid during the event -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_9">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_13">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-04</aixm:startDate>
+                  <aixm:endDate>01-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_14">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>07-04</aixm:startDate>
+                  <aixm:endDate>07-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_15">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>13-04</aixm:startDate>
+                  <aixm:endDate>13-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <!-- Rason -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_a6a0384b-25ea-4622-b6e4-6a1864b8845d_1_0_T_3">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_10">
+                      <aixm:note>calibration and in flight testing</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_11">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_12">
+                      <aixm:note>Precision approaches for RWY 09L suspended</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>PARTIAL</aixm:operationalStatus>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:NavaidExtension gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_16">
+              <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb"/>
+            </event:NavaidExtension>
+          </aixm:extension>
+        </aixm:NavaidTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Navaid>
+  </message:hasMember>
+  
+  <!-- OSL DME NavaidEquipment -->
+  <message:hasMember>
+    <aixm:DME gml:id="uuid.066b0dfc-2c93-4098-a93a-0275965e8b73">
+      <gml:identifier codeSpace="urn:uuid:">066b0dfc-2c93-4098-a93a-0275965e8b73</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:DMETimeSlice gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_1">
+              <gml:beginPosition>2026-04-01T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-04-13T07:50:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline operational status of the navaid equipment (hours calculated to fill in the gaps left by the NOTAM schedule) -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_4">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-04</aixm:startDate>
+                  <aixm:endDate>01-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_5">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>07-04</aixm:startDate>
+                  <aixm:endDate>07-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_6">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>13-04</aixm:startDate>
+                  <aixm:endDate>13-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_7">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_8">
+                      <aixm:note>Baseline data copy. Not included in the NOTAM text generation.</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The operational status of the navaid equipment during the event -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_9">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_10">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-04</aixm:startDate>
+                  <aixm:endDate>01-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_11">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>07-04</aixm:startDate>
+                  <aixm:endDate>07-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_12">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>13-04</aixm:startDate>
+                  <aixm:endDate>13-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>ONTEST</aixm:operationalStatus>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:DMEExtension gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_13">
+              <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb"/>
+            </event:DMEExtension>
+          </aixm:extension>
+        </aixm:DMETimeSlice>
+      </aixm:timeSlice>
+    </aixm:DME>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

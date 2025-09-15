@@ -27,16 +27,21 @@ Editorial note: this license is an instance of the BSD license template as provi
                   Class: A
       Activation status: ACTIVE
              Designator: EAAD028526
+             Start Time: 2026-02-15 10:00
+               End Time: 2026-02-15 20:00
                    Name: -
                Schedule: -
-               Geometry: Circle by centerpoint and radius
-    Horizontal accuracy: 5M
-        Vertical limits: GND / FL050 (ref: STD)
+               Geometry: Circle by centerpoint and radius (10NM)
+    Horizontal accuracy: 5 M
+            Lower Limit: GND
+  Lower Limit Reference: -
+            Upper Limit: FL050
+  Upper Limit Reference: STD
       Excluded airspace: -
-     Concerned airports: 0
-         Concerned FIRs: 1
-          Location note: -
-  Controlling unit note: -
+  Affected Aerodrome(s): -
+        Affected FIR(s): EAAD
+          Location Note: -
+  Controlling Unit Note: -
                    Note: -
 -->
 
@@ -44,7 +49,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   D0285/26 NOTAMN
   Q) EAAD/QXXXX/IV/NBO/E/000/050/5337N02724W010
   A) EAAD B) 2602151000 C) 2602152000
-  E) Class A airspace (EAXX002226) established within:
+  E) Class A airspace (EAAD028526) established within:
   10NM radius centered on 533711N 0272357W, from SFC up to FL050
 -->
 
@@ -79,7 +84,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <gml:endPosition>2026-02-15T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <event:name>CLASS EAA0022-26</event:name>
+          <event:name>CLASS EAAD028526</event:name>
           <event:designator>DNOTAM</event:designator>
           <event:scenario>ATSA.NEW</event:scenario>
           <event:version>2.0</event:version>
@@ -108,7 +113,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:effectiveEnd>2602152000</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
-              <event:text>Class A airspace (EAXX002226) established within:
+              <event:text>Class A airspace (EAAD028526) established within:
 10NM radius centered on 533711N 0272357W, from SFC up to FL050.</event:text>
             </event:NOTAM>
           </event:notification>
@@ -140,7 +145,8 @@ Editorial note: this license is an instance of the BSD license template as provi
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>CLASS</aixm:type>
-          <aixm:designator>EAXX002226</aixm:designator>
+          <aixm:designator>EAAD028526</aixm:designator>
+          <!-- Class -->
           <aixm:class>
             <aixm:AirspaceLayerClass gml:id="id_050d655e-c33b-4a79-aa41-045b9be1c201_1_0_B_3">
               <aixm:classification>A</aixm:classification>
@@ -152,6 +158,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:associatedLevels>
             </aixm:AirspaceLayerClass>
           </aixm:class>
+          <!-- Geometry -->
           <aixm:geometryComponent>
             <aixm:AirspaceGeometryComponent gml:id="id_050d655e-c33b-4a79-aa41-045b9be1c201_1_0_B_5">
               <aixm:theAirspaceVolume>
@@ -186,6 +193,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
+          <!-- The activation status of the airspace during the event -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_050d655e-c33b-4a79-aa41-045b9be1c201_1_0_B_9">
               <aixm:activity>ATS</aixm:activity> <!-- Question: should activity="ATS" be added? Not specified in scenario coding rules at the moment. -->
@@ -198,6 +206,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
+          <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_050d655e-c33b-4a79-aa41-045b9be1c201_1_0_B_11">
               <event:theEvent xlink:href="urn:uuid:50e97079-da54-495e-ad0c-c729dd71024c"/>

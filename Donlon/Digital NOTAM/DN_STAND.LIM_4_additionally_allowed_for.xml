@@ -54,7 +54,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
-  gml:id="DN_STAND.LIM_additionally_allowed_for">
+  gml:id="DN_STAND.LIM_4_additionally_allowed_for">
   
   <message:hasMember>
     <event:Event gml:id="uuid.2109e869-379e-4281-8776-32232f65bba9">
@@ -135,15 +135,19 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_4">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_5">
                           <aixm:type>LANDPLANE</aixm:type>
+                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_BELOW</aixm:wingSpanInterpretation>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                     </aixm:ConditionCombination>
@@ -153,6 +157,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_6">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_f8e063e2-69ee-4234-812f-fbad46ce1182_1_0_T_7">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
@@ -236,15 +241,19 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_4">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_5">
                           <aixm:type>LANDPLANE</aixm:type>
+                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_BELOW</aixm:wingSpanInterpretation>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                     </aixm:ConditionCombination>
@@ -254,6 +263,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_6">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_9f735e1d-4b3f-4593-b96c-23fb071caf3e_1_0_T_7">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>

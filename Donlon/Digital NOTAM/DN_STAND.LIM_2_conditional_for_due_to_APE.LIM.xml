@@ -53,7 +53,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
-  gml:id="DN_STAND.LIM_conditional_for_due_to_APE.LIM">
+  gml:id="DN_STAND.LIM_2_conditional_for_due_to_APE.LIM">
   
   <message:hasMember>
     <event:Event gml:id="uuid.66ca0809-9226-4a4d-990f-f60771185e9d">
@@ -136,15 +136,19 @@ See NOTAM A0135/26.</event:text>
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_4">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_5">
                           <aixm:type>LANDPLANE</aixm:type>
+                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_BELOW</aixm:wingSpanInterpretation>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                     </aixm:ConditionCombination>
@@ -154,6 +158,7 @@ See NOTAM A0135/26.</event:text>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_6">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_1e9975f4-e1e1-4352-89c7-f8d6ec922c6a_1_0_T_7">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
@@ -234,15 +239,19 @@ See NOTAM A0135/26.</event:text>
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_4">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_5">
                           <aixm:type>LANDPLANE</aixm:type>
+                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_BELOW</aixm:wingSpanInterpretation>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                     </aixm:ConditionCombination>
@@ -252,6 +261,7 @@ See NOTAM A0135/26.</event:text>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_6">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_9f9b0064-d060-4823-b96c-79d78fcc08d9_1_0_T_7">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>

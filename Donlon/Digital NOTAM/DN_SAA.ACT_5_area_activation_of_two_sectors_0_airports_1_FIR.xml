@@ -22,13 +22,14 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for a spacial activity area activation - activating several sectors of a single area.
   Each sector is activated in a separate event.
+  There is a parent event which contains information about the activity of both airspace sectors.
   
   Event 1: 
                  Airspace: EAD21A D ECLIPTA1
         Activation status: ACTIVE
                  Activity: MISSILES
                Start Time: 2026-02-05 08:00
-                 End Time: 2026-02-05 20:00
+                 End Time: 2026-02-06 20:00
                  Schedule: -
   Changed vertical limits: -
     Affected Aerodrome(s): -
@@ -39,8 +40,8 @@ Editorial note: this license is an instance of the BSD license template as provi
                  Airspace: EAD21C D ECLIPTA3
         Activation status: ACTIVE
                  Activity: MISSILES
-               Start Time: 2026-02-05 08:00
-                 End Time: 2026-02-05 20:00
+               Start Time: 2026-02-06 08:00
+                 End Time: 2026-02-07 20:00
                  Schedule: -
   Changed vertical limits: -
     Affected Aerodrome(s): -
@@ -51,14 +52,14 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   D0023/26 NOTAMN
   Q) EAAD/QRDCA/IV/BO/W/200/300/5434N03402W029
-  A) EAAD B) 2602050800 C) 2602052000
+  A) EAAD B) 2602050800 C) 2602062000
   E) Danger Area EAD21A ECLIPTA1 activated, missile firing.
   F) FL200
   G) FL300
   
   D0024/26 NOTAMN
   Q) EAAD/QRDCA/IV/BO/W/200/300/5428N03302W033
-  A) EAAD B) 2602050800 C) 2602052000
+  A) EAAD B) 2602060800 C) 2602072000
   E) Danger Area EAD21C ECLIPTA3 activated, missile firing.
   F) FL200
   G) FL300
@@ -75,7 +76,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
   gml:id="DN_SAA.ACT_5_area_activation_of_two_sectors_0_airports_1_FIR">
   
-  <!-- Parent event --> <!-- ??? work in progress -->
+  <!-- Parent event -->
   <message:hasMember>
     <event:Event gml:id="uuid.7b43febe-4431-4f19-955f-2d10d24b2f2b">
       <gml:identifier codeSpace="urn:uuid:">7b43febe-4431-4f19-955f-2d10d24b2f2b</gml:identifier>
@@ -84,7 +85,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <gml:validTime>
             <gml:TimePeriod gml:id="id_cd6665d5-f097-4a7a-b09f-ff7dd68a6a7d_1_0_B_1">
               <gml:beginPosition>2026-02-05T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-02-05T20:00:00Z</gml:endPosition>
+              <gml:endPosition>2026-02-07T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -93,23 +94,29 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_cd6665d5-f097-4a7a-b09f-ff7dd68a6a7d_1_0_B_2">
               <gml:beginPosition>2026-02-05T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-02-05T20:00:00Z</gml:endPosition>
+              <gml:endPosition>2026-02-07T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <event:name>D EAD21 ECLIPTA SECTORS ACTIVATION</event:name>
           <event:designator>ECLIPTA-01</event:designator>
           <event:scenario xsi:nil="true"/>
           <event:version xsi:nil="true"/>
-          <event:activity>Missile firing exercise in Danger Area ECLIPTA will take place on 2026-02-05, from 08:00 UTC until 20:00 UTC.
-Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a separate NOTAM.</event:activity>
+          <event:activity>Missile firing exercise in Danger Area ECLIPTA will take place in ECLIPTA sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) as follows:
+EAD21A (ECLIPTA1) will be activated from 2026-02-05 08:00 UTC until 2026-02-06 20:00 UTC.
+EAD21C (ECLIPTA3) will be activated from 2026-02-06 08:00 UTC until 2026-02-07 20:00 UTC.
+Each activation will be communicated by separate NOTAM.</event:activity>
           <event:summary>
             <html xmlns="http://www.w3.org/1999/xhtml">
               <head>
                 <title>Military exercise in D area ECLIPTA</title>
               </head>
               <body>
-                <p>Missile firing exercise in Danger Area ECLIPTA will take place on 2026-02-05, from 08:00 UTC until 20:00 UTC.
-Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a separate NOTAM.</p>
+                <p>Missile firing exercise in Danger Area ECLIPTA will take place in ECLIPTA sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) as follows:</p>
+                <ul>
+                  <li>EAD21A (ECLIPTA1) will be activated from 2026-02-05 08:00 UTC until 2026-02-06 20:00 UTC</li>
+                  <li>EAD21C (ECLIPTA3) will be activated from 2026-02-06 08:00 UTC until 2026-02-07 20:00 UTC</li>
+                </ul>
+                <p>Each activation will be communicated by separate NOTAM.</p>
               </body>
             </html> 
           </event:summary>
@@ -129,7 +136,7 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
           <gml:validTime>
             <gml:TimePeriod gml:id="id_2973629e-8f61-41e1-9476-6e89a259e9cc_1_0_B_1">
               <gml:beginPosition>2026-02-05T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-02-05T20:00:00Z</gml:endPosition>
+              <gml:endPosition>2026-02-06T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -138,7 +145,7 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_2973629e-8f61-41e1-9476-6e89a259e9cc_1_0_B_2">
               <gml:beginPosition>2026-02-05T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-02-05T20:00:00Z</gml:endPosition>
+              <gml:endPosition>2026-02-06T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <event:name>D EAD21A</event:name>
@@ -168,7 +175,7 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
               <event:radius>029</event:radius>
               <event:location>EAAD</event:location>
               <event:effectiveStart>2602050800</event:effectiveStart>
-              <event:effectiveEnd>2602052000</event:effectiveEnd>
+              <event:effectiveEnd>2602062000</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
               <event:text>Danger Area EAD21A ECLIPTA1 activated, missile firing.</event:text>
@@ -192,7 +199,7 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
           <gml:validTime>
             <gml:TimePeriod gml:id="id_3f612722-a25f-4ab6-a01b-cee4c8ff4681_1_0_T_1">
               <gml:beginPosition>2026-02-05T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-02-05T20:00:00Z</gml:endPosition>
+              <gml:endPosition>2026-02-06T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
@@ -230,8 +237,8 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
         <event:EventTimeSlice gml:id="id_f3ff9fc3-499d-4992-b7fc-7ae4e90f8cd0_1_0_B">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_f3ff9fc3-499d-4992-b7fc-7ae4e90f8cd0_1_0_B_1">
-              <gml:beginPosition>2026-02-05T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-02-05T20:00:00Z</gml:endPosition>
+              <gml:beginPosition>2026-02-06T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-07T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -239,8 +246,8 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_f3ff9fc3-499d-4992-b7fc-7ae4e90f8cd0_1_0_B_2">
-              <gml:beginPosition>2026-02-05T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-02-05T20:00:00Z</gml:endPosition>
+              <gml:beginPosition>2026-02-06T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-07T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <event:name>D EAD21A</event:name>
@@ -269,8 +276,8 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
               <event:coordinates>5428N03302W</event:coordinates>
               <event:radius>033</event:radius>
               <event:location>EAAD</event:location>
-              <event:effectiveStart>2602050800</event:effectiveStart>
-              <event:effectiveEnd>2602052000</event:effectiveEnd>
+              <event:effectiveStart>2602060800</event:effectiveStart>
+              <event:effectiveEnd>2602072000</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
               <event:text>Danger Area EAD21C ECLIPTA3 activated, missile firing.</event:text>
@@ -293,8 +300,8 @@ Sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) will be activated, each by a sep
         <aixm:AirspaceTimeSlice gml:id="id_118e32da-ce75-4be8-a169-2e009d857154_1_0_T">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_118e32da-ce75-4be8-a169-2e009d857154_1_0_T_1">
-              <gml:beginPosition>2026-02-05T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-02-05T20:00:00Z</gml:endPosition>
+              <gml:beginPosition>2026-02-06T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-02-07T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>

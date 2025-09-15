@@ -48,7 +48,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
-  gml:id="DN_STAND.CLS_stand_closure_due_to_APE.CLS">
+  gml:id="DN_STAND.CLS_3_stand_closure_due_to_APE.CLS">
   
   <message:hasMember>
     <event:Event gml:id="uuid.9d228456-8431-4f7d-a3ea-c3a90819dd23">
@@ -131,15 +131,19 @@ See NOTAM A0126/26.</event:text>
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_c76c57a3-df45-4b1e-b810-4d76dde6d070_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_c76c57a3-df45-4b1e-b810-4d76dde6d070_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_c76c57a3-df45-4b1e-b810-4d76dde6d070_1_0_T_4">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_c76c57a3-df45-4b1e-b810-4d76dde6d070_1_0_T_5">
                           <aixm:type>LANDPLANE</aixm:type>
+                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_BELOW</aixm:wingSpanInterpretation>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                     </aixm:ConditionCombination>
@@ -149,6 +153,7 @@ See NOTAM A0126/26.</event:text>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_c76c57a3-df45-4b1e-b810-4d76dde6d070_1_0_T_6">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_c76c57a3-df45-4b1e-b810-4d76dde6d070_1_0_T_7">
                       <aixm:timeInterval>
@@ -175,6 +180,7 @@ See NOTAM A0126/26.</event:text>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_c76c57a3-df45-4b1e-b810-4d76dde6d070_1_0_T_10">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_c76c57a3-df45-4b1e-b810-4d76dde6d070_1_0_T_11">
                       <aixm:timeInterval>
@@ -258,15 +264,19 @@ See NOTAM A0126/26.</event:text>
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_81787748-11cf-4ed7-9e41-95d99bb141a2_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_81787748-11cf-4ed7-9e41-95d99bb141a2_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_81787748-11cf-4ed7-9e41-95d99bb141a2_1_0_T_4">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_81787748-11cf-4ed7-9e41-95d99bb141a2_1_0_T_5">
                           <aixm:type>LANDPLANE</aixm:type>
+                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_BELOW</aixm:wingSpanInterpretation>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                     </aixm:ConditionCombination>
@@ -276,6 +286,7 @@ See NOTAM A0126/26.</event:text>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_81787748-11cf-4ed7-9e41-95d99bb141a2_1_0_T_6">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_81787748-11cf-4ed7-9e41-95d99bb141a2_1_0_T_7">
                       <aixm:timeInterval>
@@ -302,6 +313,7 @@ See NOTAM A0126/26.</event:text>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_81787748-11cf-4ed7-9e41-95d99bb141a2_1_0_T_10">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_81787748-11cf-4ed7-9e41-95d99bb141a2_1_0_T_11">
                       <aixm:timeInterval>

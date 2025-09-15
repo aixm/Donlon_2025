@@ -48,7 +48,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
-  gml:id="DN_STAND.CLS_stand_closure_due_to_APN.CLS">
+  gml:id="DN_STAND.CLS_1_stand_closure_due_to_APN.CLS">
   
   <message:hasMember>
     <event:Event gml:id="uuid.75e631ee-0bfc-4bfc-866a-29d487124167">
@@ -131,15 +131,38 @@ See NOTAM A0073/26.</event:text>
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_4">
-                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_5">
                           <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_6">
+                          <aixm:type>TILT_WING</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_7">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_8">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_9">
+                          <aixm:type>LANDPLANE</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                     </aixm:ConditionCombination>
@@ -150,14 +173,14 @@ See NOTAM A0073/26.</event:text>
           </aixm:availability>
           <!-- The availability status of the aircraft stand during the event -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_6">
+            <aixm:ApronAreaAvailability gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_10">
               <!-- Closure Reason -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_7">
+                <aixm:Note gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_11">
                   <aixm:propertyName>operationalStatus</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_8">
+                    <aixm:LinguisticNote gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_12">
                       <aixm:note>apron closure</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -165,10 +188,10 @@ See NOTAM A0073/26.</event:text>
               </aixm:annotation>
               <!-- Note -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_9">
+                <aixm:Note gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_13">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_10">
+                    <aixm:LinguisticNote gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_14">
                       <aixm:note>See NOTAM A0073/26</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -179,7 +202,7 @@ See NOTAM A0073/26.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:AircraftStandExtension gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_11">
+            <event:AircraftStandExtension gml:id="id_a408f602-6464-486a-8f37-a823b45b3ad8_1_0_T_15">
               <event:theEvent xlink:href="urn:uuid:75e631ee-0bfc-4bfc-866a-29d487124167"/>
             </event:AircraftStandExtension>
           </aixm:extension>
@@ -227,18 +250,34 @@ See NOTAM A0073/26.</event:text>
                   </aixm:selection>
                 </aixm:ApronAreaUsage>
               </aixm:usage>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_7">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_8">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_9">
+                          <aixm:type>LANDPLANE</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
           <!-- The availability status of the aircraft stand during the event -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_7">
+            <aixm:ApronAreaAvailability gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_10">
               <!-- Closure Reason -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_8">
+                <aixm:Note gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_11">
                   <aixm:propertyName>operationalStatus</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_9">
+                    <aixm:LinguisticNote gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_12">
                       <aixm:note>apron closure</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -246,10 +285,10 @@ See NOTAM A0073/26.</event:text>
               </aixm:annotation>
               <!-- Note -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_10">
+                <aixm:Note gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_13">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_11">
+                    <aixm:LinguisticNote gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_14">
                       <aixm:note>See NOTAM A0073/26</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -260,7 +299,7 @@ See NOTAM A0073/26.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:AircraftStandExtension gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_12">
+            <event:AircraftStandExtension gml:id="id_177758d0-ea51-4e73-ae3b-ee1162578bfc_1_0_T_15">
               <event:theEvent xlink:href="urn:uuid:75e631ee-0bfc-4bfc-866a-29d487124167"/>
             </event:AircraftStandExtension>
           </aixm:extension>

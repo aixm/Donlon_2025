@@ -22,30 +22,30 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- Example of Digital NOTAM for a apron usage limitation change ("additionally allowed for"):
      Apron A usage is extended to unscheduled military aircraft with wingspan up to 42 m, private piston aircraft and gliders:
   
-                    Airport/Heliport: EADD DONLON/INTL.
-                               Apron: EADD DONLON/INTL. | APRON A
-                          Start Time: 2026-03-07 08:00
-                            End Time: 2026-03-07 18:00
-                            Schedule: -
-                     Limitation Type: Additionally allowed for
-                          Limitation: Prior Permission: -
-                                      Prior Permission Details: -
-                                      Sublimitation 1: Aircraft - wingspan: 42 M
-                                                                - wingspan interpretation: AT_OR_BELOW
-                                                       Flight   - military: MIL
-                                                                - purpose: NON_SCHEDULED
-                                      Sublimitation 2: Aircraft - engine: PISTON
-                                                       Flight   - purpose: PRIVATE
-                                      Sublimitation 3: Aircraft - type: UAV
-                              Reason: static display of aircraft
-                                Note: -
+     Airport/Heliport: EADD DONLON/INTL.
+                Apron: EADD DONLON/INTL. | APRON A
+           Start Time: 2026-03-07 08:00
+             End Time: 2026-03-07 18:00
+             Schedule: -
+      Limitation Type: Additionally allowed for
+           Limitation: Prior Permission: -
+                       Prior Permission Details: -
+                       Sublimitation 1: Aircraft - wingspan: 60 M
+                                                 - wingspan interpretation: AT_OR_BELOW
+                                        Flight   - military: MIL
+                                                 - purpose: NON_SCHEDULED
+                       Sublimitation 2: Aircraft - engine: PISTON
+                                        Flight   - purpose: PRIVATE
+                       Sublimitation 3: Aircraft - type: UAV
+               Reason: static display of aircraft
+                 Note: -
 -->
 
 <!-- 
   A0119/26 NOTAMN
   Q) EAAD/QMNLT/IV/NBO/A/000/999/5222N03157W005
   A) EADD B) 2603070800 C) 2603071800
-  E) Apron A now available for MIL acft not scheduled acft with wingspan equal to or less than 42m acft, private piston acft, unmanned acft.
+  E) Apron A now available for MIL acft not scheduled acft with wingspan equal to or less than 60m acft, private piston acft, unmanned acft.
   Due to static display of aircraft.
 -->
 
@@ -58,7 +58,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
-  gml:id="DN_APN.LIM_prohibited_for">
+  gml:id="DN_APN.LIM_4_additionally_allowed_for">
   
   <message:hasMember>
     <event:Event gml:id="uuid.7a58bdbe-c630-48ae-94bc-5cdb4ee76978">
@@ -110,7 +110,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:effectiveEnd>2603071800</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
-              <event:text>Apron A now available for MIL acft not scheduled acft with wingspan equal to or less than 42m acft, private piston acft, unmanned acft.
+              <event:text>Apron A now available for MIL acft not scheduled acft with wingspan equal to or less than 60m acft, private piston acft, unmanned acft.
 Due to static display of aircraft.</event:text>
             </event:NOTAM>
           </event:notification>
@@ -128,26 +128,49 @@ Due to static display of aircraft.</event:text>
         <aixm:ApronTimeSlice gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_1">
-              <gml:beginPosition>2026-03-08T08:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-03-08T18:00:00Z</gml:endPosition>
+              <gml:beginPosition>2026-03-07T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-03-07T18:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>4</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the apron -->
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_3">
-                  <aixm:type>FORBID</aixm:type>
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_4">
-                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_5">
-                          <aixm:wingSpan uom="M">36</aixm:wingSpan>
+                          <aixm:type>LANDPLANE</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_6">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_7">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_8">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_9">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
                           <aixm:wingSpanInterpretation>ABOVE</aixm:wingSpanInterpretation>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
@@ -159,14 +182,14 @@ Due to static display of aircraft.</event:text>
           </aixm:availability>
           <!-- The availability status of the apron during the event -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_6">
+            <aixm:ApronAreaAvailability gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_10">
               <!-- Reason -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_7">
+                <aixm:Note gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_11">
                   <aixm:propertyName>operationalStatus</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_8">
+                    <aixm:LinguisticNote gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_12">
                       <aixm:note>static display of aircraft</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -175,23 +198,23 @@ Due to static display of aircraft.</event:text>
               <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
               <!-- The usage limitation -->
               <aixm:usage>
-                <aixm:ApronAreaUsage gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_9">
+                <aixm:ApronAreaUsage gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_13">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_10">
+                    <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_14">
                       <aixm:logicalOperator>OR</aixm:logicalOperator>
                       <!-- Sublimitation 1 -->
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_11">
+                        <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_15">
                           <aixm:logicalOperator>AND</aixm:logicalOperator>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_12">
-                              <aixm:wingSpan uom="M">42</aixm:wingSpan>
+                            <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_16">
+                              <aixm:wingSpan uom="M">60</aixm:wingSpan>
                               <aixm:wingSpanInterpretation>AT_OR_BELOW</aixm:wingSpanInterpretation>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_13">
+                            <aixm:FlightCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_17">
                               <aixm:military>MIL</aixm:military>
                               <aixm:purpose>NON_SCHEDULED</aixm:purpose>
                             </aixm:FlightCharacteristic>
@@ -200,15 +223,15 @@ Due to static display of aircraft.</event:text>
                       </aixm:subCondition>
                       <!-- Sublimitation 2 -->
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_14">
+                        <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_18">
                           <aixm:logicalOperator>AND</aixm:logicalOperator>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_15">
+                            <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_19">
                               <aixm:engine>PISTON</aixm:engine>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_16">
+                            <aixm:FlightCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_20">
                               <aixm:purpose>PRIVATE</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
@@ -216,10 +239,10 @@ Due to static display of aircraft.</event:text>
                       </aixm:subCondition>
                       <!-- Sublimitation 3 -->
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_17">
+                        <aixm:ConditionCombination gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_21">
                           <aixm:logicalOperator>NONE</aixm:logicalOperator>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_18">
+                            <aixm:AircraftCharacteristic gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_22">
                               <aixm:type>UAV</aixm:type>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
@@ -233,7 +256,7 @@ Due to static display of aircraft.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:ApronExtension gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_19">
+            <event:ApronExtension gml:id="id_f0b70329-f9d4-4352-b18b-c28fd7b7e06f_1_0_T_23">
               <event:theEvent xlink:href="urn:uuid:7a58bdbe-c630-48ae-94bc-5cdb4ee76978"/>
             </event:ApronExtension>
           </aixm:extension>

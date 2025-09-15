@@ -50,7 +50,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
-  gml:id="DN_STAND.CLS_stand_closure_due_to_APN.CLS_with_schedule">
+  gml:id="DN_STAND.CLS_2_stand_closure_due_to_APN.CLS_with_schedule">
   
   <message:hasMember>
     <event:Event gml:id="uuid.8e11c1fd-cf6e-42a4-a6b3-5b5e7a6eb32c">
@@ -128,21 +128,44 @@ See NOTAM A0079/26.</event:text>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the aircraft stand -->
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_4">
-                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_5">
                           <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_6">
+                          <aixm:type>TILT_WING</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_7">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_8">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_9">
+                          <aixm:type>LANDPLANE</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                     </aixm:ConditionCombination>
@@ -153,10 +176,10 @@ See NOTAM A0079/26.</event:text>
           </aixm:availability>
           <!-- The availability status of the aircraft stand during the event -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_6">
+            <aixm:ApronAreaAvailability gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_10">
               <!-- Schedule -->
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_7">
+                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_11">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>WED</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -166,7 +189,7 @@ See NOTAM A0079/26.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_8">
+                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>THU</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -176,7 +199,7 @@ See NOTAM A0079/26.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_9">
+                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>FRI</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -186,7 +209,7 @@ See NOTAM A0079/26.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_10">
+                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_14">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>08:00</aixm:startTime>
@@ -196,7 +219,7 @@ See NOTAM A0079/26.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_11">
+                <aixm:Timesheet gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_15">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>26-02</aixm:startDate>
                   <aixm:endDate>27-02</aixm:endDate>
@@ -210,11 +233,11 @@ See NOTAM A0079/26.</event:text>
               </aixm:timeInterval>
               <!-- Closure Reason -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_12">
+                <aixm:Note gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_16">
                   <aixm:propertyName>operationalStatus</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_13">
+                    <aixm:LinguisticNote gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_17">
                       <aixm:note>Apron B closure</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -222,10 +245,10 @@ See NOTAM A0079/26.</event:text>
               </aixm:annotation>
               <!-- Note -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_14">
+                <aixm:Note gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_18">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_15">
+                    <aixm:LinguisticNote gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_19">
                       <aixm:note>See NOTAM A0079/26</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -236,7 +259,7 @@ See NOTAM A0079/26.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:AircraftStandExtension gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_16">
+            <event:AircraftStandExtension gml:id="id_236db6c2-0d4d-4a97-9084-dcbe4c115e2e_1_0_T_20">
               <event:theEvent xlink:href="urn:uuid:8e11c1fd-cf6e-42a4-a6b3-5b5e7a6eb32c"/>
             </event:AircraftStandExtension>
           </aixm:extension>
@@ -258,15 +281,17 @@ See NOTAM A0079/26.</event:text>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the aircraft stand -->
           <aixm:availability>
             <aixm:ApronAreaAvailability gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_2">
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ApronAreaUsage gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_4">
                       <aixm:logicalOperator>OR</aixm:logicalOperator>
@@ -284,14 +309,30 @@ See NOTAM A0079/26.</event:text>
                   </aixm:selection>
                 </aixm:ApronAreaUsage>
               </aixm:usage>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_7">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_8">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_9">
+                          <aixm:type>LANDPLANE</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
           <!-- The availability status of the aircraft stand during the event -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_7">
+            <aixm:ApronAreaAvailability gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_10">
               <!-- Schedule -->
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_8">
+                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_11">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>WED</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -301,7 +342,7 @@ See NOTAM A0079/26.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_9">
+                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>THU</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -311,7 +352,7 @@ See NOTAM A0079/26.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_10">
+                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>FRI</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -321,7 +362,7 @@ See NOTAM A0079/26.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_11">
+                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_14">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>08:00</aixm:startTime>
@@ -331,7 +372,7 @@ See NOTAM A0079/26.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_12">
+                <aixm:Timesheet gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_15">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>26-02</aixm:startDate>
                   <aixm:endDate>27-02</aixm:endDate>
@@ -345,11 +386,11 @@ See NOTAM A0079/26.</event:text>
               </aixm:timeInterval>
               <!-- Closure Reason -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_13">
+                <aixm:Note gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_16">
                   <aixm:propertyName>operationalStatus</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_14">
+                    <aixm:LinguisticNote gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_17">
                       <aixm:note>Apron B closure</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -357,10 +398,10 @@ See NOTAM A0079/26.</event:text>
               </aixm:annotation>
               <!-- Note -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_15">
+                <aixm:Note gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_18">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_16">
+                    <aixm:LinguisticNote gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_19">
                       <aixm:note>See NOTAM A0079/26</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -371,7 +412,7 @@ See NOTAM A0079/26.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:AircraftStandExtension gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_17">
+            <event:AircraftStandExtension gml:id="id_8bc12029-6730-4487-886a-3cda3904666c_1_0_T_20">
               <event:theEvent xlink:href="urn:uuid:8e11c1fd-cf6e-42a4-a6b3-5b5e7a6eb32c"/>
             </event:AircraftStandExtension>
           </aixm:extension>

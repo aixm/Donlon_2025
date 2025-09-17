@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file includes contributions from Solitec Software Solutions, Luciad, EUROCONTROL, Comsoft -->
+<!-- Copyright (c) 2025, EUROCONTROL & FAA
+  
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+  
+  THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gts="http://www.isotc211.org/2005/gts" 
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:gss="http://www.isotc211.org/2005/gss" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:gsr="http://www.isotc211.org/2005/gsr" 
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd" 
+  gml:id="DONLON_EADD_PassengerService_Baseline">
+  <message:hasMember>
+    <aixm:PassengerService gml:id="uuid.f160dd5b-5c4e-4a18-ac6a-79a07af6435a">
+      <gml:identifier codeSpace="urn:uuid:">f160dd5b-5c4e-4a18-ac6a-79a07af6435a</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:PassengerServiceTimeSlice gml:id="PAX-SERVICE_EADD_CUSTOMS_AND_IMMIGRATION">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_f160dd5b-5c4e-4a18-ac6a-79a07af6435a">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_f160dd5b-5c4e-4a18-ac6a-79a07af6435a">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:flightOperations>ALL</aixm:flightOperations>
+          <aixm:rank>PRIMARY</aixm:rank>
+          <aixm:compliantICAO>YES</aixm:compliantICAO>
+          <aixm:name>DONLON/INTL CUSTOMS AND IMMIGRATION</aixm:name>
+          <aixm:location>
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_f160dd5b-5c4e-4a18-ac6a-79a07af6435a">
+              <gml:pos>52.3707760351 -31.9431531763</gml:pos>
+              <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:serviceProvider xsi:nil="true" nilReason="unknown"/>
+          <aixm:call-sign xsi:nil="true" nilReason="unknown"/>
+          <aixm:radioCommunication xsi:nil="true" nilReason="unknown"/>
+          <aixm:groundCommunication xsi:nil="true" nilReason="unknown"/>
+          <aixm:availability>
+            <aixm:ServiceOperationalStatus gml:id="ID_SOS_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T1_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>09:00</aixm:startTime>
+                  <aixm:endTime>18:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T2_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startTime>10:00</aixm:startTime>
+                  <aixm:endTime>17:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T3_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startTime>10:00</aixm:startTime>
+                  <aixm:endTime>17:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T4_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>HOL</aixm:day>
+                  <aixm:startTime>10:00</aixm:startTime>
+                  <aixm:endTime>17:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+            </aixm:ServiceOperationalStatus>
+          </aixm:availability>
+          <aixm:availability>
+            <aixm:ServiceOperationalStatus gml:id="ID_SOS_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T1_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T2_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>09:00</aixm:startTime>
+                  <aixm:endTime>18:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T3_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startTime>10:00</aixm:startTime>
+                  <aixm:endTime>17:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T4_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startTime>10:00</aixm:startTime>
+                  <aixm:endTime>17:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T5_f160dd5b-5c4e-4a18-ac6a-79a07af6435a_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>HOL</aixm:day>
+                  <aixm:startTime>10:00</aixm:startTime>
+                  <aixm:endTime>17:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="ID_N0_f160dd5b-5c4e-4a18-ac6a-79a07af6435a">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="ID_LN0_f160dd5b-5c4e-4a18-ac6a-79a07af6435a">
+                      <aixm:note lang="eng">During these hours services are available O/R. Request to be submitted to the AD not later than 1500 (1400) UTC.</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+            </aixm:ServiceOperationalStatus>
+          </aixm:availability>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N1_f160dd5b-5c4e-4a18-ac6a-79a07af6435a">
+              <aixm:propertyName>availability</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_N1_LN_f160dd5b-5c4e-4a18-ac6a-79a07af6435a">
+                  <aixm:note lang="eng">Operational hours same as AD hours</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:airportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
+          <aixm:type>CUST</aixm:type>
+        </aixm:PassengerServiceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:PassengerService>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:PassengerService gml:id="uuid.193607c8-2bfa-4666-958e-2abcf43d7ea1">
+      <gml:identifier codeSpace="urn:uuid:">193607c8-2bfa-4666-958e-2abcf43d7ea1</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:PassengerServiceTimeSlice gml:id="PAX-SERVICE_EADD_HEALT_AND_SANITATION">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:flightOperations>ALL</aixm:flightOperations>
+          <aixm:rank>PRIMARY</aixm:rank>
+          <aixm:compliantICAO>YES</aixm:compliantICAO>
+          <aixm:name>DONLON/INTL HEALT AND SANITATION</aixm:name>
+          <aixm:location>
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+              <gml:pos>52.3707760351 -31.9431531763</gml:pos>
+              <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:serviceProvider xsi:nil="true" nilReason="unknown"/>
+          <aixm:call-sign xsi:nil="true" nilReason="unknown"/>
+          <aixm:radioCommunication xsi:nil="true" nilReason="unknown"/>
+          <aixm:groundCommunication xsi:nil="true" nilReason="unknown"/>
+          <aixm:availability>
+            <aixm:ServiceOperationalStatus gml:id="ID_SOS_193607c8-2bfa-4666-958e-2abcf43d7ea1_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T1_193607c8-2bfa-4666-958e-2abcf43d7ea1_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T2_193607c8-2bfa-4666-958e-2abcf43d7ea1_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T3_193607c8-2bfa-4666-958e-2abcf43d7ea1_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T4_193607c8-2bfa-4666-958e-2abcf43d7ea1_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>HOL</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="ID_N1_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="ID_N1_LN_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+                      <aixm:note lang="eng">2 HR PN to AD required.</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+            </aixm:ServiceOperationalStatus>
+          </aixm:availability>
+          <aixm:availability>
+            <aixm:ServiceOperationalStatus gml:id="ID_SOS_193607c8-2bfa-4666-958e-2abcf43d7ea1_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T1_193607c8-2bfa-4666-958e-2abcf43d7ea1_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T2_193607c8-2bfa-4666-958e-2abcf43d7ea1_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T3_193607c8-2bfa-4666-958e-2abcf43d7ea1_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T4_193607c8-2bfa-4666-958e-2abcf43d7ea1_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T5_193607c8-2bfa-4666-958e-2abcf43d7ea1_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>HOL</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="ID_N2_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="ID_N2_LN_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+                      <aixm:note lang="eng">During these hours services are available O/R. Request to be submitted to the AD not later than 1500 (1400) UTC.</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+            </aixm:ServiceOperationalStatus>
+          </aixm:availability>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N3_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+              <aixm:propertyName>availability</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_LN3_193607c8-2bfa-4666-958e-2abcf43d7ea1">
+                  <aixm:note lang="eng">Operational hours same as AD hours.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:airportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
+          <aixm:type>SAN</aixm:type>
+        </aixm:PassengerServiceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:PassengerService>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:PassengerService gml:id="uuid.501d2b82-3d6a-42f9-b924-2be251954c08">
+      <gml:identifier codeSpace="urn:uuid:">501d2b82-3d6a-42f9-b924-2be251954c08</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:PassengerServiceTimeSlice gml:id="PAX-SERVICE_EADD_SECURITY">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_501d2b82-3d6a-42f9-b924-2be251954c08">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_501d2b82-3d6a-42f9-b924-2be251954c08">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:flightOperations>ALL</aixm:flightOperations>
+          <aixm:rank>PRIMARY</aixm:rank>
+          <aixm:compliantICAO>YES</aixm:compliantICAO>
+          <aixm:name>DONLON/INTL SECURITY</aixm:name>
+          <aixm:location>
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_501d2b82-3d6a-42f9-b924-2be251954c08">
+              <gml:pos>52.3707760351 -31.9431531763</gml:pos>
+              <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:serviceProvider xsi:nil="true" nilReason="unknown"/>
+          <aixm:availability>
+            <aixm:ServiceOperationalStatus gml:id="ID_SOS_501d2b82-3d6a-42f9-b924-2be251954c08_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T1_501d2b82-3d6a-42f9-b924-2be251954c08_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T2_501d2b82-3d6a-42f9-b924-2be251954c08_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T3_501d2b82-3d6a-42f9-b924-2be251954c08_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T4_501d2b82-3d6a-42f9-b924-2be251954c08_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>HOL</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+            </aixm:ServiceOperationalStatus>
+          </aixm:availability>
+          <aixm:availability>
+            <aixm:ServiceOperationalStatus gml:id="ID_SOS_501d2b82-3d6a-42f9-b924-2be251954c08_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T1_501d2b82-3d6a-42f9-b924-2be251954c08_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T2_501d2b82-3d6a-42f9-b924-2be251954c08_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T3_501d2b82-3d6a-42f9-b924-2be251954c08_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T4_501d2b82-3d6a-42f9-b924-2be251954c08_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_SOS_T5_501d2b82-3d6a-42f9-b924-2be251954c08_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>HOL</aixm:day>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="ID_N2_501d2b82-3d6a-42f9-b924-2be251954c08">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="ID_N2_LN_501d2b82-3d6a-42f9-b924-2be251954c08">
+                      <aixm:note lang="eng">During these hours services are available O/R. Request to be submitted to the AD not later than 1500 (1400) UTC.</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+            </aixm:ServiceOperationalStatus>
+          </aixm:availability>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N1_501d2b82-3d6a-42f9-b924-2be251954c08">
+              <aixm:propertyName>availability</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_N1_LN_501d2b82-3d6a-42f9-b924-2be251954c08">
+                  <aixm:note lang="eng">Operational hours same as AD hours</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:airportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
+          <aixm:type>SECUR</aixm:type>
+        </aixm:PassengerServiceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:PassengerService>
+  </message:hasMember>
+</message:AIXMBasicMessage>

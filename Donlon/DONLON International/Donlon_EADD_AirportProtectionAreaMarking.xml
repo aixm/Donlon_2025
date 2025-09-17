@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file includes contributions from Solitec Software Solutions, Luciad, EUROCONTROL, Comsoft -->
+<!-- Copyright (c) 2025, EUROCONTROL & FAA
+  
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+  
+  THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gts="http://www.isotc211.org/2005/gts"
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gss="http://www.isotc211.org/2005/gss" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:gsr="http://www.isotc211.org/2005/gsr"
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"
+  gml:id="DONLON_EADD_AirportProtectionAreaMarking_Baseline">
+  <message:hasMember>
+    <aixm:AirportProtectionAreaMarking gml:id="uuid.72c00349-7a90-482b-927b-534329cb73f8">
+      <gml:identifier codeSpace="urn:uuid:">72c00349-7a90-482b-927b-534329cb73f8</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirportProtectionAreaMarkingTimeSlice gml:id="APAM_EADD_SWY_RWY-27L">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_72c00349-7a90-482b-927b-534329cb73f8">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_72c00349-7a90-482b-927b-534329cb73f8">
+              <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+          <aixm:condition>GOOD</aixm:condition>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_f35ee446-9f56-4a5f-9364-48114f4a4a8b">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_f35ee446-9f56-4a5f-9364-48114f4a4a8b">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_f35ee446-9f56-4a5f-9364-48114f4a4a8b">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3651001931962 -31.9679105731004 52.3650991766771 -31.9679251930331 52.3653228031983
+                                    -31.9676338623625 52.365500601065 -31.9680000484005 52.3655016200861 -31.9679854289367 52.3653238221478
+                                    -31.9676192428846 52.3651001931962 -31.9679105731004</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_3c307ac3-56b1-48ee-8623-2ba4b231b10e">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_3c307ac3-56b1-48ee-8623-2ba4b231b10e">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_3c307ac3-56b1-48ee-8623-2ba4b231b10e">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.365124126017 -31.9675671952683 52.3651231094979 -31.9675818152009 52.3653467360192 -31.9672904845303
+                                    52.3655245338858 -31.9676566705683 52.365525552907 -31.9676420511045 52.3653477549686 -31.9672758650524
+                                    52.365124126017 -31.9675671952683</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_409f60c8-1122-48b0-a1f2-8c4da6bde6db">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_409f60c8-1122-48b0-a1f2-8c4da6bde6db">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_409f60c8-1122-48b0-a1f2-8c4da6bde6db">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3651480588345 -31.9672238170042 52.3651470423154 -31.9672384369368 52.3653706688367
+                                    -31.9669471062663 52.3655484667033 -31.9673132923042 52.3655494857245 -31.9672986728405 52.3653716877861
+                                    -31.9669324867884 52.3651480588345 -31.9672238170042</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_6418da00-bffc-43f3-9a04-128653d9e7e1">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_6418da00-bffc-43f3-9a04-128653d9e7e1">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_6418da00-bffc-43f3-9a04-128653d9e7e1">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3651719916517 -31.966880438693 52.3651709751326 -31.9668950586256 52.3653946016538 -31.966603727955
+                                    52.3655723995205 -31.966969913993 52.3655734185416 -31.9669552945292 52.3653956206033 -31.9665891084771
+                                    52.3651719916517 -31.966880438693</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_90bd67be-36dc-44ff-bb63-9190a37772d9">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_90bd67be-36dc-44ff-bb63-9190a37772d9">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_90bd67be-36dc-44ff-bb63-9190a37772d9">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3651959242519 -31.9665370633083 52.3651949077328 -31.9665516832409 52.365418534254 -31.9662603525703
+                                    52.3655963321206 -31.9666265386083 52.3655973511418 -31.9666119191445 52.3654195532035 -31.9662457330924
+                                    52.3651959242519 -31.9665370633083</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_8e780923-af3a-4eba-813e-3bd9d295311c">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_8e780923-af3a-4eba-813e-3bd9d295311c">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_8e780923-af3a-4eba-813e-3bd9d295311c">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3652198569537 -31.9661936862793 52.3652188404346 -31.9662083062119 52.3654424669558
+                                    -31.9659169755414 52.3656202648225 -31.9662831615793 52.3656212838436 -31.9662685421156 52.3654434859053
+                                    -31.9659023560635 52.3652198569537 -31.9661936862793</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_42c12247-4736-4cb1-aef7-cd8c1d7d4af2">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_42c12247-4736-4cb1-aef7-cd8c1d7d4af2">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_42c12247-4736-4cb1-aef7-cd8c1d7d4af2">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3652437897745 -31.9658503084472 52.3652427732554 -31.9658649283798 52.3654663997766
+                                    -31.9655735977092 52.3656441976433 -31.9659397837472 52.3656452166644 -31.9659251642834 52.3654674187261
+                                    -31.9655589782313 52.3652437897745 -31.9658503084472</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_7ac94b66-cd9b-41b0-8492-962d26f3c92c">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_7ac94b66-cd9b-41b0-8492-962d26f3c92c">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_7ac94b66-cd9b-41b0-8492-962d26f3c92c">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3652677222839 -31.9655069327174 52.3652667057648 -31.96552155265 52.365490332286 -31.9652302219794
+                                    52.3656681301527 -31.9655964080174 52.3656691491738 -31.9655817885536 52.3654913512355 -31.9652156025015
+                                    52.3652677222839 -31.9655069327174</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_822a9f01-bd40-4f3b-8303-187971de78bd">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_822a9f01-bd40-4f3b-8303-187971de78bd">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_822a9f01-bd40-4f3b-8303-187971de78bd">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3655889159783 -31.9650238759458 52.3655799902415 -31.9650222109466 52.365692062781 -31.9652530314844
+                                    52.3656930818022 -31.9652384120206 52.3655889159783 -31.9650238759458</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:element>
+            <aixm:MarkingElement gml:id="ID_ME_ec28b3e3-44b6-416b-ac26-49a0a2b2f110">
+              <aixm:colour>YELLOW</aixm:colour>
+              <aixm:style xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:extent_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ME_ES_ec28b3e3-44b6-416b-ac26-49a0a2b2f110">
+                  <gml:patches>
+                    <gml:PolygonPatch>
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="ID_ME_ES_C_ec28b3e3-44b6-416b-ac26-49a0a2b2f110">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>52.3654316048716 -31.9649945312681 52.36542267881 -31.9649928662083 52.3652916549122 -31.9651635561844
+                                    52.3652906383932 -31.965178176117 52.3654316048716 -31.9649945312681</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+                  <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+                </aixm:ElevatedSurface>
+              </aixm:extent_surfaceExtent>
+            </aixm:MarkingElement>
+          </aixm:element>
+          <aixm:markingLocation>OTHER:STOPWAY</aixm:markingLocation>
+          <aixm:markedProtectionArea xlink:href="urn:uuid:8a4c9a4c-e0f9-4667-a560-997280bede5a" xlink:title="RPA EADD SWY RWY 27L"/>
+        </aixm:AirportProtectionAreaMarkingTimeSlice>
+      </aixm:timeSlice>
+    </aixm:AirportProtectionAreaMarking>
+  </message:hasMember>
+</message:AIXMBasicMessage>

@@ -33,12 +33,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd" 
   gml:id="DONLON_VerticalStructure_Baseline">
+  <!-- SINGLE POINT OBSTACLE.
+  This sample obstacle contains all the AIXM properties for Vertical Stucture (with annotations). 
+  Note: Not all of them are required by PANS-AIM for an Obstacle data set. -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.5f68d835-828c-4ccd-91b7-791058d9dd4d">
-      <!-- SINGLE POINT OBSTACLE.
-      This sample obstacle contains all the AIXM properties for Vertical Stucture (with annotations). 
-      Note: Not all of them are required by PANS-AIM for an Obstacle data set.
-      The other obstacle examples in this file contain only those properties considered to be required by PANS-AIM  (incl. coding of nil value if applicable). -->
       <gml:identifier codeSpace="urn:uuid:">5f68d835-828c-4ccd-91b7-791058d9dd4d</gml:identifier>
       <!-- validTime and featureLifetime is used to code PANS-AIM Table A-6.2 "Effectivity".
       NOTE: In case of temporary obstacles, also VerticalStructurePart.timeInterval.Timesheet may be needed to fulfill this requirement..-->
@@ -46,7 +45,7 @@
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0001">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0001-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -91,6 +90,7 @@
           <aixm:marker xsi:nil="true" nilReason="inapplicable"/>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0001-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <!-- Height is an optional attribute in PANS-AIM Table A-6-2.
 							Height is listed in ENR 5.4 and AD2/3.10. 
 							Note: Height is mandatory in RTCA/EUROCAE ED-98C/DO-276C -->
@@ -102,7 +102,7 @@
 								 In case of multi part obstacles types may have different values. -->
               <aixm:type>ANTENNA</aixm:type>
               <!-- constructionStatus not requried by PANS-AIM but contained in ED-98. -->
-              <aixm:constructionStatus xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <!-- PANS-AIM table A6-2 only requires information if an obstcle is marked.
 								Marking pattern and colour is not explicitly required by PANS-AIM. -->
               <aixm:markingPattern>HBANDS</aixm:markingPattern>
@@ -153,7 +153,7 @@
                       <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
-                  <!-- regarding availability, see also lightingAvailability, below.  -->
+                  <!-- regarding availability, see also lightingAvailability, below. -->
                   <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
@@ -174,7 +174,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0001-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -187,7 +187,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0001-2">
-                  <aixm:note>Obstacle Owner: DONLON TELECOM, Donlon Street 100, 2020 DOLNLON, Phone: +00123456789, email: info@donlontele.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON TELECOM, Donlon Street 100, 2020 DOLNLON, Phone: +00123456789, email: info@donlontele.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -198,7 +198,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0001-3">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -209,7 +209,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0001-4">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -221,7 +221,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0001-5">
-                  <aixm:note>Obstacle lighted during the night. During the day lights can be activated dynamically.</aixm:note>
+                  <aixm:note lang="eng">Obstacle lighted during the night. During the day lights can be activated dynamically.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -265,15 +265,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- GROUPS OF OBSTACLES EACH OBSTACLE PUBLISHED INDIVIDUALLY (Wind turbines of a windpark). -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.6c7fac45-c24f-4e36-b196-687458d99070 ">
-      <!-- GROUPS OF OBSTACLES EACH OBSTACLE PUBLISHED INDIVIDUALLY (Wind turbines of a windpark). -->
       <gml:identifier codeSpace="urn:uuid:">6c7fac45-c24f-4e36-b196-687458d99070</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0002">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0002-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -294,12 +294,19 @@
           <aixm:length xsi:nil="true" nilReason="inapplicable"/>
           <aixm:width xsi:nil="true" nilReason="inapplicable"/>
           <aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
           <!-- Windturbine 1 of the Windpark-->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0002-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">150</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>WINDMILL</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -314,14 +321,20 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- Windturbine 2 of the Windpark-->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0002-2">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">150</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>WINDMILL</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -336,14 +349,20 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- Windturbine 3 of the Windpark-->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0002-3">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">150</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>WINDMILL</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -358,14 +377,20 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- Windturbine 4 of the Windpark-->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0002-4">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">150</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>WINDMILL</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -380,14 +405,20 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- Windturbine 5 of the Windpark-->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0002-5">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">150</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>WINDMILL</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -402,6 +433,7 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
@@ -416,7 +448,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0002-1">
-                  <aixm:note>WINDPARK DONLON IV</aixm:note>
+                  <aixm:note lang="eng">WINDPARK DONLON IV</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -428,7 +460,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0002-2">
-                  <aixm:note>marked=NO</aixm:note>
+                  <aixm:note lang="eng">marked=NO</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -441,7 +473,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0002-3">
-                  <aixm:note>Obstacle Owner: DONLON WINDPARK INC, Donlon Street 253, 2020 DOLNLON, Phone: +00122256889, email: info@donlonwindinc.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON WINDPARK INC, Donlon Street 253, 2020 DOLNLON, Phone: +00122256889, email: info@donlonwindinc.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -452,7 +484,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0002-4">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -463,7 +495,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0002-5">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -472,16 +504,17 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- GROUPS OF OBSTACLES GROUPED WITH AN AREA (POLYGON) (Windfarm area).
+	Case where a large number of obstacles with similar elevation are grouped, an area (polygon) encompassing the
+	grouped obstacles may be published instead of publishing each individual object.-->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.47db48e9-d46a-4100-a266-25a3968b6a98">
-      <!-- GROUPS OF OBSTACLES GROUPED WITH AN AREA (POLYGON) (Windfarm area).
-			Case where a large number of obstacles with similar elevation are grouped, an area (polygon) encompassing the grouped obstacles may be published instead of publishing each individual object.-->
       <gml:identifier codeSpace="urn:uuid:">47db48e9-d46a-4100-a266-25a3968b6a98</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0003">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0003-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -508,9 +541,11 @@
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0003-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">115</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>WINDMILL_FARMS</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>MONOCOLOUR</aixm:markingPattern>
               <aixm:markingFirstColour>WHITE</aixm:markingFirstColour>
               <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
@@ -550,6 +585,7 @@
                   <aixm:intensityLevel>LIM</aixm:intensityLevel>
                   <aixm:intensity xsi:nil="true" nilReason="unknown"/>
                   <aixm:type>OTHER:FLASHING</aixm:type>
+                  <aixm:location xsi:nil="true" nilReason="unknown"/> <!-- The position and number of lighting equipment installed is unknown -->
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -560,7 +596,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0003-0">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -577,7 +613,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0003-1">
-                  <aixm:note>RODSAND II</aixm:note>
+                  <aixm:note lang="eng">RODSAND II</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -618,7 +654,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0003-4">
-                  <aixm:note>Obstacle Owner: DONLON WINDPARK INC, Donlon Street 253, 2020 DOLNLON, Phone: +00122256889, email: info@donlonwindinc.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON WINDPARK INC, Donlon Street 253, 2020 DOLNLON, Phone: +00122256889, email: info@donlonwindinc.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -629,7 +665,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0003-5">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -640,7 +676,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0003-6">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -665,17 +701,17 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- LINE OBSTACLE (Cableway) OPTION A: 
+	1x VerticalStructure with several VerticalStructurePart.
+	Example also used to shows coding of partially in construction. -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.87a585b3-0597-4f5c-974f-cddfc604dc93">
-      <!-- LINE OBSTACLE (Cableway) OPTION A: 
-			1x VerticalStructure with several VerticalStructurePart.
-			Example also used to shows coding of partially in construction. -->
       <gml:identifier codeSpace="urn:uuid:">87a585b3-0597-4f5c-974f-cddfc604dc93</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0004">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0004-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -696,15 +732,21 @@
           <aixm:length uom="KM">2.44</aixm:length>
           <aixm:width xsi:nil="true" nilReason="inapplicable"/>
           <aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
           <!-- PART1: LANGTALERECKHUETTE (Ground Station) of Cable Way -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0004-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <!-- Acc. to PANS-AIM height is optional, i.e. may also be omitted. 
 								For this part of the obstacle verticalExtent would have the meaning of height above ground as it is of point geometry. -->
               <aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
               <aixm:verticalExtentAccuracy xsi:nil="true" nilReason="unknown"/>
               <aixm:type>BUILDING</aixm:type>
               <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
@@ -720,11 +762,13 @@
                   <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- PART2: Line (rope) between Ground Station and Top Station -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0004-2">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <!-- The maximum height above ground has to be coded as a Note! 
 								For this part it cannot be coded as verticalExtent, as this part (rope) is not fixed on the ground. The meaning of verticalExtent is the height of the obstacle part from its bottom, i.e. it would be the height of the rope itself.  -->
               <aixm:annotation>
@@ -733,7 +777,7 @@
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0004-5">
-                      <aixm:note>Maximum height above ground level is 280 M</aixm:note>
+                      <aixm:note lang="eng">Maximum height above ground level is 280 M</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -742,6 +786,9 @@
               <aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
               <aixm:type>CATENARY</aixm:type>
               <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -761,15 +808,20 @@
                   <aixm:verticalAccuracy xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:ElevatedCurve>
               </aixm:horizontalProjection_linearExtent>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- PART3: HOCHWILDEHAUS (Top Station) of Cable Way -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0004-3">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
               <aixm:verticalExtentAccuracy xsi:nil="true" nilReason="unknown"/>
               <aixm:type>BUILDING</aixm:type>
               <aixm:constructionStatus>IN_CONSTRUCTION</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
@@ -784,6 +836,7 @@
                   <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
@@ -798,7 +851,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0004-0">
-                  <aixm:note>LANGTALERECKHUETTE - HOCHWILDEHAUS</aixm:note>
+                  <aixm:note lang="eng">LANGTALERECKHUETTE - HOCHWILDEHAUS</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -809,7 +862,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0004-1">
-                  <aixm:note>marked=NO</aixm:note>
+                  <aixm:note lang="eng">marked=NO</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -822,7 +875,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0004-2">
-                  <aixm:note>Obstacle Owner: DONLON CABLECAR LLC, Donlon Street 125, 2020 DOLNLON, Phone: +00133356779, email: info@donloncablecarllc.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON CABLECAR LLC, Donlon Street 125, 2020 DOLNLON, Phone: +00133356779, email: info@donloncablecarllc.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -833,7 +886,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0004-3">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -844,7 +897,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0004-4">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -853,16 +906,16 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- LINE OBSTACLE (Cableway) OPTION A: 
+	1x VerticalStructure with several VerticalStructurePart.-->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.9bba0abf-db41-4c78-926d-c9f35fde8efb">
-      <!-- LINE OBSTACLE (Cableway) OPTION A: 
-			1x VerticalStructure with several VerticalStructurePart.-->
       <gml:identifier codeSpace="urn:uuid:">9bba0abf-db41-4c78-926d-c9f35fde8efb</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0005">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0005-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -883,12 +936,19 @@
           <aixm:length uom="KM">3.87</aixm:length>
           <aixm:width xsi:nil="true" nilReason="inapplicable"/>
           <aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
           <!-- PART1: MUTTERBERGALM (Ground Station) of Cable Way -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0005-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
               <aixm:verticalExtentAccuracy xsi:nil="true" nilReason="unknown"/>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
@@ -903,17 +963,19 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- PART2: Line inbetween MUTTERBERGALM (Ground Station) and DRESDNER HUETTE (Middle Station) -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0005-2">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:annotation>
                 <aixm:Note gml:id="n0005-1">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0005-1">
-                      <aixm:note>Maximum height above ground level is 95 M</aixm:note>
+                      <aixm:note lang="eng">Maximum height above ground level is 95 M</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -921,6 +983,10 @@
               <aixm:verticalExtent xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
               <aixm:type>CATENARY</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -939,14 +1005,20 @@
                   <aixm:verticalAccuracy xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:ElevatedCurve>
               </aixm:horizontalProjection_linearExtent>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- PART 3: DRESDNER HUETTE (Middle Station) of Cable Way -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0005-3">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
               <aixm:verticalExtentAccuracy xsi:nil="true" nilReason="unknown"/>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
@@ -961,17 +1033,19 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- PART4: Line inbetween DRESDNER HUETTE (Middle Station) and EISGRAT (Top Station) -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0005-4">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:annotation>
                 <aixm:Note gml:id="n0005-2">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0005-2">
-                      <aixm:note>Maximum height above ground level is 95 M</aixm:note>
+                      <aixm:note lang="eng">Maximum height above ground level is 95 M</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -979,6 +1053,10 @@
               <aixm:verticalExtent xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
               <aixm:type>CATENARY</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -997,14 +1075,20 @@
                   <aixm:verticalAccuracy xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:ElevatedCurve>
               </aixm:horizontalProjection_linearExtent>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- PART 5: EISGRAT (Top Station) of Cable Way -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0005-5">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
               <aixm:verticalExtentAccuracy xsi:nil="true" nilReason="unknown"/>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
@@ -1019,6 +1103,7 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- AIXM v5.1.1 lacks the property 'aixm:designator' for the entire vertical structure. As a workaround, in order to align the static data coding
@@ -1033,7 +1118,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0005-3">
-                  <aixm:note>MUTTERBERGALM - DRESDNER HUETTE - EISGRAT</aixm:note>
+                  <aixm:note lang="eng">MUTTERBERGALM - DRESDNER HUETTE - EISGRAT</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1044,7 +1129,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0005-4">
-                  <aixm:note>marked=NO</aixm:note>
+                  <aixm:note lang="eng">marked=NO</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1057,7 +1142,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0005-5">
-                  <aixm:note>Obstacle Owner: DONLON CABLECAR LLC, Donlon Street 125, 2020 DOLNLON, Phone: +00133356779, email: info@donloncablecarllc.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON CABLECAR LLC, Donlon Street 125, 2020 DOLNLON, Phone: +00133356779, email: info@donloncablecarllc.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1068,7 +1153,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0005-6">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1079,7 +1164,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0005-7">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1088,17 +1173,17 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- LINE OBSTACLE (Windfarm) OPTION B: 
+	1x VerticalStructure with 1 x VerticalStructurePart as linearExtent. 
+	Note: Can only be used in case all VerticalStructure elements have same values for all "parts" of the obstacle.) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.718c2782-a624-405e-86b6-144b40b680b0">
-      <!-- LINE OBSTACLE (Windfarm) OPTION B: 
-			1x VerticalStructure with 1 x VerticalStructurePart as linearExtent. 
-			Note: Can only be used in case all VerticalStructure elements have same values for all "parts" of the obstacle.)-->
       <gml:identifier codeSpace="urn:uuid:">718c2782-a624-405e-86b6-144b40b680b0</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0006">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0006-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1123,9 +1208,11 @@
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0006-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">75</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>WINDMILL_FARMS</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>MONOCOLOUR</aixm:markingPattern>
               <aixm:markingFirstColour>WHITE</aixm:markingFirstColour>
               <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
@@ -1152,6 +1239,7 @@
                   <aixm:intensityLevel xsi:nil="true" nilReason="unknown"/>
                   <aixm:intensity xsi:nil="true" nilReason="unknown"/>
                   <aixm:type>OTHER:FLASHING</aixm:type>
+                  <aixm:location xsi:nil="true" nilReason="unknown"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -1168,7 +1256,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0006-0">
-                  <aixm:note>TUBORG IIB</aixm:note>
+                  <aixm:note lang="eng">TUBORG IIB</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1183,7 +1271,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0006-1">
-                  <aixm:note>7 Wind Turbines</aixm:note>
+                  <aixm:note lang="eng">7 Wind Turbines</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1194,7 +1282,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0006-2">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1207,7 +1295,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0006-3">
-                  <aixm:note>Obstacle Owner: DONLON WINDPARK INC, Donlon Street 253, 2020 DOLNLON, Phone: +00122256889, email: info@donlonwindinc.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON WINDPARK INC, Donlon Street 253, 2020 DOLNLON, Phone: +00122256889, email: info@donlonwindinc.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1218,7 +1306,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0006-4">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1229,7 +1317,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0006-5">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1241,7 +1329,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0006-6">
-                  <aixm:note>Obstacles lighted during the night. During the day lights are de-activated.</aixm:note>
+                  <aixm:note lang="eng">Obstacles lighted during the night. During the day lights are de-activated.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1267,7 +1355,7 @@
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0006-7">
-                      <aixm:note>Obstacle lights operational</aixm:note>
+                      <aixm:note lang="eng">Obstacle lights operational</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -1293,7 +1381,7 @@
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0006-8">
-                      <aixm:note>Obstacle lights de-activated</aixm:note>
+                      <aixm:note lang="eng">Obstacle lights de-activated</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -1305,15 +1393,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POINT ON SURFACE: roof mounted antenna (Vertical Segmentation: 2 parts)-->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.15c2c2ba-c5f2-47b5-9ada-1964d51b82c0">
-      <!-- POINT ON SURFACE: roof mounted antenna (Vertical Segmentation: 2 parts)-->
       <gml:identifier codeSpace="urn:uuid:">15c2c2ba-c5f2-47b5-9ada-1964d51b82c0</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0007">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0007-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1339,13 +1427,14 @@
           <!-- Part 1: BULDING -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0007-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:annotation>
                 <aixm:Note gml:id="n0007-0">
                   <aixm:propertyName>lighting</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0007-0">
-                      <aixm:note>Unknown number of lighting elements</aixm:note>
+                      <aixm:note lang="eng">Unknown number of lighting elements</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -1353,6 +1442,7 @@
               <aixm:verticalExtent uom="M">110</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
               <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
@@ -1393,6 +1483,7 @@
                   <aixm:intensityLevel xsi:nil="true" nilReason="unknown"/>
                   <aixm:intensity xsi:nil="true" nilReason="unknown"/>
                   <aixm:type>OTHER:FLASHING</aixm:type>
+                  <aixm:location xsi:nil="true" nilReason="unknown"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -1400,10 +1491,12 @@
           <!-- Part 2: ANTENNA -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0007-2">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <!-- Note: the verticalExtent represents the height of the obstacle part from its bottom (i.e. the roof top of the buidling)! -->
               <aixm:verticalExtent uom="M">12</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>ANTENNA</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>HBANDS</aixm:markingPattern>
               <aixm:markingFirstColour>RED</aixm:markingFirstColour>
               <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
@@ -1415,7 +1508,7 @@
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0007-1">
                   <gml:pos>55.52416667 -24.63888889</gml:pos>
                   <aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">180</aixm:elevation>
+                  <aixm:elevation uom="M">180.0</aixm:elevation>
                   <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
@@ -1437,6 +1530,7 @@
                       <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -1447,7 +1541,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0007-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1458,7 +1552,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0007-2">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1469,7 +1563,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0007-3">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1482,24 +1576,25 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0007-4">
-                  <aixm:note>Obstacle Owner: unknown</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: unknown</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <aixm:lightingAvailability xsi:nil="true" nilReason="unknown"/>
         </aixm:VerticalStructureTimeSlice>
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POINT OBSTACLE (with type OTHER) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.359c8b02-8be7-4e2c-aa6d-d990dbb6b057">
-      <!-- POINT OBSTACLE (with type OTHER) -->
       <gml:identifier codeSpace="urn:uuid:">359c8b02-8be7-4e2c-aa6d-d990dbb6b057</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0008">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0008-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1514,22 +1609,30 @@
           </aixm:featureLifetime>
           <aixm:name>OBST-EA-0008</aixm:name>
           <aixm:type>OTHER:CHIMNEY</aixm:type>
-          <aixm:lighted>NO</aixm:lighted>
+          <aixm:lighted>YES</aixm:lighted>
           <aixm:markingICAOStandard xsi:nil="true" nilReason="unknown"/>
           <aixm:group>NO</aixm:group>
           <aixm:length xsi:nil="true" nilReason="inapplicable"/>
           <aixm:width xsi:nil="true" nilReason="inapplicable"/>
           <aixm:radius uom="M">10</aixm:radius>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="unknown"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="unknown"/>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0008-2">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">120</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:CHIMNEY</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="unknown"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="unknown"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="unknown"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
+              <aixm:designator xsi:nil="true" nilReason="inapplicable"/>
               <aixm:horizontalProjection_location>
-                <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="VID000008">
+                <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0008">
                   <gml:pos>55.5185166666667 -25.63186944444445</gml:pos>
                   <aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
                   <aixm:elevation uom="M">191</aixm:elevation>
@@ -1538,6 +1641,7 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="unknown"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- That it is not known if the obstacle is marked is coded as annotation. -->
@@ -1547,7 +1651,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0008-1">
-                  <aixm:note>marked=UNKNOWN</aixm:note>
+                  <aixm:note lang="eng">marked=UNKNOWN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1558,7 +1662,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0008-2">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1569,7 +1673,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0008-3">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1582,7 +1686,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0008-4">
-                  <aixm:note>Obstacle Owner: unknown</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: unknown</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1596,7 +1700,7 @@
                   <aixm:purpose>DESCRIPTION</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0008-5">
-                      <aixm:note>HX (no specific working hours)</aixm:note>
+                      <aixm:note lang="eng">HX (no specific working hours)</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -1608,15 +1712,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POINT OBSTACLE WITH HORIZ. EXTENT (representing a polygon)-->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.7f89403f-a680-41e0-8274-ee498e86ff77">
-      <!-- POINT OBSTACLE WITH HORIZ. EXTENT (representing a polygon)-->
       <gml:identifier codeSpace="urn:uuid:">7f89403f-a680-41e0-8274-ee498e86ff77</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0009">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0009-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1641,13 +1745,14 @@
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0009">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:annotation>
                 <aixm:Note gml:id="n0009-0">
                   <aixm:propertyName>verticalExtent</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0009-0">
-                      <aixm:note>133 M is the MAXIMUM HEIGHT</aixm:note>
+                      <aixm:note lang="eng">133 M is the MAXIMUM HEIGHT</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -1655,6 +1760,10 @@
               <aixm:verticalExtent uom="M">133</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>STADIUM</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -1675,6 +1784,7 @@
                   <aixm:intensityLevel>LIM</aixm:intensityLevel>
                   <aixm:intensity xsi:nil="true" nilReason="unknown"/>
                   <aixm:type>OTHER:FLASHING</aixm:type>
+                  <aixm:location xsi:nil="true" nilReason="unknown"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -1685,7 +1795,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0009-1">
-                  <aixm:note>DONLON ARENA</aixm:note>
+                  <aixm:note lang="eng">DONLON ARENA</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1696,7 +1806,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0009-2">
-                  <aixm:note>Illuminated</aixm:note>
+                  <aixm:note lang="eng">Illuminated</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1707,7 +1817,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0009-3">
-                  <aixm:note>marked=NO</aixm:note>
+                  <aixm:note lang="eng">marked=NO</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1718,7 +1828,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0009-4">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1729,7 +1839,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0009-5">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1742,7 +1852,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0009-6">
-                  <aixm:note>Obstacle Owner: unknown</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: unknown</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1756,7 +1866,7 @@
                   <aixm:purpose>DESCRIPTION</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln0009-7">
-                      <aixm:note>HX (no specific working hours)</aixm:note>
+                      <aixm:note lang="eng">HX (no specific working hours)</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -1768,15 +1878,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POINT OBSTACLE with Horizontal Extension (guy wires) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.56ef6d9c-4951-4a0b-83d8-95e4836c63c8">
-      <!-- POINT OBSTACLE with Horizontal Extension (guy wires) -->
       <gml:identifier codeSpace="urn:uuid:">56ef6d9c-4951-4a0b-83d8-95e4836c63c8</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EA-0010">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp0010-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1798,17 +1908,22 @@
           <aixm:width xsi:nil="true" nilReason="inapplicable"/>
           <!-- radius covering the guy wires -->
           <aixm:radius uom="M">36</aixm:radius>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp0010">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">120</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
               <aixm:type>POLE</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>HBANDS</aixm:markingPattern>
               <aixm:markingFirstColour>RED</aixm:markingFirstColour>
               <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
+              <aixm:designator xsi:nil="true" nilReason="inapplicable"/>
               <aixm:horizontalProjection_location>
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="VID000010">
                   <gml:pos>55.5185166666667 -24.62186944444445</gml:pos>
@@ -1819,6 +1934,7 @@
                   <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:annotation>
@@ -1827,7 +1943,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0010-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1838,7 +1954,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0010-2">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1849,7 +1965,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0010-3">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1862,24 +1978,25 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0010-4">
-                  <aixm:note>Obstacle Owner: unknown</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: unknown</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
         </aixm:VerticalStructureTimeSlice>
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- WINDPARK LOCATED IN AREA 1 AND AREA 2d (POLYGON) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.499c5bb4-de1e-49fc-8db1-11ffa84406d6">
-      <!-- WINDPARK LOCATED IN AREA 1 AND AREA 2d (POLYGON) -->
       <gml:identifier codeSpace="urn:uuid:">499c5bb4-de1e-49fc-8db1-11ffa84406d6</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1017">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1017-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1904,14 +2021,18 @@
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1017-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">119</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">3</aixm:verticalExtentAccuracy>
+              <aixm:type>WINDMILL_FARMS</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>HBANDS</aixm:markingPattern>
               <aixm:markingFirstColour>RED</aixm:markingFirstColour>
               <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
+              <aixm:designator xsi:nil="true" nilReason="inapplicable"/>
               <aixm:horizontalProjection_surfaceExtent>
                 <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1017-1">
                   <gml:patches>
@@ -1945,6 +2066,7 @@
                   <aixm:intensityLevel>LIM</aixm:intensityLevel>
                   <aixm:intensity xsi:nil="true" nilReason="unknown"/>
                   <aixm:type>OTHER:FLASHING</aixm:type>
+                  <aixm:location xsi:nil="true" nilReason="unknown"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -1955,7 +2077,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1017-0">
-                  <aixm:note>DONLON NORTHEAST I</aixm:note>
+                  <aixm:note lang="eng">DONLON NORTHEAST I</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1978,7 +2100,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1017-2">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -1989,7 +2111,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1017-3">
-                  <aixm:note>Horizontal resolution is 1 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2000,7 +2122,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1017-4">
-                  <aixm:note>Vertical resolution is 1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2013,7 +2135,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1017-5">
-                  <aixm:note>Obstacle Owner: unknown</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: unknown</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2027,7 +2149,7 @@
                   <aixm:purpose>DESCRIPTION</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln1017-6">
-                      <aixm:note>Lighting system activated by aircraft detections system using Mode S and Mode A + C transponder emissions in close proximity</aixm:note>
+                      <aixm:note lang="eng">Lighting system activated by aircraft detections system using Mode S and Mode A + C transponder emissions in close proximity</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -2039,16 +2161,16 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- validTime and featureLifetime is used to code PANS-AIM Table A-6.2 "Effectivity".  
+  NOTE: In case of temporary obstacles, also VerticalStructurePart.timeInterval.Timesheet may be needed to fulfill this requirement. -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.66e649c8-aaba-4fac-9432-7ee33f90e2d5">
       <gml:identifier codeSpace="urn:uuid:">66e649c8-aaba-4fac-9432-7ee33f90e2d5</gml:identifier>
-      <!-- validTime and featureLifetime is used to code PANS-AIM Table A-6.2 "Effectivity".  
-			NOTE: In case of temporary obstacles, also VerticalStructurePart.timeInterval.Timesheet may be needed to fulfill this requirement. -->
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1001">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1001-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -2092,12 +2214,13 @@
           <aixm:marker xsi:nil="true" nilReason="inapplicable"/>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1001">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <!-- Height is an optional attribute in PANS-AIM Table A-6-2.
 							Height is listed in ENR 5.4 and AD2/3.10. 
 							Note: Height is mandatory in RTCA/EUROCAE ED-98C/DO-276C -->
               <!-- NOTE: In case of a single part obstacle the verticalExtent is the height (above ground) of the obstacle. 
 							In case of a multi part obstacle it may not be the height above ground, as per definition verticalExtent is the height of the obstacle part from its bottom. -->
-              <aixm:verticalExtent uom="M">3</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">3.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <!-- In case of single part obstacle type of verticalStrcuture shall be the same as for the part.
 								 In case of multi part obstacles types may have different values. -->
@@ -2124,7 +2247,7 @@
                   <gml:pos>52.37444444 -31.94361111</gml:pos>
                   <!-- horizontalAccuracy required by PANS-AIM Table A6-2 -->
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">31</aixm:elevation>
+                  <aixm:elevation uom="M">31.0</aixm:elevation>
                   <!-- geoidUndulation not required by PANS-AIM -->
                   <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
                   <!-- verticalDatum required by PANS-AIM Table A6-2 "Vertical reference system" -->
@@ -2165,7 +2288,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1001-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2178,7 +2301,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1001-2">
-                  <aixm:note>Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2189,18 +2312,18 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1001-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1001-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1001-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2216,7 +2339,7 @@
                   <aixm:purpose>DESCRIPTION</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln1001-5">
-                      <aixm:note>HX (no specific working hours)</aixm:note>
+                      <aixm:note lang="eng">HX (no specific working hours)</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -2228,9 +2351,9 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- SINGLE PART OBSTACLE (Crane) Area 2c  (Both Runways!) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.df421db4-3698-4003-9d71-93ca57e70ffc">
-      <!-- SINGLE PART OBSTACLE (Crane) Area 2c  (Both Runways!)-->
       <gml:identifier codeSpace="urn:uuid:">df421db4-3698-4003-9d71-93ca57e70ffc</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1002">
@@ -2239,7 +2362,7 @@
 						b. Obstacles with kown end date (not only validTime but also featureLifetime? -->
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1002-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2025-12-30T18:30:00Z</gml:endPosition> <!-- Unable to upload in ADM a first TimeSlice with known end of validTime or featureLifetime -->
             </gml:TimePeriod>
           </gml:validTime>
@@ -2264,20 +2387,25 @@
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1002">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:annotation>
                 <aixm:Note gml:id="n1002-0">
                   <aixm:propertyName>lighting</aixm:propertyName>
-                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:purpose>DESCRIPTION</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln1002-0">
-                      <aixm:note>3 light elements installed</aixm:note>
+                      <aixm:note lang="eng">3 light elements installed</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
-              <aixm:verticalExtent uom="M">26</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">26.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">3</aixm:verticalExtentAccuracy>
               <aixm:type>CRANE</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="unknown"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="unknown"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="unknown"/>
               <aixm:mobile>YES</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -2285,7 +2413,7 @@
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_376">
                   <gml:pos>52.3727777777778 -31.9422222222222</gml:pos>
                   <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">56</aixm:elevation>
+                  <aixm:elevation uom="M">56.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">3</aixm:verticalAccuracy>
@@ -2297,6 +2425,7 @@
                   <aixm:intensityLevel>LIM</aixm:intensityLevel>
                   <aixm:intensity xsi:nil="true" nilReason="unknown"/>
                   <aixm:type>STROBE</aixm:type>
+                  <aixm:location xsi:nil="true" nilReason="unknown"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -2307,7 +2436,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1002-1">
-                  <aixm:note>jib 29m</aixm:note>
+                  <aixm:note lang="eng">jib 29m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2318,7 +2447,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1002-2">
-                  <aixm:note>460m S of RWY 09L/27R centerline, 150m E of control tower</aixm:note>
+                  <aixm:note lang="eng">460m S of RWY 09L/27R centerline, 150m E of control tower</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2329,7 +2458,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1002-3">
-                  <aixm:note>marked=UNKNOWN</aixm:note>
+                  <aixm:note lang="eng">marked=UNKNOWN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2342,7 +2471,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1002-4">
-                  <aixm:note>Obstacle Owner: unknown</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: unknown</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2353,18 +2482,18 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1002-5">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1002-6">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1002-6">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2380,7 +2509,7 @@
                   <aixm:purpose>DESCRIPTION</aixm:purpose>
                   <aixm:translatedNote>
                     <aixm:LinguisticNote gml:id="ln1002-7">
-                      <aixm:note>HX (no specific working hours)</aixm:note>
+                      <aixm:note lang="eng">HX (no specific working hours)</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
                 </aixm:Note>
@@ -2392,15 +2521,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- NAVAID OBSTACLE. Area 2b 09L (NDB SCN) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.83985f79-91f0-4f79-b9ba-87251e67ae9d">
-      <!-- NAVAID OBSTACLE. Area 2b 09L (NDB SCN) -->
       <gml:identifier codeSpace="urn:uuid:">83985f79-91f0-4f79-b9ba-87251e67ae9d</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1004">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1004-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -2425,9 +2554,11 @@
           <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/> <!-- Only one light element installed -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1004-1">
-              <aixm:verticalExtent uom="M">25</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">25.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">3</aixm:verticalExtentAccuracy>
               <aixm:type>NAVAID</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>HBANDS</aixm:markingPattern>
               <aixm:markingFirstColour>RED</aixm:markingFirstColour>
               <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
@@ -2437,7 +2568,7 @@
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1004-1">
                   <gml:pos>52.371667 -32.028333</gml:pos>
                   <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">70</aixm:elevation>
+                  <aixm:elevation uom="M">70.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">3</aixm:verticalAccuracy>
@@ -2453,12 +2584,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1004-2">
                       <gml:pos>52.371667 -32.028333</gml:pos>
                       <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">70</aixm:elevation>
+                      <aixm:elevation uom="M">70.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">3</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -2476,7 +2608,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1004-0">
-                  <aixm:note>NDB SCONE</aixm:note>
+                  <aixm:note lang="eng">NDB SCONE</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2487,7 +2619,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1004-1">
-                  <aixm:note>marked=UNKNOWN</aixm:note>
+                  <aixm:note lang="eng">marked=UNKNOWN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2500,7 +2632,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1004-2">
-                  <aixm:note>Obstacle Owner: DONLON MINISTRY OF TRANSPORTATION, 1 Donlon, Phone: 0123 607 1111, email: admin@ministryoftransportation.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON MINISTRY OF TRANSPORTATION, 1 Donlon, Phone: 0123 607 1111, email: admin@ministryoftransportation.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2511,7 +2643,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1004-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2522,7 +2654,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1004-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2549,15 +2681,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- NAVAID OBSTACLE. Area 2a RWY 09L/27R and Area 3 (Glidepath) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.c9bc6ea4-2b5e-4a71-af8a-eec2e4ff3dc3">
-      <!-- NAVAID OBSTACLE. Area 2a RWY 09L/27R and Area 3 (Glidepath) -->
       <gml:identifier codeSpace="urn:uuid:">c9bc6ea4-2b5e-4a71-af8a-eec2e4ff3dc3</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1005">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1005-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -2582,9 +2714,11 @@
           <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/> <!-- Only one light element installed -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1005-1">
-              <aixm:verticalExtent uom="M">7</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">7.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>NAVAID</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>HBANDS</aixm:markingPattern>
               <aixm:markingFirstColour>RED</aixm:markingFirstColour>
               <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
@@ -2610,12 +2744,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1005-2">
                       <gml:pos>52.378444 -31.926778</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">27</aixm:elevation>
+                      <aixm:elevation uom="M">27.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -2633,7 +2768,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln0005-0">
-                  <aixm:note>GP 27R</aixm:note>
+                  <aixm:note lang="eng">GP 27R</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2644,7 +2779,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1005-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2657,7 +2792,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1005-2">
-                  <aixm:note>Obstacle Owner: DONLON MINISTRY OF TRANSPORTATION, 1 Donlon, Phone: 0123 607 1111, email: admin@ministryoftransportation.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON MINISTRY OF TRANSPORTATION, 1 Donlon, Phone: 0123 607 1111, email: admin@ministryoftransportation.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2668,7 +2803,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1005-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2679,7 +2814,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1005-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2706,15 +2841,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- NAVAID OBSTACLE. Area 2a RWY 09L/27R and Area 3 (Glidepath) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.558fefd0-5749-4b8e-9f5a-930dc6c00e68">
-      <!-- NAVAID OBSTACLE. Area 2a RWY 09L/27R and Area 3 (Glidepath) -->
       <gml:identifier codeSpace="urn:uuid:">558fefd0-5749-4b8e-9f5a-930dc6c00e68</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1015">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1015-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -2739,9 +2874,11 @@
           <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/> <!-- Only one light element installed -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1015-1">
-              <aixm:verticalExtent uom="M">7</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">7.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>NAVAID</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>HBANDS</aixm:markingPattern>
               <aixm:markingFirstColour>RED</aixm:markingFirstColour>
               <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
@@ -2751,7 +2888,7 @@
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1015-1">
                   <gml:pos>52.3762998038 -31.9594606889</gml:pos>
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">35</aixm:elevation>
+                  <aixm:elevation uom="M">35.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
@@ -2767,12 +2904,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1015-2">
                       <gml:pos>52.3762998038 -31.9594606889</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">35</aixm:elevation>
+                      <aixm:elevation uom="M">35.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -2790,7 +2928,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1015-0">
-                  <aixm:note>GP 09L</aixm:note>
+                  <aixm:note lang="eng">GP 09L</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2801,7 +2939,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1015-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2814,7 +2952,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1015-2">
-                  <aixm:note>Obstacle Owner: DONLON MINISTRY OF TRANSPORTATION, 1 Donlon, Phone: 0123 607 1111, email: admin@ministryoftransportation.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON MINISTRY OF TRANSPORTATION, 1 Donlon, Phone: 0123 607 1111, email: admin@ministryoftransportation.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2825,7 +2963,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1015-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2836,7 +2974,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1015-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2863,15 +3001,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- NAVAID OBSTACLE. Area 2a RWY 09L/27R and Area 3 (DME antenna) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.b85c18cb-6010-41db-abea-91d1aa7fceb7">
-      <!-- NAVAID OBSTACLE. Area 2a RWY 09L/27R and Area 3 (DME antenna) -->
       <gml:identifier codeSpace="urn:uuid:">b85c18cb-6010-41db-abea-91d1aa7fceb7</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1016">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1016-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -2896,9 +3034,11 @@
           <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/> <!-- Only one light element installed -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1016-1">
-              <aixm:verticalExtent uom="M">5</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">5.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>NAVAID</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>HBANDS</aixm:markingPattern>
               <aixm:markingFirstColour>RED</aixm:markingFirstColour>
               <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
@@ -2908,7 +3048,7 @@
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1016-1">
                   <gml:pos>52.3763713414 -31.9594724142</gml:pos>
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">33</aixm:elevation>
+                  <aixm:elevation uom="M">33.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
@@ -2924,12 +3064,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1016-2">
                       <gml:pos>52.3763713414 -31.9594724142</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">33</aixm:elevation>
+                      <aixm:elevation uom="M">33.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -2947,7 +3088,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1016-0">
-                  <aixm:note>DME 09L</aixm:note>
+                  <aixm:note lang="eng">DME 09L</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2958,7 +3099,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1016-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2971,7 +3112,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1016-2">
-                  <aixm:note>Obstacle Owner: DONLON MINISTRY OF TRANSPORTATION, 1 Donlon, Phone: 0123 607 1111, email: admin@ministryoftransportation.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON MINISTRY OF TRANSPORTATION, 1 Donlon, Phone: 0123 607 1111, email: admin@ministryoftransportation.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2982,7 +3123,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1016-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -2993,7 +3134,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1016-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3020,15 +3161,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- MOBILE OBSTACLE (Railroad) Area 2b and Area 4 27R -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.8a6626f9-0739-4ec2-ae56-4a8af45ec9fe">
-      <!-- MOBILE OBSTACLE (Railroad) Area 2b and Area 4 27R -->
       <gml:identifier codeSpace="urn:uuid:">8a6626f9-0739-4ec2-ae56-4a8af45ec9fe</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1006">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1006-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -3049,11 +3190,18 @@
           <aixm:length uom="M">155</aixm:length>
           <aixm:width xsi:nil="true" nilReason="unknown"/>
           <aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1006-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">12.5</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">1</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:RAILROAD</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>YES</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:horizontalProjection_linearExtent>
@@ -3070,6 +3218,7 @@
                   <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
                 </aixm:ElevatedCurve>
               </aixm:horizontalProjection_linearExtent>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:annotation>
@@ -3078,7 +3227,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1006-0">
-                  <aixm:note>DONLON LIGHT RAIL</aixm:note>
+                  <aixm:note lang="eng">DONLON LIGHT RAIL</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3089,7 +3238,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1006-1">
-                  <aixm:note>marked=NO</aixm:note>
+                  <aixm:note lang="eng">marked=NO</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3102,7 +3251,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1006-2">
-                  <aixm:note>Obstacle Owner: unknown</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: unknown</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3113,35 +3262,36 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1006-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1006-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1006-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
         </aixm:VerticalStructureTimeSlice>
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POLYGON STRUCTURE PROVIDED AS POINT OBSTACLE WITH HORIZ. EXTENT (Building) in Area 2b and Area 4 27R.-->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.1371b29a-2ba6-44c8-8da3-711e5488fdb7">
-      <!-- POLYGON STRUCTURE PROVIDED AS POINT OBSTACLE WITH HORIZ. EXTENT (Building) in Area 2b and Area 4 27R.-->
       <gml:identifier codeSpace="urn:uuid:">1371b29a-2ba6-44c8-8da3-711e5488fdb7</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1007">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1007-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -3162,11 +3312,15 @@
           <aixm:length uom="M">23</aixm:length>
           <aixm:width uom="M">12</aixm:width>
           <aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1007-1">
-              <aixm:verticalExtent uom="M">36</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">36.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">1</aixm:verticalExtentAccuracy>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>MONOCOLOUR</aixm:markingPattern>
               <aixm:markingFirstColour>WHITE</aixm:markingFirstColour>
               <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
@@ -3177,12 +3331,13 @@
                 <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1007-1">
                   <gml:pos>52.385208 -31.913058</gml:pos>
                   <aixm:horizontalAccuracy uom="M">2.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">45</aixm:elevation>
+                  <aixm:elevation uom="M">45.0</aixm:elevation>
                   <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:annotation>
@@ -3191,7 +3346,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1007-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3204,7 +3359,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1007-2">
-                  <aixm:note>Obstacle Owner: unknown</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: unknown</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3215,35 +3370,36 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1007-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1007-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1007-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
         </aixm:VerticalStructureTimeSlice>
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- SINGLE PART OBSTACLE (Natural Highpoint) Area 2b 27R -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.cd0bfb54-81b9-491e-880b-7f85fe2dbfb8">
-      <!-- SINGLE PART OBSTACLE (Natural Highpoint) Area 2b 27R -->
       <gml:identifier codeSpace="urn:uuid:">cd0bfb54-81b9-491e-880b-7f85fe2dbfb8</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1008">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1008-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -3264,11 +3420,15 @@
           <aixm:length xsi:nil="true" nilReason="inapplicable"/>
           <aixm:width xsi:nil="true" nilReason="inapplicable"/>
           <aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1008-1">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
               <aixm:verticalExtent uom="M">3.5</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">3</aixm:verticalExtentAccuracy>
               <aixm:type>NATURAL_HIGHPOINT</aixm:type>
+              <aixm:constructionStatus xsi:nil="true" nilReason="inapplicable"/>
               <aixm:markingPattern>FLAG</aixm:markingPattern>
               <aixm:markingFirstColour>RED</aixm:markingFirstColour>
               <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
@@ -3282,6 +3442,7 @@
                   <aixm:verticalAccuracy uom="M">3</aixm:verticalAccuracy>
                 </aixm:ElevatedPoint>
               </aixm:horizontalProjection_location>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <aixm:annotation>
@@ -3290,7 +3451,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1008-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3303,7 +3464,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1008-2">
-                  <aixm:note>Obstacle Owner: inapplicable</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: inapplicable</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3314,35 +3475,36 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1008-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1008-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1008-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
         </aixm:VerticalStructureTimeSlice>
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POLYGON OBSTACLE Area 3 (Control Tower) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.d22653bd-826d-411c-b8d3-838eba2a8325">
-      <!-- POLYGON OBSTACLE Area 3 (Control Tower) -->
       <gml:identifier codeSpace="urn:uuid:">d22653bd-826d-411c-b8d3-838eba2a8325</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1009">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1009-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -3367,9 +3529,11 @@
           <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/> <!-- Only one light element installed -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1009-1">
-              <aixm:verticalExtent uom="M">20</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">20.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
               <aixm:markingPattern>MONOCOLOUR</aixm:markingPattern>
               <aixm:markingFirstColour>WHITE</aixm:markingFirstColour>
               <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
@@ -3414,7 +3578,7 @@
                     </gml:PolygonPatch>
                   </gml:patches>
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">48</aixm:elevation>
+                  <aixm:elevation uom="M">48.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
@@ -3430,28 +3594,29 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1009-1">
                       <gml:pos>52.3727632706 -31.9438575484</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">48</aixm:elevation>
+                      <aixm:elevation uom="M">48.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
           </aixm:part>
-          <aixm:hostedUnit xlink:href="urn:uuid:1c1dd242-1a59-4fba-ac39-63de791c0afe" xlink:title="UNIT_EADD_TWR"/>
-          <aixm:supportedService xlink:href="urn:uuid:9ebc23fb-27da-45d7-9ce5-d8b11c5e6b37" xlink:title="SERVICE_ATC_EADD_TWR"/>
-          <aixm:supportedService xlink:href="urn:uuid:a1601062-a777-4871-a2d2-844d7696be95" xlink:title="SERVICE_INFO_EADD_ATIS_INF"/>
-          <aixm:supportedService xlink:href="urn:uuid:1bec77fe-d697-485a-b8b8-2d68da87ff4c" xlink:title="SERVICE_INFO_EADD_ATIS_DEP"/>
-          <aixm:supportedService xlink:href="urn:uuid:4f47f30e-b371-4464-9948-309c8e83896c" xlink:title="SERVICE_INFO_EADD_ATIS_ARR"/>
+          <aixm:hostedUnit xlink:href="urn:uuid:1c1dd242-1a59-4fba-ac39-63de791c0afe" xlink:title="UNIT EADD TWR"/>
+          <aixm:supportedService xlink:href="urn:uuid:9ebc23fb-27da-45d7-9ce5-d8b11c5e6b37" xlink:title="ATC-SERVICE EADD TWR"/>
+          <aixm:supportedService xlink:href="urn:uuid:a1601062-a777-4871-a2d2-844d7696be95" xlink:title="INFO-SERVICE EADD ATIS-INF"/>
+          <aixm:supportedService xlink:href="urn:uuid:1bec77fe-d697-485a-b8b8-2d68da87ff4c" xlink:title="INFO-SERVICE EADD ATIS-DEP"/>
+          <aixm:supportedService xlink:href="urn:uuid:4f47f30e-b371-4464-9948-309c8e83896c" xlink:title="INFO-SERVICE EADD ATIS-ARR"/>
           <aixm:annotation>
             <aixm:Note gml:id="n1009-1">
               <aixm:propertyName>markingICAOStandard</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1009-1">
-                  <aixm:note>marked=YES</aixm:note>
+                  <aixm:note lang="eng">marked=YES</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3464,7 +3629,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1009-2">
-                  <aixm:note>Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3475,18 +3640,18 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1009-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1009-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1009-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3511,15 +3676,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POLYGON OBSTACLE Area 3 (AIS-MET) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.14d8289b-4628-41c3-bcaa-be6e26e4b96a">
-      <!-- POLYGON OBSTACLE Area 3 (AIS-MET) -->
       <gml:identifier codeSpace="urn:uuid:">14d8289b-4628-41c3-bcaa-be6e26e4b96a</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1010">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1010-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -3544,9 +3709,14 @@
           <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/> <!-- Only one light element installed -->
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1010-1">
-              <aixm:verticalExtent uom="M">12</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">12.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="unknown"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="unknown"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="unknown"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
@@ -3571,7 +3741,7 @@
                     </gml:PolygonPatch>
                   </gml:patches>
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">40</aixm:elevation>
+                  <aixm:elevation uom="M">40.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
@@ -3587,22 +3757,23 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1010-1">
                       <gml:pos>52.3720648561 -31.9438437326</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">40</aixm:elevation>
+                      <aixm:elevation uom="M">40.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
           </aixm:part>
-          <aixm:hostedUnit xlink:href="urn:uuid:7a518dc6-75cf-4ba3-a823-825eae8e968b" xlink:title="UNIT_EADD_MET_OFFICE"/>
-          <aixm:hostedUnit xlink:href="urn:uuid:fe682c4c-d3e5-4cbd-944f-de64fc1c90f7" xlink:title="UNIT_EADD_AIS_BRIEFING_OFFICE"/>
-          <aixm:hostedUnit xlink:href="urn:uuid:a17b6cf1-3f7d-4025-8c1f-041a060fc0bd" xlink:title="UNIT_EADD_ARO"/>
+          <aixm:hostedUnit xlink:href="urn:uuid:7a518dc6-75cf-4ba3-a823-825eae8e968b" xlink:title="UNIT EADD MET-OFFICE"/>
+          <aixm:hostedUnit xlink:href="urn:uuid:fe682c4c-d3e5-4cbd-944f-de64fc1c90f7" xlink:title="UNIT EADD AIS-BRIEFING-OFFICE"/>
+          <aixm:hostedUnit xlink:href="urn:uuid:a17b6cf1-3f7d-4025-8c1f-041a060fc0bd" xlink:title="UNIT EADD ARO"/>
           <aixm:hostedOrganisation xlink:href="urn:uuid:1e1bdf59-3dd6-4f96-9166-e6095e7231fc" xlink:title="DONLON INTERNATIONAL AIRPORT"/>
-          <aixm:supportedService xlink:href="urn:uuid:9cbe4a99-0619-4e7e-8729-6b14b5a998f4" xlink:title="SERVICE_INFO_EADD_METAR"/>
-          <aixm:supportedService xlink:href="urn:uuid:1d1cd8a6-36d9-4f27-8bcf-34b662a2fb37" xlink:title="SERVICE_INFO_EADD_TAF"/>
+          <aixm:supportedService xlink:href="urn:uuid:9cbe4a99-0619-4e7e-8729-6b14b5a998f4" xlink:title="INFO-SERVICE EADD METAR"/>
+          <aixm:supportedService xlink:href="urn:uuid:1d1cd8a6-36d9-4f27-8bcf-34b662a2fb37" xlink:title="INFO-SERVICE EADD TAF"/>
           <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
           This is done in order to align the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the
           'description' property in the OBS.NEW scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
@@ -3613,7 +3784,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1010-0">
-                  <aixm:note>AIS-MET</aixm:note>
+                  <aixm:note lang="eng">AIS-MET</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3624,7 +3795,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1010-1">
-                  <aixm:note>marked=UNKNOWN</aixm:note>
+                  <aixm:note lang="eng">marked=UNKNOWN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3637,7 +3808,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1010-2">
-                  <aixm:note>Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3648,18 +3819,18 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1010-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1010-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1010-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3684,15 +3855,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POLYGON OBSTACLE Area 3 (Terminal) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.9c171b9f-90d3-46e8-84b2-a8348e65e839">
-      <!-- POLYGON OBSTACLE Area 3 (Terminal) -->
       <gml:identifier codeSpace="urn:uuid:">9c171b9f-90d3-46e8-84b2-a8348e65e839</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1011">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1011-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -3717,9 +3888,14 @@
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1011-1">
-              <aixm:verticalExtent uom="M">15</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">15.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="unknown"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="unknown"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="unknown"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -3744,7 +3920,7 @@
                     </gml:PolygonPatch>
                   </gml:patches>
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">43</aixm:elevation>
+                  <aixm:elevation uom="M">43.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
@@ -3760,12 +3936,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1011-1">
                       <gml:pos>52.3696893349 -31.9438465327</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">43</aixm:elevation>
+                      <aixm:elevation uom="M">43.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -3778,12 +3955,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1011-2">
                       <gml:pos>52.3697947300 -31.9421220700</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">43</aixm:elevation>
+                      <aixm:elevation uom="M">43.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -3796,12 +3974,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1011-3">
                       <gml:pos>52.3718627200 -31.9424593700</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">43</aixm:elevation>
+                      <aixm:elevation uom="M">43.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -3814,19 +3993,20 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1011-4">
                       <gml:pos>52.3717573001 -31.9441843182</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">43</aixm:elevation>
+                      <aixm:elevation uom="M">43.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
           </aixm:part>
-          <aixm:hostedPassengerService xlink:href="urn:uuid:f160dd5b-5c4e-4a18-ac6a-79a07af6435a" xlink:title="SERVICE_PAX_EADD_CUSTOMS_AND_IMMIGRATION"/>
-          <aixm:hostedPassengerService xlink:href="urn:uuid:193607c8-2bfa-4666-958e-2abcf43d7ea1" xlink:title="SERVICE_PAX_EADD_HEALT_AND_SANITATION"/>
-          <aixm:hostedPassengerService xlink:href="urn:uuid:501d2b82-3d6a-42f9-b924-2be251954c08" xlink:title="SERVICE_PAX_EADD_SECURITY"/>
+          <aixm:hostedPassengerService xlink:href="urn:uuid:f160dd5b-5c4e-4a18-ac6a-79a07af6435a" xlink:title="PAX-SERVICE EADD CUSTOMS-AND-IMMIGRATION"/>
+          <aixm:hostedPassengerService xlink:href="urn:uuid:193607c8-2bfa-4666-958e-2abcf43d7ea1" xlink:title="PAX-SERVICE EADD HEALT-AND-SANITATION"/>
+          <aixm:hostedPassengerService xlink:href="urn:uuid:501d2b82-3d6a-42f9-b924-2be251954c08" xlink:title="PAX-SERVICE EADD SECURITY"/>
           <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
           This is done in order to align the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the
           'description' property in the OBS.NEW scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
@@ -3837,7 +4017,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1011-0">
-                  <aixm:note>TERMINAL A</aixm:note>
+                  <aixm:note lang="eng">TERMINAL A</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3848,7 +4028,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1011-1">
-                  <aixm:note>marked=UNKNOWN</aixm:note>
+                  <aixm:note lang="eng">marked=UNKNOWN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3861,7 +4041,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1011-2">
-                  <aixm:note>Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3872,18 +4052,18 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1011-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1011-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1011-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -3908,15 +4088,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POLYGON OBSTACLE WITH SUPPORTED SERVICE Area 3 (Hangar 1) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.0a12b87b-fe93-4dbd-8f77-94b97d262083">
-      <!-- POLYGON OBSTACLE WITH SUPPORTED SERVICE Area 3 (Hangar 1) -->
       <gml:identifier codeSpace="urn:uuid:">0a12b87b-fe93-4dbd-8f77-94b97d262083</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1012">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1012-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -3941,9 +4121,14 @@
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1012-1">
-              <aixm:verticalExtent uom="M">20</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">20.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -3968,7 +4153,7 @@
                     </gml:PolygonPatch>
                   </gml:patches>
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">48</aixm:elevation>
+                  <aixm:elevation uom="M">48.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
@@ -3984,12 +4169,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1012-1">
                       <gml:pos>52.3727654898 -31.9483080029</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">48</aixm:elevation>
+                      <aixm:elevation uom="M">48.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -4002,12 +4188,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1012-2">
                       <gml:pos>52.3727004000 -31.9493721800</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">48</aixm:elevation>
+                      <aixm:elevation uom="M">48.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -4020,12 +4207,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1012-3">
                       <gml:pos>52.3716126900 -31.9491946000</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">48</aixm:elevation>
+                      <aixm:elevation uom="M">48.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -4038,12 +4226,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1012-4">
                       <gml:pos>52.3716777700 -31.9481304400</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">48</aixm:elevation>
+                      <aixm:elevation uom="M">48.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
@@ -4061,7 +4250,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1012-0">
-                  <aixm:note>HANGAR 1</aixm:note>
+                  <aixm:note lang="eng">HANGAR 1</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4072,7 +4261,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1012-1">
-                  <aixm:note>marked=NO</aixm:note>
+                  <aixm:note lang="eng">marked=NO</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4085,7 +4274,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1012-2">
-                  <aixm:note>Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4096,18 +4285,18 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1012-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1012-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1012-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4132,15 +4321,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POLYGON OBSTACLE Area 3 (Hangar 2) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.742a1aa1-10a4-435e-9e18-7a0a30d1af59">
-      <!-- POLYGON OBSTACLE Area 3 (Hangar 2) -->
       <gml:identifier codeSpace="urn:uuid:">742a1aa1-10a4-435e-9e18-7a0a30d1af59</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1013">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1013-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -4165,9 +4354,14 @@
           <aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="csp1013-1">
-              <aixm:verticalExtent uom="M">30</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">30.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
@@ -4192,7 +4386,7 @@
                     </gml:PolygonPatch>
                   </gml:patches>
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">58</aixm:elevation>
+                  <aixm:elevation uom="M">58.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
@@ -4208,12 +4402,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1013-1">
                       <gml:pos>52.3736480578 -31.9484527693</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">43</aixm:elevation>
+                      <aixm:elevation uom="M">43.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -4226,12 +4421,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1013-2">
                       <gml:pos>52.3735815800 -31.9495396900</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">43</aixm:elevation>
+                      <aixm:elevation uom="M">43.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -4244,12 +4440,13 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1013-3">
                       <gml:pos>52.3729990400 -31.9494445800</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">43</aixm:elevation>
+                      <aixm:elevation uom="M">43.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
               <aixm:lighting>
@@ -4262,21 +4459,22 @@
                     <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep1013-4">
                       <gml:pos>52.3730655497 -31.9483569852</gml:pos>
                       <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                      <aixm:elevation uom="M">43</aixm:elevation>
+                      <aixm:elevation uom="M">43.0</aixm:elevation>
                       <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                       <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                       <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                     </aixm:ElevatedPoint>
                   </aixm:location>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:LightElement>
               </aixm:lighting>
             </aixm:VerticalStructurePart>
           </aixm:part>
-          <aixm:hostedUnit xlink:href="urn:uuid:157bd272-2b16-4156-a47e-b7b6f386c692" xlink:title="UNIT_EADD_GROUND_HANDLING"/>
-          <aixm:hostedUnit xlink:href="urn:uuid:6a8fd5c7-4e42-446f-b2d2-c0d9f0d94174" xlink:title="UNIT_EADD_RFF"/>
-          <aixm:supportedService xlink:href="urn:uuid:7e97481d-739c-4b72-a180-d64756e7f7a9" xlink:title="SERVICE_CLEARANCE_EADD_AIRPORT_CLEARANCE"/>
-          <aixm:supportedService xlink:href="urn:uuid:84cf33cb-05b7-4212-8e9d-48ec8751bc1f" xlink:title="SERVICE_GROUND_EADD_AIRCRAFT_REMOVAL"/>
-          <aixm:supportedService xlink:href="urn:uuid:665367f5-1a43-46c7-a709-46c84709d4be" xlink:title="SERVICE_FIREFIGHTING_EADD_RFF"/>
+          <aixm:hostedUnit xlink:href="urn:uuid:157bd272-2b16-4156-a47e-b7b6f386c692" xlink:title="UNIT EADD GROUND-HANDLING"/>
+          <aixm:hostedUnit xlink:href="urn:uuid:6a8fd5c7-4e42-446f-b2d2-c0d9f0d94174" xlink:title="UNIT EADD RFF"/>
+          <aixm:supportedService xlink:href="urn:uuid:7e97481d-739c-4b72-a180-d64756e7f7a9" xlink:title="CLEARANCE-SERVICE EADD AIRPORT-CLEARANCE"/>
+          <aixm:supportedService xlink:href="urn:uuid:84cf33cb-05b7-4212-8e9d-48ec8751bc1f" xlink:title="GROUND-SERVICE EADD AIRCRAFT-REMOVAL"/>
+          <aixm:supportedService xlink:href="urn:uuid:665367f5-1a43-46c7-a709-46c84709d4be" xlink:title="RFF-SERVICE EADD RFF"/>
           <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
           This is done in order to align the coding of static data with the coding of Digital NOTAM data, since this kind of annotation is used to encode the
           'description' property in the OBS.NEW scenario, i.e. 'A textual description of the obstacle, such as the number of similar items for a group, etc.'
@@ -4287,7 +4485,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1013-0">
-                  <aixm:note>HANGAR 2</aixm:note>
+                  <aixm:note lang="eng">HANGAR 2</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4298,7 +4496,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1013-1">
-                  <aixm:note>marked=NO</aixm:note>
+                  <aixm:note lang="eng">marked=NO</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4311,7 +4509,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1013-2">
-                  <aixm:note>Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4322,18 +4520,18 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1013-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1013-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1013-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4358,15 +4556,15 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <!-- POLYGON OBSTACLE Area 3 (Parking) -->
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.225d45f0-b285-4d85-a699-84f76c57f4f8">
-      <!-- POLYGON OBSTACLE Area 3 (Parking) -->
       <gml:identifier codeSpace="urn:uuid:">225d45f0-b285-4d85-a699-84f76c57f4f8</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1014">
           <gml:validTime>
             <gml:TimePeriod gml:id="tp1014-1">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -4387,11 +4585,18 @@
           <aixm:length uom="M">465</aixm:length>
           <aixm:width uom="M">230</aixm:width>
           <aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="vsp1014-1">
-              <aixm:verticalExtent uom="M">20</aixm:verticalExtent>
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:verticalExtent uom="M">20.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
               <aixm:type>BUILDING</aixm:type>
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
               <aixm:mobile>NO</aixm:mobile>
               <aixm:frangible>NO</aixm:frangible>
               <aixm:visibleMaterial>CONCRETE</aixm:visibleMaterial>
@@ -4538,12 +4743,13 @@
                     </gml:PolygonPatch>
                   </gml:patches>
                   <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
-                  <aixm:elevation uom="M">48</aixm:elevation>
+                  <aixm:elevation uom="M">48.0</aixm:elevation>
                   <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
                   <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
                   <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
                 </aixm:ElevatedSurface>
               </aixm:horizontalProjection_surfaceExtent>
+              <aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
             </aixm:VerticalStructurePart>
           </aixm:part>
           <!-- The type of building or its purpose (if not clear from 'aixm:type') is coded as annotation with propertyName='type' and purpose='DESCRIPTION'.
@@ -4556,7 +4762,7 @@
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1014-0">
-                  <aixm:note>PARKING AREA A</aixm:note>
+                  <aixm:note lang="eng">PARKING AREA A</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4567,7 +4773,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1014-1">
-                  <aixm:note>marked=NO</aixm:note>
+                  <aixm:note lang="eng">marked=NO</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4580,7 +4786,7 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1014-2">
-                  <aixm:note>Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
+                  <aixm:note lang="eng">Obstacle Owner: DONLON INTERNATIONAL AIRPORT, Donlon 4 W, DONLON, Phone: 01238282, email: admin@donlonairport.dl</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -4591,22 +4797,23 @@
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1014-3">
-                  <aixm:note>Horizontal resolution is 1/10 sec</aixm:note>
+                  <aixm:note lang="eng">Horizontal resolution is 1/10 sec</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <!--  "Vertical Resolution" required by PANS-AIM. -->
+          <!-- "Vertical Resolution" required by PANS-AIM. -->
           <aixm:annotation>
             <aixm:Note gml:id="n1014-4">
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="ln1014-4">
-                  <aixm:note>Vertical resolution is 0.1 m</aixm:note>
+                  <aixm:note lang="eng">Vertical resolution is 0.1 m</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
+          <aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
         </aixm:VerticalStructureTimeSlice>
       </aixm:timeSlice>
     </aixm:VerticalStructure>
@@ -4619,7 +4826,7 @@
         <aixm:VerticalStructureTimeSlice gml:id="OBST-Terrain_polygons">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_DCH_07">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -4636,7 +4843,7 @@
           <aixm:type>OTHER:TERRAIN_CONTOURS</aixm:type>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_08">
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -4670,7 +4877,7 @@
           </aixm:part>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_11">
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -4711,7 +4918,7 @@
           </aixm:part>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_14">
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -4745,7 +4952,7 @@
           </aixm:part>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_17">
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -4780,7 +4987,7 @@
           </aixm:part>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_20">
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -4821,7 +5028,7 @@
           </aixm:part>
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_23">
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -4863,7 +5070,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_26">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -4909,7 +5116,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_29">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -4956,7 +5163,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_32">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5005,7 +5212,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_35">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5043,7 +5250,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_38">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5096,7 +5303,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_41">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5135,7 +5342,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_44">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5182,7 +5389,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_47">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5227,7 +5434,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_50">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5273,7 +5480,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_53">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5318,7 +5525,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_56">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5362,7 +5569,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_59">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5406,7 +5613,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_62">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5450,7 +5657,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_65">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5495,7 +5702,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_68">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5550,7 +5757,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_71">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5591,7 +5798,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_74">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5629,7 +5836,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_77">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5667,7 +5874,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_80">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5705,7 +5912,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_83">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5743,7 +5950,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_86">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5803,7 +6010,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_93">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5843,7 +6050,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_96">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5881,7 +6088,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_99">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5919,7 +6126,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_102">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -5962,7 +6169,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_105">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6003,7 +6210,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_108">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6043,7 +6250,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_111">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6081,7 +6288,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_114">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6123,7 +6330,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_117">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6161,7 +6368,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_120">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6210,7 +6417,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_123">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6255,7 +6462,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_125">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6300,7 +6507,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_128">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6342,7 +6549,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_131">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>
@@ -6380,7 +6587,7 @@
           <aixm:part>
             <aixm:VerticalStructurePart gml:id="ID_DCH_134">
               <!-- +3 -->
-              <aixm:verticalExtent uom="M">0</aixm:verticalExtent>
+              <aixm:verticalExtent uom="M">0.0</aixm:verticalExtent>
               <aixm:verticalExtentAccuracy uom="M">0</aixm:verticalExtentAccuracy>
               <aixm:type>OTHER:TERRAIN_CONTOUR</aixm:type>
               <aixm:horizontalProjection_surfaceExtent>

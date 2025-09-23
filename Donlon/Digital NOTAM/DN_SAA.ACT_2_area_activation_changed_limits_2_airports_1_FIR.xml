@@ -38,11 +38,11 @@ Editorial note: this license is an instance of the BSD license template as provi
   The airspace is activated from ground to 2000m AGL for the entire duration of the event.
   The remaining part of the airspace (from 2000m AGL to FL360) keeps its baseline status for the entire duration of the event.
   
-  Tempdelta schedule and vertical limits: GND / 2000m AGL, ACTIVE
+  Tempdelta schedule and vertical limits: GND / 2000m AGL,   ACTIVE
                                           2000m AGL / FL360, AVBL_FOR_ACTIVATION
   
   The new vertical limits are both inside the baseline limits, hence there will be no aixm:geometryComponent property added,
-  because the airspace isn't activated above or below the baseline vertical limits.
+  because the airspace isn't activated above or below the baseline vertical limits (its original vertical geometry is not modified).
 -->
 
 <!-- 
@@ -203,10 +203,11 @@ Pilots must proceed with caution when entering this area below 2000M.</event:tex
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
-          <!-- The times/levels when the airspace remains with the baseline status -->
+          <!-- The times/levels when the airspace remains with the baseline status (baseline 'aixm:activation' copy with modified 'aixm:levels') -->
           <!-- 2000m AGL / FL360, AVBL_FOR_ACTIVATION -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_10">
+              <aixm:timeInterval xsi:nil="true" nilReason="other:NOTAM"/>
               <aixm:annotation>
                 <aixm:Note gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_11">
                   <aixm:propertyName>timeInterval</aixm:propertyName>
@@ -230,6 +231,7 @@ Pilots must proceed with caution when entering this area below 2000M.</event:tex
               </aixm:annotation>
               <aixm:activity>MISSILES</aixm:activity>
               <aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
+              <!-- The 'aixm:levels' property is modified during the event -->
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_5493237e-910d-4357-9bd7-f98d105916a9_1_0_T_15">
                   <aixm:upperLimit uom="FL">360</aixm:upperLimit>
@@ -238,6 +240,8 @@ Pilots must proceed with caution when entering this area below 2000M.</event:tex
                   <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                 </aixm:AirspaceLayer>
               </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
           <!-- The link to the event -->

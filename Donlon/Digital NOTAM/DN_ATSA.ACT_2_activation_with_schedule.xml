@@ -213,19 +213,17 @@ Expect radar vectoring.</event:text>
               </aixm:levels>
             </aixm:AirspaceActivation>
           </aixm:activation>
-          <!-- The times when the airspace remains with the baseline status (schedule adjusted to fill in the gaps left by the NOTAM schedule) -->
+          <!-- The times when the airspace remains with the baseline status -->
           <!-- WORK_DAY    0600-2000 ACTIVE
-               SAT SUN HOL 0700-2000 ACTIVE
-               ANY         0000-0600 AVBL_FOR_ACTIVATION
-               SAT SUN HOL 0600-0700 AVBL_FOR_ACTIVATION -->
+               SAT SUN HOL 0700-2000 ACTIVE -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_7">
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>00:00</aixm:startTime>
-                  <aixm:endTime>06:00</aixm:endTime>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
@@ -234,8 +232,8 @@ Expect radar vectoring.</event:text>
                 <aixm:Timesheet gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_9">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:00</aixm:endTime>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
@@ -244,8 +242,8 @@ Expect radar vectoring.</event:text>
                 <aixm:Timesheet gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_10">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:00</aixm:endTime>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
@@ -254,8 +252,8 @@ Expect radar vectoring.</event:text>
                 <aixm:Timesheet gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_11">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>HOL</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:00</aixm:endTime>
+                  <aixm:startTime>07:00</aixm:startTime>
+                  <aixm:endTime>20:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
@@ -270,20 +268,98 @@ Expect radar vectoring.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
               <aixm:activity>ATS</aixm:activity>
-              <aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
+              <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_14">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <!-- The times when the airspace remains with the baseline status (baseline 'aixm:activation' copy with the schedule adjusted to fill in the gaps left by the NOTAM schedule) -->
+          <!-- ANY         0000-0600 AVBL_FOR_ACTIVATION
+               SAT SUN HOL 0600-0700 AVBL_FOR_ACTIVATION -->
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_15">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_16">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>00:00</aixm:startTime> <!-- adjusted schedule -->
+                  <aixm:endTime>06:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_17">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_18">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_19">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>HOL</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>07:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation>
+                <aixm:Note gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_20">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_21">
+                      <aixm:note>Baseline data copy. Not included in the NOTAM text generation.</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:activity>ATS</aixm:activity>
+              <aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_22">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:AirspaceExtension gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_15">
+            <event:AirspaceExtension gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_23">
               <event:theEvent xlink:href="urn:uuid:869591f2-87f4-4291-8cd6-66d25a2033ec"/>
             </event:AirspaceExtension>
           </aixm:extension>

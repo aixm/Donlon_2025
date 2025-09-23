@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file includes contributions from Solitec Software Solutions, Luciad, EUROCONTROL, Comsoft -->
+<!-- Copyright (c) 2025, EUROCONTROL & FAA
+  
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+  
+  THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gts="http://www.isotc211.org/2005/gts" 
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:gss="http://www.isotc211.org/2005/gss" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:gsr="http://www.isotc211.org/2005/gsr" 
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd" 
+  gml:id="DONLON_StandardLevelColumn_Baseline">
+  <message:hasMember>
+    <aixm:StandardLevelColumn gml:id="uuid.f789e70f-adf9-413d-8d7f-7747faef070b">
+      <gml:identifier codeSpace="urn:uuid:">f789e70f-adf9-413d-8d7f-7747faef070b</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:StandardLevelColumnTimeSlice gml:id="STD-LEVEL-COLUMN_ODD_FL_RVSM_FL010-FL970">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:series>ODD</aixm:series>
+          <aixm:unitOfMeasurement>FL</aixm:unitOfMeasurement>
+          <aixm:separation>RVSM</aixm:separation>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL1_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">010</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL2_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">030</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL3_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">050</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL4_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">070</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL5_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">090</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL6_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">110</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL7_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">130</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL8_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">150</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL9_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">170</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL10_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">190</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL11_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">210</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL12_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">230</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL13_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">250</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL14_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">270</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL15_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">290</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL16_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">310</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL17_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">330</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL18_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">350</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL19_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">370</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL20_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">390</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL21_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">410</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL22_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">450</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL23_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">490</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL24_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">530</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL25_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">570</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL26_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">610</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL27_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">650</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL28_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">690</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL29_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">730</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL30_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">770</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL31_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">810</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL32_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">850</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL33_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">890</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL34_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">930</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL35_f789e70f-adf9-413d-8d7f-7747faef070b">
+              <aixm:verticalDistance uom="FL">970</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:levelTable xlink:href="urn:uuid:508170dc-2b40-4cc3-84ed-5252aa07c4a4" xlink:title="STD LEVEL TABLE IFR RVSM"/>
+        </aixm:StandardLevelColumnTimeSlice>
+      </aixm:timeSlice>
+    </aixm:StandardLevelColumn>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:StandardLevelColumn gml:id="uuid.cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+      <gml:identifier codeSpace="urn:uuid:">cba6b8e7-b83a-4535-adae-9e7f90c8ce47</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:StandardLevelColumnTimeSlice gml:id="STD-LEVEL-COLUMN_EVEN_FL_RVSM_FL020-FL990">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:series>EVEN</aixm:series>
+          <aixm:unitOfMeasurement>FL</aixm:unitOfMeasurement>
+          <aixm:separation>RVSM</aixm:separation>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL1_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">020</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL2_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">040</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL3_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">060</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL4_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">080</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL5_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">100</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL6_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">120</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL7_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">140</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL8_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">160</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL9_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">180</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL10_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">200</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL11_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">220</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL12_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">240</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL13_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">260</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL14_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">280</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL15_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">300</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL16_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">320</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL17_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">340</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL18_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">360</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL19_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">380</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL20_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">400</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL21_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">430</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL22_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">470</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL23_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">510</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL24_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">550</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL25_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">590</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL26_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">630</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL27_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">670</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL28_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">710</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL29_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">750</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL30_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">790</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL31_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">830</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL32_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">870</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL33_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">910</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL34_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">950</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL35_cba6b8e7-b83a-4535-adae-9e7f90c8ce47">
+              <aixm:verticalDistance uom="FL">990</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:levelTable xlink:href="urn:uuid:508170dc-2b40-4cc3-84ed-5252aa07c4a4" xlink:title="STD LEVEL TABLE IFR RVSM"/>
+        </aixm:StandardLevelColumnTimeSlice>
+      </aixm:timeSlice>
+    </aixm:StandardLevelColumn>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:StandardLevelColumn gml:id="uuid.8bce079f-a5bb-4f75-9363-e48253ba015d">
+      <gml:identifier codeSpace="urn:uuid:">8bce079f-a5bb-4f75-9363-e48253ba015d</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:StandardLevelColumnTimeSlice gml:id="STD-LEVEL-COLUMN_ODD-HALF_FL_FL035-FL275">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:series>ODD_HALF</aixm:series>
+          <aixm:unitOfMeasurement>FL</aixm:unitOfMeasurement>
+          <aixm:separation xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL1_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">035</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL2_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">055</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL3_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">075</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL4_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">095</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL5_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">115</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL6_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">135</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL7_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">155</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL8_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">175</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL9_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">195</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL10_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">215</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL11_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">235</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL12_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">255</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL13_8bce079f-a5bb-4f75-9363-e48253ba015d">
+              <aixm:verticalDistance uom="FL">275</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:levelTable xlink:href="urn:uuid:c39d8746-7cc1-4a16-a1a8-9ccdfdb0f2e5" xlink:title="STD LEVEL TABLE VFR"/>
+        </aixm:StandardLevelColumnTimeSlice>
+      </aixm:timeSlice>
+    </aixm:StandardLevelColumn>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:StandardLevelColumn gml:id="uuid.ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+      <gml:identifier codeSpace="urn:uuid:">ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:StandardLevelColumnTimeSlice gml:id="STD-LEVEL-COLUMN_EVEN-HALF_FL_FL045-FL285">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:series>EVEN_HALF</aixm:series>
+          <aixm:unitOfMeasurement>FL</aixm:unitOfMeasurement>
+          <aixm:separation xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL1_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">045</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL2_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">065</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL3_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">085</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL4_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">105</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL5_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">125</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL6_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">145</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL7_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">165</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL8_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">185</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL9_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">205</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL10_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">225</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL11_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">245</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL12_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">265</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:level>
+            <aixm:StandardLevel gml:id="ID_SL13_ac67b3ee-8c80-4d26-9965-1ffcd3f2a11c">
+              <aixm:verticalDistance uom="FL">285</aixm:verticalDistance>
+            </aixm:StandardLevel>
+          </aixm:level>
+          <aixm:levelTable xlink:href="urn:uuid:c39d8746-7cc1-4a16-a1a8-9ccdfdb0f2e5" xlink:title="STD LEVEL TABLE VFR"/>
+        </aixm:StandardLevelColumnTimeSlice>
+      </aixm:timeSlice>
+    </aixm:StandardLevelColumn>
+  </message:hasMember>
+</message:AIXMBasicMessage>

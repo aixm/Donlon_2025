@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file includes contributions from Solitec Software Solutions, Luciad, EUROCONTROL, Comsoft -->
-<!-- Copyright (c) 2025, EUROCONTROL & FAA
+<!-- This file includes contributions from EUROCONTROL -->
+<!-- Copyright (c) 2025, EUROCONTROL
   
   All rights reserved.
   
@@ -40,7 +40,7 @@
         <aixm:AirportHeliportTimeSlice gml:id="AHP_EADA">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_VT_556d7442-402d-467b-81af-09f2eed71cf7">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -54,7 +54,7 @@
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:designator>EADA</aixm:designator>
-          <aixm:name>AKVIN</aixm:name>
+          <aixm:name>AKVIN/AKVIN</aixm:name>
           <aixm:locationIndicatorICAO>EADA</aixm:locationIndicatorICAO>
           <aixm:designatorIATA>AKV</aixm:designatorIATA>
           <aixm:type>AD</aixm:type>
@@ -79,6 +79,7 @@
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:certificationDate>2009-01-01</aixm:certificationDate>
           <aixm:certificationExpirationDate xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:contaminant xsi:nil="true" nilReason="inapplicable"/>
           <aixm:servedCity>
             <aixm:City gml:id="ID_C_556d7442-402d-467b-81af-09f2eed71cf7">
               <aixm:name>AKVIN</aixm:name>
@@ -100,31 +101,43 @@
               <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:ARP>
+          <aixm:aviationBoundary xsi:nil="true" nilReason="unknown"/>
+          <aixm:altimeterSource xsi:nil="true" nilReason="inapplicable"/>
           <aixm:contact>
             <aixm:ContactInformation gml:id="ID_CI_556d7442-402d-467b-81af-09f2eed71cf7">
               <aixm:name>AKVIN AIRPORT AUTHORITY</aixm:name>
+              <aixm:title>AIRPORT OPERATOR</aixm:title>
               <aixm:address>
                 <aixm:PostalAddress gml:id="ID_PA_556d7442-402d-467b-81af-09f2eed71cf7">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:deliveryPoint xsi:nil="true" nilReason="unknown"/>
                   <aixm:city>AKVIN</aixm:city>
+                  <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
+                  <aixm:postalCode xsi:nil="true" nilReason="unknown"/>
                   <aixm:country>REPUBLIC OF DONLON</aixm:country>
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
                 <aixm:OnlineContact gml:id="ID_OC1_556d7442-402d-467b-81af-09f2eed71cf7">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.akvinairport.dl</aixm:linkage>
+                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
                   <aixm:eMail>admin@akvinairport.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
                 <aixm:OnlineContact gml:id="ID_OC2_556d7442-402d-467b-81af-09f2eed71cf7">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EADAYDYX</aixm:linkage>
+                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:eMail xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
                 <aixm:TelephoneContact gml:id="ID_TC_556d7442-402d-467b-81af-09f2eed71cf7">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:voice>05368238</aixm:voice>
                   <aixm:facsimile>05368239</aixm:facsimile>
                 </aixm:TelephoneContact>
@@ -133,10 +146,14 @@
           </aixm:contact>
           <aixm:availability>
             <aixm:AirportHeliportAvailability gml:id="ID_AHA_556d7442-402d-467b-81af-09f2eed71cf7">
+              <aixm:timeInterval xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:AirportHeliportUsage gml:id="ID_AHU_556d7442-402d-467b-81af-09f2eed71cf7_1">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_556d7442-402d-467b-81af-09f2eed71cf7_1">
                       <aixm:timeInterval>
@@ -163,7 +180,7 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC3_556d7442-402d-467b-81af-09f2eed71cf7_1">
@@ -199,6 +216,7 @@
                 <aixm:AirportHeliportUsage gml:id="ID_AHU_556d7442-402d-467b-81af-09f2eed71cf7_2">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission uom="HR">3</aixm:priorPermission>
+                  <aixm:contact xsi:nil="true"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_556d7442-402d-467b-81af-09f2eed71cf7_2">
                       <aixm:timeInterval>

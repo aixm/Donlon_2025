@@ -32,14 +32,14 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd" 
-  gml:id="DONLON_EADH_Runway_Baseline">
+  gml:id="DONLON_EADA_Unit_Baseline">
   <message:hasMember>
-    <aixm:Runway gml:id="uuid.514db9a0-11c6-46b1-b5e7-509252025fc3">
-      <gml:identifier codeSpace="urn:uuid:">514db9a0-11c6-46b1-b5e7-509252025fc3</gml:identifier>
+    <aixm:Unit gml:id="uuid.8323cd6d-f788-4b78-8f93-2a09a70965fb">
+      <gml:identifier codeSpace="urn:uuid:">8323cd6d-f788-4b78-8f93-2a09a70965fb</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayTimeSlice gml:id="RWY_EADH_FATO-03-21">
+        <aixm:UnitTimeSlice gml:id="UNIT_AKVIN_SAR">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_514db9a0-11c6-46b1-b5e7-509252025fc3">
+            <gml:TimePeriod gml:id="ID_VT_8323cd6d-f788-4b78-8f93-2a09a70965fb">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -48,65 +48,72 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_514db9a0-11c6-46b1-b5e7-509252025fc3">
+            <gml:TimePeriod gml:id="ID_FL_8323cd6d-f788-4b78-8f93-2a09a70965fb">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <aixm:designator>03/21</aixm:designator>
-          <aixm:type>FATO</aixm:type>
-          <aixm:nominalLength uom="M">50</aixm:nominalLength>
-          <aixm:lengthAccuracy uom="M">1</aixm:lengthAccuracy>
-          <aixm:nominalWidth uom="M">50</aixm:nominalWidth>
-          <aixm:widthAccuracy uom="M">1</aixm:widthAccuracy>
-          <aixm:widthShoulder uom="M">0</aixm:widthShoulder>
-          <aixm:lengthStrip xsi:nil="true" nilReason="inapplicable"/>
-          <aixm:widthStrip xsi:nil="true" nilReason="inapplicable"/>
-          <aixm:lengthOffset xsi:nil="true" nilReason="inapplicable"/>
-          <aixm:widthOffset xsi:nil="true" nilReason="inapplicable"/>
-          <aixm:abandoned>NO</aixm:abandoned>
-          <aixm:surfaceProperties>
-            <aixm:SurfaceCharacteristics gml:id="ID_SC_514db9a0-11c6-46b1-b5e7-509252025fc3">
-              <aixm:composition>ASPH</aixm:composition>
-              <aixm:preparation xsi:nil="true" nilReason="unknown"/>
-              <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
-              <aixm:classPCN>80</aixm:classPCN>
-              <aixm:pavementTypePCN>FLEXIBLE</aixm:pavementTypePCN>
-              <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
-              <aixm:maxTyrePressurePCN>W</aixm:maxTyrePressurePCN>
-              <aixm:evaluationMethodPCN>TECH</aixm:evaluationMethodPCN>
-              <aixm:classLCN xsi:nil="true" nilReason="unknown"/>
-              <aixm:weightSIWL xsi:nil="true" nilReason="unknown"/>
-              <aixm:tyrePressureSIWL xsi:nil="true" nilReason="unknown"/>
-              <aixm:weightAUW uom="T">8</aixm:weightAUW>
-            </aixm:SurfaceCharacteristics>
-          </aixm:surfaceProperties>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:dd062d88-3e64-4a5d-bebd-89476db9ebea" xlink:title="EADH DONLON DOWNTOWN HELIPORT"/>
-          <aixm:overallContaminant xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:name>AKVIN</aixm:name>
+          <aixm:type>SAR</aixm:type>
+          <aixm:compliantICAO>YES</aixm:compliantICAO>
+          <aixm:designator>EADA-SAR</aixm:designator>
+          <aixm:military xsi:nil="true" nilReason="unknown"/>
+          <aixm:position>
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+              <gml:pos>52.618333333 -32.919999999</gml:pos>
+              <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">15.0</aixm:elevation>
+              <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:position>
+          <aixm:airportLocation xlink:href="urn:uuid:556d7442-402d-467b-81af-09f2eed71cf7" xlink:title="EADA AKVIN/Akvin"/>
+          <aixm:ownerOrganisation xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="ORG-AUTH NTL-AUTH DONLON-CAA"/>
+          <aixm:relatedUnit>
+            <aixm:UnitDependency gml:id="ID_UD_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+              <aixm:type>OWNER</aixm:type>
+              <aixm:theUnit xlink:href="urn:uuid:c1bbe653-e5b1-4bfe-b510-3ada3272305a" xlink:title="UNIT DONLON RCC"/>
+            </aixm:UnitDependency>
+          </aixm:relatedUnit>
+          <aixm:availability>
+            <aixm:UnitAvailability gml:id="ID_UA_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+            </aixm:UnitAvailability>
+          </aixm:availability>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N1_514db9a0-11c6-46b1-b5e7-509252025fc3">
+            <aixm:Note gml:id="ID_N_8323cd6d-f788-4b78-8f93-2a09a70965fb_1">
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN1_514db9a0-11c6-46b1-b5e7-509252025fc3">
-                  <aixm:note lang="eng">FATO GEO bearings: 027.33°/207.33° GEO</aixm:note>
+                <aixm:LinguisticNote gml:id="ID_LN_8323cd6d-f788-4b78-8f93-2a09a70965fb_1">
+                  <aixm:note lang="eng">Facilities: Bell 47 SRG</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N2_514db9a0-11c6-46b1-b5e7-509252025fc3">
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
+            <aixm:Note gml:id="ID_N_8323cd6d-f788-4b78-8f93-2a09a70965fb_2">
+              <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID__LN2_514db9a0-11c6-46b1-b5e7-509252025fc3">
-                  <aixm:note lang="eng">Non-precision 03/21: elevation 18 M, slope 1% / elevation 18 M, slope -1%
-Precision 03/21: nil</aixm:note>
+                <aixm:LinguisticNote gml:id="ID_LN_8323cd6d-f788-4b78-8f93-2a09a70965fb_2">
+                  <aixm:note lang="eng">Catalina LRG on stand-by from Burgkenvalk 5 HR PN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
-          <aixm:areaContaminant xsi:nil="true" nilReason="inapplicable"/>
-        </aixm:RunwayTimeSlice>
+        </aixm:UnitTimeSlice>
       </aixm:timeSlice>
-    </aixm:Runway>
+    </aixm:Unit>
   </message:hasMember>
 </message:AIXMBasicMessage>

@@ -37,10 +37,10 @@
     <aixm:TouchDownLiftOff gml:id="uuid.3d9a60b5-6d7f-471d-9744-b767df4a8575">
       <gml:identifier codeSpace="urn:uuid:">3d9a60b5-6d7f-471d-9744-b767df4a8575</gml:identifier>
       <aixm:timeSlice>
-        <aixm:TouchDownLiftOffTimeSlice gml:id="TLOF_EADH">
+        <aixm:TouchDownLiftOffTimeSlice gml:id="EADH_TLOF-03-21">
           <gml:validTime>
             <gml:TimePeriod gml:id="ID_VT_3d9a60b5-6d7f-471d-9744-b767df4a8575">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -53,7 +53,7 @@
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <aixm:designator>TLOF</aixm:designator>
+          <aixm:designator>TLOF 03/21</aixm:designator>
           <aixm:length uom="M">20</aixm:length>
           <aixm:width uom="M">20</aixm:width>
           <aixm:slope>1</aixm:slope>
@@ -99,17 +99,22 @@
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="S-a51e32fb">
               <aixm:composition>CONC</aixm:composition>
+              <aixm:preparation xsi:nil="true" nilReason="unknown"/>
               <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
               <aixm:maxTyrePressurePCN>W</aixm:maxTyrePressurePCN>
               <aixm:evaluationMethodPCN>TECH</aixm:evaluationMethodPCN>
+              <aixm:classLCN xsi:nil="true" nilReason="unknown"/>
+              <aixm:weightSIWL xsi:nil="true" nilReason="unknown"/>
+              <aixm:tyrePressureSIWL xsi:nil="true" nilReason="unknown"/>
               <aixm:weightAUW uom="T">8</aixm:weightAUW>
             </aixm:SurfaceCharacteristics>
           </aixm:surfaceProperties>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:dd062d88-3e64-4a5d-bebd-89476db9ebea" xlink:title="EADH - DONLON DOWNTOWN HELIPORT"/>
-          <aixm:approachTakeOffArea xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:title="FATO_EADH_03_21"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:dd062d88-3e64-4a5d-bebd-89476db9ebea" xlink:title="EADH DONLON DOWNTOWN HELIPORT"/>
+          <aixm:approachTakeOffArea xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8" xlink:title="RWY EADH FATO 03/21"/>
+          <aixm:contaminant xsi:nil="true" nilReason="inapplicable"/>
           <aixm:annotation>
             <aixm:Note gml:id="ID_N1_3d9a60b5-6d7f-471d-9744-b767df4a8575">
               <aixm:propertyName>length</aixm:propertyName>
@@ -134,10 +139,14 @@
           </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_3d9a60b5-6d7f-471d-9744-b767df4a8575">
+              <aixm:timeInterval xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_3d9a60b5-6d7f-471d-9744-b767df4a8575">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_3d9a60b5-6d7f-471d-9744-b767df4a8575">
                       <aixm:logicalOperator>OR</aixm:logicalOperator>

@@ -53,7 +53,7 @@
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <aixm:designator>EADA</aixm:designator>
+          <aixm:designator>EAMN</aixm:designator>
           <aixm:name>MAGNETO</aixm:name>
           <aixm:locationIndicatorICAO>EAMN</aixm:locationIndicatorICAO>
           <aixm:designatorIATA>MGN</aixm:designatorIATA>
@@ -79,6 +79,7 @@
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:certificationDate>2009-01-01</aixm:certificationDate>
           <aixm:certificationExpirationDate xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:contaminant xsi:nil="true" nilReason="inapplicable"/>
           <aixm:servedCity>
             <aixm:City gml:id="ID_C_d9454fe2-2a61-4112-9b20-2786e1ab4a81">
               <aixm:name>MAGNETO</aixm:name>
@@ -100,31 +101,43 @@
               <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:ARP>
+          <aixm:aviationBoundary xsi:nil="true" nilReason="unknown"/>
+          <aixm:altimeterSource xsi:nil="true" nilReason="unknown"/>
           <aixm:contact>
             <aixm:ContactInformation gml:id="ID_CI_d9454fe2-2a61-4112-9b20-2786e1ab4a81">
               <aixm:name>MAGNETO AIRPORT AUTHORITY</aixm:name>
+              <aixm:title>AIRPORT OPERATOR</aixm:title>
               <aixm:address>
                 <aixm:PostalAddress gml:id="ID_PA_d9454fe2-2a61-4112-9b20-2786e1ab4a81">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:deliveryPoint xsi:nil="true" nilReason="unknown"/>
                   <aixm:city>MAGNETO</aixm:city>
+                  <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
+                  <aixm:postalCode xsi:nil="true" nilReason="unknown"/>
                   <aixm:country>REPUBLIC OF DONLON</aixm:country>
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
                 <aixm:OnlineContact gml:id="ID_OC_d9454fe2-2a61-4112-9b20-2786e1ab4a81_1">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.magnetoairport.dl</aixm:linkage>
+                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
                   <aixm:eMail>admin@magnetoairport.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
                 <aixm:OnlineContact gml:id="ID_OC_d9454fe2-2a61-4112-9b20-2786e1ab4a81_2">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EAMNYDYX</aixm:linkage>
+                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:eMail xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
                 <aixm:TelephoneContact gml:id="ID_TC_d9454fe2-2a61-4112-9b20-2786e1ab4a81">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:voice>05379238</aixm:voice>
                   <aixm:facsimile>05379239</aixm:facsimile>
                 </aixm:TelephoneContact>
@@ -133,10 +146,14 @@
           </aixm:contact>
           <aixm:availability>
             <aixm:AirportHeliportAvailability gml:id="ID_AHA_d9454fe2-2a61-4112-9b20-2786e1ab4a81">
+              <aixm:timeInterval xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:AirportHeliportUsage gml:id="ID_AHU_d9454fe2-2a61-4112-9b20-2786e1ab4a81_1">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_d9454fe2-2a61-4112-9b20-2786e1ab4a81_1">
                       <aixm:timeInterval>
@@ -149,7 +166,6 @@
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_d9454fe2-2a61-4112-9b20-2786e1ab4a81_1">
@@ -200,6 +216,7 @@
                 <aixm:AirportHeliportUsage gml:id="ID_AHU_d9454fe2-2a61-4112-9b20-2786e1ab4a81_2">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission uom="HR">2</aixm:priorPermission>
+                  <aixm:contact xsi:nil="true"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_d9454fe2-2a61-4112-9b20-2786e1ab4a81_4">
                       <aixm:timeInterval>
@@ -224,7 +241,6 @@
                           </aixm:translatedNote>
                         </aixm:Note>
                       </aixm:annotation>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="ID_FC_d9454fe2-2a61-4112-9b20-2786e1ab4a81_8">

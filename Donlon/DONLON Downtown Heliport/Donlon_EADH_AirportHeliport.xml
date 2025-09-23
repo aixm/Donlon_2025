@@ -37,10 +37,10 @@
     <aixm:AirportHeliport gml:id="uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea">
       <gml:identifier codeSpace="urn:uuid:">dd062d88-3e64-4a5d-bebd-89476db9ebea</gml:identifier>
       <aixm:timeSlice>
-        <aixm:AirportHeliportTimeSlice gml:id="AHP_EADH_S2C0">
+        <aixm:AirportHeliportTimeSlice gml:id="AHP_EADH">
           <gml:validTime>
-            <gml:TimePeriod gml:id="vtnull0_S2C0">
-              <gml:beginPosition>2025-10-01T00:00:00Z</gml:beginPosition>
+            <gml:TimePeriod gml:id="ID_VT_dd062d88-3e64-4a5d-bebd-89476db9ebea">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -48,7 +48,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ltnull0_S2C0">
+            <gml:TimePeriod gml:id="ID_FL_dd062d88-3e64-4a5d-bebd-89476db9ebea">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -79,19 +79,20 @@
           <aixm:abandoned>NO</aixm:abandoned>
           <aixm:certificationDate>2009-01-01</aixm:certificationDate>
           <aixm:certificationExpirationDate xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:contaminant xsi:nil="true" nilReason="inapplicable"/>
           <aixm:servedCity>
-            <aixm:City gml:id="ID_110_S2C0">
+            <aixm:City gml:id="ID_CITY_dd062d88-3e64-4a5d-bebd-89476db9ebea">
               <aixm:name>DONLON</aixm:name>
             </aixm:City>
           </aixm:servedCity>
           <aixm:responsibleOrganisation>
-            <aixm:AirportHeliportResponsibilityOrganisation gml:id="A-a72cfd3a_S2C0">
+            <aixm:AirportHeliportResponsibilityOrganisation gml:id="ID_AHRO_dd062d88-3e64-4a5d-bebd-89476db9ebea">
               <aixm:role>OPERATE</aixm:role>
               <aixm:theOrganisationAuthority xlink:href="urn:uuid:74efb6ba-a52a-46c0-a16b-03860d356882" xlink:title="DONLON DOWNTOWN HELIPORT AUTHORITY"/>
             </aixm:AirportHeliportResponsibilityOrganisation>
           </aixm:responsibleOrganisation>
           <aixm:ARP>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="elpoint1EADH_S2C0">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ARP_dd062d88-3e64-4a5d-bebd-89476db9ebea">
               <gml:pos>52.288888888888884 -32.035</gml:pos>
               <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">18</aixm:elevation>
@@ -100,31 +101,43 @@
               <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:ARP>
+          <aixm:aviationBoundary xsi:nil="true" nilReason="unknown"/>
+          <aixm:altimeterSource xsi:nil="true" nilReason="inapplicable"/>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_dd062d88-3e64-4a5d-bebd-89476db9ebea_S2C0">
+            <aixm:ContactInformation gml:id="ID_CI_dd062d88-3e64-4a5d-bebd-89476db9ebea">
               <aixm:name>DONLON HELIPORT AUTHORITY</aixm:name>
+              <aixm:title>HELIPORT OPERATOR</aixm:title>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_dd062d88-3e64-4a5d-bebd-89476db9ebea_S2C0">
+                <aixm:PostalAddress gml:id="ID_PA_dd062d88-3e64-4a5d-bebd-89476db9ebea">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:deliveryPoint>924 Riverside St.</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
+                  <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
+                  <aixm:postalCode xsi:nil="true" nilReason="unknown"/>
                   <aixm:country>REPUBLIC OF DONLON</aixm:country>
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC1_dd062d88-3e64-4a5d-bebd-89476db9ebea_S2C0">
+                <aixm:OnlineContact gml:id="ID_OC1_dd062d88-3e64-4a5d-bebd-89476db9ebea">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.donlonheliport.com</aixm:linkage>
+                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
                   <aixm:eMail>admin@donlonheliport.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC2_dd062d88-3e64-4a5d-bebd-89476db9ebea_S2C0">
+                <aixm:OnlineContact gml:id="ID_OC2_dd062d88-3e64-4a5d-bebd-89476db9ebea">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EADHYDYX</aixm:linkage>
+                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:eMail xsi:nil="true" nilReason="inapplicable"/>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_dd062d88-3e64-4a5d-bebd-89476db9ebea_S2C0">
+                <aixm:TelephoneContact gml:id="ID_TC_dd062d88-3e64-4a5d-bebd-89476db9ebea">
+                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:voice>06958238</aixm:voice>
                   <aixm:facsimile>06958239</aixm:facsimile>
                 </aixm:TelephoneContact>
@@ -132,9 +145,9 @@
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:availability>
-            <aixm:AirportHeliportAvailability gml:id="ID_AHA_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+            <aixm:AirportHeliportAvailability gml:id="ID_AHA_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T1_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                <aixm:Timesheet gml:id="ID_T1_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -173,49 +186,53 @@
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
-                <aixm:AirportHeliportUsage gml:id="ID_AHU_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                <aixm:AirportHeliportUsage gml:id="ID_AHU_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="ID_CC_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                    <aixm:ConditionCombination gml:id="ID_CC_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
+                      <aixm:timeInterval xsi:nil="true"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="ID_FC1_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                        <aixm:FlightCharacteristic gml:id="ID_FC1_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                           <aixm:rule>VFR</aixm:rule>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="ID_sC1_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                        <aixm:ConditionCombination gml:id="ID_sC1_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC2_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                            <aixm:FlightCharacteristic gml:id="ID_FC2_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                               <aixm:origin>INTL</aixm:origin>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC3_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                            <aixm:FlightCharacteristic gml:id="ID_FC3_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                               <aixm:origin>NTL</aixm:origin>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="ID_sC_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                        <aixm:ConditionCombination gml:id="ID_sC_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC4_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                            <aixm:FlightCharacteristic gml:id="ID_FC4_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                               <aixm:purpose>SCHEDULED</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC5_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                            <aixm:FlightCharacteristic gml:id="ID_FC5_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                               <aixm:purpose>NON_SCHEDULED</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
                           <aixm:flight>
-                            <aixm:FlightCharacteristic gml:id="ID_FC6_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                            <aixm:FlightCharacteristic gml:id="ID_FC6_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                               <aixm:purpose>PRIVATE</aixm:purpose>
                             </aixm:FlightCharacteristic>
                           </aixm:flight>
@@ -229,9 +246,9 @@
             </aixm:AirportHeliportAvailability>
           </aixm:availability>
           <aixm:availability>
-            <aixm:AirportHeliportAvailability gml:id="ID_AHA_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+            <aixm:AirportHeliportAvailability gml:id="ID_AHA_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T1_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+                <aixm:Timesheet gml:id="ID_T1_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
@@ -242,7 +259,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T2_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+                <aixm:Timesheet gml:id="ID_T2_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -252,7 +269,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T3_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+                <aixm:Timesheet gml:id="ID_T3_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>07:00</aixm:startTime>
@@ -262,7 +279,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T4_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+                <aixm:Timesheet gml:id="ID_T4_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>07:00</aixm:startTime>
@@ -272,7 +289,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T5_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+                <aixm:Timesheet gml:id="ID_T5_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>HOL</aixm:day>
                   <aixm:startTime>07:00</aixm:startTime>
@@ -281,55 +298,59 @@
                   <aixm:excluded>YES</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
-                <aixm:AirportHeliportUsage gml:id="ID_AHU_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+                <aixm:AirportHeliportUsage gml:id="ID_AHU_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true"/>
+                  <aixm:selection xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:operation>ALL</aixm:operation>
                 </aixm:AirportHeliportUsage>
               </aixm:usage>
             </aixm:AirportHeliportAvailability>
           </aixm:availability>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+            <aixm:Note gml:id="ID_N_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
               <aixm:propertyName>fieldElevation</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_N_LN_dd062d88-3e64-4a5d-bebd-89476db9ebea_1_S2C0">
+                <aixm:LinguisticNote gml:id="ID_N_LN_dd062d88-3e64-4a5d-bebd-89476db9ebea_1">
                   <aixm:note>Geoid undulation at ELEV PSN is 9 M</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+            <aixm:Note gml:id="ID_N_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
               <aixm:propertyName>windDirectionIndicator</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_N_LN_dd062d88-3e64-4a5d-bebd-89476db9ebea_2_S2C0">
+                <aixm:LinguisticNote gml:id="ID_N_LN_dd062d88-3e64-4a5d-bebd-89476db9ebea_2">
                   <aixm:note>NE corner of FATO, LGTD</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_dd062d88-3e64-4a5d-bebd-89476db9ebea_3_S2C0">
+            <aixm:Note gml:id="ID_N_dd062d88-3e64-4a5d-bebd-89476db9ebea_3">
               <aixm:propertyName>transitionLevel</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_N_LN_dd062d88-3e64-4a5d-bebd-89476db9ebea_3_S2C0">
+                <aixm:LinguisticNote gml:id="ID_N_LN_dd062d88-3e64-4a5d-bebd-89476db9ebea_3">
                   <aixm:note lang="eng">By ATC</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_dd062d88-3e64-4a5d-bebd-89476db9ebea_4_S2C0">
+            <aixm:Note gml:id="ID_N_dd062d88-3e64-4a5d-bebd-89476db9ebea_4">
               <aixm:propertyName>ARP</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_N_LN_dd062d88-3e64-4a5d-bebd-89476db9ebea_4_S2C0">
+                <aixm:LinguisticNote gml:id="ID_N_LN_dd062d88-3e64-4a5d-bebd-89476db9ebea_4">
                   <aixm:note>Heliport reference point site at heliport: geometric centre of TLOF. Direction and distance from (city): Donlon downtown, east shore of Donlon river.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>

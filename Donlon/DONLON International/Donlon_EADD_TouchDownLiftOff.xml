@@ -99,17 +99,22 @@
           <aixm:surfaceProperties>
             <aixm:SurfaceCharacteristics gml:id="ID_SC_543cbd61-0377-4cf3-a2ab-2c20143244c9">
               <aixm:composition>CONC</aixm:composition>
+              <aixm:preparation xsi:nil="true" nilReason="unknown"/>
               <aixm:surfaceCondition>GOOD</aixm:surfaceCondition>
               <aixm:classPCN>80</aixm:classPCN>
               <aixm:pavementTypePCN>RIGID</aixm:pavementTypePCN>
               <aixm:pavementSubgradePCN>B</aixm:pavementSubgradePCN>
               <aixm:maxTyrePressurePCN>W</aixm:maxTyrePressurePCN>
               <aixm:evaluationMethodPCN>TECH</aixm:evaluationMethodPCN>
+              <aixm:classLCN xsi:nil="true" nilReason="unknown"/>
+              <aixm:weightSIWL xsi:nil="true" nilReason="unknown"/>
+              <aixm:tyrePressureSIWL xsi:nil="true" nilReason="unknown"/>
               <aixm:weightAUW uom="T">10</aixm:weightAUW>
             </aixm:SurfaceCharacteristics>
           </aixm:surfaceProperties>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD_DONLON/INTL"/>
-          <aixm:approachTakeOffArea xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="FATO_13/31"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
+          <aixm:approachTakeOffArea xlink:href="urn:uuid:b4744933-6271-4534-874c-380596a4d3d8" xlink:title="EADD FATO 13/31"/>
+          <aixm:contaminant xsi:nil="true" nilReason="inapplicable"/>
           <aixm:annotation>
             <aixm:Note gml:id="ID_N_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
               <aixm:purpose>DESCRIPTION</aixm:purpose>
@@ -152,10 +157,14 @@
           </aixm:annotation>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="ID_MAA_543cbd61-0377-4cf3-a2ab-2c20143244c9">
+              <aixm:timeInterval xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
                   <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_543cbd61-0377-4cf3-a2ab-2c20143244c9_1">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
@@ -192,6 +201,8 @@
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_543cbd61-0377-4cf3-a2ab-2c20143244c9_2">
                   <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_543cbd61-0377-4cf3-a2ab-2c20143244c9_2">
                       <aixm:logicalOperator>NOT</aixm:logicalOperator>
@@ -219,6 +230,7 @@
                 <aixm:ManoeuvringAreaUsage gml:id="ID_MAU_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
+                  <aixm:contact xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="ID_CC_543cbd61-0377-4cf3-a2ab-2c20143244c9_3">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>

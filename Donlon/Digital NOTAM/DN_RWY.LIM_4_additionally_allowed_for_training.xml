@@ -128,12 +128,14 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The baseline status of the runway direction -->
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_4">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
@@ -183,6 +185,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                 <aixm:ManoeuvringAreaUsage gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_12">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_13">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
@@ -200,6 +203,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                 <aixm:ManoeuvringAreaUsage gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_15">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_16">
                       <aixm:timeInterval>
@@ -250,7 +254,8 @@ Editorial note: this license is an instance of the BSD license template as provi
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_21">
                   <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission nilReason="unknown" xsi:nil="true"/>
+                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
+                  <aixm:contact xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_b41fc8a3-e7c1-4a3c-a6fc-b1b3b71bc7cd_1_0_T_22">
                       <aixm:timeInterval>

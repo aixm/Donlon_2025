@@ -76,7 +76,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:estimatedValidity xsi:nil="true"/>
           <event:activity xsi:nil="true"/>
           <event:summary xsi:nil="true"/>
-          <event:concernedAirspace xlink:href="urn:uuid:e7cb2c1e-97d0-4647-b56e-ebcd460e7deb" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <event:notification>
             <event:NOTAM gml:id="id_037db012-2073-4975-8aa1-97234cd27155_1_0_B_3">
@@ -93,7 +93,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:minimumFL uom="FL">000</event:minimumFL>
               <event:maximumFL uom="FL">999</event:maximumFL>
               <event:coordinates>5222N03157W</event:coordinates>
-              <event:radius>005</event:radius>
+              <event:radius uom="NM">005</event:radius>
               <event:location>EADD</event:location>
               <event:effectiveStart>2511121600</event:effectiveStart>
               <event:effectiveEnd>2511162230</event:effectiveEnd>
@@ -359,9 +359,9 @@ Renovation of terminal building and hangars.</event:text>
               </aixm:timeInterval>
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_205d09b6-af8d-4172-ac71-d6cdab8edc70_1_0_T_36">
-                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:timeReference>UTC-2</aixm:timeReference> <!-- Local timezone for DONLON INTL. -->
                   <aixm:startDate>14-11</aixm:startDate>
-                  <aixm:endDate>14-11</aixm:endDate>
+                  <aixm:endDate>15-11</aixm:endDate>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
                   <aixm:startTime>00:00</aixm:startTime>

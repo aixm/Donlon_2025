@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2025, EUROCONTROL
+  
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+  
+  THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+
+<!--
+  Temporality use case: decommissioning of a feature with future changes
+  Feature: Airspace
+  
+                               Initial valid TimeSlice: BASELINE 1/0, validTime: 2025-11-01T00:00:00Z - "unknown"
+                        Termination of valid TimeSlice: BASELINE 1/1, validTime: 2025-11-01T00:00:00Z - 2026-12-01T00:00:00Z
+                              Planned update TimeSlice: upper limit increased to 1500M
+                                                        BASELINE 2/0, validTime: 2026-12-01T00:00:00Z - "unknown"
+  Decommissioning at a point before the planned update: BASELINE 1/2, validTime: 2025-11-01T00:00:00Z - 2026-11-05T00:00:00Z
+           Termination of the planned update TimeSlice: BASELINE 2/1, validTime.@nilReason="inapplicable", featureLifetime.TimePeriod.endPosition = "2026-11-05T00:00:00Z"
+-->
+
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gts="http://www.isotc211.org/2005/gts"
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gss="http://www.isotc211.org/2005/gss" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:gsr="http://www.isotc211.org/2005/gsr"
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"
+  gml:id="DONLON_Decommissioning_of_a_Feature_with_Future_Changes">
+  
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.df7b7fab-5508-44c3-802b-46cbafc75091">
+      <gml:identifier codeSpace="urn:uuid:">df7b7fab-5508-44c3-802b-46cbafc75091</gml:identifier>
+      <!-- Termination of valid TimeSlice -->
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="ASE_TOMAR_D-OTHER_S1C1">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>1</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>D_OTHER</aixm:type>
+          <aixm:designator>EAV10</aixm:designator>
+          <aixm:localType>HANG GLIDING AREA</aixm:localType>
+          <aixm:name>TOMAR</aixm:name>
+          <aixm:designatorICAO>NO</aixm:designatorICAO>
+          <aixm:controlType xsi:nil="true" nilReason="unknown"/>
+          <aixm:upperLowerSeparation xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:class xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="ID_AGC_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+              <aixm:operation xsi:nil="true"/>
+              <aixm:operationSequence xsi:nil="true"/>
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="ID_AGC_AV_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+                  <aixm:upperLimit uom="M">1000</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:maximumLimit xsi:nil="true"/>
+                  <aixm:maximumLimitReference xsi:nil="true"/>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:minimumLimit xsi:nil="true"/>
+                  <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:Ring>
+                              <gml:curveMember>
+                                <gml:Curve gml:id="ID_AGC_AV_C_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+                                  <gml:segments>
+                                    <gml:CircleByCenterPoint numArc="1">
+                                      <gml:pos>54.168889 -23.750833</gml:pos>
+                                      <gml:radius uom="[nmi_i]">10</gml:radius>
+                                    </gml:CircleByCenterPoint>
+                                  </gml:segments>
+                                </gml:Curve>
+                              </gml:curveMember>
+                            </gml:Ring>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                      <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="ID_AA_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T1_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T2_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:activity>HANGGLIDING</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="ID_AL_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc_1">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="ID_AA_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T3_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T4_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T5_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:activity xsi:nil="true"/>
+              <aixm:status>INACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="ID_AL_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc_2">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc_2">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_N_LN_ba2d63cf-0592-4c6a-b54f-3ef55217ebdc_2">
+                  <aixm:note lang="eng">Operator/User and Tel Nr: Tomar Flying Club, TEL 062 535 7373</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+      <!-- Planned update TimeSlice -->
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="ASE_TOMAR_D-OTHER_S2C0">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>D_OTHER</aixm:type>
+          <aixm:designator>EAV10</aixm:designator>
+          <aixm:localType>HANG GLIDING AREA</aixm:localType>
+          <aixm:name>TOMAR</aixm:name>
+          <aixm:designatorICAO>NO</aixm:designatorICAO>
+          <aixm:controlType xsi:nil="true" nilReason="unknown"/>
+          <aixm:upperLowerSeparation xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:class xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="ID_AGC_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+              <aixm:operation xsi:nil="true"/>
+              <aixm:operationSequence xsi:nil="true"/>
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="ID_AGC_AV_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+                  <aixm:upperLimit uom="M">1500</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:maximumLimit xsi:nil="true"/>
+                  <aixm:maximumLimitReference xsi:nil="true"/>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:minimumLimit xsi:nil="true"/>
+                  <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:Ring>
+                              <gml:curveMember>
+                                <gml:Curve gml:id="ID_AGC_AV_C_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+                                  <gml:segments>
+                                    <gml:CircleByCenterPoint numArc="1">
+                                      <gml:pos>54.168889 -23.750833</gml:pos>
+                                      <gml:radius uom="[nmi_i]">10</gml:radius>
+                                    </gml:CircleByCenterPoint>
+                                  </gml:segments>
+                                </gml:Curve>
+                              </gml:curveMember>
+                            </gml:Ring>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                      <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="ID_AA_bcf19445-9df6-4e13-a8b9-601c8c6ce953_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T1_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T2_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:activity>HANGGLIDING</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="ID_AL_bcf19445-9df6-4e13-a8b9-601c8c6ce953_1">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="ID_AA_bcf19445-9df6-4e13-a8b9-601c8c6ce953_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T3_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T4_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T5_bcf19445-9df6-4e13-a8b9-601c8c6ce953">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:activity xsi:nil="true"/>
+              <aixm:status>INACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="ID_AL_bcf19445-9df6-4e13-a8b9-601c8c6ce953_2">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_bcf19445-9df6-4e13-a8b9-601c8c6ce953_2">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_N_LN_bcf19445-9df6-4e13-a8b9-601c8c6ce953_2">
+                  <aixm:note lang="eng">Operator/User and Tel Nr: Tomar Flying Club, TEL 062 535 7373</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+      <!-- Decommissioning at a point before the planned update -->
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="ASE_TOMAR_D-OTHER_S1C2">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_98398dea-ebdd-4347-aeda-14d391aac1af">
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-05T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>2</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_98398dea-ebdd-4347-aeda-14d391aac1af">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-05T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>D_OTHER</aixm:type>
+          <aixm:designator>EAV10</aixm:designator>
+          <aixm:localType>HANG GLIDING AREA</aixm:localType>
+          <aixm:name>TOMAR</aixm:name>
+          <aixm:designatorICAO>NO</aixm:designatorICAO>
+          <aixm:controlType xsi:nil="true" nilReason="unknown"/>
+          <aixm:upperLowerSeparation xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:class xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="ID_AGC_98398dea-ebdd-4347-aeda-14d391aac1af">
+              <aixm:operation xsi:nil="true"/>
+              <aixm:operationSequence xsi:nil="true"/>
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="ID_AGC_AV_98398dea-ebdd-4347-aeda-14d391aac1af">
+                  <aixm:upperLimit uom="M">1000</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:maximumLimit xsi:nil="true"/>
+                  <aixm:maximumLimitReference xsi:nil="true"/>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:minimumLimit xsi:nil="true"/>
+                  <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_98398dea-ebdd-4347-aeda-14d391aac1af">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:Ring>
+                              <gml:curveMember>
+                                <gml:Curve gml:id="ID_AGC_AV_C_98398dea-ebdd-4347-aeda-14d391aac1af">
+                                  <gml:segments>
+                                    <gml:CircleByCenterPoint numArc="1">
+                                      <gml:pos>54.168889 -23.750833</gml:pos>
+                                      <gml:radius uom="[nmi_i]">10</gml:radius>
+                                    </gml:CircleByCenterPoint>
+                                  </gml:segments>
+                                </gml:Curve>
+                              </gml:curveMember>
+                            </gml:Ring>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                      <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="ID_AA_98398dea-ebdd-4347-aeda-14d391aac1af_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T1_98398dea-ebdd-4347-aeda-14d391aac1af">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T2_98398dea-ebdd-4347-aeda-14d391aac1af">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:activity>HANGGLIDING</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="ID_AL_98398dea-ebdd-4347-aeda-14d391aac1af_1">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="ID_AA_98398dea-ebdd-4347-aeda-14d391aac1af_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T3_98398dea-ebdd-4347-aeda-14d391aac1af">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T4_98398dea-ebdd-4347-aeda-14d391aac1af">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T5_98398dea-ebdd-4347-aeda-14d391aac1af">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:activity xsi:nil="true"/>
+              <aixm:status>INACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="ID_AL_98398dea-ebdd-4347-aeda-14d391aac1af_2">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_98398dea-ebdd-4347-aeda-14d391aac1af_2">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_N_LN_98398dea-ebdd-4347-aeda-14d391aac1af_2">
+                  <aixm:note lang="eng">Operator/User and Tel Nr: Tomar Flying Club, TEL 062 535 7373</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+      <!-- Termination of the planned update TimeSlice -->
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="ASE_TOMAR_D-OTHER_S2C1">
+          <gml:validTime nilReason="inapplicable"/>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>1</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_e0caa09a-9703-444e-b033-61ff7aad049f">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-05T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>D_OTHER</aixm:type>
+          <aixm:designator>EAV10</aixm:designator>
+          <aixm:localType>HANG GLIDING AREA</aixm:localType>
+          <aixm:name>TOMAR</aixm:name>
+          <aixm:designatorICAO>NO</aixm:designatorICAO>
+          <aixm:controlType xsi:nil="true" nilReason="unknown"/>
+          <aixm:upperLowerSeparation xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:class xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="ID_AGC_e0caa09a-9703-444e-b033-61ff7aad049f">
+              <aixm:operation xsi:nil="true"/>
+              <aixm:operationSequence xsi:nil="true"/>
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="ID_AGC_AV_e0caa09a-9703-444e-b033-61ff7aad049f">
+                  <aixm:upperLimit uom="M">1500</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:maximumLimit xsi:nil="true"/>
+                  <aixm:maximumLimitReference xsi:nil="true"/>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:minimumLimit xsi:nil="true"/>
+                  <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_e0caa09a-9703-444e-b033-61ff7aad049f">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:Ring>
+                              <gml:curveMember>
+                                <gml:Curve gml:id="ID_AGC_AV_C_e0caa09a-9703-444e-b033-61ff7aad049f">
+                                  <gml:segments>
+                                    <gml:CircleByCenterPoint numArc="1">
+                                      <gml:pos>54.168889 -23.750833</gml:pos>
+                                      <gml:radius uom="[nmi_i]">10</gml:radius>
+                                    </gml:CircleByCenterPoint>
+                                  </gml:segments>
+                                </gml:Curve>
+                              </gml:curveMember>
+                            </gml:Ring>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                      <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="ID_AA_e0caa09a-9703-444e-b033-61ff7aad049f_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T1_e0caa09a-9703-444e-b033-61ff7aad049f">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T2_e0caa09a-9703-444e-b033-61ff7aad049f">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:activity>HANGGLIDING</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="ID_AL_e0caa09a-9703-444e-b033-61ff7aad049f_1">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="ID_AA_e0caa09a-9703-444e-b033-61ff7aad049f_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T3_e0caa09a-9703-444e-b033-61ff7aad049f">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T4_e0caa09a-9703-444e-b033-61ff7aad049f">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T5_e0caa09a-9703-444e-b033-61ff7aad049f">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:activity xsi:nil="true"/>
+              <aixm:status>INACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="ID_AL_e0caa09a-9703-444e-b033-61ff7aad049f_2">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_e0caa09a-9703-444e-b033-61ff7aad049f_2">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_N_LN_e0caa09a-9703-444e-b033-61ff7aad049f_2">
+                  <aixm:note lang="eng">Operator/User and Tel Nr: Tomar Flying Club, TEL 062 535 7373</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file includes contributions from Solitec Software Solutions, Luciad, EUROCONTROL, Comsoft -->
+<!-- Copyright (c) 2025, EUROCONTROL & FAA
+  
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+  
+  THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gts="http://www.isotc211.org/2005/gts" 
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:gss="http://www.isotc211.org/2005/gss" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:gsr="http://www.isotc211.org/2005/gsr" 
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd" 
+  gml:id="DONLON_EADD_WorkArea_Baseline">
+  <message:hasMember>
+    <aixm:WorkArea gml:id="uuid.d23e8947-4092-47b9-b6ee-8a4037a4faa2">
+      <gml:identifier codeSpace="urn:uuid:">d23e8947-4092-47b9-b6ee-8a4037a4faa2</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_d23e8947-4092-47b9-b6ee-8a4037a4faa2">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_d23e8947-4092-47b9-b6ee-8a4037a4faa2">
+              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_d23e8947-4092-47b9-b6ee-8a4037a4faa2">
+              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>SURFACEWORK</aixm:type>
+          <aixm:plannedOperational>2027-01-01</aixm:plannedOperational>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
+          <aixm:extent>
+            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ES_d23e8947-4092-47b9-b6ee-8a4037a4faa2">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <aixm:ElevatedCurve gml:id="ID_EC_d23e8947-4092-47b9-b6ee-8a4037a4faa2">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>52.3737361807 -31.9469297576 52.3746125209 -31.9470728019 52.3744840962 -31.9491731956 52.3741019413 -31.9485750441 52.3736553552 -31.9482516379 52.3737361807 -31.9469297576</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </aixm:ElevatedCurve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+              <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:activation>
+            <aixm:WorkareaActivity gml:id="ID_WA_d23e8947-4092-47b9-b6ee-8a4037a4faa2_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T_d23e8947-4092-47b9-b6ee-8a4037a4faa2_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>16:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:isActive>YES</aixm:isActive>
+            </aixm:WorkareaActivity>
+          </aixm:activation>
+          <aixm:activation>
+            <aixm:WorkareaActivity gml:id="ID_WA_d23e8947-4092-47b9-b6ee-8a4037a4faa2_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T_d23e8947-4092-47b9-b6ee-8a4037a4faa2_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:dayTil>AFT_WORK_DAY</aixm:dayTil>
+                  <aixm:startTime>16:00</aixm:startTime>
+                  <aixm:endTime>06:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:isActive>NO</aixm:isActive>
+            </aixm:WorkareaActivity>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_d23e8947-4092-47b9-b6ee-8a4037a4faa2">
+              <aixm:propertyName>type</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_LN_d23e8947-4092-47b9-b6ee-8a4037a4faa2">
+                  <aixm:note lang="eng">Works will be carried out to resurface the north-west corner of Apron A.
+Works are expected to be completed by 1 January 2027 at 00:00 UTC.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:WorkAreaTimeSlice>
+      </aixm:timeSlice>
+    </aixm:WorkArea>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:WorkArea gml:id="uuid.ecca8219-b6d5-42d9-864f-590de56b3d9c">
+      <gml:identifier codeSpace="urn:uuid:">ecca8219-b6d5-42d9-864f-590de56b3d9c</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_ecca8219-b6d5-42d9-864f-590de56b3d9c_S1C0">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_ecca8219-b6d5-42d9-864f-590de56b3d9c">
+              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_ecca8219-b6d5-42d9-864f-590de56b3d9c">
+              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>SURFACEWORK</aixm:type>
+          <aixm:plannedOperational>2026-12-20</aixm:plannedOperational>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
+          <aixm:extent>
+            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ES_ecca8219-b6d5-42d9-864f-590de56b3d9c">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <aixm:ElevatedCurve gml:id="ID_EC_ecca8219-b6d5-42d9-864f-590de56b3d9c">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>52.3697343455 -31.9462733079 52.3696577205 -31.9475264316 52.3691269923 -31.9474398053 52.3692036178 -31.9461866906 52.3697343455 -31.9462733079</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </aixm:ElevatedCurve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+              <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:activation>
+            <aixm:WorkareaActivity gml:id="ID_WA_ecca8219-b6d5-42d9-864f-590de56b3d9c_1">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T_ecca8219-b6d5-42d9-864f-590de56b3d9c_1">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:startTime>06:00</aixm:startTime>
+                  <aixm:endTime>16:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:isActive>YES</aixm:isActive>
+            </aixm:WorkareaActivity>
+          </aixm:activation>
+          <aixm:activation>
+            <aixm:WorkareaActivity gml:id="ID_WA_ecca8219-b6d5-42d9-864f-590de56b3d9c_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="ID_T_ecca8219-b6d5-42d9-864f-590de56b3d9c_2">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>WORK_DAY</aixm:day>
+                  <aixm:dayTil>AFT_WORK_DAY</aixm:dayTil>
+                  <aixm:startTime>16:00</aixm:startTime>
+                  <aixm:endTime>06:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:isActive>NO</aixm:isActive>
+            </aixm:WorkareaActivity>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="ID_N_ecca8219-b6d5-42d9-864f-590de56b3d9c">
+              <aixm:propertyName>type</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="ID_LN_ecca8219-b6d5-42d9-864f-590de56b3d9c">
+                  <aixm:note lang="eng">Works will be carried out to resurface the south-west corner of Apron A.
+Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:WorkAreaTimeSlice>
+      </aixm:timeSlice>
+    </aixm:WorkArea>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:WorkArea gml:id="uuid.d0571608-4ae3-44e4-8b59-889e81dbb609">
+      <gml:identifier codeSpace="urn:uuid:">d0571608-4ae3-44e4-8b59-889e81dbb609</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_d0571608-4ae3-44e4-8b59-889e81dbb609_S1C0">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="ID_VT_d0571608-4ae3-44e4-8b59-889e81dbb609">
+              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="ID_FL_d0571608-4ae3-44e4-8b59-889e81dbb609">
+              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>SURFACEWORK</aixm:type>
+          <aixm:plannedOperational>2027-01-01</aixm:plannedOperational>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
+          <aixm:extent>
+            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ES_d0571608-4ae3-44e4-8b59-889e81dbb609">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <aixm:Curve gml:id="ID_C_d0571608-4ae3-44e4-8b59-889e81dbb609">
+                          <gml:segments>
+                            <gml:CircleByCenterPoint numArc="1">
+                              <gml:pos>52.3743773647 -31.9453369090</gml:pos>
+                              <gml:radius uom="m">35</gml:radius>
+                            </gml:CircleByCenterPoint>
+                          </gml:segments>
+                        </aixm:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+              <aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
+              <aixm:elevation xsi:nil="true" nilReason="unknown"/>
+              <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+              <aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+              <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:activation>
+            <aixm:WorkareaActivity gml:id="ID_WA_d0571608-4ae3-44e4-8b59-889e81dbb609_1">
+              <aixm:timeInterval xsi:nil="true"/> 
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:isActive>YES</aixm:isActive>
+            </aixm:WorkareaActivity>
+          </aixm:activation>
+          <aixm:annotation xsi:nil="true"/>
+        </aixm:WorkAreaTimeSlice>
+      </aixm:timeSlice>
+    </aixm:WorkArea>
+  </message:hasMember>
+</message:AIXMBasicMessage>

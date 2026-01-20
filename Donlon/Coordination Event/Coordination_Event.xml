@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2026, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- This file contains the Coordination Event as well as the events related to the creation of the various features used in this coordination event example -->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-m/Event_Features.xsd"
+  gml:id="id_4804f098-016f-441f-a3ea-c46ce7f5e235">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.aa5d99e0-f4cb-4fba-8225-a6a2c29afd2b">
+      <gml:identifier codeSpace="urn:uuid:">aa5d99e0-f4cb-4fba-8225-a6a2c29afd2b</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_903b1077-72d3-4a37-b1a0-54b0832416d2_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_903b1077-72d3-4a37-b1a0-54b0832416d2_1_0_B_1">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-05-15T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_903b1077-72d3-4a37-b1a0-54b0832416d2_1_0_B_2">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-05-15T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EAAD-EGGX COORDINATION</event:name>
+          <event:designator>EA-EG COORD 1</event:designator>
+          <event:scenario>COORDINATION</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:5025db3b-00c1-46f1-987f-b809e2268d17" xlink:title="EGGX FIR SHANWICK OCEANIC FIR" xlink:type="simple"/>
+          <event:container xsi:nil="true"/>
+          <event:notification xsi:nil="true"/>
+          <event:provider xlink:href="urn:uuid:68bc1798-44c0-4cd9-8b1e-d7243ccc492e" xlink:title="DONATSA - DONLON AIR TRAFFIC SERVICES ADMINISTRATION EA-ATS ATS" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.8f6da65b-7d7e-4004-ae28-cfdb795a47cd">
+      <gml:identifier codeSpace="urn:uuid:">8f6da65b-7d7e-4004-ae28-cfdb795a47cd</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_67915fd5-6d3c-4ad8-9e89-8f0883660464_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_67915fd5-6d3c-4ad8-9e89-8f0883660464_1_0_B_1">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-05-15T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_67915fd5-6d3c-4ad8-9e89-8f0883660464_1_0_B_2">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-05-15T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EAAD NEW DESIGNATED POINT (BASIR)</event:name>
+          <event:designator>EA BASIR</event:designator>
+          <event:scenario>UNGUIDED_PERM</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:parentEvent xlink:href="urn:uuid:aa5d99e0-f4cb-4fba-8225-a6a2c29afd2b" xlink:title="EAAD-EGGX COORDINATION" xlink:type="simple"/>
+          <event:container xsi:nil="true"/>
+          <event:notification xsi:nil="true"/>
+          <event:provider xlink:href="urn:uuid:68bc1798-44c0-4cd9-8b1e-d7243ccc492e" xlink:title="DONATSA - DONLON AIR TRAFFIC SERVICES ADMINISTRATION EA-ATS ATS" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.a0f50db9-b770-49c3-943d-36e42ff09b8d">
+      <gml:identifier codeSpace="urn:uuid:">a0f50db9-b770-49c3-943d-36e42ff09b8d</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_96d13ec9-ae36-4b93-a33f-408577995c54_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_96d13ec9-ae36-4b93-a33f-408577995c54_1_0_B_1">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-05-15T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_96d13ec9-ae36-4b93-a33f-408577995c54_1_0_B_2">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-05-15T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EAAD-EGGX NEW ROUTE UT348</event:name>
+          <event:designator>EA-EG UT348</event:designator>
+          <event:scenario>UNGUIDED_PERM</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:5025db3b-00c1-46f1-987f-b809e2268d17" xlink:title="EGGX FIR SHANWICK OCEANIC FIR" xlink:type="simple"/>
+          <event:parentEvent xlink:href="urn:uuid:aa5d99e0-f4cb-4fba-8225-a6a2c29afd2b" xlink:title="EAAD-EGGX COORDINATION" xlink:type="simple"/>
+          <event:contactInformation xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <event:notification xsi:nil="true"/>
+          <event:provider xlink:href="urn:uuid:09424934-8ce5-0ae9-e053-0b751dc2b779" xlink:title="NATIONAL AIR TRAFFIC SERVICES (NATS, UK) EG-ATS ATS" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.2ce6252a-08f9-44df-a1c1-45cc1dfbefef">
+      <gml:identifier codeSpace="urn:uuid:">2ce6252a-08f9-44df-a1c1-45cc1dfbefef</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_692a7509-7131-4f24-8556-4f76f2ce3a81_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_692a7509-7131-4f24-8556-4f76f2ce3a81_1_0_B_1">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-05-15T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_692a7509-7131-4f24-8556-4f76f2ce3a81_1_0_B_2">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-05-15T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EAAD-EGGX NEW ROUTE SEGMENT ON UT348</event:name>
+          <event:designator>EA-EG UT348 SEG</event:designator>
+          <event:scenario>UNGUIDED_PERM</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:5025db3b-00c1-46f1-987f-b809e2268d17" xlink:title="EGGX FIR SHANWICK OCEANIC FIR" xlink:type="simple"/>
+          <event:parentEvent xlink:href="urn:uuid:aa5d99e0-f4cb-4fba-8225-a6a2c29afd2b" xlink:title="EAAD-EGGX COORDINATION" xlink:type="simple"/>
+          <event:contactInformation xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <event:notification xsi:nil="true"/>
+          <event:provider xlink:href="urn:uuid:09424934-8ce5-0ae9-e053-0b751dc2b779" xlink:title="NATIONAL AIR TRAFFIC SERVICES (NATS, UK) EG-ATS ATS" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2026, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Creation of a new RouteSegment between EAAD AMSWELL FIR and EGGX SHANWICK OCEANIC FIR -->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-m/Event_Features.xsd"
+  gml:id="id_2ed67a8d-1a3f-436d-8d35-c5dd1fe15c0d">
+  
+  <message:hasMember>
+    <aixm:RouteSegment gml:id="uuid.84e3bb34-8c70-4ea0-8de0-1837f1d4d933">
+      <gml:identifier codeSpace="urn:uuid:">84e3bb34-8c70-4ea0-8de0-1837f1d4d933</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RouteSegmentTimeSlice gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_1">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_2">
+              <gml:beginPosition>2026-05-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:level>UPPER</aixm:level>
+          <aixm:upperLimit uom="FL">660</aixm:upperLimit>
+          <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+          <aixm:lowerLimit uom="FL">195</aixm:lowerLimit>
+          <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+          <aixm:minimumObstacleClearanceAltitude xsi:nil="true" nilReason="unknown"/>
+          <aixm:pathType>GDS</aixm:pathType>
+          <aixm:trueTrack>052</aixm:trueTrack>
+          <aixm:magneticTrack>051</aixm:magneticTrack>
+          <aixm:reverseTrueTrack>232</aixm:reverseTrueTrack>
+          <aixm:reverseMagneticTrack>231</aixm:reverseMagneticTrack>
+          <aixm:length uom="NM">190.2</aixm:length>
+          <aixm:widthLeft uom="NM">5</aixm:widthLeft>
+          <aixm:widthRight uom="NM">5</aixm:widthRight>
+          <aixm:turnDirection xsi:nil="true" nilReason="unknown"/>
+          <aixm:signalGap xsi:nil="true" nilReason="unknown"/>
+          <aixm:minimumEnrouteAltitude xsi:nil="true" nilReason="unknown"/>
+          <aixm:minimumCrossingAtEnd xsi:nil="true" nilReason="unknown"/>
+          <aixm:minimumCrossingAtEndReference xsi:nil="true" nilReason="unknown"/>
+          <aixm:maximumCrossingAtEnd xsi:nil="true" nilReason="unknown"/>
+          <aixm:maximumCrossingAtEndReference xsi:nil="true" nilReason="unknown"/>
+          <aixm:navigationType>RNAV</aixm:navigationType>
+          <aixm:requiredNavigationPerformance>5</aixm:requiredNavigationPerformance>
+          <aixm:designatorSuffix xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:start>
+            <aixm:EnRouteSegmentPoint gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_3">
+              <aixm:reportingATC>ON_REQUEST</aixm:reportingATC>
+              <aixm:flyOver>NO</aixm:flyOver>
+              <aixm:waypoint>YES</aixm:waypoint>
+              <aixm:radarGuidance>YES</aixm:radarGuidance>
+              <aixm:facilityMakeup xsi:nil="true" nilReason="unknown"/>
+              <aixm:pointChoice_fixDesignatedPoint xlink:href="urn:uuid:1963ad04-fd1d-4154-bd67-600f537b14ea" xlink:title="BASIL ICAO BASIL" xlink:type="simple"/>
+              <aixm:roleFreeFlight xsi:nil="true" nilReason="unknown"/>
+              <aixm:roleRVSM xsi:nil="true" nilReason="unknown"/>
+              <aixm:turnRadius xsi:nil="true" nilReason="unknown"/>
+              <aixm:roleMilitaryTraining xsi:nil="true" nilReason="unknown"/>
+            </aixm:EnRouteSegmentPoint>
+          </aixm:start>
+          <aixm:routeFormed xlink:href="urn:uuid:009d7b07-90f2-42b9-a9e0-ea0fb4f40d84" xlink:title="UT348 EA-EG" xlink:type="simple"/>
+          <aixm:evaluationArea xsi:nil="true" nilReason="unknown"/>
+          <aixm:curveExtent>
+            <aixm:Curve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_4">
+              <gml:segments>
+                <gml:GeodesicString>
+                  <gml:posList>56.030829 -24.559002 58.0 -20.0</gml:posList>
+                </gml:GeodesicString>
+              </gml:segments>
+            </aixm:Curve>
+          </aixm:curveExtent>
+          <aixm:end>
+            <aixm:EnRouteSegmentPoint gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_5">
+              <aixm:reportingATC>ON_REQUEST</aixm:reportingATC>
+              <aixm:flyOver>NO</aixm:flyOver>
+              <aixm:waypoint>YES</aixm:waypoint>
+              <aixm:radarGuidance>YES</aixm:radarGuidance>
+              <aixm:facilityMakeup xsi:nil="true" nilReason="unknown"/>
+              <aixm:pointChoice_fixDesignatedPoint xlink:href="urn:uuid:17e1caae-a223-47a0-adcd-85dc54b20c71" xlink:title="5820N COORD 58N020W" xlink:type="simple"/>
+              <aixm:roleFreeFlight xsi:nil="true" nilReason="unknown"/>
+              <aixm:roleRVSM xsi:nil="true" nilReason="unknown"/>
+              <aixm:turnRadius xsi:nil="true" nilReason="unknown"/>
+              <aixm:roleMilitaryTraining xsi:nil="true" nilReason="unknown"/>
+            </aixm:EnRouteSegmentPoint>
+          </aixm:end>
+          <aixm:availability>
+            <aixm:RouteAvailability gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_6">
+              <aixm:direction>FORWARD</aixm:direction>
+              <aixm:status>OPEN</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_7">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:RouteAvailability>
+          </aixm:availability>
+          <aixm:availability>
+            <aixm:RouteAvailability gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_8">
+              <aixm:direction>BACKWARD</aixm:direction>
+              <aixm:status>OPEN</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_9">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:RouteAvailability>
+          </aixm:availability>
+          <aixm:annotation xsi:nil="true"/>
+          <aixm:extension>
+            <event:RouteSegmentExtension gml:id="id_4e64abce-841c-4704-875e-931bda24b2e1_1_0_B_10">
+              <event:theEvent xlink:href="urn:uuid:2ce6252a-08f9-44df-a1c1-45cc1dfbefef" xlink:type="simple"/>
+            </event:RouteSegmentExtension>
+          </aixm:extension>
+        </aixm:RouteSegmentTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RouteSegment>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

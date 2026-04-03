@@ -43,6 +43,8 @@ The copies are arranged in a grid pattern with a set distance between each posit
 Usage example:
   python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30
 OR
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30 --exc-airspace-types CTA CTA_P
+OR
   python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --output Donlon_Dataset_Copies --grid-rows 5 --grid-cols 6 --distance-nm 30
 OR
   python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z
@@ -55,6 +57,7 @@ Input parameters:
 --grid-rows -> select the horizontal size of the grid
 --grid-cols -> select the vertical size of the grid
 --distance-nm -> select the horizontal and vertical distance between each grid position
+--exc-airspace-types -> (optional) excludes the selected airspace types from being multiplies (FIR and FIR_P are by default excluded)
 --effectiveDateStart -> (optional) all features across all copy sets will have the validTime.beginPosition set to the value selected through this parameter
 --timeOffset -> (optional) if used in addition to --effectiveDateStart, then the features in the first copy set get the effectiveDateStart time for validTime.beginPosition,
 then for each of the remaining copy sets the validTime.beginPosition is incremented by the value specified in timeOffset (days-hours-minutes)
@@ -111,8 +114,8 @@ FEATURE_TYPES = [
     'Airspace',
 ]
 
-# Airspace types to exclude from copying
-AIRSPACE_TYPES_EXCLUDE = {'FIR', 'FIR_P', 'CTA', 'CTA_P'}
+# Airspace types always excluded from copying
+AIRSPACE_TYPES_EXCLUDE_DEFAULT = {'FIR', 'FIR_P'}
 
 # Output ordering for the All_features file
 ALL_FEATURES_ORDER = [
@@ -303,7 +306,7 @@ def extract_features_by_type(root):
     return result
 
 
-def collect_eadd_features(features_by_type):
+def collect_eadd_features(features_by_type, ase_types_exclude=None):
     """
     Starting from the EADD AirportHeliport, walk the reference chain to
     find all features that belong to this airport.
@@ -408,7 +411,9 @@ def collect_eadd_features(features_by_type):
 
     # ---- Airspace (all except excluded types) ----
 
-    # 14. Airspaces, skipping types in AIRSPACE_TYPES_EXCLUDE
+    # 14. Airspaces, skipping excluded types
+    if ase_types_exclude is None:
+        ase_types_exclude = AIRSPACE_TYPES_EXCLUDE_DEFAULT
     for fuuid, felem in features_by_type['Airspace'].items():
         if fuuid in collected:
             continue
@@ -418,7 +423,7 @@ def collect_eadd_features(features_by_type):
             tag = child.tag
             if isinstance(tag, str) and 'AirspaceTimeSlice' in tag:
                 t = child.find('aixm:type', NSMAP)
-                if t is not None and t.text and t.text.strip() in AIRSPACE_TYPES_EXCLUDE:
+                if t is not None and t.text and t.text.strip() in ase_types_exclude:
                     skip = True
                 break
         if not skip:
@@ -781,6 +786,10 @@ def main():
     parser.add_argument('--grid-rows', '-r', type=int, default=5)
     parser.add_argument('--grid-cols', '-c', type=int, default=6)
     parser.add_argument('--distance-nm', '-d', type=float, default=30.0)
+    parser.add_argument('--exc-airspace-types', nargs='*', default=[],
+                        metavar='TYPE',
+                        help='Airspace types to exclude from multiplication '
+                             '(e.g. P CTA CTA_P). FIR and FIR_P are always excluded.')
     parser.add_argument('--count', '-n', type=int, default=30)
     parser.add_argument('--effectiveDateStart', default=None,
                         help='validTime beginPosition for all copies '
@@ -797,6 +806,9 @@ def main():
         args.output = os.path.join(input_dir, 'Donlon_Dataset_Copies')
 
     count = min(args.count, args.grid_rows * args.grid_cols)
+
+    # Build airspace type exclusion set
+    ase_types_exclude = AIRSPACE_TYPES_EXCLUDE_DEFAULT | set(args.exc_airspace_types)
 
     # Parse effective date and time offset
     effective_start = None
@@ -815,6 +827,7 @@ def main():
     print(f"  Grid:     {args.grid_rows} x {args.grid_cols}")
     print(f"  Distance: {args.distance_nm} NM")
     print(f"  Count:    {count}")
+    print(f"  Excluded airspace types: {', '.join(sorted(ase_types_exclude))}")
     if effective_start:
         print(f"  Effective date start: {args.effectiveDateStart}")
     if time_offset:
@@ -834,7 +847,7 @@ def main():
 
     # Collect features belonging to EADD
     print("\nCollecting EADD-related features ...")
-    collected = collect_eadd_features(features_by_type)
+    collected = collect_eadd_features(features_by_type, ase_types_exclude)
 
     # Print summary per type
     type_counts = {}

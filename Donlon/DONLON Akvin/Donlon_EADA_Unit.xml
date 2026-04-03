@@ -39,7 +39,7 @@
       <aixm:timeSlice>
         <aixm:UnitTimeSlice gml:id="UNIT_AKVIN_SAR">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+            <gml:TimePeriod gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -48,7 +48,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+            <gml:TimePeriod gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -59,7 +59,7 @@
           <aixm:designator>EADA-SAR</aixm:designator>
           <aixm:military xsi:nil="true" nilReason="unknown"/>
           <aixm:position>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_3">
               <gml:pos>52.618333333 -32.919999999</gml:pos>
               <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">15.0</aixm:elevation>
@@ -68,19 +68,20 @@
               <aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:position>
-          <aixm:airportLocation xlink:href="urn:uuid:556d7442-402d-467b-81af-09f2eed71cf7" xlink:title="EADA AKVIN/Akvin"/>
-          <aixm:ownerOrganisation xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="ORG-AUTH NTL-AUTH DONLON-CAA"/>
+          <aixm:airportLocation xlink:href="urn:uuid:556d7442-402d-467b-81af-09f2eed71cf7" xlink:title="EADA AKVIN/Akvin" xlink:type="simple"/>
+          <aixm:ownerOrganisation xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="ORG-AUTH NTL-AUTH DONLON-CAA" xlink:type="simple"/>
           <aixm:contact xsi:nil="true" nilReason="unknown"/>
           <aixm:relatedUnit>
-            <aixm:UnitDependency gml:id="ID_UD_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+            <aixm:UnitDependency gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_4">
               <aixm:type>OWNER</aixm:type>
-              <aixm:theUnit xlink:href="urn:uuid:c1bbe653-e5b1-4bfe-b510-3ada3272305a" xlink:title="UNIT DONLON RCC"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theUnit xlink:href="urn:uuid:c1bbe653-e5b1-4bfe-b510-3ada3272305a" xlink:title="UNIT DONLON RCC" xlink:type="simple"/>
             </aixm:UnitDependency>
           </aixm:relatedUnit>
           <aixm:availability>
-            <aixm:UnitAvailability gml:id="ID_UA_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+            <aixm:UnitAvailability gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_5">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T_8323cd6d-f788-4b78-8f93-2a09a70965fb">
+                <aixm:Timesheet gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_6">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
@@ -90,24 +91,28 @@
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
             </aixm:UnitAvailability>
           </aixm:availability>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_8323cd6d-f788-4b78-8f93-2a09a70965fb_1">
+            <aixm:Note gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_7">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_8323cd6d-f788-4b78-8f93-2a09a70965fb_1">
+                <aixm:LinguisticNote gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_8">
                   <aixm:note lang="eng">Facilities: Bell 47 SRG</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_8323cd6d-f788-4b78-8f93-2a09a70965fb_2">
+            <aixm:Note gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_9">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_8323cd6d-f788-4b78-8f93-2a09a70965fb_2">
+                <aixm:LinguisticNote gml:id="id_78179e52-12e6-4bb9-ab6f-e22623121d10_1_0_B_10">
                   <aixm:note lang="eng">Catalina LRG on stand-by from Burgkenvalk 5 HR PN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>

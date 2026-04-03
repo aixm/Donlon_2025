@@ -13,8 +13,11 @@ Redistribution and use in source and binary forms, with or without modification,
 * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 * Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
 
-THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
-CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ==========================================
 Editorial note: this license is an instance of the BSD license template as
 provided by the Open Source Initiative:
@@ -22,30 +25,49 @@ http://www.opensource.org/licenses/bsd-license.php
 ====================================================================
 
 This script generates multiple copies of the following Donlon dataset features:
-- Donlon AirportHeliport and associated features
-  - Runway, RunwayDirection, RunwayElement, RunwayCentrelinePoint, TouchDownLiftOff
-  - Taxiway, TaxiwayElement
-  - Apron, ApronElement, AircraftStand
-- VerticalStructure
-- Navaid and NavaidEquipment
-- some Airspace features (types: R, P and D): EAR1, EAV10, EAP2, EAV8, EAD4, EAV11, EAD5 and EAR4
+  - Donlon AirportHeliport and associated features
+    - Runway, RunwayDirection, RunwayElement, RunwayCentrelinePoint, TouchDownLiftOff
+    - Taxiway, TaxiwayElement
+    - Apron, ApronElement, AircraftStand
+  - VerticalStructure
+  - Navaid and NavaidEquipment
+  - all Airspace features (excluding types: FIR, FIR_P, CTA, CTA_P)
 with:
-- New designators and names for AirportHeliport (E01D, E02D, etc.), Navaid/NavaidEquipment and VerticalStructure
-- New UUIDs for all features
-- Updated xlink:href references between copied features
-- Geographic positions arranged in a grid pattern
+  - New designators and names for AirportHeliport (E01D, E02D, etc.), Navaid/NavaidEquipment and VerticalStructure
+  - New UUIDs for all features
+  - Updated xlink:href references between copied features
+  - Geographic positions arranged in a grid pattern
+
+The copies are arranged in a grid pattern with a set distance between each position.
 
 Usage example:
-python generate_donlon_dataset_copies.py --grid-rows 5 --grid-cols 6 --distance-nm 30
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30
+OR
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --output Donlon_Dataset_Copies --grid-rows 5 --grid-cols 6 --distance-nm 30
+OR
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z
+OR
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
+
+Input parameters:
+--input -> select the input file path
+--output -> (optional) select the output folder; if not specified then the a folder called 'Donlon_Dataset_Copies' will be created by default in the same location as the input file
+--grid-rows -> select the horizontal size of the grid
+--grid-cols -> select the vertical size of the grid
+--distance-nm -> select the horizontal and vertical distance between each grid position
+--effectiveDateStart -> (optional) all features across all copy sets will have the validTime.beginPosition set to the value selected through this parameter
+--timeOffset -> (optional) if used in addition to --effectiveDateStart, then the features in the first copy set get the effectiveDateStart time for validTime.beginPosition,
+then for each of the remaining copy sets the validTime.beginPosition is incremented by the value specified in timeOffset (days-hours-minutes)
 
 The input dataset must contain all the features specified above.
-The input file is selected on line 646.
 """
 
 import argparse
 import copy
+import math
 import os
 import uuid
+from datetime import datetime, timedelta, timezone
 from lxml import etree
 
 # ---------------------------------------------------------------------------
@@ -89,13 +111,24 @@ FEATURE_TYPES = [
     'Airspace',
 ]
 
+# Airspace types to exclude from copying
+AIRSPACE_TYPES_EXCLUDE = {'FIR', 'FIR_P', 'CTA', 'CTA_P'}
+
+# Output ordering for the All_features file
+ALL_FEATURES_ORDER = [
+    'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath',
+    'AirportHeliport',
+    'Airspace',
+    'Taxiway', 'TaxiwayElement',
+    'Apron', 'ApronElement', 'AircraftStand',
+    'Runway', 'RunwayElement', 'RunwayDirection',
+    'RunwayCentrelinePoint', 'TouchDownLiftOff',
+    'VerticalStructure',
+]
+
 # NavaidEquipment types (referenced BY Navaids via theNavaidEquipment)
 NAVAID_EQUIPMENT_TYPES = ['VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath']
 
-# Airspace designators to copy
-AIRSPACE_DESIGNATORS = [
-    'EAR1', 'EAV10', 'EAP2', 'EAV8', 'EAD4', 'EAV11', 'EAD5', 'EAR4',
-]
 
 # Properties to remove from VerticalStructure copies
 VS_PROPERTIES_TO_REMOVE = [
@@ -146,6 +179,76 @@ def offset_pos_list(pos_list_str, lat_offset, lon_offset, max_line_length=200):
                 lat = float(values[i]) + lat_offset
                 lon = float(values[i + 1]) + lon_offset
                 coord_pairs.append(f"{lat} {lon}")
+            except ValueError:
+                coord_pairs.append(f"{values[i]} {values[i + 1]}")
+
+    lines, current = [], ""
+    for pair in coord_pairs:
+        test = (current + " " + pair) if current else pair
+        if len(test) > max_line_length and current:
+            lines.append(current)
+            current = pair
+        else:
+            current = test
+    if current:
+        lines.append(current)
+    return '\n'.join(lines)
+
+
+# ---------------------------------------------------------------------------
+# EPSG:3395 (World Mercator) projection helpers
+# ---------------------------------------------------------------------------
+
+_MERCATOR_A = 6378137.0            # WGS84 semi-major axis (metres)
+_MERCATOR_E = 0.0818191908426      # WGS84 first eccentricity
+
+
+def _mercator_forward_y(lat_deg):
+    """Latitude (degrees) -> EPSG:3395 northing (Y in metres)."""
+    phi = math.radians(lat_deg)
+    sin_phi = math.sin(phi)
+    return _MERCATOR_A * math.log(
+        math.tan(math.pi / 4 + phi / 2)
+        * ((1 - _MERCATOR_E * sin_phi) / (1 + _MERCATOR_E * sin_phi))
+        ** (_MERCATOR_E / 2)
+    )
+
+
+def _mercator_inverse_y(y):
+    """EPSG:3395 northing (Y in metres) -> latitude (degrees). Iterative."""
+    t = math.exp(-y / _MERCATOR_A)
+    phi = math.pi / 2 - 2 * math.atan(t)
+    for _ in range(15):
+        sin_phi = math.sin(phi)
+        phi_new = math.pi / 2 - 2 * math.atan(
+            t * ((1 - _MERCATOR_E * sin_phi) / (1 + _MERCATOR_E * sin_phi))
+            ** (_MERCATOR_E / 2)
+        )
+        if abs(phi_new - phi) < 1e-14:
+            break
+        phi = phi_new
+    return math.degrees(phi)
+
+
+def offset_mercator_pos_list(pos_list_str, lat_offset, lon_offset,
+                             max_line_length=200):
+    """
+    Offset EPSG:3395 coordinate pairs (X Y in metres) by a geographic
+    lat/lon offset (in degrees).  X is easting, Y is northing.
+    """
+    values = pos_list_str.strip().split()
+    delta_x = _MERCATOR_A * math.radians(lon_offset)
+    coord_pairs = []
+    for i in range(0, len(values), 2):
+        if i + 1 < len(values):
+            try:
+                x = float(values[i])
+                y = float(values[i + 1])
+                # Y -> lat, apply lat offset, lat -> new Y
+                lat = _mercator_inverse_y(y)
+                new_y = _mercator_forward_y(lat + lat_offset)
+                new_x = x + delta_x
+                coord_pairs.append(f"{new_x:.2f} {new_y:.2f}")
             except ValueError:
                 coord_pairs.append(f"{values[i]} {values[i + 1]}")
 
@@ -283,39 +386,18 @@ def collect_eadd_features(features_by_type):
     for u, e in stands.items():
         collected[u] = ('AircraftStand', e)
 
-    # ---- Navaids and NavaidEquipment (ALL, not just EADD-related) ----
+    # ---- Navaids and NavaidEquipment (ALL) ----
 
-    # Identify EADD-related Navaids/NavaidEquipment (reference any already-collected UUID)
-    eadd_uuids_so_far = set(collected.keys())
-    eadd_navaid_uuids = set()
-
-    # 11. ALL Navaids — but track which ones are EADD-related
+    # 11. ALL Navaids
     for fuuid, felem in features_by_type['Navaid'].items():
         if fuuid not in collected:
-            refs = get_xlink_hrefs(felem)
-            if refs & eadd_uuids_so_far:
-                eadd_navaid_uuids.add(fuuid)
             collected[fuuid] = ('Navaid', felem)
 
     # 12. ALL NavaidEquipment (VOR, DME, NDB, TACAN, Localizer, Glidepath)
-    #     EADD-related if they reference any already-collected UUID or an EADD navaid
-    eadd_plus_navaid = eadd_uuids_so_far | eadd_navaid_uuids
     for eq_type in NAVAID_EQUIPMENT_TYPES:
         for fuuid, felem in features_by_type[eq_type].items():
             if fuuid not in collected:
-                refs = get_xlink_hrefs(felem)
-                if refs & eadd_plus_navaid:
-                    eadd_navaid_uuids.add(fuuid)
                 collected[fuuid] = (eq_type, felem)
-
-    # Also mark equipment referenced by EADD navaids (top-down: Navaid -> theNavaidEquipment)
-    for fuuid in list(eadd_navaid_uuids):
-        if fuuid in features_by_type.get('Navaid', {}):
-            refs = get_xlink_hrefs(features_by_type['Navaid'][fuuid])
-            for ref_uuid in refs:
-                for eq_type in NAVAID_EQUIPMENT_TYPES:
-                    if ref_uuid in features_by_type[eq_type]:
-                        eadd_navaid_uuids.add(ref_uuid)
 
     # ---- VerticalStructure (ALL) ----
 
@@ -324,22 +406,25 @@ def collect_eadd_features(features_by_type):
         if fuuid not in collected:
             collected[fuuid] = ('VerticalStructure', felem)
 
-    # ---- Airspace (selected designators only) ----
+    # ---- Airspace (all except excluded types) ----
 
-    # 14. Airspaces matching AIRSPACE_DESIGNATORS
+    # 14. Airspaces, skipping types in AIRSPACE_TYPES_EXCLUDE
     for fuuid, felem in features_by_type['Airspace'].items():
         if fuuid in collected:
             continue
-        # Find designator in the TimeSlice
+        # Check the airspace type in the TimeSlice
+        skip = False
         for child in felem.iter():
             tag = child.tag
             if isinstance(tag, str) and 'AirspaceTimeSlice' in tag:
-                d = child.find('aixm:designator', NSMAP)
-                if d is not None and d.text in AIRSPACE_DESIGNATORS:
-                    collected[fuuid] = ('Airspace', felem)
+                t = child.find('aixm:type', NSMAP)
+                if t is not None and t.text and t.text.strip() in AIRSPACE_TYPES_EXCLUDE:
+                    skip = True
                 break
+        if not skip:
+            collected[fuuid] = ('Airspace', felem)
 
-    return collected, eadd_navaid_uuids
+    return collected
 
 
 # ---------------------------------------------------------------------------
@@ -406,37 +491,81 @@ def update_xlink_refs(feature_elem, uuid_map):
                 elem.set(XLINK_HREF, f'urn:uuid:{uuid_map[old_uuid]}')
 
 
+def parse_time_offset(offset_str):
+    """Parse a time offset string in D-HH-MM format and return a timedelta."""
+    parts = offset_str.split('-')
+    if len(parts) != 3:
+        raise ValueError(f"Invalid time offset format '{offset_str}', expected D-HH-MM")
+    days = int(parts[0])
+    hours = int(parts[1])
+    minutes = int(parts[2])
+    return timedelta(days=days, hours=hours, minutes=minutes)
+
+
+def update_valid_time(feature_elem, new_begin_position):
+    """
+    Set the validTime/TimePeriod/beginPosition text on all TimeSlices
+    in the feature to new_begin_position (ISO 8601 string).
+    """
+    for ts in feature_elem.iter():
+        tag = ts.tag
+        if not (isinstance(tag, str) and 'TimeSlice' in tag):
+            continue
+        for bp in ts.iter('{http://www.opengis.net/gml/3.2}beginPosition'):
+            bp.text = new_begin_position
+
+
+def _find_ancestor_srs(parent_map, elem):
+    """Walk up the tree via parent_map to find the nearest srsName attribute."""
+    node = elem
+    while node is not None:
+        srs = node.get('srsName')
+        if srs:
+            return srs
+        node = parent_map.get(node)
+    return None
+
+
 def offset_all_coordinates(feature_elem, lat_offset, lon_offset):
     """
     Offset every gml:pos and gml:posList in the feature.
+    Handles both EPSG:4326 (geographic) and EPSG:3395 (World Mercator)
+    coordinate reference systems.
     """
+    # Build a parent map so we can walk up to find srsName
+    parent_map = {child: parent for parent in feature_elem.iter()
+                  for child in parent}
+
     for pos in feature_elem.iter('{http://www.opengis.net/gml/3.2}pos'):
         if pos.text and pos.text.strip():
             pos.text = offset_coordinate(pos.text, lat_offset, lon_offset)
 
     for pos_list in feature_elem.iter('{http://www.opengis.net/gml/3.2}posList'):
-        if pos_list.text and pos_list.text.strip():
-            pos_list.text = offset_pos_list(pos_list.text, lat_offset, lon_offset)
+        if not (pos_list.text and pos_list.text.strip()):
+            continue
+        srs = _find_ancestor_srs(parent_map, pos_list)
+        if srs and 'EPSG::3395' in srs:
+            pos_list.text = offset_mercator_pos_list(
+                pos_list.text, lat_offset, lon_offset)
+        else:
+            pos_list.text = offset_pos_list(
+                pos_list.text, lat_offset, lon_offset)
 
 
 def clone_feature_set(collected_features, index, grid_cols, distance_nm,
-                      eadd_navaid_uuids=None):
+                      begin_position=None):
     """
     Clone a complete set of features for one airport copy.
+
+    If begin_position is provided (ISO 8601 string), all features in this
+    copy set will have their validTime/beginPosition set to that value.
 
     Returns a list of (type_name, cloned_element) tuples,
     and the new airport UUID.
     """
-    if eadd_navaid_uuids is None:
-        eadd_navaid_uuids = set()
 
     designator = f"E{index + 1:02d}D"
     lat_offset, lon_offset = calculate_grid_offset(index, grid_cols, distance_nm)
-    # Reduced offset for non-EADD navaids/equipment (1/10 of normal spacing)
-    lat_offset_nav, lon_offset_nav = calculate_grid_offset(
-        index, grid_cols, distance_nm / 10.0
-    )
-
     # 1. Build UUID mapping:  old_uuid -> new_uuid
     uuid_map = {}
     for old_uuid in collected_features:
@@ -454,12 +583,12 @@ def clone_feature_set(collected_features, index, grid_cols, distance_nm,
         # Update xlink:href references
         update_xlink_refs(new_elem, uuid_map)
 
-        # Offset coordinates — reduced spacing for non-EADD navaids/equipment
-        navaid_types = ('Navaid', *NAVAID_EQUIPMENT_TYPES)
-        if feat_type in navaid_types and old_uuid not in eadd_navaid_uuids:
-            offset_all_coordinates(new_elem, lat_offset_nav, lon_offset_nav)
-        else:
-            offset_all_coordinates(new_elem, lat_offset, lon_offset)
+        # Offset coordinates
+        offset_all_coordinates(new_elem, lat_offset, lon_offset)
+
+        # Update validTime beginPosition if specified
+        if begin_position is not None:
+            update_valid_time(new_elem, begin_position)
 
         # Type-specific updates
         if feat_type == 'AirportHeliport':
@@ -479,16 +608,12 @@ def clone_feature_set(collected_features, index, grid_cols, distance_nm,
                 if n is not None:
                     n.text = f"DONLON INTL. {index + 1:02d}"
 
-        # Navaid / NavaidEquipment: append copy suffix to designator and name
+        # Navaid / NavaidEquipment: append copy suffix to name only
         if feat_type in ('Navaid', *NAVAID_EQUIPMENT_TYPES):
             suffix = f"-{index + 1:02d}"
-            # Find the TimeSlice (any *TimeSlice child)
             for child in new_elem.iter():
                 tag = child.tag
                 if isinstance(tag, str) and 'TimeSlice' in tag and child is not new_elem:
-                    d = child.find('aixm:designator', NSMAP)
-                    if d is not None and d.text:
-                        d.text = d.text + suffix
                     n = child.find('aixm:name', NSMAP)
                     if n is not None and n.text:
                         n.text = n.text + suffix
@@ -515,7 +640,10 @@ def clone_feature_set(collected_features, index, grid_cols, distance_nm,
                                 '{http://www.w3.org/2001/XMLSchema-instance}nil'
                             )
                             if not xsi_nil:
-                                pd.text = pd.text + suffix
+                                # OBST-EA-0005-1 -> OBST-EA-5-1-01
+                                parts = pd.text.split('-')
+                                parts = [p.lstrip('0') or p for p in parts]
+                                pd.text = '-'.join(parts) + suffix
                     # Remove unwanted properties
                     for prop_name in VS_PROPERTIES_TO_REMOVE:
                         for prop_elem in list(
@@ -524,18 +652,18 @@ def clone_feature_set(collected_features, index, grid_cols, distance_nm,
                             child.remove(prop_elem)
                     break
 
-        # Airspace: append suffix to designator and name
+        # Airspace: append copy set number to designator and name
         if feat_type == 'Airspace':
-            suffix = f"-{index + 1:02d}"
+            copy_suffix = f"-{index + 1:02d}"
             for child in new_elem.iter():
                 tag = child.tag
                 if isinstance(tag, str) and 'TimeSlice' in tag and child is not new_elem:
                     d = child.find('aixm:designator', NSMAP)
                     if d is not None and d.text:
-                        d.text = d.text + suffix
+                        d.text = d.text + copy_suffix
                     n = child.find('aixm:name', NSMAP)
                     if n is not None and n.text:
-                        n.text = n.text + suffix
+                        n.text = n.text + f" {index + 1:02d}"
                     break
 
         cloned.append((feat_type, new_elem))
@@ -624,7 +752,9 @@ def create_output_document(features, gml_id='Generated_Airports', comment=None):
     root.tail = "\n"
     tree = etree.ElementTree(root)
     if comment:
-        root.addprevious(etree.Comment(f' {comment} '))
+        comment_node = etree.Comment(f' {comment} ')
+        comment_node.tail = "\n"
+        root.addprevious(comment_node)
     return tree
 
 
@@ -643,15 +773,41 @@ def main():
         description='Generate multiple copies of Donlon International Airport '
                     'and all associated features'
     )
-    parser.add_argument('--input', '-i', default='Donlon_ALL_Baseline.xml')
-    parser.add_argument('--output', '-o', default='Donlon_Dataset_Copies')
+    parser.add_argument('--input', '-i', required=True,
+                        help='Path to the input AIXM XML file')
+    parser.add_argument('--output', '-o', default=None,
+                        help='Output folder (default: Donlon_Dataset_Copies '
+                             'next to the input file)')
     parser.add_argument('--grid-rows', '-r', type=int, default=5)
     parser.add_argument('--grid-cols', '-c', type=int, default=6)
     parser.add_argument('--distance-nm', '-d', type=float, default=30.0)
     parser.add_argument('--count', '-n', type=int, default=30)
+    parser.add_argument('--effectiveDateStart', default=None,
+                        help='validTime beginPosition for all copies '
+                             '(e.g. 2026-04-10T00:00:00Z)')
+    parser.add_argument('--timeOffset', default=None,
+                        help='Offset between copy sets in D-HH-MM format '
+                             '(e.g. 5-15-00 = 5 days, 15 hours, 0 minutes). '
+                             'Requires --effectiveDateStart.')
     args = parser.parse_args()
 
+    # Default output folder: Donlon_Dataset_Copies next to the input file
+    if args.output is None:
+        input_dir = os.path.dirname(os.path.abspath(args.input))
+        args.output = os.path.join(input_dir, 'Donlon_Dataset_Copies')
+
     count = min(args.count, args.grid_rows * args.grid_cols)
+
+    # Parse effective date and time offset
+    effective_start = None
+    time_offset = None
+    if args.effectiveDateStart:
+        effective_start = datetime.fromisoformat(
+            args.effectiveDateStart.replace('Z', '+00:00'))
+    if args.timeOffset:
+        if not args.effectiveDateStart:
+            parser.error('--timeOffset requires --effectiveDateStart')
+        time_offset = parse_time_offset(args.timeOffset)
 
     print("Configuration:")
     print(f"  Input:    {args.input}")
@@ -659,6 +815,10 @@ def main():
     print(f"  Grid:     {args.grid_rows} x {args.grid_cols}")
     print(f"  Distance: {args.distance_nm} NM")
     print(f"  Count:    {count}")
+    if effective_start:
+        print(f"  Effective date start: {args.effectiveDateStart}")
+    if time_offset:
+        print(f"  Time offset per copy: {args.timeOffset}")
     print()
 
     # Parse
@@ -674,7 +834,7 @@ def main():
 
     # Collect features belonging to EADD
     print("\nCollecting EADD-related features ...")
-    collected, eadd_navaid_uuids = collect_eadd_features(features_by_type)
+    collected = collect_eadd_features(features_by_type)
 
     # Print summary per type
     type_counts = {}
@@ -687,13 +847,6 @@ def main():
     total_per_copy = len(collected)
     print(f"  TOTAL per copy: {total_per_copy}")
 
-    # Navaid spacing summary
-    navaid_eq_types = {'Navaid', *NAVAID_EQUIPMENT_TYPES}
-    total_nav = sum(1 for _, (ft, _) in collected.items() if ft in navaid_eq_types)
-    eadd_nav = len(eadd_navaid_uuids)
-    print(f"  Navaid/Equipment EADD-related: {eadd_nav} (full spacing), "
-          f"non-EADD: {total_nav - eadd_nav} (1/10 spacing)")
-
     # Generate copies
     print(f"\nGenerating {count} copies ({count * total_per_copy} features total) ...")
     all_cloned = []          # flat list of all (type, elem) across all copies
@@ -702,12 +855,23 @@ def main():
     for i in range(count):
         designator = f"E{i + 1:02d}D"
         lat_off, lon_off = calculate_grid_offset(i, args.grid_cols, args.distance_nm)
+
+        # Compute beginPosition for this copy set
+        copy_begin = None
+        if effective_start is not None:
+            if time_offset is not None:
+                copy_dt = effective_start + time_offset * i
+            else:
+                copy_dt = effective_start
+            copy_begin = copy_dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+
+        time_info = f"  validTime.beginPosition={copy_begin}" if copy_begin else ""
         print(f"  {designator}:  grid ({i // args.grid_cols},{i % args.grid_cols})  "
-              f"offset +{lat_off:.4f}° lat, +{lon_off:.4f}° lon")
+              f"offset +{lat_off:.4f}° lat, +{lon_off:.4f}° lon{time_info}")
 
         cloned, _new_ahp_uuid = clone_feature_set(
             collected, i, args.grid_cols, args.distance_nm,
-            eadd_navaid_uuids=eadd_navaid_uuids
+            begin_position=copy_begin,
         )
         per_copy_cloned.append(cloned)
         all_cloned.extend(cloned)
@@ -749,8 +913,21 @@ def main():
             )
             write_xml(doc, fpath)
 
+        # All_features file with ordered types
+        ordered_features = []
+        for ft in ALL_FEATURES_ORDER:
+            if ft in by_type:
+                ordered_features.extend(by_type[ft])
+        all_feat_path = os.path.join(copy_dir, f'All_features_{copy_num:02d}.xml')
+        all_feat_doc = create_output_document(
+            ordered_features,
+            gml_id=f'All_features_Copy_{copy_num:02d}',
+            comment=f'All features - Copy {copy_num:02d}',
+        )
+        write_xml(all_feat_doc, all_feat_path)
+
         print(f"  Donlon_Copy_{copy_num:02d}/: "
-              f"{len(by_type)} type files, {len(copy_features)} features")
+              f"{len(by_type)} type files + All_features, {len(copy_features)} features")
 
     print(f"\nDone!  {len(all_cloned)} features total in {out_dir}")
     return 0

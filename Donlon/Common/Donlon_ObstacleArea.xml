@@ -40,7 +40,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EA_AREA-1">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_03fcffab-d281-4da4-8acd-0b14461b7465">
+            <gml:TimePeriod gml:id="id_89fd008d-5cdb-4279-8229-2fb1f23aacae_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -49,22 +49,23 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_03fcffab-d281-4da4-8acd-0b14461b7465">
+            <gml:TimePeriod gml:id="id_89fd008d-5cdb-4279-8229-2fb1f23aacae_1_0_B_2">
               <gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>AREA1</aixm:type>
           <!-- <aixm:obstructionIdSurfaceCondition/> shall not be used. Deleted in AIXM 5.2 -->
-          <aixm:reference_ownerOrganisation xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerOrganisation xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
           <aixm:surfaceExtent>
-            <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_03fcffab-d281-4da4-8acd-0b14461b7465">
+            <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_89fd008d-5cdb-4279-8229-2fb1f23aacae_1_0_B_3">
               <gml:patches>
                 <gml:PolygonPatch>
                   <gml:exterior>
                     <gml:Ring>
                       <gml:curveMember>
-                        <gml:Curve gml:id="ID_C_03fcffab-d281-4da4-8acd-0b14461b7465">
+                        <gml:Curve gml:id="id_89fd008d-5cdb-4279-8229-2fb1f23aacae_1_0_B_4">
                           <gml:segments>
                             <gml:GeodesicString>
                               <gml:posList>57.0833333333333 -40.0 52.85 -41.7833333333333 48.4666666666667 -41.3333333333333 44.0333333333333 -40.0
@@ -81,17 +82,18 @@
               <aixm:horizontalAccuracy uom="KM">2.0</aixm:horizontalAccuracy>
             </aixm:Surface>
           </aixm:surfaceExtent>
-          <aixm:obstacle xlink:href="urn:uuid:5f68d835-828c-4ccd-91b7-791058d9dd4d" xlink:title="OBST-EA-0001 Antenna"/>
-          <aixm:obstacle xlink:href="urn:uuid:6c7fac45-c24f-4e36-b196-687458d99070" xlink:title="OBST-EA-0002 Windmill farms WINDPARK DONLON IV"/>
-          <aixm:obstacle xlink:href="urn:uuid:47db48e9-d46a-4100-a266-25a3968b6a98" xlink:title="OBST-EA-0003 Windmill farms RODSAND II"/>
-          <aixm:obstacle xlink:href="urn:uuid:87a585b3-0597-4f5c-974f-cddfc604dc93" xlink:title="OBST-EA-0004 Cable car LANGTALERECKHUETTE - HOCHWILDEHAUS"/>
-          <aixm:obstacle xlink:href="urn:uuid:9bba0abf-db41-4c78-926d-c9f35fde8efb" xlink:title="OBST-EA-0005 Cable car MUTTERBERGALM - DRESDNER HUETTE - EISGRAT"/>
-          <aixm:obstacle xlink:href="urn:uuid:718c2782-a624-405e-86b6-144b40b680b0" xlink:title="OBST-EA-0006 Windmill farms TUBORG IIB"/>
-          <aixm:obstacle xlink:href="urn:uuid:15c2c2ba-c5f2-47b5-9ada-1964d51b82c0" xlink:title="OBST-EA-0007 Building"/>
-          <aixm:obstacle xlink:href="urn:uuid:359c8b02-8be7-4e2c-aa6d-d990dbb6b057" xlink:title="OBST-EA-0008 Chimney"/>
-          <aixm:obstacle xlink:href="urn:uuid:7f89403f-a680-41e0-8274-ee498e86ff77" xlink:title="OBST-EA-0009 Stadium DONLON ARENA"/>
-          <aixm:obstacle xlink:href="urn:uuid:56ef6d9c-4951-4a0b-83d8-95e4836c63c8" xlink:title="OBST-EA-0010 Pole"/>
-          <aixm:obstacle xlink:href="urn:uuid:499c5bb4-de1e-49fc-8db1-11ffa84406d6" xlink:title="OBST-EADD-1017 Windmill farms DONLON NORTHEAST I"/>
+          <aixm:obstacle xlink:href="urn:uuid:5f68d835-828c-4ccd-91b7-791058d9dd4d" xlink:title="OBST-EA-0001 Antenna" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:6c7fac45-c24f-4e36-b196-687458d99070" xlink:title="OBST-EA-0002 Windmill farms WINDPARK DONLON IV" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:47db48e9-d46a-4100-a266-25a3968b6a98" xlink:title="OBST-EA-0003 Windmill farms RODSAND II" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:87a585b3-0597-4f5c-974f-cddfc604dc93" xlink:title="OBST-EA-0004 Cable car LANGTALERECKHUETTE - HOCHWILDEHAUS" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:9bba0abf-db41-4c78-926d-c9f35fde8efb" xlink:title="OBST-EA-0005 Cable car MUTTERBERGALM - DRESDNER HUETTE - EISGRAT" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:718c2782-a624-405e-86b6-144b40b680b0" xlink:title="OBST-EA-0006 Windmill farms TUBORG IIB" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:15c2c2ba-c5f2-47b5-9ada-1964d51b82c0" xlink:title="OBST-EA-0007 Building" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:359c8b02-8be7-4e2c-aa6d-d990dbb6b057" xlink:title="OBST-EA-0008 Chimney" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:7f89403f-a680-41e0-8274-ee498e86ff77" xlink:title="OBST-EA-0009 Stadium DONLON ARENA" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:56ef6d9c-4951-4a0b-83d8-95e4836c63c8" xlink:title="OBST-EA-0010 Pole" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:499c5bb4-de1e-49fc-8db1-11ffa84406d6" xlink:title="OBST-EADD-1017 Windmill farms DONLON NORTHEAST I" xlink:type="simple"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:ObstacleAreaTimeSlice>
       </aixm:timeSlice>
     </aixm:ObstacleArea>
@@ -103,7 +105,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-2A_RWY_09L-27R">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_f5824443-d2f6-4c66-8c40-799665734678">
+            <gml:TimePeriod gml:id="id_cfb80320-904b-40fc-a100-485642d18b07_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -112,7 +114,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_f5824443-d2f6-4c66-8c40-799665734678">
+            <gml:TimePeriod gml:id="id_cfb80320-904b-40fc-a100-485642d18b07_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -121,15 +123,17 @@
           <!-- In AIXM 5.1(1) does not provide a relationship between ObstcaleArea and Runway feature which is needed for AREA 2a. 
 						The workaround is to create an association from the ObstacleArea to the RunwayDirection with the lower designator value of the related Runway 
 						and add a corresponding Note containing the UUID of the Runway concerned (as described in the corresponding CP for AIXM 5.2). -->
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64" xlink:title="RDN EADD RWY 09L"/>
-          <aixm:obstacle xlink:href="urn:uuid:c9bc6ea4-2b5e-4a71-af8a-eec2e4ff3dc3" xlink:title="OBST-EADD-1005 Navaid GP 27R"/>
-          <aixm:obstacle xlink:href="urn:uuid:558fefd0-5749-4b8e-9f5a-930dc6c00e68" xlink:title="OBST-EADD-1015 Navaid GP 09L"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64" xlink:title="RDN EADD RWY 09L" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xlink:href="urn:uuid:c9bc6ea4-2b5e-4a71-af8a-eec2e4ff3dc3" xlink:title="OBST-EADD-1005 Navaid GP 27R" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:558fefd0-5749-4b8e-9f5a-930dc6c00e68" xlink:title="OBST-EADD-1015 Navaid GP 09L" xlink:type="simple"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_f5824443-d2f6-4c66-8c40-799665734678">
+            <aixm:Note gml:id="id_cfb80320-904b-40fc-a100-485642d18b07_1_0_B_3">
               <aixm:propertyName>referenceownerRunway</aixm:propertyName>
               <aixm:purpose>OTHER:BACKWARD_MAPPING</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_f5824443-d2f6-4c66-8c40-799665734678">
+                <aixm:LinguisticNote gml:id="id_cfb80320-904b-40fc-a100-485642d18b07_1_0_B_4">
                   <aixm:note lang="eng">isRunway Runway identified by xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8"</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -146,7 +150,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-2A_RWY-09R-27L">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID-VT_7a5d14ab-b53f-4184-b37e-53ba37568338">
+            <gml:TimePeriod gml:id="id_a904988c-d039-40ef-b67d-2a493bcf2593_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -155,7 +159,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_7a5d14ab-b53f-4184-b37e-53ba37568338">
+            <gml:TimePeriod gml:id="id_a904988c-d039-40ef-b67d-2a493bcf2593_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -164,13 +168,16 @@
           <!-- In AIXM 5.1(1) does not provide a relationship between ObstcaleArea and Runway feature which is needed for AREA 2a. 
 						The workaround is to create an association from the ObstacleArea to the RunwayDirection with the lower designator value of the related Runway 
 						and add a corresponding Note containing the UUID of the Runway concerned (as described in the corresponding CP for AIXM 5.2). -->
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:5d6513d4-a62a-49e1-9e26-0b8cbf320daf" xlink:title="RDN EADD RWY 09R"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:5d6513d4-a62a-49e1-9e26-0b8cbf320daf" xlink:title="RDN EADD RWY 09R" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xsi:nil="true"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_7a5d14ab-b53f-4184-b37e-53ba37568338">
+            <aixm:Note gml:id="id_a904988c-d039-40ef-b67d-2a493bcf2593_1_0_B_3">
               <aixm:propertyName>referenceownerRunway</aixm:propertyName>
               <aixm:purpose>OTHER:BACKWARD_MAPPING</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_7a5d14ab-b53f-4184-b37e-53ba37568338">
+                <aixm:LinguisticNote gml:id="id_a904988c-d039-40ef-b67d-2a493bcf2593_1_0_B_4">
                   <aixm:note lang="eng">isRunway Runway identified by xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a"</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -187,7 +194,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-2B_RWY-09L">
           <gml:validTime>
-            <gml:TimePeriod gml:id="tp003">
+            <gml:TimePeriod gml:id="id_7d9979c1-f8a8-49a7-83df-51f6aaf6442f_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -196,14 +203,17 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="tp00020">
+            <gml:TimePeriod gml:id="id_7d9979c1-f8a8-49a7-83df-51f6aaf6442f_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>OTHER:AREA2B</aixm:type>
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64" xlink:title="RDN EADD RWY 09L"/>
-          <aixm:obstacle xlink:href="urn:uuid:83985f79-91f0-4f79-b9ba-87251e67ae9d" xlink:title="OBST-EADD-1004 Navaid NDB SCONE"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64" xlink:title="RDN EADD RWY 09L" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xlink:href="urn:uuid:83985f79-91f0-4f79-b9ba-87251e67ae9d" xlink:title="OBST-EADD-1004 Navaid NDB SCONE" xlink:type="simple"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:ObstacleAreaTimeSlice>
       </aixm:timeSlice>
     </aixm:ObstacleArea>
@@ -215,7 +225,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_RWY-27R">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_7966d7eb-188b-4aa3-830e-d2a5d5b8809d">
+            <gml:TimePeriod gml:id="id_ad5fcb5d-b18b-48d2-8788-045e935959f3_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -224,16 +234,19 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_7966d7eb-188b-4aa3-830e-d2a5d5b8809d">
+            <gml:TimePeriod gml:id="id_ad5fcb5d-b18b-48d2-8788-045e935959f3_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>OTHER:AREA2B</aixm:type>
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:b802d439-e9f3-49f9-96e1-0153b837e113" xlink:title="RDN EADD RWY 27R"/>
-          <aixm:obstacle xlink:href="urn:uuid:8a6626f9-0739-4ec2-ae56-4a8af45ec9fe" xlink:title="OBST-EADD-1006 Railroad"/>
-          <aixm:obstacle xlink:href="urn:uuid:1371b29a-2ba6-44c8-8da3-711e5488fdb7" xlink:title="OBST-EADD-1007 Building"/>
-          <aixm:obstacle xlink:href="urn:uuid:cd0bfb54-81b9-491e-880b-7f85fe2dbfb8" xlink:title="OBST-EADD-1008 Natural Highpoint"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:b802d439-e9f3-49f9-96e1-0153b837e113" xlink:title="RDN EADD RWY 27R" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xlink:href="urn:uuid:8a6626f9-0739-4ec2-ae56-4a8af45ec9fe" xlink:title="OBST-EADD-1006 Railroad" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:1371b29a-2ba6-44c8-8da3-711e5488fdb7" xlink:title="OBST-EADD-1007 Building" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:cd0bfb54-81b9-491e-880b-7f85fe2dbfb8" xlink:title="OBST-EADD-1008 Natural Highpoint" xlink:type="simple"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:ObstacleAreaTimeSlice>
       </aixm:timeSlice>
     </aixm:ObstacleArea>
@@ -245,7 +258,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_RWY-09R">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_efe495c6-b220-40be-8556-ac8289d6f1be">
+            <gml:TimePeriod gml:id="id_2bf07eea-8e1e-40ee-bda0-1c32c0bb2f5e_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -254,13 +267,17 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_efe495c6-b220-40be-8556-ac8289d6f1be">
+            <gml:TimePeriod gml:id="id_2bf07eea-8e1e-40ee-bda0-1c32c0bb2f5e_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>OTHER:AREA2B</aixm:type>
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:5d6513d4-a62a-49e1-9e26-0b8cbf320daf" xlink:title="RDN EADD RWY 09R"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:5d6513d4-a62a-49e1-9e26-0b8cbf320daf" xlink:title="RDN EADD RWY 09R" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xsi:nil="true"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:ObstacleAreaTimeSlice>
       </aixm:timeSlice>
     </aixm:ObstacleArea>
@@ -272,7 +289,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-2B_RWY-27L">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_9bce0fbc-a8d4-4c53-ba18-16e5fc7e7047">
+            <gml:TimePeriod gml:id="id_44e1794d-15cf-4410-88ea-90a10aa17b53_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -281,13 +298,17 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_9bce0fbc-a8d4-4c53-ba18-16e5fc7e7047">
+            <gml:TimePeriod gml:id="id_44e1794d-15cf-4410-88ea-90a10aa17b53_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>OTHER:AREA2B</aixm:type>
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:ee6019d6-29f7-404d-8cee-b6819f325aed" xlink:title="RDN EADD RWY 27L"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:ee6019d6-29f7-404d-8cee-b6819f325aed" xlink:title="RDN EADD RWY 27L" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xsi:nil="true"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:ObstacleAreaTimeSlice>
       </aixm:timeSlice>
     </aixm:ObstacleArea>
@@ -299,7 +320,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-2C_RWY-09L-27R">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_82f937b7-8337-4e0c-82fd-f64086f9020c">
+            <gml:TimePeriod gml:id="id_ba6f57f6-268f-42c3-89e8-8962b6abea24_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -308,7 +329,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_82f937b7-8337-4e0c-82fd-f64086f9020c">
+            <gml:TimePeriod gml:id="id_ba6f57f6-268f-42c3-89e8-8962b6abea24_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -317,14 +338,16 @@
           <!-- In AIXM 5.1(1) does not provide a relationship between ObstcaleArea and Runway feature which is needed for AREA 2c. 
 						The workaround is to create an association from the ObstacleArea to the RunwayDirection with the lower designator value of the related Runway 
 						and add a corresponding Note containing the UUID of the Runway concerned (as described in the corresponding CP for AIXM 5.2). -->
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64" xlink:title="RDN EADD RWY 09L"/>
-          <aixm:obstacle xlink:href="urn:uuid:df421db4-3698-4003-9d71-93ca57e70ffc" xlink:title="OBST-EADD-1002 Crane"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64" xlink:title="RDN EADD RWY 09L" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xlink:href="urn:uuid:df421db4-3698-4003-9d71-93ca57e70ffc" xlink:title="OBST-EADD-1002 Crane" xlink:type="simple"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_82f937b7-8337-4e0c-82fd-f64086f9020c">
+            <aixm:Note gml:id="id_ba6f57f6-268f-42c3-89e8-8962b6abea24_1_0_B_3">
               <aixm:propertyName>referenceownerRunway</aixm:propertyName>
               <aixm:purpose>OTHER:BACKWARD_MAPPING</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_82f937b7-8337-4e0c-82fd-f64086f9020c">
+                <aixm:LinguisticNote gml:id="id_ba6f57f6-268f-42c3-89e8-8962b6abea24_1_0_B_4">
                   <aixm:note lang="eng">isRunway Runway identified by xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8"</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -341,7 +364,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-2C_RWY-09R-27L">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_3aacffa4-e646-4ae6-9ab7-6e249a1957aa">
+            <gml:TimePeriod gml:id="id_f1e23aa6-fbaf-4660-ad58-62baea68d7cc_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -350,7 +373,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_3aacffa4-e646-4ae6-9ab7-6e249a1957aa-3">
+            <gml:TimePeriod gml:id="id_f1e23aa6-fbaf-4660-ad58-62baea68d7cc_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -359,14 +382,16 @@
           <!-- In AIXM 5.1(1) does not provide a relationship between ObstcaleArea and Runway feature which is needed for AREA 2a. 
 						The workaround is to create an association from the ObstacleArea to the RunwayDirection with the lower designator value of the related Runway 
 						and add a corresponding Note containing the UUID of the Runway concerned (as described in the corresponding CP for AIXM 5.2). -->
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:5d6513d4-a62a-49e1-9e26-0b8cbf320daf" xlink:title="EADD RWY 09R"/>
-          <aixm:obstacle xlink:href="urn:uuid:df421db4-3698-4003-9d71-93ca57e70ffc" xlink:title="OBST-EADD-1002 Crane"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:5d6513d4-a62a-49e1-9e26-0b8cbf320daf" xlink:title="EADD RWY 09R" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xlink:href="urn:uuid:df421db4-3698-4003-9d71-93ca57e70ffc" xlink:title="OBST-EADD-1002 Crane" xlink:type="simple"/>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_3aacffa4-e646-4ae6-9ab7-6e249a1957aa">
+            <aixm:Note gml:id="id_f1e23aa6-fbaf-4660-ad58-62baea68d7cc_1_0_B_3">
               <aixm:propertyName>referenceownerRunway</aixm:propertyName>
               <aixm:purpose>OTHER:BACKWARD_MAPPING</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_3aacffa4-e646-4ae6-9ab7-6e249a1957aa">
+                <aixm:LinguisticNote gml:id="id_f1e23aa6-fbaf-4660-ad58-62baea68d7cc_1_0_B_4">
                   <aixm:note lang="eng">isRunway Runway identified by xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a"</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -383,7 +408,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-2D">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_47da6d21-c2e5-4dcc-a4dc-47d49ed850a4">
+            <gml:TimePeriod gml:id="id_95b31512-efb1-4718-913b-d9899c8dffc6_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -392,14 +417,17 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_47da6d21-c2e5-4dcc-a4dc-47d49ed850a4">
+            <gml:TimePeriod gml:id="id_95b31512-efb1-4718-913b-d9899c8dffc6_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>OTHER:AREA2D</aixm:type>
-          <aixm:reference_ownerAirport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
-          <aixm:obstacle xlink:href="urn:uuid:499c5bb4-de1e-49fc-8db1-11ffa84406d6" xlink:title="OBST-EADD-1017 Windmill farms DONLON NORTHEAST I"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerAirport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xlink:href="urn:uuid:499c5bb4-de1e-49fc-8db1-11ffa84406d6" xlink:title="OBST-EADD-1017 Windmill farms DONLON NORTHEAST I" xlink:type="simple"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:ObstacleAreaTimeSlice>
       </aixm:timeSlice>
     </aixm:ObstacleArea>
@@ -411,7 +439,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-3">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_691e4b3c-9d33-4115-860f-2f380e5b227b">
+            <gml:TimePeriod gml:id="id_26c8d2f3-f0a6-46ef-9162-c6f9da6bae25_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -420,21 +448,24 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_691e4b3c-9d33-4115-860f-2f380e5b227b">
+            <gml:TimePeriod gml:id="id_26c8d2f3-f0a6-46ef-9162-c6f9da6bae25_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>AREA3</aixm:type>
-          <aixm:reference_ownerAirport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
-          <aixm:obstacle xlink:href="urn:uuid:66e649c8-aaba-4fac-9432-7ee33f90e2d5" xlink:title="OBST-EADD-1001 Windsock"/>
-          <aixm:obstacle xlink:href="urn:uuid:c9bc6ea4-2b5e-4a71-af8a-eec2e4ff3dc3" xlink:title="OBST-EADD-1005 Navaid GP 27R"/>
-          <aixm:obstacle xlink:href="urn:uuid:d22653bd-826d-411c-b8d3-838eba2a8325" xlink:title="OBST-EADD-1009 Building TOWER EADD"/>
-          <aixm:obstacle xlink:href="urn:uuid:14d8289b-4628-41c3-bcaa-be6e26e4b96a" xlink:title="OBST-EADD-1010 Building AIS-MET"/>
-          <aixm:obstacle xlink:href="urn:uuid:9c171b9f-90d3-46e8-84b2-a8348e65e839" xlink:title="OBST-EADD-1011 Building Terminal"/>
-          <aixm:obstacle xlink:href="urn:uuid:0a12b87b-fe93-4dbd-8f77-94b97d262083" xlink:title="OBST-EADD-1012 Building Hangar 1"/>
-          <aixm:obstacle xlink:href="urn:uuid:742a1aa1-10a4-435e-9e18-7a0a30d1af59" xlink:title="OBST-EADD-1013 Building Hangar 2"/>
-          <aixm:obstacle xlink:href="urn:uuid:225d45f0-b285-4d85-a699-84f76c57f4f8" xlink:title="OBST-EADD-1014 Building Parking"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerAirport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xlink:href="urn:uuid:66e649c8-aaba-4fac-9432-7ee33f90e2d5" xlink:title="OBST-EADD-1001 Windsock" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:c9bc6ea4-2b5e-4a71-af8a-eec2e4ff3dc3" xlink:title="OBST-EADD-1005 Navaid GP 27R" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:d22653bd-826d-411c-b8d3-838eba2a8325" xlink:title="OBST-EADD-1009 Building TOWER EADD" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:14d8289b-4628-41c3-bcaa-be6e26e4b96a" xlink:title="OBST-EADD-1010 Building AIS-MET" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:9c171b9f-90d3-46e8-84b2-a8348e65e839" xlink:title="OBST-EADD-1011 Building Terminal" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:0a12b87b-fe93-4dbd-8f77-94b97d262083" xlink:title="OBST-EADD-1012 Building Hangar 1" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:742a1aa1-10a4-435e-9e18-7a0a30d1af59" xlink:title="OBST-EADD-1013 Building Hangar 2" xlink:type="simple"/>
+          <aixm:obstacle xlink:href="urn:uuid:225d45f0-b285-4d85-a699-84f76c57f4f8" xlink:title="OBST-EADD-1014 Building Parking" xlink:type="simple"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:ObstacleAreaTimeSlice>
       </aixm:timeSlice>
     </aixm:ObstacleArea>
@@ -446,7 +477,7 @@
       <aixm:timeSlice>
         <aixm:ObstacleAreaTimeSlice gml:id="OBST-AREA_EADD_AREA-4_RWY-27R">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_d3b0ed7e-7eaa-4d0f-a77d-82f0334bbc2a">
+            <gml:TimePeriod gml:id="id_a806d535-c915-4541-896e-86d79195c41c_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -455,14 +486,17 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_d3b0ed7e-7eaa-4d0f-a77d-82f0334bbc2a">
+            <gml:TimePeriod gml:id="id_a806d535-c915-4541-896e-86d79195c41c_1_0_B_2">
               <gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>AREA4</aixm:type>
-          <aixm:reference_ownerRunway xlink:href="urn:uuid:7966d7eb-188b-4aa3-830e-d2a5d5b8809d" xlink:title="RDN EADD RWY 27R"/>
-          <aixm:obstacle xlink:href="urn:uuid:8a6626f9-0739-4ec2-ae56-4a8af45ec9fe" xlink:title="OBST-EADD-1006 Railroad"/>
+          <aixm:obstructionIdSurfaceCondition xsi:nil="true"/>
+          <aixm:reference_ownerRunway xlink:href="urn:uuid:7966d7eb-188b-4aa3-830e-d2a5d5b8809d" xlink:title="RDN EADD RWY 27R" xlink:type="simple"/>
+          <aixm:surfaceExtent xsi:nil="true"/>
+          <aixm:obstacle xlink:href="urn:uuid:8a6626f9-0739-4ec2-ae56-4a8af45ec9fe" xlink:title="OBST-EADD-1006 Railroad" xlink:type="simple"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:ObstacleAreaTimeSlice>
       </aixm:timeSlice>
     </aixm:ObstacleArea>

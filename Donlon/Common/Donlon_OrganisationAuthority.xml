@@ -39,7 +39,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_STATE_REPUBLIC-OF-DONLON">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_709c64da-44e4-47c7-9d57-326a04cbdd3c">
+            <gml:TimePeriod gml:id="id_e8a99c4c-5430-4d21-b9b1-6b494bd6a33c_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -48,7 +48,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_709c64da-44e4-47c7-9d57-326a04cbdd3c">
+            <gml:TimePeriod gml:id="id_e8a99c4c-5430-4d21-b9b1-6b494bd6a33c_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -58,6 +58,8 @@
           <aixm:type>STATE</aixm:type>
           <aixm:military xsi:nil="true" nilReason="inapplicable"/>
           <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:relatedOrganisationAuthority xsi:nil="true"/>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -68,7 +70,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-MOT">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_11dd26c9-9b45-4e44-9e7c-8205b10de430">
+            <gml:TimePeriod gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -77,7 +79,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_11dd26c9-9b45-4e44-9e7c-8205b10de430">
+            <gml:TimePeriod gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -87,12 +89,14 @@
           <aixm:type>NTL_AUTH</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_11dd26c9-9b45-4e44-9e7c-8205b10de430">
+            <aixm:ContactInformation gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_3">
               <aixm:name>DONLON MINISTRY OF TRANSPORTATION</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_11dd26c9-9b45-4e44-9e7c-8205b10de430">
+                <aixm:PostalAddress gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>Government Square</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -101,29 +105,36 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_11dd26c9-9b45-4e44-9e7c-8205b10de430">
+                <aixm:OnlineContact gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.ministryoftransportation.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@ministryoftransportation.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_11dd26c9-9b45-4e44-9e7c-8205b10de430">
+                <aixm:TelephoneContact gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 607 1111</aixm:voice>
                   <aixm:facsimile>0123 607 1111</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_11dd26c9-9b45-4e44-9e7c-8205b10de430">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_7">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -134,7 +145,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-CAA">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_c225ae5c-540f-4a48-8867-809b393b2407">
+            <gml:TimePeriod gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -143,7 +154,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_c225ae5c-540f-4a48-8867-809b393b2407">
+            <gml:TimePeriod gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -153,12 +164,14 @@
           <aixm:type>NTL_AUTH</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_c225ae5c-540f-4a48-8867-809b393b2407">
+            <aixm:ContactInformation gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_3">
               <aixm:name>DONLON CIVIL AVIATION ADMINISTRATION</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_c225ae5c-540f-4a48-8867-809b393b2407">
+                <aixm:PostalAddress gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>Government Square</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -167,17 +180,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_c225ae5c-540f-4a48-8867-809b393b2407_1">
+                <aixm:OnlineContact gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.civilaviation.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@civilaviation.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_c225ae5c-540f-4a48-8867-809b393b2407_2">
+                <aixm:OnlineContact gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EAADYAYX</aixm:linkage>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -185,26 +202,32 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_c225ae5c-540f-4a48-8867-809b393b2407">
+                <aixm:TelephoneContact gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 697 3434</aixm:voice>
                   <aixm:facsimile>0123 697 3445</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_c225ae5c-540f-4a48-8867-809b393b2407_1">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_c225ae5c-540f-4a48-8867-809b393b2407_2">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_9">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:11dd26c9-9b45-4e44-9e7c-8205b10de430" xlink:title="DONLON MINISTRY OF TRANSPORTATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:11dd26c9-9b45-4e44-9e7c-8205b10de430" xlink:title="DONLON MINISTRY OF TRANSPORTATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -215,7 +238,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ATS_DONATSA">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_68bc1798-44c0-4cd9-8b1e-d7243ccc492e">
+            <gml:TimePeriod gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -224,7 +247,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_68bc1798-44c0-4cd9-8b1e-d7243ccc492e">
+            <gml:TimePeriod gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -234,12 +257,14 @@
           <aixm:type>ATS</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_68bc1798-44c0-4cd9-8b1e-d7243ccc492e">
+            <aixm:ContactInformation gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_3">
               <aixm:name>DONATSA - DONLON AIR TRAFFIC SERVICES ADMINISTRATION</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_68bc1798-44c0-4cd9-8b1e-d7243ccc492e">
+                <aixm:PostalAddress gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>Government Square</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -248,35 +273,43 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_68bc1798-44c0-4cd9-8b1e-d7243ccc492e_1">
+                <aixm:OnlineContact gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.donatsa.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@donatsa.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_68bc1798-44c0-4cd9-8b1e-d7243ccc492e">
+                <aixm:TelephoneContact gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 697 8989</aixm:voice>
                   <aixm:facsimile>0123 697 8998</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_68bc1798-44c0-4cd9-8b1e-d7243ccc492e_1">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_7">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_68bc1798-44c0-4cd9-8b1e-d7243ccc492e_2">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -287,7 +320,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-MET-BUREAU">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_a102cbae-69be-4788-98a3-e751ea3c15f0">
+            <gml:TimePeriod gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -296,7 +329,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_a102cbae-69be-4788-98a3-e751ea3c15f0">
+            <gml:TimePeriod gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -306,30 +339,37 @@
           <aixm:type>NTL_AUTH</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_a102cbae-69be-4788-98a3-e751ea3c15f0">
+            <aixm:ContactInformation gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_3">
               <aixm:name>DONLON METEOROLOGICAL BUREAU</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_a102cbae-69be-4788-98a3-e751ea3c15f0">
+                <aixm:PostalAddress gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>101 West Avenue</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
+                  <aixm:administrativeArea xsi:nil="true"/>
                   <aixm:postalCode>1</aixm:postalCode>
                   <aixm:country>REPUBLIC OF DONLON</aixm:country>
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_a102cbae-69be-4788-98a3-e751ea3c15f0_1">
+                <aixm:OnlineContact gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.meteo.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@meteo.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_a102cbae-69be-4788-98a3-e751ea3c15f0_2">
+                <aixm:OnlineContact gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EAADYMYX</aixm:linkage>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -337,20 +377,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_a102cbae-69be-4788-98a3-e751ea3c15f0">
+                <aixm:TelephoneContact gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 695 3333</aixm:voice>
                   <aixm:facsimile>0123 695 3344</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_a102cbae-69be-4788-98a3-e751ea3c15f0">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -361,7 +406,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-CUSTOMS-DEPT">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_ffc41e46-4092-4d51-ad11-85145121572e">
+            <gml:TimePeriod gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -370,7 +415,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_ffc41e46-4092-4d51-ad11-85145121572e">
+            <gml:TimePeriod gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -380,12 +425,14 @@
           <aixm:type>NTL_AUTH</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_ffc41e46-4092-4d51-ad11-85145121572e">
+            <aixm:ContactInformation gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_3">
               <aixm:name>DONLON DEPARTMENT OF CUSTOMS AND EXCISE</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_ffc41e46-4092-4d51-ad11-85145121572e">
+                <aixm:PostalAddress gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>Government Square</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -394,17 +441,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_ffc41e46-4092-4d51-ad11-85145121572e_1">
+                <aixm:OnlineContact gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.customs.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@customs.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_ffc41e46-4092-4d51-ad11-85145121572e_2">
+                <aixm:OnlineContact gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage xsi:nil="true" nilReason="unknown"/>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -412,20 +463,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_ffc41e46-4092-4d51-ad11-85145121572e">
+                <aixm:TelephoneContact gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 697 1212</aixm:voice>
                   <aixm:facsimile>0123 697 1223</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_ffc41e46-4092-4d51-ad11-85145121572e">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -436,7 +492,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-IMMIGRATION-DEPT">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_3baddb82-21f7-4f40-b115-b78cf1634ee3">
+            <gml:TimePeriod gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -445,7 +501,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_3baddb82-21f7-4f40-b115-b78cf1634ee3">
+            <gml:TimePeriod gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -455,12 +511,14 @@
           <aixm:type>NTL_AUTH</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_3baddb82-21f7-4f40-b115-b78cf1634ee3">
+            <aixm:ContactInformation gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_3">
               <aixm:name>DONLON DEPARTMENT OF IMMIGRATION</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_3baddb82-21f7-4f40-b115-b78cf1634ee3">
+                <aixm:PostalAddress gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>Government Square</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -469,17 +527,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_3baddb82-21f7-4f40-b115-b78cf1634ee3_1">
+                <aixm:OnlineContact gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.immigration.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@immigration.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_3baddb82-21f7-4f40-b115-b78cf1634ee3_2">
+                <aixm:OnlineContact gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage xsi:nil="true" nilReason="unknown"/>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -487,20 +549,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_3baddb82-21f7-4f40-b115-b78cf1634ee3">
+                <aixm:TelephoneContact gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 697 5555</aixm:voice>
                   <aixm:facsimile>0123 697 5655</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_3baddb82-21f7-4f40-b115-b78cf1634ee3">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -511,7 +578,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-HEALTH-DEPT">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_49a4cc40-c679-4058-8288-0a1f7f58c78f">
+            <gml:TimePeriod gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -520,7 +587,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_49a4cc40-c679-4058-8288-0a1f7f58c78f">
+            <gml:TimePeriod gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -530,12 +597,14 @@
           <aixm:type>NTL_AUTH</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_49a4cc40-c679-4058-8288-0a1f7f58c78f">
+            <aixm:ContactInformation gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_3">
               <aixm:name>DONLON DEPARTMENT OF HEALTH</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_49a4cc40-c679-4058-8288-0a1f7f58c78f">
+                <aixm:PostalAddress gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>Government Square</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -544,17 +613,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_49a4cc40-c679-4058-8288-0a1f7f58c78f_1">
+                <aixm:OnlineContact gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.health.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@health.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_49a4cc40-c679-4058-8288-0a1f7f58c78f_2">
+                <aixm:OnlineContact gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage xsi:nil="true" nilReason="unknown"/>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -562,20 +635,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_49a4cc40-c679-4058-8288-0a1f7f58c78f">
+                <aixm:TelephoneContact gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 697 4444</aixm:voice>
                   <aixm:facsimile>0123 697 4455</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_49a4cc40-c679-4058-8288-0a1f7f58c78f">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -586,7 +664,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-AGRICULTURAL-DEPT">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_c097cb06-57f8-4898-bd58-9e583b0df948">
+            <gml:TimePeriod gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -595,7 +673,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_c097cb06-57f8-4898-bd58-9e583b0df948">
+            <gml:TimePeriod gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -605,12 +683,14 @@
           <aixm:type>NTL_AUTH</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_c097cb06-57f8-4898-bd58-9e583b0df948">
+            <aixm:ContactInformation gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_3">
               <aixm:name>DONLON DEPARTMENT OF AGRICULTURAL QUARANTINE</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_c097cb06-57f8-4898-bd58-9e583b0df948">
+                <aixm:PostalAddress gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>Government Square</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -619,17 +699,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_c097cb06-57f8-4898-bd58-9e583b0df948_1">
+                <aixm:OnlineContact gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.agricultural.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@agricultural.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_c097cb06-57f8-4898-bd58-9e583b0df948_2">
+                <aixm:OnlineContact gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage xsi:nil="true" nilReason="unknown"/>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -637,20 +721,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_c097cb06-57f8-4898-bd58-9e583b0df948">
+                <aixm:TelephoneContact gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 697 6768</aixm:voice>
                   <aixm:facsimile>0123 697 6868</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_c097cb06-57f8-4898-bd58-9e583b0df948">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -661,7 +750,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-AAIB">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_dde5d09f-518a-47fb-b94c-da3bfbe21aeb">
+            <gml:TimePeriod gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -670,7 +759,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_dde5d09f-518a-47fb-b94c-da3bfbe21aeb">
+            <gml:TimePeriod gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -680,30 +769,37 @@
           <aixm:type>NTL_AUTH</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_dde5d09f-518a-47fb-b94c-da3bfbe21aeb">
+            <aixm:ContactInformation gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_3">
               <aixm:name>DONLON AIRCRAFT ACCIDENT INVESTIGATION BOARD</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_dde5d09f-518a-47fb-b94c-da3bfbe21aeb">
+                <aixm:PostalAddress gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>45 Aviation Road, first floor</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
+                  <aixm:administrativeArea xsi:nil="true"/>
                   <aixm:postalCode>1</aixm:postalCode>
                   <aixm:country>REPUBLIC OF DONLON</aixm:country>
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_dde5d09f-518a-47fb-b94c-da3bfbe21aeb_1">
+                <aixm:OnlineContact gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.accident.dl</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@accident.dl</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_dde5d09f-518a-47fb-b94c-da3bfbe21aeb_2">
+                <aixm:OnlineContact gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EAADYLYX</aixm:linkage>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -711,20 +807,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_dde5d09f-518a-47fb-b94c-da3bfbe21aeb">
+                <aixm:TelephoneContact gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0123 696 7222</aixm:voice>
                   <aixm:facsimile>0123 696 7322</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_dde5d09f-518a-47fb-b94c-da3bfbe21aeb">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -735,7 +836,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ORG_EADD-DONLON-INTL">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_1e1bdf59-3dd6-4f96-9166-e6095e7231fc">
+            <gml:TimePeriod gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -744,7 +845,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_1e1bdf59-3dd6-4f96-9166-e6095e7231fc">
+            <gml:TimePeriod gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -754,12 +855,14 @@
           <aixm:type>ORG</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_1e1bdf59-3dd6-4f96-9166-e6095e7231fc">
+            <aixm:ContactInformation gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_3">
               <aixm:name>DONLON INTERNATIONAL AIRPORT</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_1e1bdf59-3dd6-4f96-9166-e6095e7231fc">
+                <aixm:PostalAddress gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>4 W</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -768,17 +871,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_1e1bdf59-3dd6-4f96-9166-e6095e7231fc_1">
+                <aixm:OnlineContact gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.donlonairport.com</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@donlonairport.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_1e1bdf59-3dd6-4f96-9166-e6095e7231fc_2">
+                <aixm:OnlineContact gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EADDYDYX</aixm:linkage>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -786,20 +893,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_1e1bdf59-3dd6-4f96-9166-e6095e7231fc">
+                <aixm:TelephoneContact gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>01238282</aixm:voice>
                   <aixm:facsimile>01238292</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_1e1bdf59-3dd6-4f96-9166-e6095e7231fc">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -810,7 +922,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_HANDLING-AGENCY_GND-HAND-DONLON">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_1f7d06e8-5d2a-4d6c-8b71-52a71f09049d">
+            <gml:TimePeriod gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -819,7 +931,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_1f7d06e8-5d2a-4d6c-8b71-52a71f09049d">
+            <gml:TimePeriod gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -829,12 +941,14 @@
           <aixm:type>HANDLING_AGENCY</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_1f7d06e8-5d2a-4d6c-8b71-52a71f09049d">
+            <aixm:ContactInformation gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_3">
               <aixm:name>GROUND HANDLING DONLON</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_1f7d06e8-5d2a-4d6c-8b71-52a71f09049d">
+                <aixm:PostalAddress gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>4 W</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -843,35 +957,43 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_1f7d06e8-5d2a-4d6c-8b71-52a71f09049d">
+                <aixm:OnlineContact gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.donlongroundhandling.com</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@donlongroundhandling.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_1f7d06e8-5d2a-4d6c-8b71-52a71f09049d">
+                <aixm:TelephoneContact gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>01235353</aixm:voice>
                   <aixm:facsimile>01235454</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_1f7d06e8-5d2a-4d6c-8b71-52a71f09049d_1">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_7">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_1f7d06e8-5d2a-4d6c-8b71-52a71f09049d_2">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:1e1bdf59-3dd6-4f96-9166-e6095e7231fc" xlink:title="DONLON INTERNATIONAL AIRPORT"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:1e1bdf59-3dd6-4f96-9166-e6095e7231fc" xlink:title="DONLON INTERNATIONAL AIRPORT" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -882,7 +1004,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ORG_EADH-DONLON-DOWNTOWN-HELIPORT">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_74efb6ba-a52a-46c0-a16b-03860d356882">
+            <gml:TimePeriod gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -891,7 +1013,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_74efb6ba-a52a-46c0-a16b-03860d356882">
+            <gml:TimePeriod gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -901,12 +1023,14 @@
           <aixm:type>ORG</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_74efb6ba-a52a-46c0-a16b-03860d356882">
+            <aixm:ContactInformation gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_3">
               <aixm:name>DONLON DOWNTOWN HELIPORT AUTHORITY</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_74efb6ba-a52a-46c0-a16b-03860d356882">
+                <aixm:PostalAddress gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint>924 Riverside St.</aixm:deliveryPoint>
                   <aixm:city>DONLON</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -915,17 +1039,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_74efb6ba-a52a-46c0-a16b-03860d356882_1">
+                <aixm:OnlineContact gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.donlonheliport.com</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@donlonheliport.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_74efb6ba-a52a-46c0-a16b-03860d356882_2">
+                <aixm:OnlineContact gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EADHYDYX</aixm:linkage>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -933,20 +1061,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_74efb6ba-a52a-46c0-a16b-03860d356882">
+                <aixm:TelephoneContact gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>06958238</aixm:voice>
                   <aixm:facsimile>06958239</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_74efb6ba-a52a-46c0-a16b-03860d356882">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -957,7 +1090,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ORG_EADA-AKVIN">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_6df24d88-e243-4113-970a-3de99734b4f1">
+            <gml:TimePeriod gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -966,7 +1099,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_6df24d88-e243-4113-970a-3de99734b4f1">
+            <gml:TimePeriod gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -976,12 +1109,14 @@
           <aixm:type>ORG</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_6df24d88-e243-4113-970a-3de99734b4f1">
+            <aixm:ContactInformation gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_3">
               <aixm:name>AKVIN AIRPORT AUTHORITY</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_6df24d88-e243-4113-970a-3de99734b4f1">
+                <aixm:PostalAddress gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint xsi:nil="true" nilReason="unknown"/>
                   <aixm:city>AKVIN</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -990,17 +1125,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_6df24d88-e243-4113-970a-3de99734b4f1_1">
+                <aixm:OnlineContact gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.akvinairport.com</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@akvinairport.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_6df24d88-e243-4113-970a-3de99734b4f1_2">
+                <aixm:OnlineContact gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EADAYDYX</aixm:linkage>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -1008,20 +1147,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_6df24d88-e243-4113-970a-3de99734b4f1">
+                <aixm:TelephoneContact gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>01238202</aixm:voice>
                   <aixm:facsimile>01238212</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_6df24d88-e243-4113-970a-3de99734b4f1">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -1032,7 +1176,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ORG_EAMN-MAGNETO">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_3196b2e8-1708-4ba7-b6ce-531fd46d1ab6">
+            <gml:TimePeriod gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -1041,7 +1185,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_3196b2e8-1708-4ba7-b6ce-531fd46d1ab6">
+            <gml:TimePeriod gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_2">
               <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -1051,12 +1195,14 @@
           <aixm:type>ORG</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_3196b2e8-1708-4ba7-b6ce-531fd46d1ab6">
+            <aixm:ContactInformation gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_3">
               <aixm:name>MAGNETO AIRPORT AUTHORITY</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address>
-                <aixm:PostalAddress gml:id="ID_PA_3196b2e8-1708-4ba7-b6ce-531fd46d1ab6">
+                <aixm:PostalAddress gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:deliveryPoint xsi:nil="true" nilReason="unknown"/>
                   <aixm:city>MAGNETO</aixm:city>
                   <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
@@ -1065,17 +1211,21 @@
                 </aixm:PostalAddress>
               </aixm:address>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_3196b2e8-1708-4ba7-b6ce-531fd46d1ab6_1">
+                <aixm:OnlineContact gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.magnetoairport.com</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>admin@magnetoairport.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_3196b2e8-1708-4ba7-b6ce-531fd46d1ab6_2">
+                <aixm:OnlineContact gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_6">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>AFTN</aixm:network>
                   <aixm:linkage>EAMNYDYX</aixm:linkage>
                   <aixm:protocol xsi:nil="true" nilReason="unknown"/>
@@ -1083,20 +1233,25 @@
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_3196b2e8-1708-4ba7-b6ce-531fd46d1ab6">
+                <aixm:TelephoneContact gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_7">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>05379238</aixm:voice>
                   <aixm:facsimile>05379239</aixm:facsimile>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_3196b2e8-1708-4ba7-b6ce-531fd46d1ab6">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -1107,7 +1262,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_AEROCLUB_DONBURG-AEROCLUB">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_6384a4e0-8497-4f83-8eaa-d73ef549d90f">
+            <gml:TimePeriod gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -1116,7 +1271,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_6384a4e0-8497-4f83-8eaa-d73ef549d90f">
+            <gml:TimePeriod gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_2">
               <gml:beginPosition>2017-01-07T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -1126,34 +1281,41 @@
           <aixm:type>OTHER:AEROCLUB</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_6384a4e0-8497-4f83-8eaa-d73ef549d90f">
+            <aixm:ContactInformation gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_3">
               <aixm:name>DONBURG AEROCLUB</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address xsi:nil="true" nilReason="unknown"/>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_6384a4e0-8497-4f83-8eaa-d73ef549d90f">
+                <aixm:OnlineContact gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.donburgaeroclub.com</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>contact@donburgaeroclub.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_6384a4e0-8497-4f83-8eaa-d73ef549d90f">
+                <aixm:TelephoneContact gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0531302546</aixm:voice>
                   <aixm:facsimile xsi:nil="true" nilReason="unknown"/>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_6384a4e0-8497-4f83-8eaa-d73ef549d90f">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_6">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>
@@ -1164,7 +1326,7 @@
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_AEROCLUB_LONGBURG-AEROCLUB">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_3b0a59fd-956e-449a-b62b-572e30b70efc">
+            <gml:TimePeriod gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -1173,7 +1335,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_3b0a59fd-956e-449a-b62b-572e30b70efc">
+            <gml:TimePeriod gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_2">
               <gml:beginPosition>2017-01-07T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -1183,34 +1345,41 @@
           <aixm:type>OTHER:AEROCLUB</aixm:type>
           <aixm:military>CIVIL</aixm:military>
           <aixm:contact>
-            <aixm:ContactInformation gml:id="ID_CI_3b0a59fd-956e-449a-b62b-572e30b70efc">
+            <aixm:ContactInformation gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_3">
               <aixm:name>LONGBURG AEROCLUB</aixm:name>
               <aixm:title xsi:nil="true" nilReason="inapplicable"/>
               <aixm:address xsi:nil="true" nilReason="unknown"/>
               <aixm:networkNode>
-                <aixm:OnlineContact gml:id="ID_OC_3b0a59fd-956e-449a-b62b-572e30b70efc">
+                <aixm:OnlineContact gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_4">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:network>INTERNET</aixm:network>
                   <aixm:linkage>www.longburgaeroclub.com</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
+                  <aixm:protocol>HTTPS</aixm:protocol>
                   <aixm:eMail>contact@longburgaeroclub.com</aixm:eMail>
                 </aixm:OnlineContact>
               </aixm:networkNode>
               <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="ID_TC_3b0a59fd-956e-449a-b62b-572e30b70efc">
+                <aixm:TelephoneContact gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_5">
                   <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:specialDateAuthority xsi:nil="true"/>
                   <aixm:voice>0542359546</aixm:voice>
                   <aixm:facsimile xsi:nil="true" nilReason="unknown"/>
                 </aixm:TelephoneContact>
               </aixm:phoneFax>
+              <aixm:annotation xsi:nil="true"/>
             </aixm:ContactInformation>
           </aixm:contact>
           <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="ID_OAA_3b0a59fd-956e-449a-b62b-572e30b70efc">
+            <aixm:OrganisationAuthorityAssociation gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_6">
               <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
+          <aixm:annotation xsi:nil="true"/>
         </aixm:OrganisationAuthorityTimeSlice>
       </aixm:timeSlice>
     </aixm:OrganisationAuthority>

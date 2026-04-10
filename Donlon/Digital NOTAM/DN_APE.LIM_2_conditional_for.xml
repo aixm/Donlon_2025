@@ -87,12 +87,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_c3fb2b4b-e522-46da-a6bb-424ca9a95f6c_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0135</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-03-16T06:27:19Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMNLT</event:selectionCode>
@@ -113,7 +118,7 @@ Due to surface markings for acft stands 13-14 temporarily suspended.
 Marshaller guidance is mandatory.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -163,6 +168,9 @@ Marshaller guidance is mandatory.</event:text>
               </gml:patches>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedSurface>
           </aixm:extent>
           <!-- Location and Extent Description -->
@@ -240,7 +248,7 @@ Marshaller guidance is mandatory.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:ApronElementExtension gml:id="id_bed6308f-8019-40d8-9731-195beeb952a9_1_0_B_17">
-              <event:theEvent xlink:href="urn:uuid:719ea109-5ca3-44ec-81b1-7a1d3f768cfb"/>
+              <event:theEvent xlink:href="urn:uuid:719ea109-5ca3-44ec-81b1-7a1d3f768cfb" xlink:title="EADD APRON A DNOTAM APE.LIM" xlink:type="simple"/>
             </event:ApronElementExtension>
           </aixm:extension>
         </aixm:ApronElementTimeSlice>

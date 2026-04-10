@@ -81,12 +81,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_75e28f1a-094d-46cd-9bd3-f02dfecddaf8_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0079</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-18T04:51:59Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMNLC</event:selectionCode>
@@ -107,7 +112,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 Surface reconditioning.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -118,9 +123,9 @@ Surface reconditioning.</event:text>
     <aixm:Apron gml:id="uuid.36a31e53-845c-4818-b278-b29367d85d13">
       <gml:identifier codeSpace="urn:uuid:">36a31e53-845c-4818-b278-b29367d85d13</gml:identifier>
       <aixm:timeSlice>
-        <aixm:ApronTimeSlice gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T">
+        <aixm:ApronTimeSlice gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_1">
+            <gml:TimePeriod gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_1">
               <gml:beginPosition>2026-02-18T06:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-02-27T11:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -130,50 +135,71 @@ Surface reconditioning.</event:text>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the apron -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_2">
+            <aixm:ApronAreaAvailability gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
-                <aixm:ApronAreaUsage gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_3">
+                <aixm:ApronAreaUsage gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_3">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_4">
+                    <aixm:ConditionCombination gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
+                      <aixm:flight xsi:nil="true"/>
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_5">
+                        <aixm:ConditionCombination gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_5">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>NOT</aixm:logicalOperator>
+                          <aixm:weather xsi:nil="true"/>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_6">
+                            <aixm:AircraftCharacteristic gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_6">
                               <aixm:type>HELICOPTER</aixm:type>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_7">
+                        <aixm:ConditionCombination gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_7">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>NOT</aixm:logicalOperator>
+                          <aixm:weather xsi:nil="true"/>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_8">
+                            <aixm:AircraftCharacteristic gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_8">
                               <aixm:type>TILT_WING</aixm:type>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:ApronAreaUsage>
               </aixm:usage>
             </aixm:ApronAreaAvailability>
           </aixm:availability>
           <!-- The availability status of the apron during the event -->
           <aixm:availability>
-            <aixm:ApronAreaAvailability gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_9">
+            <aixm:ApronAreaAvailability gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_9">
               <!-- Schedule -->
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_10">
+                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_10">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>WED</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -183,7 +209,7 @@ Surface reconditioning.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_11">
+                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_11">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>THU</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -193,7 +219,7 @@ Surface reconditioning.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_12">
+                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>FRI</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -203,7 +229,7 @@ Surface reconditioning.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_13">
+                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>08:00</aixm:startTime>
@@ -213,7 +239,7 @@ Surface reconditioning.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_14">
+                <aixm:Timesheet gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_14">
                   <aixm:timeReference>UTC-2</aixm:timeReference> <!-- The timezone for DONLON INTL. -->
                   <aixm:startDate>26-02</aixm:startDate>
                   <aixm:endDate>27-02</aixm:endDate>
@@ -227,11 +253,11 @@ Surface reconditioning.</event:text>
               </aixm:timeInterval>
               <!-- Closure Reason -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_15">
+                <aixm:Note gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_15">
                   <aixm:propertyName>operationalStatus</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_16">
+                    <aixm:LinguisticNote gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_16">
                       <aixm:note>maintenance activities</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -239,10 +265,10 @@ Surface reconditioning.</event:text>
               </aixm:annotation>
               <!-- Note -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_17">
+                <aixm:Note gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_17">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_18">
+                    <aixm:LinguisticNote gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_18">
                       <aixm:note>Surface reconditioning</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -253,8 +279,8 @@ Surface reconditioning.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:ApronExtension gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_1_0_T_19">
-              <event:theEvent xlink:href="urn:uuid:edbed27b-76ca-454e-9308-a02279c1d086"/>
+            <event:ApronExtension gml:id="id_b87c700a-f0bd-4d4d-997a-bd0dfd0c20bb_2_0_T_19">
+              <event:theEvent xlink:href="urn:uuid:edbed27b-76ca-454e-9308-a02279c1d086" xlink:title="EADD APRON B DNOTAM APN.CLS" xlink:type="simple"/>
             </event:ApronExtension>
           </aixm:extension>
         </aixm:ApronTimeSlice>

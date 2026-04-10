@@ -85,12 +85,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_9ba9ee4f-c6d6-429a-85c6-1a7155b3a0d3_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0128</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-03-12T09:01:57Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMNLC</event:selectionCode>
@@ -113,7 +118,7 @@ Closed area is delimited by crowd control barriers.
 Schedule applicable only during fair weather.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -176,6 +181,9 @@ Schedule applicable only during fair weather.</event:text>
               </gml:patches>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedSurface>
           </aixm:extent>
           <!-- Location and Extent Description -->
@@ -245,7 +253,7 @@ Schedule applicable only during fair weather.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:ApronElementExtension gml:id="id_0a994a9f-6da1-48fb-9086-ece8fe84d3c8_1_0_B_15">
-              <event:theEvent xlink:href="urn:uuid:3765653e-b421-475c-bd73-07a42c761514"/>
+              <event:theEvent xlink:href="urn:uuid:3765653e-b421-475c-bd73-07a42c761514" xlink:title="EADD APRON A DNOTAM APE.CLS" xlink:type="simple"/>
             </event:ApronElementExtension>
           </aixm:extension>
         </aixm:ApronElementTimeSlice>

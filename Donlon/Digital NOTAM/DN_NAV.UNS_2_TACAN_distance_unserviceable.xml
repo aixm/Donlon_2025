@@ -81,12 +81,18 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:activity xsi:nil="true"/>
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_f7f8bf8f-7868-4f52-b4bc-9caff4a53832_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0390</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-04-05T04:45:19Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QNNAS</event:selectionCode>
@@ -105,7 +111,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:text>OSTO TACAN DISTANCE OST 119X subject to interruption.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -136,7 +142,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:NavaidExtension gml:id="id_e84a1f59-657e-43aa-8493-6448b9be3b48_1_0_T_3">
-              <event:theEvent xlink:href="urn:uuid:3eed12ef-2be6-4203-8ad8-d8f27bd31eca"/>
+              <event:theEvent xlink:href="urn:uuid:3eed12ef-2be6-4203-8ad8-d8f27bd31eca" xlink:title="OST TACAN OSTO DNOTAM NAV.UNS" xlink:type="simple"/>
             </event:NavaidExtension>
           </aixm:extension>
         </aixm:NavaidTimeSlice>
@@ -177,7 +183,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:TACANExtension gml:id="id_2d5796e7-4434-4974-a178-8704015c170b_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:3eed12ef-2be6-4203-8ad8-d8f27bd31eca"/>
+              <event:theEvent xlink:href="urn:uuid:3eed12ef-2be6-4203-8ad8-d8f27bd31eca" xlink:title="OST TACAN OSTO DNOTAM NAV.UNS" xlink:type="simple"/>
             </event:TACANExtension>
           </aixm:extension>
         </aixm:TACANTimeSlice>

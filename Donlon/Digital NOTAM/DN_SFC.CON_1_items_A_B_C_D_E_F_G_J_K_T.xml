@@ -82,12 +82,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:SNOWTAM gml:id="id_3c2aed92-23c9-4060-84ea-ae73126c3c7d_1_0_B_3">
               <event:series xsi:nil="true" nilReason="inapplicable"/>
               <event:number>0001</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2025-12-05T07:54:20Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:correction>NO</event:correction>
               <event:location>EADD</event:location>
               <event:situationalAwareness>RWY 09L drifting snow. RWY 09L loose sand. RWY 09L downgraded / frozen sand applied / patchy contaminant. TWYs A/B/C/D/E sanded / no marking on snow.</event:situationalAwareness>
@@ -103,7 +108,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </event:runwayCondition>
             </event:SNOWTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -115,9 +120,9 @@ Editorial note: this license is an instance of the BSD license template as provi
     <aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
       <gml:identifier codeSpace="urn:uuid:">1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
       <aixm:timeSlice>
-        <aixm:AirportHeliportTimeSlice gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T">
+        <aixm:AirportHeliportTimeSlice gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_5_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T_1">
+            <gml:TimePeriod gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_5_0_T_1">
               <gml:beginPosition>2025-12-05T08:00:00Z</gml:beginPosition>
               <gml:endPosition>2025-12-05T16:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -126,13 +131,13 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:sequenceNumber>5</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:contaminant>
-            <aixm:AirportHeliportContamination gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T_2">
+            <aixm:AirportHeliportContamination gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_5_0_T_2">
               <!-- (T) Note -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T_3">
+                <aixm:Note gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_5_0_T_3">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T_4">
+                    <aixm:LinguisticNote gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_5_0_T_4">
                       <aixm:note>RWY 09L downgraded / frozen sand applied / patchy contaminant. TWYs A/B/C/D/E sanded / no marking on snow</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -142,8 +147,8 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:contaminant>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:AirportHeliportExtension gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_1_0_T_5">
-              <event:theEvent xlink:href="urn:uuid:ffabf6b3-086d-483d-a41f-599e752164f6"/>
+            <event:AirportHeliportExtension gml:id="id_1b4d6892-6a21-44e6-82c8-780a698f13c8_5_0_T_5">
+              <event:theEvent xlink:href="urn:uuid:ffabf6b3-086d-483d-a41f-599e752164f6" xlink:title="EADD 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
             </event:AirportHeliportExtension>
           </aixm:extension>
         </aixm:AirportHeliportTimeSlice>
@@ -169,7 +174,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:overallContaminant>
             <aixm:RunwayContamination gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_2">
               <aixm:observationTime>2025-12-05T08:00:00.000Z</aixm:observationTime> <!-- (B) Date and time of assessment -->
-              <!-- (J) Drifting snow on th runway -->
+              <!-- (J) Drifting snow on the runway -->
               <aixm:layer>
                 <aixm:SurfaceContaminationLayer gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_3">
                   <aixm:type>OTHER:DRIFTING_SNOW</aixm:type>
@@ -252,7 +257,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayExtension gml:id="id_182f8ac5-673e-4517-8257-78594dc3ef74_1_0_T_14">
-              <event:theEvent xlink:href="urn:uuid:ffabf6b3-086d-483d-a41f-599e752164f6"/>
+              <event:theEvent xlink:href="urn:uuid:ffabf6b3-086d-483d-a41f-599e752164f6" xlink:title="EADD 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
             </event:RunwayExtension>
           </aixm:extension>
         </aixm:RunwayTimeSlice>

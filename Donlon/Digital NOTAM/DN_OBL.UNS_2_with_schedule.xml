@@ -78,12 +78,18 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:estimatedValidity xsi:nil="true"/>
           <event:activity xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_c6d46fd9-bd34-4e6d-a049-e13f9b1dc758_1_0_B_3">
               <event:series>F</event:series>
               <event:number>2503</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2025-12-22T04:03:58Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QOLAS</event:selectionCode>
@@ -105,7 +111,7 @@ elevation 150m (height 120m).
 Due to maintenance works.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -150,7 +156,7 @@ Due to maintenance works.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
-              <aixm:specialDateAuthority nilReason="inapplicable" xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:status>NORMAL</aixm:status>
             </aixm:VerticalStructureLightingStatus>
           </aixm:lightingAvailability>
@@ -188,7 +194,7 @@ Due to maintenance works.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
-              <aixm:specialDateAuthority nilReason="inapplicable" xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:status>OTHER:DYNAMIC</aixm:status>
             </aixm:VerticalStructureLightingStatus>
           </aixm:lightingAvailability>
@@ -222,7 +228,7 @@ Due to maintenance works.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:VerticalStructureExtension gml:id="id_1f4482cb-a68e-4116-8328-b125faf8ac44_1_0_T_15">
-              <event:theEvent xlink:href="urn:uuid:58df7d43-ace9-47a2-b056-49d69d2a2e01"/>
+              <event:theEvent xlink:href="urn:uuid:58df7d43-ace9-47a2-b056-49d69d2a2e01" xlink:title="ANTENNA OBST-EA-0001 DNOTAM OBL.UNS" xlink:type="simple"/>
             </event:VerticalStructureExtension>
           </aixm:extension>
         </aixm:VerticalStructureTimeSlice>

@@ -101,6 +101,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:designator>ECLIPTA-01</event:designator>
           <event:scenario xsi:nil="true"/>
           <event:version xsi:nil="true"/>
+          <event:estimatedValidity xsi:nil="true"/>
           <event:activity>Missile firing exercise in Danger Area ECLIPTA will take place in ECLIPTA sectors EAD21A (ECLIPTA1) and EAD21C (ECLIPTA3) as follows:
 EAD21A (ECLIPTA1) will be activated from 2026-02-05 08:00 UTC until 2026-02-06 20:00 UTC.
 EAD21C (ECLIPTA3) will be activated from 2026-02-06 08:00 UTC until 2026-02-07 20:00 UTC.
@@ -121,6 +122,12 @@ Each activation will be communicated by separate NOTAM.</event:activity>
             </html> 
           </event:summary>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <event:notification xsi:nil="true"/>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -156,13 +163,18 @@ Each activation will be communicated by separate NOTAM.</event:activity>
           <event:activity xsi:nil="true"/>
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
           <event:parentEvent xlink:href="urn:uuid:7b43febe-4431-4f19-955f-2d10d24b2f2b" xlink:title="D EAD21 ECLIPTA SECTORS ACTIVATION" xlink:type="simple"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_2973629e-8f61-41e1-9476-6e89a259e9cc_1_0_B_3">
               <event:series>D</event:series>
               <event:number>0023</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-05T07:52:40Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QWPLW</event:selectionCode>
@@ -183,7 +195,7 @@ Each activation will be communicated by separate NOTAM.</event:activity>
               <event:upperLimit>FL300</event:upperLimit>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -221,7 +233,7 @@ Each activation will be communicated by separate NOTAM.</event:activity>
           <!-- The link to Event 1 -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_3f612722-a25f-4ab6-a01b-cee4c8ff4681_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:a6d5f5e7-d675-4813-9a52-f3e0179c9f6d"/> <!-- Event 2 -->
+              <event:theEvent xlink:href="urn:uuid:a6d5f5e7-d675-4813-9a52-f3e0179c9f6d" xlink:title="D EAD21A DNOTAM SAA.ACT" xlink:type="simple"/>
             </event:AirspaceExtension>
           </aixm:extension>
         </aixm:AirspaceTimeSlice>
@@ -250,7 +262,7 @@ Each activation will be communicated by separate NOTAM.</event:activity>
               <gml:endPosition>2026-02-07T20:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <event:name>D EAD21A</event:name>
+          <event:name>D EAD21C</event:name>
           <event:designator>DNOTAM</event:designator>
           <event:scenario>SAA.ACT</event:scenario>
           <event:version>2.0</event:version>
@@ -258,13 +270,18 @@ Each activation will be communicated by separate NOTAM.</event:activity>
           <event:activity xsi:nil="true"/>
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
           <event:parentEvent xlink:href="urn:uuid:7b43febe-4431-4f19-955f-2d10d24b2f2b" xlink:title="D EAD21 ECLIPTA SECTORS ACTIVATION" xlink:type="simple"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_f3ff9fc3-499d-4992-b7fc-7ae4e90f8cd0_1_0_B_3">
               <event:series>D</event:series>
               <event:number>0024</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-05T07:54:40Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QWPLW</event:selectionCode>
@@ -285,7 +302,7 @@ Each activation will be communicated by separate NOTAM.</event:activity>
               <event:upperLimit>FL300</event:upperLimit>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -323,7 +340,7 @@ Each activation will be communicated by separate NOTAM.</event:activity>
           <!-- The link to the Event 2 -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_118e32da-ce75-4be8-a169-2e009d857154_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:d9e0ef16-fbc3-4113-a88b-db0e850cb960"/> <!-- Event 2 -->
+              <event:theEvent xlink:href="urn:uuid:d9e0ef16-fbc3-4113-a88b-db0e850cb960" xlink:title="D EAD21C DNOTAM SAA.ACT" xlink:type="simple"/>
             </event:AirspaceExtension>
           </aixm:extension>
         </aixm:AirspaceTimeSlice>

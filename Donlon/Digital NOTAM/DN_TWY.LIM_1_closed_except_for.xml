@@ -93,12 +93,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_3360b270-d19f-46a8-8635-f3ae7bfd71c1_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0037</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-17T11:53:40Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMYLT</event:selectionCode>
@@ -119,7 +124,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 due to Donlon International Airshow 2026.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -145,6 +150,8 @@ due to Donlon International Airshow 2026.</event:text>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_8ffc110d-f40d-4431-897c-b51c6c854f26_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -154,14 +161,21 @@ due to Donlon International Airshow 2026.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_8ffc110d-f40d-4431-897c-b51c6c854f26_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_8ffc110d-f40d-4431-897c-b51c6c854f26_1_0_T_5">
                           <aixm:classWingSpan>VI</aixm:classWingSpan>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAXIING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -250,7 +264,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayExtension gml:id="id_8ffc110d-f40d-4431-897c-b51c6c854f26_1_0_T_19">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayExtension>
           </aixm:extension>
         </aixm:TaxiwayTimeSlice>
@@ -263,9 +277,9 @@ due to Donlon International Airshow 2026.</event:text>
     <aixm:Taxiway gml:id="uuid.d243752a-7859-41a5-bbc6-3de39c07fe90">
       <gml:identifier codeSpace="urn:uuid:">d243752a-7859-41a5-bbc6-3de39c07fe90</gml:identifier>
       <aixm:timeSlice>
-        <aixm:TaxiwayTimeSlice gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T">
+        <aixm:TaxiwayTimeSlice gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_1">
+            <gml:TimePeriod gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_1">
               <gml:beginPosition>2026-01-17T12:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-01-18T18:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -275,25 +289,34 @@ due to Donlon International Airshow 2026.</event:text>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the taxiway -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_2">
+            <aixm:ManoeuvringAreaAvailability gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_3">
+                <aixm:ManoeuvringAreaUsage gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_3">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_4">
+                    <aixm:ConditionCombination gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_5">
+                        <aixm:AircraftCharacteristic gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_5">
                           <aixm:classWingSpan>VI</aixm:classWingSpan>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAXIING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -301,10 +324,10 @@ due to Donlon International Airshow 2026.</event:text>
           </aixm:availability>
           <!-- The availability status of the taxiway during the event -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_6">
+            <aixm:ManoeuvringAreaAvailability gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_6">
               <!-- Schedule -->
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_7">
+                <aixm:Timesheet gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_7">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:startTime>12:00</aixm:startTime>
@@ -315,11 +338,11 @@ due to Donlon International Airshow 2026.</event:text>
               </aixm:timeInterval>
               <!-- Reason -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_8">
+                <aixm:Note gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_8">
                   <aixm:propertyName>operationalStatus</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_9">
+                    <aixm:LinguisticNote gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_9">
                       <aixm:note>Donlon International Airshow 2026</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -328,13 +351,13 @@ due to Donlon International Airshow 2026.</event:text>
               <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
               <!-- Limitation 1 -->
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_10">
+                <aixm:ManoeuvringAreaUsage gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_10">
                   <aixm:type>RESERV</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_11">
+                    <aixm:ConditionCombination gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_11">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_12">
+                        <aixm:FlightCharacteristic gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_12">
                           <aixm:status>EMERGENCY</aixm:status>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
@@ -345,13 +368,13 @@ due to Donlon International Airshow 2026.</event:text>
               </aixm:usage>
               <!-- Limitation 2 -->
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_13">
+                <aixm:ManoeuvringAreaUsage gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_13">
                   <aixm:type>RESERV</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_14">
+                    <aixm:ConditionCombination gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_14">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_15">
+                        <aixm:FlightCharacteristic gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_15">
                           <aixm:status>HOSP</aixm:status>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
@@ -362,13 +385,13 @@ due to Donlon International Airshow 2026.</event:text>
               </aixm:usage>
               <!-- Limitation 3 -->
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_16">
+                <aixm:ManoeuvringAreaUsage gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_16">
                   <aixm:type>RESERV</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_17">
+                    <aixm:ConditionCombination gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_17">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_18">
+                        <aixm:FlightCharacteristic gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_18">
                           <aixm:purpose>PARTICIPANT</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
@@ -381,8 +404,8 @@ due to Donlon International Airshow 2026.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:TaxiwayExtension gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_1_0_T_19">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+            <event:TaxiwayExtension gml:id="id_70f20977-0ba9-4d10-80ce-18aadb3c8684_2_0_T_19">
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayExtension>
           </aixm:extension>
         </aixm:TaxiwayTimeSlice>
@@ -409,6 +432,8 @@ due to Donlon International Airshow 2026.</event:text>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_4d2c6a6d-9484-4241-ac18-9de08ce8cfc5_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -418,14 +443,21 @@ due to Donlon International Airshow 2026.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_4d2c6a6d-9484-4241-ac18-9de08ce8cfc5_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_4d2c6a6d-9484-4241-ac18-9de08ce8cfc5_1_0_T_5">
                           <aixm:classWingSpan>VI</aixm:classWingSpan>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAXIING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -514,7 +546,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayExtension gml:id="id_4d2c6a6d-9484-4241-ac18-9de08ce8cfc5_1_0_T_19">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayExtension>
           </aixm:extension>
         </aixm:TaxiwayTimeSlice>
@@ -609,7 +641,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_c993554e-f45b-4cf1-9b64-7662d9b2ec88_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -703,7 +735,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_a1713690-3945-4d72-b992-8420b143beff_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -797,7 +829,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_b0df5dfe-990c-428d-be7b-53758c174499_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -891,7 +923,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_a39e912e-b977-4e4d-b79c-125cd8b177f2_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -985,7 +1017,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_eda8497d-0365-46bd-967f-a01e0e6a46bb_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -1079,7 +1111,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_69d7710d-c2ac-4a1c-b479-53bc344ad4dd_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -1174,7 +1206,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_178f9619-8420-42f3-a9ed-24e29fe4694c_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -1268,7 +1300,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_562d4b0e-cb17-4e31-976d-e265ddf3493d_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -1363,7 +1395,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_3cc6be74-f18c-4c18-961a-b23841345a06_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -1457,7 +1489,7 @@ due to Donlon International Airshow 2026.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_4d92a82a-cede-4643-bbf6-bd58fd0f4965_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097"/>
+              <event:theEvent xlink:href="urn:uuid:aecf4dea-4b47-4c84-98d4-da41d287b097" xlink:title="EADD F G H DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>

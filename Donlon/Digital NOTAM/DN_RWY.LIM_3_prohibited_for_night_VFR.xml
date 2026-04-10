@@ -81,12 +81,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_bb1a3a33-ac2b-4eff-b041-6d416758b317_1_0_B_3">
               <event:series>A</event:series>
               <event:number>1820</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2025-11-24T16:19:25Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMRLV</event:selectionCode>
@@ -106,7 +111,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:text>RWY 09R/27L prohibited for VFR private all operations</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -118,9 +123,9 @@ Editorial note: this license is an instance of the BSD license template as provi
     <aixm:RunwayDirection gml:id="uuid.5d6513d4-a62a-49e1-9e26-0b8cbf320daf">
       <gml:identifier codeSpace="urn:uuid:">5d6513d4-a62a-49e1-9e26-0b8cbf320daf</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayDirectionTimeSlice gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T">
+        <aixm:RunwayDirectionTimeSlice gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_1">
+            <gml:TimePeriod gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_1">
               <gml:beginPosition>2025-11-24T16:23:00Z</gml:beginPosition>
               <gml:endPosition>2025-11-28T07:33:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -130,87 +135,115 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the runway direction -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_2">
+            <aixm:ManoeuvringAreaAvailability gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_3">
+                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_4">
+                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
+                      <aixm:flight xsi:nil="true"/>
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_5">
+                        <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_5">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:weather xsi:nil="true"/>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_6">
+                            <aixm:AircraftCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_6">
                               <aixm:aircraftLandingCategory>A</aixm:aircraftLandingCategory>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_7">
+                            <aixm:AircraftCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_7">
                               <aixm:aircraftLandingCategory>B</aixm:aircraftLandingCategory>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_8">
+                            <aixm:AircraftCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_8">
                               <aixm:aircraftLandingCategory>C</aixm:aircraftLandingCategory>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_9">
+                        <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_9">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:weather>
-                            <aixm:Meteorology gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_10">
+                            <aixm:Meteorology gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_10">
                               <aixm:flightConditions>VMC</aixm:flightConditions>
                             </aixm:Meteorology>
                           </aixm:weather>
                           <aixm:weather>
-                            <aixm:Meteorology gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_11">
+                            <aixm:Meteorology gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_11">
                               <aixm:flightConditions>IMC</aixm:flightConditions>
                               <aixm:runwayVisualRange uom="M">550</aixm:runwayVisualRange>
                               <aixm:runwayVisualRangeInterpretation>AT_OR_ABOVE</aixm:runwayVisualRangeInterpretation>
                             </aixm:Meteorology>
                           </aixm:weather>
+                          <aixm:aircraft xsi:nil="true"/>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_12">
+                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_12">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_13">
+                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_13">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_14">
+                        <aixm:FlightCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_14">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_15">
+                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_15">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_16">
+                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_16">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_17">
+                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_17">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:dayTil>ANY</aixm:dayTil>
@@ -221,7 +254,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_18">
+                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_18">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -232,7 +265,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_19">
+                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_19">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -242,27 +275,32 @@ Editorial note: this license is an instance of the BSD license template as provi
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_20">
+                        <aixm:FlightCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_20">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAKEOFF</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_21">
+                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_21">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:contact xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_22">
+                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_22">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_23">
+                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_23">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:startTime>06:00</aixm:startTime>
@@ -272,7 +310,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_24">
+                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_24">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -283,7 +321,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_25">
+                        <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_25">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -293,21 +331,25 @@ Editorial note: this license is an instance of the BSD license template as provi
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_26">
+                        <aixm:FlightCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_26">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
-                    <aixm:Note gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_27">
+                    <aixm:Note gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_27">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>DESCRIPTION</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_28">
+                        <aixm:LinguisticNote gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_28">
                           <aixm:note lang="eng">School and training flights must only be made after permission has been obtained from ATS</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>
@@ -320,9 +362,9 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:availability>
           <!-- The availability status of the runway direction during the event -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_29">
+            <aixm:ManoeuvringAreaAvailability gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_29">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_30">
+                <aixm:Timesheet gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_30">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
@@ -334,13 +376,13 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:timeInterval>
               <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_31">
+                <aixm:ManoeuvringAreaUsage gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_31">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_32">
+                    <aixm:ConditionCombination gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_32">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_33">
+                        <aixm:FlightCharacteristic gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_33">
                           <aixm:rule>VFR</aixm:rule>
                           <aixm:purpose>PRIVATE</aixm:purpose>
                         </aixm:FlightCharacteristic>
@@ -354,8 +396,8 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:RunwayDirectionExtension gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_1_0_T_34">
-              <event:theEvent xlink:href="urn:uuid:9ab797b6-c834-46a5-ac90-8a13c9be4e4a"/>
+            <event:RunwayDirectionExtension gml:id="id_afa8f2f9-55bf-4094-af6d-837f2b2da714_2_0_T_34">
+              <event:theEvent xlink:href="urn:uuid:9ab797b6-c834-46a5-ac90-8a13c9be4e4a" xlink:title="EADD 09R/27L DNOTAM RWY.LIM" xlink:type="simple"/>
             </event:RunwayDirectionExtension>
           </aixm:extension>
         </aixm:RunwayDirectionTimeSlice>
@@ -368,9 +410,9 @@ Editorial note: this license is an instance of the BSD license template as provi
     <aixm:RunwayDirection gml:id="uuid.ee6019d6-29f7-404d-8cee-b6819f325aed">
       <gml:identifier codeSpace="urn:uuid:">ee6019d6-29f7-404d-8cee-b6819f325aed</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayDirectionTimeSlice gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T">
+        <aixm:RunwayDirectionTimeSlice gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_1">
+            <gml:TimePeriod gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_1">
               <gml:beginPosition>2025-11-24T16:23:00Z</gml:beginPosition>
               <gml:endPosition>2025-11-28T07:33:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -380,69 +422,90 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the runway direction -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_2">
+            <aixm:ManoeuvringAreaAvailability gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_3">
+                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_3">
                   <aixm:type>PERMIT</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_4">
+                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
+                      <aixm:flight xsi:nil="true"/>
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_5">
+                        <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_5">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:weather xsi:nil="true"/>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_6">
+                            <aixm:AircraftCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_6">
                               <aixm:aircraftLandingCategory>A</aixm:aircraftLandingCategory>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_7">
+                            <aixm:AircraftCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_7">
                               <aixm:aircraftLandingCategory>B</aixm:aircraftLandingCategory>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
                           <aixm:aircraft>
-                            <aixm:AircraftCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_8">
+                            <aixm:AircraftCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_8">
                               <aixm:aircraftLandingCategory>C</aixm:aircraftLandingCategory>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                       <aixm:subCondition>
-                        <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_9">
+                        <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_9">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:weather>
-                            <aixm:Meteorology gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_10">
+                            <aixm:Meteorology gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_10">
                               <aixm:flightConditions>VMC</aixm:flightConditions>
                             </aixm:Meteorology>
                           </aixm:weather>
                           <aixm:weather>
-                            <aixm:Meteorology gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_11">
+                            <aixm:Meteorology gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_11">
                               <aixm:flightConditions>IMC</aixm:flightConditions>
                               <aixm:runwayVisualRange uom="M">550</aixm:runwayVisualRange>
                               <aixm:runwayVisualRangeInterpretation>AT_OR_ABOVE</aixm:runwayVisualRangeInterpretation>
                             </aixm:Meteorology>
                           </aixm:weather>
+                          <aixm:aircraft xsi:nil="true"/>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_12">
+                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_12">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_13">
+                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_13">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_14">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_14">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:dayTil>ANY</aixm:dayTil>
@@ -453,7 +516,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_15">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_15">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -464,7 +527,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_16">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_16">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -474,27 +537,32 @@ Editorial note: this license is an instance of the BSD license template as provi
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_17">
+                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_17">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAKEOFF</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_18">
+                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_18">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:contact xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_19">
+                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_19">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_20">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_20">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:startTime>06:00</aixm:startTime>
@@ -504,7 +572,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_21">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_21">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -515,7 +583,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_22">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_22">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -525,21 +593,25 @@ Editorial note: this license is an instance of the BSD license template as provi
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_23">
+                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_23">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
-                    <aixm:Note gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_24">
+                    <aixm:Note gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_24">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>DESCRIPTION</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_25">
+                        <aixm:LinguisticNote gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_25">
                           <aixm:note lang="eng">School and training flights must only be made after permission has been obtained from ATS</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>
@@ -549,14 +621,14 @@ Editorial note: this license is an instance of the BSD license template as provi
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_26">
+                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_26">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_27">
+                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_27">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_28">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_28">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:dayTil>ANY</aixm:dayTil>
@@ -567,7 +639,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_29">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_29">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -578,7 +650,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_30">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_30">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -588,27 +660,32 @@ Editorial note: this license is an instance of the BSD license template as provi
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_31">
+                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_31">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_32">
+                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_32">
                   <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission nilReason="unknown" xsi:nil="true"/>
+                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:contact xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_33">
+                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_33">
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_34">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_34">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>ANY</aixm:day>
                           <aixm:startTime>06:00</aixm:startTime>
@@ -618,7 +695,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_35">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_35">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>SUN</aixm:day>
                           <aixm:dayTil>MON</aixm:dayTil>
@@ -629,7 +706,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:Timesheet>
                       </aixm:timeInterval>
                       <aixm:timeInterval>
-                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_36">
+                        <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_36">
                           <aixm:timeReference>UTC</aixm:timeReference>
                           <aixm:day>HOL</aixm:day>
                           <aixm:dayTil>AFT_HOL</aixm:dayTil>
@@ -639,21 +716,25 @@ Editorial note: this license is an instance of the BSD license template as provi
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_37">
+                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_37">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
-                    <aixm:Note gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_38">
+                    <aixm:Note gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_38">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>DESCRIPTION</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_39">
+                        <aixm:LinguisticNote gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_39">
                           <aixm:note lang="eng">School and training flights must only be made after permission has been obtained from ATS</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>
@@ -666,9 +747,9 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:availability>
           <!-- The availability status of the runway direction during the event -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_40">
+            <aixm:ManoeuvringAreaAvailability gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_40">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_41">
+                <aixm:Timesheet gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_41">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
@@ -680,13 +761,13 @@ Editorial note: this license is an instance of the BSD license template as provi
               </aixm:timeInterval>
               <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_42">
+                <aixm:ManoeuvringAreaUsage gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_42">
                   <aixm:type>FORBID</aixm:type>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_43">
+                    <aixm:ConditionCombination gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_43">
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_44">
+                        <aixm:FlightCharacteristic gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_44">
                           <aixm:rule>VFR</aixm:rule>
                           <aixm:purpose>PRIVATE</aixm:purpose>
                         </aixm:FlightCharacteristic>
@@ -700,8 +781,8 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:RunwayDirectionExtension gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_1_0_T_45">
-              <event:theEvent xlink:href="urn:uuid:9ab797b6-c834-46a5-ac90-8a13c9be4e4a"/>
+            <event:RunwayDirectionExtension gml:id="id_7da74019-f875-4959-adcb-fb5b99d5edea_2_0_T_45">
+              <event:theEvent xlink:href="urn:uuid:9ab797b6-c834-46a5-ac90-8a13c9be4e4a" xlink:title="EADD 09R/27L DNOTAM RWY.LIM" xlink:type="simple"/>
             </event:RunwayDirectionExtension>
           </aixm:extension>
         </aixm:RunwayDirectionTimeSlice>

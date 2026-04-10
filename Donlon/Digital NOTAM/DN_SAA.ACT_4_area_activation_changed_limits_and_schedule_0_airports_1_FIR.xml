@@ -22,7 +22,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for a spacial activity area activation, with changed vertical limits during the activation:
  
-                 Airspace: EAV13 D_OTHER LONBURG
+                 Airspace: EAV13 D_OTHER LONGBURG
         Activation status: ACTIVE
                  Activity: ULM
                Start Time: 2026-01-21 10:00
@@ -109,12 +109,18 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:activity xsi:nil="true"/>
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_dd4cd2e0-cda3-4f56-a775-f19411ec8195_1_0_B_3">
               <event:series>D</event:series>
               <event:number>0015</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-21T09:48:40Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QWPLW</event:selectionCode>
@@ -137,7 +143,7 @@ Vertical limits changed during activation.</event:text>
               <event:upperLimit>2500M AGL</event:upperLimit>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -227,6 +233,7 @@ Vertical limits changed during activation.</event:text>
           <!-- Daily 1000-1400, GND / 500M AGL, AVBL_FOR_ACTIVATION -->
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_06ec4828-7cb1-4aa9-9513-4ed05d925d8e_1_0_T_9">
+              <!-- Modified schedule -->
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_06ec4828-7cb1-4aa9-9513-4ed05d925d8e_1_0_T_10">
                   <aixm:timeReference>UTC</aixm:timeReference>
@@ -258,8 +265,10 @@ Vertical limits changed during activation.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
+              <!-- Modified vertical limits of activation -->
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_06ec4828-7cb1-4aa9-9513-4ed05d925d8e_1_0_T_15">
                   <aixm:upperLimit uom="M">500</aixm:upperLimit>
@@ -267,7 +276,7 @@ Vertical limits changed during activation.</event:text>
                   <aixm:lowerLimit>GND</aixm:lowerLimit>
                 </aixm:AirspaceLayer>
               </aixm:levels>
-              <aixm:user xlink:href="urn:uuid:3b0a59fd-956e-449a-b62b-572e30b70efc" xlink:title="ORG AEROCLUB LONGBURG AEROCLUB"/>
+              <aixm:user xlink:href="urn:uuid:3b0a59fd-956e-449a-b62b-572e30b70efc" xlink:title="ORG AEROCLUB LONGBURG AEROCLUB" xlink:type="simple"/>
               <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
@@ -316,8 +325,10 @@ Vertical limits changed during activation.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
+              <!-- Modified vertical limits of activation -->
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_06ec4828-7cb1-4aa9-9513-4ed05d925d8e_1_0_T_23">
                   <aixm:upperLimit uom="M">2500</aixm:upperLimit>
@@ -325,7 +336,7 @@ Vertical limits changed during activation.</event:text>
                   <aixm:lowerLimit>GND</aixm:lowerLimit>
                 </aixm:AirspaceLayer>
               </aixm:levels>
-              <aixm:user xlink:href="urn:uuid:3b0a59fd-956e-449a-b62b-572e30b70efc" xlink:title="ORG AEROCLUB LONGBURG AEROCLUB"/>
+              <aixm:user xlink:href="urn:uuid:3b0a59fd-956e-449a-b62b-572e30b70efc" xlink:title="ORG AEROCLUB LONGBURG AEROCLUB" xlink:type="simple"/>
               <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
@@ -353,8 +364,10 @@ Vertical limits changed during activation.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
+              <!-- Modified vertical limits of inactivation -->
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_06ec4828-7cb1-4aa9-9513-4ed05d925d8e_1_0_T_28">
                   <aixm:upperLimit uom="M">2500</aixm:upperLimit>
@@ -369,7 +382,7 @@ Vertical limits changed during activation.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_06ec4828-7cb1-4aa9-9513-4ed05d925d8e_1_0_T_29">
-              <event:theEvent xlink:href="urn:uuid:56385583-a819-4ee0-8490-382ac543f103"/>
+              <event:theEvent xlink:href="urn:uuid:56385583-a819-4ee0-8490-382ac543f103" xlink:title="D_OTHER EAV13 DNOTAM SAA.ACT" xlink:type="simple"/>
             </event:AirspaceExtension>
           </aixm:extension>
         </aixm:AirspaceTimeSlice>

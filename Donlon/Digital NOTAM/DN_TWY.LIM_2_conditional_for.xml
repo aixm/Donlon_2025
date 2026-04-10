@@ -86,12 +86,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_4938bc42-6178-428c-947a-91253f4c66c3_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0038</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-20T09:47:20Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMXLT</event:selectionCode>
@@ -112,7 +117,7 @@ due to large number of aircraft movements on apron.
 Follow-me car or marshaller assistance is mandatory.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -138,6 +143,8 @@ Follow-me car or marshaller assistance is mandatory.</event:text>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_156a4341-8837-46eb-af5e-cb78c0c34a87_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -147,15 +154,22 @@ Follow-me car or marshaller assistance is mandatory.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_156a4341-8837-46eb-af5e-cb78c0c34a87_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_156a4341-8837-46eb-af5e-cb78c0c34a87_1_0_T_5">
                           <aixm:wingSpan uom="M">36</aixm:wingSpan>
                           <aixm:wingSpanInterpretation>ABOVE</aixm:wingSpanInterpretation>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAXIING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -239,7 +253,7 @@ Follow-me car or marshaller assistance is mandatory.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayExtension gml:id="id_156a4341-8837-46eb-af5e-cb78c0c34a87_1_0_T_19">
-              <event:theEvent xlink:href="urn:uuid:478c5818-c7b5-493e-8d0a-4fc478272da7"/>
+              <event:theEvent xlink:href="urn:uuid:478c5818-c7b5-493e-8d0a-4fc478272da7" xlink:title="EADD R DNOTAM TWY.LIM" xlink:type="simple"/>
             </event:TaxiwayExtension>
           </aixm:extension>
         </aixm:TaxiwayTimeSlice>

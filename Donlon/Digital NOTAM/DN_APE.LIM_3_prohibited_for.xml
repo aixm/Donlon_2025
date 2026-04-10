@@ -85,12 +85,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_dca4aebf-d9a4-44b5-9eab-24d88e878412_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0137</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-03-17T07:42:12Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMNLH</event:selectionCode>
@@ -109,7 +114,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:text>Apron A at intersection of TWY R and TWY I prohibited for acft mass heavier than 30t.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -160,6 +165,9 @@ Editorial note: this license is an instance of the BSD license template as provi
               </gml:patches>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedSurface>
           </aixm:extent>
           <!-- Location and Extent Description -->
@@ -201,7 +209,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:ApronElementExtension gml:id="id_e8f78fed-318d-4baa-be1f-fbe07f9b07dd_1_0_B_11">
-              <event:theEvent xlink:href="urn:uuid:b89f965a-5851-4591-8e57-24977791e9e2"/>
+              <event:theEvent xlink:href="urn:uuid:b89f965a-5851-4591-8e57-24977791e9e2" xlink:title="EADD APRON A DNOTAM APE.LIM" xlink:type="simple"/>
             </event:ApronElementExtension>
           </aixm:extension>
         </aixm:ApronElementTimeSlice>

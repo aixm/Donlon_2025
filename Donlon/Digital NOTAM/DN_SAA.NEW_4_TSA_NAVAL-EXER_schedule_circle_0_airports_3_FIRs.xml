@@ -96,12 +96,18 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:concernedAirspace xlink:href="urn:uuid:0102b3c7-519a-456d-a202-e3aacac2eee4" xlink:title="CZQX FIR GANDER FLIGHT INFORMATION REGION" xlink:type="simple"/>
           <event:concernedAirspace xlink:href="urn:uuid:5025db3b-00c1-46f1-987f-b809e2268d17" xlink:title="EGGX FIR SHANWICK OCEANIC FIR" xlink:type="simple"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_b389ca62-8f6b-42a9-8eac-051bdfab1539_1_0_B_3">
               <event:series>D</event:series>
               <event:number>0023</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-26T04:49:00Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAXX</event:affectedFIR>
               <event:selectionCode>QRRCA</event:selectionCode>
@@ -125,7 +131,7 @@ Civilian aircraft will be coordinated between civil and military ATC.</event:tex
               <event:upperLimit>FL350</event:upperLimit>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -302,7 +308,7 @@ Civilian aircraft will be coordinated between civil and military ATC.</event:tex
           <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_dafec5e2-9ffc-4d34-b85f-1bb7b70a5324_1_0_B_20">
-              <event:theEvent xlink:href="urn:uuid:275f6067-6705-4ae8-ada4-fc164ad5f5d0"/>
+              <event:theEvent xlink:href="urn:uuid:275f6067-6705-4ae8-ada4-fc164ad5f5d0" xlink:title="TSA EATSA0005 DNOTAM SAA.NEW" xlink:type="simple"/>
             </event:AirspaceExtension>
           </aixm:extension>
         </aixm:AirspaceTimeSlice>

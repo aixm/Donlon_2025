@@ -78,12 +78,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_ce8deef8-d469-48e4-b9b5-fbf6354e58a0_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0012</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-05T05:49:42Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMXLC</event:selectionCode>
@@ -102,7 +107,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:text>TWY B closed.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -128,6 +133,8 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_71379743-e4be-4ffa-be47-bb92236d61b5_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -137,7 +144,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_71379743-e4be-4ffa-be47-bb92236d61b5_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_71379743-e4be-4ffa-be47-bb92236d61b5_1_0_T_5">
                           <aixm:classWingSpan>V</aixm:classWingSpan>
@@ -148,8 +159,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                           <aixm:classWingSpan>VI</aixm:classWingSpan>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAXIING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -164,7 +178,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayExtension gml:id="id_71379743-e4be-4ffa-be47-bb92236d61b5_1_0_T_8">
-              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084"/>
+              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084" xlink:title="EADD B DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayExtension>
           </aixm:extension>
         </aixm:TaxiwayTimeSlice>
@@ -197,7 +211,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_04e38bfa-de60-46f3-a16e-da3185a9a54f_1_0_T_3">
-              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084"/>
+              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084" xlink:title="EADD B DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -229,7 +243,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_b1c7b592-cb16-4014-b9ab-4e4947f53be1_1_0_T_3">
-              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084"/>
+              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084" xlink:title="EADD B DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -261,7 +275,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_c1fde85d-6974-49eb-807a-4033deaff941_1_0_T_3">
-              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084"/>
+              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084" xlink:title="EADD B DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -293,7 +307,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_e33c2bdf-379f-43e1-9d67-c2e97967f227_1_0_T_3">
-              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084"/>
+              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084" xlink:title="EADD B DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -325,7 +339,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_1d8aa1ba-abe3-4b71-a058-0f3029ac0e61_1_0_T_3">
-              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084"/>
+              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084" xlink:title="EADD B DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -357,7 +371,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_32a82af5-171e-402c-ae4c-d324a1e33673_1_0_T_3">
-              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084"/>
+              <event:theEvent xlink:href="urn:uuid:53eef777-0da1-40df-b4ad-9022a4438084" xlink:title="EADD B DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>

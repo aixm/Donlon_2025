@@ -91,12 +91,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_1a6fbf9b-9c50-404d-a219-ae54cd13c630_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0024</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-08T03:52:40Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMYLC</event:selectionCode>
@@ -117,7 +122,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 Repainting of taxiway markings.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -143,6 +148,8 @@ Repainting of taxiway markings.</event:text>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_43026a9f-dec2-4eca-b7b5-d132095004a5_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -152,14 +159,21 @@ Repainting of taxiway markings.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_43026a9f-dec2-4eca-b7b5-d132095004a5_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_43026a9f-dec2-4eca-b7b5-d132095004a5_1_0_T_5">
                           <aixm:classWingSpan>VI</aixm:classWingSpan>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAXIING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -219,7 +233,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayExtension gml:id="id_43026a9f-dec2-4eca-b7b5-d132095004a5_1_0_T_14">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayExtension>
           </aixm:extension>
         </aixm:TaxiwayTimeSlice>
@@ -246,6 +260,8 @@ Repainting of taxiway markings.</event:text>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_3d6d2484-0a68-4819-be2b-921b8ac7a551_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -255,14 +271,21 @@ Repainting of taxiway markings.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_3d6d2484-0a68-4819-be2b-921b8ac7a551_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_3d6d2484-0a68-4819-be2b-921b8ac7a551_1_0_T_5">
                           <aixm:classWingSpan>VI</aixm:classWingSpan>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAXIING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -311,7 +334,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayExtension gml:id="id_3d6d2484-0a68-4819-be2b-921b8ac7a551_1_0_T_14">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayExtension>
           </aixm:extension>
         </aixm:TaxiwayTimeSlice>
@@ -338,6 +361,8 @@ Repainting of taxiway markings.</event:text>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_023f334f-40f9-41d6-ac7d-42fcf7a03967_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -347,14 +372,21 @@ Repainting of taxiway markings.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_023f334f-40f9-41d6-ac7d-42fcf7a03967_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
                         <aixm:AircraftCharacteristic gml:id="id_023f334f-40f9-41d6-ac7d-42fcf7a03967_1_0_T_5">
                           <aixm:classWingSpan>VI</aixm:classWingSpan>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAXIING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -403,7 +435,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayExtension gml:id="id_023f334f-40f9-41d6-ac7d-42fcf7a03967_1_0_T_14">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayExtension>
           </aixm:extension>
         </aixm:TaxiwayTimeSlice>
@@ -446,7 +478,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_70a8e3b2-c75e-4336-9b03-2af1fa84ecb9_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -488,7 +520,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_09fe5a1c-7773-435b-990e-dfc459f33a8e_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -530,7 +562,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_621288ea-a58b-4d3d-af61-7a4858a9131c_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -572,7 +604,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_1e8944f4-256e-400a-bffb-4baebd330d97_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -614,7 +646,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_02a9f416-b717-4073-be94-86c833d140e6_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -656,7 +688,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_61b4ff2f-d09f-4123-9742-3822d82085cb_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -699,7 +731,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_e0bed333-053c-4ac2-824a-77fcce583519_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -741,7 +773,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_6af1bb34-626e-439b-8ac0-4f8b240c31c0_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -783,7 +815,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_072eb1f4-2731-4239-b060-884aecacd866_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -825,7 +857,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_7c4ccfd2-0e70-41fd-abef-fe08f891e773_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -867,7 +899,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_c77ee8b7-d48f-44a0-ba9c-b1d8e6deb03c_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -909,7 +941,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_9168232c-cd9f-4e83-a4c7-66dc60abaf4f_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -952,7 +984,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_9fbcae0d-0849-46fb-9fdf-19cd4d118872_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>
@@ -994,7 +1026,7 @@ Repainting of taxiway markings.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:TaxiwayElementExtension gml:id="id_adedb829-fd9f-4a80-845e-98725e9f4066_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308"/>
+              <event:theEvent xlink:href="urn:uuid:370f2a7d-8cf9-4ce0-99d5-24c8b9568308" xlink:title="EADD A C G DNOTAM TWY.CLS" xlink:type="simple"/>
             </event:TaxiwayElementExtension>
           </aixm:extension>
         </aixm:TaxiwayElementTimeSlice>

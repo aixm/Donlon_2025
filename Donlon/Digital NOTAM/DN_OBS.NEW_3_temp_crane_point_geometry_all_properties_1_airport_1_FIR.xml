@@ -92,12 +92,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_bc3380f1-89b1-43d6-b160-df487bdbc207_1_0_B_3">
               <event:series>F</event:series>
               <event:number>0004</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-05T05:30:56Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QOBCE</event:selectionCode>
@@ -120,7 +125,7 @@ Lighted. Marked with red and white hbands.
 Lighting elements are synchronized.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -216,7 +221,7 @@ Lighting elements are synchronized.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:VerticalStructureExtension gml:id="id_7ade0e34-5f50-4fbb-b72d-1d7c0b0b7467_1_0_B_12">
-              <event:theEvent xlink:href="urn:uuid:89e6579c-530b-46da-8497-449a1ca1c710"/>
+              <event:theEvent xlink:href="urn:uuid:89e6579c-530b-46da-8497-449a1ca1c710" xlink:title="EADD CRANE OBST-EADD-TEMP-0004 DNOTAM OBS.NEW" xlink:type="simple"/>
             </event:VerticalStructureExtension>
           </aixm:extension>
         </aixm:VerticalStructureTimeSlice>

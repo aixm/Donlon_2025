@@ -97,12 +97,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_cb02bd12-b5f4-478f-b26a-82becdebd0a1_1_0_B_3">
               <event:series>F</event:series>
               <event:number>0009</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-20T04:15:00Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QOBCE</event:selectionCode>
@@ -124,15 +129,15 @@ elevation 65m (height 35m).
 Lighted. Marking color: yellow.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
       <!-- cancellation TimeSlice (the crane ceases to exist) -->
       <event:timeSlice>
-        <event:EventTimeSlice gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_0_B">
+        <event:EventTimeSlice gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_1_B">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_0_B_1">
+            <gml:TimePeriod gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_1_B_1">
               <gml:beginPosition>2026-01-20T06:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-02-28T12:45:00Z</gml:endPosition> <!-- the time when the crane is decommissioned -->
             </gml:TimePeriod>
@@ -141,7 +146,7 @@ Lighted. Marking color: yellow.</event:text>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber> <!-- new correction number -->
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_0_B_2">
+            <gml:TimePeriod gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_1_B_2">
               <gml:beginPosition>2026-01-20T06:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-02-28T12:45:00Z</gml:endPosition> <!-- the time when the crane is decommissioned -->
             </gml:TimePeriod>
@@ -157,11 +162,13 @@ Lighted. Marking color: yellow.</event:text>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <!-- initial NOTAM -->
           <event:notification>
-            <event:NOTAM gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_0_B_3">
+            <event:NOTAM gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_1_B_3">
               <event:series>F</event:series>
               <event:number>0009</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-20T04:15:00Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QOBCE</event:selectionCode>
@@ -185,11 +192,13 @@ Lighted. Marking color: yellow.</event:text>
           </event:notification>
           <!-- cancellation NOTAM -->
           <event:notification>
-            <event:NOTAM gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_0_B_4">
+            <event:NOTAM gml:id="id_edacc137-d175-4e92-8fd7-0e39e4b2b924_1_1_B_4">
               <event:series>F</event:series>
               <event:number>0157</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-28T12:45:00Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>C</event:type>
               <event:referredSeries>F</event:referredSeries>
               <event:referredNumber>0009</event:referredNumber>
@@ -208,7 +217,7 @@ Lighted. Marking color: yellow.</event:text>
               <event:text>Temporary obstacle (crane) cancelled.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -287,16 +296,16 @@ Lighted. Marking color: yellow.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:VerticalStructureExtension gml:id="id_ed26c209-598d-4165-974f-3325d6d87b58_1_0_B_7">
-              <event:theEvent xlink:href="urn:uuid:21fdfe8d-9b05-47ce-ae6f-41c92833ef93"/>
+              <event:theEvent xlink:href="urn:uuid:21fdfe8d-9b05-47ce-ae6f-41c92833ef93" xlink:title="EADD CRANE OBST-EADD-TEMP-0009 DNOTAM OBS.NEW" xlink:type="simple"/>
             </event:VerticalStructureExtension>
           </aixm:extension>
         </aixm:VerticalStructureTimeSlice>
       </aixm:timeSlice>
       <!-- cancellation TimeSlice -->
       <aixm:timeSlice>
-        <aixm:VerticalStructureTimeSlice gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_0_B">
+        <aixm:VerticalStructureTimeSlice gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_1_B">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_0_B_1">
+            <gml:TimePeriod gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_1_B_1">
               <gml:beginPosition>2026-01-20T06:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-02-28T12:45:00Z</gml:endPosition> <!-- the time when the crane is decommissioned -->
             </gml:TimePeriod>
@@ -305,7 +314,7 @@ Lighted. Marking color: yellow.</event:text>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber> <!-- new correction number -->
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_0_B_2">
+            <gml:TimePeriod gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_1_B_2">
               <gml:beginPosition>2026-01-20T06:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-02-28T12:45:00Z</gml:endPosition> <!-- the time when the crane is decommissioned -->
             </gml:TimePeriod>
@@ -315,7 +324,7 @@ Lighted. Marking color: yellow.</event:text>
           <aixm:lighted>YES</aixm:lighted>
           <aixm:group>NO</aixm:group>
           <aixm:part>
-            <aixm:VerticalStructurePart gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_0_B_3">
+            <aixm:VerticalStructurePart gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_1_B_3">
               <aixm:verticalExtent uom="M">35</aixm:verticalExtent> <!-- Height -->
               <aixm:type>CRANE</aixm:type>
               <aixm:mobile>YES</aixm:mobile>
@@ -327,7 +336,7 @@ Lighted. Marking color: yellow.</event:text>
                       <gml:exterior>
                         <gml:Ring>
                           <gml:curveMember>
-                            <aixm:Curve gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_0_B_4">
+                            <aixm:Curve gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_1_B_4">
                               <gml:segments>
                                 <gml:CircleByCenterPoint numArc="1">
                                   <gml:pos>52.355093 -31.946229</gml:pos>
@@ -348,11 +357,11 @@ Lighted. Marking color: yellow.</event:text>
           </aixm:part>
           <!-- Marking Description -->
           <aixm:annotation>
-            <aixm:Note gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_0_B_5">
+            <aixm:Note gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_1_B_5">
               <aixm:propertyName>markingICAOStandard</aixm:propertyName>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_0_B_6">
+                <aixm:LinguisticNote gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_1_B_6">
                   <aixm:note>Marking color: yellow</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -360,8 +369,8 @@ Lighted. Marking color: yellow.</event:text>
           </aixm:annotation>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:VerticalStructureExtension gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_0_B_7">
-              <event:theEvent xlink:href="urn:uuid:21fdfe8d-9b05-47ce-ae6f-41c92833ef93"/>
+            <event:VerticalStructureExtension gml:id="id_6b2ef2a0-3646-42d5-a9d3-1259cba83b5c_1_1_B_7">
+              <event:theEvent xlink:href="urn:uuid:21fdfe8d-9b05-47ce-ae6f-41c92833ef93" xlink:title="EADD CRANE OBST-EADD-TEMP-0009 DNOTAM OBS.NEW" xlink:type="simple"/>
             </event:VerticalStructureExtension>
           </aixm:extension>
         </aixm:VerticalStructureTimeSlice>

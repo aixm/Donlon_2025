@@ -41,7 +41,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                          Note: -
   
      The antenna is erected on 2026-01-10T06:30:00Z. It will be subsequently published in the AIP on the next suitable AIRAC date (i.e. 2026-02-19T00:00:00Z).
-     After 15 days since the obstacle is published (on 2026-03-06T00:00:00Z), the NOTAM will be canceled. -->
+     After 15 days since the obstacle is published (on 2026-03-06T00:00:00Z), the NOTAM (Event) will be canceled. -->
 
 <!-- 
   F0005/26 NOTAMN
@@ -98,12 +98,18 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:activity xsi:nil="true"/>
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_cfd523bc-b6ca-4cea-a84a-45a403e8a1a0_1_0_B_3">
               <event:series>F</event:series>
               <event:number>0005</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-10T06:05:00Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QOBCE</event:selectionCode>
@@ -124,15 +130,15 @@ elevation 75m.
 Lighted.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
       <!-- cancellation TimeSlice -->
       <event:timeSlice>
-        <event:EventTimeSlice gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_0_B">
+        <event:EventTimeSlice gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_1_B">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_0_B_1">
+            <gml:TimePeriod gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_1_B_1">
               <gml:beginPosition>2026-01-10T06:30:00Z</gml:beginPosition>
               <gml:endPosition>2026-03-06T00:00:00Z</gml:endPosition> <!-- new end of validity -->
             </gml:TimePeriod>
@@ -141,7 +147,7 @@ Lighted.</event:text>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber> <!-- new correction number -->
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_0_B_2">
+            <gml:TimePeriod gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_1_B_2">
               <gml:beginPosition>2026-01-10T06:30:00Z</gml:beginPosition>
               <gml:endPosition>2026-03-06T00:00:00Z</gml:endPosition> <!-- new end of life -->
             </gml:TimePeriod>
@@ -156,11 +162,13 @@ Lighted.</event:text>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <!-- initial NOTAM -->
           <event:notification>
-            <event:NOTAM gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_0_B_3">
+            <event:NOTAM gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_1_B_3">
               <event:series>F</event:series>
               <event:number>0186</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-10T06:05:00Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QOBCE</event:selectionCode>
@@ -183,11 +191,13 @@ Lighted.</event:text>
           </event:notification>
           <!-- cancellation NOTAM -->
           <event:notification>
-            <event:NOTAM gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_0_B_4">
+            <event:NOTAM gml:id="id_e56699a6-6f53-4250-9991-4f1302a98f75_1_1_B_4">
               <event:series>F</event:series>
               <event:number>0005</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-03-06T00:00:00Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:referredSeries>F</event:referredSeries>
               <event:referredNumber>0005</event:referredNumber>
@@ -206,7 +216,7 @@ Lighted.</event:text>
               <event:text>Permanent obstacle (antenna) cancelled.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -216,7 +226,6 @@ Lighted.</event:text>
   <message:hasMember>
     <aixm:VerticalStructure gml:id="uuid.06b81b16-9dda-42e7-8811-a80215787e47">
       <gml:identifier codeSpace="urn:uuid:">06b81b16-9dda-42e7-8811-a80215787e47</gml:identifier>
-      <!-- initial TimeSlice -->
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="id_80e4842d-9765-44e6-9f50-49f069772238_1_0_B">
           <gml:validTime>
@@ -251,47 +260,7 @@ Lighted.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:VerticalStructureExtension gml:id="id_80e4842d-9765-44e6-9f50-49f069772238_1_0_B_4">
-              <event:theEvent xlink:href="urn:uuid:9e6dc9ee-fdd4-4539-8ab7-8e81f71489a7"/>
-            </event:VerticalStructureExtension>
-          </aixm:extension>
-        </aixm:VerticalStructureTimeSlice>
-      </aixm:timeSlice>
-      <!-- cancellation TimeSlice -->
-      <aixm:timeSlice>
-        <aixm:VerticalStructureTimeSlice gml:id="id_88cae5d0-bb60-4a56-8db5-9c07e264a99a_1_0_B">
-          <gml:validTime>
-            <gml:TimePeriod gml:id="id_88cae5d0-bb60-4a56-8db5-9c07e264a99a_1_0_B_1">
-              <gml:beginPosition>2026-01-10T06:30:00Z</gml:beginPosition>
-              <gml:endPosition>2026-03-06T00:00:00Z</gml:endPosition> <!-- new end of validity -->
-            </gml:TimePeriod>
-          </gml:validTime>
-          <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
-          <aixm:correctionNumber>1</aixm:correctionNumber> <!-- new correction number -->
-          <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_88cae5d0-bb60-4a56-8db5-9c07e264a99a_1_0_B_2">
-              <gml:beginPosition>2026-01-10T06:30:00Z</gml:beginPosition>
-              <gml:endPosition>2026-03-06T00:00:00Z</gml:endPosition> <!-- new end of life -->
-            </gml:TimePeriod>
-          </aixm:featureLifetime>
-          <aixm:type>ANTENNA</aixm:type>
-          <aixm:lighted>YES</aixm:lighted>
-          <aixm:part>
-            <aixm:VerticalStructurePart gml:id="id_88cae5d0-bb60-4a56-8db5-9c07e264a99a_1_0_B_3">
-              <aixm:type>ANTENNA</aixm:type>
-              <!-- Geometry - Point -->
-              <aixm:horizontalProjection_location>
-                <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326">
-                  <gml:pos>54.6511160333 -31.0014192314</gml:pos>
-                  <aixm:elevation uom="M">75</aixm:elevation>
-                </aixm:ElevatedPoint>
-              </aixm:horizontalProjection_location>
-            </aixm:VerticalStructurePart>
-          </aixm:part>
-          <!-- The link to the event -->
-          <aixm:extension>
-            <event:VerticalStructureExtension gml:id="id_88cae5d0-bb60-4a56-8db5-9c07e264a99a_1_0_B_4">
-              <event:theEvent xlink:href="urn:uuid:9e6dc9ee-fdd4-4539-8ab7-8e81f71489a7"/>
+              <event:theEvent xlink:href="urn:uuid:9e6dc9ee-fdd4-4539-8ab7-8e81f71489a7" xlink:title="ANTENNA DNOTAM OBS.NEW" xlink:type="simple"/>
             </event:VerticalStructureExtension>
           </aixm:extension>
         </aixm:VerticalStructureTimeSlice>

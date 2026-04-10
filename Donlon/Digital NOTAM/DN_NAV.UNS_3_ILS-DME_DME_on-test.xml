@@ -85,12 +85,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_07967eaf-5dcf-4ea7-b833-43a774e63eb5_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0383</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-04-01T05:40:55Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QIDCT</event:selectionCode>
@@ -112,7 +117,7 @@ Due to calibration and in flight testing.
 Precision approaches for RWY 09L suspended.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -195,7 +200,9 @@ Precision approaches for RWY 09L suspended.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
+              <aixm:signalType xsi:nil="true" nilReason="inapplicable"/>
             </aixm:NavaidOperationalStatus>
           </aixm:availability>
           <!-- The operational status of the navaid during the event -->
@@ -266,7 +273,7 @@ Precision approaches for RWY 09L suspended.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:NavaidExtension gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_20">
-              <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb"/>
+              <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb" xlink:title="OSL ILS/DME ILS/DME 09R DNOTAM NAV.UNS" xlink:type="simple"/>
             </event:NavaidExtension>
           </aixm:extension>
         </aixm:NavaidTimeSlice>
@@ -397,7 +404,7 @@ Precision approaches for RWY 09L suspended.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:DMEExtension gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb"/>
+              <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb" xlink:title="OSL ILS/DME ILS/DME 09R DNOTAM NAV.UNS" xlink:type="simple"/>
             </event:DMEExtension>
           </aixm:extension>
         </aixm:DMETimeSlice>

@@ -104,12 +104,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:dd062d88-3e64-4a5d-bebd-89476db9ebea" xlink:title="EADH DONLON/DOWNTOWN HELIPORT" xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_c005e214-6efc-450b-9f55-a6944541b666_1_0_B_3">
               <event:series>D</event:series>
               <event:number>0276</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-06T18:43:29Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QACCA</event:selectionCode>
@@ -135,7 +140,9 @@ Expect radar vectoring.</event:text>
               <event:series>D</event:series>
               <event:number>0277</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-06T18:43:29Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QACCA</event:selectionCode>
@@ -156,7 +163,7 @@ Daily 2000-2359.
 Expect radar vectoring.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -268,7 +275,7 @@ Expect radar vectoring.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>ATS</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
@@ -279,6 +286,7 @@ Expect radar vectoring.</event:text>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
               <aixm:user xsi:nil="true"/>
@@ -340,7 +348,7 @@ Expect radar vectoring.</event:text>
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>ATS</aixm:activity>
               <aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
               <aixm:levels>
@@ -351,6 +359,7 @@ Expect radar vectoring.</event:text>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
               <aixm:user xsi:nil="true"/>
@@ -360,7 +369,7 @@ Expect radar vectoring.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_0702c655-669f-4559-86dc-8e094b0c7387_1_0_T_23">
-              <event:theEvent xlink:href="urn:uuid:869591f2-87f4-4291-8cd6-66d25a2033ec"/>
+              <event:theEvent xlink:href="urn:uuid:869591f2-87f4-4291-8cd6-66d25a2033ec" xlink:title="CTR EADD DNOTAM ATSA.ACT" xlink:type="simple"/>
             </event:AirspaceExtension>
           </aixm:extension>
         </aixm:AirspaceTimeSlice>

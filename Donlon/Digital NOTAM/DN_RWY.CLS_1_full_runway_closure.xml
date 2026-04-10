@@ -77,12 +77,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_b5574823-4409-4cd6-b3c0-40104c8c2ae6_1_0_B_3">
               <event:series>A</event:series>
               <event:number>1824</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2025-11-17T02:49:12Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMRLC</event:selectionCode>
@@ -102,7 +107,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 Rubber removal.</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -128,6 +133,8 @@ Rubber removal.</event:text>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -137,10 +144,20 @@ Rubber removal.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
+                      <aixm:flight xsi:nil="true"/>
                       <aixm:subCondition>
                         <aixm:ConditionCombination gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_5">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:weather xsi:nil="true"/>
                           <aixm:aircraft>
                             <aixm:AircraftCharacteristic gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_6">
                               <aixm:aircraftLandingCategory>A</aixm:aircraftLandingCategory>
@@ -156,10 +173,15 @@ Rubber removal.</event:text>
                               <aixm:aircraftLandingCategory>C</aixm:aircraftLandingCategory>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                       <aixm:subCondition>
                         <aixm:ConditionCombination gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_9">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:weather>
                             <aixm:Meteorology gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_10">
@@ -173,10 +195,14 @@ Rubber removal.</event:text>
                               <aixm:runwayVisualRangeInterpretation>AT_OR_ABOVE</aixm:runwayVisualRangeInterpretation>
                             </aixm:Meteorology>
                           </aixm:weather>
+                          <aixm:aircraft xsi:nil="true"/>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -187,14 +213,21 @@ Rubber removal.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_13">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_14">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -238,22 +271,27 @@ Rubber removal.</event:text>
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_20">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAKEOFF</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_21">
                   <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission nilReason="unknown" xsi:nil="true"/>
+                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:contact xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_22">
@@ -289,13 +327,17 @@ Rubber removal.</event:text>
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_26">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
@@ -346,7 +388,7 @@ Rubber removal.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayDirectionExtension gml:id="id_650306a4-a74d-420c-b345-c96c4cbeda39_1_0_T_34">
-              <event:theEvent xlink:href="urn:uuid:a8245402-6348-4fc3-ab50-fb681a6f9c6c"/>
+              <event:theEvent xlink:href="urn:uuid:a8245402-6348-4fc3-ab50-fb681a6f9c6c" xlink:title="EADD 09R/27L DNOTAM RWY.CLS" xlink:type="simple"/>
             </event:RunwayDirectionExtension>
           </aixm:extension>
         </aixm:RunwayDirectionTimeSlice>
@@ -373,6 +415,8 @@ Rubber removal.</event:text>
           <aixm:availability>
             <aixm:ManoeuvringAreaAvailability gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_2">
               <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
@@ -382,10 +426,20 @@ Rubber removal.</event:text>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
+                      <aixm:flight xsi:nil="true"/>
                       <aixm:subCondition>
                         <aixm:ConditionCombination gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_5">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
+                          <aixm:weather xsi:nil="true"/>
                           <aixm:aircraft>
                             <aixm:AircraftCharacteristic gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_6">
                               <aixm:aircraftLandingCategory>A</aixm:aircraftLandingCategory>
@@ -401,10 +455,15 @@ Rubber removal.</event:text>
                               <aixm:aircraftLandingCategory>C</aixm:aircraftLandingCategory>
                             </aixm:AircraftCharacteristic>
                           </aixm:aircraft>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                       <aixm:subCondition>
                         <aixm:ConditionCombination gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_9">
+                          <aixm:timeInterval xsi:nil="true"/>
+                          <aixm:annotation xsi:nil="true"/>
+                          <aixm:specialDateAuthority xsi:nil="true"/>
                           <aixm:logicalOperator>OR</aixm:logicalOperator>
                           <aixm:weather>
                             <aixm:Meteorology gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_10">
@@ -418,10 +477,14 @@ Rubber removal.</event:text>
                               <aixm:runwayVisualRangeInterpretation>AT_OR_ABOVE</aixm:runwayVisualRangeInterpretation>
                             </aixm:Meteorology>
                           </aixm:weather>
+                          <aixm:aircraft xsi:nil="true"/>
+                          <aixm:flight xsi:nil="true"/>
+                          <aixm:subCondition xsi:nil="true"/>
                         </aixm:ConditionCombination>
                       </aixm:subCondition>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
@@ -465,22 +528,27 @@ Rubber removal.</event:text>
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_17">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>TAKEOFF</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_18">
                   <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission nilReason="unknown" xsi:nil="true"/>
+                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:contact xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_19">
@@ -516,13 +584,17 @@ Rubber removal.</event:text>
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_23">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
@@ -579,22 +651,27 @@ Rubber removal.</event:text>
                           <aixm:excluded>NO</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_31">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
                   <aixm:operation>LANDING</aixm:operation>
                 </aixm:ManoeuvringAreaUsage>
               </aixm:usage>
               <aixm:usage>
                 <aixm:ManoeuvringAreaUsage gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_32">
                   <aixm:type>CONDITIONAL</aixm:type>
-                  <aixm:priorPermission nilReason="unknown" xsi:nil="true"/>
+                  <aixm:priorPermission xsi:nil="true" nilReason="unknown"/>
                   <aixm:contact xsi:nil="true" nilReason="unknown"/>
                   <aixm:selection>
                     <aixm:ConditionCombination gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_33">
@@ -630,13 +707,17 @@ Rubber removal.</event:text>
                           <aixm:excluded>YES</aixm:excluded>
                         </aixm:Timesheet>
                       </aixm:timeInterval>
-                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
                       <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft xsi:nil="true"/>
                       <aixm:flight>
                         <aixm:FlightCharacteristic gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_37">
                           <aixm:purpose>AIR_TRAINING</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
+                      <aixm:subCondition xsi:nil="true"/>
                     </aixm:ConditionCombination>
                   </aixm:selection>
                   <aixm:annotation>
@@ -687,7 +768,7 @@ Rubber removal.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayDirectionExtension gml:id="id_85b5d157-ce71-433c-8251-1e9a78e677b9_1_0_T_45">
-              <event:theEvent xlink:href="urn:uuid:a8245402-6348-4fc3-ab50-fb681a6f9c6c"/>
+              <event:theEvent xlink:href="urn:uuid:a8245402-6348-4fc3-ab50-fb681a6f9c6c" xlink:title="EADD 09R/27L DNOTAM RWY.CLS" xlink:type="simple"/>
             </event:RunwayDirectionExtension>
           </aixm:extension>
         </aixm:RunwayDirectionTimeSlice>

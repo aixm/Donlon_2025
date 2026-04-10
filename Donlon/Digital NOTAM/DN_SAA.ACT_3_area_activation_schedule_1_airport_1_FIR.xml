@@ -22,7 +22,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 <!-- 
   Example of Digital NOTAM for a spacial activity area activation:
  
-                 Airspace: EAV13 D_OTHER LONBURG
+                 Airspace: EAV13 D_OTHER LONGBURG
         Activation status: ACTIVE
                  Activity: - (not changed from baseline)
                Start Time: 2026-01-17 12:00
@@ -106,13 +106,18 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:activity xsi:nil="true"/>
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
-          <event:concernedAirportHeliport xlink:href="urn:uuid:556d7442-402d-467b-81af-09f2eed71cf7" xlink:title="EADA AKVIN" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:556d7442-402d-467b-81af-09f2eed71cf7" xlink:title="EADA AKVIN/AKVIN" xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_e1c56126-1b25-4a89-83cd-a79beaec93d8_1_0_B_3">
               <event:series>D</event:series>
               <event:number>0014</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-17T11:54:47Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QWPLW</event:selectionCode>
@@ -134,7 +139,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:upperLimit>2000M AGL</event:upperLimit>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -215,6 +220,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
               <aixm:levels>
@@ -225,9 +231,10 @@ Editorial note: this license is an instance of the BSD license template as provi
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
-              <aixm:user xlink:href="urn:uuid:3b0a59fd-956e-449a-b62b-572e30b70efc" xlink:title="ORG AEROCLUB LONGBURG AEROCLUB"/>
+              <aixm:user xlink:href="urn:uuid:3b0a59fd-956e-449a-b62b-572e30b70efc" xlink:title="ORG AEROCLUB LONGBURG AEROCLUB" xlink:type="simple"/>
               <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
@@ -255,6 +262,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                   </aixm:translatedNote>
                 </aixm:Note>
               </aixm:annotation>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
@@ -265,6 +273,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
               <aixm:user xsi:nil="true"/>
@@ -274,7 +283,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_6e31850d-577d-4789-9ce9-045fb194582c_1_0_T_17">
-              <event:theEvent xlink:href="urn:uuid:6feba24b-6565-4d72-887c-1795dd52e55c"/>
+              <event:theEvent xlink:href="urn:uuid:6feba24b-6565-4d72-887c-1795dd52e55c" xlink:title="D_OTHER EAV13 DNOTAM SAA.ACT" xlink:type="simple"/>
             </event:AirspaceExtension>
           </aixm:extension>
         </aixm:AirspaceTimeSlice>

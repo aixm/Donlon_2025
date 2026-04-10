@@ -75,12 +75,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:SNOWTAM gml:id="id_ffadd127-beee-4cbb-9b7d-3cec7a156a2e_1_0_B_3">
               <event:series xsi:nil="true" nilReason="inapplicable"/>
               <event:number>0005</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-18T15:41:09Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:correction>NO</event:correction>
               <event:location>EADD</event:location>
               <event:situationalAwareness>RWY 09L reduced to 3000. Drifting snow. RWY 09L loose sand. RWY 09R chemically treated.</event:situationalAwareness>
@@ -107,7 +112,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               </event:runwayCondition>
             </event:SNOWTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -119,9 +124,9 @@ Editorial note: this license is an instance of the BSD license template as provi
     <aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
       <gml:identifier codeSpace="urn:uuid:">1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
       <aixm:timeSlice>
-        <aixm:AirportHeliportTimeSlice gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_1_0_T">
+        <aixm:AirportHeliportTimeSlice gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_6_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_1_0_T_1">
+            <gml:TimePeriod gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_6_0_T_1">
               <gml:beginPosition>2026-02-18T15:45:00Z</gml:beginPosition>
               <gml:endPosition>2026-02-18T23:45:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -131,9 +136,9 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- (J) Drifting snow whole airport -->
           <aixm:contaminant>
-            <aixm:AirportHeliportContamination gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_1_0_T_2">
+            <aixm:AirportHeliportContamination gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_6_0_T_2">
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_1_0_T_3">
+                <aixm:SurfaceContaminationLayer gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_6_0_T_3">
                   <aixm:type>OTHER:DRIFTING_SNOW</aixm:type>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
@@ -141,8 +146,8 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:contaminant>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:AirportHeliportExtension gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_1_0_T_4">
-              <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014"/>
+            <event:AirportHeliportExtension gml:id="id_c13b63a7-8e28-4293-aa1a-4c39b59f453b_6_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
             </event:AirportHeliportExtension>
           </aixm:extension>
         </aixm:AirportHeliportTimeSlice>
@@ -155,9 +160,9 @@ Editorial note: this license is an instance of the BSD license template as provi
     <aixm:Runway gml:id="uuid.4428d037-1cdf-433a-9bfa-d0857aaf448a">
       <gml:identifier codeSpace="urn:uuid:">4428d037-1cdf-433a-9bfa-d0857aaf448a</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayTimeSlice gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T">
+        <aixm:RunwayTimeSlice gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_1">
+            <gml:TimePeriod gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_1">
               <gml:beginPosition>2026-02-18T15:45:00Z</gml:beginPosition>
               <gml:endPosition>2026-02-18T23:45:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -166,11 +171,11 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:overallContaminant>
-            <aixm:RunwayContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_2">
+            <aixm:RunwayContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_2">
               <aixm:observationTime>2026-02-18T15:44:00.000Z</aixm:observationTime>
               <!-- (L) Chemical treatment  -->
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_3">
+                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_3">
                   <aixm:type>OTHER:CHEMICAL_TREATMENT</aixm:type>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
@@ -178,13 +183,20 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:overallContaminant>
           <!-- Aeroplane performance calculation section - first section -->
           <aixm:areaContaminant>
-            <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_4">
+            <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_4">
               <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
               <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
               <aixm:proportion>100</aixm:proportion>
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_5">
+                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_5">
+                  <aixm:layerOrder>1</aixm:layerOrder>
                   <aixm:type>OTHER:WET</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_4_0_T_6">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
               <aixm:section>1_THIRD</aixm:section>
@@ -192,13 +204,20 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:areaContaminant>
           <!-- Aeroplane performance calculation section - second section -->
           <aixm:areaContaminant>
-            <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_6">
+            <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_7">
               <aixm:depth uom="MM">6</aixm:depth>
               <aixm:frictionEstimation>OTHER:RWYCC_2</aixm:frictionEstimation>
               <aixm:proportion>50</aixm:proportion>
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_7">
+                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_8">
+                  <aixm:layerOrder>1</aixm:layerOrder>
                   <aixm:type>SLUSH</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_4_0_T_9">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
               <aixm:section>2_THIRD</aixm:section>
@@ -206,13 +225,20 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:areaContaminant>
           <!-- Aeroplane performance calculation section - third section -->
           <aixm:areaContaminant>
-            <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_8">
+            <aixm:RunwaySectionContamination gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_10">
               <aixm:depth uom="MM">6</aixm:depth>
               <aixm:frictionEstimation>OTHER:RWYCC_2</aixm:frictionEstimation>
               <aixm:proportion>75</aixm:proportion>
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_9">
+                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_11">
+                  <aixm:layerOrder>1</aixm:layerOrder>
                   <aixm:type>SLUSH</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_4_0_T_12">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
               <aixm:section>3_THIRD</aixm:section>
@@ -220,8 +246,8 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:areaContaminant>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:RunwayExtension gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_1_0_T_10">
-              <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014"/>
+            <event:RunwayExtension gml:id="id_f392fe54-d862-4418-ad95-b1d0dbfe2373_2_0_T_13">
+              <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
             </event:RunwayExtension>
           </aixm:extension>
         </aixm:RunwayTimeSlice>
@@ -234,9 +260,9 @@ Editorial note: this license is an instance of the BSD license template as provi
     <aixm:Runway gml:id="uuid.9e51668f-bf8a-4f5b-ba6e-27087972b9b8">
       <gml:identifier codeSpace="urn:uuid:">9e51668f-bf8a-4f5b-ba6e-27087972b9b8</gml:identifier>
       <aixm:timeSlice>
-        <aixm:RunwayTimeSlice gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T">
+        <aixm:RunwayTimeSlice gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_1">
+            <gml:TimePeriod gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_1">
               <gml:beginPosition>2026-02-18T15:45:00Z</gml:beginPosition>
               <gml:endPosition>2026-02-18T23:45:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -245,11 +271,11 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:sequenceNumber>4</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:overallContaminant>
-            <aixm:RunwayContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_2">
+            <aixm:RunwayContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_2">
               <aixm:observationTime>2026-02-18T15:45:00.000Z</aixm:observationTime>
               <!-- (K) Loose sand on the runway -->
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_3">
+                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_3">
                   <aixm:type>OTHER:LOOSE_SAND</aixm:type>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
@@ -259,13 +285,20 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:overallContaminant>
           <!-- Aeroplane performance calculation section - first section -->
           <aixm:areaContaminant>
-            <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_4">
+            <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_4">
               <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
               <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
               <aixm:proportion>100</aixm:proportion>
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_5">
+                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_5">
+                  <aixm:layerOrder>1</aixm:layerOrder>
                   <aixm:type>SLUSH</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_6">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
               <aixm:section>1_THIRD</aixm:section>
@@ -273,13 +306,20 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:areaContaminant>
           <!-- Aeroplane performance calculation section - second section -->
           <aixm:areaContaminant>
-            <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_6">
+            <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_7">
               <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
               <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
               <aixm:proportion>100</aixm:proportion>
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_7">
+                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_8">
+                  <aixm:layerOrder>1</aixm:layerOrder>
                   <aixm:type>WET_SNOW</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_9">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
               <aixm:section>2_THIRD</aixm:section>
@@ -287,13 +327,20 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:areaContaminant>
           <!-- Aeroplane performance calculation section - third section -->
           <aixm:areaContaminant>
-            <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_8">
+            <aixm:RunwaySectionContamination gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_10">
               <aixm:depth uom="MM">3</aixm:depth>
               <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
               <aixm:proportion>100</aixm:proportion>
               <aixm:layer>
-                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_9">
+                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_11">
+                  <aixm:layerOrder>1</aixm:layerOrder>
                   <aixm:type>WET_SNOW</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_12">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
                 </aixm:SurfaceContaminationLayer>
               </aixm:layer>
               <aixm:section>3_THIRD</aixm:section>
@@ -301,8 +348,8 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:areaContaminant>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:RunwayExtension gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_1_0_T_10">
-              <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014"/>
+            <event:RunwayExtension gml:id="id_36be7d24-96ba-4ecd-9ba7-5d9a3144c5da_4_0_T_13">
+              <event:theEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
             </event:RunwayExtension>
           </aixm:extension>
         </aixm:RunwayTimeSlice>
@@ -351,13 +398,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="DONLON/INTL." xlink:type="simple"/>
-          <event:causeEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_ce88c26a-2559-4bcf-99c7-dd1ee792506b_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0256</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-18T15:42:48Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMTCM</event:selectionCode>
@@ -378,7 +429,7 @@ LDA 3000M
 Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -443,7 +494,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           </aixm:annotation>
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_35ca8110-2f39-4df8-bb57-25210ff99434_1_0_T_9">
-              <event:theEvent xlink:href="urn:uuid:024df5a1-3a85-4ae1-ab41-e57ea21232c8"/>
+              <event:theEvent xlink:href="urn:uuid:024df5a1-3a85-4ae1-ab41-e57ea21232c8" xlink:title="EADD 09L/27R 09L DNOTAM RCP.CHG" xlink:type="simple"/>
             </event:RunwayCentrelinePointExtension>
           </aixm:extension>
         </aixm:RunwayCentrelinePointTimeSlice>
@@ -492,13 +543,17 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="DONLON/INTL." xlink:type="simple"/>
-          <event:causeEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_79c63b86-0044-46cb-a3ff-d180c9f7379e_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0257</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-18T15:43:09Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMDCH</event:selectionCode>
@@ -521,7 +576,7 @@ ASDA 3000M
 Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -618,7 +673,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_9f388c31-e093-4c24-8c4c-4b0cc11d5dba_1_0_T_15">
-              <event:theEvent xlink:href="urn:uuid:8f1f2814-fec6-4de0-9df9-2587d2030ace"/>
+              <event:theEvent xlink:href="urn:uuid:8f1f2814-fec6-4de0-9df9-2587d2030ace" xlink:title="EADD 09L/27R 09L DNOTAM RCP.CHG" xlink:type="simple"/>
             </event:RunwayCentrelinePointExtension>
           </aixm:extension>
         </aixm:RunwayCentrelinePointTimeSlice>
@@ -667,13 +722,17 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="DONLON/INTL." xlink:type="simple"/>
-          <event:causeEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_b059bb14-3be7-49a5-adf4-a9d0cbeb436a_1_0_B_3">
               <event:series>A</event:series>
               <event:number>0258</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-18T15:43:59Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMDCH</event:selectionCode>
@@ -696,7 +755,7 @@ ASDA 3000M
 Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -793,7 +852,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_4b2b59e3-beff-4495-9f9f-c2c09a1d4c5d_1_0_T_15">
-              <event:theEvent xlink:href="urn:uuid:63e84ddb-4881-41a6-9ba3-a6e6344733c3"/>
+              <event:theEvent xlink:href="urn:uuid:63e84ddb-4881-41a6-9ba3-a6e6344733c3" xlink:title="EADD 09L/27R 09L DNOTAM RCP.CHG" xlink:type="simple"/>
             </event:RunwayCentrelinePointExtension>
           </aixm:extension>
         </aixm:RunwayCentrelinePointTimeSlice>
@@ -835,7 +894,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
               <gml:endPosition>2026-02-18T23:45:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <event:name>EADD 09L/27R</event:name>
+          <event:name>EADD 09L/27R 27R</event:name>
           <event:designator>DNOTAM</event:designator>
           <event:scenario>RDD.CHG</event:scenario>
           <event:version>2.0</event:version>
@@ -843,13 +902,17 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <event:activity xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="DONLON/INTL." xlink:type="simple"/>
-          <event:causeEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:f0fdd1e7-eba4-49d0-b797-de396d4c1014" xlink:title="EADD 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_43644432-36e2-40a5-8beb-44ed5603473d_1_0_B_3">
               <event:series>A</event:series>
-              <event:number>259</event:number>
+              <event:number>0259</event:number>
               <event:year>2025</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-02-18T15:44:18Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QMDCH</event:selectionCode>
@@ -874,7 +937,7 @@ LDA 2700M.
 Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -954,7 +1017,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_50e6b3d2-f164-4ea8-a791-56e4cf785d77_1_0_T_12">
-              <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032"/>
+              <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032" xlink:title="EADD 09L/27R 27R DNOTAM RDD.CHG" xlink:type="simple"/>
             </event:RunwayCentrelinePointExtension>
           </aixm:extension>
         </aixm:RunwayCentrelinePointTimeSlice>
@@ -1035,7 +1098,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_7c654c28-5a61-46e8-b1a1-7a7eb1ad3f91_1_0_T_12">
-              <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032"/>
+              <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032" xlink:title="EADD 09L/27R 27R DNOTAM RDD.CHG" xlink:type="simple"/>
             </event:RunwayCentrelinePointExtension>
           </aixm:extension>
         </aixm:RunwayCentrelinePointTimeSlice>
@@ -1116,7 +1179,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_83fe05ea-b947-41d9-a47f-11f41920de16_1_0_T_12">
-              <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032"/>
+              <event:theEvent xlink:href="urn:uuid:f90b0ec7-4902-4167-a26e-d24d60ece032" xlink:title="EADD 09L/27R 27R DNOTAM RDD.CHG" xlink:type="simple"/>
             </event:RunwayCentrelinePointExtension>
           </aixm:extension>
         </aixm:RunwayCentrelinePointTimeSlice>
@@ -1165,7 +1228,7 @@ Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:RunwayCentrelinePointExtension gml:id="id_6e1ec0cc-be7b-4acf-9d82-b392179a2f8c_1_0_T_6">
-              <event:theEvent xlink:href="urn:uuid:f0bb75d2-d81c-4297-b42a-e41eb31b25bc"/>
+              <event:theEvent xlink:href="urn:uuid:f0bb75d2-d81c-4297-b42a-e41eb31b25bc" xlink:title="EADD 09L/27R 27R DNOTAM RDD.CHG" xlink:type="simple"/>
             </event:RunwayCentrelinePointExtension>
           </aixm:extension>
         </aixm:RunwayCentrelinePointTimeSlice>

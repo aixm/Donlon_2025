@@ -86,7 +86,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <gml:endPosition>2026-01-08T22:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <event:name>EADD TRA</event:name>
+          <event:name>EADD TRA ALPHA04</event:name>
           <event:designator>DNOTAM</event:designator>
           <event:scenario>SAA.NEW</event:scenario>
           <event:version>2.0</event:version>
@@ -95,12 +95,17 @@ Editorial note: this license is an instance of the BSD license template as provi
           <event:summary xsi:nil="true"/>
           <event:concernedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_d70766de-4fba-4890-bc02-7f73bdd3b754_1_0_B_3">
               <event:series>D</event:series>
               <event:number>0006</event:number>
               <event:year>2026</event:year>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86"/> <!-- NOF unit -->
+              <event:issued>2026-01-05T13:45:00Z</event:issued>
+              <event:processed>YES</event:processed>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QRRCA</event:selectionCode>
@@ -123,7 +128,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:upperLimit>5000FT AMSL</event:upperLimit>
             </event:NOTAM>
           </event:notification>
-          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985"/> <!-- AIS unit -->
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
       </event:timeSlice>
@@ -284,7 +289,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           <!-- The link to the event -->
           <aixm:extension>
             <event:AirspaceExtension gml:id="id_b11b7418-cd41-46d3-abe8-396919828a2a_1_0_B_19">
-              <event:theEvent xlink:href="urn:uuid:6c3f621f-b6cc-4b58-aeac-b0439cc9051d"/>
+              <event:theEvent xlink:href="urn:uuid:6c3f621f-b6cc-4b58-aeac-b0439cc9051d" xlink:title="EADD TRA ALPHA04 DNOTAM SAA.NEW" xlink:type="simple"/>
             </event:AirspaceExtension>
           </aixm:extension>
         </aixm:AirspaceTimeSlice>

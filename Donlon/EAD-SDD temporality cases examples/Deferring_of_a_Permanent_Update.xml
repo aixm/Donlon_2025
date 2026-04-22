@@ -24,7 +24,7 @@
   
                                    Initial valid TimeSlice: BASELINE 1/0, validTime: 2025-11-01T00:00:00Z - "unknown"
                 Termination of the initial valid TimeSlice: BASELINE 1/1, validTime: 2025-11-01T00:00:00Z - 2026-12-01T00:00:00Z
-                                    Initial planned update: updating the annotations with propertyName="colour" and propertyName="flashing"
+                                    Initial planned update: flashing='NO' updating the annotation with propertyName="colour" and removing the annotation with propertyName="flashing"
                                                             BASELINE 2/0, validTime: 2026-12-01T00:00:00Z - "unknown"
                                    
   Step 1: abandoning the permanent update
@@ -61,7 +61,7 @@
       <aixm:timeSlice>
         <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S1C1">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_5a785f9d-f862-4fd9-880b-e81d7f401d99">
+            <gml:TimePeriod gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -70,7 +70,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_5a785f9d-f862-4fd9-880b-e81d7f401d99">
+            <gml:TimePeriod gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_2">
               <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -79,8 +79,10 @@
           <aixm:type>BCN</aixm:type>
           <aixm:colour>WHITE</aixm:colour>
           <aixm:flashing>YES</aixm:flashing>
+          <aixm:structureBeacon xsi:nil="true"/>
+          <aixm:aerodromeBeacon xsi:nil="true"/>
           <aixm:location>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_5a785f9d-f862-4fd9-880b-e81d7f401d99">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_3">
               <gml:pos>55.36666666666667 -33.983333333333334</gml:pos>
               <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">50</aixm:elevation>
@@ -90,32 +92,33 @@
             </aixm:ElevatedPoint>
           </aixm:location>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_5a785f9d-f862-4fd9-880b-e81d7f401d99_1">
+            <aixm:Note gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_4">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_5a785f9d-f862-4fd9-880b-e81d7f401d99_1">
+                <aixm:LinguisticNote gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_5">
                   <aixm:note lang="eng">Operating hours: HN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_5a785f9d-f862-4fd9-880b-e81d7f401d99_2">
+            <aixm:Note gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_6">
               <aixm:propertyName>colour</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_5a785f9d-f862-4fd9-880b-e81d7f401d99_2">
+                <aixm:LinguisticNote gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_7">
                   <aixm:note lang="eng">Intensity: 500tsd Candelas</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_5a785f9d-f862-4fd9-880b-e81d7f401d99_3">
+            <aixm:Note gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_8">
               <aixm:propertyName>flashing</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_5a785f9d-f862-4fd9-880b-e81d7f401d99_3">
+                <aixm:LinguisticNote gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_9">
                   <aixm:note lang="eng">Characteristics: GP FLG (3) W EV 10 SEC</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -127,7 +130,7 @@
       <aixm:timeSlice>
         <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S2C0">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_562e3202-08db-4c5b-b962-c71ba2d03327">
+            <gml:TimePeriod gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_1">
               <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -136,7 +139,7 @@
           <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_562e3202-08db-4c5b-b962-c71ba2d03327">
+            <gml:TimePeriod gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_2">
               <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -144,9 +147,11 @@
           <aixm:name>ATURA</aixm:name>
           <aixm:type>BCN</aixm:type>
           <aixm:colour>WHITE</aixm:colour>
-          <aixm:flashing>YES</aixm:flashing>
+          <aixm:flashing>NO</aixm:flashing>
+          <aixm:structureBeacon xsi:nil="true"/>
+          <aixm:aerodromeBeacon xsi:nil="true"/>
           <aixm:location>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_562e3202-08db-4c5b-b962-c71ba2d03327">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_3">
               <gml:pos>55.36666666666667 -33.983333333333334</gml:pos>
               <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">50</aixm:elevation>
@@ -156,33 +161,23 @@
             </aixm:ElevatedPoint>
           </aixm:location>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_562e3202-08db-4c5b-b962-c71ba2d03327_1">
+            <aixm:Note gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_4">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_562e3202-08db-4c5b-b962-c71ba2d03327_1">
+                <aixm:LinguisticNote gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_5">
                   <aixm:note lang="eng">Operating hours: HN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_562e3202-08db-4c5b-b962-c71ba2d03327_2">
+            <aixm:Note gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_6">
               <aixm:propertyName>colour</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_562e3202-08db-4c5b-b962-c71ba2d03327_2">
+                <aixm:LinguisticNote gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_7">
                   <aixm:note lang="eng">Intensity: 750tsd Candelas</aixm:note>
-                </aixm:LinguisticNote>
-              </aixm:translatedNote>
-            </aixm:Note>
-          </aixm:annotation>
-          <aixm:annotation>
-            <aixm:Note gml:id="ID_N_562e3202-08db-4c5b-b962-c71ba2d03327_3">
-              <aixm:propertyName>flashing</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
-              <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_562e3202-08db-4c5b-b962-c71ba2d03327_3">
-                  <aixm:note lang="eng">Characteristics: GP FLG (3) W EV 15 SEC</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -193,7 +188,7 @@
       <aixm:timeSlice>
         <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S1C2">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_1a0c8ee8-fa67-45b1-8d37-ce23594676e6">
+            <gml:TimePeriod gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -202,7 +197,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_1a0c8ee8-fa67-45b1-8d37-ce23594676e6">
+            <gml:TimePeriod gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_2">
               <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -211,8 +206,10 @@
           <aixm:type>BCN</aixm:type>
           <aixm:colour>WHITE</aixm:colour>
           <aixm:flashing>YES</aixm:flashing>
+          <aixm:structureBeacon xsi:nil="true"/>
+          <aixm:aerodromeBeacon xsi:nil="true"/>
           <aixm:location>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_1a0c8ee8-fa67-45b1-8d37-ce23594676e6">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_3">
               <gml:pos>55.36666666666667 -33.983333333333334</gml:pos>
               <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">50</aixm:elevation>
@@ -222,32 +219,33 @@
             </aixm:ElevatedPoint>
           </aixm:location>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_1a0c8ee8-fa67-45b1-8d37-ce23594676e6_1">
+            <aixm:Note gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_4">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_1a0c8ee8-fa67-45b1-8d37-ce23594676e6_1">
+                <aixm:LinguisticNote gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_5">
                   <aixm:note lang="eng">Operating hours: HN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_1a0c8ee8-fa67-45b1-8d37-ce23594676e6_2">
+            <aixm:Note gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_6">
               <aixm:propertyName>colour</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_1a0c8ee8-fa67-45b1-8d37-ce23594676e6_2">
+                <aixm:LinguisticNote gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_7">
                   <aixm:note lang="eng">Intensity: 500tsd Candelas</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_1a0c8ee8-fa67-45b1-8d37-ce23594676e6_3">
+            <aixm:Note gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_8">
               <aixm:propertyName>flashing</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_1a0c8ee8-fa67-45b1-8d37-ce23594676e6_3">
+                <aixm:LinguisticNote gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_9">
                   <aixm:note lang="eng">Characteristics: GP FLG (3) W EV 10 SEC</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -263,7 +261,7 @@
           <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_9e121263-b49e-48a8-bc85-a8e254cddace">
+            <gml:TimePeriod gml:id="id_e2c3eb35-36ce-4db4-97b5-fa992141eb1b_2_1_B_1">
               <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -271,9 +269,11 @@
           <aixm:name>ATURA</aixm:name>
           <aixm:type>BCN</aixm:type>
           <aixm:colour>WHITE</aixm:colour>
-          <aixm:flashing>YES</aixm:flashing>
+          <aixm:flashing>NO</aixm:flashing>
+          <aixm:structureBeacon xsi:nil="true"/>
+          <aixm:aerodromeBeacon xsi:nil="true"/>
           <aixm:location>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_9e121263-b49e-48a8-bc85-a8e254cddace">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_e2c3eb35-36ce-4db4-97b5-fa992141eb1b_2_1_B_2">
               <gml:pos>55.36666666666667 -33.983333333333334</gml:pos>
               <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">50</aixm:elevation>
@@ -283,33 +283,23 @@
             </aixm:ElevatedPoint>
           </aixm:location>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_9e121263-b49e-48a8-bc85-a8e254cddace_1">
+            <aixm:Note gml:id="id_e2c3eb35-36ce-4db4-97b5-fa992141eb1b_2_1_B_3">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_9e121263-b49e-48a8-bc85-a8e254cddace_1">
+                <aixm:LinguisticNote gml:id="id_e2c3eb35-36ce-4db4-97b5-fa992141eb1b_2_1_B_4">
                   <aixm:note lang="eng">Operating hours: HN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_9e121263-b49e-48a8-bc85-a8e254cddace_2">
+            <aixm:Note gml:id="id_e2c3eb35-36ce-4db4-97b5-fa992141eb1b_2_1_B_5">
               <aixm:propertyName>colour</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_9e121263-b49e-48a8-bc85-a8e254cddace_2">
+                <aixm:LinguisticNote gml:id="id_e2c3eb35-36ce-4db4-97b5-fa992141eb1b_2_1_B_6">
                   <aixm:note lang="eng">Intensity: 750tsd Candelas</aixm:note>
-                </aixm:LinguisticNote>
-              </aixm:translatedNote>
-            </aixm:Note>
-          </aixm:annotation>
-          <aixm:annotation>
-            <aixm:Note gml:id="ID_N_9e121263-b49e-48a8-bc85-a8e254cddace_3">
-              <aixm:propertyName>flashing</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
-              <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_9e121263-b49e-48a8-bc85-a8e254cddace_3">
-                  <aixm:note lang="eng">Characteristics: GP FLG (3) W EV 15 SEC</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
@@ -320,7 +310,7 @@
       <aixm:timeSlice>
         <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S1C3">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_825bed8d-c122-4049-b338-d50db8ad268a">
+            <gml:TimePeriod gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-03-15T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -329,7 +319,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>3</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_825bed8d-c122-4049-b338-d50db8ad268a">
+            <gml:TimePeriod gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_2">
               <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -338,8 +328,10 @@
           <aixm:type>BCN</aixm:type>
           <aixm:colour>WHITE</aixm:colour>
           <aixm:flashing>YES</aixm:flashing>
+          <aixm:structureBeacon xsi:nil="true"/>
+          <aixm:aerodromeBeacon xsi:nil="true"/>
           <aixm:location>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_825bed8d-c122-4049-b338-d50db8ad268a">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_3">
               <gml:pos>55.36666666666667 -33.983333333333334</gml:pos>
               <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">50</aixm:elevation>
@@ -349,32 +341,33 @@
             </aixm:ElevatedPoint>
           </aixm:location>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_825bed8d-c122-4049-b338-d50db8ad268a_1">
+            <aixm:Note gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_4">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_825bed8d-c122-4049-b338-d50db8ad268a_1">
+                <aixm:LinguisticNote gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_5">
                   <aixm:note lang="eng">Operating hours: HN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_825bed8d-c122-4049-b338-d50db8ad268a_2">
+            <aixm:Note gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_6">
               <aixm:propertyName>colour</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_825bed8d-c122-4049-b338-d50db8ad268a_2">
+                <aixm:LinguisticNote gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_7">
                   <aixm:note lang="eng">Intensity: 500tsd Candelas</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_825bed8d-c122-4049-b338-d50db8ad268a_3">
+            <aixm:Note gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_8">
               <aixm:propertyName>flashing</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_825bed8d-c122-4049-b338-d50db8ad268a_3">
+                <aixm:LinguisticNote gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_9">
                   <aixm:note lang="eng">Characteristics: GP FLG (3) W EV 10 SEC</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -386,7 +379,7 @@
       <aixm:timeSlice>
         <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S3C0">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_447e19d9-4292-4306-ba35-9e9e37477634">
+            <gml:TimePeriod gml:id="id_ec220556-0e53-4145-a812-bdd97b3b5fc2_3_0_B_1">
               <gml:beginPosition>2027-03-15T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -395,7 +388,7 @@
           <aixm:sequenceNumber>3</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_447e19d9-4292-4306-ba35-9e9e37477634">
+            <gml:TimePeriod gml:id="id_ec220556-0e53-4145-a812-bdd97b3b5fc2_3_0_B_2">
               <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -403,9 +396,11 @@
           <aixm:name>ATURA</aixm:name>
           <aixm:type>BCN</aixm:type>
           <aixm:colour>WHITE</aixm:colour>
-          <aixm:flashing>YES</aixm:flashing>
+          <aixm:flashing>NO</aixm:flashing>
+          <aixm:structureBeacon xsi:nil="true"/>
+          <aixm:aerodromeBeacon xsi:nil="true"/>
           <aixm:location>
-            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_EP_447e19d9-4292-4306-ba35-9e9e37477634">
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_ec220556-0e53-4145-a812-bdd97b3b5fc2_3_0_B_3">
               <gml:pos>55.36666666666667 -33.983333333333334</gml:pos>
               <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">50</aixm:elevation>
@@ -415,33 +410,23 @@
             </aixm:ElevatedPoint>
           </aixm:location>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_447e19d9-4292-4306-ba35-9e9e37477634_1">
+            <aixm:Note gml:id="id_ec220556-0e53-4145-a812-bdd97b3b5fc2_3_0_B_4">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_447e19d9-4292-4306-ba35-9e9e37477634_1">
+                <aixm:LinguisticNote gml:id="id_ec220556-0e53-4145-a812-bdd97b3b5fc2_3_0_B_5">
                   <aixm:note lang="eng">Operating hours: HN</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>
           </aixm:annotation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_447e19d9-4292-4306-ba35-9e9e37477634_2">
+            <aixm:Note gml:id="id_ec220556-0e53-4145-a812-bdd97b3b5fc2_3_0_B_6">
               <aixm:propertyName>colour</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_447e19d9-4292-4306-ba35-9e9e37477634_2">
+                <aixm:LinguisticNote gml:id="id_ec220556-0e53-4145-a812-bdd97b3b5fc2_3_0_B_7">
                   <aixm:note lang="eng">Intensity: 750tsd Candelas</aixm:note>
-                </aixm:LinguisticNote>
-              </aixm:translatedNote>
-            </aixm:Note>
-          </aixm:annotation>
-          <aixm:annotation>
-            <aixm:Note gml:id="ID_N_447e19d9-4292-4306-ba35-9e9e37477634_3">
-              <aixm:propertyName>flashing</aixm:propertyName>
-              <aixm:purpose>DESCRIPTION</aixm:purpose>
-              <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_447e19d9-4292-4306-ba35-9e9e37477634_3">
-                  <aixm:note lang="eng">Characteristics: GP FLG (3) W EV 15 SEC</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>

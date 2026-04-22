@@ -54,7 +54,7 @@
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_DONBURG_D-OTHER_S1C1">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+            <gml:TimePeriod gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -63,7 +63,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+            <gml:TimePeriod gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_2">
               <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -78,11 +78,12 @@
           <aixm:class xsi:nil="true" nilReason="inapplicable"/>
           <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
           <aixm:geometryComponent>
-            <aixm:AirspaceGeometryComponent gml:id="ID_AGC_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
-              <aixm:operation xsi:nil="true"/>
-              <aixm:operationSequence xsi:nil="true"/>
+            <aixm:AirspaceGeometryComponent gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_3">
+              <aixm:operation>BASE</aixm:operation>
+              <aixm:operationSequence>1</aixm:operationSequence>
+              <aixm:annotation xsi:nil="true"/>
               <aixm:theAirspaceVolume>
-                <aixm:AirspaceVolume gml:id="ID_AGC_AV_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+                <aixm:AirspaceVolume gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_4">
                   <aixm:upperLimit uom="M">2000</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
@@ -91,21 +92,22 @@
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:minimumLimit xsi:nil="true"/>
                   <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:width xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:horizontalProjection>
-                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_5">
                       <gml:patches>
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:Ring>
                               <gml:curveMember>
-                                <gml:Curve gml:id="ID_AGC_AV_C_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+                                <aixm:Curve gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
                                       <gml:pos>51.867222 -34.004167</gml:pos>
                                       <gml:radius uom="[nmi_i]">2</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
-                                </gml:Curve>
+                                </aixm:Curve>
                               </gml:curveMember>
                             </gml:Ring>
                           </gml:exterior>
@@ -114,14 +116,15 @@
                       <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
                     </aixm:Surface>
                   </aixm:horizontalProjection>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceVolume>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="ID_AA_0e5c9289-eaad-4341-a020-f0ccf08f27b9_1">
+            <aixm:AirspaceActivation gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_7">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T1_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+                <aixm:Timesheet gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -131,7 +134,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T2_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+                <aixm:Timesheet gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_9">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>09:00</aixm:startTime>
@@ -140,26 +143,29 @@
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="ID_AL_0e5c9289-eaad-4341-a020-f0ccf08f27b9_1">
+                <aixm:AirspaceLayer gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_10">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
-              <aixm:user xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90f" xlink:title="ORG AERO-CLUB DONBURG AERO CLUB"/>
+              <aixm:user xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90f" xlink:title="DONBURG AEROCLUB EA-DAC OTHER:AEROCLUB" xlink:type="simple"/>
               <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="ID_AA_0e5c9289-eaad-4341-a020-f0ccf08f27b9_2">
+            <aixm:AirspaceActivation gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T3_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+                <aixm:Timesheet gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
@@ -170,7 +176,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T4_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+                <aixm:Timesheet gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -180,7 +186,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T5_0e5c9289-eaad-4341-a020-f0ccf08f27b9">
+                <aixm:Timesheet gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_14">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>09:00</aixm:startTime>
@@ -189,16 +195,19 @@
                   <aixm:excluded>YES</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="ID_AL_0e5c9289-eaad-4341-a020-f0ccf08f27b9_2">
+                <aixm:AirspaceLayer gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_15">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
               <aixm:user xsi:nil="true"/>
@@ -206,10 +215,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_0e5c9289-eaad-4341-a020-f0ccf08f27b9_2">
+            <aixm:Note gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_16">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_N_LN_0e5c9289-eaad-4341-a020-f0ccf08f27b9_2">
+                <aixm:LinguisticNote gml:id="id_e0b5518e-a00e-4e89-ae77-239762ee60a1_1_1_B_17">
                   <aixm:note lang="eng">Operator/User and Tel Nr: Donburg Aeroclub, TEL 053 130 2546</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -221,7 +231,7 @@
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_DONBURG_D-OTHER_S2C0">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_794b171f-17d6-4ad6-8212-346418d2b03f">
+            <gml:TimePeriod gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_1">
               <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -230,7 +240,7 @@
           <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_794b171f-17d6-4ad6-8212-346418d2b03f">
+            <gml:TimePeriod gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_2">
               <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -245,11 +255,12 @@
           <aixm:class xsi:nil="true" nilReason="inapplicable"/>
           <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
           <aixm:geometryComponent>
-            <aixm:AirspaceGeometryComponent gml:id="ID_AGC_794b171f-17d6-4ad6-8212-346418d2b03f">
-              <aixm:operation xsi:nil="true"/>
-              <aixm:operationSequence xsi:nil="true"/>
+            <aixm:AirspaceGeometryComponent gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_3">
+              <aixm:operation>BASE</aixm:operation>
+              <aixm:operationSequence>1</aixm:operationSequence>
+              <aixm:annotation xsi:nil="true"/>
               <aixm:theAirspaceVolume>
-                <aixm:AirspaceVolume gml:id="ID_AGC_AV_794b171f-17d6-4ad6-8212-346418d2b03f">
+                <aixm:AirspaceVolume gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_4">
                   <aixm:upperLimit uom="M">1500</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
@@ -258,21 +269,22 @@
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:minimumLimit xsi:nil="true"/>
                   <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:width xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:horizontalProjection>
-                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_794b171f-17d6-4ad6-8212-346418d2b03f">
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_5">
                       <gml:patches>
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:Ring>
                               <gml:curveMember>
-                                <gml:Curve gml:id="ID_AGC_AV_C_794b171f-17d6-4ad6-8212-346418d2b03f">
+                                <aixm:Curve gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
                                       <gml:pos>51.867222 -34.004167</gml:pos>
                                       <gml:radius uom="[nmi_i]">2</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
-                                </gml:Curve>
+                                </aixm:Curve>
                               </gml:curveMember>
                             </gml:Ring>
                           </gml:exterior>
@@ -281,14 +293,15 @@
                       <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
                     </aixm:Surface>
                   </aixm:horizontalProjection>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceVolume>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="ID_AA_794b171f-17d6-4ad6-8212-346418d2b03f_1">
+            <aixm:AirspaceActivation gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_7">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T1_794b171f-17d6-4ad6-8212-346418d2b03f">
+                <aixm:Timesheet gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -298,7 +311,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T2_794b171f-17d6-4ad6-8212-346418d2b03f">
+                <aixm:Timesheet gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_9">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>09:00</aixm:startTime>
@@ -307,26 +320,29 @@
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="ID_AL_794b171f-17d6-4ad6-8212-346418d2b03f_1">
+                <aixm:AirspaceLayer gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_10">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
-              <aixm:user xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90f" xlink:title="ORG AERO-CLUB DONBURG AERO CLUB"/>
+              <aixm:user xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90f" xlink:title="DONBURG AEROCLUB EA-DAC OTHER:AEROCLUB" xlink:type="simple"/>
               <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="ID_AA_794b171f-17d6-4ad6-8212-346418d2b03f_2">
+            <aixm:AirspaceActivation gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T3_794b171f-17d6-4ad6-8212-346418d2b03f">
+                <aixm:Timesheet gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
@@ -337,7 +353,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T4_794b171f-17d6-4ad6-8212-346418d2b03f">
+                <aixm:Timesheet gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -347,7 +363,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T5_794b171f-17d6-4ad6-8212-346418d2b03f">
+                <aixm:Timesheet gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_14">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>09:00</aixm:startTime>
@@ -356,16 +372,19 @@
                   <aixm:excluded>YES</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="ID_AL_794b171f-17d6-4ad6-8212-346418d2b03f_2">
+                <aixm:AirspaceLayer gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_15">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
               <aixm:user xsi:nil="true"/>
@@ -373,10 +392,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_794b171f-17d6-4ad6-8212-346418d2b03f_2">
+            <aixm:Note gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_16">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_N_LN_794b171f-17d6-4ad6-8212-346418d2b03f_2">
+                <aixm:LinguisticNote gml:id="id_5ba4134f-991d-40e4-a5f0-09631e04e591_2_0_B_17">
                   <aixm:note lang="eng">Operator/User and Tel Nr: Donburg Aeroclub, TEL 053 130 2546</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -388,7 +408,7 @@
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_DONBURG_D-OTHER_S1C2">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+            <gml:TimePeriod gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -397,7 +417,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+            <gml:TimePeriod gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_2">
               <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -412,11 +432,12 @@
           <aixm:class xsi:nil="true" nilReason="inapplicable"/>
           <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
           <aixm:geometryComponent>
-            <aixm:AirspaceGeometryComponent gml:id="ID_AGC_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
-              <aixm:operation xsi:nil="true"/>
-              <aixm:operationSequence xsi:nil="true"/>
+            <aixm:AirspaceGeometryComponent gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_3">
+              <aixm:operation>BASE</aixm:operation>
+              <aixm:operationSequence>1</aixm:operationSequence>
+              <aixm:annotation xsi:nil="true"/>
               <aixm:theAirspaceVolume>
-                <aixm:AirspaceVolume gml:id="ID_AGC_AV_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+                <aixm:AirspaceVolume gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_4">
                   <aixm:upperLimit uom="M">2000</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
@@ -425,21 +446,22 @@
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:minimumLimit xsi:nil="true"/>
                   <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:width xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:horizontalProjection>
-                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_5">
                       <gml:patches>
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:Ring>
                               <gml:curveMember>
-                                <gml:Curve gml:id="ID_AGC_AV_C_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+                                <aixm:Curve gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
                                       <gml:pos>51.867222 -34.004167</gml:pos>
                                       <gml:radius uom="[nmi_i]">2</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
-                                </gml:Curve>
+                                </aixm:Curve>
                               </gml:curveMember>
                             </gml:Ring>
                           </gml:exterior>
@@ -448,14 +470,15 @@
                       <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
                     </aixm:Surface>
                   </aixm:horizontalProjection>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceVolume>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="ID_AA_5d196c9a-84c1-406d-be9a-96b12e0cf44e_1">
+            <aixm:AirspaceActivation gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_7">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T1_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+                <aixm:Timesheet gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -465,7 +488,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T2_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+                <aixm:Timesheet gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_9">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>09:00</aixm:startTime>
@@ -474,26 +497,29 @@
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="ID_AL_5d196c9a-84c1-406d-be9a-96b12e0cf44e_1">
+                <aixm:AirspaceLayer gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_10">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
-              <aixm:user xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90f" xlink:title="ORG AERO-CLUB DONBURG AERO CLUB"/>
+              <aixm:user xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90f" xlink:title="DONBURG AEROCLUB EA-DAC OTHER:AEROCLUB" xlink:type="simple"/>
               <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="ID_AA_5d196c9a-84c1-406d-be9a-96b12e0cf44e_2">
+            <aixm:AirspaceActivation gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T3_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+                <aixm:Timesheet gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
@@ -504,7 +530,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T4_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+                <aixm:Timesheet gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -514,7 +540,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T5_5d196c9a-84c1-406d-be9a-96b12e0cf44e">
+                <aixm:Timesheet gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_14">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>09:00</aixm:startTime>
@@ -523,16 +549,19 @@
                   <aixm:excluded>YES</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="ID_AL_5d196c9a-84c1-406d-be9a-96b12e0cf44e_2">
+                <aixm:AirspaceLayer gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_15">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
               <aixm:user xsi:nil="true"/>
@@ -540,10 +569,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_5d196c9a-84c1-406d-be9a-96b12e0cf44e_2">
+            <aixm:Note gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_16">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_N_LN_5d196c9a-84c1-406d-be9a-96b12e0cf44e_2">
+                <aixm:LinguisticNote gml:id="id_7c4610e8-9406-4571-ba2e-68491e690f85_1_2_B_17">
                   <aixm:note lang="eng">Operator/User and Tel Nr: Donburg Aeroclub, TEL 053 130 2546</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -559,7 +589,7 @@
           <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+            <gml:TimePeriod gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_1">
               <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -574,11 +604,12 @@
           <aixm:class xsi:nil="true" nilReason="inapplicable"/>
           <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
           <aixm:geometryComponent>
-            <aixm:AirspaceGeometryComponent gml:id="ID_AGC_eac26a02-f84f-4420-a444-5cd0a246ea5e">
-              <aixm:operation xsi:nil="true"/>
-              <aixm:operationSequence xsi:nil="true"/>
+            <aixm:AirspaceGeometryComponent gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_2">
+              <aixm:operation>BASE</aixm:operation>
+              <aixm:operationSequence>1</aixm:operationSequence>
+              <aixm:annotation xsi:nil="true"/>
               <aixm:theAirspaceVolume>
-                <aixm:AirspaceVolume gml:id="ID_AGC_AV_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+                <aixm:AirspaceVolume gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_3">
                   <aixm:upperLimit uom="M">1500</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
@@ -587,21 +618,22 @@
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:minimumLimit xsi:nil="true"/>
                   <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:width xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:horizontalProjection>
-                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_S_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_4">
                       <gml:patches>
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:Ring>
                               <gml:curveMember>
-                                <gml:Curve gml:id="ID_AGC_AV_C_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+                                <aixm:Curve gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_5">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
                                       <gml:pos>51.867222 -34.004167</gml:pos>
                                       <gml:radius uom="[nmi_i]">2</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
-                                </gml:Curve>
+                                </aixm:Curve>
                               </gml:curveMember>
                             </gml:Ring>
                           </gml:exterior>
@@ -610,14 +642,15 @@
                       <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
                     </aixm:Surface>
                   </aixm:horizontalProjection>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceVolume>
               </aixm:theAirspaceVolume>
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="ID_AA_eac26a02-f84f-4420-a444-5cd0a246ea5e_1">
+            <aixm:AirspaceActivation gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_6">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T1_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+                <aixm:Timesheet gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_7">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -627,7 +660,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T2_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+                <aixm:Timesheet gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>09:00</aixm:startTime>
@@ -636,26 +669,29 @@
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="ID_AL_eac26a02-f84f-4420-a444-5cd0a246ea5e_1">
+                <aixm:AirspaceLayer gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_9">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
-              <aixm:user xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90f" xlink:title="ORG AERO-CLUB DONBURG AERO CLUB"/>
+              <aixm:user xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90f" xlink:title="DONBURG AEROCLUB EA-DAC OTHER:AEROCLUB" xlink:type="simple"/>
               <aixm:aircraft xsi:nil="true"/>
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="ID_AA_eac26a02-f84f-4420-a444-5cd0a246ea5e_2">
+            <aixm:AirspaceActivation gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_10">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T3_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+                <aixm:Timesheet gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_11">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
@@ -666,7 +702,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T4_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+                <aixm:Timesheet gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -676,7 +712,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T5_eac26a02-f84f-4420-a444-5cd0a246ea5e">
+                <aixm:Timesheet gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startTime>09:00</aixm:startTime>
@@ -685,16 +721,19 @@
                   <aixm:excluded>YES</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="ID_AL_eac26a02-f84f-4420-a444-5cd0a246ea5e_2">
+                <aixm:AirspaceLayer gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_14">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
                   <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
                 </aixm:AirspaceLayer>
               </aixm:levels>
               <aixm:user xsi:nil="true"/>
@@ -702,10 +741,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_eac26a02-f84f-4420-a444-5cd0a246ea5e_2">
+            <aixm:Note gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_15">
+              <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_N_LN_eac26a02-f84f-4420-a444-5cd0a246ea5e_2">
+                <aixm:LinguisticNote gml:id="id_01f6b25b-f143-41ff-94c0-9f33a56f0a93_2_1_B_16">
                   <aixm:note lang="eng">Operator/User and Tel Nr: Donburg Aeroclub, TEL 053 130 2546</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>

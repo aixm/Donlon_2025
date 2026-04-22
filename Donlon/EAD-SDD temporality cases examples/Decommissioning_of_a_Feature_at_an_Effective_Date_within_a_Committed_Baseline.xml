@@ -23,7 +23,7 @@
   Temporality use case: decommissioning of a feature at an effective date within a committed Baseline
   Feature: WorkArea
   
-                                      Valid TimeSlice: BASELINE 1/0, validTime: 2026-12-01T00:00:00Z - "unknown"
+                                      Valid TimeSlice: BASELINE 1/0, validTime: 2026-12-01T00:00:00Z - "unknown", featureLifetime: 2026-12-01T00:00:00Z - "unknown"
   End of valid TimeSlice (decommissioning of feature): BASELINE 1/1, validTime: 2026-12-01T00:00:00Z - 2026-12-21T00:00:00Z, featureLifetime: 2026-12-01T00:00:00Z - 2026-12-21T00:00:00Z
 -->
 
@@ -48,9 +48,9 @@
       <gml:identifier codeSpace="urn:uuid:">d23e8947-4092-47b9-b6ee-8a4037a4faa2</gml:identifier>
       <!-- End of valid TimeSlice (decommissioning of feature) -->
       <aixm:timeSlice>
-        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_d23e8947-4092-47b9-b6ee-8a4037a4faa2_S1C1">
+        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2027-01-01_1_S1C1">
           <gml:validTime>
-            <gml:TimePeriod gml:id="ID_VT_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239">
+            <gml:TimePeriod gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_1">
               <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-21T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -59,22 +59,22 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="ID_FL_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239">
+            <gml:TimePeriod gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_2">
               <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-21T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2027-01-01</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL."/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
-            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_ES_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239">
+            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_3">
               <gml:patches>
                 <gml:PolygonPatch>
                   <gml:exterior>
                     <gml:Ring>
                       <gml:curveMember>
-                        <aixm:ElevatedCurve gml:id="ID_EC_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239">
+                        <aixm:ElevatedCurve gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_4">
                           <gml:segments>
                             <gml:GeodesicString>
                               <gml:posList>52.3737361807 -31.9469297576 52.3746125209 -31.9470728019 52.3744840962 -31.9491731956 52.3741019413 -31.9485750441 52.3736553552 -31.9482516379 52.3737361807 -31.9469297576</gml:posList>
@@ -94,9 +94,9 @@
             </aixm:ElevatedSurface>
           </aixm:extent>
           <aixm:activation>
-            <aixm:WorkareaActivity gml:id="ID_WA_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239_1">
+            <aixm:WorkareaActivity gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_5">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239_1">
+                <aixm:Timesheet gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_6">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
@@ -105,14 +105,15 @@
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:isActive>YES</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
           <aixm:activation>
-            <aixm:WorkareaActivity gml:id="ID_WA_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239_2">
+            <aixm:WorkareaActivity gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_7">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="ID_T_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239_2">
+                <aixm:Timesheet gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:dayTil>AFT_WORK_DAY</aixm:dayTil>
@@ -122,16 +123,17 @@
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:isActive>NO</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="ID_N_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239">
+            <aixm:Note gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_9">
               <aixm:propertyName>type</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="ID_LN_3e6cc7c6-8bcb-455b-8c9e-4702b0f83239">
+                <aixm:LinguisticNote gml:id="id_21f2b725-32b7-4d94-ab7a-9ca474728ad9_1_1_B_10">
                   <aixm:note lang="eng">Works will be carried out to resurface the north-west corner of Apron A.
 Works are expected to be completed by 1 January 2027 at 00:00 UTC.</aixm:note>
                 </aixm:LinguisticNote>

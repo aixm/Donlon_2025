@@ -2555,13 +2555,10 @@
       <gml:identifier codeSpace="urn:uuid:">df421db4-3698-4003-9d71-93ca57e70ffc</gml:identifier>
       <aixm:timeSlice>
         <aixm:VerticalStructureTimeSlice gml:id="OBST-EADD-1002">
-          <!-- OPEN QUESTION: Is it realistic that in a DS there are 
-						a) Obstacle with different effective dates?
-						b. Obstacles with kown end date (not only validTime but also featureLifetime? -->
           <gml:validTime>
             <gml:TimePeriod gml:id="id_6548caf4-cc9c-4a4c-8fad-512133b367e9_1_0_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2025-12-30T18:30:00Z</gml:endPosition> <!-- Unable to upload in ADM a first TimeSlice with known end of validTime or featureLifetime -->
+              <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -2570,7 +2567,7 @@
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_6548caf4-cc9c-4a4c-8fad-512133b367e9_1_0_B_2">
               <gml:beginPosition>2019-12-11T05:30:00Z</gml:beginPosition>
-              <gml:endPosition>2025-12-30T18:30:00Z</gml:endPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:name>OBST-EADD-1002</aixm:name>

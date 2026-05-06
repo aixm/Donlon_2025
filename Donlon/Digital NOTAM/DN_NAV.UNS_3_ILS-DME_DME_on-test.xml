@@ -40,7 +40,7 @@ Editorial note: this license is an instance of the BSD license template as provi
   Q) EAAD/QIDCT/I/NBO/AE/000/999/5223N03155W025
   A) EADD B) 2604010600 C) 2604130750
   D) Apr 1 7 13 0600-0750
-  E) ILS/DME 09L ILS/DME DME part OSL RWY-09L On test, do not use. False indication possible.
+  E) ILS DME part OSL RWY-09L On test, do not use. False indication possible.
   Due to calibration and in flight testing.
   Precision approaches for RWY 09L suspended.
 -->
@@ -76,7 +76,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <gml:endPosition>2026-04-13T07:50:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
-          <event:name>OSL ILS/DME ILS/DME 09R</event:name>
+          <event:name>OSL ILS/DME 09R</event:name>
           <event:designator>DNOTAM</event:designator>
           <event:scenario>NAV.UNS</event:scenario>
           <event:version>2.0</event:version>
@@ -112,7 +112,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
               <event:schedule>Apr 1 7 13 0600-0750</event:schedule>
-              <event:text>ILS/DME 09L ILS/DME DME part OSL RWY-09L On test, do not use. False indication possible.
+              <event:text>ILS DME part OSL RWY-09L On test, do not use. False indication possible.
 Due to calibration and in flight testing.
 Precision approaches for RWY 09L suspended.</event:text>
             </event:NOTAM>
@@ -139,7 +139,6 @@ Precision approaches for RWY 09L suspended.</event:text>
           <aixm:interpretation>TEMPDELTA</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
-          <aixm:type>ILS</aixm:type> <!-- Temporary change of navaid type from ILS_DME to ILS due to DME u/s during the event -->
           <!-- The baseline operational status of the navaid (hours calculated to fill in the gaps left by the NOTAM schedule) -->
           <aixm:availability>
             <aixm:NavaidOperationalStatus gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_2">
@@ -404,7 +403,7 @@ Precision approaches for RWY 09L suspended.</event:text>
           <!-- The link to the event -->
           <aixm:extension>
             <event:DMEExtension gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_13">
-              <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb" xlink:title="OSL ILS/DME ILS/DME 09R DNOTAM NAV.UNS" xlink:type="simple"/>
+              <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb" xlink:title="OSL ILS/DME 09R DNOTAM NAV.UNS" xlink:type="simple"/>
             </event:DMEExtension>
           </aixm:extension>
         </aixm:DMETimeSlice>

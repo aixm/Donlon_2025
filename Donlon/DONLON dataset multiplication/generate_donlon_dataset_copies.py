@@ -31,12 +31,15 @@ This script generates multiple copies of the following Donlon dataset features:
     - Apron, ApronElement, AircraftStand
   - VerticalStructure
   - Navaid and NavaidEquipment
-  - all Airspace features (excluding types: FIR, FIR_P, CTA, CTA_P)
+  - DesignatedPoint
+  - all Airspace features
 with:
   - New designators and names for AirportHeliport (E01D, E02D, etc.), Navaid/NavaidEquipment and VerticalStructure
   - New UUIDs for all features
   - Updated xlink:href references between copied features
   - Geographic positions arranged in a grid pattern
+
+DesignatedPoint copies keep their original name and designator unchanged.
 
 The copies are arranged in a grid pattern with a set distance between each position.
 
@@ -111,6 +114,7 @@ FEATURE_TYPES = [
     'TACAN',
     'Localizer',
     'Glidepath',
+    'DesignatedPoint',
     'VerticalStructure',
     'Airspace',
 ]
@@ -121,6 +125,7 @@ AIRSPACE_TYPES_EXCLUDE_DEFAULT = {'FIR', 'FIR_P'}
 # Output ordering for the All_features file
 ALL_FEATURES_ORDER = [
     'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath',
+    'DesignatedPoint',
     'AirportHeliport',
     'Airspace',
     'Taxiway', 'TaxiwayElement',
@@ -508,6 +513,11 @@ def collect_eadd_features(features_by_type, ase_types_exclude=None):
                 if fuuid in eq_refs and nav_uuid in airport_membership:
                     airport_membership[fuuid] = airport_membership[nav_uuid]
                     break
+
+    # ---- DesignatedPoint (ALL) ----
+    for fuuid, felem in features_by_type['DesignatedPoint'].items():
+        if fuuid not in collected:
+            collected[fuuid] = ('DesignatedPoint', felem)
 
     # ---- VerticalStructure (ALL) ----
 
@@ -981,14 +991,16 @@ def main():
     print(f"  TOTAL features per copy: {total_per_copy}")
 
     # Feature types that always go into Common/
-    COMMON_ONLY_TYPES = {'VerticalStructure', 'Airspace'}
+    COMMON_ONLY_TYPES = {
+        'VerticalStructure', 'Airspace', 'DesignatedPoint',
+        'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath',
+    }
     # Feature types that go into airport folders if they have airport membership,
     # otherwise into Common/
     AIRPORT_OR_COMMON_TYPES = {
         'AirportHeliport', 'Runway', 'RunwayDirection', 'RunwayElement',
         'RunwayCentrelinePoint', 'TouchDownLiftOff', 'Taxiway', 'TaxiwayElement',
         'Apron', 'ApronElement', 'AircraftStand',
-        'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath',
     }
 
     # Generate copies

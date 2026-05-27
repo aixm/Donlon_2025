@@ -77,7 +77,7 @@ OR
 OR
   python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --exc-airspace-types FIR CTA CTA_P AWY ADIZ --exc-features EAX4 EAX5 EAHTZCB EAV1 EAV2 EAV3 SAGON ILIDA ATLIM BISBO ILURU UKORO AL ALM --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --exc-airspace-types FIR CTA CTA_P AWY ADIZ --exc-features EAA1 EAX4 EAX5 EAHTZCB EAV1 EAV2 EAV3 SAGON ILIDA ATLIM BISBO ILURU UKORO AL ALM --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
 
 Input parameters:
 --input -> select the input file path

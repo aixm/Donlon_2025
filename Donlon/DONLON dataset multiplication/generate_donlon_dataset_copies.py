@@ -37,31 +37,53 @@ with:
   - New designators and names for AirportHeliport (E01D, E02D, etc.), Navaid/NavaidEquipment and VerticalStructure
   - New UUIDs for all features
   - Updated xlink:href references between copied features
-  - Geographic positions arranged in a grid pattern
+  - Geographic positions kept inside the EAAD FIR
 
 DesignatedPoint copies keep their original name and designator unchanged.
 
-The copies are arranged in a grid pattern with a set distance between each position.
+Layout strategy: EAAD FIR is enclosed in its axis-aligned bounding
+rectangle; the rectangle is split in four around the FIR centre.  The
+source AirportHeliport ARP sits in one of the four quarters and copies
+fill a grid that starts at the source cell and grows toward the opposite
+corner of the bbox, spaced by --distance-nm in both lat and lon.
+
+Copy 1 is kept at the original position.  Cells fill row-by-row from the
+source corner: the source row first (cols_per_row cells), then the next
+row inward, and so on, until --number-of-copies cells have been placed.
+
+For example, source feature `x` in the lower-right quarter with the FIR
+bbox accommodating a 5x5 grid:
+
+      o o o o o
+      o o o o o
+      o o o o o
+      o o o o o
+      o o o o x
+
+With --number-of-copies 12 the grid fills like:
+
+      o o
+      o o o o o
+      o o o o x
 
 Usage example:
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30 --exc-airspace-types CTA CTA_P
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --exc-airspace-types FIR CTA CTA_P
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --output Donlon_Dataset_Copies --grid-rows 5 --grid-cols 6 --distance-nm 30
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --output Donlon_Dataset_Copies --number-of-copies 10 --distance-nm 30
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --grid-rows 5 --grid-cols 6 --distance-nm 30 --exc-airspace-types CTA CTA_P --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --exc-airspace-types FIR CTA CTA_P AWY ADIZ --exc-features EAX4 EAX5 EAHTZCB EAV1 EAV2 EAV3 SAGON ILIDA ATLIM BISBO ILURU UKORO AL ALM --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
 
 Input parameters:
 --input -> select the input file path
 --output -> (optional) select the output folder; if not specified then the a folder called 'Donlon_Dataset_Copies' will be created by default in the same location as the input file
---grid-rows -> select the horizontal size of the grid
---grid-cols -> select the vertical size of the grid
---distance-nm -> select the horizontal and vertical distance between each grid position
+--number-of-copies -> number of copy sets to generate (laid out in a line inside the EAAD FIR bounding rectangle)
+--distance-nm -> distance between successive copies along the chosen axis
 --exc-airspace-types -> (optional) excludes the selected airspace types from being multiplies (FIR and FIR_P are by default excluded)
 --effectiveDateStart -> (optional) all features across all copy sets will have the validTime.beginPosition set to the value selected through this parameter
 --timeOffset -> (optional) if used in addition to --effectiveDateStart, then the features in the first copy set get the effectiveDateStart time for validTime.beginPosition,
@@ -158,13 +180,211 @@ def generate_new_uuid():
     return str(uuid.uuid4())
 
 
-def calculate_grid_offset(index, grid_cols, distance_nm):
-    row = index // grid_cols
-    col = index % grid_cols
+def _quarter_name(in_upper, in_right):
+    if in_upper and in_right:
+        return 'TR (NE)'
+    if in_upper and not in_right:
+        return 'TL (NW)'
+    if not in_upper and in_right:
+        return 'BR (SE)'
+    return 'BL (SW)'
+
+
+def haversine_distance_nm(lat1, lon1, lat2, lon2):
+    """Great-circle distance in nautical miles between two points (degrees)."""
+    R_nm = 3440.065
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlam = math.radians(lon2 - lon1)
+    a = (math.sin(dphi / 2) ** 2
+         + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2)
+    return 2 * R_nm * math.asin(math.sqrt(a))
+
+
+def compute_grid_layout(bbox, anchor_lat, anchor_lon, distance_nm):
+    """
+    Build a grid that starts at the source anchor (placed in one corner cell)
+    and grows toward the opposite corner of the FIR bounding rectangle.
+
+    bbox is (min_lat, max_lat, min_lon, max_lon).  The source quarter is
+    determined by comparing the anchor to the FIR centre (bbox midpoint).
+    Row 0 / col 0 is the anchor; rows fill toward the opposite lat-half,
+    cols toward the opposite lon-half, both spaced by --distance-nm.
+
+    Returns a dict with:
+        lat_sign, lon_sign : +/-1 grid growth direction
+        max_rows, max_cols : highest valid row/col index that stays inside bbox
+        d_lat, d_lon       : grid spacing in degrees
+        quarter            : human label for the source quarter
+    """
+    min_lat, max_lat, min_lon, max_lon = bbox
+    lat_mid = (min_lat + max_lat) / 2
+    lon_mid = (min_lon + max_lon) / 2
+
+    in_upper = anchor_lat >= lat_mid
+    in_right = anchor_lon >= lon_mid
+
     lat_per_nm = 1.0 / 60.0
-    lon_per_nm = 1.0 / (60.0 * 0.6157)  # cos(52°) ≈ 0.6157
-    return (row * distance_nm * lat_per_nm,
-            col * distance_nm * lon_per_nm)
+    cos_lat = math.cos(math.radians(anchor_lat))
+    lon_per_nm = 1.0 / (60.0 * cos_lat) if abs(cos_lat) > 1e-6 else 1.0 / 60.0
+
+    d_lat = distance_nm * lat_per_nm
+    d_lon = distance_nm * lon_per_nm
+
+    lat_sign = -1 if in_upper else +1
+    lon_sign = -1 if in_right else +1
+
+    room_lat_deg = (max_lat - anchor_lat) if lat_sign > 0 else (anchor_lat - min_lat)
+    room_lon_deg = (max_lon - anchor_lon) if lon_sign > 0 else (anchor_lon - min_lon)
+    room_lat_deg = max(0.0, room_lat_deg)
+    room_lon_deg = max(0.0, room_lon_deg)
+
+    max_rows = int(room_lat_deg / d_lat) if d_lat > 0 else 0
+    max_cols = int(room_lon_deg / d_lon) if d_lon > 0 else 0
+
+    return {
+        'lat_sign': lat_sign,
+        'lon_sign': lon_sign,
+        'max_rows': max_rows,
+        'max_cols': max_cols,
+        'd_lat': d_lat,
+        'd_lon': d_lon,
+        'quarter': _quarter_name(in_upper, in_right),
+    }
+
+
+def choose_cols_per_row(number_of_copies, layout):
+    """
+    Pick a row width that produces a roughly square grid for the requested
+    number of copies, capped by the columns that still fit inside the FIR
+    bbox at the current --distance-nm spacing.
+    """
+    bbox_limit = max(1, layout['max_cols'] + 1)
+    desired = max(1, math.ceil(math.sqrt(max(1, number_of_copies))))
+    return min(desired, bbox_limit)
+
+
+def calculate_grid_position(index, layout, cols_per_row):
+    """
+    (lat_offset_deg, lon_offset_deg) for the (index)-th copy, 0-based.
+
+    Cells fill row-by-row: the source row (row 0) is filled across all
+    `cols_per_row` columns, then row 1, etc.  Within a row the column index
+    runs from 0 (source column) outward.
+    """
+    if cols_per_row < 1:
+        cols_per_row = 1
+    row = index // cols_per_row
+    col = index % cols_per_row
+    return (row * layout['d_lat'] * layout['lat_sign'],
+            col * layout['d_lon'] * layout['lon_sign'])
+
+
+def determine_feature_signs(feat_lat, feat_lon, bbox, anchor_lat, anchor_lon,
+                            anchor_lat_sign, anchor_lon_sign, threshold_nm=90.0):
+    """
+    Grid growth direction for a single feature.
+
+    Features within *threshold_nm* of the anchor follow the anchor's
+    direction.  Features farther away use their own quadrant (relative to
+    the FIR bbox centre) so that copies spread outward in every direction.
+    """
+    dist = haversine_distance_nm(feat_lat, feat_lon, anchor_lat, anchor_lon)
+    if dist <= threshold_nm:
+        return anchor_lat_sign, anchor_lon_sign
+    min_lat, max_lat, min_lon, max_lon = bbox
+    lat_mid = (min_lat + max_lat) / 2
+    lon_mid = (min_lon + max_lon) / 2
+    lat_sign = -1 if feat_lat >= lat_mid else +1
+    lon_sign = -1 if feat_lon >= lon_mid else +1
+    return lat_sign, lon_sign
+
+
+def find_fir_polygon(root, designator='EAAD'):
+    """
+    Return the polygon of the Airspace with type=FIR and the given designator
+    as a list of (lat, lon) tuples, or None if not found.
+    """
+    for member in root.findall('message:hasMember', NSMAP):
+        airspace = member.find('aixm:Airspace', NSMAP)
+        if airspace is None:
+            continue
+        for ts in airspace.iter():
+            tag = ts.tag
+            if not (isinstance(tag, str) and 'AirspaceTimeSlice' in tag):
+                continue
+            t = ts.find('aixm:type', NSMAP)
+            if t is None or t.text != 'FIR':
+                break
+            d = ts.find('aixm:designator', NSMAP)
+            if designator and (d is None or d.text != designator):
+                break
+            for pos_list in ts.iter('{http://www.opengis.net/gml/3.2}posList'):
+                text = pos_list.text
+                if not text:
+                    continue
+                values = text.strip().split()
+                polygon = []
+                for i in range(0, len(values) - 1, 2):
+                    try:
+                        polygon.append((float(values[i]), float(values[i + 1])))
+                    except ValueError:
+                        pass
+                if polygon:
+                    return polygon
+            break
+    return None
+
+
+def find_anchor_position(root):
+    """
+    Return (lat, lon) of the first AirportHeliport's ARP in the source dataset,
+    or None if no AirportHeliport with an ARP is present.
+    """
+    for member in root.findall('message:hasMember', NSMAP):
+        ahp = member.find('aixm:AirportHeliport', NSMAP)
+        if ahp is None:
+            continue
+        for arp in ahp.iter('{http://www.aixm.aero/schema/5.1.1}ARP'):
+            for pos in arp.iter('{http://www.opengis.net/gml/3.2}pos'):
+                if pos.text:
+                    parts = pos.text.strip().split()
+                    if len(parts) >= 2:
+                        try:
+                            return float(parts[0]), float(parts[1])
+                        except ValueError:
+                            pass
+    return None
+
+
+def get_feature_position(feature_elem):
+    """Return (lat, lon) representative position of a feature, or None.
+
+    Scans gml:pos and gml:posList elements for the first geographic
+    coordinate pair (EPSG:4326 range).  Projected coordinates (e.g.
+    EPSG:3395 values in metres) are skipped automatically.
+    """
+    for pos in feature_elem.iter('{http://www.opengis.net/gml/3.2}pos'):
+        if pos.text and pos.text.strip():
+            parts = pos.text.strip().split()
+            if len(parts) >= 2:
+                try:
+                    lat, lon = float(parts[0]), float(parts[1])
+                    if -90 <= lat <= 90 and -180 <= lon <= 180:
+                        return lat, lon
+                except ValueError:
+                    pass
+    for pos_list in feature_elem.iter('{http://www.opengis.net/gml/3.2}posList'):
+        if pos_list.text and pos_list.text.strip():
+            values = pos_list.text.strip().split()
+            if len(values) >= 2:
+                try:
+                    lat, lon = float(values[0]), float(values[1])
+                    if -90 <= lat <= 90 and -180 <= lon <= 180:
+                        return lat, lon
+                except ValueError:
+                    pass
+    return None
 
 
 def offset_coordinate(coord_str, lat_offset, lon_offset):
@@ -309,6 +529,18 @@ def get_ref_uuid(feature_elem, ref_element_name):
                 href = ref.get(XLINK_HREF)
                 if href and href.startswith('urn:uuid:'):
                     return href.replace('urn:uuid:', '')
+            break
+    return None
+
+
+def get_feature_designator(feature_elem):
+    """Return the aixm:designator text from the feature's TimeSlice, or None."""
+    for child in feature_elem.iter():
+        tag = child.tag
+        if isinstance(tag, str) and 'TimeSlice' in tag and child is not feature_elem:
+            d = child.find('aixm:designator', NSMAP)
+            if d is not None and d.text:
+                return d.text.strip()
             break
     return None
 
@@ -675,12 +907,16 @@ def offset_all_coordinates(feature_elem, lat_offset, lon_offset):
 
 
 def clone_feature_set(collected_features, airport_membership, index,
-                      grid_cols, distance_nm, begin_position=None):
+                      grid_row, grid_col, layout, bbox,
+                      anchor_lat, anchor_lon, threshold_nm=90.0,
+                      begin_position=None):
     """
     Clone a complete set of features for one copy set.
 
-    If begin_position is provided (ISO 8601 string), all features in this
-    copy set will have their validTime/beginPosition set to that value.
+    Each feature's offset direction is determined by its own quadrant inside
+    the FIR bounding box.  Features within *threshold_nm* of the anchor
+    (EADD ARP) share the anchor's direction; features farther away use their
+    own quadrant so that copies spread outward in every direction.
 
     Returns:
         cloned: list of (type_name, cloned_element) tuples
@@ -688,7 +924,6 @@ def clone_feature_set(collected_features, airport_membership, index,
         airport_names: { new_airport_uuid: airport_name_string }
     """
 
-    lat_offset, lon_offset = calculate_grid_offset(index, grid_cols, distance_nm)
     # 1. Build UUID mapping:  old_uuid -> new_uuid
     uuid_map = {}
     for old_uuid in collected_features:
@@ -705,6 +940,20 @@ def clone_feature_set(collected_features, airport_membership, index,
 
         # Update xlink:href references
         update_xlink_refs(new_elem, uuid_map)
+
+        # Per-feature offset based on original position and quadrant
+        feat_pos = get_feature_position(orig_elem)
+        if feat_pos:
+            f_lat_sign, f_lon_sign = determine_feature_signs(
+                feat_pos[0], feat_pos[1], bbox,
+                anchor_lat, anchor_lon,
+                layout['lat_sign'], layout['lon_sign'],
+                threshold_nm)
+        else:
+            f_lat_sign = layout['lat_sign']
+            f_lon_sign = layout['lon_sign']
+        lat_offset = grid_row * layout['d_lat'] * f_lat_sign
+        lon_offset = grid_col * layout['d_lon'] * f_lon_sign
 
         # Offset coordinates
         offset_all_coordinates(new_elem, lat_offset, lon_offset)
@@ -738,6 +987,20 @@ def clone_feature_set(collected_features, airport_membership, index,
             for child in new_elem.iter():
                 tag = child.tag
                 if isinstance(tag, str) and 'TimeSlice' in tag and child is not new_elem:
+                    n = child.find('aixm:name', NSMAP)
+                    if n is not None and n.text:
+                        n.text = n.text + suffix
+                    break
+
+        # DesignatedPoint: append copy suffix to designator and name
+        if feat_type == 'DesignatedPoint':
+            suffix = f"-{index + 1:02d}"
+            for child in new_elem.iter():
+                tag = child.tag
+                if isinstance(tag, str) and 'TimeSlice' in tag and child is not new_elem:
+                    d = child.find('aixm:designator', NSMAP)
+                    if d is not None and d.text:
+                        d.text = d.text + suffix
                     n = child.find('aixm:name', NSMAP)
                     if n is not None and n.text:
                         n.text = n.text + suffix
@@ -919,14 +1182,22 @@ def main():
     parser.add_argument('--output', '-o', default=None,
                         help='Output folder (default: Donlon_Dataset_Copies '
                              'next to the input file)')
-    parser.add_argument('--grid-rows', '-r', type=int, default=5)
-    parser.add_argument('--grid-cols', '-c', type=int, default=6)
-    parser.add_argument('--distance-nm', '-d', type=float, default=30.0)
+    parser.add_argument('--number-of-copies', '-n', type=int, default=10,
+                        help='Number of copy sets to generate; placed in a '
+                             'line into the empty half of the EAAD FIR bbox.')
+    parser.add_argument('--distance-nm', '-d', type=float, default=30.0,
+                        help='Spacing in NM between successive copies.')
+    parser.add_argument('--fir-designator', default='EAAD',
+                        help='FIR designator whose bounding rectangle is used '
+                             'to choose the copy direction (default: EAAD).')
     parser.add_argument('--exc-airspace-types', nargs='*', default=[],
                         metavar='TYPE',
                         help='Airspace types to exclude from multiplication '
                              '(e.g. P CTA CTA_P). FIR and FIR_P are always excluded.')
-    parser.add_argument('--count', '-n', type=int, default=30)
+    parser.add_argument('--exc-features', nargs='*', default=[],
+                        metavar='DESIGNATOR',
+                        help='Exclude features whose aixm:designator matches '
+                             'any of the given values, regardless of feature type.')
     parser.add_argument('--effectiveDateStart', default=None,
                         help='validTime beginPosition for all copies '
                              '(e.g. 2026-04-10T00:00:00Z)')
@@ -941,7 +1212,7 @@ def main():
         input_dir = os.path.dirname(os.path.abspath(args.input))
         args.output = os.path.join(input_dir, 'Donlon_Dataset_Copies')
 
-    count = min(args.count, args.grid_rows * args.grid_cols)
+    count = args.number_of_copies
 
     # Build airspace type exclusion set
     ase_types_exclude = AIRSPACE_TYPES_EXCLUDE_DEFAULT | set(args.exc_airspace_types)
@@ -960,10 +1231,12 @@ def main():
     print("Configuration:")
     print(f"  Input:    {args.input}")
     print(f"  Output:   {args.output}")
-    print(f"  Grid:     {args.grid_rows} x {args.grid_cols}")
+    print(f"  Number of copies: {count}")
     print(f"  Distance: {args.distance_nm} NM")
-    print(f"  Count:    {count}")
+    print(f"  FIR:      {args.fir_designator}")
     print(f"  Excluded airspace types: {', '.join(sorted(ase_types_exclude))}")
+    if args.exc_features:
+        print(f"  Excluded feature designators: {', '.join(sorted(args.exc_features))}")
     if effective_start:
         print(f"  Effective date start: {args.effectiveDateStart}")
     if time_offset:
@@ -978,6 +1251,45 @@ def main():
     tree = etree.parse(args.input)
     root = tree.getroot()
 
+    # Locate the FIR bounding rectangle and the source anchor (AirportHeliport ARP)
+    fir_polygon = find_fir_polygon(root, args.fir_designator)
+    if not fir_polygon:
+        parser.error(
+            f"FIR airspace with designator '{args.fir_designator}' not found "
+            f"in the input file.")
+    lats = [p[0] for p in fir_polygon]
+    lons = [p[1] for p in fir_polygon]
+    bbox = (min(lats), max(lats), min(lons), max(lons))
+
+    anchor = find_anchor_position(root)
+    if anchor is None:
+        parser.error('No AirportHeliport ARP found in the input file to anchor '
+                     'the copy direction.')
+    anchor_lat, anchor_lon = anchor
+
+    layout = compute_grid_layout(bbox, anchor_lat, anchor_lon, args.distance_nm)
+    bbox_cols = layout['max_cols'] + 1
+    bbox_rows = layout['max_rows'] + 1
+    bbox_cells = bbox_cols * bbox_rows
+    cols_per_row = choose_cols_per_row(count, layout)
+    rows_used = (count + cols_per_row - 1) // cols_per_row
+    row_dir = 'north' if layout['lat_sign'] > 0 else 'south'
+    col_dir = 'east' if layout['lon_sign'] > 0 else 'west'
+
+    print(f"  FIR bbox: lat [{bbox[0]:.4f}, {bbox[1]:.4f}], "
+          f"lon [{bbox[2]:.4f}, {bbox[3]:.4f}]")
+    print(f"  FIR centre: lat {(bbox[0]+bbox[1])/2:.4f}, "
+          f"lon {(bbox[2]+bbox[3])/2:.4f}")
+    print(f"  Anchor ARP: lat {anchor_lat:.4f}, lon {anchor_lon:.4f}  "
+          f"(quarter {layout['quarter']})")
+    print(f"  Grid grows {row_dir} (rows) and {col_dir} (cols); "
+          f"using {rows_used} x {cols_per_row} cells "
+          f"(bbox allows up to {bbox_rows} x {bbox_cols} = {bbox_cells})")
+    if rows_used > bbox_rows:
+        print(f"  WARNING: needed {rows_used} rows > {bbox_rows} that fit in "
+              f"the FIR bounding rectangle; lower rows will fall outside.")
+    print()
+
     # Extract all features by type
     print("Extracting features by type ...")
     features_by_type = extract_features_by_type(root)
@@ -987,8 +1299,50 @@ def main():
     # Collect all features to clone
     collected, airport_membership = collect_eadd_features(
         features_by_type, ase_types_exclude)
+
+    # Filter out features by designator if --exc-features specified
+    exc_designators = set(args.exc_features)
+    if exc_designators:
+        excluded_feats = []
+        for fuuid in list(collected):
+            ftype, felem = collected[fuuid]
+            desig = get_feature_designator(felem)
+            if desig and desig in exc_designators:
+                excluded_feats.append((ftype, desig))
+                del collected[fuuid]
+                airport_membership.pop(fuuid, None)
+        if excluded_feats:
+            print(f"  Excluded by --exc-features:")
+            for ftype, desig in excluded_feats:
+                print(f"    {ftype} designator={desig}")
+
     total_per_copy = len(collected)
     print(f"  TOTAL features per copy: {total_per_copy}")
+
+    lat_mid = (bbox[0] + bbox[1]) / 2
+    lon_mid = (bbox[2] + bbox[3]) / 2
+    within_anchor_count = 0
+    quadrant_counts = {}
+    no_position_count = 0
+    for fuuid, (ftype, felem) in collected.items():
+        fpos = get_feature_position(felem)
+        if fpos is None:
+            no_position_count += 1
+            continue
+        dist = haversine_distance_nm(fpos[0], fpos[1], anchor_lat, anchor_lon)
+        if dist <= 90.0:
+            within_anchor_count += 1
+        else:
+            in_upper = fpos[0] >= lat_mid
+            in_right = fpos[1] >= lon_mid
+            qname = _quarter_name(in_upper, in_right)
+            quadrant_counts[qname] = quadrant_counts.get(qname, 0) + 1
+    print(f"\n  Per-feature offset direction (90 NM threshold from anchor):")
+    print(f"    Follow anchor direction ({layout['quarter']}): {within_anchor_count}")
+    for q, cnt in sorted(quadrant_counts.items()):
+        print(f"    Own quadrant {q}: {cnt}")
+    if no_position_count > 0:
+        print(f"    No position detected (follow anchor): {no_position_count}")
 
     # Feature types that always go into Common/
     COMMON_ONLY_TYPES = {
@@ -1010,7 +1364,11 @@ def main():
 
     for i in range(count):
         copy_num = i + 1
-        lat_off, lon_off = calculate_grid_offset(i, args.grid_cols, args.distance_nm)
+        row = i // cols_per_row
+        col = i % cols_per_row
+
+        anchor_lat_off = row * layout['d_lat'] * layout['lat_sign']
+        anchor_lon_off = col * layout['d_lon'] * layout['lon_sign']
 
         # Compute beginPosition for this copy set
         copy_begin = None
@@ -1022,11 +1380,13 @@ def main():
             copy_begin = copy_dt.strftime('%Y-%m-%dT%H:%M:%SZ')
 
         time_info = f"  validTime.beginPosition={copy_begin}" if copy_begin else ""
-        print(f"  Copy {copy_num:02d}:  grid ({i // args.grid_cols},{i % args.grid_cols})  "
-              f"offset +{lat_off:.4f}° lat, +{lon_off:.4f}° lon{time_info}")
+        print(f"  Copy {copy_num:02d}:  grid (row {row}, col {col})  "
+              f"anchor offset {anchor_lat_off:+.4f}° lat, {anchor_lon_off:+.4f}° lon{time_info}")
 
         cloned, new_membership, airport_names = clone_feature_set(
-            collected, airport_membership, i, args.grid_cols, args.distance_nm,
+            collected, airport_membership, i,
+            row, col, layout, bbox,
+            anchor_lat, anchor_lon, 90.0,
             begin_position=copy_begin,
         )
         per_copy_data.append((cloned, new_membership, airport_names))

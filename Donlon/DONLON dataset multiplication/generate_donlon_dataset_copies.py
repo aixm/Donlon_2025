@@ -1212,6 +1212,17 @@ def clone_feature_set(collected_features, airport_membership, index,
                     n = child.find('aixm:name', NSMAP)
                     if n is not None and n.text:
                         n.text = n.text + f" {index + 1:02d}"
+                    # Cloned airspaces are not ICAO-published.
+                    di = child.find('aixm:designatorICAO', NSMAP)
+                    if di is not None:
+                        di.text = 'NO'
+                        # Remove any xsi:nil/nilReason that the source carried.
+                        for attr in (
+                            '{http://www.w3.org/2001/XMLSchema-instance}nil',
+                            'nilReason',
+                        ):
+                            if attr in di.attrib:
+                                del di.attrib[attr]
                     break
 
         # ApronElement: AirportSuppliesService is not cloned, so replace any

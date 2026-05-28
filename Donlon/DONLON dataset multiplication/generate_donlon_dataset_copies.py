@@ -225,6 +225,98 @@ def haversine_distance_nm(lat1, lon1, lat2, lon2):
     return 2 * R_nm * math.asin(math.sqrt(a))
 
 
+# Border-proximity safety: any feature within this many NM of the FIR
+# polygon edge is shifted BORDER_SHIFT_NM toward the opposite corner of
+# its own quadrant before its copies are emitted.
+BORDER_PROXIMITY_NM = 5.0
+BORDER_SHIFT_NM = 5.0
+
+
+def _point_to_segment_distance_nm(plat, plon, lat1, lon1, lat2, lon2):
+    """Approx. distance (NM) from point (plat, plon) to segment ((lat1,lon1),
+    (lat2,lon2)) using an equirectangular projection centred on the point.
+    Adequate for short distances (< a few hundred NM)."""
+    cos_lat = math.cos(math.radians(plat))
+    x1 = (lon1 - plon) * 60.0 * cos_lat
+    y1 = (lat1 - plat) * 60.0
+    x2 = (lon2 - plon) * 60.0 * cos_lat
+    y2 = (lat2 - plat) * 60.0
+    dx, dy = x2 - x1, y2 - y1
+    if dx == 0 and dy == 0:
+        return math.hypot(x1, y1)
+    t = -(x1 * dx + y1 * dy) / (dx * dx + dy * dy)
+    t = max(0.0, min(1.0, t))
+    cx = x1 + t * dx
+    cy = y1 + t * dy
+    return math.hypot(cx, cy)
+
+
+def distance_to_polygon_nm(plat, plon, polygon):
+    """Minimum perpendicular distance (NM) from a point to any edge of the
+    closed polygon (a list of (lat, lon) tuples)."""
+    if not polygon or len(polygon) < 2:
+        return float('inf')
+    min_d = float('inf')
+    for i in range(len(polygon) - 1):
+        lat1, lon1 = polygon[i]
+        lat2, lon2 = polygon[i + 1]
+        d = _point_to_segment_distance_nm(plat, plon, lat1, lon1, lat2, lon2)
+        if d < min_d:
+            min_d = d
+    if polygon[0] != polygon[-1]:
+        lat1, lon1 = polygon[-1]
+        lat2, lon2 = polygon[0]
+        d = _point_to_segment_distance_nm(plat, plon, lat1, lon1, lat2, lon2)
+        if d < min_d:
+            min_d = d
+    return min_d
+
+
+def iter_feature_geographic_vertices(feature_elem):
+    """Yield (lat, lon) tuples for every EPSG:4326 vertex carried by a
+    feature element.  Projected coordinates (EPSG:3395 metres, etc.) and
+    values outside the geographic range are skipped."""
+    for pos in feature_elem.iter('{http://www.opengis.net/gml/3.2}pos'):
+        if not (pos.text and pos.text.strip()):
+            continue
+        parts = pos.text.strip().split()
+        if len(parts) >= 2:
+            try:
+                lat, lon = float(parts[0]), float(parts[1])
+            except ValueError:
+                continue
+            if -90 <= lat <= 90 and -180 <= lon <= 180:
+                yield lat, lon
+    for pos_list in feature_elem.iter(
+            '{http://www.opengis.net/gml/3.2}posList'):
+        if not (pos_list.text and pos_list.text.strip()):
+            continue
+        vals = pos_list.text.strip().split()
+        for i in range(0, len(vals) - 1, 2):
+            try:
+                lat, lon = float(vals[i]), float(vals[i + 1])
+            except ValueError:
+                continue
+            if -90 <= lat <= 90 and -180 <= lon <= 180:
+                yield lat, lon
+
+
+def min_feature_distance_to_polygon_nm(feature_elem, polygon):
+    """Smallest distance (NM) from any of a feature's geographic vertices to
+    the polygon edge.  Returns +inf if the feature has no usable geographic
+    coordinates."""
+    if not polygon or len(polygon) < 2:
+        return float('inf')
+    min_d = float('inf')
+    for lat, lon in iter_feature_geographic_vertices(feature_elem):
+        d = distance_to_polygon_nm(lat, lon, polygon)
+        if d < min_d:
+            min_d = d
+            if min_d == 0.0:
+                break
+    return min_d
+
+
 def compute_grid_layout(bbox, anchor_lat, anchor_lon, distance_nm):
     """
     Build a grid that starts at the source anchor (placed in one corner cell)
@@ -933,7 +1025,8 @@ def offset_all_coordinates(feature_elem, lat_offset, lon_offset):
 def clone_feature_set(collected_features, airport_membership, index,
                       grid_row, grid_col, layout, bbox,
                       anchor_lat, anchor_lon, threshold_nm=90.0,
-                      begin_position=None):
+                      begin_position=None,
+                      border_near_uuids=None):
     """
     Clone a complete set of features for one copy set.
 
@@ -979,6 +1072,18 @@ def clone_feature_set(collected_features, airport_membership, index,
         lat_offset = grid_row * layout['d_lat'] * f_lat_sign
         lon_offset = grid_col * layout['d_lon'] * f_lon_sign
 
+        # Border-proximity safety nudge: features within BORDER_PROXIMITY_NM
+        # of the FIR polygon edge get an extra BORDER_SHIFT_NM inward offset
+        # (direction matches the feature's quadrant signs) applied to every
+        # copy, including copy 1.
+        if border_near_uuids and old_uuid in border_near_uuids and feat_pos:
+            extra_d_lat = BORDER_SHIFT_NM / 60.0
+            extra_d_lon = BORDER_SHIFT_NM / (
+                60.0 * max(math.cos(math.radians(feat_pos[0])), 1e-6)
+            )
+            lat_offset += extra_d_lat * f_lat_sign
+            lon_offset += extra_d_lon * f_lon_sign
+
         # Offset coordinates
         offset_all_coordinates(new_elem, lat_offset, lon_offset)
 
@@ -1004,6 +1109,18 @@ def clone_feature_set(collected_features, airport_membership, index,
                 n = ts.find('aixm:name', NSMAP)
                 if n is not None and n.text:
                     n.text = n.text + f" {index + 1:02d}"
+            # AltimeterSource is not cloned, so replace any
+            # aixm:altimeterSource xlink reference with xsi:nil.
+            xlink_href = '{http://www.w3.org/1999/xlink}href'
+            xsi_nil = '{http://www.w3.org/2001/XMLSchema-instance}nil'
+            alt_tag = '{http://www.aixm.aero/schema/5.1.1}altimeterSource'
+            for asrc in new_elem.iter(alt_tag):
+                if asrc.get(xlink_href):
+                    tail = asrc.tail
+                    asrc.clear()
+                    asrc.tail = tail
+                    asrc.set(xsi_nil, 'true')
+                    record_excluded_ref('AirportHeliport', 'altimeterSource')
 
         # Navaid / NavaidEquipment: append copy suffix to name only
         if feat_type in ('Navaid', *NAVAID_EQUIPMENT_TYPES):
@@ -1411,6 +1528,26 @@ def main():
     if no_position_count > 0:
         print(f"    No position detected (follow anchor): {no_position_count}")
 
+    # Identify features that sit within BORDER_PROXIMITY_NM of the FIR
+    # polygon edge.  Their copies (including copy 1) will be shifted
+    # BORDER_SHIFT_NM inward along their own quadrant direction.
+    # Check every geographic vertex, not just the representative point,
+    # so large airspaces (e.g. EAV7, EAR5) whose first vertex sits far
+    # from the border but whose boundary touches it are still flagged.
+    border_near_uuids = set()
+    border_near_info = []
+    for fuuid, (ftype, felem) in collected.items():
+        d = min_feature_distance_to_polygon_nm(felem, fir_polygon)
+        if d < BORDER_PROXIMITY_NM:
+            border_near_uuids.add(fuuid)
+            border_near_info.append((ftype, get_feature_designator(felem), d))
+    print(f"\n  Border-proximity shift "
+          f"(< {BORDER_PROXIMITY_NM:.1f} NM from FIR polygon edge -> "
+          f"+{BORDER_SHIFT_NM:.1f} NM inward on every copy): "
+          f"{len(border_near_uuids)} feature(s)")
+    for ftype, desig, dist in sorted(border_near_info, key=lambda x: x[2]):
+        print(f"    {ftype} designator={desig}  (edge distance {dist:.2f} NM)")
+
     # Feature types that always go into Common/
     COMMON_ONLY_TYPES = {
         'VerticalStructure', 'Airspace', 'DesignatedPoint',
@@ -1455,6 +1592,7 @@ def main():
             row, col, layout, bbox,
             anchor_lat, anchor_lon, 90.0,
             begin_position=copy_begin,
+            border_near_uuids=border_near_uuids,
         )
         per_copy_data.append((cloned, new_membership, airport_names))
         all_cloned.extend(cloned)

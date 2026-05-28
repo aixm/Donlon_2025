@@ -96,6 +96,7 @@ import copy
 import math
 import os
 import re
+import sys
 import uuid
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
@@ -194,6 +195,29 @@ VS_PROPERTIES_TO_REMOVE = [
     'hostedOrganisation',
     'supportedService',
 ]
+
+# AirportHeliport designator prefixes by name substring (case-insensitive).
+# Each copy uses prefix + a letter starting from 'A' (copy 1 = A, copy 2 = B,
+# ...).  Order matters: more specific names must come first.
+AIRPORT_DESIGNATOR_PREFIX = [
+    ('DONLON/DOWNTOWN HELIPORT', 'EAH'),
+    ('DONLON/INTL',              'EAD'),
+    ('MAGNETO',                  'EAM'),
+    ('AKVIN',                    'EAK'),
+]
+MAX_AIRPORT_COPIES = 26  # A..Z
+
+
+def get_airport_designator_prefix(name):
+    """Return the 3-letter designator prefix for an AirportHeliport name,
+    or None if no mapping is configured for that name."""
+    if not name:
+        return None
+    up = name.upper()
+    for key, prefix in AIRPORT_DESIGNATOR_PREFIX:
+        if key in up:
+            return prefix
+    return None
 
 # ---------------------------------------------------------------------------
 # Utility helpers
@@ -1101,12 +1125,20 @@ def clone_feature_set(collected_features, airport_membership, index,
                     ts = child
                     break
             if ts is not None:
-                # Update designator: e.g. EADD -> E01D, EADA -> E01A
+                # Resolve the per-airport designator prefix from the ORIGINAL
+                # name before we suffix it.  Copy 1 -> 'A', copy 2 -> 'B', ...
+                n = ts.find('aixm:name', NSMAP)
+                original_name = n.text if (n is not None and n.text) else None
+                prefix = get_airport_designator_prefix(original_name)
                 d = ts.find('aixm:designator', NSMAP)
                 if d is not None and d.text and len(d.text) >= 2:
-                    d.text = f"{d.text[0]}{index + 1:02d}{d.text[-1]}"
+                    if prefix:
+                        d.text = f"{prefix}{chr(ord('A') + index)}"
+                    else:
+                        # No mapping for this airport name; fall back to the
+                        # legacy E<NN><last-letter> scheme.
+                        d.text = f"{d.text[0]}{index + 1:02d}{d.text[-1]}"
                 # Update name: e.g. DONLON/INTL -> DONLON/INTL 01
-                n = ts.find('aixm:name', NSMAP)
                 if n is not None and n.text:
                     n.text = n.text + f" {index + 1:02d}"
             # AltimeterSource is not cloned, so replace any
@@ -1397,6 +1429,12 @@ def main():
         args.output = os.path.join(input_dir, 'Donlon_Dataset_Copies')
 
     count = args.number_of_copies
+    if count > MAX_AIRPORT_COPIES:
+        print(f"ERROR: --number-of-copies={count} exceeds the maximum of "
+              f"{MAX_AIRPORT_COPIES}.")
+        print("The AirportHeliport designator scheme uses one letter per "
+              "copy (A..Z), so at most 26 copy sets can be generated.")
+        sys.exit(1)
 
     # Build airspace type exclusion set
     ase_types_exclude = AIRSPACE_TYPES_EXCLUDE_DEFAULT | set(args.exc_airspace_types)

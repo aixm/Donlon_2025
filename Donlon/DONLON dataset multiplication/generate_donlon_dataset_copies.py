@@ -51,33 +51,32 @@ Copy 1 is kept at the original position.  Cells fill row-by-row from the
 source corner: the source row first (cols_per_row cells), then the next
 row inward, and so on, until --number-of-copies cells have been placed.
 
-For example, source feature `x` in the lower-right quarter with the FIR
-bbox accommodating a 5x5 grid:
+For example, source feature `x` situated in the lower-right quarter of the FIR bbox, accommodating a 5x5 grid:
 
-      o o o o o
-      o o o o o
-      o o o o o
-      o o o o o
-      o o o o x
+o o o o o
+o o o o o
+o o o o o
+o o o o o
+o o o o x
 
 With --number-of-copies 12 the grid fills like:
 
-      o o
-      o o o o o
-      o o o o x
+o o
+o o o o o
+o o o o x
 
 Usage example:
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 15 --distance-nm 30
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --exc-airspace-types FIR CTA CTA_P
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 15 --distance-nm 30 --exc-airspace-types FIR UIR CTA CTA_P AWY ADIZ
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --output Donlon_Dataset_Copies --number-of-copies 10 --distance-nm 30
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --output Donlon_Dataset_Copies --number-of-copies 15 --distance-nm 30
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 15 --distance-nm 30 --effectiveDateStart 2026-06-02T00:00:00Z
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 15 --distance-nm 30 --effectiveDateStart 2026-06-02T00:00:00Z --timeOffset 1-15-05
 OR
-  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 10 --distance-nm 30 --exc-airspace-types FIR CTA CTA_P AWY ADIZ --exc-features EAA1 EAX4 EAX5 EAHTZCB EAV1 EAV2 EAV3 SAGON ILIDA ATLIM BISBO ILURU UKORO AL ALM --effectiveDateStart 2026-04-10T00:00:00Z --timeOffset 1-15-05
+  python generate_donlon_dataset_copies.py --input Donlon_ALL_Baseline.xml --number-of-copies 15 --distance-nm 30 --exc-airspace-types FIR UIR CTA CTA_P AWY ADIZ --exc-features EAA1 EAX4 EAX5 EAHTZCB EAV1 EAV2 EAV3 SAGON ILIDA ATLIM BISBO ILURU UKORO AL ALM --effectiveDateStart 2026-06-02T00:00:00Z --timeOffset 1-15-05
 
 Input parameters:
 --input -> select the input file path
@@ -98,8 +97,32 @@ import math
 import os
 import re
 import uuid
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from lxml import etree
+
+# Counter for xlink references that are intentionally not carried over to
+# clones (replaced with xsi:nil).  Keyed by (feature_type, property_name).
+# Populated via record_excluded_ref(); summary printed by
+# print_excluded_refs_summary().
+EXCLUDED_REF_LOG = defaultdict(int)
+
+
+def record_excluded_ref(feature_type, property_name, count=1):
+    """Record that `count` xlink reference(s) under aixm:<property_name> were
+    removed (replaced with xsi:nil) on a cloned <feature_type> feature."""
+    EXCLUDED_REF_LOG[(feature_type, property_name)] += count
+
+
+def print_excluded_refs_summary():
+    """Print one line per (feature_type, property_name) pair whose references
+    were excluded across all generated copies."""
+    if not EXCLUDED_REF_LOG:
+        return
+    print("\nExcluded xlink references (replaced with xsi:nil):")
+    for (ftype, prop), n in sorted(EXCLUDED_REF_LOG.items()):
+        print(f"  {prop} reference excluded from {ftype} feature: "
+              f"{n} occurrence(s)")
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -136,6 +159,7 @@ FEATURE_TYPES = [
     'TACAN',
     'Localizer',
     'Glidepath',
+    'MarkerBeacon',
     'DesignatedPoint',
     'VerticalStructure',
     'Airspace',
@@ -146,7 +170,7 @@ AIRSPACE_TYPES_EXCLUDE_DEFAULT = {'FIR', 'FIR_P'}
 
 # Output ordering for the All_features file
 ALL_FEATURES_ORDER = [
-    'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath',
+    'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath', 'MarkerBeacon',
     'DesignatedPoint',
     'AirportHeliport',
     'Airspace',
@@ -158,7 +182,7 @@ ALL_FEATURES_ORDER = [
 ]
 
 # NavaidEquipment types (referenced BY Navaids via theNavaidEquipment)
-NAVAID_EQUIPMENT_TYPES = ['VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath']
+NAVAID_EQUIPMENT_TYPES = ['VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath', 'MarkerBeacon']
 
 
 # Properties to remove from VerticalStructure copies
@@ -992,19 +1016,7 @@ def clone_feature_set(collected_features, airport_membership, index,
                         n.text = n.text + suffix
                     break
 
-        # DesignatedPoint: append copy suffix to designator and name
-        if feat_type == 'DesignatedPoint':
-            suffix = f"-{index + 1:02d}"
-            for child in new_elem.iter():
-                tag = child.tag
-                if isinstance(tag, str) and 'TimeSlice' in tag and child is not new_elem:
-                    d = child.find('aixm:designator', NSMAP)
-                    if d is not None and d.text:
-                        d.text = d.text + suffix
-                    n = child.find('aixm:name', NSMAP)
-                    if n is not None and n.text:
-                        n.text = n.text + suffix
-                    break
+        # DesignatedPoint: keep original designator and name unchanged on copies
 
         # VerticalStructure: suffix name, suffix part designators, remove properties
         if feat_type == 'VerticalStructure':
@@ -1052,6 +1064,20 @@ def clone_feature_set(collected_features, airport_membership, index,
                     if n is not None and n.text:
                         n.text = n.text + f" {index + 1:02d}"
                     break
+
+        # ApronElement: AirportSuppliesService is not cloned, so replace any
+        # aixm:supplyService xlink reference with xsi:nil to avoid dangling refs.
+        if feat_type == 'ApronElement':
+            xlink_href = '{http://www.w3.org/1999/xlink}href'
+            xsi_nil = '{http://www.w3.org/2001/XMLSchema-instance}nil'
+            supply_tag = '{http://www.aixm.aero/schema/5.1.1}supplyService'
+            for ss in new_elem.iter(supply_tag):
+                if ss.get(xlink_href):
+                    tail = ss.tail
+                    ss.clear()
+                    ss.tail = tail
+                    ss.set(xsi_nil, 'true')
+                    record_excluded_ref('ApronElement', 'supplyService')
 
         cloned.append((feat_type, new_elem, new_uuid))
 
@@ -1162,9 +1188,50 @@ def create_output_document(features, gml_id='Generated_Airports', comment=None):
     return tree
 
 
+_HEADER_RE = re.compile(
+    r"(<\?xml[^?]*\?>)\s*(<!--.*?-->)?\s*"
+    r"(<message:AIXMBasicMessage)([^>]*)>",
+    re.DOTALL,
+)
+_ATTR_RE = re.compile(r'(\S+?="[^"]*")')
+
+
+def _format_root_header(path):
+    """Re-format the AIXMBasicMessage opening tag so the leading comment sits
+    on its own line and namespace declarations / schemaLocation / gml:id each
+    sit on their own indented line, matching the reference style.
+    """
+    with open(path, encoding='utf-8') as f:
+        text = f.read()
+    m = _HEADER_RE.match(text)
+    if not m:
+        return
+    xml_decl, comment, open_tag, attrs_blob = m.groups()
+    attrs = _ATTR_RE.findall(attrs_blob)
+    if not attrs:
+        return
+    formatted = []
+    for a in attrs:
+        if a.startswith('xsi:schemaLocation='):
+            name, _, val = a.partition('=')
+            tokens = val.strip('"').split()
+            pairs = [' '.join(tokens[i:i + 2]) for i in range(0, len(tokens), 2)]
+            formatted.append(f'{name}="' + ' \n  '.join(pairs) + '"')
+        else:
+            formatted.append(a)
+    header = f'{xml_decl}\n'
+    if comment:
+        header += f'{comment}\n'
+    header += f'{open_tag} \n  ' + ' \n  '.join(formatted) + '>'
+    new_text = header + text[m.end():]
+    with open(path, 'w', encoding='utf-8', newline='\n') as f:
+        f.write(new_text)
+
+
 def write_xml(tree, path):
     """Write an ElementTree to a file."""
     tree.write(path, encoding='UTF-8', xml_declaration=True, pretty_print=False)
+    _format_root_header(path)
 
 
 # ---------------------------------------------------------------------------
@@ -1347,7 +1414,7 @@ def main():
     # Feature types that always go into Common/
     COMMON_ONLY_TYPES = {
         'VerticalStructure', 'Airspace', 'DesignatedPoint',
-        'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath',
+        'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath', 'MarkerBeacon',
     }
     # Feature types that go into airport folders if they have airport membership,
     # otherwise into Common/
@@ -1391,6 +1458,8 @@ def main():
         )
         per_copy_data.append((cloned, new_membership, airport_names))
         all_cloned.extend(cloned)
+
+    print_excluded_refs_summary()
 
     # --- Write outputs into folder structure ---
     out_dir = os.path.abspath(args.output)

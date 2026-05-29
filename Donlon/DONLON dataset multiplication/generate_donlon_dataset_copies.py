@@ -1138,6 +1138,11 @@ def clone_feature_set(collected_features, airport_membership, index,
                         # No mapping for this airport name; fall back to the
                         # legacy E<NN><last-letter> scheme.
                         d.text = f"{d.text[0]}{index + 1:02d}{d.text[-1]}"
+                    # Keep aixm:locationIndicatorICAO aligned with the new
+                    # designator on every copy.
+                    li = ts.find('aixm:locationIndicatorICAO', NSMAP)
+                    if li is not None:
+                        li.text = d.text
                 # Update name: e.g. DONLON/INTL -> DONLON/INTL 01
                 if n is not None and n.text:
                     n.text = n.text + f" {index + 1:02d}"

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2025, EUROCONTROL
+  
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+  
+  THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+
+<!--
+  Temporality use case: abandoning the decommissioning of a feature (SDO compatible workaround #2) - part 1
+  (For SDO compatible workaround #1 see 'Update of a Feature before a Future Decommissioning Date')
+  Feature: Airspace - D_OTHER EAV11
+  
+  Valid TimeSlice:
+  BASELINE 1/0
+  validTime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  
+  Step 1 - Planned decommissioning:
+  BASELINE 1/1
+  validTime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
+  featureLifetime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
+  
+  Step 2 - Cancelling of the planned decommissioning:
+  BASELINE 1/2
+  validTime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+-->
+
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gts="http://www.isotc211.org/2005/gts"
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gss="http://www.isotc211.org/2005/gss" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:gsr="http://www.isotc211.org/2005/gsr"
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"
+  gml:id="DONLON_Abandoning_the_Decommissioning_of_a_Feature">
+  
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.f2df949c-f70a-411e-8d13-ba505186ff80">
+      <gml:identifier codeSpace="urn:uuid:">f2df949c-f70a-411e-8d13-ba505186ff80</gml:identifier>
+      <!-- Planned decommissioning -->
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="ASE_ULENI_D-OTHER_S1C1">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_1">
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>1</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_2">
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>D_OTHER</aixm:type>
+          <aixm:designator>EAV11-02</aixm:designator>
+          <aixm:localType>HANG GLIDING AREA</aixm:localType>
+          <aixm:name>ULENI 02</aixm:name>
+          <aixm:designatorICAO>NO</aixm:designatorICAO>
+          <aixm:controlType xsi:nil="true" nilReason="unknown"/>
+          <aixm:upperLowerSeparation xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:class xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:geometryComponent>
+            <aixm:AirspaceGeometryComponent gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_3">
+              <aixm:operation>BASE</aixm:operation>
+              <aixm:operationSequence>1</aixm:operationSequence>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theAirspaceVolume>
+                <aixm:AirspaceVolume gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_4">
+                  <aixm:upperLimit uom="M">1000</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:maximumLimit xsi:nil="true"/>
+                  <aixm:maximumLimitReference xsi:nil="true"/>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                  <aixm:minimumLimit xsi:nil="true"/>
+                  <aixm:minimumLimitReference xsi:nil="true"/>
+                  <aixm:width xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:horizontalProjection>
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_5">
+                      <gml:patches>
+                        <gml:PolygonPatch>
+                          <gml:exterior>
+                            <gml:Ring>
+                              <gml:curveMember>
+                                <aixm:Curve gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_6">
+                                  <gml:segments>
+                                    <gml:CircleByCenterPoint numArc="1">
+                                      <gml:pos>45.354167 -31.598548659340857</gml:pos>
+                                      <gml:radius uom="[nmi_i]">15</gml:radius>
+                                    </gml:CircleByCenterPoint>
+                                  </gml:segments>
+                                </aixm:Curve>
+                              </gml:curveMember>
+                            </gml:Ring>
+                          </gml:exterior>
+                        </gml:PolygonPatch>
+                      </gml:patches>
+                      <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
+                    </aixm:Surface>
+                  </aixm:horizontalProjection>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:AirspaceVolume>
+              </aixm:theAirspaceVolume>
+            </aixm:AirspaceGeometryComponent>
+          </aixm:geometryComponent>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_7">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_8">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_9">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:activity>HANGGLIDING</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_10">
+                  <aixm:upperLimit uom="M">1000</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_11">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_12">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_13">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_14">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>SUN</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>YES</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:activity xsi:nil="true"/>
+              <aixm:status>INACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_15">
+                  <aixm:upperLimit uom="M">1000</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                  <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                  <aixm:discreteLevelSeries xsi:nil="true"/>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+              <aixm:user xsi:nil="true"/>
+              <aixm:aircraft xsi:nil="true"/>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_16">
+              <aixm:propertyName xsi:nil="true"/>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_17">
+                  <aixm:note lang="eng">Operator/User and Tel Nr: Uleni Aero Club, TEL 029 496 4695</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

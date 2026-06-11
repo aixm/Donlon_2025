@@ -29,6 +29,7 @@ This script generates multiple copies of the following Donlon dataset features:
     - Runway, RunwayDirection, RunwayElement, RunwayCentrelinePoint, TouchDownLiftOff
     - Taxiway, TaxiwayElement
     - Apron, ApronElement, AircraftStand
+    - WorkArea
   - VerticalStructure
   - Navaid and NavaidEquipment
   - DesignatedPoint
@@ -153,6 +154,7 @@ FEATURE_TYPES = [
     'Apron',
     'ApronElement',
     'AircraftStand',
+    'WorkArea',
     'Navaid',
     'VOR',
     'DME',
@@ -163,6 +165,7 @@ FEATURE_TYPES = [
     'MarkerBeacon',
     'DesignatedPoint',
     'VerticalStructure',
+    'AeronauticalGroundLight',
     'Airspace',
 ]
 
@@ -179,7 +182,9 @@ ALL_FEATURES_ORDER = [
     'Apron', 'ApronElement', 'AircraftStand',
     'Runway', 'RunwayElement', 'RunwayDirection',
     'RunwayCentrelinePoint', 'TouchDownLiftOff',
+    'WorkArea',
     'VerticalStructure',
+    'AeronauticalGroundLight',
 ]
 
 # NavaidEquipment types (referenced BY Navaids via theNavaidEquipment)
@@ -206,6 +211,25 @@ AIRPORT_DESIGNATOR_PREFIX = [
     ('AKVIN',                    'EAK'),
 ]
 MAX_AIRPORT_COPIES = 26  # A..Z
+
+# Temporality use-case templates.  The whole folder is replicated into every
+# Donlon_Copy_NN/ (alongside Common_NN and AirportHeliport_related_features_NN)
+# as EAD-SDD_temporality_cases_NN/, each file suffixed _NN, with the referenced
+# feature's identity (gml:id/gml:identifier), xlink:href references, name and
+# designator remapped to the per-copy clone, and the seq=1 begin positions
+# synced to the per-copy clone.
+TEMPORALITY_CASES_DIRNAME = 'EAD-SDD_temporality_cases'
+# Per-copy output folder name (kept short to stay under the Windows 260-char
+# path limit when the repo is cloned).  The copy number is appended: e.g.
+# Temporality_cases_01.
+TEMPORALITY_OUTPUT_DIRNAME = 'Temporality_cases'
+# Files whose feature is newly commissioned: it does NOT exist in the baseline,
+# so it is treated as a brand-new feature.  It gets a fresh random
+# gml:identifier (not a per-copy clone UUID), its xlink:href references are
+# still remapped, and its validTime/featureLifetime begin positions are set to
+# the copy set's start time rather than mirrored from a clone.
+TEMPORALITY_NEW_FEATURE_FILES = {'Commissioning_of_a_Feature.xml'}
+AIXM_NS = '{http://www.aixm.aero/schema/5.1.1}'
 
 
 def get_airport_designator_prefix(name):
@@ -685,6 +709,34 @@ def get_feature_designator(feature_elem):
     return None
 
 
+def get_feature_name(feature_elem):
+    """Return the aixm:name text from the feature's first TimeSlice, or None.
+    Returns the raw text (not stripped) since names can contain spaces."""
+    for child in feature_elem.iter():
+        tag = child.tag
+        if isinstance(tag, str) and 'TimeSlice' in tag and child is not feature_elem:
+            n = child.find('aixm:name', NSMAP)
+            if n is not None and n.text:
+                return n.text
+            return None
+    return None
+
+
+def get_feature_begin_positions(feature_elem):
+    """Return (validTime_begin, featureLifetime_begin) text from the feature's
+    first TimeSlice; each element is None if absent."""
+    for child in feature_elem.iter():
+        tag = child.tag
+        if isinstance(tag, str) and 'TimeSlice' in tag and child is not feature_elem:
+            vt = child.find(
+                'gml:validTime/gml:TimePeriod/gml:beginPosition', NSMAP)
+            fl = child.find(
+                'aixm:featureLifetime/gml:TimePeriod/gml:beginPosition', NSMAP)
+            return (vt.text if vt is not None else None,
+                    fl.text if fl is not None else None)
+    return None, None
+
+
 def get_airport_name(feature_elem):
     """Extract the name from an AirportHeliport feature's TimeSlice."""
     for child in feature_elem.iter():
@@ -886,6 +938,15 @@ def collect_eadd_features(features_by_type, ase_types_exclude=None):
                     airport_membership[fuuid] = airport_membership[nav_uuid]
                     break
 
+    # ---- WorkArea (ALL) ----
+    # WorkAreas are tied to an airport via associatedAirportHeliport.
+    for fuuid, felem in features_by_type['WorkArea'].items():
+        if fuuid not in collected:
+            collected[fuuid] = ('WorkArea', felem)
+        ahp_uuid = get_ref_uuid(felem, 'associatedAirportHeliport')
+        if ahp_uuid:
+            airport_membership[fuuid] = ahp_uuid
+
     # ---- DesignatedPoint (ALL) ----
     for fuuid, felem in features_by_type['DesignatedPoint'].items():
         if fuuid not in collected:
@@ -897,6 +958,11 @@ def collect_eadd_features(features_by_type, ase_types_exclude=None):
     for fuuid, felem in features_by_type['VerticalStructure'].items():
         if fuuid not in collected:
             collected[fuuid] = ('VerticalStructure', felem)
+
+    # ---- AeronauticalGroundLight (ALL) ----
+    for fuuid, felem in features_by_type['AeronauticalGroundLight'].items():
+        if fuuid not in collected:
+            collected[fuuid] = ('AeronauticalGroundLight', felem)
 
     # ---- Airspace (all except excluded types) ----
 
@@ -1063,6 +1129,8 @@ def clone_feature_set(collected_features, airport_membership, index,
         cloned: list of (type_name, cloned_element) tuples
         new_membership: { new_feature_uuid: new_airport_uuid }
         airport_names: { new_airport_uuid: airport_name_string }
+        uuid_map: { original_uuid: new_uuid } for this copy
+        feature_offsets: { original_uuid: (lat_offset, lon_offset) } applied
     """
 
     # 1. Build UUID mapping:  old_uuid -> new_uuid
@@ -1072,6 +1140,7 @@ def clone_feature_set(collected_features, airport_membership, index,
 
     # 2. Clone each feature
     cloned = []
+    feature_offsets = {}  # old_uuid -> (lat_offset, lon_offset) applied
     for old_uuid, (feat_type, orig_elem) in collected_features.items():
         new_elem = copy.deepcopy(orig_elem)
         new_uuid = uuid_map[old_uuid]
@@ -1108,7 +1177,9 @@ def clone_feature_set(collected_features, airport_membership, index,
             lat_offset += extra_d_lat * f_lat_sign
             lon_offset += extra_d_lon * f_lon_sign
 
-        # Offset coordinates
+        # Offset coordinates (and remember the offset so the temporality
+        # use-case copies can be moved to the same per-copy position).
+        feature_offsets[old_uuid] = (lat_offset, lon_offset)
         offset_all_coordinates(new_elem, lat_offset, lon_offset)
 
         # Update validTime beginPosition if specified
@@ -1164,6 +1235,17 @@ def clone_feature_set(collected_features, airport_membership, index,
 
         # Navaid / NavaidEquipment: append copy suffix to name only
         if feat_type in ('Navaid', *NAVAID_EQUIPMENT_TYPES):
+            suffix = f"-{index + 1:02d}"
+            for child in new_elem.iter():
+                tag = child.tag
+                if isinstance(tag, str) and 'TimeSlice' in tag and child is not new_elem:
+                    n = child.find('aixm:name', NSMAP)
+                    if n is not None and n.text:
+                        n.text = n.text + suffix
+                    break
+
+        # AeronauticalGroundLight: append copy suffix to name only
+        if feat_type == 'AeronauticalGroundLight':
             suffix = f"-{index + 1:02d}"
             for child in new_elem.iter():
                 tag = child.tag
@@ -1265,7 +1347,7 @@ def clone_feature_set(collected_features, airport_membership, index,
             if name:
                 airport_names[new_uuid] = name
 
-    return cloned, new_membership, airport_names
+    return cloned, new_membership, airport_names, uuid_map, feature_offsets
 
 
 # ---------------------------------------------------------------------------
@@ -1403,6 +1485,221 @@ def write_xml(tree, path):
 
 
 # ---------------------------------------------------------------------------
+# Temporality use-case replication
+# ---------------------------------------------------------------------------
+
+
+def _find_member_feature(member):
+    """Return the single aixm:* feature element inside a message:hasMember."""
+    for child in member:
+        if isinstance(child.tag, str) and child.tag.startswith(AIXM_NS):
+            return child
+    return None
+
+
+def _set_seq1_begin_positions(ts, vt_begin, fl_begin, date_map=None):
+    """Set validTime/featureLifetime beginPosition on a TimeSlice if its
+    sequenceNumber is 1.  None values are left untouched.  When date_map is
+    given, record the replaced original date -> new date so the same change can
+    be mirrored in the leading scenario comment."""
+    seq = ts.find('aixm:sequenceNumber', NSMAP)
+    if seq is None or not (seq.text and seq.text.strip() == '1'):
+        return
+    if vt_begin is not None:
+        bp = ts.find('gml:validTime/gml:TimePeriod/gml:beginPosition', NSMAP)
+        if bp is not None:
+            if date_map is not None and bp.text and bp.text != vt_begin:
+                date_map[bp.text] = vt_begin
+            bp.text = vt_begin
+    if fl_begin is not None:
+        bp = ts.find(
+            'aixm:featureLifetime/gml:TimePeriod/gml:beginPosition', NSMAP)
+        if bp is not None:
+            if date_map is not None and bp.text and bp.text != fl_begin:
+                date_map[bp.text] = fl_begin
+            bp.text = fl_begin
+
+
+# Opening tag of the AIXM message root, used to splice the original (verbatim)
+# header onto the lxml-serialised body so the root attribute layout, leading
+# comments and the blank line before the root are preserved exactly.
+_TC_ROOT_RE = re.compile(r'<message:AIXMBasicMessage\b[^>]*>', re.DOTALL)
+
+# Template files named "<base>_<N>-<descriptor>.xml" (multi-part scenarios) are
+# shortened to "<base>_part-<N>.xml"; the trailing descriptor is dropped and no
+# copy-number suffix is added (the parent folder already carries it).  Single
+# part files (no "_<N>-<descriptor>") keep their base name unchanged.
+_TC_PART_RE = re.compile(r'^(.*)_(\d+)-.+\.xml$')
+
+
+def temporality_output_filename(template_basename):
+    """Map a template file name to its shortened per-copy output name."""
+    m = _TC_PART_RE.match(template_basename)
+    if m:
+        return f'{m.group(1)}_part-{m.group(2)}.xml'
+    return template_basename
+
+
+def write_temporality_cases(template_dir, copy_dir, copy_num,
+                            uuid_map, orig_to_clone, copy_begin=None,
+                            feature_offsets=None):
+    """
+    Replicate the temporality use-case templates into
+    `copy_dir/Temporality_cases_NN/`, one file per template.  Multi-part
+    template names `<base>_<N>-<descriptor>.xml` are shortened to
+    `<base>_part-<N>.xml` (descriptor dropped, no copy-number suffix since the
+    folder carries it); single-part names are kept as-is.  See
+    `temporality_output_filename`.
+
+    Every feature is also moved to this copy's position by applying the same
+    (lat, lon) offset that its per-copy clone received (feature_offsets), so
+    the temporality feature is co-located with the copy's initial feature.
+
+    Normal files (feature exists in the baseline) are made consistent with the
+    per-copy clone:
+      - remap the feature's own gml:id / gml:identifier to the clone UUID,
+      - remap every xlink:href urn:uuid: reference via uuid_map,
+      - set aixm:name / aixm:designator (in every TimeSlice) to the clone's,
+      - sync validTime.beginPosition and featureLifetime.beginPosition to the
+        clone's, only for TimeSlices with sequenceNumber=1 (any
+        correctionNumber).
+
+    New-feature files (TEMPORALITY_NEW_FEATURE_FILES, e.g. commissioning) hold
+    a feature that does not exist in the baseline, so it is treated as brand
+    new:
+      - the feature gets a fresh random gml:id / gml:identifier,
+      - xlink:href references are still remapped via uuid_map,
+      - the sequenceNumber=1 begin positions are set to the copy set's start
+        time (copy_begin) instead of being mirrored from a clone.
+
+    Original formatting (comments, indentation) is preserved by editing the
+    parsed tree in place and writing it back without re-indenting.
+
+    Returns (files_written, warnings) where warnings is a list of
+    (template_filename, original_uuid) for features that have no clone (e.g.
+    an excluded airspace) and were therefore left untouched.
+    """
+    if not template_dir or not os.path.isdir(template_dir):
+        return 0, []
+
+    templates = sorted(f for f in os.listdir(template_dir)
+                       if f.lower().endswith('.xml'))
+    if not templates:
+        return 0, []
+
+    out_dir = os.path.join(copy_dir,
+                           f'{TEMPORALITY_OUTPUT_DIRNAME}_{copy_num:02d}')
+    os.makedirs(out_dir, exist_ok=True)
+
+    warnings = []
+    written = 0
+    for base in templates:
+        is_new_feature = base in TEMPORALITY_NEW_FEATURE_FILES
+        template_path = os.path.join(template_dir, base)
+        with open(template_path, encoding='utf-8') as fh:
+            orig_text = fh.read()
+        tree = etree.parse(template_path)
+        root = tree.getroot()
+        # original begin-position date -> new date, mirrored into the comment.
+        date_map = {}
+
+        for member in root.findall('message:hasMember', NSMAP):
+            feat = _find_member_feature(member)
+            if feat is None:
+                continue
+            old_uuid = get_feature_uuid(feat)
+            if not old_uuid:
+                continue
+
+            # Move the feature to this copy's position, using the same offset
+            # that was applied to the per-copy clone of the same feature.
+            if feature_offsets:
+                off = feature_offsets.get(old_uuid)
+                if off and (off[0] or off[1]):
+                    offset_all_coordinates(feat, off[0], off[1])
+
+            if is_new_feature:
+                # Brand-new feature: fresh random identity, remap references,
+                # set the seq=1 begin positions to the copy set start time.
+                new_uuid = generate_new_uuid()
+                feat.set(GML_ID, f'uuid.{new_uuid}')
+                ident = feat.find('gml:identifier', NSMAP)
+                if ident is not None:
+                    ident.text = new_uuid
+                update_xlink_refs(feat, uuid_map)
+                for ts in feat.iter():
+                    tag = ts.tag
+                    if (isinstance(tag, str) and 'TimeSlice' in tag
+                            and ts is not feat):
+                        _set_seq1_begin_positions(
+                            ts, copy_begin, copy_begin, date_map)
+                continue
+
+            new_uuid = uuid_map.get(old_uuid)
+            clone_info = orig_to_clone.get(old_uuid)
+            if new_uuid is None or clone_info is None:
+                warnings.append((base, old_uuid))
+                continue
+            _clone_type, clone_elem = clone_info
+
+            # 1. Remap the feature's own identity to the per-copy clone.
+            feat.set(GML_ID, f'uuid.{new_uuid}')
+            ident = feat.find('gml:identifier', NSMAP)
+            if ident is not None:
+                ident.text = new_uuid
+
+            # 2. Remap every xlink:href urn:uuid: reference.
+            update_xlink_refs(feat, uuid_map)
+
+            # 3. Values to mirror from the clone.
+            new_name = get_feature_name(clone_elem)
+            new_desig = get_feature_designator(clone_elem)
+            vt_begin, fl_begin = get_feature_begin_positions(clone_elem)
+
+            # 4. Apply to each TimeSlice of the template feature.
+            for ts in feat.iter():
+                tag = ts.tag
+                if not (isinstance(tag, str) and 'TimeSlice' in tag
+                        and ts is not feat):
+                    continue
+                if new_name is not None:
+                    n = ts.find('aixm:name', NSMAP)
+                    if n is not None and n.text:
+                        n.text = new_name
+                if new_desig is not None:
+                    d = ts.find('aixm:designator', NSMAP)
+                    if d is not None and d.text:
+                        d.text = new_desig
+                _set_seq1_begin_positions(ts, vt_begin, fl_begin, date_map)
+
+        # Preserve the original header verbatim (XML declaration, leading
+        # comments, the multi-line root attribute layout and the blank line
+        # before the root), mirror the begin-position changes into the comment
+        # dates, and splice on the lxml-serialised body.
+        m_orig = _TC_ROOT_RE.search(orig_text)
+        body_text = etree.tostring(root, encoding='unicode')
+        m_body = _TC_ROOT_RE.search(body_text)
+        if m_orig and m_body:
+            header = orig_text[:m_orig.end()]
+            for old_date, new_date in date_map.items():
+                if new_date and new_date != old_date:
+                    header = header.replace(old_date, new_date)
+            out_text = header + body_text[m_body.end():]
+            if not out_text.endswith('\n'):
+                out_text += '\n'
+        else:
+            # Fallback: shouldn't happen, but keep a valid file.
+            out_text = body_text
+
+        out_path = os.path.join(out_dir, temporality_output_filename(base))
+        with open(out_path, 'w', encoding='utf-8', newline='\n') as fh:
+            fh.write(out_text)
+        written += 1
+
+    return written, warnings
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -1440,12 +1737,24 @@ def main():
                         help='Offset between copy sets in D-HH-MM format '
                              '(e.g. 5-15-00 = 5 days, 15 hours, 0 minutes). '
                              'Requires --effectiveDateStart.')
+    parser.add_argument('--temporality-cases-dir', default=None,
+                        help='Folder of temporality use-case templates to '
+                             'replicate into every Donlon_Copy_NN as '
+                             f'{TEMPORALITY_CASES_DIRNAME}_NN (default: '
+                             f'{TEMPORALITY_CASES_DIRNAME} next to the input '
+                             'file, if present).')
     args = parser.parse_args()
 
     # Default output folder: Donlon_Dataset_Copies next to the input file
+    input_dir = os.path.dirname(os.path.abspath(args.input))
     if args.output is None:
-        input_dir = os.path.dirname(os.path.abspath(args.input))
         args.output = os.path.join(input_dir, 'Donlon_Dataset_Copies')
+
+    # Resolve temporality-cases template folder (default: next to the input).
+    if args.temporality_cases_dir is not None:
+        temporality_dir = os.path.abspath(args.temporality_cases_dir)
+    else:
+        temporality_dir = os.path.join(input_dir, TEMPORALITY_CASES_DIRNAME)
 
     count = args.number_of_copies
     if count > MAX_AIRPORT_COPIES:
@@ -1607,7 +1916,7 @@ def main():
 
     # Feature types that always go into Common/
     COMMON_ONLY_TYPES = {
-        'VerticalStructure', 'Airspace', 'DesignatedPoint',
+        'VerticalStructure', 'Airspace', 'DesignatedPoint', 'AeronauticalGroundLight',
         'Navaid', 'VOR', 'DME', 'NDB', 'TACAN', 'Localizer', 'Glidepath', 'MarkerBeacon',
     }
     # Feature types that go into airport folders if they have airport membership,
@@ -1615,7 +1924,7 @@ def main():
     AIRPORT_OR_COMMON_TYPES = {
         'AirportHeliport', 'Runway', 'RunwayDirection', 'RunwayElement',
         'RunwayCentrelinePoint', 'TouchDownLiftOff', 'Taxiway', 'TaxiwayElement',
-        'Apron', 'ApronElement', 'AircraftStand',
+        'Apron', 'ApronElement', 'AircraftStand', 'WorkArea',
     }
 
     # Generate copies
@@ -1644,14 +1953,17 @@ def main():
         print(f"  Copy {copy_num:02d}:  grid (row {row}, col {col})  "
               f"anchor offset {anchor_lat_off:+.4f}° lat, {anchor_lon_off:+.4f}° lon{time_info}")
 
-        cloned, new_membership, airport_names = clone_feature_set(
+        (cloned, new_membership, airport_names, uuid_map,
+         feature_offsets) = clone_feature_set(
             collected, airport_membership, i,
             row, col, layout, bbox,
             anchor_lat, anchor_lon, 90.0,
             begin_position=copy_begin,
             border_near_uuids=border_near_uuids,
         )
-        per_copy_data.append((cloned, new_membership, airport_names))
+        per_copy_data.append(
+            (cloned, new_membership, airport_names, uuid_map, copy_begin,
+             feature_offsets))
         all_cloned.extend(cloned)
 
     print_excluded_refs_summary()
@@ -1673,7 +1985,10 @@ def main():
 
     # 2. Per-copy folders
     print(f"\nWriting per-copy folders ...")
-    for i, (copy_features, new_membership, airport_names) in enumerate(per_copy_data):
+    temporality_total = 0
+    temporality_warnings = []
+    for i, (copy_features, new_membership, airport_names, uuid_map,
+            copy_begin, feature_offsets) in enumerate(per_copy_data):
         copy_num = i + 1
         copy_dir = os.path.join(out_dir, f'Donlon_Copy_{copy_num:02d}')
         os.makedirs(copy_dir, exist_ok=True)
@@ -1757,10 +2072,40 @@ def main():
         )
         write_xml(all_feat_doc, all_feat_path)
 
+        # --- EAD-SDD_temporality_cases_NN/ ---
+        # Build original_uuid -> (type, clone_elem) for this copy.
+        clone_by_new = {nu: (ft, el) for ft, el, nu in copy_features}
+        orig_to_clone = {}
+        for orig_uuid, new_uuid in uuid_map.items():
+            info = clone_by_new.get(new_uuid)
+            if info is not None:
+                orig_to_clone[orig_uuid] = info
+        tc_written, tc_warnings = write_temporality_cases(
+            temporality_dir, copy_dir, copy_num, uuid_map, orig_to_clone,
+            copy_begin=copy_begin, feature_offsets=feature_offsets)
+        temporality_total += tc_written
+        temporality_warnings.extend(tc_warnings)
+
         airport_folder_count = len(airport_features)
+        tc_info = (f" + {TEMPORALITY_OUTPUT_DIRNAME}_{copy_num:02d}/ "
+                   f"({tc_written} file(s))") if tc_written else ""
         print(f"  Donlon_Copy_{copy_num:02d}/: Common/ + "
-              f"{airport_folder_count} airport folder(s) + Donlon_ALL_Baseline_{copy_num:02d}.xml, "
-              f"{len(copy_features)} features")
+              f"{airport_folder_count} airport folder(s) + Donlon_ALL_Baseline_{copy_num:02d}.xml"
+              f"{tc_info}, {len(copy_features)} features")
+
+    if temporality_dir and os.path.isdir(temporality_dir):
+        print(f"\nTemporality cases: {temporality_total} file(s) written "
+              f"across {count} copy set(s) from {temporality_dir}")
+        if temporality_warnings:
+            # Report features that had no per-copy clone (e.g. excluded airspace).
+            unmapped = sorted({(b, u) for b, u in temporality_warnings})
+            print(f"  WARNING: {len(unmapped)} referenced feature(s) had no "
+                  f"clone (excluded from copying?) and were left unchanged:")
+            for b, u in unmapped:
+                print(f"    {b}: {u}")
+    elif temporality_dir:
+        print(f"\nTemporality cases: template folder not found at "
+              f"{temporality_dir}; skipped.")
 
     print(f"\nDone!  {len(all_cloned)} features total in {out_dir}")
     return 0

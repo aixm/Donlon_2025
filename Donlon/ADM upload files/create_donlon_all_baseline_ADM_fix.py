@@ -24,6 +24,14 @@ Corrections
        <aixm:startDate>01-01</aixm:startDate>
        <aixm:endDate>31-12</aixm:endDate>
 
+Omitted features
+----------------
+The following are dropped entirely from the output:
+   - the StandardLevelColumn / StandardLevelTable / StandardLevelSector features (by type, IGNORED_FEATURE_TYPES);
+   - a fixed set of features by gml:identifier UUID (IGNORED_FEATURE_UUIDS): the FIR / UIR airspaces, the STATE and DONLON CIVIL AVIATION ADMINISTRATION
+     OrganisationAuthorities, the NOF Unit and the GeoBorder.
+References from kept features to any omitted feature are left pointing at the original UUIDs (i.e. become dangling); they are not re-targeted or niled.
+
 Usage:
   python create_donlon_all_baseline_ADM_fix.py --input Donlon_ALL_Baseline.xml
   python create_donlon_all_baseline_ADM_fix.py --input in.xml --output out.xml
@@ -62,6 +70,21 @@ IGNORED_FEATURE_TYPES = {
     'StandardLevelColumn',
     'StandardLevelTable',
     'StandardLevelSector',
+}
+
+# Specific features dropped entirely from the output file, by gml:identifier
+# UUID: the FIR / UIR airspaces, the STATE (REPUBLIC OF DONLON) and DONLON CIVIL
+# AVIATION ADMINISTRATION OrganisationAuthorities, the NOF Unit and the
+# GeoBorder.  (Some kept features still reference these; those references are
+# left pointing at the original UUIDs and therefore become dangling.)  The value
+# is a human-readable label used only in the removal report.
+IGNORED_FEATURE_UUIDS = {
+    '6118ba76-0d46-4ba7-af63-17f29755e890': 'GeoBorder',
+    '709c64da-44e4-47c7-9d57-326a04cbdd3c': 'OrganisationAuthority STATE (REPUBLIC OF DONLON)',
+    'c225ae5c-540f-4a48-8867-809b393b2407': 'OrganisationAuthority DONLON CIVIL AVIATION ADMINISTRATION',
+    'f4d5e4d4-d84a-481f-b9e3-b359e42c0dff': 'Airspace AMSWELL FIR',
+    'b75a32cf-65da-4028-81f2-70ad30072736': 'UIR airspace',
+    '6fa9b51a-ea66-40a7-a23a-058c3a034719': 'NOF Unit',
 }
 
 
@@ -118,19 +141,28 @@ def feature_of(member):
 
 def remove_ignored_features(root):
     """Drop every message:hasMember whose feature type is in
-    IGNORED_FEATURE_TYPES.  Returns a {type_name: count} dict of what was
-    removed.  Removing a member keeps the surrounding indentation, because each
-    sibling carries the whitespace that precedes the next one in its tail."""
-    removed = {}
+    IGNORED_FEATURE_TYPES or whose gml:identifier is in IGNORED_FEATURE_UUIDS.
+    Returns (removed_by_type, removed_by_uuid) where removed_by_type is a
+    {type_name: count} dict and removed_by_uuid is a list of (uuid, type_name)
+    tuples actually removed.  Removing a member keeps the surrounding
+    indentation, because each sibling carries the whitespace that precedes the
+    next one in its tail."""
+    removed_by_type = {}
+    removed_by_uuid = []
     for member in list(root.findall(MSG + 'hasMember')):
         feat = feature_of(member)
         if feat is None:
             continue
         local = etree.QName(feat).localname
-        if local in IGNORED_FEATURE_TYPES:
+        ident = feat.find(GML_IDENTIFIER)
+        fuuid = ident.text.strip() if ident is not None and ident.text else None
+        if fuuid in IGNORED_FEATURE_UUIDS:
             root.remove(member)
-            removed[local] = removed.get(local, 0) + 1
-    return removed
+            removed_by_uuid.append((fuuid, local))
+        elif local in IGNORED_FEATURE_TYPES:
+            root.remove(member)
+            removed_by_type[local] = removed_by_type.get(local, 0) + 1
+    return removed_by_type, removed_by_uuid
 
 
 # ---------------------------------------------------------------------------
@@ -387,11 +419,17 @@ def main():
     tree = etree.parse(args.input)
     root = tree.getroot()
 
-    removed = remove_ignored_features(root)
-    total_removed = sum(removed.values())
+    removed_by_type, removed_by_uuid = remove_ignored_features(root)
+    total_removed = sum(removed_by_type.values()) + len(removed_by_uuid)
     print(f"\nIgnored features removed: {total_removed}")
     for name in sorted(IGNORED_FEATURE_TYPES):
-        print(f"  {name}: {removed.get(name, 0)}")
+        print(f"  {name}: {removed_by_type.get(name, 0)}")
+    for fuuid, local in removed_by_uuid:
+        print(f"  {local} {fuuid}  ({IGNORED_FEATURE_UUIDS.get(fuuid, '')})")
+    removed_uuids = {u for u, _ in removed_by_uuid}
+    for fuuid, label in IGNORED_FEATURE_UUIDS.items():
+        if fuuid not in removed_uuids:
+            print(f"  WARNING: ignore UUID not found in input: {fuuid} ({label})")
 
     if args.translate_limits:
         n_unl = translate_unl(root)

@@ -24,13 +24,13 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-02T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of the initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2026-06-02T00:00:00Z - 2026-12-01T00:00:00Z
   
   Initial planned update: flashing='NO' updating the annotation with propertyName="colour" and removing the annotation with propertyName="flashing"
   BASELINE 2/0
@@ -40,7 +40,7 @@
   
   Reverting the termination of the initial valid TimeSlice:
   BASELINE 1/2
-  validTime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-02T00:00:00Z - "unknown"
   
   Cancelling of the planned update TimeSlice:
   BASELINE 2/1
@@ -50,7 +50,7 @@
   
   Termination of the valid TimeSlice:
   BASELINE 1/3
-  validTime: 2026-06-20T00:00:00Z - 2027-03-15T00:00:00Z
+  validTime: 2026-06-02T00:00:00Z - 2027-03-15T00:00:00Z
   
   Updated TimeSlice with deferred date:
   BASELINE 3/0
@@ -74,14 +74,14 @@
   gml:id="DONLON_Deferring_of_a_Permanent_Update">
   
   <message:hasMember>
-    <aixm:AeronauticalGroundLight gml:id="uuid.50112898-53a5-4732-a436-4bc6ba794c4f">
-      <gml:identifier codeSpace="urn:uuid:">50112898-53a5-4732-a436-4bc6ba794c4f</gml:identifier>
+    <aixm:AeronauticalGroundLight gml:id="uuid.4d89b513-7ffc-4c1b-87ea-1576f43c95dc">
+      <gml:identifier codeSpace="urn:uuid:">4d89b513-7ffc-4c1b-87ea-1576f43c95dc</gml:identifier>
       <!-- Termination of the valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S1C3">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-02T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-03-15T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -90,7 +90,7 @@
           <aixm:correctionNumber>3</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-02T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -102,12 +102,12 @@
           <aixm:aerodromeBeacon xsi:nil="true"/>
           <aixm:location>
             <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_82f1953f-bef4-4ca0-bb02-a0062eef5713_1_3_B_3">
-              <gml:pos>54.36666666666667 -33.983333333333334</gml:pos>
-              <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
+              <gml:pos>53.054877736626004 -28.068384140949252</gml:pos>
+              <aixm:horizontalAccuracy uom="M">5.0</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">50</aixm:elevation>
               <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>
               <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
-              <aixm:verticalAccuracy uom="M">5</aixm:verticalAccuracy>
+              <aixm:verticalAccuracy uom="M">5.0</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:location>
           <aixm:annotation>
@@ -171,12 +171,12 @@
           <aixm:aerodromeBeacon xsi:nil="true"/>
           <aixm:location>
             <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_ec220556-0e53-4145-a812-bdd97b3b5fc2_3_0_B_3">
-              <gml:pos>54.36666666666667 -33.983333333333334</gml:pos>
-              <aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
+              <gml:pos>53.054877736626004 -28.068384140949252</gml:pos>
+              <aixm:horizontalAccuracy uom="M">5.0</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">50</aixm:elevation>
               <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>
               <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
-              <aixm:verticalAccuracy uom="M">5</aixm:verticalAccuracy>
+              <aixm:verticalAccuracy uom="M">5.0</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:location>
           <aixm:annotation>

@@ -26,18 +26,18 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2025-11-01T00:00:00Z - "unknown"
+  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
   
   Step 1 - Planned decommissioning:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2025-11-01T00:00:00Z - 2026-12-01T00:00:00Z
+  featureLifetime: 2017-07-01T00:00:00Z - 2026-12-01T00:00:00Z
   
   Step 2 - Cancelling of the planned decommissioning:
   BASELINE 1/2
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2025-11-01T00:00:00Z - "unknown"
+  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
 -->
 
 
@@ -57,14 +57,14 @@
   gml:id="DONLON_Abandoning_the_Decommissioning_of_a_Feature">
   
   <message:hasMember>
-    <aixm:Airspace gml:id="uuid.f1dc72c1-86bc-4b2d-ad3b-31b2ff860f56">
-      <gml:identifier codeSpace="urn:uuid:">f1dc72c1-86bc-4b2d-ad3b-31b2ff860f56</gml:identifier>
+    <aixm:Airspace gml:id="uuid.d9bde2f0-a97f-40d5-83f4-de5c711473ab">
+      <gml:identifier codeSpace="urn:uuid:">d9bde2f0-a97f-40d5-83f4-de5c711473ab</gml:identifier>
       <!-- Planned decommissioning -->
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_ULENI_D-OTHER_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -73,14 +73,14 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>D_OTHER</aixm:type>
-          <aixm:designator>EAV11-14</aixm:designator>
+          <aixm:designator>EAV11</aixm:designator>
           <aixm:localType>HANG GLIDING AREA</aixm:localType>
-          <aixm:name>ULENI 14</aixm:name>
+          <aixm:name>ULENI</aixm:name>
           <aixm:designatorICAO>NO</aixm:designatorICAO>
           <aixm:controlType xsi:nil="true" nilReason="unknown"/>
           <aixm:upperLowerSeparation xsi:nil="true" nilReason="inapplicable"/>
@@ -97,8 +97,8 @@
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
                   <aixm:maximumLimitReference xsi:nil="true"/>
-                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
-                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                  <aixm:lowerLimit>GND</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:minimumLimit xsi:nil="true"/>
                   <aixm:minimumLimitReference xsi:nil="true"/>
                   <aixm:width xsi:nil="true" nilReason="inapplicable"/>
@@ -112,7 +112,7 @@
                                 <aixm:Curve gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
-                                      <gml:pos>46.854167 -31.598548659340857</gml:pos>
+                                      <gml:pos>43.063738424292005 -27.84311228658751</gml:pos>
                                       <gml:radius uom="[nmi_i]">15</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
@@ -122,7 +122,7 @@
                           </gml:exterior>
                         </gml:PolygonPatch>
                       </gml:patches>
-                      <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
+                      <aixm:horizontalAccuracy uom="M">5.0</aixm:horizontalAccuracy>
                     </aixm:Surface>
                   </aixm:horizontalProjection>
                   <aixm:annotation xsi:nil="true"/>
@@ -132,6 +132,7 @@
           </aixm:geometryComponent>
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_7">
+              <!-- Active: SAT SUN SR-SS -->
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
@@ -158,10 +159,10 @@
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_10">
-                  <aixm:upperLimit uom="M">1000</aixm:upperLimit>
-                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
-                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
-                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
                   <aixm:annotation xsi:nil="true"/>
@@ -174,34 +175,25 @@
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_12">
+                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_0_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>ANY</aixm:day>
-                  <aixm:dayTil>ANY</aixm:dayTil>
-                  <aixm:startTime>00:00</aixm:startTime>
-                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:dayTil>SUN</aixm:dayTil>
+                  <aixm:startEvent>SS</aixm:startEvent>
+                  <aixm:endEvent>SR</aixm:endEvent>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_13">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>SAT</aixm:day>
-                  <aixm:startEvent>SR</aixm:startEvent>
-                  <aixm:endEvent>SS</aixm:endEvent>
-                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_14">
+                <aixm:Timesheet gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_0_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
-                  <aixm:startEvent>SR</aixm:startEvent>
-                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:dayTil>SAT</aixm:dayTil>
+                  <aixm:startEvent>SS</aixm:startEvent>
+                  <aixm:endEvent>SR</aixm:endEvent>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
+                  <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
@@ -209,11 +201,11 @@
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_15">
-                  <aixm:upperLimit uom="M">1000</aixm:upperLimit>
-                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
-                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
-                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                <aixm:AirspaceLayer gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_14">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
                   <aixm:annotation xsi:nil="true"/>
@@ -224,11 +216,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_16">
+            <aixm:Note gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_15">
               <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_17">
+                <aixm:LinguisticNote gml:id="id_772a46ff-d5b2-4048-b06f-6b11ec286ed4_1_1_B_16">
                   <aixm:note lang="eng">Operator/User and Tel Nr: Uleni Aero Club, TEL 029 496 4695</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>

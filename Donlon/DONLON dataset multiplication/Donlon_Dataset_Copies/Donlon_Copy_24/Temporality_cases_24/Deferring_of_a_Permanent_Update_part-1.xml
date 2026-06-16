@@ -1,0 +1,209 @@
+<!-- Copyright (c) 2025, EUROCONTROL
+  
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+  
+  THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+  TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  
+  Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+
+<!--
+  Temporality use case: deferring of a permanent update - part 1
+  Feature: AeronauticalGroundLight - ATURA
+  
+  Valid TimeSlice:
+  BASELINE 1/0
+  validTime: 2026-06-02T00:00:00Z - "unknown"
+  
+  Step 1 - initial update:
+  
+  Termination of the initial valid TimeSlice:
+  BASELINE 1/1
+  validTime: 2026-06-02T00:00:00Z - 2026-12-01T00:00:00Z
+  
+  Initial planned update: flashing='NO' updating the annotation with propertyName="colour" and removing the annotation with propertyName="flashing"
+  BASELINE 2/0
+  validTime: 2026-12-01T00:00:00Z - "unknown"
+                                   
+  Step 2 - abandoning the planned update:
+  
+  Reverting the termination of the initial valid TimeSlice:
+  BASELINE 1/2
+  validTime: 2026-06-02T00:00:00Z - "unknown"
+  
+  Cancelling of the planned update TimeSlice:
+  BASELINE 2/1
+  validTime.@nilReason="inapplicable"
+                
+  Step 3 - deffer the update:
+  
+  Termination of the valid TimeSlice:
+  BASELINE 1/3
+  validTime: 2026-06-02T00:00:00Z - 2027-03-15T00:00:00Z
+  
+  Updated TimeSlice with deferred date:
+  BASELINE 3/0
+  validTime: 2027-03-15T00:00:00Z - "unknown"
+-->
+
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gts="http://www.isotc211.org/2005/gts"
+  xmlns:gco="http://www.isotc211.org/2005/gco" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gss="http://www.isotc211.org/2005/gss" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:gsr="http://www.isotc211.org/2005/gsr"
+  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"
+  gml:id="DONLON_Deferring_of_a_Permanent_Update">
+  
+  <message:hasMember>
+    <aixm:AeronauticalGroundLight gml:id="uuid.7368a3c0-8fd9-4d96-a8d9-e5c3e7007103">
+      <gml:identifier codeSpace="urn:uuid:">7368a3c0-8fd9-4d96-a8d9-e5c3e7007103</gml:identifier>
+      <!-- Termination of the initial valid TimeSlice -->
+      <aixm:timeSlice>
+        <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S1C1">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_1">
+              <gml:beginPosition>2026-06-02T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>1</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_2">
+              <gml:beginPosition>2026-06-02T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>ATURA-24</aixm:name>
+          <aixm:type>BCN</aixm:type>
+          <aixm:colour>WHITE</aixm:colour>
+          <aixm:flashing>YES</aixm:flashing>
+          <aixm:structureBeacon xsi:nil="true"/>
+          <aixm:aerodromeBeacon xsi:nil="true"/>
+          <aixm:location>
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_3">
+              <gml:pos>46.027899579624005 -28.514317963278845</gml:pos>
+              <aixm:horizontalAccuracy uom="M">5.0</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">50</aixm:elevation>
+              <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">5.0</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_4">
+              <aixm:propertyName xsi:nil="true"/>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_5">
+                  <aixm:note lang="eng">Operating hours: HN</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_6">
+              <aixm:propertyName>colour</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_7">
+                  <aixm:note lang="eng">Intensity: 500tsd Candelas</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_8">
+              <aixm:propertyName>flashing</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_29038bff-019a-4103-a18a-0511635d72f0_1_1_B_9">
+                  <aixm:note lang="eng">Characteristics: GP FLG (3) W EV 10 SEC</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:AeronauticalGroundLightTimeSlice>
+      </aixm:timeSlice>
+      <!-- Initial planned update -->
+      <aixm:timeSlice>
+        <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S2C0">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_1">
+              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_2">
+              <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>ATURA-24</aixm:name>
+          <aixm:type>BCN</aixm:type>
+          <aixm:colour>WHITE</aixm:colour>
+          <aixm:flashing>NO</aixm:flashing>
+          <aixm:structureBeacon xsi:nil="true"/>
+          <aixm:aerodromeBeacon xsi:nil="true"/>
+          <aixm:location>
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_3">
+              <gml:pos>46.027899579624005 -28.514317963278845</gml:pos>
+              <aixm:horizontalAccuracy uom="M">5.0</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">50</aixm:elevation>
+              <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">5.0</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_4">
+              <aixm:propertyName xsi:nil="true"/>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_5">
+                  <aixm:note lang="eng">Operating hours: HN</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_6">
+              <aixm:propertyName>colour</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_4977855c-797c-4512-bad4-b64601903bfb_2_0_B_7">
+                  <aixm:note lang="eng">Intensity: 750tsd Candelas</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:AeronauticalGroundLightTimeSlice>
+      </aixm:timeSlice>
+    </aixm:AeronauticalGroundLight>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

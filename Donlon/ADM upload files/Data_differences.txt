@@ -1,0 +1,14 @@
+Avoided the use of GND/UNL/FLOOR/CEILING for vertical limits by replacing as follows:
+
+upperLimit=UNL -> upperLimit=FL999, upperLimitReference=STD
+upperLimit=GND -> upperLimit=0FT/0M, upperLimitReference=MSL/SFC
+
+upperLimit=CEILING -> to match upper limit
+upperLimit=FLOOR -> to match lower limit
+
+Avoided the trigger of a warnig for missing startDate and endDate in timeInterval/Timesheet objects by adding startDate=01-01 and endDate31-12 if missing or nil.
+
+Omitted the following features:
+StandardLevelColumn
+StandardLevelTable
+StandardLevelSector

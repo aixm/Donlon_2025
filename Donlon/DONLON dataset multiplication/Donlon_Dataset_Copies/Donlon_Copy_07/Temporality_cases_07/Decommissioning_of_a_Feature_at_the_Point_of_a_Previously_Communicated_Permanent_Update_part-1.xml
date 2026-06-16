@@ -25,27 +25,27 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-02T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-02T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2026-12-17T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-02T00:00:00Z - 2026-12-17T00:00:00Z
+  featureLifetime: 2026-06-02T00:00:00Z - "unknown"
   
   Update TimeSlice: planned operational date updated to 2026-12-28, annotation updated
   BASELINE 2/0
   validTime: 2026-12-17T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-02T00:00:00Z - "unknown"
   
   Step 2 - decommissioning:
   
   Decommissioning at the point of previously communicated update:
   BASELINE 2/1
   validTime: 2026-12-17T00:00:00Z - 2026-12-17T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - 2026-12-17T00:00:00Z
+  featureLifetime: 2026-06-02T00:00:00Z - 2026-12-17T00:00:00Z
 -->
 
 
@@ -65,14 +65,14 @@
   gml:id="DONLON_EADD_Decommissioning_of_a_Feature_at_the_Point_of_a_Previously_Communicated_Permanent_Update">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.e5752679-ee79-448c-83ec-e7d6b495d344">
-      <gml:identifier codeSpace="urn:uuid:">e5752679-ee79-448c-83ec-e7d6b495d344</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.a825bcba-5293-4967-ad0c-ae96345af9a7">
+      <gml:identifier codeSpace="urn:uuid:">a825bcba-5293-4967-ad0c-ae96345af9a7</gml:identifier>
       <!-- Termination of initial valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2026-12-20_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-02T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-17T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -81,13 +81,13 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-02T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2026-12-20</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:127499ea-f56f-4cbb-ba88-969a502aaf29" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:7bcbacbd-84e2-4b0d-aad3-bf2677ca81c5" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_3">
               <gml:patches>
@@ -98,7 +98,7 @@
                         <aixm:Curve gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_4">
                           <gml:segments>
                             <gml:GeodesicString>
-                              <gml:posList>51.8697343455 -30.30837062658172 51.8696577205 -30.30962375028172 51.8691269923 -30.30953712398172 51.8692036178 -30.30828400928172 51.8697343455 -30.30837062658172</gml:posList>
+                              <gml:posList>52.421631822126 -34.86406841661042 52.421555197126004 -34.86532301485916 52.421024468926 -34.86523628662612 52.421101094426 -34.86398169738798 52.421631822126 -34.86406841661042</gml:posList>
                             </gml:GeodesicString>
                           </gml:segments>
                         </aixm:Curve>
@@ -183,7 +183,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2026-12-28</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:127499ea-f56f-4cbb-ba88-969a502aaf29" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:7bcbacbd-84e2-4b0d-aad3-bf2677ca81c5" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_3">
               <gml:patches>
@@ -194,7 +194,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
                         <aixm:Curve gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_4">
                           <gml:segments>
                             <gml:GeodesicString>
-                              <gml:posList>51.8697343455 -30.30837062658172 51.8696577205 -30.30962375028172 51.8691269923 -30.30953712398172 51.8692036178 -30.30828400928172 51.8697343455 -30.30837062658172</gml:posList>
+                              <gml:posList>52.421631822126 -34.86406841661042 52.421555197126004 -34.86532301485916 52.421024468926 -34.86523628662612 52.421101094426 -34.86398169738798 52.421631822126 -34.86406841661042</gml:posList>
                             </gml:GeodesicString>
                           </gml:segments>
                         </aixm:Curve>

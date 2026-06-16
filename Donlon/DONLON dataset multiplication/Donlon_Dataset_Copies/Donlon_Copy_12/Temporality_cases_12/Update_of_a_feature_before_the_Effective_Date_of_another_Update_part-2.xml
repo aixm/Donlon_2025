@@ -25,13 +25,13 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-02T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   End of initial TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2026-06-02T00:00:00Z - 2026-12-01T00:00:00Z
   
   Planned update: permitted aircraft wingspan changed to 30M, helicopters are now permitted
   BASELINE 2/0
@@ -41,7 +41,7 @@
   
   Advancing the termination of the initial TimeSlice:
   BASELINE 1/2
-  validTime: 2026-06-20T00:00:00Z - 2026-11-15T00:00:00Z
+  validTime: 2026-06-02T00:00:00Z - 2026-11-15T00:00:00Z
   
   The new update set before the initial planned update: permitted aircraft wingspan changed to 32M, helicopters are now forbidden
   BASELINE 2/1
@@ -65,14 +65,14 @@
   gml:id="DONLON_EADD_Update_of_a_Feature_before_the_Effective_Date_of_another_Update">
   
   <message:hasMember>
-    <aixm:AircraftStand gml:id="uuid.43834997-b485-4494-b06d-47742e419e68">
-      <gml:identifier codeSpace="urn:uuid:">43834997-b485-4494-b06d-47742e419e68</gml:identifier>
+    <aixm:AircraftStand gml:id="uuid.77bdb99b-4991-4bac-8e0f-43854dd559d3">
+      <gml:identifier codeSpace="urn:uuid:">77bdb99b-4991-4bac-8e0f-43854dd559d3</gml:identifier>
       <!-- Advancing the termination of the initial TimeSlice -->
       <aixm:timeSlice>
         <aixm:AircraftStandTimeSlice gml:id="AST_EADD_STAND_5_S1C2">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_5a346911-48a7-4633-9e3e-8d760319e418_1_2_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-02T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-11-15T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -81,7 +81,7 @@
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_5a346911-48a7-4633-9e3e-8d760319e418_1_2_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-02T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -107,7 +107,7 @@
           </aixm:surfaceProperties>
           <aixm:location>
             <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_5a346911-48a7-4633-9e3e-8d760319e418_1_2_B_4">
-              <gml:pos>51.3714265284 -29.49073377222258</gml:pos>
+              <gml:pos>50.08099795269201 -34.69612261375353</gml:pos>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">28</aixm:elevation>
               <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
@@ -115,7 +115,7 @@
               <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:location>
-          <aixm:apronLocation xlink:href="urn:uuid:b1cec2f1-9f4f-452a-ab98-87cd7bd8b5bc" xlink:title="APE EADD APRON A 3" xlink:type="simple"/>
+          <aixm:apronLocation xlink:href="urn:uuid:d89df1b3-8abb-46e3-aa73-48a82e1248dd" xlink:title="APE EADD APRON A 3" xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_5a346911-48a7-4633-9e3e-8d760319e418_1_2_B_5">
               <gml:patches>
@@ -126,8 +126,8 @@
                         <aixm:Curve gml:id="id_5a346911-48a7-4633-9e3e-8d760319e418_1_2_B_6">
                           <gml:segments>
                             <gml:GeodesicString>
-                              <gml:posList>51.3717022116362 -29.48974208230528 51.3712763718698 -29.48967222584158 51.3712234219264 -29.49053819747278 51.3713693181031 -29.49071003869348 51.3713558895543 -29.490929656140278
-51.3714720698977 -29.49094871523528 51.3714854983489 -29.490729097778278 51.3716492715209 -29.49060808427348 51.3717022116362 -29.48974208230528</gml:posList>
+                              <gml:posList>50.081273635928206 -34.69517908190877 50.080847796161805 -34.69511261778837 50.08079484621841 -34.69593653643113 50.08094074239511 -34.696100032763134 50.08092731384631 -34.69630898523014
+50.08104349418971 -34.69632711878454 50.08105692264091 -34.69611816630783 50.08122069581291 -34.69600302941531 50.081273635928206 -34.69517908190877</gml:posList>
                             </gml:GeodesicString>
                           </gml:segments>
                         </aixm:Curve>
@@ -246,7 +246,7 @@
           </aixm:surfaceProperties>
           <aixm:location>
             <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_e55dfe5e-2f21-4c92-8fe8-1ed468565788_2_1_B_4">
-              <gml:pos>51.3714265284 -29.49073377222258</gml:pos>
+              <gml:pos>50.08099795269201 -34.69612261375353</gml:pos>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">28</aixm:elevation>
               <aixm:geoidUndulation uom="M">12</aixm:geoidUndulation>
@@ -254,7 +254,7 @@
               <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:location>
-          <aixm:apronLocation xlink:href="urn:uuid:b1cec2f1-9f4f-452a-ab98-87cd7bd8b5bc" xlink:title="APE EADD APRON A 3" xlink:type="simple"/>
+          <aixm:apronLocation xlink:href="urn:uuid:d89df1b3-8abb-46e3-aa73-48a82e1248dd" xlink:title="APE EADD APRON A 3" xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_e55dfe5e-2f21-4c92-8fe8-1ed468565788_2_1_B_5">
               <gml:patches>
@@ -265,8 +265,8 @@
                         <aixm:Curve gml:id="id_e55dfe5e-2f21-4c92-8fe8-1ed468565788_2_1_B_6">
                           <gml:segments>
                             <gml:GeodesicString>
-                              <gml:posList>51.3717022116362 -29.48974208230528 51.3712763718698 -29.48967222584158 51.3712234219264 -29.49053819747278 51.3713693181031 -29.49071003869348 51.3713558895543 -29.490929656140278
-51.3714720698977 -29.49094871523528 51.3714854983489 -29.490729097778278 51.3716492715209 -29.49060808427348 51.3717022116362 -29.48974208230528</gml:posList>
+                              <gml:posList>50.081273635928206 -34.69517908190877 50.080847796161805 -34.69511261778837 50.08079484621841 -34.69593653643113 50.08094074239511 -34.696100032763134 50.08092731384631 -34.69630898523014
+50.08104349418971 -34.69632711878454 50.08105692264091 -34.69611816630783 50.08122069581291 -34.69600302941531 50.081273635928206 -34.69517908190877</gml:posList>
                             </gml:GeodesicString>
                           </gml:segments>
                         </aixm:Curve>

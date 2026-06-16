@@ -121,7 +121,7 @@
                                 <aixm:Curve gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
-                                      <gml:pos>54.168889 -23.750833</gml:pos>
+                                      <gml:pos>54.16888889 -23.75083333</gml:pos>
                                       <gml:radius uom="[nmi_i]">10</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
@@ -131,7 +131,7 @@
                           </gml:exterior>
                         </gml:PolygonPatch>
                       </gml:patches>
-                      <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
+                      <aixm:horizontalAccuracy uom="M">5.0</aixm:horizontalAccuracy>
                     </aixm:Surface>
                   </aixm:horizontalProjection>
                   <aixm:annotation xsi:nil="true"/>
@@ -141,6 +141,7 @@
           </aixm:geometryComponent>
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_7">
+              <!-- Active: SAT SUN SR-SS -->
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
@@ -183,34 +184,25 @@
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_12">
+                <aixm:Timesheet gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_0_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>ANY</aixm:day>
-                  <aixm:dayTil>ANY</aixm:dayTil>
-                  <aixm:startTime>00:00</aixm:startTime>
-                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:dayTil>SUN</aixm:dayTil>
+                  <aixm:startEvent>SS</aixm:startEvent>
+                  <aixm:endEvent>SR</aixm:endEvent>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_13">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>SAT</aixm:day>
-                  <aixm:startEvent>SR</aixm:startEvent>
-                  <aixm:endEvent>SS</aixm:endEvent>
-                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_14">
+                <aixm:Timesheet gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_0_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
-                  <aixm:startEvent>SR</aixm:startEvent>
-                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:dayTil>SAT</aixm:dayTil>
+                  <aixm:startEvent>SS</aixm:startEvent>
+                  <aixm:endEvent>SR</aixm:endEvent>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
+                  <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
@@ -218,7 +210,7 @@
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_15">
+                <aixm:AirspaceLayer gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_14">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
@@ -233,11 +225,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_16">
+            <aixm:Note gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_15">
               <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_17">
+                <aixm:LinguisticNote gml:id="id_b6b405ab-4ca9-4bfe-824e-2dba77389ed3_1_1_B_16">
                   <aixm:note lang="eng">Operator/User and Tel Nr: Tomar Flying Club, TEL 062 535 7373</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -298,7 +290,7 @@
                                 <aixm:Curve gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
-                                      <gml:pos>54.168889 -23.750833</gml:pos>
+                                      <gml:pos>54.16888889 -23.75083333</gml:pos>
                                       <gml:radius uom="[nmi_i]">10</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
@@ -308,7 +300,7 @@
                           </gml:exterior>
                         </gml:PolygonPatch>
                       </gml:patches>
-                      <aixm:horizontalAccuracy uom="M">10.0</aixm:horizontalAccuracy>
+                      <aixm:horizontalAccuracy uom="M">5.0</aixm:horizontalAccuracy>
                     </aixm:Surface>
                   </aixm:horizontalProjection>
                   <aixm:annotation xsi:nil="true"/>
@@ -318,6 +310,7 @@
           </aixm:geometryComponent>
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_7">
+              <!-- Active: SAT SUN SR-SS -->
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
@@ -360,34 +353,25 @@
           <aixm:activation>
             <aixm:AirspaceActivation gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_12">
+                <aixm:Timesheet gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_1_0_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>ANY</aixm:day>
-                  <aixm:dayTil>ANY</aixm:dayTil>
-                  <aixm:startTime>00:00</aixm:startTime>
-                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:day>SAT</aixm:day>
+                  <aixm:dayTil>SUN</aixm:dayTil>
+                  <aixm:startEvent>SS</aixm:startEvent>
+                  <aixm:endEvent>SR</aixm:endEvent>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
                   <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_13">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:day>SAT</aixm:day>
-                  <aixm:startEvent>SR</aixm:startEvent>
-                  <aixm:endEvent>SS</aixm:endEvent>
-                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_14">
+                <aixm:Timesheet gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_1_0_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:day>SUN</aixm:day>
-                  <aixm:startEvent>SR</aixm:startEvent>
-                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:dayTil>SAT</aixm:dayTil>
+                  <aixm:startEvent>SS</aixm:startEvent>
+                  <aixm:endEvent>SR</aixm:endEvent>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
+                  <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
@@ -395,7 +379,7 @@
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_15">
+                <aixm:AirspaceLayer gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_14">
                   <aixm:upperLimit>CEILING</aixm:upperLimit>
                   <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
@@ -410,11 +394,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_16">
+            <aixm:Note gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_15">
               <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_17">
+                <aixm:LinguisticNote gml:id="id_2e555320-8a2f-4fce-8616-fe806244a197_2_0_B_16">
                   <aixm:note lang="eng">Operator/User and Tel Nr: Tomar Flying Club, TEL 062 535 7373</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>

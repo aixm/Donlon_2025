@@ -21,31 +21,31 @@
 
 <!--
   Temporality use case: decommissioning of a feature at the point of a previously communicated permanent update - part 1
-  Features: WorkArea - ecca8219-b6d5-42d9-864f-590de56b3d9c
+  Feature: WorkArea - 6e967e9f-4c41-4630-94a7-03048aa5e0e8
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-25T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-25T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-25T00:00:00Z - 2026-12-17T00:00:00Z
-  featureLifetime: 2026-06-25T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - 2026-12-17T00:00:00Z
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
   
   Update TimeSlice: planned operational date updated to 2026-12-28, annotation updated
   BASELINE 2/0
   validTime: 2026-12-17T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-25T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
   
   Step 2 - decommissioning:
   
   Decommissioning at the point of previously communicated update:
   BASELINE 2/1
   validTime: 2026-12-17T00:00:00Z - 2026-12-17T00:00:00Z
-  featureLifetime: 2026-06-25T00:00:00Z - 2026-12-17T00:00:00Z
+  featureLifetime: 2026-06-20T00:00:00Z - 2026-12-17T00:00:00Z
 -->
 
 
@@ -65,14 +65,14 @@
   gml:id="DONLON_EADD_Decommissioning_of_a_Feature_at_the_Point_of_a_Previously_Communicated_Permanent_Update">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.56ae6a96-a1b6-41f7-abb0-19085c45f034">
-      <gml:identifier codeSpace="urn:uuid:">56ae6a96-a1b6-41f7-abb0-19085c45f034</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.6e967e9f-4c41-4630-94a7-03048aa5e0e8">
+      <gml:identifier codeSpace="urn:uuid:">6e967e9f-4c41-4630-94a7-03048aa5e0e8</gml:identifier>
       <!-- Termination of initial valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2026-12-20_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_1">
-              <gml:beginPosition>2026-06-25T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-17T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -81,13 +81,13 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_2">
-              <gml:beginPosition>2026-06-25T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2026-12-20</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:d42db6d7-65a9-4f23-ad6f-617371bdb3b0" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:d566aa6d-3ed6-4392-9443-2998dffa3fff" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_3">
               <gml:patches>
@@ -119,6 +119,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_6">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
                   <aixm:endTime>16:00</aixm:endTime>
@@ -136,6 +138,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:dayTil>AFT_WORK_DAY</aixm:dayTil>
                   <aixm:startTime>16:00</aixm:startTime>
@@ -183,7 +187,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2026-12-28</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:d42db6d7-65a9-4f23-ad6f-617371bdb3b0" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:d566aa6d-3ed6-4392-9443-2998dffa3fff" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_3">
               <gml:patches>
@@ -215,6 +219,8 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_6">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
                   <aixm:endTime>16:00</aixm:endTime>
@@ -232,6 +238,8 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:dayTil>AFT_WORK_DAY</aixm:dayTil>
                   <aixm:startTime>16:00</aixm:startTime>

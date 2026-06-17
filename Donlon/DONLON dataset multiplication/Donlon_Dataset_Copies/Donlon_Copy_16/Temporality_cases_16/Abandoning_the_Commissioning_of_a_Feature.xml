@@ -21,16 +21,16 @@
 
 <!--
   Temporality use case: abandoning the commissioning of a feature
-  Feature: WorkArea | d0571608-4ae3-44e4-8b59-889e81dbb609
+  Feature: WorkArea - eca8581f-ead1-418f-a13b-584e32462abd
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-25T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - "unknown"
   
   Terminating the valid TimeSlice:
   BASELINE 1/1
   validTime.@nilReason="inapplicable"
-  featureLifetime.beginPosition=featureLifetime.endPosition="2026-06-25T00:00:00Z"
+  featureLifetime.beginPosition=featureLifetime.endPosition="2026-06-20T00:00:00Z"
 -->
 
 
@@ -50,8 +50,8 @@
   gml:id="DONLON_EADD_Abandoning_the_Commissioning_of_a_Feature">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.a877e662-de06-4d66-91d5-9a8e4553fb0c">
-      <gml:identifier codeSpace="urn:uuid:">a877e662-de06-4d66-91d5-9a8e4553fb0c</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.eca8581f-ead1-418f-a13b-584e32462abd">
+      <gml:identifier codeSpace="urn:uuid:">eca8581f-ead1-418f-a13b-584e32462abd</gml:identifier>
       <!-- Terminating the valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2027-01-01_2_S1C1">
@@ -61,13 +61,13 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_2">
-              <gml:beginPosition>2026-06-25T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-10T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2027-01-01</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:df2ca25b-2b48-4569-86e7-f00d700ad88f" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:b97f44f3-b3c0-425e-9dd4-506deeb8049f" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_3">
               <gml:patches>

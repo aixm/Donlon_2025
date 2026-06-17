@@ -25,13 +25,13 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2025-11-01T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of valid TimeSlice:
   BASELINE 1/1
-  validTime: 2025-11-01T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
   
   Planned update TimeSlice: upper limit increased to 1500M
   BASELINE 2/0
@@ -41,7 +41,7 @@
   
   Decommissioning at a point before the planned update:
   BASELINE 1/2
-  validTime: 2025-11-01T00:00:00Z - 2026-11-05T00:00:00Z
+  validTime: 2026-06-20T00:00:00Z - 2026-11-05T00:00:00Z
   
   Termination of the planned update TimeSlice:
   BASELINE 2/1
@@ -66,14 +66,14 @@
   gml:id="DONLON_Decommissioning_of_a_Feature_with_Future_Changes">
   
   <message:hasMember>
-    <aixm:Airspace gml:id="uuid.df7b7fab-5508-44c3-802b-46cbafc75091">
-      <gml:identifier codeSpace="urn:uuid:">df7b7fab-5508-44c3-802b-46cbafc75091</gml:identifier>
+    <aixm:Airspace gml:id="uuid.399dc655-e4f1-44ac-ba2a-3c5918e2ea91">
+      <gml:identifier codeSpace="urn:uuid:">399dc655-e4f1-44ac-ba2a-3c5918e2ea91</gml:identifier>
       <!-- Decommissioning at a point before the planned update -->
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_TOMAR_D-OTHER_S1C2">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_1">
-              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-11-05T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -82,14 +82,14 @@
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_2">
-              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-11-05T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>D_OTHER</aixm:type>
-          <aixm:designator>EAV10</aixm:designator>
+          <aixm:designator>EAV10-16</aixm:designator>
           <aixm:localType>HANG GLIDING AREA</aixm:localType>
-          <aixm:name>TOMAR</aixm:name>
+          <aixm:name>TOMAR 16</aixm:name>
           <aixm:designatorICAO>NO</aixm:designatorICAO>
           <aixm:controlType xsi:nil="true" nilReason="unknown"/>
           <aixm:upperLowerSeparation xsi:nil="true" nilReason="inapplicable"/>
@@ -106,8 +106,8 @@
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
                   <aixm:maximumLimitReference xsi:nil="true"/>
-                  <aixm:lowerLimit>GND</aixm:lowerLimit>
-                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                   <aixm:minimumLimit xsi:nil="true"/>
                   <aixm:minimumLimitReference xsi:nil="true"/>
                   <aixm:width xsi:nil="true" nilReason="inapplicable"/>
@@ -121,7 +121,7 @@
                                 <aixm:Curve gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
-                                      <gml:pos>49.536134261958004 -30.589193638975622</gml:pos>
+                                      <gml:pos>48.542982441958 -38.637740557873585</gml:pos>
                                       <gml:radius uom="[nmi_i]">10</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
@@ -145,6 +145,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startEvent>SR</aixm:startEvent>
                   <aixm:endEvent>SS</aixm:endEvent>
@@ -155,6 +157,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_9">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startEvent>SR</aixm:startEvent>
                   <aixm:endEvent>SS</aixm:endEvent>
@@ -168,10 +172,10 @@
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_10">
-                  <aixm:upperLimit>CEILING</aixm:upperLimit>
-                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
-                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
-                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:upperLimit uom="M">1500</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
                   <aixm:annotation xsi:nil="true"/>
@@ -186,6 +190,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_0_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>SAT</aixm:day>
                   <aixm:dayTil>SUN</aixm:dayTil>
                   <aixm:startEvent>SS</aixm:startEvent>
@@ -197,6 +203,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_0_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>SUN</aixm:day>
                   <aixm:dayTil>SAT</aixm:dayTil>
                   <aixm:startEvent>SS</aixm:startEvent>
@@ -211,10 +219,10 @@
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_14">
-                  <aixm:upperLimit>CEILING</aixm:upperLimit>
-                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
-                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
-                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:upperLimit uom="M">1500</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
                   <aixm:annotation xsi:nil="true"/>
@@ -251,9 +259,9 @@
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>D_OTHER</aixm:type>
-          <aixm:designator>EAV10</aixm:designator>
+          <aixm:designator>EAV10-16</aixm:designator>
           <aixm:localType>HANG GLIDING AREA</aixm:localType>
-          <aixm:name>TOMAR</aixm:name>
+          <aixm:name>TOMAR 16</aixm:name>
           <aixm:designatorICAO>NO</aixm:designatorICAO>
           <aixm:controlType xsi:nil="true" nilReason="unknown"/>
           <aixm:upperLowerSeparation xsi:nil="true" nilReason="inapplicable"/>
@@ -270,8 +278,8 @@
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
                   <aixm:maximumLimitReference xsi:nil="true"/>
-                  <aixm:lowerLimit>GND</aixm:lowerLimit>
-                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                   <aixm:minimumLimit xsi:nil="true"/>
                   <aixm:minimumLimitReference xsi:nil="true"/>
                   <aixm:width xsi:nil="true" nilReason="inapplicable"/>
@@ -285,7 +293,7 @@
                                 <aixm:Curve gml:id="id_d3615095-873e-411f-ba04-656cdf0473dd_2_1_B_5">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
-                                      <gml:pos>49.536134261958004 -30.589193638975622</gml:pos>
+                                      <gml:pos>48.542982441958 -38.637740557873585</gml:pos>
                                       <gml:radius uom="[nmi_i]">10</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
@@ -309,6 +317,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_d3615095-873e-411f-ba04-656cdf0473dd_2_1_B_7">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>SAT</aixm:day>
                   <aixm:startEvent>SR</aixm:startEvent>
                   <aixm:endEvent>SS</aixm:endEvent>
@@ -319,6 +329,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_d3615095-873e-411f-ba04-656cdf0473dd_2_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>SUN</aixm:day>
                   <aixm:startEvent>SR</aixm:startEvent>
                   <aixm:endEvent>SS</aixm:endEvent>
@@ -332,10 +344,10 @@
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_d3615095-873e-411f-ba04-656cdf0473dd_2_1_B_9">
-                  <aixm:upperLimit>CEILING</aixm:upperLimit>
-                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
-                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
-                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:upperLimit uom="M">1500</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
                   <aixm:annotation xsi:nil="true"/>
@@ -350,6 +362,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_d3615095-873e-411f-ba04-656cdf0473dd_1_0_B_11">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>SAT</aixm:day>
                   <aixm:dayTil>SUN</aixm:dayTil>
                   <aixm:startEvent>SS</aixm:startEvent>
@@ -361,6 +375,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_d3615095-873e-411f-ba04-656cdf0473dd_1_0_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>SUN</aixm:day>
                   <aixm:dayTil>SAT</aixm:dayTil>
                   <aixm:startEvent>SS</aixm:startEvent>
@@ -375,10 +391,10 @@
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
                 <aixm:AirspaceLayer gml:id="id_d3615095-873e-411f-ba04-656cdf0473dd_2_1_B_13">
-                  <aixm:upperLimit>CEILING</aixm:upperLimit>
-                  <aixm:upperLimitReference xsi:nil="true" nilReason="inapplicable"/>
-                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
-                  <aixm:lowerLimitReference xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:upperLimit uom="M">1500</aixm:upperLimit>
+                  <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
+                  <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
+                  <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
                   <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
                   <aixm:discreteLevelSeries xsi:nil="true"/>
                   <aixm:annotation xsi:nil="true"/>

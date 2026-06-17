@@ -21,7 +21,7 @@
 
 <!--
   Temporality use case: decommissioning of a feature at the point of a previously communicated permanent update - part 2
-  Features: WorkArea - ecca8219-b6d5-42d9-864f-590de56b3d9c
+  Feature: WorkArea - 498c18be-e40b-4938-8129-6ea6c6e139a8
   
   Valid TimeSlice:
   BASELINE 1/0
@@ -65,8 +65,8 @@
   gml:id="DONLON_EADD_Decommissioning_of_a_Feature_at_the_Point_of_a_Previously_Communicated_Permanent_Update">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.dba4d646-81c9-40f0-a1a1-dcf7a9d56af4">
-      <gml:identifier codeSpace="urn:uuid:">dba4d646-81c9-40f0-a1a1-dcf7a9d56af4</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.498c18be-e40b-4938-8129-6ea6c6e139a8">
+      <gml:identifier codeSpace="urn:uuid:">498c18be-e40b-4938-8129-6ea6c6e139a8</gml:identifier>
       <!-- Decommissioning at the point of previously communicated update -->
       <aixm:timeSlice>
         <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2026-12-20_S2C1">
@@ -87,7 +87,7 @@
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2026-12-28</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:723846ad-ca08-42a7-a32a-aa26acf6228c" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:a0a497c5-8d00-4443-b772-d6a272aa307c" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_3">
               <gml:patches>
@@ -119,6 +119,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_6">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
                   <aixm:endTime>16:00</aixm:endTime>
@@ -136,6 +138,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:dayTil>AFT_WORK_DAY</aixm:dayTil>
                   <aixm:startTime>16:00</aixm:startTime>

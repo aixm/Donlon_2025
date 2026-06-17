@@ -25,18 +25,18 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2025-11-01T00:00:00Z - "unknown"
-  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
   
   Step 1 - Planned decommissioning the feature:
   BASELINE 1/1
-  validTime: 2025-11-01T00:00:00Z - 2026-12-01T00:00:00Z
-  featureLifetime: 2017-07-01T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
+  featureLifetime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
   
   Step 2 - Advancing the decommission date:
   BASELINE 1/2
-  validTime: 2025-11-01T00:00:00Z - 2026-11-08T00:00:00Z
-  featureLifetime: 2017-07-01T00:00:00Z - 2026-11-08T00:00:00Z
+  validTime: 2026-06-20T00:00:00Z - 2026-11-08T00:00:00Z
+  featureLifetime: 2026-06-20T00:00:00Z - 2026-11-08T00:00:00Z
 -->
 
 
@@ -56,14 +56,14 @@
   gml:id="DONLON_Advancement_of_a_Decommissioning">
   
   <message:hasMember>
-    <aixm:Navaid gml:id="uuid.75b83517-5580-4e04-8818-89f00d751482">
-      <gml:identifier codeSpace="urn:uuid:">75b83517-5580-4e04-8818-89f00d751482</gml:identifier>
+    <aixm:Navaid gml:id="uuid.0298582b-c569-4541-93c5-da8806919c26">
+      <gml:identifier codeSpace="urn:uuid:">0298582b-c569-4541-93c5-da8806919c26</gml:identifier>
       <!-- Planned decommissioning the feature -->
       <aixm:timeSlice>
         <aixm:NavaidTimeSlice gml:id="NAV_NDB_RIC_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_46678ca1-6fd2-4d6f-8a53-704a281e82ba_1_1_B_1">
-              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -72,13 +72,13 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_46678ca1-6fd2-4d6f-8a53-704a281e82ba_1_1_B_2">
-              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>NDB</aixm:type>
           <aixm:designator>RIC</aixm:designator>
-          <aixm:name>RICHMAAST</aixm:name>
+          <aixm:name>RICHMAAST-22</aixm:name>
           <aixm:flightChecked>YES</aixm:flightChecked>
           <aixm:purpose>TERMINAL</aixm:purpose>
           <aixm:signalPerformance xsi:nil="true" nilReason="inapplicable"/>
@@ -91,12 +91,12 @@
               <aixm:markerPosition xsi:nil="true" nilReason="inapplicable"/>
               <aixm:providesNavigableLocation>YES</aixm:providesNavigableLocation>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theNavaidEquipment xlink:href="urn:uuid:95418061-d8a1-4872-b04e-6e741a59bcd0" xlink:title="NDB RIC" xlink:type="simple"/>
+              <aixm:theNavaidEquipment xlink:href="urn:uuid:c5080c2a-0d47-4a9e-a9d6-a362c5980405" xlink:title="NDB RIC" xlink:type="simple"/>
             </aixm:NavaidComponent>
           </aixm:navaidEquipment>
           <aixm:location>
             <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_46678ca1-6fd2-4d6f-8a53-704a281e82ba_1_1_B_4">
-              <gml:pos>49.01325264962401 -29.658916993849154</gml:pos>
+              <gml:pos>45.867586329624004 -33.8938876716106</gml:pos>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">100</aixm:elevation>
               <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>
@@ -122,14 +122,14 @@
   </message:hasMember>
   
   <message:hasMember>
-    <aixm:NDB gml:id="uuid.95418061-d8a1-4872-b04e-6e741a59bcd0">
-      <gml:identifier codeSpace="urn:uuid:">95418061-d8a1-4872-b04e-6e741a59bcd0</gml:identifier>
+    <aixm:NDB gml:id="uuid.c5080c2a-0d47-4a9e-a9d6-a362c5980405">
+      <gml:identifier codeSpace="urn:uuid:">c5080c2a-0d47-4a9e-a9d6-a362c5980405</gml:identifier>
       <!-- Planned decommissioning the feature -->
       <aixm:timeSlice>
         <aixm:NDBTimeSlice gml:id="NDB_RIC_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_81b8ffa6-830a-41ae-af97-7f2e9c59cc23_1_1_B_1">
-              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -138,12 +138,12 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_81b8ffa6-830a-41ae-af97-7f2e9c59cc23_1_1_B_2">
-              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:designator>RIC</aixm:designator>
-          <aixm:name>RICHMAAST</aixm:name>
+          <aixm:name>RICHMAAST-22</aixm:name>
           <aixm:emissionClass>NONA2A</aixm:emissionClass>
           <aixm:mobile>NO</aixm:mobile>
           <aixm:magneticVariation xsi:nil="true" nilReason="inapplicable"/>
@@ -152,7 +152,7 @@
           <aixm:flightChecked>YES</aixm:flightChecked>
           <aixm:location>
             <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_81b8ffa6-830a-41ae-af97-7f2e9c59cc23_1_1_B_3">
-              <gml:pos>49.01325264962401 -29.658916993849154</gml:pos>
+              <gml:pos>45.867586329624004 -33.8938876716106</gml:pos>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">100</aixm:elevation>
               <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>

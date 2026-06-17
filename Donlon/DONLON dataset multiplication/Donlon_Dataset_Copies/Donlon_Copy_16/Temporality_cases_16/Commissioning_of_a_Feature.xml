@@ -21,11 +21,11 @@
 
 <!--
   Temporality use case: commissioning of a feature
-  Feature: WorkArea - d23e8947-4092-47b9-b6ee-8a4037a4faa2
+  Feature: WorkArea - f9a8ab32-2a49-40c4-ad4b-e3bf32b84b6f
   
   Initial baseline:
   BASELINE 1/0
-  validTime.beginPosition = featureLifetime.beginPosition = "2026-06-25T00:00:00Z"
+  validTime.beginPosition = featureLifetime.beginPosition = "2026-06-20T00:00:00Z"
 -->
 
 
@@ -45,13 +45,13 @@
   gml:id="DONLON_EADD_Commissioning_of_a_Feature">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.95398b91-cf54-48ec-9a80-0043e8228a25">
-      <gml:identifier codeSpace="urn:uuid:">95398b91-cf54-48ec-9a80-0043e8228a25</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.f9a8ab32-2a49-40c4-ad4b-e3bf32b84b6f">
+      <gml:identifier codeSpace="urn:uuid:">f9a8ab32-2a49-40c4-ad4b-e3bf32b84b6f</gml:identifier>
       <aixm:timeSlice>
-        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_d23e8947-4092-47b9-b6ee-8a4037a4faa2_S1C0">
+        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_f9a8ab32-2a49-40c4-ad4b-e3bf32b84b6f_S1C0">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_62f9755d-6e6d-4523-9e42-f825e5de5ed0_1_0_B_1">
-              <gml:beginPosition>2026-06-25T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -60,13 +60,13 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_62f9755d-6e6d-4523-9e42-f825e5de5ed0_1_0_B_2">
-              <gml:beginPosition>2026-06-25T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2027-01-01</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:df2ca25b-2b48-4569-86e7-f00d700ad88f" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:b97f44f3-b3c0-425e-9dd4-506deeb8049f" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_62f9755d-6e6d-4523-9e42-f825e5de5ed0_1_0_B_3">
               <gml:patches>
@@ -99,6 +99,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_62f9755d-6e6d-4523-9e42-f825e5de5ed0_1_0_B_6">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:startTime>06:00</aixm:startTime>
                   <aixm:endTime>16:00</aixm:endTime>
@@ -115,6 +117,8 @@
               <aixm:timeInterval>
                 <aixm:Timesheet gml:id="id_62f9755d-6e6d-4523-9e42-f825e5de5ed0_1_0_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
                   <aixm:day>WORK_DAY</aixm:day>
                   <aixm:dayTil>AFT_WORK_DAY</aixm:dayTil>
                   <aixm:startTime>16:00</aixm:startTime>

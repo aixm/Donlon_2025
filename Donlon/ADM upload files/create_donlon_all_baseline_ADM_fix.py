@@ -10,14 +10,17 @@ The original XML declaration, leading comments and the root element layout are p
 Corrections
 -----------
 1. translate-limits (GND / UNL / FLOOR / CEILING):
-   - <aixm:upperLimit>UNL</aixm:upperLimit> -> <aixm:upperLimit uom="FL">999</aixm:upperLimit>
-   - <aixm:lowerLimit>GND</aixm:lowerLimit> -> <aixm:lowerLimit uom="M">0</aixm:lowerLimit>, or uom="FT" when the
-        sibling upperLimit is expressed in FT or FL (UNL is translated first, so an UNL sibling counts as FL -> FT).
+   - <aixm:upperLimit>UNL</aixm:upperLimit> -> <aixm:upperLimit uom="FL">999</aixm:upperLimit> with <aixm:upperLimitReference>STD</aixm:upperLimitReference>.
+   - <aixm:lowerLimit>GND</aixm:lowerLimit> -> <aixm:lowerLimit>0</aixm:lowerLimit> with the reference taken from the upper limit
+        (UNL is translated first, so an UNL sibling counts as FL): upper in FL -> 0 FT, lowerLimitReference MSL; upper in FT/M carrying a
+        reference -> 0 with the upper's uom and the same reference.
    - Airspace: <aixm:lowerLimit>FLOOR</aixm:lowerLimit> / <aixm:upperLimit>CEILING</aixm:upperLimit> inside an aixm:AirspaceLayer are
-        replaced with the actual value+uom taken from the airspace's aixm:geometryComponent/aixm:theAirspaceVolume limits.  When the airspace has
-        several volumes / parts, FLOOR takes the lowest lowerLimit and CEILING the highest upperLimit (compared in feet).
-   - RouteSegment: FLOOR / CEILING inside an aixm:AirspaceLayer are replaced with the value+uom of the aixm:lowerLimit / aixm:upperLimit foundd
+        replaced with the actual value+uom AND reference taken from the airspace's aixm:geometryComponent/aixm:theAirspaceVolume limits.  When the airspace has
+        several volumes / parts, FLOOR takes the lowest lowerLimit and CEILING the highest upperLimit (compared in feet), each with its own reference.
+   - RouteSegment: FLOOR / CEILING inside an aixm:AirspaceLayer are replaced with the value+uom and reference of the aixm:lowerLimit / aixm:upperLimit found
         directly under the aixm:RouteSegmentTimeSlice.
+   - Reference normalisation: any upper/lowerLimit in FL still missing its reference gets STD; an upper in FT/M with a reference propagates it
+        to a lower limit that is still missing one.  Existing (non-nil) references (e.g. the MSL vs SFC distinction on FT/M lowers) are never overwritten.
 
 2. fix-timesheets:
    - every aixm:timeInterval/aixm:Timesheet that is not nil but has no aixm:startDate and aixm:endDate gets, immediately after aixm:timeReference:
@@ -52,6 +55,8 @@ GML_IDENTIFIER = '{http://www.opengis.net/gml/3.2}identifier'
 
 UPPER = AIXM + 'upperLimit'
 LOWER = AIXM + 'lowerLimit'
+UPPER_REF = AIXM + 'upperLimitReference'
+LOWER_REF = AIXM + 'lowerLimitReference'
 TIMESHEET = AIXM + 'Timesheet'
 TIME_INTERVAL = AIXM + 'timeInterval'
 TIME_REFERENCE = AIXM + 'timeReference'
@@ -125,6 +130,36 @@ def set_limit(elem, value_text, uom):
             del elem.attrib[attr]
 
 
+def reference_text(ref):
+    """The textual value of an upper/lowerLimitReference, or None if the element
+    is absent, xsi:nil or empty."""
+    if ref is None or ref.get(XSI_NIL) == 'true':
+        return None
+    return ref.text.strip() if (ref.text and ref.text.strip()) else None
+
+
+def ref_missing(ref):
+    """True when an upper/lowerLimitReference carries no usable value."""
+    return reference_text(ref) is None
+
+
+def set_reference(parent, limit_elem, ref_tag, value):
+    """Set the upper/lowerLimitReference (ref_tag) that belongs to limit_elem to
+    value, creating it immediately after limit_elem (so the schema order
+    upperLimit, upperLimitReference / lowerLimit, lowerLimitReference is kept) if
+    it does not exist, and clearing any xsi:nil / nilReason."""
+    ref = parent.find(ref_tag)
+    if ref is None:
+        ref = etree.Element(ref_tag)
+        ref.tail = limit_elem.tail
+        parent.insert(list(parent).index(limit_elem) + 1, ref)
+    ref.text = value
+    for attr in (XSI_NIL, 'nilReason'):
+        if attr in ref.attrib:
+            del ref.attrib[attr]
+    return ref
+
+
 def make_aixm(local_name, text, tail):
     e = etree.Element(AIXM + local_name)
     e.text = text
@@ -172,26 +207,45 @@ def remove_ignored_features(root):
 
 
 def translate_unl(root):
-    """upperLimit UNL -> uom=FL 999.  Done before GND so an UNL sibling makes a
-    GND lowerLimit feet-based."""
+    """upperLimit UNL -> uom=FL 999 with upperLimitReference STD.  Done before GND
+    so an UNL sibling counts as FL and makes a GND lowerLimit 0 FT MSL."""
     n = 0
     for up in root.iter(UPPER):
         if up.text and up.text.strip() == 'UNL':
             set_limit(up, '999', 'FL')
+            parent = up.getparent()
+            if parent is not None:
+                set_reference(parent, up, UPPER_REF, 'STD')
             n += 1
     return n
 
 
 def translate_gnd(root):
-    """lowerLimit GND -> 0, uom=FT if the sibling upperLimit is FT/FL else M."""
+    """lowerLimit GND -> 0 with its reference taken from the upper limit (UNL is
+    already translated to FL by this point):
+      - upper in FL  -> lowerLimit 0 FT, lowerLimitReference MSL;
+      - upper in FT/M carrying a reference -> lowerLimit 0 <upper uom>,
+        lowerLimitReference identical to the upper limit's reference;
+      - otherwise (no usable upper) -> 0 (FT if the upper is FT/FL else M), the
+        reference left untouched for the final reference pass."""
     n = 0
     for low in root.iter(LOWER):
         if not (low.text and low.text.strip() == 'GND'):
             continue
         parent = low.getparent()
-        up = parent.find(UPPER) if parent is not None else None
-        uom = 'FT' if (up is not None and up.get('uom') in ('FT', 'FL')) else 'M'
-        set_limit(low, '0', uom)
+        if parent is None:
+            continue
+        up = parent.find(UPPER)
+        up_uom = up.get('uom') if up is not None else None
+        up_ref = reference_text(parent.find(UPPER_REF))
+        if up_uom == 'FL':
+            set_limit(low, '0', 'FT')
+            set_reference(parent, low, LOWER_REF, 'MSL')
+        elif up_uom in ('FT', 'M') and up_ref is not None:
+            set_limit(low, '0', up_uom)
+            set_reference(parent, low, LOWER_REF, up_ref)
+        else:
+            set_limit(low, '0', 'FT' if up_uom in ('FT', 'FL') else 'M')
         n += 1
     return n
 
@@ -214,11 +268,11 @@ def _gather_volume_extremes(airspace, uuid_map, seen, lowers, uppers):
         if ul is not None and not is_nil(ul):
             f = limit_to_feet(ul.text, ul.get('uom'))
             if f is not None:
-                uppers.append((f, ul.text, ul.get('uom')))
+                uppers.append((f, ul.text, ul.get('uom'), reference_text(vol.find(UPPER_REF))))
         if ll is not None and not is_nil(ll):
             f = limit_to_feet(ll.text, ll.get('uom'))
             if f is not None:
-                lowers.append((f, ll.text, ll.get('uom')))
+                lowers.append((f, ll.text, ll.get('uom'), reference_text(vol.find(LOWER_REF))))
     for dep in airspace.iter(AIXM + 'theAirspace'):
         href = dep.get(XLINK_HREF)
         if href and href.startswith('urn:uuid:'):
@@ -228,12 +282,13 @@ def _gather_volume_extremes(airspace, uuid_map, seen, lowers, uppers):
 
 
 def _airspace_volume_extremes(airspace, uuid_map):
-    """(lowest_lower, highest_upper) as (value_text, uom) over the airspace's own
-    volumes and any referenced contributor airspaces; None when not resolvable."""
+    """(lowest_lower, highest_upper) as (value_text, uom, reference) over the
+    airspace's own volumes and any referenced contributor airspaces; None when
+    not resolvable."""
     lowers, uppers = [], []
     _gather_volume_extremes(airspace, uuid_map, set(), lowers, uppers)
-    lowest = min(lowers)[1:] if lowers else None
-    highest = max(uppers)[1:] if uppers else None
+    lowest = min(lowers, key=lambda t: t[0])[1:] if lowers else None
+    highest = max(uppers, key=lambda t: t[0])[1:] if uppers else None
     return lowest, highest
 
 
@@ -252,7 +307,8 @@ def build_airspace_uuid_map(root):
 
 def substitute_airspace_floor_ceiling(root):
     """Replace FLOOR / CEILING tokens inside each Airspace's AirspaceLayers with
-    the airspace's overall lowest / highest volume limits."""
+    the airspace's overall lowest / highest volume limits, copying that volume
+    limit's reference (upper/lowerLimitReference) onto the layer as well."""
     uuid_map = build_airspace_uuid_map(root)
     replaced = 0
     warnings = []
@@ -267,6 +323,8 @@ def substitute_airspace_floor_ceiling(root):
                     warnings.append((airspace, 'FLOOR'))
                     continue
                 set_limit(low, lowest[0], lowest[1])
+                if lowest[2]:
+                    set_reference(low.getparent(), low, LOWER_REF, lowest[2])
                 replaced += 1
         for up in airspace.iter(UPPER):
             if up.text and up.text.strip() == 'CEILING':
@@ -274,6 +332,8 @@ def substitute_airspace_floor_ceiling(root):
                     warnings.append((airspace, 'CEILING'))
                     continue
                 set_limit(up, highest[0], highest[1])
+                if highest[2]:
+                    set_reference(up.getparent(), up, UPPER_REF, highest[2])
                 replaced += 1
     return replaced, warnings
 
@@ -296,6 +356,8 @@ def substitute_routesegment_floor_ceiling(root):
             continue
         direct_up = ts.find(UPPER)
         direct_low = ts.find(LOWER)
+        direct_up_ref = reference_text(ts.find(UPPER_REF))
+        direct_low_ref = reference_text(ts.find(LOWER_REF))
         for low in rsg.iter(LOWER):
             if low is direct_low:
                 continue
@@ -304,6 +366,8 @@ def substitute_routesegment_floor_ceiling(root):
                     warnings.append((rsg, 'FLOOR'))
                     continue
                 set_limit(low, direct_low.text, direct_low.get('uom'))
+                if direct_low_ref:
+                    set_reference(low.getparent(), low, LOWER_REF, direct_low_ref)
                 replaced += 1
         for up in rsg.iter(UPPER):
             if up is direct_up:
@@ -313,12 +377,57 @@ def substitute_routesegment_floor_ceiling(root):
                     warnings.append((rsg, 'CEILING'))
                     continue
                 set_limit(up, direct_up.text, direct_up.get('uom'))
+                if direct_up_ref:
+                    set_reference(up.getparent(), up, UPPER_REF, direct_up_ref)
                 replaced += 1
     return replaced, warnings
 
 
 # ---------------------------------------------------------------------------
-# 3. Timesheets
+# 3. Limit reference normalisation (FL -> STD; FT/M upper -> lower)
+# ---------------------------------------------------------------------------
+
+# Parents that carry an upper/lowerLimit + reference pair handled by the rules.
+_LIMIT_PARENTS = {
+    'AirspaceLayer', 'AirspaceVolume', 'RouteSegmentTimeSlice',
+    'HoldingPatternTimeSlice',
+}
+
+
+def finalize_limit_references(root):
+    """After the value translations, fill any still-missing upper/lowerLimit
+    reference:
+      - a limit expressed in FL gets reference STD;
+      - when the upper limit is in FT/M and carries a reference, a lower limit
+        still missing its reference inherits the upper limit's reference.
+    Existing (non-nil) references are never overwritten.  Returns
+    (fl_to_std_count, inherited_count)."""
+    fl_std = 0
+    inherited = 0
+    for parent in root.iter():
+        if not isinstance(parent.tag, str):
+            continue
+        if etree.QName(parent).localname not in _LIMIT_PARENTS:
+            continue
+        ul = parent.find(UPPER)
+        ll = parent.find(LOWER)
+        for lim, ref_tag in ((ul, UPPER_REF), (ll, LOWER_REF)):
+            if lim is None or is_nil(lim):
+                continue
+            if lim.get('uom') == 'FL' and ref_missing(parent.find(ref_tag)):
+                set_reference(parent, lim, ref_tag, 'STD')
+                fl_std += 1
+        if (ul is not None and not is_nil(ul) and ul.get('uom') in ('FT', 'M')
+                and ll is not None and not is_nil(ll)):
+            up_ref = reference_text(parent.find(UPPER_REF))
+            if up_ref and ref_missing(parent.find(LOWER_REF)):
+                set_reference(parent, ll, LOWER_REF, up_ref)
+                inherited += 1
+    return fl_std, inherited
+
+
+# ---------------------------------------------------------------------------
+# 4. Timesheets
 # ---------------------------------------------------------------------------
 
 
@@ -392,8 +501,8 @@ def main():
     parser.add_argument('--input', '-i', required=True,
                         help='Path to the input AIXM XML file.')
     parser.add_argument('--output', '-o', default=None,
-                        help='Output path (default: <input>_ADM_upload.xml next to '
-                             'the input).')
+                        help='Output path (default: <input-name>_ADM_upload.xml next '
+                             'to this script).')
     parser.add_argument('--translate-limits', type=_yesno, default=True,
                         metavar='yes/no',
                         help='Translate GND/UNL/FLOOR/CEILING (default yes).')
@@ -406,8 +515,9 @@ def main():
     if not os.path.isfile(args.input):
         parser.error(f"input file not found: {args.input}")
     if args.output is None:
-        stem, ext = os.path.splitext(os.path.abspath(args.input))
-        args.output = f"{stem}_ADM_upload{ext or '.xml'}"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        name, ext = os.path.splitext(os.path.basename(args.input))
+        args.output = os.path.join(script_dir, f"{name}_ADM_upload{ext or '.xml'}")
 
     print("Configuration:")
     print(f"  Input:            {args.input}")
@@ -437,11 +547,14 @@ def main():
         n_gnd = translate_gnd(root)
         n_ase, w_ase = substitute_airspace_floor_ceiling(root)
         n_rsg, w_rsg = substitute_routesegment_floor_ceiling(root)
+        n_fl_std, n_inherited = finalize_limit_references(root)
         print("Limit translation:")
-        print(f"  UNL  upperLimit -> FL 999:            {n_unl}")
-        print(f"  GND  lowerLimit -> 0 (FT/M):          {n_gnd}")
+        print(f"  UNL  upperLimit -> FL 999 STD:        {n_unl}")
+        print(f"  GND  lowerLimit -> 0 (FT/M) + ref:    {n_gnd}")
         print(f"  Airspace FLOOR/CEILING replaced:      {n_ase}")
         print(f"  RouteSegment FLOOR/CEILING replaced:  {n_rsg}")
+        print(f"  FL limits given reference STD:        {n_fl_std}")
+        print(f"  Lower refs inherited from upper:      {n_inherited}")
         for elem, token in (w_ase + w_rsg):
             ident = elem.find('{http://www.opengis.net/gml/3.2}identifier')
             uid = ident.text if ident is not None else '?'

@@ -27,48 +27,48 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2025-11-01T00:00:00Z - "unknown"
-  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
   
   Step 1 - initial decommissioning:
   
   "Decommissioning" TimeSlice:
   BASELINE 1/1
-  validTime: 2025-11-01T00:00:00Z - 2027-05-01T00:00:00Z
-  featureLifetime: 2017-07-01T00:00:00Z - 2027-05-01T00:00:00Z
+  validTime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
+  featureLifetime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
   
   Step 2 - update before decommissioning:
   
   Correcting the "Decommissioning" TimeSlice:
   BASELINE 1/2
-  validTime: 2025-11-01T00:00:00Z - 2027-03-15T00:00:00Z
-  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - 2027-03-15T00:00:00Z
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
   
   Update before the initial decommissioning date: frequency changed to 340KHz
   BASELINE 2/0
   validTime: 2027-03-15T00:00:00Z - "unknown"
-  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
                                                   
   For the Navaid feature:
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2025-11-01T00:00:00Z - "unknown"
-  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
   
   Step 1 - initial decommissioning:
   
   "Decommissioning" TimeSlice:
   BASELINE 1/1
-  validTime: 2025-11-01T00:00:00Z - 2027-05-01T00:00:00Z
-  featureLifetime: 2017-07-01T00:00:00Z - 2027-05-01T00:00:00Z
+  validTime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
+  featureLifetime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
   
   Step 2 - abandoning the decommissioning:
   
   Abandoning the decommissioning:
   BASELINE 1/2
-  validTime: 2025-11-01T00:00:00Z - "unknown"
-  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
+  validTime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
   
   Note: the Navaid feature does not have any data updates with the except of validTime and featureLifetime, so the
   'Abandoning the Decommissioning of a Feature' (SDO compatible workaround #2) case is applied
@@ -91,14 +91,14 @@
   gml:id="DONLON_Update_of_a_Feature_before_a_Future_Decommissioning_Date">
   
   <message:hasMember>
-    <aixm:NDB gml:id="uuid.e978e242-02ab-456d-8497-85e79af1a533">
-      <gml:identifier codeSpace="urn:uuid:">e978e242-02ab-456d-8497-85e79af1a533</gml:identifier>
+    <aixm:NDB gml:id="uuid.05f56098-d1b6-47d5-950c-fc1714a74366">
+      <gml:identifier codeSpace="urn:uuid:">05f56098-d1b6-47d5-950c-fc1714a74366</gml:identifier>
       <!-- "Decommissioning" TimeSlice -->
       <aixm:timeSlice>
         <aixm:NDBTimeSlice gml:id="NDB_WNR_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_b37ac173-df45-4557-96fe-42442a46ddb5_1_1_B_1">
-              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-05-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -107,12 +107,12 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_b37ac173-df45-4557-96fe-42442a46ddb5_1_1_B_2">
-              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-05-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:designator>WNR</aixm:designator>
-          <aixm:name>WICHNOR/SLIPTON</aixm:name>
+          <aixm:name>WICHNOR/SLIPTON-15</aixm:name>
           <aixm:emissionClass>NONA2A</aixm:emissionClass>
           <aixm:mobile>NO</aixm:mobile>
           <aixm:magneticVariation xsi:nil="true" nilReason="inapplicable"/>
@@ -121,7 +121,7 @@
           <aixm:flightChecked>YES</aixm:flightChecked>
           <aixm:location>
             <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_b37ac173-df45-4557-96fe-42442a46ddb5_1_1_B_3">
-              <gml:pos>52.87790475429201 -30.003970753507005</gml:pos>
+              <gml:pos>49.27326020429201 -23.438349151766463</gml:pos>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">60</aixm:elevation>
               <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>
@@ -179,14 +179,14 @@
   </message:hasMember>
   
   <message:hasMember>
-    <aixm:Navaid gml:id="uuid.8e650273-7861-4066-b6ef-696d2f71dcda">
-      <gml:identifier codeSpace="urn:uuid:">8e650273-7861-4066-b6ef-696d2f71dcda</gml:identifier>
+    <aixm:Navaid gml:id="uuid.3e4fe5bf-8ae5-421f-b65f-3bb3c9cca6c3">
+      <gml:identifier codeSpace="urn:uuid:">3e4fe5bf-8ae5-421f-b65f-3bb3c9cca6c3</gml:identifier>
       <!-- "Decommissioning" TimeSlice -->
       <aixm:timeSlice>
         <aixm:NavaidTimeSlice gml:id="NAV_NDB_WNR_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_2bc14342-dc1b-448b-800a-db63961f89af_1_1_B_1">
-              <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-05-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -195,13 +195,13 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_2bc14342-dc1b-448b-800a-db63961f89af_1_1_B_2">
-              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-05-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>NDB</aixm:type>
           <aixm:designator>WNR</aixm:designator>
-          <aixm:name>WICHNOR/SLIPTON</aixm:name>
+          <aixm:name>WICHNOR/SLIPTON-15</aixm:name>
           <aixm:flightChecked>YES</aixm:flightChecked>
           <aixm:purpose>TERMINAL</aixm:purpose>
           <aixm:signalPerformance xsi:nil="true" nilReason="inapplicable"/>
@@ -214,12 +214,12 @@
               <aixm:markerPosition xsi:nil="true" nilReason="inapplicable"/>
               <aixm:providesNavigableLocation>YES</aixm:providesNavigableLocation>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theNavaidEquipment xlink:href="urn:uuid:e978e242-02ab-456d-8497-85e79af1a533" xlink:title="NDB WNR" xlink:type="simple"/>
+              <aixm:theNavaidEquipment xlink:href="urn:uuid:05f56098-d1b6-47d5-950c-fc1714a74366" xlink:title="NDB WNR" xlink:type="simple"/>
             </aixm:NavaidComponent>
           </aixm:navaidEquipment>
           <aixm:location>
             <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_2bc14342-dc1b-448b-800a-db63961f89af_1_1_B_4">
-              <gml:pos>52.87790475429201 -30.003970753507005</gml:pos>
+              <gml:pos>49.27326020429201 -23.438349151766463</gml:pos>
               <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
               <aixm:elevation uom="M">60</aixm:elevation>
               <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>

@@ -69,15 +69,16 @@ The OrganisationAuthority features referenced this way (theOrganisationAuthority
 Donlon_OrganisationAuthority.xml at the top of the output folder, with their begin positions set to --effectiveDateStart, so those references resolve.
 
 Usage examples:
-  python generate_donlon_dataset_copies_v2.py --input Donlon_ALL_Baseline.xml --num-copies 26 --radius-nm 25 --effectiveDateStart 2026-06-02T00:00:00Z --temporality-cases-dir <path>
-  python generate_donlon_dataset_copies_v2.py --num-copies 26 --radius-nm 25 --exc-airspace-types AWY A --exc-features EAV12 --effectiveDateStart 2026-06-02T00:00:00Z --timeOffset 1-00-00 --temporality-cases-dir <path>
+  python generate_donlon_dataset_copies_v2.py --input Donlon_ALL_Baseline.xml --num-copies 26 --radius-nm 40 --effectiveDateStart 2026-06-02T00:00:00Z --temporality-cases-dir <path> --apply-ADM-fix yes
+  python generate_donlon_dataset_copies_v2.py --num-copies 26 --radius-nm 40 --exc-airspace-types AWY A --exc-features EAV4 --effectiveDateStart 2026-06-02T00:00:00Z --timeOffset 1-00-00 --temporality-cases-dir <path>
 
 Input parameters:
 --input -> input AIXM XML file path
 --output -> (optional) output folder (default: Donlon_Dataset_Copies next to the script)
 --num-copies -> number of copies (default 26); they fill a fixed 6 x 5 grid from the top-left towards the right and down, the partial last row centred; must be between 1 and 26 (one designator letter per copy)
---radius-nm -> selection radius around the TMA polygon edge (default 25 NM)
+--radius-nm -> selection radius around the TMA polygon edge (default 40 NM)
 --temporality-cases-dir -> (optional) folder of temporality use-case templates replicated into every Donlon_Copy_NN as Temporality_cases_NN (default: EAD-SDD_temporality_cases next to the input; skipped if absent)
+--apply-ADM-fix -> (optional) yes/no (default no); when yes, apply the upper/lower limit (UNL/GND/FLOOR/CEILING + upper/lowerLimitReference) and Timesheet startDate/endDate corrections (same logic as create_donlon_all_baseline_ADM_fix.py, embedded so this script is standalone) to the source before copying AND to every replicated temporality use-case file, so the copies and their temporality cases inherit them (feature removal is not applied)
 """
 
 import argparse
@@ -365,6 +366,18 @@ POSITION_OVERRIDES = {
     '9481f274-f05b-4c00-9017-eae75d33c45b': (53.00298026, -32.83127779),
     # AeronauticalGroundLight SIBY (AWY_BCN) -> inside the TMA area
     'a552aba9-aed1-452f-a50e-347281817f96': (51.85598895, -32.41100662),
+    # Navaid NDB RIC RICHMAAST -> inside the TMA area
+    '75b83517-5580-4e04-8818-89f00d751482': (52.84266701, -31.34571581),
+    # NDB RIC RICHMAAST (NavaidEquipment of the Navaid above) -> same position
+    '95418061-d8a1-4872-b04e-6e741a59bcd0': (52.84266701, -31.34571581),
+    # Airspace EAV11 ULENI (HANG GLIDING AREA) circle centre -> inside the TMA area
+    'd9bde2f0-a97f-40d5-83f4-de5c711473ab': (51.67928152, -32.58698181),
+    # Airspace EAV10 TOMAR circle centre -> inside the TMA area
+    'df7b7fab-5508-44c3-802b-46cbafc75091': (53.17573707, -32.61630306),
+    # Navaid NDB WNR WICHNOR/SLIPTON -> inside the TMA area
+    '8e650273-7861-4066-b6ef-696d2f71dcda': (51.56368878, -31.62426763),
+    # NDB WNR WICHNOR/SLIPTON (NavaidEquipment of the Navaid above) -> same position
+    'e978e242-02ab-456d-8497-85e79af1a533': (51.56368878, -31.62426763),
 }
 
 GML_IDENTIFIER = '{http://www.opengis.net/gml/3.2}identifier'
@@ -385,6 +398,9 @@ TEMPORALITY_OUTPUT_DIRNAME = 'Temporality_cases'
 # gets a fresh random gml:identifier, its xlink:href references are still
 # remapped, and its begin positions are set to the copy set's start time.
 TEMPORALITY_NEW_FEATURE_FILES = {'Commissioning_of_a_Feature.xml'}
+# Baseline initial start date used throughout the temporality templates; it is
+# find/replaced with each copy's start date in the generated temporality files.
+TEMPORALITY_BASELINE_START = '2025-11-01T00:00:00Z'
 
 
 def apply_position_overrides(root):
@@ -1478,7 +1494,7 @@ def temporality_output_filename(template_basename):
 
 def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                             orig_to_clone, anchor_lon, target_lon, lat_offset,
-                            lon_scale, copy_begin=None):
+                            lon_scale, copy_begin=None, apply_adm_fix=False):
     """
     Replicate the temporality use-case templates into
     `copy_dir/Temporality_cases_NN/`, one file per template.  Multi-part template
@@ -1498,7 +1514,19 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
     New-feature files (TEMPORALITY_NEW_FEATURE_FILES) hold a feature absent from
     the baseline: it gets a fresh random gml:id / gml:identifier, its xlink:href
     references are still remapped, and the seq=1 begin positions are set to the
-    copy set's start time (copy_begin).
+    copy set's start time (copy_begin).  That fresh UUID is remembered for the
+    copy, so a later normal file that updates the same brand-new feature (e.g. the
+    Decommissioning-within-a-Committed-Baseline case updating the Commissioning
+    case) reuses it and stays consistent instead of being reported as unmapped.
+
+    When apply_adm_fix is True, the same limit (UNL/GND/FLOOR/CEILING +
+    references) and Timesheet startDate/endDate corrections applied to the copied
+    baseline are also applied to each template before remapping.
+
+    The leading comment of each generated file is updated to match the copy: the
+    baseline initial start date (TEMPORALITY_BASELINE_START) is find/replaced with
+    the copy's start date, and every feature's original UUID is replaced with its
+    per-copy UUID (e.g. the WorkArea UUID quoted in the work-area scenarios).
 
     Returns (files_written, warnings) where warnings is a list of
     (template_filename, original_uuid) for features that have no clone.
@@ -1514,6 +1542,13 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
     out_dir = os.path.join(copy_dir, f'{TEMPORALITY_OUTPUT_DIRNAME}_{copy_num:02d}')
     os.makedirs(out_dir, exist_ok=True)
 
+    # UUID assigned to each newly-commissioned feature (template UUID -> per-copy
+    # UUID), shared across the templates of this copy so that a later file
+    # referring to the same brand-new feature reuses its UUID.  Templates are
+    # processed in sorted order, so Commissioning_of_a_Feature.xml is handled
+    # before the Decommissioning_..._Committed_Baseline.xml that updates it.
+    shared_new_uuids = {}
+
     warnings = []
     written = 0
     for base in templates:
@@ -1523,7 +1558,14 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
             orig_text = fh.read()
         tree = etree.parse(template_path)
         root = tree.getroot()
+
+        # Same limit/timesheet corrections as the copied baseline features, so
+        # the temporality use-case features stay consistent with their clones.
+        if apply_adm_fix:
+            run_adm_fixes(root)
+
         date_map = {}  # original begin-position date -> new date (for the comment)
+        comment_remap = {}  # original feature UUID -> per-copy UUID (for the comment)
 
         for member in root.findall('message:hasMember', NSMAP):
             feat = _find_member_feature(member)
@@ -1541,10 +1583,9 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                     pos.text = f"{lat} {lon}"
             transform_all_coordinates(feat, anchor_lon, target_lon, lat_offset, lon_scale)
 
-            if is_new_feature:
-                # Brand-new feature: fresh random identity, remap references, set
-                # the seq=1 begin positions to the copy set start time.
-                new_uuid = generate_new_uuid()
+            def _set_new_identity(new_uuid):
+                """Assign a brand-new identity to feat, remap references and set the
+                seq=1 begin positions to the copy set start time (copy_begin)."""
                 feat.set(GML_ID, f'uuid.{new_uuid}')
                 ident = feat.find('gml:identifier', NSMAP)
                 if ident is not None:
@@ -1554,12 +1595,29 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                     tag = ts.tag
                     if isinstance(tag, str) and 'TimeSlice' in tag and ts is not feat:
                         _set_seq1_begin_positions(ts, copy_begin, copy_begin, date_map)
+
+            if is_new_feature:
+                # Brand-new feature: fresh identity, recorded so a later file that
+                # updates the same feature reuses this UUID.
+                new_uuid = generate_new_uuid()
+                shared_new_uuids[old_uuid] = new_uuid
+                _set_new_identity(new_uuid)
+                comment_remap[old_uuid] = new_uuid
                 continue
 
             new_uuid = uuid_map.get(old_uuid)
             clone_info = orig_to_clone.get(old_uuid)
             if new_uuid is None or clone_info is None:
-                warnings.append((base, old_uuid))
+                # No baseline clone.  If this is the same brand-new feature created
+                # by a new-feature file (e.g. the Commissioning case), reuse that
+                # UUID so the two files stay consistent; otherwise it is genuinely
+                # unmapped and left untouched.
+                if old_uuid in shared_new_uuids:
+                    reused = shared_new_uuids[old_uuid]
+                    _set_new_identity(reused)
+                    comment_remap[old_uuid] = reused
+                else:
+                    warnings.append((base, old_uuid))
                 continue
             _clone_type, clone_elem = clone_info
 
@@ -1568,6 +1626,7 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
             ident = feat.find('gml:identifier', NSMAP)
             if ident is not None:
                 ident.text = new_uuid
+            comment_remap[old_uuid] = new_uuid
 
             # 2. Remap every xlink:href urn:uuid: reference.
             update_xlink_refs(feat, uuid_map)
@@ -1608,12 +1667,385 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
         else:
             out_text = body_text
 
+        # Update the leading comment (and any remaining body occurrences) to match
+        # this copy: shift the baseline initial start date to the copy's start
+        # date, and reflect each feature's per-copy UUID (e.g. the WorkArea UUID in
+        # the work-area scenarios).
+        if copy_begin:
+            out_text = out_text.replace(TEMPORALITY_BASELINE_START, copy_begin)
+        for old_u, new_u in comment_remap.items():
+            out_text = out_text.replace(old_u, new_u)
+
         out_path = os.path.join(out_dir, temporality_output_filename(base))
         with open(out_path, 'w', encoding='utf-8', newline='\n') as fh:
             fh.write(out_text)
         written += 1
 
     return written, warnings
+
+
+def _yesno(value):
+    v = value.strip().lower()
+    if v in ('yes', 'y', 'true', '1'):
+        return True
+    if v in ('no', 'n', 'false', '0'):
+        return False
+    raise argparse.ArgumentTypeError(f"expected yes/no, got '{value}'")
+
+
+# ---------------------------------------------------------------------------
+# Optional ADM fixes (self-contained; mirrors create_donlon_all_baseline_ADM_fix.py)
+# ---------------------------------------------------------------------------
+# Limit (UNL/GND/FLOOR/CEILING + upper/lowerLimitReference) and Timesheet
+# startDate/endDate corrections, embedded here so this script runs standalone in
+# a repository without depending on the ADM-fix tool.  The ADM-fix tool's feature
+# removal is intentionally NOT included.
+
+MSG_NS = '{http://www.aixm.aero/schema/5.1.1/message}'
+XSI_NIL = '{http://www.w3.org/2001/XMLSchema-instance}nil'
+ADM_UPPER = AIXM_NS + 'upperLimit'
+ADM_LOWER = AIXM_NS + 'lowerLimit'
+ADM_UPPER_REF = AIXM_NS + 'upperLimitReference'
+ADM_LOWER_REF = AIXM_NS + 'lowerLimitReference'
+ADM_TIMESHEET = AIXM_NS + 'Timesheet'
+ADM_TIME_INTERVAL = AIXM_NS + 'timeInterval'
+ADM_TIME_REFERENCE = AIXM_NS + 'timeReference'
+ADM_START_DATE = AIXM_NS + 'startDate'
+ADM_END_DATE = AIXM_NS + 'endDate'
+FT_PER_M = 1.0 / 0.3048
+
+# Parents that carry an upper/lowerLimit + reference pair handled by the rules.
+_LIMIT_PARENTS = {
+    'AirspaceLayer', 'AirspaceVolume', 'RouteSegmentTimeSlice',
+    'HoldingPatternTimeSlice',
+}
+
+
+def _adm_is_nil(elem):
+    return elem is not None and elem.get(XSI_NIL) == 'true'
+
+
+def _adm_limit_to_feet(value_text, uom):
+    """Convert a limit value to feet for comparison, or None if not numeric."""
+    try:
+        v = float(value_text)
+    except (TypeError, ValueError):
+        return None
+    if uom == 'FL':
+        return v * 100.0
+    if uom == 'FT':
+        return v
+    if uom == 'M':
+        return v * FT_PER_M
+    return None
+
+
+def _adm_set_limit(elem, value_text, uom):
+    """Set a limit element's text/uom and clear any xsi:nil / nilReason."""
+    elem.text = value_text
+    if uom:
+        elem.set('uom', uom)
+    elif 'uom' in elem.attrib:
+        del elem.attrib['uom']
+    for attr in (XSI_NIL, 'nilReason'):
+        if attr in elem.attrib:
+            del elem.attrib[attr]
+
+
+def _adm_reference_text(ref):
+    """Textual value of an upper/lowerLimitReference, or None if absent, nil or
+    empty."""
+    if ref is None or ref.get(XSI_NIL) == 'true':
+        return None
+    return ref.text.strip() if (ref.text and ref.text.strip()) else None
+
+
+def _adm_ref_missing(ref):
+    return _adm_reference_text(ref) is None
+
+
+def _adm_set_reference(parent, limit_elem, ref_tag, value):
+    """Set the upper/lowerLimitReference (ref_tag) belonging to limit_elem to
+    value, creating it immediately after limit_elem (keeping schema order) if it
+    does not exist, and clearing any xsi:nil / nilReason."""
+    ref = parent.find(ref_tag)
+    if ref is None:
+        ref = etree.Element(ref_tag)
+        ref.tail = limit_elem.tail
+        parent.insert(list(parent).index(limit_elem) + 1, ref)
+    ref.text = value
+    for attr in (XSI_NIL, 'nilReason'):
+        if attr in ref.attrib:
+            del ref.attrib[attr]
+    return ref
+
+
+def _adm_make_aixm(local_name, text, tail):
+    e = etree.Element(AIXM_NS + local_name)
+    e.text = text
+    e.tail = tail
+    return e
+
+
+def adm_translate_unl(root):
+    """upperLimit UNL -> uom=FL 999 with upperLimitReference STD.  Done before GND
+    so an UNL sibling counts as FL and makes a GND lowerLimit 0 FT MSL."""
+    n = 0
+    for up in root.iter(ADM_UPPER):
+        if up.text and up.text.strip() == 'UNL':
+            _adm_set_limit(up, '999', 'FL')
+            parent = up.getparent()
+            if parent is not None:
+                _adm_set_reference(parent, up, ADM_UPPER_REF, 'STD')
+            n += 1
+    return n
+
+
+def adm_translate_gnd(root):
+    """lowerLimit GND -> 0 with its reference taken from the upper limit (UNL is
+    already translated to FL by this point):
+      - upper in FL  -> lowerLimit 0 FT, lowerLimitReference MSL;
+      - upper in FT/M carrying a reference -> lowerLimit 0 <upper uom>,
+        lowerLimitReference identical to the upper limit's reference;
+      - otherwise (no usable upper) -> 0 (FT if the upper is FT/FL else M)."""
+    n = 0
+    for low in root.iter(ADM_LOWER):
+        if not (low.text and low.text.strip() == 'GND'):
+            continue
+        parent = low.getparent()
+        if parent is None:
+            continue
+        up = parent.find(ADM_UPPER)
+        up_uom = up.get('uom') if up is not None else None
+        up_ref = _adm_reference_text(parent.find(ADM_UPPER_REF))
+        if up_uom == 'FL':
+            _adm_set_limit(low, '0', 'FT')
+            _adm_set_reference(parent, low, ADM_LOWER_REF, 'MSL')
+        elif up_uom in ('FT', 'M') and up_ref is not None:
+            _adm_set_limit(low, '0', up_uom)
+            _adm_set_reference(parent, low, ADM_LOWER_REF, up_ref)
+        else:
+            _adm_set_limit(low, '0', 'FT' if up_uom in ('FT', 'FL') else 'M')
+        n += 1
+    return n
+
+
+def _adm_gather_volume_extremes(airspace, uuid_map, seen, lowers, uppers):
+    """Collect numeric AirspaceVolume upper/lower limits (with their references)
+    from an airspace, recursing into referenced airspaces (the multi-part case)."""
+    if id(airspace) in seen:
+        return
+    seen.add(id(airspace))
+    for vol in airspace.iter(AIXM_NS + 'AirspaceVolume'):
+        ul = vol.find(ADM_UPPER)
+        ll = vol.find(ADM_LOWER)
+        if ul is not None and not _adm_is_nil(ul):
+            f = _adm_limit_to_feet(ul.text, ul.get('uom'))
+            if f is not None:
+                uppers.append((f, ul.text, ul.get('uom'),
+                               _adm_reference_text(vol.find(ADM_UPPER_REF))))
+        if ll is not None and not _adm_is_nil(ll):
+            f = _adm_limit_to_feet(ll.text, ll.get('uom'))
+            if f is not None:
+                lowers.append((f, ll.text, ll.get('uom'),
+                               _adm_reference_text(vol.find(ADM_LOWER_REF))))
+    for dep in airspace.iter(AIXM_NS + 'theAirspace'):
+        href = dep.get(XLINK_HREF)
+        if href and href.startswith('urn:uuid:'):
+            ref = uuid_map.get(href[len('urn:uuid:'):])
+            if ref is not None:
+                _adm_gather_volume_extremes(ref, uuid_map, seen, lowers, uppers)
+
+
+def _adm_airspace_volume_extremes(airspace, uuid_map):
+    """(lowest_lower, highest_upper) as (value_text, uom, reference); None when
+    not resolvable."""
+    lowers, uppers = [], []
+    _adm_gather_volume_extremes(airspace, uuid_map, set(), lowers, uppers)
+    lowest = min(lowers, key=lambda t: t[0])[1:] if lowers else None
+    highest = max(uppers, key=lambda t: t[0])[1:] if uppers else None
+    return lowest, highest
+
+
+def _adm_build_airspace_uuid_map(root):
+    uuid_map = {}
+    for member in root.findall(MSG_NS + 'hasMember'):
+        airspace = member.find(AIXM_NS + 'Airspace')
+        if airspace is None:
+            continue
+        ident = airspace.find(GML_IDENTIFIER)
+        if ident is not None and ident.text:
+            uuid_map[ident.text.strip()] = airspace
+    return uuid_map
+
+
+def adm_substitute_airspace_floor_ceiling(root):
+    """Replace FLOOR / CEILING tokens in each Airspace's AirspaceLayers with the
+    airspace's lowest / highest volume limits, copying that volume limit's
+    reference onto the layer too."""
+    uuid_map = _adm_build_airspace_uuid_map(root)
+    replaced = 0
+    warnings = []
+    for member in root.findall(MSG_NS + 'hasMember'):
+        airspace = member.find(AIXM_NS + 'Airspace')
+        if airspace is None:
+            continue
+        lowest, highest = _adm_airspace_volume_extremes(airspace, uuid_map)
+        for low in airspace.iter(ADM_LOWER):
+            if low.text and low.text.strip() == 'FLOOR':
+                if lowest is None:
+                    warnings.append((airspace, 'FLOOR'))
+                    continue
+                _adm_set_limit(low, lowest[0], lowest[1])
+                if lowest[2]:
+                    _adm_set_reference(low.getparent(), low, ADM_LOWER_REF, lowest[2])
+                replaced += 1
+        for up in airspace.iter(ADM_UPPER):
+            if up.text and up.text.strip() == 'CEILING':
+                if highest is None:
+                    warnings.append((airspace, 'CEILING'))
+                    continue
+                _adm_set_limit(up, highest[0], highest[1])
+                if highest[2]:
+                    _adm_set_reference(up.getparent(), up, ADM_UPPER_REF, highest[2])
+                replaced += 1
+    return replaced, warnings
+
+
+def adm_substitute_routesegment_floor_ceiling(root):
+    """Replace FLOOR / CEILING tokens in each RouteSegment's AirspaceLayers with
+    the limits (value+uom+reference) found directly under the RouteSegmentTimeSlice."""
+    replaced = 0
+    warnings = []
+    for member in root.findall(MSG_NS + 'hasMember'):
+        rsg = member.find(AIXM_NS + 'RouteSegment')
+        if rsg is None:
+            continue
+        ts = None
+        for child in rsg.iter():
+            if isinstance(child.tag, str) and 'RouteSegmentTimeSlice' in child.tag:
+                ts = child
+                break
+        if ts is None:
+            continue
+        direct_up = ts.find(ADM_UPPER)
+        direct_low = ts.find(ADM_LOWER)
+        direct_up_ref = _adm_reference_text(ts.find(ADM_UPPER_REF))
+        direct_low_ref = _adm_reference_text(ts.find(ADM_LOWER_REF))
+        for low in rsg.iter(ADM_LOWER):
+            if low is direct_low:
+                continue
+            if low.text and low.text.strip() == 'FLOOR':
+                if direct_low is None or _adm_is_nil(direct_low) or not direct_low.text:
+                    warnings.append((rsg, 'FLOOR'))
+                    continue
+                _adm_set_limit(low, direct_low.text, direct_low.get('uom'))
+                if direct_low_ref:
+                    _adm_set_reference(low.getparent(), low, ADM_LOWER_REF, direct_low_ref)
+                replaced += 1
+        for up in rsg.iter(ADM_UPPER):
+            if up is direct_up:
+                continue
+            if up.text and up.text.strip() == 'CEILING':
+                if direct_up is None or _adm_is_nil(direct_up) or not direct_up.text:
+                    warnings.append((rsg, 'CEILING'))
+                    continue
+                _adm_set_limit(up, direct_up.text, direct_up.get('uom'))
+                if direct_up_ref:
+                    _adm_set_reference(up.getparent(), up, ADM_UPPER_REF, direct_up_ref)
+                replaced += 1
+    return replaced, warnings
+
+
+def adm_finalize_limit_references(root):
+    """Fill any still-missing upper/lowerLimit reference: a limit in FL gets STD;
+    an upper in FT/M carrying a reference is propagated to a lower limit still
+    missing one.  Existing (non-nil) references are never overwritten.  Returns
+    (fl_to_std_count, inherited_count)."""
+    fl_std = 0
+    inherited = 0
+    for parent in root.iter():
+        if not isinstance(parent.tag, str):
+            continue
+        if etree.QName(parent).localname not in _LIMIT_PARENTS:
+            continue
+        ul = parent.find(ADM_UPPER)
+        ll = parent.find(ADM_LOWER)
+        for lim, ref_tag in ((ul, ADM_UPPER_REF), (ll, ADM_LOWER_REF)):
+            if lim is None or _adm_is_nil(lim):
+                continue
+            if lim.get('uom') == 'FL' and _adm_ref_missing(parent.find(ref_tag)):
+                _adm_set_reference(parent, lim, ref_tag, 'STD')
+                fl_std += 1
+        if (ul is not None and not _adm_is_nil(ul) and ul.get('uom') in ('FT', 'M')
+                and ll is not None and not _adm_is_nil(ll)):
+            up_ref = _adm_reference_text(parent.find(ADM_UPPER_REF))
+            if up_ref and _adm_ref_missing(parent.find(ADM_LOWER_REF)):
+                _adm_set_reference(parent, ll, ADM_LOWER_REF, up_ref)
+                inherited += 1
+    return fl_std, inherited
+
+
+def adm_fix_timesheets(root):
+    """Add startDate 01-01 / endDate 31-12 (after timeReference) to every non-nil
+    Timesheet that lacks them."""
+    n = 0
+    for ti in root.iter(ADM_TIME_INTERVAL):
+        ts = ti.find(ADM_TIMESHEET)
+        if ts is None:
+            continue
+        has_sd = ts.find(ADM_START_DATE) is not None
+        has_ed = ts.find(ADM_END_DATE) is not None
+        if has_sd and has_ed:
+            continue
+        tref = ts.find(ADM_TIME_REFERENCE)
+        if tref is None:
+            continue
+        tail = tref.tail
+        anchor = tref
+        if not has_sd:
+            sd = _adm_make_aixm('startDate', '01-01', tail)
+            ts.insert(list(ts).index(anchor) + 1, sd)
+            anchor = sd
+        if not has_ed:
+            ed = _adm_make_aixm('endDate', '31-12', tail)
+            ts.insert(list(ts).index(anchor) + 1, ed)
+        n += 1
+    return n
+
+
+def run_adm_fixes(root):
+    """Apply every ADM limit + timesheet correction to root.  Returns
+    (counts_dict, floor_ceiling_warnings)."""
+    n_unl = adm_translate_unl(root)
+    n_gnd = adm_translate_gnd(root)
+    n_ase, w_ase = adm_substitute_airspace_floor_ceiling(root)
+    n_rsg, w_rsg = adm_substitute_routesegment_floor_ceiling(root)
+    n_fl, n_inh = adm_finalize_limit_references(root)
+    n_ts = adm_fix_timesheets(root)
+    counts = {'unl': n_unl, 'gnd': n_gnd, 'ase': n_ase, 'rsg': n_rsg,
+              'fl': n_fl, 'inh': n_inh, 'ts': n_ts}
+    return counts, (w_ase + w_rsg)
+
+
+def apply_adm_fixes(root):
+    """Apply the ADM limit/timesheet corrections to the source tree before
+    features are extracted and cloned, so every copy inherits them, and print a
+    summary."""
+    print("Applying ADM fixes (limits + timesheets) to the source ...")
+    counts, warnings = run_adm_fixes(root)
+    print(f"  UNL upperLimit -> FL 999 STD:        {counts['unl']}")
+    print(f"  GND lowerLimit -> 0 + reference:     {counts['gnd']}")
+    print(f"  Airspace FLOOR/CEILING replaced:     {counts['ase']}")
+    print(f"  RouteSegment FLOOR/CEILING replaced: {counts['rsg']}")
+    print(f"  FL limits given reference STD:       {counts['fl']}")
+    print(f"  Lower refs inherited from upper:     {counts['inh']}")
+    print(f"  Timesheets startDate/endDate added:  {counts['ts']}")
+    for elem, token in warnings:
+        ident = elem.find(GML_IDENTIFIER)
+        uid = ident.text if ident is not None else '?'
+        print(f"  WARNING: could not resolve {token} for {uid}")
+    print()
 
 
 # ---------------------------------------------------------------------------
@@ -1656,6 +2088,12 @@ def main():
                              f'{TEMPORALITY_OUTPUT_DIRNAME}_NN (default: '
                              f'{TEMPORALITY_CASES_DIRNAME} next to the input '
                              'file; skipped if not found).')
+    parser.add_argument('--apply-ADM-fix', dest='apply_adm_fix', type=_yesno,
+                        default=False, metavar='yes/no',
+                        help='Apply the same limit (UNL/GND/FLOOR/CEILING + '
+                             'references) and Timesheet startDate/endDate '
+                             'corrections as create_donlon_all_baseline_ADM_fix.py '
+                             'to the source before copying (default no).')
     args = parser.parse_args()
 
     # Default output folder: Donlon_Dataset_Copies next to this script (version_2),
@@ -1702,6 +2140,7 @@ def main():
     tc_found = os.path.isdir(temporality_dir)
     print(f"  Temporality cases: {temporality_dir}"
           f"{'' if tc_found else '  (not found; skipped)'}")
+    print(f"  Apply ADM fix: {'yes' if args.apply_adm_fix else 'no'}")
     if args.exc_features:
         print(f"  Excluded feature designators: {', '.join(sorted(args.exc_features))}")
     if effective_start:
@@ -1716,6 +2155,12 @@ def main():
     print(f"Parsing {args.input} ...")
     tree = etree.parse(args.input)
     root = tree.getroot()
+
+    # Optionally apply the ADM limit/timesheet corrections to the whole source
+    # tree first, so every cloned copy inherits them.  Done before extraction so
+    # FLOOR/CEILING can resolve against all airspace volumes in the input.
+    if args.apply_adm_fix:
+        apply_adm_fixes(root)
 
     # Override the location of selected features so they fall inside the TMA
     # selection and get cloned with the rest of the scene.
@@ -1938,7 +2383,8 @@ def main():
         anchor_lon, target_lon, lat_offset, lon_scale = transform_params
         tc_written, tc_warnings = write_temporality_cases(
             temporality_dir, copy_dir, copy_num, uuid_map, orig_to_clone,
-            anchor_lon, target_lon, lat_offset, lon_scale, copy_begin=copy_begin)
+            anchor_lon, target_lon, lat_offset, lon_scale, copy_begin=copy_begin,
+            apply_adm_fix=args.apply_adm_fix)
         temporality_total += tc_written
         temporality_warnings.extend(tc_warnings)
         tc_info = (f" + {TEMPORALITY_OUTPUT_DIRNAME}_{copy_num:02d}/ ({tc_written} file(s))"

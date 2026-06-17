@@ -42,7 +42,7 @@ configurable radius (default 30 NM) of the TMA polygon edge:
 
 Multiplied feature types
 ------------------------
-  - Donlon AirportHeliport and associated features
+  - AirportHeliport and associated features
     - Runway, RunwayDirection, RunwayElement, RunwayCentrelinePoint, TouchDownLiftOff
     - Taxiway, TaxiwayElement
     - Apron, ApronElement, AircraftStand

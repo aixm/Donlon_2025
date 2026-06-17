@@ -83,8 +83,9 @@ IGNORED_FEATURE_UUIDS = {
     '709c64da-44e4-47c7-9d57-326a04cbdd3c': 'OrganisationAuthority STATE (REPUBLIC OF DONLON)',
     'c225ae5c-540f-4a48-8867-809b393b2407': 'OrganisationAuthority DONLON CIVIL AVIATION ADMINISTRATION',
     'f4d5e4d4-d84a-481f-b9e3-b359e42c0dff': 'Airspace AMSWELL FIR',
-    'b75a32cf-65da-4028-81f2-70ad30072736': 'UIR airspace',
-    '6fa9b51a-ea66-40a7-a23a-058c3a034719': 'NOF Unit',
+    'b75a32cf-65da-4028-81f2-70ad30072736': 'Airspace YORK NEW FIR',
+    '6fa9b51a-ea66-40a7-a23a-058c3a034719': 'UIR airspace',
+    '895b61a8-e961-4ac1-9994-70c42d4ebf86': 'NOF Unit',
 }
 
 
@@ -391,7 +392,7 @@ def main():
     parser.add_argument('--input', '-i', required=True,
                         help='Path to the input AIXM XML file.')
     parser.add_argument('--output', '-o', default=None,
-                        help='Output path (default: <input>_ADM_fix.xml next to '
+                        help='Output path (default: <input>_ADM_upload.xml next to '
                              'the input).')
     parser.add_argument('--translate-limits', type=_yesno, default=True,
                         metavar='yes/no',
@@ -406,7 +407,7 @@ def main():
         parser.error(f"input file not found: {args.input}")
     if args.output is None:
         stem, ext = os.path.splitext(os.path.abspath(args.input))
-        args.output = f"{stem}_ADM_fix{ext or '.xml'}"
+        args.output = f"{stem}_ADM_upload{ext or '.xml'}"
 
     print("Configuration:")
     print(f"  Input:            {args.input}")

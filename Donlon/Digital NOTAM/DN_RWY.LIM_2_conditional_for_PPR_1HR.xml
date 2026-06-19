@@ -92,7 +92,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:year>2025</event:year>
               <event:issued>2025-12-22T23:40:48Z</event:issued>
               <event:processed>YES</event:processed>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EADD NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QFPAP</event:selectionCode>
@@ -108,7 +108,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:effectiveEnd>2512232359</event:effectiveEnd>
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
-              <event:text>FATO 13/31 available for not scheduled hel all operations PPR 1 HR request to be sent to AD administration.</event:text>
+              <event:text lang="ENG">FATO 13/31 available for not scheduled hel all operations PPR 1 HR request to be sent to AD administration.</event:text>
             </event:NOTAM>
           </event:notification>
           <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
@@ -125,7 +125,7 @@ Editorial note: this license is an instance of the BSD license template as provi
       <aixm:timeSlice>
         <aixm:RunwayDirectionTimeSlice gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_1">
+            <gml:TimePeriod gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_1">
               <gml:beginPosition>2025-12-23T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2025-12-24T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -135,27 +135,32 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the fato direction -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_2">
-              <aixm:timeInterval xsi:nil="true"/>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true" nilReason="other:H24"/>
               <aixm:annotation xsi:nil="true"/>
               <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_3">
-                  <aixm:type>FORBID</aixm:type>
+                <aixm:ManoeuvringAreaUsage gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_4">
+                    <aixm:ConditionCombination gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_4">
                       <aixm:timeInterval xsi:nil="true"/>
                       <aixm:annotation xsi:nil="true"/>
                       <aixm:specialDateAuthority xsi:nil="true"/>
-                      <aixm:logicalOperator>NOT</aixm:logicalOperator>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
                       <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_5">
-                          <aixm:aircraftLandingCategory>H</aixm:aircraftLandingCategory>
+                        <aixm:AircraftCharacteristic gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_5">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_6">
+                          <aixm:type>TILT_WING</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                       <aixm:flight xsi:nil="true"/>
@@ -170,23 +175,23 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:availability>
           <!-- The availability status of the fato direction during the event -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_6">
+            <aixm:ManoeuvringAreaAvailability gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_7">
               <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_7">
+                <aixm:ManoeuvringAreaUsage gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_8">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission uom="HR">1</aixm:priorPermission> <!-- Prior Permission -->
                   <!-- The usage limitation -->
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_8">
+                    <aixm:ConditionCombination gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_9">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_9">
+                        <aixm:AircraftCharacteristic gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_10">
                           <aixm:type>HELICOPTER</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_10">
+                        <aixm:FlightCharacteristic gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_11">
                           <aixm:purpose>NON_SCHEDULED</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
@@ -194,11 +199,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                   </aixm:selection>
                   <!-- Prior Permission Details -->
                   <aixm:annotation>
-                    <aixm:Note gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_11">
+                    <aixm:Note gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_12">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>REMARK</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_12">
+                        <aixm:LinguisticNote gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_13">
                           <aixm:note>request to be sent to AD administration</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>
@@ -211,7 +216,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:RunwayDirectionExtension gml:id="id_79476305-757c-42cf-81f6-5d1445fc8925_1_0_T_13">
+            <event:RunwayDirectionExtension gml:id="id_14569e23-6166-43bc-a1d3-070e9c55aff9_1_0_T_14">
               <event:theEvent xlink:href="urn:uuid:648ceffd-4058-42ac-9b26-33faab7b897e" xlink:title="EADD 13/31 DNOTAM RWY.LIM" xlink:type="simple"/>
             </event:RunwayDirectionExtension>
           </aixm:extension>
@@ -227,7 +232,7 @@ Editorial note: this license is an instance of the BSD license template as provi
       <aixm:timeSlice>
         <aixm:RunwayDirectionTimeSlice gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_1">
+            <gml:TimePeriod gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_1">
               <gml:beginPosition>2025-12-23T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2025-12-24T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -237,27 +242,32 @@ Editorial note: this license is an instance of the BSD license template as provi
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline status of the runway direction -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_2">
-              <aixm:timeInterval xsi:nil="true"/>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true" nilReason="other:H24"/>
               <aixm:annotation xsi:nil="true"/>
               <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
               <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_3">
-                  <aixm:type>FORBID</aixm:type>
+                <aixm:ManoeuvringAreaUsage gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
                   <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_4">
+                    <aixm:ConditionCombination gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_4">
                       <aixm:timeInterval xsi:nil="true"/>
                       <aixm:annotation xsi:nil="true"/>
                       <aixm:specialDateAuthority xsi:nil="true"/>
-                      <aixm:logicalOperator>NOT</aixm:logicalOperator>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
                       <aixm:weather xsi:nil="true"/>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_5">
-                          <aixm:aircraftLandingCategory>H</aixm:aircraftLandingCategory>
+                        <aixm:AircraftCharacteristic gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_5">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_6">
+                          <aixm:type>TILT_WING</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                       <aixm:flight xsi:nil="true"/>
@@ -272,23 +282,23 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:availability>
           <!-- The availability status of the fato direction during the event -->
           <aixm:availability>
-            <aixm:ManoeuvringAreaAvailability gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_6">
+            <aixm:ManoeuvringAreaAvailability gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_7">
               <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
               <aixm:usage>
-                <aixm:ManoeuvringAreaUsage gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_7">
+                <aixm:ManoeuvringAreaUsage gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_8">
                   <aixm:type>CONDITIONAL</aixm:type>
                   <aixm:priorPermission uom="HR">1</aixm:priorPermission> <!-- Prior Permission -->
                   <!-- The usage limitation -->
                   <aixm:selection>
-                    <aixm:ConditionCombination gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_8">
+                    <aixm:ConditionCombination gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_9">
                       <aixm:logicalOperator>AND</aixm:logicalOperator>
                       <aixm:aircraft>
-                        <aixm:AircraftCharacteristic gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_9">
+                        <aixm:AircraftCharacteristic gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_10">
                           <aixm:type>HELICOPTER</aixm:type>
                         </aixm:AircraftCharacteristic>
                       </aixm:aircraft>
                       <aixm:flight>
-                        <aixm:FlightCharacteristic gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_10">
+                        <aixm:FlightCharacteristic gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_11">
                           <aixm:purpose>NON_SCHEDULED</aixm:purpose>
                         </aixm:FlightCharacteristic>
                       </aixm:flight>
@@ -296,11 +306,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                   </aixm:selection>
                   <!-- Prior Permission Details -->
                   <aixm:annotation>
-                    <aixm:Note gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_11">
+                    <aixm:Note gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_12">
                       <aixm:propertyName>priorPermission</aixm:propertyName>
                       <aixm:purpose>REMARK</aixm:purpose>
                       <aixm:translatedNote>
-                        <aixm:LinguisticNote gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_12">
+                        <aixm:LinguisticNote gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_13">
                           <aixm:note>request to be sent to AD administration</aixm:note>
                         </aixm:LinguisticNote>
                       </aixm:translatedNote>
@@ -313,7 +323,7 @@ Editorial note: this license is an instance of the BSD license template as provi
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:RunwayDirectionExtension gml:id="id_b44c6cc4-bf0d-4cd4-baaf-24bc3707d4a3_1_0_T_13">
+            <event:RunwayDirectionExtension gml:id="id_fca7215f-54b0-4f40-a026-f537f12ac4fa_1_0_T_14">
               <event:theEvent xlink:href="urn:uuid:648ceffd-4058-42ac-9b26-33faab7b897e" xlink:title="EADD 13/31 DNOTAM RWY.LIM" xlink:type="simple"/>
             </event:RunwayDirectionExtension>
           </aixm:extension>

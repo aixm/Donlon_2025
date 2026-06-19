@@ -95,7 +95,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:year>2026</event:year>
               <event:issued>2026-04-01T05:40:55Z</event:issued>
               <event:processed>YES</event:processed>
-              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EA-NOF NOF" xlink:type="simple"/>
+              <event:publisher xlink:href="urn:uuid:895b61a8-e961-4ac1-9994-70c42d4ebf86" xlink:title="DONLON NOTAM OFFICE EADD NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QIDCT</event:selectionCode>
@@ -112,7 +112,7 @@ Editorial note: this license is an instance of the BSD license template as provi
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
               <event:schedule>Apr 1 7 13 0600-0750</event:schedule>
-              <event:text>ILS DME part OSL RWY-09L On test, do not use. False indication possible.
+              <event:text lang="ENG">ILS DME part OSL RWY-09L On test, do not use. False indication possible.
 Due to calibration and in flight testing.
 Precision approaches for RWY 09L suspended.</event:text>
             </event:NOTAM>
@@ -131,7 +131,7 @@ Precision approaches for RWY 09L suspended.</event:text>
       <aixm:timeSlice>
         <aixm:NavaidTimeSlice gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_1">
+            <gml:TimePeriod gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_1">
               <gml:beginPosition>2026-04-01T06:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-04-13T07:50:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -141,10 +141,25 @@ Precision approaches for RWY 09L suspended.</event:text>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline operational status of the navaid (hours calculated to fill in the gaps left by the NOTAM schedule) -->
           <aixm:availability>
-            <aixm:NavaidOperationalStatus gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_2">
+            <aixm:NavaidOperationalStatus gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_2">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_3">
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_3">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-04</aixm:startDate>
+                  <aixm:endDate>02-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>07:50</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_4">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>02-04</aixm:startDate>
+                  <aixm:endDate>07-04</aixm:endDate>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
                   <aixm:startTime>00:00</aixm:startTime>
@@ -154,46 +169,59 @@ Precision approaches for RWY 09L suspended.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_4">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:startDate>01-04</aixm:startDate>
-                  <aixm:endDate>01-04</aixm:endDate>
-                  <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:50</aixm:endTime>
-                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_5">
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_5">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>07-04</aixm:startDate>
                   <aixm:endDate>07-04</aixm:endDate>
                   <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>06:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
+                  <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_6">
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_6">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>07-04</aixm:startDate>
+                  <aixm:endDate>08-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>07:50</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_7">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>08-04</aixm:startDate>
+                  <aixm:endDate>13-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>13-04</aixm:startDate>
                   <aixm:endDate>13-04</aixm:endDate>
                   <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>06:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
+                  <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation>
-                <aixm:Note gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_7">
+                <aixm:Note gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_9">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_8">
+                    <aixm:LinguisticNote gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_10">
                       <aixm:note>Baseline data copy. Not included in the NOTAM text generation.</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -206,9 +234,9 @@ Precision approaches for RWY 09L suspended.</event:text>
           </aixm:availability>
           <!-- The operational status of the navaid during the event -->
           <aixm:availability>
-            <aixm:NavaidOperationalStatus gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_9">
+            <aixm:NavaidOperationalStatus gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_13">
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-04</aixm:startDate>
                   <aixm:endDate>01-04</aixm:endDate>
@@ -220,7 +248,7 @@ Precision approaches for RWY 09L suspended.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_14">
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>07-04</aixm:startDate>
                   <aixm:endDate>07-04</aixm:endDate>
@@ -232,7 +260,7 @@ Precision approaches for RWY 09L suspended.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_15">
+                <aixm:Timesheet gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_14">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>13-04</aixm:startDate>
                   <aixm:endDate>13-04</aixm:endDate>
@@ -245,11 +273,11 @@ Precision approaches for RWY 09L suspended.</event:text>
               </aixm:timeInterval>
               <!-- Reason -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_16">
+                <aixm:Note gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_15">
                   <aixm:propertyName>operationalStatus</aixm:propertyName>
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_17">
+                    <aixm:LinguisticNote gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_16">
                       <aixm:note>calibration and in flight testing</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -257,10 +285,10 @@ Precision approaches for RWY 09L suspended.</event:text>
               </aixm:annotation>
               <!-- Note -->
               <aixm:annotation>
-                <aixm:Note gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_18">
+                <aixm:Note gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_17">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_19">
+                    <aixm:LinguisticNote gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_18">
                       <aixm:note>Precision approaches for RWY 09L suspended</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -271,7 +299,7 @@ Precision approaches for RWY 09L suspended.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:NavaidExtension gml:id="id_9ab8684e-c356-4467-b6fe-58a0d9a58123_1_0_T_20">
+            <event:NavaidExtension gml:id="id_77e79943-f331-471a-a84c-1dfe3b3b62fc_1_0_T_19">
               <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb" xlink:title="OSL ILS/DME ILS/DME 09R DNOTAM NAV.UNS" xlink:type="simple"/>
             </event:NavaidExtension>
           </aixm:extension>
@@ -287,7 +315,7 @@ Precision approaches for RWY 09L suspended.</event:text>
       <aixm:timeSlice>
         <aixm:DMETimeSlice gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_1">
+            <gml:TimePeriod gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_1">
               <gml:beginPosition>2026-04-01T06:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-04-13T07:50:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -297,10 +325,25 @@ Precision approaches for RWY 09L suspended.</event:text>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <!-- The baseline operational status of the navaid equipment (hours calculated to fill in the gaps left by the NOTAM schedule) -->
           <aixm:availability>
-            <aixm:NavaidOperationalStatus gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_2">
+            <aixm:NavaidOperationalStatus gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_2">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_3">
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_3">
                   <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-04</aixm:startDate>
+                  <aixm:endDate>02-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>07:50</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_4">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>02-04</aixm:startDate>
+                  <aixm:endDate>07-04</aixm:endDate>
                   <aixm:day>ANY</aixm:day>
                   <aixm:dayTil>ANY</aixm:dayTil>
                   <aixm:startTime>00:00</aixm:startTime>
@@ -310,46 +353,59 @@ Precision approaches for RWY 09L suspended.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_4">
-                  <aixm:timeReference>UTC</aixm:timeReference>
-                  <aixm:startDate>01-04</aixm:startDate>
-                  <aixm:endDate>01-04</aixm:endDate>
-                  <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:50</aixm:endTime>
-                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
-                </aixm:Timesheet>
-              </aixm:timeInterval>
-              <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_5">
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_5">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>07-04</aixm:startDate>
                   <aixm:endDate>07-04</aixm:endDate>
                   <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>06:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
+                  <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_6">
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_6">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>07-04</aixm:startDate>
+                  <aixm:endDate>08-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>07:50</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_7">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>08-04</aixm:startDate>
+                  <aixm:endDate>13-04</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>00:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>13-04</aixm:startDate>
                   <aixm:endDate>13-04</aixm:endDate>
                   <aixm:day>ANY</aixm:day>
-                  <aixm:startTime>06:00</aixm:startTime>
-                  <aixm:endTime>07:50</aixm:endTime>
+                  <aixm:startTime>00:00</aixm:startTime>
+                  <aixm:endTime>06:00</aixm:endTime>
                   <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                  <aixm:excluded>YES</aixm:excluded>
+                  <aixm:excluded>NO</aixm:excluded>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation>
-                <aixm:Note gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_7">
+                <aixm:Note gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_9">
                   <aixm:purpose>REMARK</aixm:purpose>
                   <aixm:translatedNote>
-                    <aixm:LinguisticNote gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_8">
+                    <aixm:LinguisticNote gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_10">
                       <aixm:note>Baseline data copy. Not included in the NOTAM text generation.</aixm:note>
                     </aixm:LinguisticNote>
                   </aixm:translatedNote>
@@ -360,9 +416,9 @@ Precision approaches for RWY 09L suspended.</event:text>
           </aixm:availability>
           <!-- The operational status of the navaid equipment during the event -->
           <aixm:availability>
-            <aixm:NavaidOperationalStatus gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_9">
+            <aixm:NavaidOperationalStatus gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_10">
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-04</aixm:startDate>
                   <aixm:endDate>01-04</aixm:endDate>
@@ -374,7 +430,7 @@ Precision approaches for RWY 09L suspended.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_11">
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>07-04</aixm:startDate>
                   <aixm:endDate>07-04</aixm:endDate>
@@ -386,7 +442,7 @@ Precision approaches for RWY 09L suspended.</event:text>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_12">
+                <aixm:Timesheet gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_14">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>13-04</aixm:startDate>
                   <aixm:endDate>13-04</aixm:endDate>
@@ -402,7 +458,7 @@ Precision approaches for RWY 09L suspended.</event:text>
           </aixm:availability>
           <!-- The link to the event -->
           <aixm:extension>
-            <event:DMEExtension gml:id="id_94b4277c-9331-423f-80cd-8aa96fa54745_1_0_T_13">
+            <event:DMEExtension gml:id="id_801e8222-2db4-4945-8301-891ea622b0b4_1_0_T_15">
               <event:theEvent xlink:href="urn:uuid:5592d667-f9bd-46f7-87d0-aa1cc9909acb" xlink:title="OSL ILS/DME 09R DNOTAM NAV.UNS" xlink:type="simple"/>
             </event:DMEExtension>
           </aixm:extension>

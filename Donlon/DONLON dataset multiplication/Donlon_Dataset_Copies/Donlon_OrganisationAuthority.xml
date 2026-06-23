@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Donlon OrganisationAuthority features (shared across all copies) -->
+<!-- Donlon OrganisationAuthority features shared across all copies (excluding Donlon STATE and Donlon CAA) -->
 <message:AIXMBasicMessage 
   xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
   xmlns:gts="http://www.isotc211.org/2005/gts" 
@@ -17,44 +17,13 @@
   http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd" 
   gml:id="Donlon_OrganisationAuthority">
   <message:hasMember>
-    <aixm:OrganisationAuthority gml:id="uuid.709c64da-44e4-47c7-9d57-326a04cbdd3c">
-      <gml:identifier codeSpace="urn:uuid:">709c64da-44e4-47c7-9d57-326a04cbdd3c</gml:identifier>
-      <aixm:timeSlice>
-        <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_STATE_REPUBLIC-OF-DONLON">
-          <gml:validTime>
-            <gml:TimePeriod gml:id="id_e8a99c4c-5430-4d21-b9b1-6b494bd6a33c_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
-            </gml:TimePeriod>
-          </gml:validTime>
-          <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
-          <aixm:correctionNumber>0</aixm:correctionNumber>
-          <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_e8a99c4c-5430-4d21-b9b1-6b494bd6a33c_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
-            </gml:TimePeriod>
-          </aixm:featureLifetime>
-          <aixm:name>REPUBLIC OF DONLON</aixm:name>
-          <aixm:designator>EA</aixm:designator>
-          <aixm:type>STATE</aixm:type>
-          <aixm:military xsi:nil="true" nilReason="inapplicable"/>
-          <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
-          <aixm:relatedOrganisationAuthority xsi:nil="true"/>
-          <aixm:annotation xsi:nil="true"/>
-        </aixm:OrganisationAuthorityTimeSlice>
-      </aixm:timeSlice>
-    </aixm:OrganisationAuthority>
-  </message:hasMember>
-  <message:hasMember>
     <aixm:OrganisationAuthority gml:id="uuid.11dd26c9-9b45-4e44-9e7c-8205b10de430">
       <gml:identifier codeSpace="urn:uuid:">11dd26c9-9b45-4e44-9e7c-8205b10de430</gml:identifier>
       <aixm:timeSlice>
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-MOT">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -63,7 +32,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -114,100 +83,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_7791f460-da5a-4942-b6bb-44361849bbc7_1_0_B_7">
               <aixm:type>OWNED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
-            </aixm:OrganisationAuthorityAssociation>
-          </aixm:relatedOrganisationAuthority>
-          <aixm:annotation xsi:nil="true"/>
-        </aixm:OrganisationAuthorityTimeSlice>
-      </aixm:timeSlice>
-    </aixm:OrganisationAuthority>
-  </message:hasMember>
-  <message:hasMember>
-    <aixm:OrganisationAuthority gml:id="uuid.c225ae5c-540f-4a48-8867-809b393b2407">
-      <gml:identifier codeSpace="urn:uuid:">c225ae5c-540f-4a48-8867-809b393b2407</gml:identifier>
-      <aixm:timeSlice>
-        <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-CAA">
-          <gml:validTime>
-            <gml:TimePeriod gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
-            </gml:TimePeriod>
-          </gml:validTime>
-          <aixm:interpretation>BASELINE</aixm:interpretation>
-          <aixm:sequenceNumber>1</aixm:sequenceNumber>
-          <aixm:correctionNumber>0</aixm:correctionNumber>
-          <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
-            </gml:TimePeriod>
-          </aixm:featureLifetime>
-          <aixm:name>DONLON CIVIL AVIATION ADMINISTRATION</aixm:name>
-          <aixm:designator>EA-CAA</aixm:designator>
-          <aixm:type>NTL_AUTH</aixm:type>
-          <aixm:military>CIVIL</aixm:military>
-          <aixm:contact>
-            <aixm:ContactInformation gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_3">
-              <aixm:name>DONLON CIVIL AVIATION ADMINISTRATION</aixm:name>
-              <aixm:title xsi:nil="true" nilReason="inapplicable"/>
-              <aixm:address>
-                <aixm:PostalAddress gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_4">
-                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
-                  <aixm:annotation xsi:nil="true"/>
-                  <aixm:specialDateAuthority xsi:nil="true"/>
-                  <aixm:deliveryPoint>Government Square</aixm:deliveryPoint>
-                  <aixm:city>DONLON</aixm:city>
-                  <aixm:administrativeArea xsi:nil="true" nilReason="unknown"/>
-                  <aixm:postalCode>1</aixm:postalCode>
-                  <aixm:country>REPUBLIC OF DONLON</aixm:country>
-                </aixm:PostalAddress>
-              </aixm:address>
-              <aixm:networkNode>
-                <aixm:OnlineContact gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_5">
-                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
-                  <aixm:annotation xsi:nil="true"/>
-                  <aixm:specialDateAuthority xsi:nil="true"/>
-                  <aixm:network>INTERNET</aixm:network>
-                  <aixm:linkage>www.civilaviation.dl</aixm:linkage>
-                  <aixm:protocol>HTTPS</aixm:protocol>
-                  <aixm:eMail>admin@civilaviation.dl</aixm:eMail>
-                </aixm:OnlineContact>
-              </aixm:networkNode>
-              <aixm:networkNode>
-                <aixm:OnlineContact gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_6">
-                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
-                  <aixm:annotation xsi:nil="true"/>
-                  <aixm:specialDateAuthority xsi:nil="true"/>
-                  <aixm:network>AFTN</aixm:network>
-                  <aixm:linkage>EAADYAYX</aixm:linkage>
-                  <aixm:protocol xsi:nil="true" nilReason="unknown"/>
-                  <aixm:eMail xsi:nil="true" nilReason="inapplicable"/>
-                </aixm:OnlineContact>
-              </aixm:networkNode>
-              <aixm:phoneFax>
-                <aixm:TelephoneContact gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_7">
-                  <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
-                  <aixm:annotation xsi:nil="true"/>
-                  <aixm:specialDateAuthority xsi:nil="true"/>
-                  <aixm:voice>0123 697 3434</aixm:voice>
-                  <aixm:facsimile>0123 697 3445</aixm:facsimile>
-                </aixm:TelephoneContact>
-              </aixm:phoneFax>
-              <aixm:annotation xsi:nil="true"/>
-            </aixm:ContactInformation>
-          </aixm:contact>
-          <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_8">
-              <aixm:type>OWNED_BY</aixm:type>
-              <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
-            </aixm:OrganisationAuthorityAssociation>
-          </aixm:relatedOrganisationAuthority>
-          <aixm:relatedOrganisationAuthority>
-            <aixm:OrganisationAuthorityAssociation gml:id="id_9a8a9a97-a385-4752-833f-c50cba36f8c8_1_0_B_9">
-              <aixm:type>SUPERVISED_BY</aixm:type>
-              <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:11dd26c9-9b45-4e44-9e7c-8205b10de430" xlink:title="DONLON MINISTRY OF TRANSPORTATION EA-TRA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -222,7 +98,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ATS_DONATSA">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -231,7 +107,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -282,14 +158,14 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_7">
               <aixm:type>OWNED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:relatedOrganisationAuthority>
             <aixm:OrganisationAuthorityAssociation gml:id="id_7a79383c-7a61-4010-bc70-1f7015da7985_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -304,7 +180,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-MET-BUREAU">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -313,7 +189,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -375,7 +251,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_e1755c30-7770-44cb-af6c-cb56d081f9d0_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -390,7 +266,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-CUSTOMS-DEPT">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -399,7 +275,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -461,7 +337,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_01eb0a86-1e7a-4c9c-a87e-9f2488f2c5c4_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -476,7 +352,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-IMMIGRATION-DEPT">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -485,7 +361,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -547,7 +423,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_42d4a6c5-2674-4d38-9cc7-04ad35c64410_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -562,7 +438,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-HEALTH-DEPT">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -571,7 +447,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -633,7 +509,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_27caa997-4fa4-40f4-8584-8403e1963cdc_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -648,7 +524,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-AGRICULTURAL-DEPT">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -657,7 +533,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -719,7 +595,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_b7f35789-9913-40ad-824e-68cedb16559d_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -734,7 +610,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_NTL-AUTH_DONLON-AAIB">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -743,7 +619,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -805,7 +681,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_99cdd8c7-c650-4f8f-b093-4beadb8ce2a7_1_0_B_8">
               <aixm:type>OWNED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -820,7 +696,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ORG_EADD-DONLON-INTL">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -829,7 +705,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -891,7 +767,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_97229ff3-bebe-486a-aa9e-fee69657e4e6_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -906,7 +782,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_HANDLING-AGENCY_GND-HAND-DONLON">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -915,7 +791,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -966,7 +842,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_2e80c85d-a2eb-4942-8c2f-3e67d6e4975b_1_0_B_7">
               <aixm:type>SUPERVISED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:relatedOrganisationAuthority>
@@ -988,7 +864,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ORG_EADH-DONLON-DOWNTOWN-HELIPORT">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -997,7 +873,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -1059,7 +935,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_6de3d5cc-51b0-450b-bec4-15e4c2b11259_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -1074,7 +950,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ORG_EADA-AKVIN">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1083,7 +959,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -1145,7 +1021,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_26dbc715-d40c-425b-b131-6087c66ecc41_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -1160,7 +1036,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_ORG_EAMN-MAGNETO">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1169,7 +1045,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -1231,7 +1107,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_10602fb1-9f61-4eac-81e2-da504ac8b7e6_1_0_B_8">
               <aixm:type>SUPERVISED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -1246,7 +1122,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_AEROCLUB_DONBURG-AEROCLUB">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1255,7 +1131,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -1295,7 +1171,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_d97ee8cd-6c7d-4f88-9a15-32e26311ecf9_1_0_B_6">
               <aixm:type>SUPERVISED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>
@@ -1310,7 +1186,7 @@
         <aixm:OrganisationAuthorityTimeSlice gml:id="ORG-AUTH_AEROCLUB_LONGBURG-AEROCLUB">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -1319,7 +1195,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -1359,7 +1235,7 @@
             <aixm:OrganisationAuthorityAssociation gml:id="id_732307d1-c964-4bd6-be6c-75e0e127f925_1_0_B_6">
               <aixm:type>SUPERVISED_BY</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="DONLON CIVIL AVIATION ADMINISTRATION EA-CAA NTL_AUTH" xlink:type="simple"/>
             </aixm:OrganisationAuthorityAssociation>
           </aixm:relatedOrganisationAuthority>
           <aixm:annotation xsi:nil="true"/>

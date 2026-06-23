@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 ====================================================================
 Python script for iNM eEAD - Donlon TMA-area dataset copies (version 2)
 Source: https://github.com/aixm/Donlon_2025/tree/main/Donlon
@@ -68,17 +68,33 @@ and xlink:href references between copied features are remapped.  References to f
 The OrganisationAuthority features referenced this way (theOrganisationAuthority / specialDateAuthority) are emitted once, verbatim, into a shared
 Donlon_OrganisationAuthority.xml at the top of the output folder, with their begin positions set to --effectiveDateStart, so those references resolve.
 
-Usage examples:
-  python generate_donlon_dataset_copies_v2.py --input Donlon_ALL_Baseline.xml --num-copies 26 --radius-nm 40 --effectiveDateStart 2026-06-02T00:00:00Z --temporality-cases-dir <path> --apply-ADM-fix yes
-  python generate_donlon_dataset_copies_v2.py --num-copies 26 --radius-nm 40 --exc-airspace-types AWY A --exc-features EAV4 --effectiveDateStart 2026-06-02T00:00:00Z --timeOffset 1-00-00 --temporality-cases-dir <path>
+Run with no command-line arguments to be prompted for each input on its own line
+(an empty answer or a single hyphen '-' leaves an optional field unset):
+  python generate_donlon_dataset_copies_v2.py
+
+Usage example:
+python generate_donlon_dataset_copies_v2.py
+Use hyphen '-' to leave an optional input empty.
+input file location: "D:\...\Donlon_ALL_Baseline.xml"
+output directory location (optional): -
+number of copies (max 26): 26
+inclusion radius around Donlon Intl. (default 40NM): 40
+effective date start: 2026-06-27T00:00:00Z
+temporality cases directory (optional): "D:\...\Donlon_dataset_multiplication"
+apply ADM fix (yes/no): yes
+new state uuid (optional): cd1b4070-79b3-4eb1-a496-b525d4e5a7c6
+new caa uuid (optional): 2912da48-dad9-438c-b28b-3873effa4d17
 
 Input parameters:
---input -> input AIXM XML file path
---output -> (optional) output folder (default: Donlon_Dataset_Copies next to the script)
---num-copies -> number of copies (default 26); they fill a fixed 6 x 5 grid from the top-left towards the right and down, the partial last row centred; must be between 1 and 26 (one designator letter per copy)
---radius-nm -> selection radius around the TMA polygon edge (default 40 NM)
---temporality-cases-dir -> (optional) folder of temporality use-case templates replicated into every Donlon_Copy_NN as Temporality_cases_NN (default: EAD-SDD_temporality_cases next to the input; skipped if absent)
---apply-ADM-fix -> (optional) yes/no (default no); when yes, apply the upper/lower limit (UNL/GND/FLOOR/CEILING + upper/lowerLimitReference) and Timesheet startDate/endDate corrections (same logic as create_donlon_all_baseline_ADM_fix.py, embedded so this script is standalone) to the source before copying AND to every replicated temporality use-case file, so the copies and their temporality cases inherit them (feature removal is not applied)
+- input file location -> input AIXM XML file path
+- output directory location -> (optional) output folder (default: Donlon_Dataset_Copies next to the script)
+- number of copies -> number of copies (default 26, max 26); they fill a fixed 6 x 5 grid from the top-left towards the right and down, the partial last row centred; must be between 1 and 26 (one designator letter per copy)
+- inclusion radius around Donlon Intl. -> selection radius around the TMA polygon edge (default 40 NM)
+- effective date start -> (example: 2026-06-27T00:00:00Z) sets validTime.beginPosition of each feature to the specified date
+- temporality cases directory -> (optional) folder of temporality use-case templates replicated into every Donlon_Copy_NN as Temporality_cases_NN; if not specified, no temporality cases are replicated
+- apply ADM fix -> yes/no; when yes, apply the upper/lower limit (UNL/GND/FLOOR/CEILING + upper/lowerLimitReference) and Timesheet startDate/endDate corrections (same logic as create_donlon_all_baseline_ADM_fix.py, embedded so this script is standalone) to the source before copying AND to every replicated temporality use-case file, so the copies and their temporality cases inherit them (feature removal is not applied)
+- new state uuid -> (optional) replace every reference to the Donlon State OrganisationAuthority (709c64da-44e4-47c7-9d57-326a04cbdd3c, "REPUBLIC OF DONLON EA STATE") with this UUID in all copies and their temporality cases
+- new caa uuid -> (optional) replace every reference to the Donlon CAA OrganisationAuthority (c225ae5c-540f-4a48-8867-809b393b2407, "DONLON CIVIL AVIATION ADMINISTRATION EA-CAA") with this UUID in all copies and their temporality cases
 """
 
 import argparse
@@ -89,7 +105,7 @@ import re
 import sys
 import uuid
 from collections import defaultdict
-from datetime import datetime, timedelta
+from datetime import datetime
 from lxml import etree
 
 # Counter for xlink references intentionally not carried over to clones
@@ -355,6 +371,16 @@ def polygon_centroid(polygon):
 # baseline UUIDs.
 DONLON_TMA_UUID = '9eaf01db-0eff-415d-a6db-fbdfc145b2b8'
 DONLON_FIR_UUID = 'f4d5e4d4-d84a-481f-b9e3-b359e42c0dff'
+
+# OrganisationAuthority features that are referenced (theOrganisationAuthority /
+# specialDateAuthority / ...) throughout the baseline but are NOT among the
+# OrganisationAuthority features emitted into Donlon_OrganisationAuthority.xml -
+# they are external authorities.  The optional --state-uuid / --caa-uuid CLI
+# options let the user replace every reference to these two UUIDs with their own,
+# so the copies (and their temporality cases) point at the user's State / CAA
+# OrganisationAuthority instead.
+DONLON_STATE_OA_UUID = '709c64da-44e4-47c7-9d57-326a04cbdd3c'  # REPUBLIC OF DONLON EA STATE
+DONLON_CAA_OA_UUID = 'c225ae5c-540f-4a48-8867-809b393b2407'   # DONLON CIVIL AVIATION ADMINISTRATION EA-CAA
 
 # Features whose recorded location lies outside the TMA selection but which must
 # still be copied into every clone.  Their gml:pos is overridden (in the source,
@@ -925,11 +951,40 @@ def update_xlink_refs(feature_elem, uuid_map):
                 elem.set(XLINK_HREF, f'urn:uuid:{uuid_map[old_uuid]}')
 
 
-def parse_time_offset(offset_str):
-    parts = offset_str.split('-')
-    if len(parts) != 3:
-        raise ValueError(f"Invalid time offset format '{offset_str}', expected D-HH-MM")
-    return timedelta(days=int(parts[0]), hours=int(parts[1]), minutes=int(parts[2]))
+def replace_uuid_everywhere(elem, uuid_map):
+    """Replace every occurrence of an OLD UUID with its NEW UUID anywhere in the
+    given element subtree, for each OLD -> NEW pair in uuid_map:
+
+      - xlink:href="urn:uuid:OLD"  -> "urn:uuid:NEW"
+      - gml:id="uuid.OLD"          -> "uuid.NEW"
+      - gml:identifier text OLD    -> NEW
+
+    Used to point the Donlon State / CAA OrganisationAuthority references (which
+    are not copied, only referenced) at user-supplied UUIDs.  Returns the number
+    of substitutions made."""
+    if not uuid_map:
+        return 0
+    n = 0
+    for node in elem.iter():
+        href = node.get(XLINK_HREF)
+        if href and href.startswith('urn:uuid:'):
+            old = href[len('urn:uuid:'):]
+            new = uuid_map.get(old)
+            if new is not None:
+                node.set(XLINK_HREF, f'urn:uuid:{new}')
+                n += 1
+        gid = node.get(GML_ID)
+        if gid and gid.startswith('uuid.'):
+            new = uuid_map.get(gid[len('uuid.'):])
+            if new is not None:
+                node.set(GML_ID, f'uuid.{new}')
+                n += 1
+        if node.tag == GML_IDENTIFIER and node.text:
+            new = uuid_map.get(node.text.strip())
+            if new is not None:
+                node.text = new
+                n += 1
+    return n
 
 
 def update_valid_time(feature_elem, new_begin_position):
@@ -1408,8 +1463,9 @@ def write_xml(tree, path):
     _format_root_header(path)
 
 
-def write_organisation_authorities(root, out_dir, begin_position=None):
-    """Write every OrganisationAuthority feature from the baseline into a single
+def write_organisation_authorities(root, out_dir, begin_position=None,
+                                   exclude_uuids=None):
+    """Write the OrganisationAuthority features from the baseline into a single
     Donlon_OrganisationAuthority.xml in out_dir.
 
     The features are copied verbatim and keep their original UUIDs, so the
@@ -1418,17 +1474,25 @@ def write_organisation_authorities(root, out_dir, begin_position=None):
     begin_position is given (the user's --effectiveDateStart) every
     validTime / featureLifetime beginPosition is set to it, matching the copies.
 
+    Any OrganisationAuthority whose gml:identifier is in exclude_uuids is skipped
+    (used to leave out the Donlon State and Donlon CAA authorities, which the user
+    supplies themselves via --state-uuid / --caa-uuid).
+
     Returns the number of OrganisationAuthority features written.
     """
+    exclude_uuids = exclude_uuids or set()
     feats = []
     for member in root.findall('message:hasMember', NSMAP):
         oa = member.find('aixm:OrganisationAuthority', NSMAP)
         if oa is None:
             continue
+        oa_uuid = get_feature_uuid(oa)
+        if oa_uuid in exclude_uuids:
+            continue
         elem = copy.deepcopy(oa)
         if begin_position is not None:
             update_valid_time(elem, begin_position)
-        feats.append(('OrganisationAuthority', elem, get_feature_uuid(elem)))
+        feats.append(('OrganisationAuthority', elem, oa_uuid))
     if not feats:
         return 0
     path = os.path.join(out_dir, 'Donlon_OrganisationAuthority.xml')
@@ -1494,7 +1558,8 @@ def temporality_output_filename(template_basename):
 
 def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                             orig_to_clone, anchor_lon, target_lon, lat_offset,
-                            lon_scale, copy_begin=None, apply_adm_fix=False):
+                            lon_scale, copy_begin=None, apply_adm_fix=False,
+                            oa_uuid_map=None):
     """
     Replicate the temporality use-case templates into
     `copy_dir/Temporality_cases_NN/`, one file per template.  Multi-part template
@@ -1563,6 +1628,11 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
         # the temporality use-case features stay consistent with their clones.
         if apply_adm_fix:
             run_adm_fixes(root)
+
+        # Point the Donlon State / CAA OrganisationAuthority references at the
+        # user-supplied UUIDs, matching the copied baseline.
+        if oa_uuid_map:
+            replace_uuid_everywhere(root, oa_uuid_map)
 
         date_map = {}  # original begin-position date -> new date (for the comment)
         comment_remap = {}  # original feature UUID -> per-copy UUID (for the comment)
@@ -1675,6 +1745,9 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
             out_text = out_text.replace(TEMPORALITY_BASELINE_START, copy_begin)
         for old_u, new_u in comment_remap.items():
             out_text = out_text.replace(old_u, new_u)
+        if oa_uuid_map:
+            for old_u, new_u in oa_uuid_map.items():
+                out_text = out_text.replace(old_u, new_u)
 
         out_path = os.path.join(out_dir, temporality_output_filename(base))
         with open(out_path, 'w', encoding='utf-8', newline='\n') as fh:
@@ -2049,6 +2122,86 @@ def apply_adm_fixes(root):
 
 
 # ---------------------------------------------------------------------------
+# Interactive prompting (used when the script is run with no CLI arguments)
+# ---------------------------------------------------------------------------
+
+
+def prompt_for_args():
+    """Collect the run parameters interactively, one per line, when the script is
+    started with no command-line arguments.  An empty answer or a single hyphen
+    '-' leaves an optional field unset (default / None).  Returns a namespace with
+    the same attributes argparse would produce."""
+    max_copies = min(GRID_ROWS * GRID_COLS, MAX_AIRPORT_COPIES)
+
+    def _opt(raw):
+        return None if raw in ('', '-') else raw
+
+    print("Use hyphen '-' to leave an optional input empty.")
+
+    # input file location (required)
+    while True:
+        inp = input("input file location: ").strip().strip('"')
+        if not inp or inp == '-':
+            print("  An input file is required.")
+            continue
+        if not os.path.isfile(inp):
+            print(f"  File not found: {inp}")
+            continue
+        break
+
+    output = _opt(input("output directory location (optional): ").strip().strip('"'))
+
+    while True:
+        raw = input(f"number of copies (max {max_copies}): ").strip()
+        if raw in ('', '-'):
+            num_copies = 20
+            break
+        try:
+            num_copies = int(raw)
+        except ValueError:
+            print("  Enter a whole number.")
+            continue
+        if 1 <= num_copies <= max_copies:
+            break
+        print(f"  Enter a number between 1 and {max_copies}.")
+
+    while True:
+        raw = input("inclusion radius around Donlon Intl. (default 40NM): ").strip()
+        if raw in ('', '-'):
+            radius_nm = 40.0
+            break
+        try:
+            radius_nm = float(raw)
+            break
+        except ValueError:
+            print("  Enter a radius in NM (number).")
+
+    effective_date = _opt(input("effective date start: ").strip())
+    temporality = _opt(input("temporality cases directory (optional): ").strip().strip('"'))
+
+    while True:
+        raw = input("apply ADM fix (yes/no): ").strip()
+        if raw in ('', '-'):
+            apply_adm = False
+            break
+        try:
+            apply_adm = _yesno(raw)
+            break
+        except argparse.ArgumentTypeError:
+            print("  Enter yes or no.")
+
+    state_uuid = _opt(input("new state uuid (optional): ").strip())
+    caa_uuid = _opt(input("new caa uuid (optional): ").strip())
+
+    return argparse.Namespace(
+        input=inp, output=output, num_copies=num_copies, radius_nm=radius_nm,
+        exc_airspace_types=[], exc_features=[],
+        effectiveDateStart=effective_date,
+        temporality_cases_dir=temporality, apply_adm_fix=apply_adm,
+        state_uuid=state_uuid, caa_uuid=caa_uuid)
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -2079,22 +2232,50 @@ def main():
     parser.add_argument('--effectiveDateStart', default=None,
                         help='validTime beginPosition for all copies '
                              '(e.g. 2026-06-02T00:00:00Z).')
-    parser.add_argument('--timeOffset', default=None,
-                        help='Per-copy offset in D-HH-MM format; requires '
-                             '--effectiveDateStart.')
     parser.add_argument('--temporality-cases-dir', default=None,
                         help='Folder of temporality use-case templates to '
                              f'replicate into every Donlon_Copy_NN as '
-                             f'{TEMPORALITY_OUTPUT_DIRNAME}_NN (default: '
-                             f'{TEMPORALITY_CASES_DIRNAME} next to the input '
-                             'file; skipped if not found).')
+                             f'{TEMPORALITY_OUTPUT_DIRNAME}_NN. If not given, no '
+                             'temporality cases are replicated.')
     parser.add_argument('--apply-ADM-fix', dest='apply_adm_fix', type=_yesno,
                         default=False, metavar='yes/no',
                         help='Apply the same limit (UNL/GND/FLOOR/CEILING + '
                              'references) and Timesheet startDate/endDate '
                              'corrections as create_donlon_all_baseline_ADM_fix.py '
                              'to the source before copying (default no).')
-    args = parser.parse_args()
+    parser.add_argument('--state-uuid', dest='state_uuid', default=None, metavar='UUID',
+                        help='Replace every reference to the Donlon State '
+                             f'OrganisationAuthority ({DONLON_STATE_OA_UUID}, '
+                             '"REPUBLIC OF DONLON EA STATE") with this UUID in all '
+                             'copies and their temporality cases.')
+    parser.add_argument('--caa-uuid', dest='caa_uuid', default=None, metavar='UUID',
+                        help='Replace every reference to the Donlon CAA '
+                             f'OrganisationAuthority ({DONLON_CAA_OA_UUID}, '
+                             '"DONLON CIVIL AVIATION ADMINISTRATION EA-CAA") with '
+                             'this UUID in all copies and their temporality cases.')
+    # Run interactively (prompt for each input on its own line) when started with
+    # no command-line arguments; otherwise parse the CLI as usual.
+    if len(sys.argv) == 1:
+        args = prompt_for_args()
+    else:
+        args = parser.parse_args()
+
+    # Build the OrganisationAuthority UUID substitution map from the optional
+    # --state-uuid / --caa-uuid options (a leading urn:uuid: / uuid. prefix is
+    # stripped).  Applied to the source tree before cloning so every clone, the
+    # shared Donlon_OrganisationAuthority.xml and the temporality cases inherit it.
+    def _norm_uuid(value):
+        v = value.strip()
+        for prefix in ('urn:uuid:', 'uuid.'):
+            if v.lower().startswith(prefix):
+                v = v[len(prefix):]
+        return v
+
+    oa_uuid_map = {}
+    if args.state_uuid:
+        oa_uuid_map[DONLON_STATE_OA_UUID] = _norm_uuid(args.state_uuid)
+    if args.caa_uuid:
+        oa_uuid_map[DONLON_CAA_OA_UUID] = _norm_uuid(args.caa_uuid)
 
     # Default output folder: Donlon_Dataset_Copies next to this script (version_2),
     # so copies don't land in the version_1 source folder.
@@ -2102,12 +2283,12 @@ def main():
     if args.output is None:
         args.output = os.path.join(script_dir, 'Donlon_Dataset_Copies')
 
-    # Resolve the temporality-cases template folder (default: next to the input).
-    if args.temporality_cases_dir is not None:
+    # Resolve the temporality-cases template folder.  If none is specified, no
+    # temporality cases are replicated.
+    if args.temporality_cases_dir:
         temporality_dir = os.path.abspath(args.temporality_cases_dir)
     else:
-        input_dir = os.path.dirname(os.path.abspath(args.input))
-        temporality_dir = os.path.join(input_dir, TEMPORALITY_CASES_DIRNAME)
+        temporality_dir = None
 
     rows, cols = GRID_ROWS, GRID_COLS
     count = args.num_copies
@@ -2123,13 +2304,8 @@ def main():
     ase_types_exclude = AIRSPACE_TYPES_EXCLUDE_DEFAULT | set(args.exc_airspace_types)
 
     effective_start = None
-    time_offset = None
     if args.effectiveDateStart:
         effective_start = datetime.fromisoformat(args.effectiveDateStart.replace('Z', '+00:00'))
-    if args.timeOffset:
-        if not args.effectiveDateStart:
-            parser.error('--timeOffset requires --effectiveDateStart')
-        time_offset = parse_time_offset(args.timeOffset)
 
     print("Configuration:")
     print(f"  Input:    {args.input}")
@@ -2137,19 +2313,21 @@ def main():
     print(f"  Copies:   {count} (filling a {rows}x{cols} grid from the top-left)")
     print(f"  Radius:   {args.radius_nm} NM around the TMA edge")
     print(f"  Excluded airspace types: {', '.join(sorted(ase_types_exclude))}")
-    tc_found = os.path.isdir(temporality_dir)
-    print(f"  Temporality cases: {temporality_dir}"
-          f"{'' if tc_found else '  (not found; skipped)'}")
+    if not temporality_dir:
+        print("  Temporality cases: (none specified; skipped)")
+    elif os.path.isdir(temporality_dir):
+        print(f"  Temporality cases: {temporality_dir}")
+    else:
+        print(f"  Temporality cases: {temporality_dir}  (not found; skipped)")
     print(f"  Apply ADM fix: {'yes' if args.apply_adm_fix else 'no'}")
+    if oa_uuid_map.get(DONLON_STATE_OA_UUID):
+        print(f"  Donlon State OrganisationAuthority UUID -> {oa_uuid_map[DONLON_STATE_OA_UUID]}")
+    if oa_uuid_map.get(DONLON_CAA_OA_UUID):
+        print(f"  Donlon CAA OrganisationAuthority UUID   -> {oa_uuid_map[DONLON_CAA_OA_UUID]}")
     if args.exc_features:
         print(f"  Excluded feature designators: {', '.join(sorted(args.exc_features))}")
     if effective_start:
         print(f"  Effective date start: {args.effectiveDateStart}")
-    if time_offset:
-        d = time_offset.days
-        h, remainder = divmod(time_offset.seconds, 3600)
-        m = remainder // 60
-        print(f"  Time offset per copy: {d} day(s) - {h} hr - {m} min")
     print()
 
     print(f"Parsing {args.input} ...")
@@ -2161,6 +2339,14 @@ def main():
     # FLOOR/CEILING can resolve against all airspace volumes in the input.
     if args.apply_adm_fix:
         apply_adm_fixes(root)
+
+    # Replace the Donlon State / CAA OrganisationAuthority references with the
+    # user-supplied UUIDs on the whole source tree, before extraction/cloning, so
+    # every clone and the shared Donlon_OrganisationAuthority.xml inherit them.
+    if oa_uuid_map:
+        n_oa = replace_uuid_everywhere(root, oa_uuid_map)
+        print(f"Replacing OrganisationAuthority references ... "
+              f"{n_oa} occurrence(s) in the source.\n")
 
     # Override the location of selected features so they fall inside the TMA
     # selection and get cloned with the rest of the scene.
@@ -2260,8 +2446,7 @@ def main():
 
         copy_begin = None
         if effective_start is not None:
-            copy_dt = effective_start + time_offset * i if time_offset is not None else effective_start
-            copy_begin = copy_dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+            copy_begin = effective_start.strftime('%Y-%m-%dT%H:%M:%SZ')
 
         time_info = f"  validTime.beginPosition={copy_begin}" if copy_begin else ""
         print(f"  Copy {copy_num:02d}: grid (row {cell['row']}, col {cell['col']}) "
@@ -2300,7 +2485,12 @@ def main():
     # (theOrganisationAuthority / specialDateAuthority) but don't contain them,
     # so emit them once, verbatim (original UUIDs), at the effective start date.
     org_begin = effective_start.strftime('%Y-%m-%dT%H:%M:%SZ') if effective_start else None
-    n_org = write_organisation_authorities(root, out_dir, begin_position=org_begin)
+    # Exclude the Donlon State and CAA authorities from the shared file (the user
+    # supplies their own).  Cover both the original baseline UUIDs and any
+    # user-supplied replacements, since references in root were already rewritten.
+    org_exclude = {DONLON_STATE_OA_UUID, DONLON_CAA_OA_UUID} | set(oa_uuid_map.values())
+    n_org = write_organisation_authorities(
+        root, out_dir, begin_position=org_begin, exclude_uuids=org_exclude)
     org_date_info = f" (beginPosition={org_begin})" if org_begin else ""
     print(f"  Donlon_OrganisationAuthority.xml: {n_org} OrganisationAuthority "
           f"feature(s) written{org_date_info}.")
@@ -2384,7 +2574,7 @@ def main():
         tc_written, tc_warnings = write_temporality_cases(
             temporality_dir, copy_dir, copy_num, uuid_map, orig_to_clone,
             anchor_lon, target_lon, lat_offset, lon_scale, copy_begin=copy_begin,
-            apply_adm_fix=args.apply_adm_fix)
+            apply_adm_fix=args.apply_adm_fix, oa_uuid_map=oa_uuid_map)
         temporality_total += tc_written
         temporality_warnings.extend(tc_warnings)
         tc_info = (f" + {TEMPORALITY_OUTPUT_DIRNAME}_{copy_num:02d}/ ({tc_written} file(s))"

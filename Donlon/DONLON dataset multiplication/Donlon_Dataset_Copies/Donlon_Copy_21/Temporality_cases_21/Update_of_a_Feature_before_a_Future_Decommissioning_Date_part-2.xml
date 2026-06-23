@@ -27,48 +27,48 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Step 1 - initial decommissioning:
   
   "Decommissioning" TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
+  validTime: 2026-06-27T00:00:00Z - 2027-05-01T00:00:00Z
+  featureLifetime: 2026-06-27T00:00:00Z - 2027-05-01T00:00:00Z
   
   Step 2 - update before decommissioning:
   
   Correcting the "Decommissioning" TimeSlice:
   BASELINE 1/2
-  validTime: 2026-06-20T00:00:00Z - 2027-03-15T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - 2027-03-15T00:00:00Z
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Update before the initial decommissioning date: frequency changed to 340KHz
   BASELINE 2/0
   validTime: 2027-03-15T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
                                                   
   For the Navaid feature:
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Step 1 - initial decommissioning:
   
   "Decommissioning" TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
+  validTime: 2026-06-27T00:00:00Z - 2027-05-01T00:00:00Z
+  featureLifetime: 2026-06-27T00:00:00Z - 2027-05-01T00:00:00Z
   
   Step 2 - abandoning the decommissioning:
   
   Abandoning the decommissioning:
   BASELINE 1/2
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Note: the Navaid feature does not have any data updates with the except of validTime and featureLifetime, so the
   'Abandoning the Decommissioning of a Feature' (SDO compatible workaround #2) case is applied
@@ -91,14 +91,14 @@
   gml:id="DONLON_Update_of_a_Feature_before_a_Future_Decommissioning_Date">
   
   <message:hasMember>
-    <aixm:NDB gml:id="uuid.8b41bc76-43d0-474d-8567-215b3c748cd4">
-      <gml:identifier codeSpace="urn:uuid:">8b41bc76-43d0-474d-8567-215b3c748cd4</gml:identifier>
+    <aixm:NDB gml:id="uuid.68c71256-feaf-4755-90d4-b93b3941f83c">
+      <gml:identifier codeSpace="urn:uuid:">68c71256-feaf-4755-90d4-b93b3941f83c</gml:identifier>
       <!-- Correcting the "Decommissioning" TimeSlice -->
       <aixm:timeSlice>
         <aixm:NDBTimeSlice gml:id="NDB_WNR_S1C2">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_4889dd5b-bb0c-426f-8181-47a85c5e7f82_1_2_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-03-15T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -107,7 +107,7 @@
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_4889dd5b-bb0c-426f-8181-47a85c5e7f82_1_2_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -147,7 +147,7 @@
             <aixm:AuthorityForNavaidEquipment gml:id="id_4889dd5b-bb0c-426f-8181-47a85c5e7f82_1_2_B_6">
               <aixm:type>SUPERVISE</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="ORG-AUTH NTL-AUTH DONLON CAA" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="ORG-AUTH NTL-AUTH DONLON CAA" xlink:type="simple"/>
             </aixm:AuthorityForNavaidEquipment>
           </aixm:authority>
           <aixm:monitoring>
@@ -229,7 +229,7 @@
             <aixm:AuthorityForNavaidEquipment gml:id="id_3a54ed38-4d27-4a5f-b4f8-0104d3be0ef9_2_0_B_6">
               <aixm:type>SUPERVISE</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="ORG-AUTH NTL-AUTH DONLON CAA" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="ORG-AUTH NTL-AUTH DONLON CAA" xlink:type="simple"/>
             </aixm:AuthorityForNavaidEquipment>
           </aixm:authority>
           <aixm:monitoring>
@@ -261,14 +261,14 @@
   </message:hasMember>
   
   <message:hasMember>
-    <aixm:Navaid gml:id="uuid.94f90ca3-9390-4f94-bbf7-b49f91296765">
-      <gml:identifier codeSpace="urn:uuid:">94f90ca3-9390-4f94-bbf7-b49f91296765</gml:identifier>
+    <aixm:Navaid gml:id="uuid.6617f976-9812-495d-bce4-4e04ba82d577">
+      <gml:identifier codeSpace="urn:uuid:">6617f976-9812-495d-bce4-4e04ba82d577</gml:identifier>
       <!-- Abandoning the decommissioning of the Navaid feature -->
       <aixm:timeSlice>
         <aixm:NavaidTimeSlice gml:id="NAV_NDB_WNR_S1C2">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_402e471d-189b-497b-a152-94d4ce9d04cb_1_2_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -277,7 +277,7 @@
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_402e471d-189b-497b-a152-94d4ce9d04cb_1_2_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -296,7 +296,7 @@
               <aixm:markerPosition xsi:nil="true" nilReason="inapplicable"/>
               <aixm:providesNavigableLocation>YES</aixm:providesNavigableLocation>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theNavaidEquipment xlink:href="urn:uuid:8b41bc76-43d0-474d-8567-215b3c748cd4" xlink:title="NDB WNR" xlink:type="simple"/>
+              <aixm:theNavaidEquipment xlink:href="urn:uuid:68c71256-feaf-4755-90d4-b93b3941f83c" xlink:title="NDB WNR" xlink:type="simple"/>
             </aixm:NavaidComponent>
           </aixm:navaidEquipment>
           <aixm:location>

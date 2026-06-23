@@ -24,13 +24,13 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of the initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2026-06-27T00:00:00Z - 2026-12-01T00:00:00Z
   
   Initial planned update: flashing='NO' updating the annotation with propertyName="colour" and removing the annotation with propertyName="flashing"
   BASELINE 2/0
@@ -40,7 +40,7 @@
   
   Reverting the termination of the initial valid TimeSlice:
   BASELINE 1/2
-  validTime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
   
   Cancelling of the planned update TimeSlice:
   BASELINE 2/1
@@ -50,7 +50,7 @@
   
   Termination of the valid TimeSlice:
   BASELINE 1/3
-  validTime: 2026-06-20T00:00:00Z - 2027-03-15T00:00:00Z
+  validTime: 2026-06-27T00:00:00Z - 2027-03-15T00:00:00Z
   
   Updated TimeSlice with deferred date:
   BASELINE 3/0
@@ -74,14 +74,14 @@
   gml:id="DONLON_Deferring_of_a_Permanent_Update">
   
   <message:hasMember>
-    <aixm:AeronauticalGroundLight gml:id="uuid.4e0d1017-bff5-4ec8-8a59-5df7943c0e91">
-      <gml:identifier codeSpace="urn:uuid:">4e0d1017-bff5-4ec8-8a59-5df7943c0e91</gml:identifier>
+    <aixm:AeronauticalGroundLight gml:id="uuid.a4cdf3ad-bd28-4bb7-891c-e88d179f1a62">
+      <gml:identifier codeSpace="urn:uuid:">a4cdf3ad-bd28-4bb7-891c-e88d179f1a62</gml:identifier>
       <!-- Reverting the termination of the initial valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ATURA_S1C2">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -90,7 +90,7 @@
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_97fe5d6d-27d5-4a46-8293-b8f54fe3d0f9_1_2_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>

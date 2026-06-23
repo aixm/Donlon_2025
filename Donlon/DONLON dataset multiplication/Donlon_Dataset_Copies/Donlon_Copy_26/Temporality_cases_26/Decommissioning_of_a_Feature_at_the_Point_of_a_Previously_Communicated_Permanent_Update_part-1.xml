@@ -21,31 +21,31 @@
 
 <!--
   Temporality use case: decommissioning of a feature at the point of a previously communicated permanent update - part 1
-  Feature: WorkArea - 6ef8d91c-7619-45b3-89a6-61659fe74024
+  Feature: WorkArea - f834ff95-73c8-4c10-88ff-f07303be7f99
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2026-12-17T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - 2026-12-17T00:00:00Z
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Update TimeSlice: planned operational date updated to 2026-12-28, annotation updated
   BASELINE 2/0
   validTime: 2026-12-17T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Step 2 - decommissioning:
   
   Decommissioning at the point of previously communicated update:
   BASELINE 2/1
   validTime: 2026-12-17T00:00:00Z - 2026-12-17T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - 2026-12-17T00:00:00Z
+  featureLifetime: 2026-06-27T00:00:00Z - 2026-12-17T00:00:00Z
 -->
 
 
@@ -65,14 +65,14 @@
   gml:id="DONLON_EADD_Decommissioning_of_a_Feature_at_the_Point_of_a_Previously_Communicated_Permanent_Update">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.6ef8d91c-7619-45b3-89a6-61659fe74024">
-      <gml:identifier codeSpace="urn:uuid:">6ef8d91c-7619-45b3-89a6-61659fe74024</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.f834ff95-73c8-4c10-88ff-f07303be7f99">
+      <gml:identifier codeSpace="urn:uuid:">f834ff95-73c8-4c10-88ff-f07303be7f99</gml:identifier>
       <!-- Termination of initial valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2026-12-20_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2026-12-17T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -81,13 +81,13 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2026-12-20</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:b4965c60-4af8-4963-b35e-fd705cd96d70" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:e93a77e2-2f2a-4971-a321-58b228c81252" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_3">
               <gml:patches>
@@ -129,7 +129,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:isActive>YES</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
@@ -149,7 +149,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:isActive>NO</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
@@ -187,7 +187,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2026-12-28</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:b4965c60-4af8-4963-b35e-fd705cd96d70" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:e93a77e2-2f2a-4971-a321-58b228c81252" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_3">
               <gml:patches>
@@ -229,7 +229,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:isActive>YES</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
@@ -249,7 +249,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:709c64da-44e4-47c7-9d57-326a04cbdd3c" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
               <aixm:isActive>NO</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>

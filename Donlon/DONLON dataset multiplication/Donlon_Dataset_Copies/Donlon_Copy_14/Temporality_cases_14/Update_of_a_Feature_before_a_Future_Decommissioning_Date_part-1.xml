@@ -27,48 +27,48 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Step 1 - initial decommissioning:
   
   "Decommissioning" TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
+  validTime: 2026-06-27T00:00:00Z - 2027-05-01T00:00:00Z
+  featureLifetime: 2026-06-27T00:00:00Z - 2027-05-01T00:00:00Z
   
   Step 2 - update before decommissioning:
   
   Correcting the "Decommissioning" TimeSlice:
   BASELINE 1/2
-  validTime: 2026-06-20T00:00:00Z - 2027-03-15T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - 2027-03-15T00:00:00Z
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Update before the initial decommissioning date: frequency changed to 340KHz
   BASELINE 2/0
   validTime: 2027-03-15T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
                                                   
   For the Navaid feature:
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Step 1 - initial decommissioning:
   
   "Decommissioning" TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
-  featureLifetime: 2026-06-20T00:00:00Z - 2027-05-01T00:00:00Z
+  validTime: 2026-06-27T00:00:00Z - 2027-05-01T00:00:00Z
+  featureLifetime: 2026-06-27T00:00:00Z - 2027-05-01T00:00:00Z
   
   Step 2 - abandoning the decommissioning:
   
   Abandoning the decommissioning:
   BASELINE 1/2
-  validTime: 2026-06-20T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-20T00:00:00Z - "unknown"
+  validTime: 2026-06-27T00:00:00Z - "unknown"
+  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
   
   Note: the Navaid feature does not have any data updates with the except of validTime and featureLifetime, so the
   'Abandoning the Decommissioning of a Feature' (SDO compatible workaround #2) case is applied
@@ -91,14 +91,14 @@
   gml:id="DONLON_Update_of_a_Feature_before_a_Future_Decommissioning_Date">
   
   <message:hasMember>
-    <aixm:NDB gml:id="uuid.8de43beb-6c18-41ce-9d5e-8e5e6df603d9">
-      <gml:identifier codeSpace="urn:uuid:">8de43beb-6c18-41ce-9d5e-8e5e6df603d9</gml:identifier>
+    <aixm:NDB gml:id="uuid.ddb9fe74-3cf1-4945-8391-470b9ba1899a">
+      <gml:identifier codeSpace="urn:uuid:">ddb9fe74-3cf1-4945-8391-470b9ba1899a</gml:identifier>
       <!-- "Decommissioning" TimeSlice -->
       <aixm:timeSlice>
         <aixm:NDBTimeSlice gml:id="NDB_WNR_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_b37ac173-df45-4557-96fe-42442a46ddb5_1_1_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-05-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -107,7 +107,7 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_b37ac173-df45-4557-96fe-42442a46ddb5_1_1_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-05-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -147,7 +147,7 @@
             <aixm:AuthorityForNavaidEquipment gml:id="id_b37ac173-df45-4557-96fe-42442a46ddb5_1_1_B_6">
               <aixm:type>SUPERVISE</aixm:type>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theOrganisationAuthority xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="ORG-AUTH NTL-AUTH DONLON CAA" xlink:type="simple"/>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:2912da48-dad9-438c-b28b-3873effa4d17" xlink:title="ORG-AUTH NTL-AUTH DONLON CAA" xlink:type="simple"/>
             </aixm:AuthorityForNavaidEquipment>
           </aixm:authority>
           <aixm:monitoring>
@@ -179,14 +179,14 @@
   </message:hasMember>
   
   <message:hasMember>
-    <aixm:Navaid gml:id="uuid.a8ad6cf8-7721-40aa-bd03-031454f0c9b1">
-      <gml:identifier codeSpace="urn:uuid:">a8ad6cf8-7721-40aa-bd03-031454f0c9b1</gml:identifier>
+    <aixm:Navaid gml:id="uuid.28169204-fe1d-40de-9010-d3eaa52982f8">
+      <gml:identifier codeSpace="urn:uuid:">28169204-fe1d-40de-9010-d3eaa52982f8</gml:identifier>
       <!-- "Decommissioning" TimeSlice -->
       <aixm:timeSlice>
         <aixm:NavaidTimeSlice gml:id="NAV_NDB_WNR_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_2bc14342-dc1b-448b-800a-db63961f89af_1_1_B_1">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-05-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
@@ -195,7 +195,7 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_2bc14342-dc1b-448b-800a-db63961f89af_1_1_B_2">
-              <gml:beginPosition>2026-06-20T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2027-05-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -214,7 +214,7 @@
               <aixm:markerPosition xsi:nil="true" nilReason="inapplicable"/>
               <aixm:providesNavigableLocation>YES</aixm:providesNavigableLocation>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:theNavaidEquipment xlink:href="urn:uuid:8de43beb-6c18-41ce-9d5e-8e5e6df603d9" xlink:title="NDB WNR" xlink:type="simple"/>
+              <aixm:theNavaidEquipment xlink:href="urn:uuid:ddb9fe74-3cf1-4945-8391-470b9ba1899a" xlink:title="NDB WNR" xlink:type="simple"/>
             </aixm:NavaidComponent>
           </aixm:navaidEquipment>
           <aixm:location>

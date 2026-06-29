@@ -21,31 +21,31 @@
 
 <!--
   Temporality use case: decommissioning of a feature at the point of a previously communicated permanent update - part 1
-  Feature: WorkArea - 76197e18-cca9-4634-aaec-c34fc1444e56
+  Feature: WorkArea - 32e42aee-5186-46e9-a9aa-abf279330874
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-27T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
+  validTime: 2027-07-08T00:00:00Z - "unknown"
+  featureLifetime: 2027-07-08T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-27T00:00:00Z - 2026-12-17T00:00:00Z
-  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
+  validTime: 2027-07-08T00:00:00Z - 2027-11-25T00:00:00Z
+  featureLifetime: 2027-07-08T00:00:00Z - "unknown"
   
-  Update TimeSlice: planned operational date updated to 2026-12-28, annotation updated
+  Update TimeSlice: planned operational date updated to 2027-12-28, annotation updated
   BASELINE 2/0
-  validTime: 2026-12-17T00:00:00Z - "unknown"
-  featureLifetime: 2026-06-27T00:00:00Z - "unknown"
+  validTime: 2027-11-25T00:00:00Z - "unknown"
+  featureLifetime: 2027-07-08T00:00:00Z - "unknown"
   
   Step 2 - decommissioning:
   
   Decommissioning at the point of previously communicated update:
   BASELINE 2/1
-  validTime: 2026-12-17T00:00:00Z - 2026-12-17T00:00:00Z
-  featureLifetime: 2026-06-27T00:00:00Z - 2026-12-17T00:00:00Z
+  validTime: 2027-11-25T00:00:00Z - 2027-11-25T00:00:00Z
+  featureLifetime: 2027-07-08T00:00:00Z - 2027-11-25T00:00:00Z
 -->
 
 
@@ -65,15 +65,15 @@
   gml:id="DONLON_EADD_Decommissioning_of_a_Feature_at_the_Point_of_a_Previously_Communicated_Permanent_Update">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.76197e18-cca9-4634-aaec-c34fc1444e56">
-      <gml:identifier codeSpace="urn:uuid:">76197e18-cca9-4634-aaec-c34fc1444e56</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.32e42aee-5186-46e9-a9aa-abf279330874">
+      <gml:identifier codeSpace="urn:uuid:">32e42aee-5186-46e9-a9aa-abf279330874</gml:identifier>
       <!-- Termination of initial valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2026-12-20_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_1">
-              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-12-17T00:00:00Z</gml:endPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2027-11-25T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -81,13 +81,13 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_2">
-              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
           <aixm:plannedOperational>2026-12-20</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:f2223213-ad60-41a3-8a04-88d91c4bcb30" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:7eec5dba-2bc5-4047-90ff-4c23c3cdb17f" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_8c93bf79-0462-4c4f-937f-3999c22a25c2_1_1_B_3">
               <gml:patches>
@@ -129,7 +129,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:isActive>YES</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
@@ -149,7 +149,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:isActive>NO</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
@@ -172,7 +172,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
         <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2026-12-20_S2C0">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_1">
-              <gml:beginPosition>2026-12-17T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-11-25T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -181,13 +181,13 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_2">
-              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
-          <aixm:plannedOperational>2026-12-28</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:f2223213-ad60-41a3-8a04-88d91c4bcb30" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:plannedOperational>2027-12-28</aixm:plannedOperational>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:7eec5dba-2bc5-4047-90ff-4c23c3cdb17f" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_3">
               <gml:patches>
@@ -229,7 +229,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:isActive>YES</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
@@ -249,7 +249,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:isActive>NO</aixm:isActive>
             </aixm:WorkareaActivity>
           </aixm:activation>
@@ -260,7 +260,7 @@ Works are expected to be completed by 20 December 2026 at 00:00 UTC.</aixm:note>
               <aixm:translatedNote>
                 <aixm:LinguisticNote gml:id="id_a49e4b37-6e60-4293-bcc5-26741ff13592_2_0_B_10">
                   <aixm:note lang="ENG">Works will be carried out to resurface the south-west corner of Apron A.
-The initial planned operational date has changed to 28 December 2026, due to unexpected delays.</aixm:note>
+The initial planned operational date has changed to 28 December 2027, due to unexpected delays.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>

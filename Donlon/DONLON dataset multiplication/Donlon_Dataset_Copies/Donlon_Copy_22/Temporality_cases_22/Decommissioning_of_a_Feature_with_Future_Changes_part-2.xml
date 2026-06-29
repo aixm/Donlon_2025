@@ -25,28 +25,28 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-27T00:00:00Z - "unknown"
+  validTime: 2027-07-08T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of valid TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-27T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2027-07-08T00:00:00Z - 2027-11-25T00:00:00Z
   
   Planned update TimeSlice: upper limit increased to 1500M
   BASELINE 2/0
-  validTime: 2026-12-01T00:00:00Z - "unknown"
+  validTime: 2027-11-25T00:00:00Z - "unknown"
   
   Step 2 - decommissioning:
   
   Decommissioning at a point before the planned update:
   BASELINE 1/2
-  validTime: 2026-06-27T00:00:00Z - 2026-11-05T00:00:00Z
+  validTime: 2027-07-08T00:00:00Z - 2027-10-28T00:00:00Z
   
   Termination of the planned update TimeSlice:
   BASELINE 2/1
-  validTime.@nilReason="inapplicable"
-  featureLifetime.TimePeriod.endPosition = "2026-11-05T00:00:00Z"
+  validTime.@nilReason = "inapplicable"
+  featureLifetime.TimePeriod.endPosition = "2027-10-28T00:00:00Z"
 -->
 
 
@@ -66,15 +66,15 @@
   gml:id="DONLON_Decommissioning_of_a_Feature_with_Future_Changes">
   
   <message:hasMember>
-    <aixm:Airspace gml:id="uuid.81a04bc8-74a0-4912-9589-b12eb1b819da">
-      <gml:identifier codeSpace="urn:uuid:">81a04bc8-74a0-4912-9589-b12eb1b819da</gml:identifier>
+    <aixm:Airspace gml:id="uuid.06017870-0ddb-45d8-9ccf-722ea28444a6">
+      <gml:identifier codeSpace="urn:uuid:">06017870-0ddb-45d8-9ccf-722ea28444a6</gml:identifier>
       <!-- Decommissioning at a point before the planned update -->
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_TOMAR_D-OTHER_S1C2">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_1">
-              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-11-05T00:00:00Z</gml:endPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2027-10-28T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -82,8 +82,8 @@
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_095c09f1-7fad-495a-8524-2dda86d59246_1_2_B_2">
-              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-11-05T00:00:00Z</gml:endPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2027-10-28T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>D_OTHER</aixm:type>
@@ -167,7 +167,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:activity>HANGGLIDING</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
@@ -214,7 +214,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
@@ -254,8 +254,8 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_d3615095-873e-411f-ba04-656cdf0473dd_2_1_B_1">
-              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-11-05T00:00:00Z</gml:endPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2027-10-28T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>D_OTHER</aixm:type>
@@ -339,7 +339,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:activity>HANGGLIDING</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
@@ -386,7 +386,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>

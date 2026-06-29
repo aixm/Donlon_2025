@@ -25,27 +25,27 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-27T00:00:00Z - "unknown"
+  validTime: 2027-07-08T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   End of initial TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-27T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2027-07-08T00:00:00Z - 2027-11-25T00:00:00Z
   
   Planned update: permitted aircraft wingspan changed to 30M, helicopters are now permitted
   BASELINE 2/0
-  validTime: 2026-12-01T00:00:00Z - "unknown"
+  validTime: 2027-11-25T00:00:00Z - "unknown"
   
   Step 2 - new update:
   
   Advancing the termination of the initial TimeSlice:
   BASELINE 1/2
-  validTime: 2026-06-27T00:00:00Z - 2026-11-15T00:00:00Z
+  validTime: 2027-07-08T00:00:00Z - 2027-10-28T00:00:00Z
   
   The new update set before the initial planned update: permitted aircraft wingspan changed to 32M, helicopters are now forbidden
   BASELINE 2/1
-  validTime: 2026-11-15T00:00:00Z - "unknown"
+  validTime: 2027-10-28T00:00:00Z - "unknown"
 -->
 
 
@@ -65,15 +65,15 @@
   gml:id="DONLON_EADD_Update_of_a_Feature_before_the_Effective_Date_of_another_Update">
   
   <message:hasMember>
-    <aixm:AircraftStand gml:id="uuid.db2ce786-05b9-46a7-86e9-c9d47594a425">
-      <gml:identifier codeSpace="urn:uuid:">db2ce786-05b9-46a7-86e9-c9d47594a425</gml:identifier>
+    <aixm:AircraftStand gml:id="uuid.eb8a2b6b-2b0d-48d0-9b86-1e35c9c223e6">
+      <gml:identifier codeSpace="urn:uuid:">eb8a2b6b-2b0d-48d0-9b86-1e35c9c223e6</gml:identifier>
       <!-- End of initial TimeSlice -->
       <aixm:timeSlice>
         <aixm:AircraftStandTimeSlice gml:id="AST_EADD_STAND_5_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_bb23215e-5755-4ed8-9c7b-b3a23b098678_1_1_B_1">
-              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2027-11-25T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -81,7 +81,7 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_bb23215e-5755-4ed8-9c7b-b3a23b098678_1_1_B_2">
-              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -115,7 +115,7 @@
               <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:location>
-          <aixm:apronLocation xlink:href="urn:uuid:1e30c2a6-c49f-47c9-bc92-5824a1b5f1aa" xlink:title="APE EADD APRON A 3" xlink:type="simple"/>
+          <aixm:apronLocation xlink:href="urn:uuid:3f2792b1-0286-46f6-891c-11a9932bb366" xlink:title="APE EADD APRON A 3" xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_bb23215e-5755-4ed8-9c7b-b3a23b098678_1_1_B_5">
               <gml:patches>
@@ -211,7 +211,7 @@
         <aixm:AircraftStandTimeSlice gml:id="AST_EADD_STAND_5_S2C0">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_81947c8a-7bc6-4298-a605-d2a9e7a72a80_2_0_B_1">
-              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-11-25T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -220,7 +220,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_81947c8a-7bc6-4298-a605-d2a9e7a72a80_2_0_B_2">
-              <gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -254,7 +254,7 @@
               <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
             </aixm:ElevatedPoint>
           </aixm:location>
-          <aixm:apronLocation xlink:href="urn:uuid:1e30c2a6-c49f-47c9-bc92-5824a1b5f1aa" xlink:title="APE EADD APRON A 3" xlink:type="simple"/>
+          <aixm:apronLocation xlink:href="urn:uuid:3f2792b1-0286-46f6-891c-11a9932bb366" xlink:title="APE EADD APRON A 3" xlink:type="simple"/>
           <aixm:extent>
             <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_81947c8a-7bc6-4298-a605-d2a9e7a72a80_2_0_B_5">
               <gml:patches>

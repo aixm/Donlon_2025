@@ -82,6 +82,7 @@ inclusion radius around Donlon Intl. (default 40NM): 40
 effective date start: 2026-06-27T00:00:00Z
 temporality cases directory (optional): "D:\...\Donlon_dataset_multiplication"
 apply ADM fix (yes/no): yes
+remove state/caa references (yes/no): no
 new state uuid (optional): cd1b4070-79b3-4eb1-a496-b525d4e5a7c6
 new caa uuid (optional): 2912da48-dad9-438c-b28b-3873effa4d17
 
@@ -93,6 +94,7 @@ Input parameters:
 - effective date start -> (example: 2026-06-27T00:00:00Z) sets validTime.beginPosition of each feature to the specified date
 - temporality cases directory -> (optional) folder of temporality use-case templates replicated into every Donlon_Copy_NN as Temporality_cases_NN; if not specified, no temporality cases are replicated
 - apply ADM fix -> yes/no; when yes, apply the upper/lower limit (UNL/GND/FLOOR/CEILING + upper/lowerLimitReference) and Timesheet startDate/endDate corrections (same logic as create_donlon_all_baseline_ADM_fix.py, embedded so this script is standalone) to the source before copying AND to every replicated temporality use-case file, so the copies and their temporality cases inherit them (feature removal is not applied)
+- remove state/caa references -> yes/no; when yes, set every aixm:specialDateAuthority that has a uuid reference to <aixm:specialDateAuthority xsi:nil="true"/>, and delete every aixm:authority of type SUPERVISE from NavaidEquipment features, applied to the source before copying AND to every replicated temporality use-case file, so the copies and their temporality cases inherit the removal (default no)
 - new state uuid -> (optional) replace every reference to the Donlon State OrganisationAuthority (709c64da-44e4-47c7-9d57-326a04cbdd3c, "REPUBLIC OF DONLON EA STATE") with this UUID in all copies and their temporality cases
 - new caa uuid -> (optional) replace every reference to the Donlon CAA OrganisationAuthority (c225ae5c-540f-4a48-8867-809b393b2407, "DONLON CIVIL AVIATION ADMINISTRATION EA-CAA") with this UUID in all copies and their temporality cases
 """
@@ -105,7 +107,7 @@ import re
 import sys
 import uuid
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from lxml import etree
 
 # Counter for xlink references intentionally not carried over to clones
@@ -142,6 +144,9 @@ GML_ID = '{http://www.opengis.net/gml/3.2}id'
 XLINK_HREF = '{http://www.w3.org/1999/xlink}href'
 GML_POS = '{http://www.opengis.net/gml/3.2}pos'
 GML_POSLIST = '{http://www.opengis.net/gml/3.2}posList'
+XSI_NIL = '{http://www.w3.org/2001/XMLSchema-instance}nil'
+AIXM_SPECIAL_DATE_AUTHORITY = '{http://www.aixm.aero/schema/5.1.1}specialDateAuthority'
+AIXM_AUTHORITY = '{http://www.aixm.aero/schema/5.1.1}authority'
 
 # Feature types to extract and clone
 FEATURE_TYPES = [
@@ -400,6 +405,9 @@ POSITION_OVERRIDES = {
     'd9bde2f0-a97f-40d5-83f4-de5c711473ab': (51.67928152, -32.58698181),
     # Airspace EAV10 TOMAR circle centre -> inside the TMA area
     'df7b7fab-5508-44c3-802b-46cbafc75091': (53.17573707, -32.61630306),
+    # Airspace EAV12 DONBURG circle centre -> inside the TMA area
+    # (51.86722222 -34.00416700 -> 51.86722222 -33.50000000)
+    '149997ef-6967-4ddf-bf35-e4d0ff04d878': (51.86722222, -33.50000000),
     # Navaid NDB WNR WICHNOR/SLIPTON -> inside the TMA area
     '8e650273-7861-4066-b6ef-696d2f71dcda': (51.56368878, -31.62426763),
     # NDB WNR WICHNOR/SLIPTON (NavaidEquipment of the Navaid above) -> same position
@@ -413,8 +421,9 @@ AIXM_NS = '{http://www.aixm.aero/schema/5.1.1}'
 # Temporality use-case templates.  The whole folder is replicated into every
 # Donlon_Copy_NN/ as Temporality_cases_NN/, each file with the referenced
 # feature's identity (gml:id/gml:identifier), xlink:href references, name and
-# designator remapped to the per-copy clone, the seq=1 begin positions synced to
-# the per-copy clone, and the geometry moved to the copy's position with the same
+# designator remapped to the per-copy clone, the seq=1 validTime begin and the
+# featureLifetime begin (on every TimeSlice) synced to the per-copy clone, and
+# the geometry moved to the copy's position with the same
 # latitude-offset + longitude-scale transform the clone received.
 TEMPORALITY_CASES_DIRNAME = 'EAD-SDD_temporality_cases'
 # Per-copy output folder name (kept short to stay under the Windows 260-char path
@@ -427,6 +436,16 @@ TEMPORALITY_NEW_FEATURE_FILES = {'Commissioning_of_a_Feature.xml'}
 # Baseline initial start date used throughout the temporality templates; it is
 # find/replaced with each copy's start date in the generated temporality files.
 TEMPORALITY_BASELINE_START = '2025-11-01T00:00:00Z'
+
+# AIRAC cycle length and the planned-update lead time used when re-timing the
+# temporality use-cases.  After the user-pinned starts (validTime start on every
+# seq=1 TimeSlice, featureLifetime start on every TimeSlice) are set to the
+# user-chosen date U, the remaining dates (seq>=2 validTime start, validTime end,
+# featureLifetime end) are pushed forward together - preserving their relative
+# spacing - in whole 3-AIRAC-cycle (3 x 28 = 84 day) steps, repeating until the
+# earliest of them sits at least 3 AIRAC cycles after U.
+AIRAC_CYCLE_DAYS = 28
+AIRAC_LEAD_CYCLES = 3
 
 
 def apply_position_overrides(root):
@@ -1516,26 +1535,149 @@ def _find_member_feature(member):
     return None
 
 
-def _set_seq1_begin_positions(ts, vt_begin, fl_begin, date_map=None):
-    """Set validTime/featureLifetime beginPosition on a TimeSlice if its
-    sequenceNumber is 1.  None values are left untouched.  When date_map is
-    given, record the replaced original date -> new date so the same change can
-    be mirrored in the leading scenario comment."""
+def _sync_begin_positions(ts, vt_begin, fl_begin, date_map=None):
+    """Sync a TimeSlice's begin positions to the copy-set feature's.
+
+    featureLifetime.beginPosition is set on EVERY TimeSlice: the feature lifetime
+    start is invariant across a feature's TimeSlices, so all of them must carry
+    the same value as the copy-set (cloned) feature.  validTime.beginPosition is
+    set only on the sequenceNumber=1 TimeSlice, because validTime legitimately
+    differs from one TimeSlice to the next.
+
+    None values are left untouched.  When date_map is given, record the replaced
+    original date -> new date so the same change can be mirrored in the leading
+    scenario comment."""
     seq = ts.find('aixm:sequenceNumber', NSMAP)
-    if seq is None or not (seq.text and seq.text.strip() == '1'):
-        return
-    if vt_begin is not None:
+    is_seq1 = seq is not None and seq.text and seq.text.strip() == '1'
+
+    if vt_begin is not None and is_seq1:
         bp = ts.find('gml:validTime/gml:TimePeriod/gml:beginPosition', NSMAP)
         if bp is not None:
             if date_map is not None and bp.text and bp.text != vt_begin:
                 date_map[bp.text] = vt_begin
             bp.text = vt_begin
+
     if fl_begin is not None:
         bp = ts.find('aixm:featureLifetime/gml:TimePeriod/gml:beginPosition', NSMAP)
         if bp is not None:
             if date_map is not None and bp.text and bp.text != fl_begin:
                 date_map[bp.text] = fl_begin
             bp.text = fl_begin
+
+
+# -- AIRAC re-timing of the "remaining" temporality dates -------------------
+
+GML_BEGIN_POSITION = '{http://www.opengis.net/gml/3.2}beginPosition'
+GML_END_POSITION = '{http://www.opengis.net/gml/3.2}endPosition'
+
+
+def _parse_iso_utc(text):
+    """Parse an AIXM ISO-8601 UTC timestamp (e.g. 2026-12-01T00:00:00Z) into a
+    datetime, or None if it is empty / not a plain date-time."""
+    if not text:
+        return None
+    t = text.strip()
+    for fmt in ('%Y-%m-%dT%H:%M:%SZ', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d'):
+        try:
+            return datetime.strptime(t, fmt)
+        except ValueError:
+            continue
+    return None
+
+
+def _format_iso_utc(dt):
+    return dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+
+
+def _real_date_value(elem):
+    """Return the parsed datetime of a gml:beginPosition/endPosition that carries
+    a concrete date, or None for nil / indeterminate (e.g. indeterminatePosition
+    ="unknown") / unparseable positions."""
+    if elem is None or elem.get('indeterminatePosition'):
+        return None
+    return _parse_iso_utc(elem.text)
+
+
+def _collect_remaining_date_elems(feat):
+    """Return [(element, datetime), ...] for the "remaining" temporality dates of
+    a feature: validTime start of seq>=2 TimeSlices, every validTime end, and
+    every featureLifetime end that holds a concrete date.  The user-pinned starts
+    (seq=1 validTime start, all featureLifetime starts) are deliberately excluded."""
+    remaining = []
+    for ts in feat.iter():
+        tag = ts.tag
+        if not (isinstance(tag, str) and 'TimeSlice' in tag and ts is not feat):
+            continue
+        seq_elem = ts.find('aixm:sequenceNumber', NSMAP)
+        try:
+            seq = int(seq_elem.text) if seq_elem is not None and seq_elem.text else None
+        except ValueError:
+            seq = None
+
+        vt_tp = ts.find('gml:validTime/gml:TimePeriod', NSMAP)
+        if vt_tp is not None:
+            if seq != 1:  # seq=1 validTime start is pinned to U, not remaining
+                bp = vt_tp.find('gml:beginPosition', NSMAP)
+                dt = _real_date_value(bp)
+                if dt is not None:
+                    remaining.append((bp, dt))
+            ep = vt_tp.find('gml:endPosition', NSMAP)
+            dt = _real_date_value(ep)
+            if dt is not None:
+                remaining.append((ep, dt))
+
+        fl_tp = ts.find('aixm:featureLifetime/gml:TimePeriod', NSMAP)
+        if fl_tp is not None:
+            ep = fl_tp.find('gml:endPosition', NSMAP)
+            dt = _real_date_value(ep)
+            if dt is not None:
+                remaining.append((ep, dt))
+    return remaining
+
+
+def _airac_shift_amount(min_dt, u_dt):
+    """Whole-AIRAC-lead-cycle (3 x 28 = 84 day) shift needed so that min_dt sits
+    at least AIRAC_LEAD_CYCLES AIRAC cycles after u_dt; timedelta(0) if it already
+    does.  Repeats whole cycles until clear, so a date at or before u_dt is pushed
+    far enough forward."""
+    lead = timedelta(days=AIRAC_CYCLE_DAYS * AIRAC_LEAD_CYCLES)
+    gap = min_dt - u_dt
+    if gap >= lead:
+        return timedelta(0)
+    steps = math.ceil((lead - gap) / lead)
+    return steps * lead
+
+
+def _apply_shift_to_elems(remaining, shift, date_map=None):
+    """Add `shift` (a timedelta) to each (element, datetime) in `remaining`,
+    recording the original -> new date string in date_map (for the comment)."""
+    if not shift:
+        return
+    for elem, dt in remaining:
+        new_text = _format_iso_utc(dt + shift)
+        old_text = (elem.text or '').strip()
+        if date_map is not None and old_text and old_text != new_text:
+            date_map[old_text] = new_text
+        elem.text = new_text
+
+
+def _apply_airac_shift(feat, user_begin, date_map=None):
+    """Push a feature's "remaining" temporality dates forward so the earliest of
+    them sits at least AIRAC_LEAD_CYCLES AIRAC cycles after the user-chosen start
+    date.  All remaining dates are shifted by the same whole-cycle amount, so
+    their relative spacing (and any coincident dates, e.g. one TimeSlice's
+    validTime end == the next one's validTime start) is preserved.  No-op when the
+    user did not choose a start date or there is nothing to push out."""
+    if not user_begin:
+        return
+    u_dt = _parse_iso_utc(user_begin)
+    if u_dt is None:
+        return
+    remaining = _collect_remaining_date_elems(feat)
+    if not remaining:
+        return
+    shift = _airac_shift_amount(min(dt for _, dt in remaining), u_dt)
+    _apply_shift_to_elems(remaining, shift, date_map)
 
 
 # Opening tag of the AIXM message root, used to splice the original (verbatim)
@@ -1556,10 +1698,24 @@ def temporality_output_filename(template_basename):
     return template_basename
 
 
+def temporality_scenario_base(template_basename):
+    """Scenario key shared by every part of a split use-case: the <base> of a
+    multi-part template name <base>_<N>-<descriptor>.xml, otherwise the file name
+    without its extension.  All parts of one scenario are re-timed together so a
+    date that lives in one part's body is shifted consistently in the leading
+    comment of every part (which lists the whole scenario's TimeSlices)."""
+    m = _TC_PART_RE.match(template_basename)
+    if m:
+        return m.group(1)
+    if template_basename.lower().endswith('.xml'):
+        return template_basename[:-4]
+    return template_basename
+
+
 def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                             orig_to_clone, anchor_lon, target_lon, lat_offset,
                             lon_scale, copy_begin=None, apply_adm_fix=False,
-                            oa_uuid_map=None):
+                            oa_uuid_map=None, remove_state_caa_refs=False):
     """
     Replicate the temporality use-case templates into
     `copy_dir/Temporality_cases_NN/`, one file per template.  Multi-part template
@@ -1573,8 +1729,10 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
     Normal files (feature exists in the baseline) are made consistent with the
     per-copy clone: remap the feature's own gml:id / gml:identifier to the clone
     UUID, remap every xlink:href urn:uuid: reference via uuid_map, set
-    aixm:name / aixm:designator (in every TimeSlice) to the clone's, and sync the
-    sequenceNumber=1 begin positions to the clone's.
+    aixm:name / aixm:designator (in every TimeSlice) to the clone's, sync the
+    sequenceNumber=1 validTime begin position to the clone's, and sync the
+    featureLifetime begin position on every TimeSlice to the clone's (a feature's
+    lifetime start is invariant across all its TimeSlices).
 
     New-feature files (TEMPORALITY_NEW_FEATURE_FILES) hold a feature absent from
     the baseline: it gets a fresh random gml:id / gml:identifier, its xlink:href
@@ -1615,27 +1773,38 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
     shared_new_uuids = {}
 
     warnings = []
-    written = 0
+
+    # --- Phase 1: transform every template's body, deferring the AIRAC shift ---
+    # Processed in sorted order so the shared_new_uuids reuse (Commissioning ->
+    # dependent files) still resolves.  Each record keeps its parsed tree, the
+    # original text, the per-file start-pin date_map / comment_remap, and the list
+    # of "remaining" date elements whose shift is computed once per scenario in
+    # phase 2 (so split parts of one scenario stay consistent).
+    file_records = []
     for base in templates:
         is_new_feature = base in TEMPORALITY_NEW_FEATURE_FILES
         template_path = os.path.join(template_dir, base)
         with open(template_path, encoding='utf-8') as fh:
             orig_text = fh.read()
-        tree = etree.parse(template_path)
-        root = tree.getroot()
+        root = etree.parse(template_path).getroot()
 
         # Same limit/timesheet corrections as the copied baseline features, so
         # the temporality use-case features stay consistent with their clones.
         if apply_adm_fix:
             run_adm_fixes(root)
 
+        # Same State/CAA reference removal as the copied baseline features.
+        if remove_state_caa_refs:
+            remove_state_caa_references(root)
+
         # Point the Donlon State / CAA OrganisationAuthority references at the
         # user-supplied UUIDs, matching the copied baseline.
         if oa_uuid_map:
             replace_uuid_everywhere(root, oa_uuid_map)
 
-        date_map = {}  # original begin-position date -> new date (for the comment)
+        date_map = {}  # original begin-position date -> new date (start pins)
         comment_remap = {}  # original feature UUID -> per-copy UUID (for the comment)
+        remaining_elems = []  # (element, datetime) whose shift is deferred to phase 2
 
         for member in root.findall('message:hasMember', NSMAP):
             feat = _find_member_feature(member)
@@ -1654,8 +1823,10 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
             transform_all_coordinates(feat, anchor_lon, target_lon, lat_offset, lon_scale)
 
             def _set_new_identity(new_uuid):
-                """Assign a brand-new identity to feat, remap references and set the
-                seq=1 begin positions to the copy set start time (copy_begin)."""
+                """Assign a brand-new identity to feat, remap references and pin the
+                seq=1 validTime begin and every TimeSlice's featureLifetime begin to
+                copy_begin.  The remaining dates are collected for the per-scenario
+                shift in phase 2."""
                 feat.set(GML_ID, f'uuid.{new_uuid}')
                 ident = feat.find('gml:identifier', NSMAP)
                 if ident is not None:
@@ -1664,7 +1835,8 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                 for ts in feat.iter():
                     tag = ts.tag
                     if isinstance(tag, str) and 'TimeSlice' in tag and ts is not feat:
-                        _set_seq1_begin_positions(ts, copy_begin, copy_begin, date_map)
+                        _sync_begin_positions(ts, copy_begin, copy_begin, date_map)
+                remaining_elems.extend(_collect_remaining_date_elems(feat))
 
             if is_new_feature:
                 # Brand-new feature: fresh identity, recorded so a later file that
@@ -1719,40 +1891,75 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                     d = ts.find('aixm:designator', NSMAP)
                     if d is not None and d.text:
                         d.text = new_desig
-                _set_seq1_begin_positions(ts, vt_begin, fl_begin, date_map)
+                _sync_begin_positions(ts, vt_begin, fl_begin, date_map)
 
-        # Preserve the original header verbatim, mirror the begin-position changes
-        # into the comment dates, and splice on the lxml-serialised body.
-        m_orig = _TC_ROOT_RE.search(orig_text)
-        body_text = etree.tostring(root, encoding='unicode')
-        m_body = _TC_ROOT_RE.search(body_text)
-        if m_orig and m_body:
-            header = orig_text[:m_orig.end()]
-            for old_date, new_date in date_map.items():
-                if new_date and new_date != old_date:
-                    header = header.replace(old_date, new_date)
-            out_text = header + body_text[m_body.end():]
-            if not out_text.endswith('\n'):
-                out_text += '\n'
-        else:
-            out_text = body_text
+            # Defer the shift of the remaining dates (seq>=2 validTime start,
+            # validTime end, featureLifetime end) to the per-scenario pass.
+            remaining_elems.extend(_collect_remaining_date_elems(feat))
 
-        # Update the leading comment (and any remaining body occurrences) to match
-        # this copy: shift the baseline initial start date to the copy's start
-        # date, and reflect each feature's per-copy UUID (e.g. the WorkArea UUID in
-        # the work-area scenarios).
-        if copy_begin:
-            out_text = out_text.replace(TEMPORALITY_BASELINE_START, copy_begin)
-        for old_u, new_u in comment_remap.items():
-            out_text = out_text.replace(old_u, new_u)
-        if oa_uuid_map:
-            for old_u, new_u in oa_uuid_map.items():
+        file_records.append({
+            'base': base, 'orig_text': orig_text, 'root': root,
+            'date_map': date_map, 'comment_remap': comment_remap,
+            'remaining_elems': remaining_elems,
+            'scenario': temporality_scenario_base(base),
+        })
+
+    # --- Phase 2: re-time each scenario, then write its files ---
+    # Compute ONE AIRAC shift from the earliest remaining date across ALL parts of
+    # a scenario and apply it to every part, recording each shift in a scenario-
+    # wide date_map.  The leading comment of every part lists the whole scenario's
+    # TimeSlices, so applying the scenario-wide date_map (plus the start pins and
+    # the baseline-start replacement) keeps the split files' comments consistent
+    # with each other's bodies and free of dates that precede the user start.
+    scenarios = {}
+    for rec in file_records:
+        scenarios.setdefault(rec['scenario'], []).append(rec)
+
+    u_dt = _parse_iso_utc(copy_begin) if copy_begin else None
+    written = 0
+    for recs in scenarios.values():
+        all_remaining = [pair for rec in recs for pair in rec['remaining_elems']]
+        scenario_date_map = {}
+        scenario_comment_remap = {}
+        for rec in recs:
+            scenario_date_map.update(rec['date_map'])
+            scenario_comment_remap.update(rec['comment_remap'])
+        if u_dt is not None and all_remaining:
+            shift = _airac_shift_amount(min(dt for _, dt in all_remaining), u_dt)
+            _apply_shift_to_elems(all_remaining, shift, scenario_date_map)
+
+        for rec in recs:
+            # Preserve the original header verbatim, mirror the date changes into
+            # the comment dates, and splice on the lxml-serialised body.
+            m_orig = _TC_ROOT_RE.search(rec['orig_text'])
+            body_text = etree.tostring(rec['root'], encoding='unicode')
+            m_body = _TC_ROOT_RE.search(body_text)
+            if m_orig and m_body:
+                header = rec['orig_text'][:m_orig.end()]
+                for old_date, new_date in scenario_date_map.items():
+                    if new_date and new_date != old_date:
+                        header = header.replace(old_date, new_date)
+                out_text = header + body_text[m_body.end():]
+                if not out_text.endswith('\n'):
+                    out_text += '\n'
+            else:
+                out_text = body_text
+
+            # Update the leading comment (and any remaining body occurrences) to
+            # match this copy: shift the baseline initial start date to the copy's
+            # start date, and reflect each feature's per-copy UUID.
+            if copy_begin:
+                out_text = out_text.replace(TEMPORALITY_BASELINE_START, copy_begin)
+            for old_u, new_u in scenario_comment_remap.items():
                 out_text = out_text.replace(old_u, new_u)
+            if oa_uuid_map:
+                for old_u, new_u in oa_uuid_map.items():
+                    out_text = out_text.replace(old_u, new_u)
 
-        out_path = os.path.join(out_dir, temporality_output_filename(base))
-        with open(out_path, 'w', encoding='utf-8', newline='\n') as fh:
-            fh.write(out_text)
-        written += 1
+            out_path = os.path.join(out_dir, temporality_output_filename(rec['base']))
+            with open(out_path, 'w', encoding='utf-8', newline='\n') as fh:
+                fh.write(out_text)
+            written += 1
 
     return written, warnings
 
@@ -2122,6 +2329,55 @@ def apply_adm_fixes(root):
 
 
 # ---------------------------------------------------------------------------
+# State / CAA reference removal
+# ---------------------------------------------------------------------------
+
+
+def remove_state_caa_references(root):
+    """Strip State / CAA authority references from a tree:
+
+      - every aixm:specialDateAuthority that carries an xlink:href uuid reference
+        is collapsed to <aixm:specialDateAuthority xsi:nil="true"/> (its xlink
+        attributes are dropped and xsi:nil="true" is set);
+      - every aixm:authority whose child aixm:AuthorityForNavaidEquipment is of
+        aixm:type SUPERVISE is removed from its NavaidEquipment feature.
+
+    Returns (n_special_date_authority, n_supervise_authority)."""
+    n_sda = 0
+    for sda in root.iter(AIXM_SPECIAL_DATE_AUTHORITY):
+        if sda.get(XLINK_HREF):
+            for attr in list(sda.attrib):
+                del sda.attrib[attr]
+            sda.set(XSI_NIL, 'true')
+            n_sda += 1
+
+    n_sup = 0
+    for authority in list(root.iter(AIXM_AUTHORITY)):
+        afne = authority.find('aixm:AuthorityForNavaidEquipment', NSMAP)
+        if afne is None:
+            continue
+        type_elem = afne.find('aixm:type', NSMAP)
+        if type_elem is not None and (type_elem.text or '').strip() == 'SUPERVISE':
+            parent = authority.getparent()
+            if parent is not None:
+                parent.remove(authority)
+                n_sup += 1
+
+    return n_sda, n_sup
+
+
+def apply_state_caa_removal(root):
+    """Remove the State/CAA references from the source tree before features are
+    extracted and cloned, so every copy inherits the removal, and print a
+    summary."""
+    print("Removing State/CAA references from the source ...")
+    n_sda, n_sup = remove_state_caa_references(root)
+    print(f"  specialDateAuthority refs set to nil:  {n_sda}")
+    print(f"  SUPERVISE authority elements removed:  {n_sup}")
+    print()
+
+
+# ---------------------------------------------------------------------------
 # Interactive prompting (used when the script is run with no CLI arguments)
 # ---------------------------------------------------------------------------
 
@@ -2190,6 +2446,17 @@ def prompt_for_args():
         except argparse.ArgumentTypeError:
             print("  Enter yes or no.")
 
+    while True:
+        raw = input("remove state/caa references (yes/no): ").strip()
+        if raw in ('', '-'):
+            remove_state_caa = False
+            break
+        try:
+            remove_state_caa = _yesno(raw)
+            break
+        except argparse.ArgumentTypeError:
+            print("  Enter yes or no.")
+
     state_uuid = _opt(input("new state uuid (optional): ").strip())
     caa_uuid = _opt(input("new caa uuid (optional): ").strip())
 
@@ -2198,6 +2465,7 @@ def prompt_for_args():
         exc_airspace_types=[], exc_features=[],
         effectiveDateStart=effective_date,
         temporality_cases_dir=temporality, apply_adm_fix=apply_adm,
+        remove_state_caa_refs=remove_state_caa,
         state_uuid=state_uuid, caa_uuid=caa_uuid)
 
 
@@ -2243,6 +2511,13 @@ def main():
                              'references) and Timesheet startDate/endDate '
                              'corrections as create_donlon_all_baseline_ADM_fix.py '
                              'to the source before copying (default no).')
+    parser.add_argument('--remove-state-caa-refs', dest='remove_state_caa_refs',
+                        type=_yesno, default=False, metavar='yes/no',
+                        help='Strip State/CAA authority references: set every '
+                             'aixm:specialDateAuthority that has a uuid reference to '
+                             'xsi:nil="true", and delete every aixm:authority of '
+                             'type SUPERVISE from NavaidEquipment features, in the '
+                             'copies and their temporality cases (default no).')
     parser.add_argument('--state-uuid', dest='state_uuid', default=None, metavar='UUID',
                         help='Replace every reference to the Donlon State '
                              f'OrganisationAuthority ({DONLON_STATE_OA_UUID}, '
@@ -2320,6 +2595,7 @@ def main():
     else:
         print(f"  Temporality cases: {temporality_dir}  (not found; skipped)")
     print(f"  Apply ADM fix: {'yes' if args.apply_adm_fix else 'no'}")
+    print(f"  Remove state/caa references: {'yes' if args.remove_state_caa_refs else 'no'}")
     if oa_uuid_map.get(DONLON_STATE_OA_UUID):
         print(f"  Donlon State OrganisationAuthority UUID -> {oa_uuid_map[DONLON_STATE_OA_UUID]}")
     if oa_uuid_map.get(DONLON_CAA_OA_UUID):
@@ -2339,6 +2615,12 @@ def main():
     # FLOOR/CEILING can resolve against all airspace volumes in the input.
     if args.apply_adm_fix:
         apply_adm_fixes(root)
+
+    # Optionally strip State/CAA authority references (specialDateAuthority -> nil
+    # and SUPERVISE AuthorityForNavaidEquipment removed) on the whole source tree
+    # before extraction/cloning, so every clone inherits the removal.
+    if args.remove_state_caa_refs:
+        apply_state_caa_removal(root)
 
     # Replace the Donlon State / CAA OrganisationAuthority references with the
     # user-supplied UUIDs on the whole source tree, before extraction/cloning, so
@@ -2574,7 +2856,8 @@ def main():
         tc_written, tc_warnings = write_temporality_cases(
             temporality_dir, copy_dir, copy_num, uuid_map, orig_to_clone,
             anchor_lon, target_lon, lat_offset, lon_scale, copy_begin=copy_begin,
-            apply_adm_fix=args.apply_adm_fix, oa_uuid_map=oa_uuid_map)
+            apply_adm_fix=args.apply_adm_fix, oa_uuid_map=oa_uuid_map,
+            remove_state_caa_refs=args.remove_state_caa_refs)
         temporality_total += tc_written
         temporality_warnings.extend(tc_warnings)
         tc_info = (f" + {TEMPORALITY_OUTPUT_DIRNAME}_{copy_num:02d}/ ({tc_written} file(s))"

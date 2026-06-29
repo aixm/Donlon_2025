@@ -25,23 +25,23 @@
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2026-06-27T00:00:00Z - "unknown"
+  validTime: 2027-07-08T00:00:00Z - "unknown"
   
   Step 1 - initial update:
   
   Termination of the initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2026-06-27T00:00:00Z - 2026-12-01T00:00:00Z
+  validTime: 2027-07-08T00:00:00Z - 2027-11-25T00:00:00Z
   
   Planned update TimeSlice: upper limit decreased to 1500M
   BASELINE 2/0
-  validTime: 2026-12-01T00:00:00Z - "unknown"
+  validTime: 2027-11-25T00:00:00Z - "unknown"
   
   Step 2 - abandoning the update:
   
   Reverting the termination of the initial valid TimeSlice:
   BASELINE 1/2
-  validTime: 2026-06-27T00:00:00Z - "unknown"
+  validTime: 2027-07-08T00:00:00Z - "unknown"
   
   Cancelling of the planned update TimeSlice:
   BASELINE 2/1
@@ -65,15 +65,15 @@
   gml:id="DONLON_Abandoning_a_Permanent_Update">
   
   <message:hasMember>
-    <aixm:Airspace gml:id="uuid.0eee5279-0a79-428c-9357-0b6e197c4e84">
-      <gml:identifier codeSpace="urn:uuid:">0eee5279-0a79-428c-9357-0b6e197c4e84</gml:identifier>
+    <aixm:Airspace gml:id="uuid.4345bd7d-5867-4cbc-817a-c66fe862c3b8">
+      <gml:identifier codeSpace="urn:uuid:">4345bd7d-5867-4cbc-817a-c66fe862c3b8</gml:identifier>
       <!-- Termination of the initial valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_DONBURG_D-OTHER_S1C1">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_1">
-              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2026-12-01T00:00:00Z</gml:endPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2027-11-25T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -81,7 +81,7 @@
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_2">
-              <gml:beginPosition>2026-06-27T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -120,7 +120,7 @@
                                 <aixm:Curve gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
-                                      <gml:pos>49.57679364429201 -25.702676744236292</gml:pos>
+                                      <gml:pos>49.57679364429201 -25.222992912346907</gml:pos>
                                       <gml:radius uom="[nmi_i]">2</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
@@ -165,7 +165,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
@@ -212,7 +212,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
@@ -248,7 +248,7 @@
         <aixm:AirspaceTimeSlice gml:id="ASE_DONBURG_D-OTHER_S2C0">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_1">
-              <gml:beginPosition>2026-12-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-11-25T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -257,7 +257,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_2">
-              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -296,7 +296,7 @@
                                 <aixm:Curve gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
-                                      <gml:pos>49.57679364429201 -25.702676744236292</gml:pos>
+                                      <gml:pos>49.57679364429201 -25.222992912346907</gml:pos>
                                       <gml:radius uom="[nmi_i]">2</gml:radius>
                                     </gml:CircleByCenterPoint>
                                   </gml:segments>
@@ -341,7 +341,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
@@ -388,7 +388,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:annotation xsi:nil="true"/>
-              <aixm:specialDateAuthority xlink:href="urn:uuid:cd1b4070-79b3-4eb1-a496-b525d4e5a7c6" xlink:title="REPUBLIC OF DONLON EA STATE" xlink:type="simple"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>

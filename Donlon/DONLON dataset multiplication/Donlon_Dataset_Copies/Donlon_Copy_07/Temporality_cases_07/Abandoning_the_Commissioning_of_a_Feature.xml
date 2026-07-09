@@ -21,16 +21,17 @@
 
 <!--
   Temporality use case: abandoning the commissioning of a feature
-  Feature: WorkArea - ac043d87-4943-43d5-8d61-ab0204f2a776
+  Feature: WorkArea - e2836c90-72f0-4940-b43f-a276ede72340
   
   Valid TimeSlice:
   BASELINE 1/0
-  validTime: 2027-11-27T00:00:00Z - "unknown"
+  validTime: 2027-07-08T00:00:00Z - "unknown"
+  featureLifetime: 2027-07-08T00:00:00Z - "unknown"
   
   Terminating the valid TimeSlice:
   BASELINE 1/1
-  validTime.@nilReason="inapplicable"
-  featureLifetime.beginPosition=featureLifetime.endPosition="2027-11-27T00:00:00Z"
+  validTime@nilReason="inapplicable"
+  featureLifetime: 2027-07-08T00:00:00Z - 2027-07-08T00:00:00Z
 -->
 
 
@@ -47,35 +48,35 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"
-  gml:id="DONLON_EADD_Abandoning_the_Commissioning_of_a_Feature">
+  gml:id="DONLON-07_Abandoning_the_Commissioning_of_a_Feature">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.ac043d87-4943-43d5-8d61-ab0204f2a776">
-      <gml:identifier codeSpace="urn:uuid:">ac043d87-4943-43d5-8d61-ab0204f2a776</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.e2836c90-72f0-4940-b43f-a276ede72340">
+      <gml:identifier codeSpace="urn:uuid:">e2836c90-72f0-4940-b43f-a276ede72340</gml:identifier>
       <!-- Terminating the valid TimeSlice -->
       <aixm:timeSlice>
-        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2027-01-01_2_S1C1">
+        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2028-01-01_2_S1C1">
           <gml:validTime nilReason="inapplicable"/>
           <aixm:interpretation>BASELINE</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_2">
+            <gml:TimePeriod gml:id="id_61beeb2e-b270-43df-beac-e70eb1521c7e_1_1_B_1">
               <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2027-11-27T00:00:00Z</gml:endPosition>
+              <gml:endPosition>2027-07-08T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
-          <aixm:plannedOperational>2027-01-01</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:560cc77a-24fb-425c-9a4f-d10400b1f6f3" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:plannedOperational>2028-01-01</aixm:plannedOperational>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:68051db4-1907-4426-8753-ba3aa3353a3d" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
-            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_3">
+            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_61beeb2e-b270-43df-beac-e70eb1521c7e_1_1_B_2">
               <gml:patches>
                 <gml:PolygonPatch>
                   <gml:exterior>
                     <gml:Ring>
                       <gml:curveMember>
-                        <aixm:Curve gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_4">
+                        <aixm:Curve gml:id="id_61beeb2e-b270-43df-beac-e70eb1521c7e_1_1_B_3">
                           <gml:segments>
                             <gml:CircleByCenterPoint numArc="1">
                               <gml:pos>52.426274841326006 -34.86313091585127</gml:pos>
@@ -96,7 +97,7 @@
             </aixm:ElevatedSurface>
           </aixm:extent>
           <aixm:activation>
-            <aixm:WorkareaActivity gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_5">
+            <aixm:WorkareaActivity gml:id="id_61beeb2e-b270-43df-beac-e70eb1521c7e_1_1_B_4">
               <aixm:timeInterval xsi:nil="true"/> 
               <aixm:annotation xsi:nil="true"/>
               <aixm:specialDateAuthority xsi:nil="true"/>

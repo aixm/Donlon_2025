@@ -26,11 +26,12 @@
   Valid TimeSlice:
   BASELINE 1/0
   validTime: 2025-11-01T00:00:00Z - "unknown"
+  featureLifetime: 2025-11-01T00:00:00Z - "unknown"
   
   Terminating the valid TimeSlice:
   BASELINE 1/1
-  validTime.@nilReason="inapplicable"
-  featureLifetime.beginPosition=featureLifetime.endPosition="2025-11-01T00:00:00Z"
+  validTime@nilReason="inapplicable"
+  featureLifetime: 2025-11-01T00:00:00Z - 2025-11-01T00:00:00Z
 -->
 
 
@@ -47,7 +48,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"
-  gml:id="DONLON_EADD_Abandoning_the_Commissioning_of_a_Feature">
+  gml:id="DONLON_Abandoning_the_Commissioning_of_a_Feature">
   
   <message:hasMember>
     <aixm:WorkArea gml:id="uuid.d0571608-4ae3-44e4-8b59-889e81dbb609">
@@ -60,7 +61,7 @@
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_2">
+            <gml:TimePeriod gml:id="id_61beeb2e-b270-43df-beac-e70eb1521c7e_1_1_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
               <gml:endPosition>2025-11-01T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
@@ -69,13 +70,13 @@
           <aixm:plannedOperational>2027-01-01</aixm:plannedOperational>
           <aixm:associatedAirportHeliport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
-            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_3">
+            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_61beeb2e-b270-43df-beac-e70eb1521c7e_1_1_B_2">
               <gml:patches>
                 <gml:PolygonPatch>
                   <gml:exterior>
                     <gml:Ring>
                       <gml:curveMember>
-                        <aixm:Curve gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_4">
+                        <aixm:Curve gml:id="id_61beeb2e-b270-43df-beac-e70eb1521c7e_1_1_B_3">
                           <gml:segments>
                             <gml:CircleByCenterPoint numArc="1">
                               <gml:pos>52.3743773647 -31.9453369090</gml:pos>
@@ -96,7 +97,7 @@
             </aixm:ElevatedSurface>
           </aixm:extent>
           <aixm:activation>
-            <aixm:WorkareaActivity gml:id="id_49fe8be1-e800-45cd-a58d-9280c82acf28_1_1_B_5">
+            <aixm:WorkareaActivity gml:id="id_61beeb2e-b270-43df-beac-e70eb1521c7e_1_1_B_4">
               <aixm:timeInterval xsi:nil="true"/> 
               <aixm:annotation xsi:nil="true"/>
               <aixm:specialDateAuthority xsi:nil="true"/>

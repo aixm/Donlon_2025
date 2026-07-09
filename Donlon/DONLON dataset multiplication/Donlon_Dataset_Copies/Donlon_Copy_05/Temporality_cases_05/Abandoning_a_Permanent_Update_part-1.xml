@@ -31,11 +31,11 @@
   
   Termination of the initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2027-07-08T00:00:00Z - 2027-11-25T00:00:00Z
+  validTime: 2027-07-08T00:00:00Z - 2027-12-23T00:00:00Z
   
   Planned update TimeSlice: upper limit decreased to 1500M
   BASELINE 2/0
-  validTime: 2027-11-25T00:00:00Z - "unknown"
+  validTime: 2027-12-23T00:00:00Z - "unknown"
   
   Step 2 - abandoning the update:
   
@@ -62,25 +62,25 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"
-  gml:id="DONLON_Abandoning_a_Permanent_Update">
+  gml:id="DONLON-05_Abandoning_a_Permanent_Update_part-1">
   
   <message:hasMember>
-    <aixm:Airspace gml:id="uuid.30c471fe-96d1-4a97-b706-9fa2dfda1307">
-      <gml:identifier codeSpace="urn:uuid:">30c471fe-96d1-4a97-b706-9fa2dfda1307</gml:identifier>
+    <aixm:Airspace gml:id="uuid.1e496ee9-15a1-411b-add1-e315a1fce625">
+      <gml:identifier codeSpace="urn:uuid:">1e496ee9-15a1-411b-add1-e315a1fce625</gml:identifier>
       <!-- Termination of the initial valid TimeSlice -->
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_DONBURG_D-OTHER_S1C1">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_1">
+            <gml:TimePeriod gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_1">
               <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2027-11-25T00:00:00Z</gml:endPosition>
+              <gml:endPosition>2027-12-23T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
           <aixm:sequenceNumber>1</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_2">
+            <gml:TimePeriod gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_2">
               <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -95,12 +95,12 @@
           <aixm:class xsi:nil="true" nilReason="inapplicable"/>
           <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
           <aixm:geometryComponent>
-            <aixm:AirspaceGeometryComponent gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_3">
+            <aixm:AirspaceGeometryComponent gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_3">
               <aixm:operation>BASE</aixm:operation>
               <aixm:operationSequence>1</aixm:operationSequence>
               <aixm:annotation xsi:nil="true"/>
               <aixm:theAirspaceVolume>
-                <aixm:AirspaceVolume gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_4">
+                <aixm:AirspaceVolume gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_4">
                   <aixm:upperLimit uom="M">2000</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
@@ -111,13 +111,13 @@
                   <aixm:minimumLimitReference xsi:nil="true"/>
                   <aixm:width xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:horizontalProjection>
-                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_5">
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_5">
                       <gml:patches>
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:Ring>
                               <gml:curveMember>
-                                <aixm:Curve gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_6">
+                                <aixm:Curve gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
                                       <gml:pos>54.26144574896001 -24.522873821237567</gml:pos>
@@ -139,9 +139,9 @@
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_7">
+            <aixm:AirspaceActivation gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_7">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_8">
+                <aixm:Timesheet gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -153,7 +153,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_9">
+                <aixm:Timesheet gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_9">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -169,7 +169,7 @@
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_10">
+                <aixm:AirspaceLayer gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_10">
                   <aixm:upperLimit uom="M">2000</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
@@ -184,9 +184,9 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_11">
+            <aixm:AirspaceActivation gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_12">
+                <aixm:Timesheet gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -199,7 +199,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_13">
+                <aixm:Timesheet gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -216,7 +216,7 @@
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_14">
+                <aixm:AirspaceLayer gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_14">
                   <aixm:upperLimit uom="M">2000</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
@@ -231,11 +231,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_15">
+            <aixm:Note gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_15">
               <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="id_c63d5fcb-37d4-4331-bb52-ee6f39d0a33e_1_1_B_16">
+                <aixm:LinguisticNote gml:id="id_f5d832cf-87d7-4cd9-99f5-b7615c1f0ce9_1_1_B_16">
                   <aixm:note lang="ENG">Operator/User and Tel Nr: Donburg Aeroclub, TEL 053 130 2546</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
@@ -247,8 +247,8 @@
       <aixm:timeSlice>
         <aixm:AirspaceTimeSlice gml:id="ASE_DONBURG_D-OTHER_S2C0">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_1">
-              <gml:beginPosition>2027-11-25T00:00:00Z</gml:beginPosition>
+            <gml:TimePeriod gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_1">
+              <gml:beginPosition>2027-12-23T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
           </gml:validTime>
@@ -256,7 +256,7 @@
           <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_2">
+            <gml:TimePeriod gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_2">
               <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
               <gml:endPosition indeterminatePosition="unknown"/>
             </gml:TimePeriod>
@@ -271,12 +271,12 @@
           <aixm:class xsi:nil="true" nilReason="inapplicable"/>
           <aixm:protectedRoute xsi:nil="true" nilReason="inapplicable"/>
           <aixm:geometryComponent>
-            <aixm:AirspaceGeometryComponent gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_3">
+            <aixm:AirspaceGeometryComponent gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_3">
               <aixm:operation>BASE</aixm:operation>
               <aixm:operationSequence>1</aixm:operationSequence>
               <aixm:annotation xsi:nil="true"/>
               <aixm:theAirspaceVolume>
-                <aixm:AirspaceVolume gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_4">
+                <aixm:AirspaceVolume gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_4">
                   <aixm:upperLimit uom="M">1500</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:maximumLimit xsi:nil="true"/>
@@ -287,13 +287,13 @@
                   <aixm:minimumLimitReference xsi:nil="true"/>
                   <aixm:width xsi:nil="true" nilReason="inapplicable"/>
                   <aixm:horizontalProjection>
-                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_5">
+                    <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_5">
                       <gml:patches>
                         <gml:PolygonPatch>
                           <gml:exterior>
                             <gml:Ring>
                               <gml:curveMember>
-                                <aixm:Curve gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_6">
+                                <aixm:Curve gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_6">
                                   <gml:segments>
                                     <gml:CircleByCenterPoint numArc="1">
                                       <gml:pos>54.26144574896001 -24.522873821237567</gml:pos>
@@ -315,9 +315,9 @@
             </aixm:AirspaceGeometryComponent>
           </aixm:geometryComponent>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_7">
+            <aixm:AirspaceActivation gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_7">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_8">
+                <aixm:Timesheet gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -329,7 +329,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_9">
+                <aixm:Timesheet gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_9">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -345,8 +345,8 @@
               <aixm:activity>PARACHUTE</aixm:activity>
               <aixm:status>ACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_10">
-                  <aixm:upperLimit uom="M">2000</aixm:upperLimit>
+                <aixm:AirspaceLayer gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_10">
+                  <aixm:upperLimit uom="M">1500</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
                   <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
@@ -360,9 +360,9 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:activation>
-            <aixm:AirspaceActivation gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_11">
+            <aixm:AirspaceActivation gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_11">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_12">
+                <aixm:Timesheet gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_12">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -375,7 +375,7 @@
                 </aixm:Timesheet>
               </aixm:timeInterval>
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_13">
+                <aixm:Timesheet gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_13">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -392,8 +392,8 @@
               <aixm:activity xsi:nil="true"/>
               <aixm:status>INACTIVE</aixm:status>
               <aixm:levels>
-                <aixm:AirspaceLayer gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_14">
-                  <aixm:upperLimit uom="M">2000</aixm:upperLimit>
+                <aixm:AirspaceLayer gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_14">
+                  <aixm:upperLimit uom="M">1500</aixm:upperLimit>
                   <aixm:upperLimitReference>SFC</aixm:upperLimitReference>
                   <aixm:lowerLimit uom="M">0</aixm:lowerLimit>
                   <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
@@ -407,11 +407,11 @@
             </aixm:AirspaceActivation>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_15">
+            <aixm:Note gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_15">
               <aixm:propertyName xsi:nil="true"/>
               <aixm:purpose>REMARK</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="id_b3d3ea4f-6a4d-417f-9880-3c9b59355b3c_2_0_B_16">
+                <aixm:LinguisticNote gml:id="id_a7b16302-d285-4fc2-bf84-5d97094fea7f_2_0_B_16">
                   <aixm:note lang="ENG">Operator/User and Tel Nr: Donburg Aeroclub, TEL 053 130 2546</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>

@@ -1,30 +1,7 @@
 #!/usr/bin/env python3
 r"""
-====================================================================
-Python script for iNM eEAD - Donlon TMA-area dataset copies (version 2)
-Source: https://github.com/aixm/Donlon_2025/tree/main/Donlon
-Created by: Paul-Adrian LAPUSAN (for EUROCONTROL)
-====================================================================
-Copyright (c) 2026, EUROCONTROL
-=====================================
-All rights reserved.
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-* Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
 
-THIS SPECIFICATION IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
-CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-==========================================
-Editorial note: this license is an instance of the BSD license template as
-provided by the Open Source Initiative:
-http://www.opensource.org/licenses/bsd-license.php
-====================================================================
-
-This script (version 2) multiplies the Donlon dataset features that lie IN or
+This script multiplies the Donlon dataset features that lie IN or
 NEAR the Donlon TMA, and lays the copies out on a regular 6 x 5 grid with equal
 horizontal and vertical spacing, sized to fit inside the EAAD (AMSWELL) FIR
 polygon.
@@ -437,15 +414,41 @@ TEMPORALITY_NEW_FEATURE_FILES = {'Commissioning_of_a_Feature.xml'}
 # find/replaced with each copy's start date in the generated temporality files.
 TEMPORALITY_BASELINE_START = '2025-11-01T00:00:00Z'
 
-# AIRAC cycle length and the planned-update lead time used when re-timing the
-# temporality use-cases.  After the user-pinned starts (validTime start on every
-# seq=1 TimeSlice, featureLifetime start on every TimeSlice) are set to the
-# user-chosen date U, the remaining dates (seq>=2 validTime start, validTime end,
-# featureLifetime end) are pushed forward together - preserving their relative
-# spacing - in whole 3-AIRAC-cycle (3 x 28 = 84 day) steps, repeating until the
-# earliest of them sits at least 3 AIRAC cycles after U.
-AIRAC_CYCLE_DAYS = 28
-AIRAC_LEAD_CYCLES = 3
+# Fixed re-timing of the temporality use-cases.  The user-pinned starts
+# (validTime start on every seq=1 TimeSlice, featureLifetime start on every
+# TimeSlice) are set to the user-chosen start date (the baseline initial start
+# TEMPORALITY_BASELINE_START maps to it), and the remaining dates (seq>=2
+# validTime start, validTime end, featureLifetime end) are converted with this
+# fixed table.  Every entry pushes the template date forward by exactly 364
+# days (13 x 28-day AIRAC cycles); a remaining date missing from the table
+# gets the same 364-day push and is reported, so new template dates surface.
+TEMPORALITY_DATE_CONVERSIONS = {
+    '2026-10-29T00:00:00Z': '2027-10-28T00:00:00Z',
+    '2026-11-26T00:00:00Z': '2027-11-25T00:00:00Z',
+    '2026-12-24T00:00:00Z': '2027-12-23T00:00:00Z',
+    '2027-01-21T00:00:00Z': '2028-01-20T00:00:00Z',
+    '2027-02-18T00:00:00Z': '2028-02-17T00:00:00Z',
+    '2027-03-18T00:00:00Z': '2028-03-16T00:00:00Z',
+    '2027-05-13T00:00:00Z': '2028-05-11T00:00:00Z',
+}
+TEMPORALITY_DATE_SHIFT_DAYS = 364  # 13 x 28-day AIRAC cycles
+
+# aixm:plannedOperational dates (plain dates, no time part) re-timed in the
+# generated output only - the input baseline and the temporality templates are
+# never modified.  Applied to the in-memory source tree before cloning (so the
+# WorkArea ecca8219-b6d5-42d9-864f-590de56b3d9c baseline 1/0 in every copy
+# inherits it) and text-replaced into every generated temporality case file
+# (Commissioning_of_a_Feature, Abandoning_the_Commissioning_of_a_Feature,
+# Decommissioning_..._Committed_Baseline,
+# Decommissioning_..._Previously_Communicated_Permanent_Update), covering the
+# element text, the scenario comments and the WA_EADD_SURFACEWORK_* gml:ids.
+PLANNED_OPERATIONAL_CONVERSIONS = {
+    '2026-12-20': '2027-12-20',
+    '2027-01-01': '2028-01-01',
+    '2027-03-01': '2028-03-01',
+    '2027-04-10': '2028-04-10',
+    '2027-12-28': '2028-12-28',
+}
 
 
 def apply_position_overrides(root):
@@ -1044,62 +1047,47 @@ def _mercator_inverse_y(y):
     return math.degrees(phi)
 
 
+def _map_coordinate_pairs(text, pair_fn):
+    """Apply pair_fn(first_str, second_str) -> (new_first, new_second) to every
+    consecutive value pair of a gml:pos / gml:posList text node while leaving
+    every whitespace run (line breaks, hanging indentation, leading/trailing
+    spaces) exactly as it is in the source.  pair_fn returns None to keep a pair
+    unchanged (non-numeric values)."""
+    tokens = re.split(r'(\s+)', text)
+    value_idx = [i for i, t in enumerate(tokens) if t and not t.isspace()]
+    for j in range(0, len(value_idx) - 1, 2):
+        i1, i2 = value_idx[j], value_idx[j + 1]
+        new_pair = pair_fn(tokens[i1], tokens[i2])
+        if new_pair is not None:
+            tokens[i1], tokens[i2] = new_pair
+    return ''.join(tokens)
+
+
 def offset_coordinate(coord_str, lat_offset, lon_offset):
-    parts = coord_str.strip().split()
-    if len(parts) >= 2:
+    def pair(lat_s, lon_s):
         try:
-            lat = float(parts[0]) + lat_offset
-            lon = float(parts[1]) + lon_offset
-            return f"{lat} {lon}"
+            return f"{float(lat_s) + lat_offset}", f"{float(lon_s) + lon_offset}"
         except ValueError:
-            pass
-    return coord_str
+            return None
+    return _map_coordinate_pairs(coord_str, pair)
 
 
-def offset_pos_list(pos_list_str, lat_offset, lon_offset, max_line_length=200):
-    values = pos_list_str.strip().split()
-    coord_pairs = []
-    for i in range(0, len(values), 2):
-        if i + 1 < len(values):
-            try:
-                lat = float(values[i]) + lat_offset
-                lon = float(values[i + 1]) + lon_offset
-                coord_pairs.append(f"{lat} {lon}")
-            except ValueError:
-                coord_pairs.append(f"{values[i]} {values[i + 1]}")
-    return _wrap_pairs(coord_pairs, max_line_length)
+def offset_pos_list(pos_list_str, lat_offset, lon_offset):
+    return offset_coordinate(pos_list_str, lat_offset, lon_offset)
 
 
-def offset_mercator_pos_list(pos_list_str, lat_offset, lon_offset, max_line_length=200):
-    values = pos_list_str.strip().split()
+def offset_mercator_pos_list(pos_list_str, lat_offset, lon_offset):
     delta_x = _MERCATOR_A * math.radians(lon_offset)
-    coord_pairs = []
-    for i in range(0, len(values), 2):
-        if i + 1 < len(values):
-            try:
-                x = float(values[i])
-                y = float(values[i + 1])
-                lat = _mercator_inverse_y(y)
-                new_y = _mercator_forward_y(lat + lat_offset)
-                new_x = x + delta_x
-                coord_pairs.append(f"{new_x:.2f} {new_y:.2f}")
-            except ValueError:
-                coord_pairs.append(f"{values[i]} {values[i + 1]}")
-    return _wrap_pairs(coord_pairs, max_line_length)
 
-
-def _wrap_pairs(coord_pairs, max_line_length):
-    lines, current = [], ""
-    for pair in coord_pairs:
-        test = (current + " " + pair) if current else pair
-        if len(test) > max_line_length and current:
-            lines.append(current)
-            current = pair
-        else:
-            current = test
-    if current:
-        lines.append(current)
-    return '\n'.join(lines)
+    def pair(x_s, y_s):
+        try:
+            x, y = float(x_s), float(y_s)
+        except ValueError:
+            return None
+        lat = _mercator_inverse_y(y)
+        new_y = _mercator_forward_y(lat + lat_offset)
+        return f"{x + delta_x:.2f}", f"{new_y:.2f}"
+    return _map_coordinate_pairs(pos_list_str, pair)
 
 
 def _find_ancestor_srs(parent_map, elem):
@@ -1142,50 +1130,35 @@ def offset_all_coordinates(feature_elem, lat_offset, lon_offset):
 
 
 def transform_coordinate(coord_str, anchor_lon, target_lon, lat_offset, lon_scale):
-    parts = coord_str.strip().split()
-    if len(parts) >= 2:
+    def pair(lat_s, lon_s):
         try:
-            lat = float(parts[0]) + lat_offset
-            lon = target_lon + (float(parts[1]) - anchor_lon) * lon_scale
-            return f"{lat} {lon}"
+            lat = float(lat_s) + lat_offset
+            lon = target_lon + (float(lon_s) - anchor_lon) * lon_scale
+            return f"{lat}", f"{lon}"
         except ValueError:
-            pass
-    return coord_str
+            return None
+    return _map_coordinate_pairs(coord_str, pair)
 
 
-def transform_pos_list(pos_list_str, anchor_lon, target_lon, lat_offset, lon_scale,
-                       max_line_length=200):
-    values = pos_list_str.strip().split()
-    coord_pairs = []
-    for i in range(0, len(values), 2):
-        if i + 1 < len(values):
-            try:
-                lat = float(values[i]) + lat_offset
-                lon = target_lon + (float(values[i + 1]) - anchor_lon) * lon_scale
-                coord_pairs.append(f"{lat} {lon}")
-            except ValueError:
-                coord_pairs.append(f"{values[i]} {values[i + 1]}")
-    return _wrap_pairs(coord_pairs, max_line_length)
+def transform_pos_list(pos_list_str, anchor_lon, target_lon, lat_offset, lon_scale):
+    return transform_coordinate(
+        pos_list_str, anchor_lon, target_lon, lat_offset, lon_scale)
 
 
 def transform_mercator_pos_list(pos_list_str, anchor_lon, target_lon, lat_offset,
-                                lon_scale, max_line_length=200):
-    values = pos_list_str.strip().split()
-    coord_pairs = []
-    for i in range(0, len(values), 2):
-        if i + 1 < len(values):
-            try:
-                x = float(values[i])
-                y = float(values[i + 1])
-                lat = _mercator_inverse_y(y)
-                lon = math.degrees(x / _MERCATOR_A)
-                new_y = _mercator_forward_y(lat + lat_offset)
-                new_lon = target_lon + (lon - anchor_lon) * lon_scale
-                new_x = _MERCATOR_A * math.radians(new_lon)
-                coord_pairs.append(f"{new_x:.2f} {new_y:.2f}")
-            except ValueError:
-                coord_pairs.append(f"{values[i]} {values[i + 1]}")
-    return _wrap_pairs(coord_pairs, max_line_length)
+                                lon_scale):
+    def pair(x_s, y_s):
+        try:
+            x, y = float(x_s), float(y_s)
+        except ValueError:
+            return None
+        lat = _mercator_inverse_y(y)
+        lon = math.degrees(x / _MERCATOR_A)
+        new_y = _mercator_forward_y(lat + lat_offset)
+        new_lon = target_lon + (lon - anchor_lon) * lon_scale
+        new_x = _MERCATOR_A * math.radians(new_lon)
+        return f"{new_x:.2f}", f"{new_y:.2f}"
+    return _map_coordinate_pairs(pos_list_str, pair)
 
 
 def transform_all_coordinates(feature_elem, anchor_lon, target_lon, lat_offset, lon_scale):
@@ -1371,30 +1344,6 @@ def clone_feature_set(collected_features, airport_membership, index,
 # ---------------------------------------------------------------------------
 
 
-def indent_element(elem, level=0, indent_str="  "):
-    i = "\n" + level * indent_str
-    if len(elem):
-        if not elem.text or not elem.text.strip():
-            elem.text = i + indent_str
-        if not elem.tail or not elem.tail.strip():
-            elem.tail = i
-        for child in elem:
-            indent_element(child, level + 1, indent_str)
-        if not child.tail or not child.tail.strip():
-            child.tail = i
-    else:
-        if level and (not elem.tail or not elem.tail.strip()):
-            elem.tail = i
-        if elem.text and '\n' in elem.text:
-            lines = elem.text.strip().split('\n')
-            indented = [lines[0]] + [
-                (level + 1) * indent_str + line.strip() for line in lines[1:]
-            ]
-            elem.text = ('\n' + (level + 1) * indent_str
-                         + '\n'.join(indented)
-                         + '\n' + level * indent_str)
-
-
 OUTPUT_NSMAP = {
     'message': 'http://www.aixm.aero/schema/5.1.1/message',
     'gts': 'http://www.isotc211.org/2005/gts',
@@ -1419,20 +1368,36 @@ SCHEMA_LOCATION = (
 
 
 def create_output_document(features, gml_id='Generated_Features', comment=None):
+    """Wrap the given feature elements in a fresh AIXMBasicMessage.
+
+    Only the whitespace of the new wrapper structure (root / message:hasMember)
+    is set here; the feature elements are emitted with the exact indentation
+    they carry from the source file (annotations, geometry coordinate lists,
+    ...), which deepcopy preserved."""
     root = etree.Element(
         '{http://www.aixm.aero/schema/5.1.1/message}AIXMBasicMessage',
         nsmap=OUTPUT_NSMAP,
     )
     root.set('{http://www.w3.org/2001/XMLSchema-instance}schemaLocation', SCHEMA_LOCATION)
     root.set(GML_ID, gml_id)
+    root.text = "\n  "
 
     for feat_tuple in features:
         elem = feat_tuple[1]
         member = etree.SubElement(
             root, '{http://www.aixm.aero/schema/5.1.1/message}hasMember')
+        member.text = "\n    "
+        member.tail = "\n  "
         member.append(elem)
+        # The feature keeps its source tail (whitespace before </hasMember>)
+        # unless it carries none or non-whitespace content.
+        if elem.tail is None or elem.tail.strip():
+            elem.tail = "\n  "
+    if len(root):
+        root[-1].tail = "\n"
+    else:
+        root.text = None
 
-    indent_element(root)
     root.tail = "\n"
     tree = etree.ElementTree(root)
     if comment:
@@ -1456,6 +1421,8 @@ def _format_root_header(path):
     if not m:
         return
     xml_decl, comment, open_tag, attrs_blob = m.groups()
+    # lxml emits the declaration with single quotes; match the source style.
+    xml_decl = '<?xml version="1.0" encoding="UTF-8"?>'
     attrs = _ATTR_RE.findall(attrs_blob)
     if not attrs:
         return
@@ -1565,7 +1532,7 @@ def _sync_begin_positions(ts, vt_begin, fl_begin, date_map=None):
             bp.text = fl_begin
 
 
-# -- AIRAC re-timing of the "remaining" temporality dates -------------------
+# -- fixed-table re-timing of the "remaining" temporality dates -------------
 
 GML_BEGIN_POSITION = '{http://www.opengis.net/gml/3.2}beginPosition'
 GML_END_POSITION = '{http://www.opengis.net/gml/3.2}endPosition'
@@ -1635,55 +1602,40 @@ def _collect_remaining_date_elems(feat):
     return remaining
 
 
-def _airac_shift_amount(min_dt, u_dt):
-    """Whole-AIRAC-lead-cycle (3 x 28 = 84 day) shift needed so that min_dt sits
-    at least AIRAC_LEAD_CYCLES AIRAC cycles after u_dt; timedelta(0) if it already
-    does.  Repeats whole cycles until clear, so a date at or before u_dt is pushed
-    far enough forward."""
-    lead = timedelta(days=AIRAC_CYCLE_DAYS * AIRAC_LEAD_CYCLES)
-    gap = min_dt - u_dt
-    if gap >= lead:
-        return timedelta(0)
-    steps = math.ceil((lead - gap) / lead)
-    return steps * lead
-
-
-def _apply_shift_to_elems(remaining, shift, date_map=None):
-    """Add `shift` (a timedelta) to each (element, datetime) in `remaining`,
-    recording the original -> new date string in date_map (for the comment)."""
-    if not shift:
-        return
+def _convert_remaining_dates(remaining, copy_begin, date_map=None):
+    """Convert each (element, datetime) in `remaining` with the fixed
+    TEMPORALITY_DATE_CONVERSIONS table (the baseline initial start maps to
+    copy_begin).  A date missing from the table gets the same
+    TEMPORALITY_DATE_SHIFT_DAYS push the table encodes.  Every replacement is
+    recorded in date_map (original -> new date string, for the comment).
+    Returns the list of unmapped original date strings that fell back to the
+    plain shift."""
+    conversions = dict(TEMPORALITY_DATE_CONVERSIONS)
+    if copy_begin:
+        conversions[TEMPORALITY_BASELINE_START] = copy_begin
+    fallback = timedelta(days=TEMPORALITY_DATE_SHIFT_DAYS)
+    unmapped = []
     for elem, dt in remaining:
-        new_text = _format_iso_utc(dt + shift)
         old_text = (elem.text or '').strip()
+        new_text = conversions.get(old_text)
+        if new_text is None:
+            new_text = _format_iso_utc(dt + fallback)
+            unmapped.append(old_text)
         if date_map is not None and old_text and old_text != new_text:
             date_map[old_text] = new_text
         elem.text = new_text
-
-
-def _apply_airac_shift(feat, user_begin, date_map=None):
-    """Push a feature's "remaining" temporality dates forward so the earliest of
-    them sits at least AIRAC_LEAD_CYCLES AIRAC cycles after the user-chosen start
-    date.  All remaining dates are shifted by the same whole-cycle amount, so
-    their relative spacing (and any coincident dates, e.g. one TimeSlice's
-    validTime end == the next one's validTime start) is preserved.  No-op when the
-    user did not choose a start date or there is nothing to push out."""
-    if not user_begin:
-        return
-    u_dt = _parse_iso_utc(user_begin)
-    if u_dt is None:
-        return
-    remaining = _collect_remaining_date_elems(feat)
-    if not remaining:
-        return
-    shift = _airac_shift_amount(min(dt for _, dt in remaining), u_dt)
-    _apply_shift_to_elems(remaining, shift, date_map)
+    return unmapped
 
 
 # Opening tag of the AIXM message root, used to splice the original (verbatim)
 # header onto the lxml-serialised body so the root attribute layout, leading
 # comments and the blank line before the root are preserved exactly.
 _TC_ROOT_RE = re.compile(r'<message:AIXMBasicMessage\b[^>]*>', re.DOTALL)
+
+# 'DONLON' prefix of the root gml:id (gml:id="DONLON_<case>"); each generated
+# file gets the copy-set number spliced in: DONLON-NN_<case>.
+_TC_ROOT_ID_RE = re.compile(
+    r'(<message:AIXMBasicMessage\b[^>]*?gml:id=")DONLON', re.DOTALL)
 
 # Template files named "<base>_<N>-<descriptor>.xml" (multi-part scenarios) are
 # shortened to "<base>_part-<N>.xml"; single-part files keep their base name.
@@ -1774,12 +1726,12 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
 
     warnings = []
 
-    # --- Phase 1: transform every template's body, deferring the AIRAC shift ---
-    # Processed in sorted order so the shared_new_uuids reuse (Commissioning ->
-    # dependent files) still resolves.  Each record keeps its parsed tree, the
-    # original text, the per-file start-pin date_map / comment_remap, and the list
-    # of "remaining" date elements whose shift is computed once per scenario in
-    # phase 2 (so split parts of one scenario stay consistent).
+    # --- Phase 1: transform every template's body, deferring the date
+    # conversion.  Processed in sorted order so the shared_new_uuids reuse
+    # (Commissioning -> dependent files) still resolves.  Each record keeps its
+    # parsed tree, the original text, the per-file start-pin date_map /
+    # comment_remap, and the list of "remaining" date elements converted once
+    # per scenario in phase 2 (so split parts of one scenario stay consistent).
     file_records = []
     for base in templates:
         is_new_feature = base in TEMPORALITY_NEW_FEATURE_FILES
@@ -1826,7 +1778,7 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                 """Assign a brand-new identity to feat, remap references and pin the
                 seq=1 validTime begin and every TimeSlice's featureLifetime begin to
                 copy_begin.  The remaining dates are collected for the per-scenario
-                shift in phase 2."""
+                conversion in phase 2."""
                 feat.set(GML_ID, f'uuid.{new_uuid}')
                 ident = feat.find('gml:identifier', NSMAP)
                 if ident is not None:
@@ -1893,8 +1845,8 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
                         d.text = new_desig
                 _sync_begin_positions(ts, vt_begin, fl_begin, date_map)
 
-            # Defer the shift of the remaining dates (seq>=2 validTime start,
-            # validTime end, featureLifetime end) to the per-scenario pass.
+            # Defer the conversion of the remaining dates (seq>=2 validTime
+            # start, validTime end, featureLifetime end) to the per-scenario pass.
             remaining_elems.extend(_collect_remaining_date_elems(feat))
 
         file_records.append({
@@ -1905,18 +1857,20 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
         })
 
     # --- Phase 2: re-time each scenario, then write its files ---
-    # Compute ONE AIRAC shift from the earliest remaining date across ALL parts of
-    # a scenario and apply it to every part, recording each shift in a scenario-
-    # wide date_map.  The leading comment of every part lists the whole scenario's
-    # TimeSlices, so applying the scenario-wide date_map (plus the start pins and
-    # the baseline-start replacement) keeps the split files' comments consistent
-    # with each other's bodies and free of dates that precede the user start.
+    # Convert the remaining dates of every part with the fixed
+    # TEMPORALITY_DATE_CONVERSIONS table, recording each replacement in a
+    # scenario-wide date_map.  The leading comment of every part lists the whole
+    # scenario's TimeSlices, so applying the scenario-wide date_map (plus the
+    # start pins and the baseline-start replacement) keeps the split files'
+    # comments consistent with each other's bodies and free of dates that
+    # precede the user start.
     scenarios = {}
     for rec in file_records:
         scenarios.setdefault(rec['scenario'], []).append(rec)
 
     u_dt = _parse_iso_utc(copy_begin) if copy_begin else None
     written = 0
+    unmapped_dates = set()
     for recs in scenarios.values():
         all_remaining = [pair for rec in recs for pair in rec['remaining_elems']]
         scenario_date_map = {}
@@ -1925,8 +1879,8 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
             scenario_date_map.update(rec['date_map'])
             scenario_comment_remap.update(rec['comment_remap'])
         if u_dt is not None and all_remaining:
-            shift = _airac_shift_amount(min(dt for _, dt in all_remaining), u_dt)
-            _apply_shift_to_elems(all_remaining, shift, scenario_date_map)
+            unmapped_dates.update(_convert_remaining_dates(
+                all_remaining, copy_begin, scenario_date_map))
 
         for rec in recs:
             # Preserve the original header verbatim, mirror the date changes into
@@ -1947,19 +1901,32 @@ def write_temporality_cases(template_dir, copy_dir, copy_num, uuid_map,
 
             # Update the leading comment (and any remaining body occurrences) to
             # match this copy: shift the baseline initial start date to the copy's
-            # start date, and reflect each feature's per-copy UUID.
+            # start date, re-time the plannedOperational dates, and reflect each
+            # feature's per-copy UUID.
             if copy_begin:
                 out_text = out_text.replace(TEMPORALITY_BASELINE_START, copy_begin)
+                for old_d, new_d in PLANNED_OPERATIONAL_CONVERSIONS.items():
+                    out_text = out_text.replace(old_d, new_d)
             for old_u, new_u in scenario_comment_remap.items():
                 out_text = out_text.replace(old_u, new_u)
             if oa_uuid_map:
                 for old_u, new_u in oa_uuid_map.items():
                     out_text = out_text.replace(old_u, new_u)
 
+            # Tag the root gml:id with the copy-set number:
+            # gml:id="DONLON_<case>" -> gml:id="DONLON-NN_<case>".
+            out_text = _TC_ROOT_ID_RE.sub(
+                rf'\g<1>DONLON-{copy_num:02d}', out_text, count=1)
+
             out_path = os.path.join(out_dir, temporality_output_filename(rec['base']))
             with open(out_path, 'w', encoding='utf-8', newline='\n') as fh:
                 fh.write(out_text)
             written += 1
+
+    if unmapped_dates:
+        print(f"  NOTE: temporality date(s) not in TEMPORALITY_DATE_CONVERSIONS "
+              f"(shifted +{TEMPORALITY_DATE_SHIFT_DAYS} days instead): "
+              f"{', '.join(sorted(unmapped_dates))}")
 
     return written, warnings
 
@@ -2161,8 +2128,12 @@ def _adm_build_airspace_uuid_map(root):
 
 def adm_substitute_airspace_floor_ceiling(root):
     """Replace FLOOR / CEILING tokens in each Airspace's AirspaceLayers with the
-    airspace's lowest / highest volume limits, copying that volume limit's
-    reference onto the layer too."""
+    lowest / highest volume limits of the geometry in the SAME TimeSlice,
+    copying that volume limit's reference onto the layer too.  Resolving per
+    TimeSlice keeps a multi-TimeSlice feature (temporality use-cases) coherent:
+    each TimeSlice's activation layers get that TimeSlice's own geometry limits
+    rather than the extremes across the whole feature.  A TimeSlice that carries
+    no geometry of its own falls back to the whole-feature extremes."""
     uuid_map = _adm_build_airspace_uuid_map(root)
     replaced = 0
     warnings = []
@@ -2170,25 +2141,33 @@ def adm_substitute_airspace_floor_ceiling(root):
         airspace = member.find(AIXM_NS + 'Airspace')
         if airspace is None:
             continue
-        lowest, highest = _adm_airspace_volume_extremes(airspace, uuid_map)
-        for low in airspace.iter(ADM_LOWER):
-            if low.text and low.text.strip() == 'FLOOR':
-                if lowest is None:
-                    warnings.append((airspace, 'FLOOR'))
-                    continue
-                _adm_set_limit(low, lowest[0], lowest[1])
-                if lowest[2]:
-                    _adm_set_reference(low.getparent(), low, ADM_LOWER_REF, lowest[2])
-                replaced += 1
-        for up in airspace.iter(ADM_UPPER):
-            if up.text and up.text.strip() == 'CEILING':
-                if highest is None:
-                    warnings.append((airspace, 'CEILING'))
-                    continue
-                _adm_set_limit(up, highest[0], highest[1])
-                if highest[2]:
-                    _adm_set_reference(up.getparent(), up, ADM_UPPER_REF, highest[2])
-                replaced += 1
+        feat_lowest, feat_highest = _adm_airspace_volume_extremes(airspace, uuid_map)
+        for ts in airspace.iter():
+            if not (isinstance(ts.tag, str) and 'AirspaceTimeSlice' in ts.tag):
+                continue
+            lowest, highest = _adm_airspace_volume_extremes(ts, uuid_map)
+            if lowest is None:
+                lowest = feat_lowest
+            if highest is None:
+                highest = feat_highest
+            for low in ts.iter(ADM_LOWER):
+                if low.text and low.text.strip() == 'FLOOR':
+                    if lowest is None:
+                        warnings.append((airspace, 'FLOOR'))
+                        continue
+                    _adm_set_limit(low, lowest[0], lowest[1])
+                    if lowest[2]:
+                        _adm_set_reference(low.getparent(), low, ADM_LOWER_REF, lowest[2])
+                    replaced += 1
+            for up in ts.iter(ADM_UPPER):
+                if up.text and up.text.strip() == 'CEILING':
+                    if highest is None:
+                        warnings.append((airspace, 'CEILING'))
+                        continue
+                    _adm_set_limit(up, highest[0], highest[1])
+                    if highest[2]:
+                        _adm_set_reference(up.getparent(), up, ADM_UPPER_REF, highest[2])
+                    replaced += 1
     return replaced, warnings
 
 
@@ -2629,6 +2608,20 @@ def main():
         n_oa = replace_uuid_everywhere(root, oa_uuid_map)
         print(f"Replacing OrganisationAuthority references ... "
               f"{n_oa} occurrence(s) in the source.\n")
+
+    # Re-time the aixm:plannedOperational dates on the in-memory source tree
+    # before extraction/cloning, so every cloned copy inherits them (the input
+    # file itself is never modified).
+    if effective_start is not None:
+        n_po = 0
+        for po in root.iter(AIXM_NS + 'plannedOperational'):
+            new_d = PLANNED_OPERATIONAL_CONVERSIONS.get((po.text or '').strip())
+            if new_d:
+                po.text = new_d
+                n_po += 1
+        if n_po:
+            print(f"Re-timing plannedOperational dates ... {n_po} occurrence(s) "
+                  f"in the source.\n")
 
     # Override the location of selected features so they fall inside the TMA
     # selection and get cloned with the rest of the scene.

@@ -20,8 +20,8 @@
 
 
 <!--
-  Temporality use case: decommissioning of a feature at the point of a previously communicated permanent update - part 1
-  Feature: WorkArea - ea2d3b92-1247-4fcd-86e8-894eb3c2a5b4
+  Temporality use case: decommissioning of a feature at the point of a previously communicated permanent update - part 2
+  Feature: WorkArea - c388961a-eda7-458c-8145-2f79b85fb7eb
   
   Valid TimeSlice:
   BASELINE 1/0
@@ -32,20 +32,20 @@
   
   Termination of initial valid TimeSlice:
   BASELINE 1/1
-  validTime: 2027-07-08T00:00:00Z - 2027-11-25T00:00:00Z
+  validTime: 2027-07-08T00:00:00Z - 2027-12-23T00:00:00Z
   featureLifetime: 2027-07-08T00:00:00Z - "unknown"
   
-  Update TimeSlice: planned operational date updated to 2027-12-28, annotation updated
+  Update TimeSlice: planned operational date updated, annotation updated
   BASELINE 2/0
-  validTime: 2027-11-25T00:00:00Z - "unknown"
+  validTime: 2027-12-23T00:00:00Z - "unknown"
   featureLifetime: 2027-07-08T00:00:00Z - "unknown"
   
   Step 2 - decommissioning:
   
   Decommissioning at the point of previously communicated update:
   BASELINE 2/1
-  validTime: 2027-11-25T00:00:00Z - 2027-11-25T00:00:00Z
-  featureLifetime: 2027-07-08T00:00:00Z - 2027-11-25T00:00:00Z
+  validTime: 2027-12-23T00:00:00Z - 2027-12-23T00:00:00Z
+  featureLifetime: 2027-07-08T00:00:00Z - 2027-12-23T00:00:00Z
 -->
 
 
@@ -62,40 +62,40 @@
   xmlns:xlink="http://www.w3.org/1999/xlink" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"
-  gml:id="DONLON_EADD_Decommissioning_of_a_Feature_at_the_Point_of_a_Previously_Communicated_Permanent_Update">
+  gml:id="DONLON-04_Decommissioning_of_a_Feature_at_the_Point_of_a_Previously_Communicated_Permanent_Update_part-2">
   
   <message:hasMember>
-    <aixm:WorkArea gml:id="uuid.ea2d3b92-1247-4fcd-86e8-894eb3c2a5b4">
-      <gml:identifier codeSpace="urn:uuid:">ea2d3b92-1247-4fcd-86e8-894eb3c2a5b4</gml:identifier>
+    <aixm:WorkArea gml:id="uuid.c388961a-eda7-458c-8145-2f79b85fb7eb">
+      <gml:identifier codeSpace="urn:uuid:">c388961a-eda7-458c-8145-2f79b85fb7eb</gml:identifier>
       <!-- Decommissioning at the point of previously communicated update -->
       <aixm:timeSlice>
-        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2026-12-20_S2C1">
+        <aixm:WorkAreaTimeSlice gml:id="WA_EADD_SURFACEWORK_2027-12-20_S2C1">
           <gml:validTime>
-            <gml:TimePeriod gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_1">
-              <gml:beginPosition>2027-11-25T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2027-11-25T00:00:00Z</gml:endPosition>
+            <gml:TimePeriod gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_1">
+              <gml:beginPosition>2027-12-23T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2027-12-23T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
           <aixm:sequenceNumber>2</aixm:sequenceNumber>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
-            <gml:TimePeriod gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_2">
+            <gml:TimePeriod gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_2">
               <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
-              <gml:endPosition>2027-11-25T00:00:00Z</gml:endPosition>
+              <gml:endPosition>2027-12-23T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:type>SURFACEWORK</aixm:type>
-          <aixm:plannedOperational>2027-12-28</aixm:plannedOperational>
-          <aixm:associatedAirportHeliport xlink:href="urn:uuid:ca4947cb-b701-4654-ae7c-4370fe6570f9" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
+          <aixm:plannedOperational>2028-12-28</aixm:plannedOperational>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:bbb57a20-7a8e-41c3-8ed2-95a38a895f0d" xlink:title="EADD DONLON/INTL." xlink:type="simple"/>
           <aixm:extent>
-            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_3">
+            <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_3">
               <gml:patches>
                 <gml:PolygonPatch>
                   <gml:exterior>
                     <gml:Ring>
                       <gml:curveMember>
-                        <aixm:Curve gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_4">
+                        <aixm:Curve gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_4">
                           <gml:segments>
                             <gml:GeodesicString>
                               <gml:posList>54.763957874460004 -26.93850231867584 54.763881249460006 -26.939828459608893 54.76335052126 -26.939736785752345 54.76342714676 -26.93841065434371 54.763957874460004 -26.93850231867584</gml:posList>
@@ -115,9 +115,9 @@
             </aixm:ElevatedSurface>
           </aixm:extent>
           <aixm:activation>
-            <aixm:WorkareaActivity gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_5">
+            <aixm:WorkareaActivity gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_5">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_6">
+                <aixm:Timesheet gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_6">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -134,9 +134,9 @@
             </aixm:WorkareaActivity>
           </aixm:activation>
           <aixm:activation>
-            <aixm:WorkareaActivity gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_7">
+            <aixm:WorkareaActivity gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_7">
               <aixm:timeInterval>
-                <aixm:Timesheet gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_8">
+                <aixm:Timesheet gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_8">
                   <aixm:timeReference>UTC</aixm:timeReference>
                   <aixm:startDate>01-01</aixm:startDate>
                   <aixm:endDate>31-12</aixm:endDate>
@@ -154,13 +154,13 @@
             </aixm:WorkareaActivity>
           </aixm:activation>
           <aixm:annotation>
-            <aixm:Note gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_9">
+            <aixm:Note gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_9">
               <aixm:propertyName>type</aixm:propertyName>
               <aixm:purpose>DESCRIPTION</aixm:purpose>
               <aixm:translatedNote>
-                <aixm:LinguisticNote gml:id="id_efe14619-8248-4a05-bec8-033a9789106a_2_1_B_10">
+                <aixm:LinguisticNote gml:id="id_0a534504-7e35-4273-bf52-15d213eba3ad_2_1_B_10">
                   <aixm:note lang="ENG">Works will be carried out to resurface the south-west corner of Apron A.
-The initial planned operational date has changed to 28 December 2027, due to unexpected delays.</aixm:note>
+The initial planned operational date has changed due to unexpected delays.</aixm:note>
                 </aixm:LinguisticNote>
               </aixm:translatedNote>
             </aixm:Note>

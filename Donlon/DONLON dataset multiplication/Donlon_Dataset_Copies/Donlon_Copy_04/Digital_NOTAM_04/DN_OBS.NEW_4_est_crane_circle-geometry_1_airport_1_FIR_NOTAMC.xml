@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!--  Example of Digital NOTAM for new temporary (estimated end of validity) obstacle (crane):
+
+                        Group: -
+                       Mobile: YES
+                Obstacle Type: CRANE
+                   Start Time: 2028-01-20 06:00
+                     End Time: 2028-03-01 10:00 EST
+                     Schedule: -
+                  Description: -
+             Location Remarks: -
+      Obstacle Identification: OBST-EADD-TEMP-0009
+                     Geometry: Circle by centerpoint with radius (35M)
+        Geographical Accuracy: -
+                    Elevation: 75 M
+                       Height: -
+                     Lighting: YES
+          Marking Description: -
+        Affected Aerodrome(s): -
+              Affected FIR(s): EAAD
+                         Note: -
+      This example also contains a cacellation NOTAM. -->
+
+<!--
+  C0004/28 NOTAMC C0003/28
+  Q) EAAD/QOBCN/IV/M/AE/000/999/5445N02657W001
+  A) EADD-04 B) 2802281245
+  E) Temporary obstacle (crane) cancelled.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_with_cancellation-04">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.ad3be2fd-ec4d-401d-9c1c-09055073f08d">
+      <gml:identifier codeSpace="urn:uuid:">ad3be2fd-ec4d-401d-9c1c-09055073f08d</gml:identifier>
+      <!-- cancellation TimeSlice (the crane ceases to exist) -->
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_53c258a7-d1b9-4d8b-b76d-7e410f2f59e3_1_1_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_53c258a7-d1b9-4d8b-b76d-7e410f2f59e3_1_1_B_1">
+              <gml:beginPosition>2028-01-20T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-28T12:45:00Z</gml:endPosition> <!-- the time when the crane is decommissioned -->
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>1</aixm:correctionNumber> <!-- new correction number -->
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_53c258a7-d1b9-4d8b-b76d-7e410f2f59e3_1_1_B_2">
+              <gml:beginPosition>2028-01-20T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-28T12:45:00Z</gml:endPosition> <!-- the time when the crane is decommissioned -->
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADD CRANE OBST-EADD-TEMP-0009</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>OBS.NEW</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:bbb57a20-7a8e-41c3-8ed2-95a38a895f0d" xlink:title="EADD-04 DONLON/INTL." xlink:type="simple"/>
+          <!-- initial NOTAM -->
+          <event:notification>
+            <event:NOTAM gml:id="id_53c258a7-d1b9-4d8b-b76d-7e410f2f59e3_1_1_B_3">
+              <event:series>C</event:series>
+              <event:number>0003</event:number>
+              <event:year>2028</event:year>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOBCE</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5445N02657W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2801200600</event:effectiveStart>
+              <event:effectiveEnd>2803011000</event:effectiveEnd>
+              <event:estimatedEnd>YES</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">Temporary Mobile crane erected (ID: OBST-EADD-TEMP-0009):
+within area: 35m radius centred on 544457.53N 0265618.43W
+elevation 65m (height 35m).
+Lighted. Marking color: yellow.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <!-- cancellation NOTAM -->
+          <event:notification>
+            <event:NOTAM gml:id="id_53c258a7-d1b9-4d8b-b76d-7e410f2f59e3_1_1_B_4">
+              <event:series>C</event:series>
+              <event:number>0004</event:number>
+              <event:year>2028</event:year>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>C</event:type>
+              <event:referredSeries>C</event:referredSeries>
+              <event:referredNumber>0003</event:referredNumber>
+              <event:referredYear>2028</event:referredYear>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOBCN</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5445N02657W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EADD</event:location>
+              <event:effectiveStart>2802281245</event:effectiveStart>
+              <event:text lang="ENG">Temporary obstacle (crane) cancelled.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:VerticalStructure gml:id="uuid.43a5109f-f634-4a2a-a7af-290062f27ff0">
+      <gml:identifier codeSpace="urn:uuid:">43a5109f-f634-4a2a-a7af-290062f27ff0</gml:identifier>
+      <!-- cancellation TimeSlice -->
+      <aixm:timeSlice>
+        <aixm:VerticalStructureTimeSlice gml:id="id_f680c241-f42d-47d7-bbe1-21f6ef582eef_1_1_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_f680c241-f42d-47d7-bbe1-21f6ef582eef_1_1_B_1">
+              <gml:beginPosition>2028-01-20T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-28T12:45:00Z</gml:endPosition> <!-- the time when the crane is decommissioned -->
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>1</aixm:correctionNumber> <!-- new correction number -->
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_f680c241-f42d-47d7-bbe1-21f6ef582eef_1_1_B_2">
+              <gml:beginPosition>2028-01-20T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-28T12:45:00Z</gml:endPosition> <!-- the time when the crane is decommissioned -->
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>OBST-EADD-TEMP-0009</aixm:name> <!-- Obstacle Identification -->
+          <aixm:type>CRANE</aixm:type>
+          <aixm:lighted>YES</aixm:lighted>
+          <aixm:group>NO</aixm:group>
+          <aixm:part>
+            <aixm:VerticalStructurePart gml:id="id_f680c241-f42d-47d7-bbe1-21f6ef582eef_1_1_B_3">
+              <aixm:verticalExtent uom="M">35</aixm:verticalExtent> <!-- Height -->
+              <aixm:type>CRANE</aixm:type>
+              <aixm:mobile>YES</aixm:mobile>
+              <!-- Geometry - Circle by centerpoint -->
+              <aixm:horizontalProjection_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326">
+                  <gml:patches>
+                    <gml:PolygonPatch interpolation="planar">
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="id_f680c241-f42d-47d7-bbe1-21f6ef582eef_1_1_B_4">
+                              <gml:segments>
+                                <gml:CircleByCenterPoint numArc="1">
+                                  <gml:pos>54.74931652896 -26.938455429035297</gml:pos>
+                                  <gml:radius uom="m">35</gml:radius>
+                                </gml:CircleByCenterPoint>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation uom="M">65</aixm:elevation>
+                </aixm:ElevatedSurface>
+              </aixm:horizontalProjection_surfaceExtent>
+            </aixm:VerticalStructurePart>
+          </aixm:part>
+          <!-- Marking Description -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_f680c241-f42d-47d7-bbe1-21f6ef582eef_1_1_B_5">
+              <aixm:propertyName>markingICAOStandard</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_f680c241-f42d-47d7-bbe1-21f6ef582eef_1_1_B_6">
+                  <aixm:note>Marking color: yellow</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:VerticalStructureExtension gml:id="id_f680c241-f42d-47d7-bbe1-21f6ef582eef_1_1_B_7">
+              <event:theEvent xlink:href="urn:uuid:ad3be2fd-ec4d-401d-9c1c-09055073f08d" xlink:title="EADD-04 CRANE OBST-EADD-TEMP-0009 DNOTAM OBS.NEW" xlink:type="simple"/>
+            </event:VerticalStructureExtension>
+          </aixm:extension>
+        </aixm:VerticalStructureTimeSlice>
+      </aixm:timeSlice>
+    </aixm:VerticalStructure>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!--  Example of Digital NOTAM for new temporary obstacle (rig) with no concerned airports and three concerned FIRs:
+
+                        Group: NO
+                       Mobile: NO
+                Obstacle Type: RIG
+                   Start Time: 2028-01-20 12:20
+                     End Time: 2028-05-01 00:00
+                     Schedule: -
+                  Description: tension leg oil platform
+             Location Remarks: 60NM N of shoreline
+      Obstacle Identification: OBST-EA-TEMP-0008
+                     Geometry: Polygon
+        Geographical Accuracy: 0.5 M
+                    Elevation: 75 M
+                       Height: 75 M
+                     Lighting: YES
+          Marking Description: Yellow, red and white markings
+        Affected Aerodrome(s): -
+              Affected FIR(s): EAAD CZQX EGGX
+                         Note: -
+-->
+
+<!-- 
+  A NOTAMN
+  Q) EAXX/QOBCE/IV/M/E/000/003/5515N03451W001
+  A) EAAD CZQX EGGX B) 2801201220 C) 2804302359
+  E) Temporary rig (tension leg oil platform) erected (ID: OBST-EA-TEMP-0008) located at 60NM N of shoreline
+  within area: 551425.66N 0345052.81W - 551425.66N 0345045.96W - 551421.75N 0345045.96W - 551421.75N 0345052.81W - 551425.66N 0345052.81W
+  elevation 75m (height 75m).
+  Lighted. Yellow, red and white markings.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_OBS.NEW_5_temp_rig_polygon-geometry_0_airports_3_FIRs-02">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.59e6cd74-c170-4ea6-bde7-a069c85ade81">
+      <gml:identifier codeSpace="urn:uuid:">59e6cd74-c170-4ea6-bde7-a069c85ade81</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_e4b15284-b5ba-4162-9533-be4eb9f201d3_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_e4b15284-b5ba-4162-9533-be4eb9f201d3_1_0_B_1">
+              <gml:beginPosition>2028-01-20T12:20:00Z</gml:beginPosition>
+              <gml:endPosition>2028-05-01T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_e4b15284-b5ba-4162-9533-be4eb9f201d3_1_0_B_2">
+              <gml:beginPosition>2028-01-20T12:20:00Z</gml:beginPosition>
+              <gml:endPosition>2028-05-01T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>RIG OBST-EA-TEMP-0008</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>OBS.NEW</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:0102b3c7-519a-456d-a202-e3aacac2eee4" xlink:title="CZQX FIR GANDER FIR" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:5025db3b-00c1-46f1-987f-b809e2268d17" xlink:title="EGGX FIR SHANWICK OCEANIC FIR" xlink:type="simple"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_e4b15284-b5ba-4162-9533-be4eb9f201d3_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAXX</event:affectedFIR>
+              <event:selectionCode>QOBCE</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>E</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">003</event:maximumFL>
+              <event:coordinates>5515N03451W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EAAD CZQX EGGX</event:location>
+              <event:effectiveStart>2801201220</event:effectiveStart>
+              <event:effectiveEnd>2804302359</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">Temporary rig (tension leg oil platform) erected (ID: OBST-EA-TEMP-0008) located at 60NM N of shoreline
+within area: 551425.66N 0345052.81W - 551425.66N 0345045.96W - 551421.75N 0345045.96W - 551421.75N 0345052.81W - 551425.66N 0345052.81W
+elevation 75m (height 75m).
+Lighted yellow, red and white markings.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:VerticalStructure gml:id="uuid.368dffef-c4bc-4a2f-ba4e-7bccf7b1e245">
+      <gml:identifier codeSpace="urn:uuid:">368dffef-c4bc-4a2f-ba4e-7bccf7b1e245</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:VerticalStructureTimeSlice gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_1">
+              <gml:beginPosition>2028-01-20T12:20:00Z</gml:beginPosition>
+              <gml:endPosition>2028-05-01T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_2">
+              <gml:beginPosition>2028-01-20T12:20:00Z</gml:beginPosition>
+              <gml:endPosition>2028-05-01T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>OBST-EA-TEMP-0008</aixm:name> <!-- Obstacle Identification -->
+          <aixm:type>RIG</aixm:type>
+          <aixm:lighted>YES</aixm:lighted>
+          <aixm:group>NO</aixm:group>
+          <aixm:part>
+            <aixm:VerticalStructurePart gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_3">
+              <!-- Location Remarks -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_4">
+                  <aixm:propertyName>horizontalProjection_location</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_5">
+                      <aixm:note>60NM N of shoreline</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:verticalExtent uom="M">75</aixm:verticalExtent> <!-- Height -->
+              <aixm:type>RIG</aixm:type>
+              <aixm:mobile>NO</aixm:mobile>
+              <!-- Geometry - Polygon -->
+              <aixm:horizontalProjection_surfaceExtent>
+                <aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326">
+                  <gml:patches>
+                    <gml:PolygonPatch interpolation="planar">
+                      <gml:exterior>
+                        <gml:Ring>
+                          <gml:curveMember>
+                            <aixm:Curve gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_6">
+                              <gml:segments>
+                                <gml:GeodesicString>
+                                  <gml:posList>55.24046303896 -34.848001588193426 55.24046303896 -34.846100271839305 55.23937526896 -34.846100271839305 55.23937526896 -34.848001588193426 55.24046303896 -34.848001588193426</gml:posList>
+                                </gml:GeodesicString>
+                              </gml:segments>
+                            </aixm:Curve>
+                          </gml:curveMember>
+                        </gml:Ring>
+                      </gml:exterior>
+                    </gml:PolygonPatch>
+                  </gml:patches>
+                  <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+                  <aixm:elevation uom="M">75</aixm:elevation>
+                </aixm:ElevatedSurface>
+              </aixm:horizontalProjection_surfaceExtent>
+            </aixm:VerticalStructurePart>
+          </aixm:part>
+          <!-- Description -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_7">
+              <aixm:propertyName>type</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_8">
+                  <aixm:note>tension leg oil platform</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Marking Description -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_9">
+              <aixm:propertyName>markingICAOStandard</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_10">
+                  <aixm:note>Yellow, red and white markings</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:VerticalStructureExtension gml:id="id_438b62dd-e67a-4972-9f5a-54481e50001d_1_0_B_11">
+              <event:theEvent xlink:href="urn:uuid:59e6cd74-c170-4ea6-bde7-a069c85ade81" xlink:title="RIG OBST-EA-TEMP-0008 DNOTAM OBS.NEW" xlink:type="simple"/>
+            </event:VerticalStructureExtension>
+          </aixm:extension>
+        </aixm:VerticalStructureTimeSlice>
+      </aixm:timeSlice>
+    </aixm:VerticalStructure>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

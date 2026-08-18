@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+  
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  This is a Digital NOTAM for a Surface Condition Report acc. ICAO Doc 10066 (PANS-AIM), First Edition, based on Appendix 4, example SNOWTAM 4:
+  
+  SWEAnnnn EADN 02181545
+  (SNOWTAM nnnn
+  EADN
+  02181545 09L 5/5/5 100/100/100 NR/NR/03 slush/wet snow/wet snow 35
+  02181544 09R 5/2/2 100/50/75 NR/06/06 wet/slush/slush
+  RWY 09L reduced to 3000. Drifting snow. RWY 09L loose sand. RWY 09R chemically treated.)
+  
+  This file also contains a RCP.CHG Digital NOTAM due to the first 200 m of RWY 09L being closed ('RWY 09L reduced to 3000') and a RDD.CHG Digital NOTAM for the
+  opposite direction (RWY 27L) change of declared distances.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG-14">
+  
+  <!-- SFC.CON -->
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.ea501a72-50b4-4347-8c8f-f58f18e70b65">
+      <gml:identifier codeSpace="urn:uuid:">ea501a72-50b4-4347-8c8f-f58f18e70b65</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_a673b8ed-4219-49bf-96fc-ae8354043cf6_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_a673b8ed-4219-49bf-96fc-ae8354043cf6_1_0_B_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_a673b8ed-4219-49bf-96fc-ae8354043cf6_1_0_B_2">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADN 09R/27L 09L/27R</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>SFC.CON</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:91f478fe-8f00-4659-b60e-dd19d5fcfbc5" xlink:title="EADN DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:SNOWTAM gml:id="id_a673b8ed-4219-49bf-96fc-ae8354043cf6_1_0_B_3">
+              <event:series xsi:nil="true" nilReason="inapplicable"/>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:correction>NO</event:correction>
+              <event:location>EADN</event:location>
+              <event:situationalAwareness lang="ENG">RWY 09L reduced to 3000. Drifting snow. RWY 09L loose sand. RWY 09R chemically treated.</event:situationalAwareness>
+              <event:runwayCondition>
+                <event:RunwayAssessment gml:id="id_a673b8ed-4219-49bf-96fc-ae8354043cf6_1_0_B_4">
+                  <event:assessmentCompletion>02181545</event:assessmentCompletion>
+                  <event:runwayDesignator>09L</event:runwayDesignator>
+                  <event:conditionCode>5/5/5</event:conditionCode>
+                  <event:percentage>100/100/100</event:percentage>
+                  <event:depth>NR/NR/03</event:depth>
+                  <event:condition>slush/wet snow/wet snow</event:condition>
+                  <event:width>35</event:width>
+                </event:RunwayAssessment>
+              </event:runwayCondition>
+              <event:runwayCondition>
+                <event:RunwayAssessment gml:id="id_a673b8ed-4219-49bf-96fc-ae8354043cf6_1_0_B_5">
+                  <event:assessmentCompletion>02181544</event:assessmentCompletion>
+                  <event:runwayDesignator>09R</event:runwayDesignator>
+                  <event:conditionCode>5/2/2</event:conditionCode>
+                  <event:percentage>100/50/75</event:percentage>
+                  <event:depth>NR/06/06</event:depth>
+                  <event:condition>wet/slush/slush</event:condition>
+                </event:RunwayAssessment>
+              </event:runwayCondition>
+            </event:SNOWTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- EADN -->
+  <message:hasMember>
+    <aixm:AirportHeliport gml:id="uuid.91f478fe-8f00-4659-b60e-dd19d5fcfbc5">
+      <gml:identifier codeSpace="urn:uuid:">91f478fe-8f00-4659-b60e-dd19d5fcfbc5</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirportHeliportTimeSlice gml:id="id_207808e6-0861-4edb-a5ec-d35f02f5dfcc_6_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_207808e6-0861-4edb-a5ec-d35f02f5dfcc_6_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>6</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- (J) Drifting snow whole airport -->
+          <aixm:contaminant>
+            <aixm:AirportHeliportContamination gml:id="id_207808e6-0861-4edb-a5ec-d35f02f5dfcc_6_0_T_2">
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_207808e6-0861-4edb-a5ec-d35f02f5dfcc_6_0_T_3">
+                  <aixm:type>OTHER:DRIFTING_SNOW</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+            </aixm:AirportHeliportContamination>
+          </aixm:contaminant>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:AirportHeliportExtension gml:id="id_207808e6-0861-4edb-a5ec-d35f02f5dfcc_6_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:ea501a72-50b4-4347-8c8f-f58f18e70b65" xlink:title="EADN 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
+            </event:AirportHeliportExtension>
+          </aixm:extension>
+        </aixm:AirportHeliportTimeSlice>
+      </aixm:timeSlice>
+    </aixm:AirportHeliport>
+  </message:hasMember>
+  
+  <!-- RWY 09R/27L -->
+  <message:hasMember>
+    <aixm:Runway gml:id="uuid.3205e94c-01ae-44b9-803f-a185971189ce">
+      <gml:identifier codeSpace="urn:uuid:">3205e94c-01ae-44b9-803f-a185971189ce</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayTimeSlice gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:overallContaminant>
+            <aixm:RunwayContamination gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_2">
+              <aixm:observationTime>2028-02-18T15:44:00.000Z</aixm:observationTime>
+              <!-- (L) Chemical treatment  -->
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_3">
+                  <aixm:type>OTHER:CHEMICAL_TREATMENT</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+            </aixm:RunwayContamination>
+          </aixm:overallContaminant>
+          <!-- Aeroplane performance calculation section - first section -->
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_4">
+              <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_5">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>OTHER:WET</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_6">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>1_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - second section -->
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_7">
+              <aixm:depth uom="MM">6</aixm:depth>
+              <aixm:frictionEstimation>OTHER:RWYCC_2</aixm:frictionEstimation>
+              <aixm:proportion>50</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_8">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>SLUSH</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_9">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>2_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - third section -->
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_10">
+              <aixm:depth uom="MM">6</aixm:depth>
+              <aixm:frictionEstimation>OTHER:RWYCC_2</aixm:frictionEstimation>
+              <aixm:proportion>75</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_11">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>SLUSH</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_12">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>3_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayExtension gml:id="id_99f4dee1-1f51-41ba-9471-dbcc9d447f59_2_0_T_13">
+              <event:theEvent xlink:href="urn:uuid:ea501a72-50b4-4347-8c8f-f58f18e70b65" xlink:title="EADN 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
+            </event:RunwayExtension>
+          </aixm:extension>
+        </aixm:RunwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Runway>
+  </message:hasMember>
+  
+  <!-- RWY 09L/27R -->
+  <message:hasMember>
+    <aixm:Runway gml:id="uuid.310f7489-dbf8-44ed-a1be-b969080db2bf">
+      <gml:identifier codeSpace="urn:uuid:">310f7489-dbf8-44ed-a1be-b969080db2bf</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayTimeSlice gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>4</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:overallContaminant>
+            <aixm:RunwayContamination gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_2">
+              <aixm:observationTime>2028-02-18T15:45:00.000Z</aixm:observationTime>
+              <!-- (K) Loose sand on the runway -->
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_3">
+                  <aixm:type>OTHER:LOOSE_SAND</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:clearedLength uom="M">3000</aixm:clearedLength> <!-- (I) Reduced runway length -->
+              <aixm:clearedWidth uom="M">35</aixm:clearedWidth> <!-- (H) Reduced runway width -->
+            </aixm:RunwayContamination>
+          </aixm:overallContaminant>
+          <!-- Aeroplane performance calculation section - first section -->
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_4">
+              <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_5">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>SLUSH</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_6">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>1_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - second section -->
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_7">
+              <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_8">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>WET_SNOW</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_9">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>2_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <!-- Aeroplane performance calculation section - third section -->
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_10">
+              <aixm:depth uom="MM">3</aixm:depth>
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_11">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>WET_SNOW</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_12">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>3_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayExtension gml:id="id_5d3b4caf-add1-4e9d-b89a-fff4070d4d30_4_0_T_13">
+              <event:theEvent xlink:href="urn:uuid:ea501a72-50b4-4347-8c8f-f58f18e70b65" xlink:title="EADN 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
+            </event:RunwayExtension>
+          </aixm:extension>
+        </aixm:RunwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Runway>
+  </message:hasMember>
+  
+  <!-- RCP.CHG -->
+  
+  <!-- 09L - THR of RWY 09L -->
+  <!-- 
+  A NOTAMN
+  Q) EAAD/QMDCH/IV/NBO/A/000/999/5005N02724W005
+  A) EADN B) 2802181545 C) 2802182345
+  E) RWY 09L THR displaced 200 m, position 500507.25N 0272432.77W. Elevation 29M.
+  LDA 3000M 
+  Due to SNOWTAM in effect (see EADN SNOWTAM 0005).
+  -->
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.c565489f-76bb-4690-96d8-c18ef6cfb2c5">
+      <gml:identifier codeSpace="urn:uuid:">c565489f-76bb-4690-96d8-c18ef6cfb2c5</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_ef065b48-aa62-4153-a438-2edc37801431_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_ef065b48-aa62-4153-a438-2edc37801431_1_0_B_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_ef065b48-aa62-4153-a438-2edc37801431_1_0_B_2">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADN 09L/27R 09L</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>RCP.CHG</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:91f478fe-8f00-4659-b60e-dd19d5fcfbc5" xlink:title="DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:ea501a72-50b4-4347-8c8f-f58f18e70b65" xlink:title="EADN 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_ef065b48-aa62-4153-a438-2edc37801431_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMTCM</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL>000</event:minimumFL>
+              <event:maximumFL>999</event:maximumFL>
+              <event:coordinates>5005N02724W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADN</event:location>
+              <event:effectiveStart>2802181545</event:effectiveStart>
+              <event:effectiveEnd>2802182345</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>RWY 09L THR displaced 200 m, position 500507.25N 0272432.77W. Elevation 29M.
+LDA 3000M 
+Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.33c7bf65-df43-47c2-93c3-5ed5b3aefc4d">
+      <gml:identifier codeSpace="urn:uuid:">33c7bf65-df43-47c2-93c3-5ed5b3aefc4d</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:role>DISTHR</aixm:role>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_2" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>50.08534763679201 -27.409104342076624</gml:pos>
+              <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">29</aixm:elevation>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_3">
+              <aixm:type>LDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_4">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- Displacement Distance -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_5">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_6">
+                  <aixm:note>200 m</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_7">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_8">
+                  <aixm:note>Due to SNOWTAM in effect (see EADD SNOWTAM 0005)</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_1b5af3b6-dc7f-4ff9-add0-404048b7b2b3_1_0_T_9">
+              <event:theEvent xlink:href="urn:uuid:c565489f-76bb-4690-96d8-c18ef6cfb2c5" xlink:title="EADN 09L/27R 09L DNOTAM RCP.CHG" xlink:type="simple"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- E - START_RUN on RWY 09L (TWE E) -->
+  <!-- 
+  A NOTAMN
+  Q) EAAD/QMDCH/IV/NBO/A/000/999/5005N02724W005
+  A) EADN B) 2802181545 C) 2802182345
+  E) RWY 09L Start of TKOF run E (TWY E) displaced 167m, position 500507.25N 0272432.77W. Elevation 29M.
+  TORA 3000M 
+  TODA 3000M 
+  ASDA 3000M 
+  Due to SNOWTAM in effect (see EADN SNOWTAM 0005).
+  -->
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.ee74349e-bd4a-4b2b-a01a-6ec20c398777">
+      <gml:identifier codeSpace="urn:uuid:">ee74349e-bd4a-4b2b-a01a-6ec20c398777</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_582e3bd2-7e71-4c72-8d23-39171768b332_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_582e3bd2-7e71-4c72-8d23-39171768b332_1_0_B_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_582e3bd2-7e71-4c72-8d23-39171768b332_1_0_B_2">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADN 09L/27R 09L</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>RCP.CHG</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:91f478fe-8f00-4659-b60e-dd19d5fcfbc5" xlink:title="DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:ea501a72-50b4-4347-8c8f-f58f18e70b65" xlink:title="EADN 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_582e3bd2-7e71-4c72-8d23-39171768b332_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMDCH</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL>000</event:minimumFL>
+              <event:maximumFL>999</event:maximumFL>
+              <event:coordinates>5005N02724W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADN</event:location>
+              <event:effectiveStart>2802181545</event:effectiveStart>
+              <event:effectiveEnd>2802182345</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>RWY 09L Start of TKOF run E (TWY E) displaced 167m, position 500507.25N 0272432.77W. Elevation 29M.
+TORA 3000M 
+TODA 3000M 
+ASDA 3000M  
+Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.edea2739-3200-413e-8cee-c1b3c5b584dc">
+      <gml:identifier codeSpace="urn:uuid:">edea2739-3200-413e-8cee-c1b3c5b584dc</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_2" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>50.08534763679201 -27.409104342076624</gml:pos>
+              <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">29</aixm:elevation>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_3">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_4">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_5">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_6">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_7">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_8">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- Displacement Distance -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_9">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_10">
+                  <aixm:note>167m</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_11">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_12">
+                  <aixm:note>Due to SNOWTAM in effect (see EADD SNOWTAM 0005)</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Centreline Point Location Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_13">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_14">
+                  <aixm:note>TWE E</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_2c62f7c6-af64-41bc-a692-52a3b22ee91d_1_0_T_15">
+              <event:theEvent xlink:href="urn:uuid:ee74349e-bd4a-4b2b-a01a-6ec20c398777" xlink:title="EADN 09L/27R 09L DNOTAM RCP.CHG" xlink:type="simple"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- START_09L - START on RWY 09L (the physical start or RWY 09L) -->
+  <!-- 
+  A NOTAMN
+  Q) EAAD/QMDCH/IV/NBO/A/000/999/5005N02724W005
+  A) EADN B) 2802181545 C) 2802182345
+  E) RWY 09L centreline point START_09L (physical start of RWY 09L) displaced 200m, position 500507.25N 0272432.77W. Elevation 29M.
+  TORA 3000M 
+  TODA 3000M 
+  ASDA 3000M 
+  Due to SNOWTAM in effect (see EADN SNOWTAM 0005).
+  -->
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.c3ad89b9-c041-4a7d-b89a-af099fbb7b5a">
+      <gml:identifier codeSpace="urn:uuid:">c3ad89b9-c041-4a7d-b89a-af099fbb7b5a</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_00ac19c1-0db6-43b6-a9ed-30432890f76b_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_00ac19c1-0db6-43b6-a9ed-30432890f76b_1_0_B_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_00ac19c1-0db6-43b6-a9ed-30432890f76b_1_0_B_2">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADN 09L/27R 09L</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>RCP.CHG</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:91f478fe-8f00-4659-b60e-dd19d5fcfbc5" xlink:title="DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:ea501a72-50b4-4347-8c8f-f58f18e70b65" xlink:title="EADN 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_00ac19c1-0db6-43b6-a9ed-30432890f76b_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMDCH</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL>000</event:minimumFL>
+              <event:maximumFL>999</event:maximumFL>
+              <event:coordinates>5005N02724W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADN</event:location>
+              <event:effectiveStart>2802181545</event:effectiveStart>
+              <event:effectiveEnd>2802182345</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text>RWY 09L centreline point START_09L (physical start of RWY 09L) displaced 200m, position 500507.25N 0272432.77W. Elevation 29M.
+TORA 3000M 
+TODA 3000M 
+ASDA 3000M 
+Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.8c566dd2-5a15-4d16-ad09-2a7b993e458d">
+      <gml:identifier codeSpace="urn:uuid:">8c566dd2-5a15-4d16-ad09-2a7b993e458d</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_2" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>50.08534763679201 -27.409104342076624</gml:pos>
+              <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">29</aixm:elevation>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_3">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_4">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_5">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_6">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_7">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_8">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- Displacement Distance -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_9">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_10">
+                  <aixm:note>200m</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_11">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_12">
+                  <aixm:note>Due to SNOWTAM in effect (see EADD SNOWTAM 0005)</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Centreline Point Location Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_13">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_14">
+                  <aixm:note>physical start of RWY 09L</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_eb3ffd5d-d982-4097-b5e5-bc4359703f63_1_0_T_15">
+              <event:theEvent xlink:href="urn:uuid:c3ad89b9-c041-4a7d-b89a-af099fbb7b5a" xlink:title="EADN 09L/27R 09L DNOTAM RCP.CHG" xlink:type="simple"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- RDD.CHG -->
+  <!-- 
+  A NOTAMN
+  Q) EAAD/QMDCH/IV/NBO/A/000/999/5005N02724W005
+  A) EADN B) 2802181545 C) 2802182345
+  E) Declared distances changed as follows:
+  RWY 27R 
+  (START_27R) (physical start of RWY 27R) TORA 3000M TODA 3000M ASDA 3000M
+  (A) (TWY A) TORA 2970M TODA 2970M ASDA 2970M
+  (B) (TWY B) TORA 2270M TODA 2270M ASDA 2270M
+  LDA 2700M.
+  Due to SNOWTAM in effect (see EADN SNOWTAM 0005).
+  -->
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.b07e00d6-e744-43ba-b7f3-5d6cb960c9f3">
+      <gml:identifier codeSpace="urn:uuid:">b07e00d6-e744-43ba-b7f3-5d6cb960c9f3</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_5c4fbf38-d9cc-46a1-8da3-1cabe7734e31_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_5c4fbf38-d9cc-46a1-8da3-1cabe7734e31_1_0_B_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_5c4fbf38-d9cc-46a1-8da3-1cabe7734e31_1_0_B_2">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADN 09L/27R 27R</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>RDD.CHG</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:91f478fe-8f00-4659-b60e-dd19d5fcfbc5" xlink:title="DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:ea501a72-50b4-4347-8c8f-f58f18e70b65" xlink:title="EADN 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_5c4fbf38-d9cc-46a1-8da3-1cabe7734e31_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMDCH</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5005N02724W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADN</event:location>
+              <event:effectiveStart>2802181545</event:effectiveStart>
+              <event:effectiveEnd>2802182345</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">Declared distances changed as follows:
+RWY 27R 
+(START_27R) (physical start of RWY 27R) TORA 3000M TODA 3000M ASDA 3000M
+(A) (TWY A) TORA 2970M TODA 2970M ASDA 2970M
+(B) (TWY B) TORA 2270M TODA 2270M ASDA 2270M
+LDA 2700M.
+Due to SNOWTAM in effect (see EADD SNOWTAM 0005).</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- START_27R - the physical start of RWY 27R -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.3b80a966-8d35-40ef-8d1e-0b14217eb1a7">
+      <gml:identifier codeSpace="urn:uuid:">3b80a966-8d35-40ef-8d1e-0b14217eb1a7</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_2">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_3">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_4">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_5">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_6">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_7">
+                  <aixm:distance uom="M">3000</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_8">
+              <aixm:propertyName>associatedDeclaredDistance</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_9">
+                  <aixm:note>Due to SNOWTAM in effect (see EADD SNOWTAM 0005)</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Centreline Point Location Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_10">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_11">
+                  <aixm:note>physical start of RWY 27R</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_836e30f4-5ba7-46fd-9101-3200e048e3b5_1_0_T_12">
+              <event:theEvent xlink:href="urn:uuid:b07e00d6-e744-43ba-b7f3-5d6cb960c9f3" xlink:title="EADN 09L/27R 27R DNOTAM RDD.CHG" xlink:type="simple"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- A - START_RUN on RWY 27R at the intersection with TWY A -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.3d3dbcb8-4318-493d-8ca9-1f2e9b9935fa">
+      <gml:identifier codeSpace="urn:uuid:">3d3dbcb8-4318-493d-8ca9-1f2e9b9935fa</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_2">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_3">
+                  <aixm:distance uom="M">2970</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_4">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_5">
+                  <aixm:distance uom="M">2970</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_6">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_7">
+                  <aixm:distance uom="M">2970</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_8">
+              <aixm:propertyName>associatedDeclaredDistance</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_9">
+                  <aixm:note>Due to SNOWTAM in effect (see EADD SNOWTAM 0005)</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Centreline Point Location Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_10">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_11">
+                  <aixm:note>TWY A</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_ef704698-71b7-46b6-af11-78592c01e4f4_1_0_T_12">
+              <event:theEvent xlink:href="urn:uuid:b07e00d6-e744-43ba-b7f3-5d6cb960c9f3" xlink:title="EADN 09L/27R 27R DNOTAM RDD.CHG" xlink:type="simple"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- B - START_RUN on RWT 27R at the intersection with TWY B -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.28d90576-1eaf-46e7-80d4-720b3ea03f5b">
+      <gml:identifier codeSpace="urn:uuid:">28d90576-1eaf-46e7-80d4-720b3ea03f5b</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_2">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_3">
+                  <aixm:distance uom="M">2270</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_4">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_5">
+                  <aixm:distance uom="M">2270</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_6">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_7">
+                  <aixm:distance uom="M">2270</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_8">
+              <aixm:propertyName>associatedDeclaredDistance</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_9">
+                  <aixm:note>Due to SNOWTAM in effect (see EADD SNOWTAM 0005)</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Centreline Point Location Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_10">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_11">
+                  <aixm:note>TWY B</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_17eb2497-ac21-41df-bf4e-6b77836f7dc4_1_0_T_12">
+              <event:theEvent xlink:href="urn:uuid:b07e00d6-e744-43ba-b7f3-5d6cb960c9f3" xlink:title="EADN 09L/27R 27R DNOTAM RDD.CHG" xlink:type="simple"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+  <!-- 27R - THR of RWY 27R -->
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.450e80e2-a393-43e4-b8c0-8e5c752dc488">
+      <gml:identifier codeSpace="urn:uuid:">450e80e2-a393-43e4-b8c0-8e5c752dc488</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_05fa45ec-8886-4094-a100-f7c127a7ba39_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_05fa45ec-8886-4094-a100-f7c127a7ba39_1_0_T_1">
+              <gml:beginPosition>2028-02-18T15:45:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-18T23:45:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_05fa45ec-8886-4094-a100-f7c127a7ba39_1_0_T_2">
+              <aixm:type>LDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_05fa45ec-8886-4094-a100-f7c127a7ba39_1_0_T_3">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_05fa45ec-8886-4094-a100-f7c127a7ba39_1_0_T_4">
+              <aixm:propertyName>associatedDeclaredDistance</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_05fa45ec-8886-4094-a100-f7c127a7ba39_1_0_T_5">
+                  <aixm:note>Due to SNOWTAM in effect (see EADD SNOWTAM 0005)</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_05fa45ec-8886-4094-a100-f7c127a7ba39_1_0_T_6">
+              <event:theEvent xlink:href="urn:uuid:54959586-aa9a-4084-abf0-874a89697943" xlink:title="EADN 09L/27R 27R DNOTAM RDD.CHG" xlink:type="simple"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

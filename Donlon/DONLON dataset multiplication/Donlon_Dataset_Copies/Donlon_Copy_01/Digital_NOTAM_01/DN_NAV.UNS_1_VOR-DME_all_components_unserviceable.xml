@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Example of Digital NOTAM for a VOR/DME navaid unserviceable (all components):
+  
+          Runway Direction: -
+                    Navaid: BOORSPIJK (BOR) VOR/DME
+              Subcomponent: - (all subcomponents)
+               Signal Type: -
+        Operational Status: UNSERVICEABLE
+                Start Time: 2028-03-28 05:00
+                  End Time: 2028-03-28 07:30
+                  Schedule: -
+     Affected Aerodrome(s): EADA EAKA EAHA
+           Affected FIR(s): EAAD
+                    Reason: maintenance
+                      Note: -
+-->
+
+<!-- 
+  A NOTAMN
+  Q) EAAD/QNMAS/IV/BO/AE/000/999/5446N03935W025
+  A) EADA B) 2803280500 C) 2803280730
+  E) BOORSPIJK VOR/DME BOR 116.500MHz 112X unserviceable.
+  Due to maintenance.
+  
+  A NOTAMN
+  Q) EAAD/QNMAS/IV/BO/A/000/999/5500N04009W005
+  A) EAKA B) 2803280500 C) 2803280730
+  E) BOORSPIJK VOR/DME BOR 116.500MHz 112X unserviceable.
+  Due to maintenance.
+  
+  A NOTAMN
+  Q) EAAD/QNMAS/IV/BO/A/000/999/5441N03913W005
+  A) EAHA B) 2803280500 C) 2803280730
+  E) BOORSPIJK VOR/DME BOR 116.500MHz 112X unserviceable.
+  Due to maintenance.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_NAV.UNS_1_VOR-DME_all_components_unserviceable-01">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.32cc8d49-ea8f-4cc7-a1cf-56a5da989997">
+      <gml:identifier codeSpace="urn:uuid:">32cc8d49-ea8f-4cc7-a1cf-56a5da989997</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_6e5054b0-8352-456a-8b9c-6b174add1f8e_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_6e5054b0-8352-456a-8b9c-6b174add1f8e_1_0_B_1">
+              <gml:beginPosition>2028-03-28T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-28T07:30:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_6e5054b0-8352-456a-8b9c-6b174add1f8e_1_0_B_2">
+              <gml:beginPosition>2028-03-28T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-28T07:30:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>BOR VOR/DME BOORSPIJK</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>NAV.UNS</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:88fb5d09-0767-45e3-af65-aa8a0a4b3e66" xlink:title="EADA DONLON/INTL." xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:0efc4e4e-0112-4b38-a0b6-4df37feea261" xlink:title="EAKA AKVIN/Akvin" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:3d74bb9b-c91a-4848-90f3-b6fa122530a9" xlink:title="EAHA DONLON/DOWNTOWN HELIPORT" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_6e5054b0-8352-456a-8b9c-6b174add1f8e_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QNMAS</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5446N03935W</event:coordinates>
+              <event:radius uom="NM">025</event:radius>
+              <event:location>EADA</event:location>
+              <event:effectiveStart>2803280500</event:effectiveStart>
+              <event:effectiveEnd>2803280730</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">BOORSPIJK VOR/DME BOR 116.500MHz 112X unserviceable.
+Due to maintenance.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:notification>
+            <event:NOTAM gml:id="id_6e5054b0-8352-456a-8b9c-6b174add1f8e_1_0_B_4">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QNMAS</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5500N04009W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EAKA</event:location>
+              <event:effectiveStart>2803280500</event:effectiveStart>
+              <event:effectiveEnd>2803280730</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">BOORSPIJK VOR/DME BOR 116.500MHz 112X unserviceable.
+Due to maintenance.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:notification>
+            <event:NOTAM gml:id="id_6e5054b0-8352-456a-8b9c-6b174add1f8e_1_0_B_5">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QNMAS</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5441N03913W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EAHA</event:location>
+              <event:effectiveStart>2803280500</event:effectiveStart>
+              <event:effectiveEnd>2803280730</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">BOORSPIJK VOR/DME BOR 116.500MHz 112X unserviceable.
+Due to maintenance.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- BOR VOR/DME Navaid -->
+  <message:hasMember>
+    <aixm:Navaid gml:id="uuid.7db8a75d-80cf-40e2-89f6-7f89fe2b1d2b">
+      <gml:identifier codeSpace="urn:uuid:">7db8a75d-80cf-40e2-89f6-7f89fe2b1d2b</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:NavaidTimeSlice gml:id="id_703a5a9d-258b-4d3c-9e04-7b62d9d3d016_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_703a5a9d-258b-4d3c-9e04-7b62d9d3d016_1_0_T_1">
+              <gml:beginPosition>2028-03-28T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-28T07:30:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The operational status of the navaid during the event -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_703a5a9d-258b-4d3c-9e04-7b62d9d3d016_1_0_T_2">
+              <aixm:annotation>
+                <aixm:Note gml:id="id_703a5a9d-258b-4d3c-9e04-7b62d9d3d016_1_0_T_3">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_703a5a9d-258b-4d3c-9e04-7b62d9d3d016_1_0_T_4">
+                      <aixm:note>maintenance</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>UNSERVICEABLE</aixm:operationalStatus>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:NavaidExtension gml:id="id_703a5a9d-258b-4d3c-9e04-7b62d9d3d016_1_0_T_5">
+              <event:theEvent xlink:href="urn:uuid:32cc8d49-ea8f-4cc7-a1cf-56a5da989997" xlink:title="BOR VOR/DME BOORSPIJK DNOTAM NAV.UNS" xlink:type="simple"/>
+            </event:NavaidExtension>
+          </aixm:extension>
+        </aixm:NavaidTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Navaid>
+  </message:hasMember>
+  
+  <!-- BOR VOR NavaidEquipment -->
+  <message:hasMember>
+    <aixm:VOR gml:id="uuid.f77fdef2-c7ff-42b7-8609-0894b3a4dcaa">
+      <gml:identifier codeSpace="urn:uuid:">f77fdef2-c7ff-42b7-8609-0894b3a4dcaa</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:VORTimeSlice gml:id="id_664829d7-f3ab-431e-9a57-88ebb84b2cd8_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_664829d7-f3ab-431e-9a57-88ebb84b2cd8_1_0_T_1">
+              <gml:beginPosition>2028-03-28T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-28T07:30:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The operational status of the navaid equipment during the event -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_664829d7-f3ab-431e-9a57-88ebb84b2cd8_1_0_T_2">
+              <aixm:operationalStatus>UNSERVICEABLE</aixm:operationalStatus>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:VORExtension gml:id="id_664829d7-f3ab-431e-9a57-88ebb84b2cd8_1_0_T_3">
+              <event:theEvent xlink:href="urn:uuid:32cc8d49-ea8f-4cc7-a1cf-56a5da989997" xlink:title="BOR VOR/DME BOORSPIJK DNOTAM NAV.UNS" xlink:type="simple"/>
+            </event:VORExtension>
+          </aixm:extension>
+        </aixm:VORTimeSlice>
+      </aixm:timeSlice>
+    </aixm:VOR>
+  </message:hasMember>
+  
+  <!-- BOR DME NavaidEquipment -->
+  <message:hasMember>
+    <aixm:DME gml:id="uuid.84536951-a455-47d9-9ff7-ce623838dbdd">
+      <gml:identifier codeSpace="urn:uuid:">84536951-a455-47d9-9ff7-ce623838dbdd</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:DMETimeSlice gml:id="id_719b0c50-fffa-42fc-bb71-13f869c92585_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_719b0c50-fffa-42fc-bb71-13f869c92585_1_0_T_1">
+              <gml:beginPosition>2028-03-28T05:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-28T07:30:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The operational status of the navaid equipment during the event -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_719b0c50-fffa-42fc-bb71-13f869c92585_1_0_T_2">
+              <aixm:operationalStatus>UNSERVICEABLE</aixm:operationalStatus>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:DMEExtension gml:id="id_719b0c50-fffa-42fc-bb71-13f869c92585_1_0_T_3">
+              <event:theEvent xlink:href="urn:uuid:32cc8d49-ea8f-4cc7-a1cf-56a5da989997" xlink:title="BOR VOR/DME BOORSPIJK DNOTAM NAV.UNS" xlink:type="simple"/>
+            </event:DMEExtension>
+          </aixm:extension>
+        </aixm:DMETimeSlice>
+      </aixm:timeSlice>
+    </aixm:DME>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

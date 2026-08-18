@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+  
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!--  This is a Digital NOTAM for obstacle lights unserviceable:
+      
+                   Obstacle: OBST-EADD-1017 WINDMILL_FARMS
+                 Start Time: 2027-12-22 10:30
+                   End Time: 2027-12-23 05:00
+                   Schedule: -
+      Affected Aerodrome(s): EADZ EAHZ
+            Affected FIR(s): EAAD
+                       Note: Temporarily marked with flags
+-->
+
+<!--
+  A NOTAMN
+  Q) EAAD/QOLAS/IV/M/AE/000/999/4301N03056W001
+  A) EADZ B) 2712221030 C) 2712230500
+  E) Obstacle lights unserviceable on group of windmill farms (10 Wind Turbines) located at DONLON NORTHEAST I identified as OBST-EADD-1017 within area: 430239N 0305515W - 425943N 0305545W - 425946N 0305615W - 430246N 0305615W - 430239N 0305515W
+  elevation 215m (height 119m).
+  Temporarily marked with flags.
+
+  A NOTAMN
+  Q) EAAD/QOLAS/IV/M/A/000/999/4258N03110W005
+  A) EAHZ B) 2712221030 C) 2712230500
+  E) Obstacle lights unserviceable on group of windmill farms (10 Wind Turbines) located at DONLON NORTHEAST I identified as OBST-EADD-1017 within area: 430239N 0305515W - 425943N 0305545W - 425946N 0305615W - 430246N 0305615W - 430239N 0305515W
+  elevation 215m (height 119m).
+  Temporarily marked with flags.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_OBL.UNS_1-26">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.e4d2e61f-a17d-4bfe-b1f4-570a9054123f">
+      <gml:identifier codeSpace="urn:uuid:">e4d2e61f-a17d-4bfe-b1f4-570a9054123f</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_ba52790d-9b38-4ed8-b169-3d95f38f254f_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_ba52790d-9b38-4ed8-b169-3d95f38f254f_1_0_B_1">
+              <gml:beginPosition>2027-12-22T10:30:00Z</gml:beginPosition>
+              <gml:endPosition>2027-12-23T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_ba52790d-9b38-4ed8-b169-3d95f38f254f_1_0_B_2">
+              <gml:beginPosition>2027-12-22T10:30:00Z</gml:beginPosition>
+              <gml:endPosition>2027-12-23T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADZ EAHZ WINDMILL_FARMS DONLON NORTHEAST I</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>OBL.UNS</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:26ddfdef-c170-4f41-8568-d40cdf4f99aa" xlink:title="EADZ DONLON/INTL." xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:279f3a48-b02d-42a1-9f94-8e2f31978f42" xlink:title="EAHZ DONLON/DOWNTOWN HELIPORT" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_ba52790d-9b38-4ed8-b169-3d95f38f254f_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOLAS</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>4301N03056W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EADZ</event:location>
+              <event:effectiveStart>2712221030</event:effectiveStart>
+              <event:effectiveEnd>2712230500</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">Obstacle lights unserviceable on group of windmill farms (10 Wind Turbines) located at DONLON NORTHEAST I identified as OBST-EADD-1017 within area: 430239N 0305515W - 425943N 0305545W - 425946N 0305615W - 430246N 0305615W - 430239N 0305515W
+elevation 215m (height 119m).
+Temporarily marked with flags.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:notification>
+            <event:NOTAM gml:id="id_ba52790d-9b38-4ed8-b169-3d95f38f254f_1_0_B_4">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOLAS</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>4258N03110W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EAHZ</event:location>
+              <event:effectiveStart>2712221030</event:effectiveStart>
+              <event:effectiveEnd>2712230500</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">Obstacle lights unserviceable on group of windmill farms (10 Wind Turbines) located at DONLON NORTHEAST I identified as OBST-EADD-1017 within area: 430239N 0305515W - 425943N 0305545W - 425946N 0305615W - 430246N 0305615W - 430239N 0305515W
+elevation 215m (height 119m).
+Temporarily marked with flags.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:VerticalStructure gml:id="uuid.0f35ae86-a1bb-4b86-9b11-e91fb341b017">
+      <gml:identifier codeSpace="urn:uuid:">0f35ae86-a1bb-4b86-9b11-e91fb341b017</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:VerticalStructureTimeSlice gml:id="id_6b5c72c4-9650-4c3e-b4b5-8a321785863b_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_6b5c72c4-9650-4c3e-b4b5-8a321785863b_1_0_T_1">
+              <gml:beginPosition>2027-12-22T10:30:00Z</gml:beginPosition>
+              <gml:endPosition>2027-12-23T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The availability status of the lighting equipment during the event -->
+          <aixm:lightingAvailability>
+            <aixm:VerticalStructureLightingStatus gml:id="id_6b5c72c4-9650-4c3e-b4b5-8a321785863b_1_0_T_2">
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_6b5c72c4-9650-4c3e-b4b5-8a321785863b_1_0_T_3">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_6b5c72c4-9650-4c3e-b4b5-8a321785863b_1_0_T_4">
+                      <aixm:note>Temporarily marked with flags</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:status>UNSERVICEABLE</aixm:status>
+            </aixm:VerticalStructureLightingStatus>
+          </aixm:lightingAvailability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:VerticalStructureExtension gml:id="id_6b5c72c4-9650-4c3e-b4b5-8a321785863b_1_0_T_5">
+              <event:theEvent xlink:href="urn:uuid:e4d2e61f-a17d-4bfe-b1f4-570a9054123f" xlink:title="EADZ EAHZ WINDMILL_FARMS DONLON NORTHEAST I DNOTAM OBL.UNS" xlink:type="simple"/>
+            </event:VerticalStructureExtension>
+          </aixm:extension>
+        </aixm:VerticalStructureTimeSlice>
+      </aixm:timeSlice>
+    </aixm:VerticalStructure>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

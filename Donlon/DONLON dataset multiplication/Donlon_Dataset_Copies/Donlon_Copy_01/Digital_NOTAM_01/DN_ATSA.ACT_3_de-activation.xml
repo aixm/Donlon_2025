@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  Example of Digital NOTAM for ATS airspace DE-activation:
+  
+               Airspace: DONLON ATZ
+      Activation Status: INACTIVE
+             Start Time: 2028-02-11 08:00
+               End Time: 2028-02-11 16:00
+               Schedule: -
+  Affected Aerodrome(s): EAHA
+        Affected FIR(s): EAAD
+                   Note: -
+                      
+  During the event the airspace is de-activated on 2028-02-11 (FRI) from 0800 until 1600.
+-->
+
+<!-- 
+  B NOTAMN
+  Q) EAAD/QAZCD/IV/NBO/AE/000/005/5441N03913W001
+  A) EAHA B) 2802110800 C) 2802111600
+  E) ATZ DONLON ATZ EAHA (class D) deactivated.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_ATSA.ACT_3_de-activation-01">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.ef7da384-6b43-4a34-b4de-e0f3f3bcd615">
+      <gml:identifier codeSpace="urn:uuid:">ef7da384-6b43-4a34-b4de-e0f3f3bcd615</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_2ebba6cc-bdfd-4ab0-bc9c-16bea73c735c_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_2ebba6cc-bdfd-4ab0-bc9c-16bea73c735c_1_0_B_1">
+              <gml:beginPosition>2028-02-11T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-11T16:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_2ebba6cc-bdfd-4ab0-bc9c-16bea73c735c_1_0_B_2">
+              <gml:beginPosition>2028-02-11T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-11T16:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>ATZ EAHA</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>ATSA.ACT</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:3d74bb9b-c91a-4848-90f3-b6fa122530a9" xlink:title="EAHA DONLON/DOWNTOWN HELIPORT" xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_2ebba6cc-bdfd-4ab0-bc9c-16bea73c735c_1_0_B_3">
+              <event:series>B</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QAZCD</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">005</event:maximumFL>
+              <event:coordinates>5441N03913W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EAHA</event:location>
+              <event:effectiveStart>2802110800</event:effectiveStart>
+              <event:effectiveEnd>2802111600</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">ATZ DONLON ATZ EADH (class D) deactivated.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- EADH-01 DONLON ATZ -->
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.457ec15c-4ab3-4176-ad31-20d724b202d2">
+      <gml:identifier codeSpace="urn:uuid:">457ec15c-4ab3-4176-ad31-20d724b202d2</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_de1bca1f-17dd-4c11-b406-dc1bc206a540_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_de1bca1f-17dd-4c11-b406-dc1bc206a540_1_0_T_1">
+              <gml:beginPosition>2028-02-11T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-11T16:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The deactivation of the airspace -->
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_de1bca1f-17dd-4c11-b406-dc1bc206a540_1_0_T_2">
+              <aixm:status>INACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_de1bca1f-17dd-4c11-b406-dc1bc206a540_1_0_T_3">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_de1bca1f-17dd-4c11-b406-dc1bc206a540_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:ef7da384-6b43-4a34-b4de-e0f3f3bcd615" xlink:title="ATZ EADH-01 DNOTAM ATSA.ACT" xlink:type="simple"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

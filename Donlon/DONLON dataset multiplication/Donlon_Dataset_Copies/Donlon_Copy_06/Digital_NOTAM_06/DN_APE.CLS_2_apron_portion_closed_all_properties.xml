@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Example of Digital NOTAM for the closure of an apron portion:
+  
+                               Apron: EADF DONLON/INTL. | APRON A
+                          Start Time: 2028-03-12 10:00
+                            End Time: 2028-03-14 16:00
+                            Schedule: Daily 1000-1600
+                       Schedule Note: Schedule applicable only during fair weather.     
+                            Geometry: Polygon
+               Geographical Accuracy: 0.5 M
+                           Elevation: 28 M
+     Location and Extent Description: S of terminal building and acft stand 9
+                      Closure Reason: aircraft static display
+                                Note: Closed area is delimited by crowd control barriers.
+-->
+
+<!-- 
+  A NOTAMN
+  Q) EAAD/QMNLC/IV/NBO/A/000/999/5225N03843W005
+  A) EADF B) 2803121000 C) 2803141600
+  D) Daily 1000-1600
+  E) Apron A closed S of terminal building and acft stand 9
+  due to aircraft static display.
+  Closed area is delimited by crowd control barriers.
+  Schedule applicable only during fair weather.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_APE.CLS_2_apron_portion_closed_all_properties-06">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.3e4ebd38-8136-4cce-8d34-536c86696f11">
+      <gml:identifier codeSpace="urn:uuid:">3e4ebd38-8136-4cce-8d34-536c86696f11</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_e826958b-7488-479a-bc3e-bf9da2242112_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_e826958b-7488-479a-bc3e-bf9da2242112_1_0_B_1">
+              <gml:beginPosition>2028-03-12T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-14T16:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_e826958b-7488-479a-bc3e-bf9da2242112_1_0_B_2">
+              <gml:beginPosition>2028-03-12T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-14T16:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADF APRON A</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>APE.CLS</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:1665a554-9fae-4bbd-89e5-15d347103bf7" xlink:title="EADF DONLON/INTL." xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_e826958b-7488-479a-bc3e-bf9da2242112_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMNLC</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5225N03843W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADF</event:location>
+              <event:effectiveStart>2803121000</event:effectiveStart>
+              <event:effectiveEnd>2803141600</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:schedule>Daily 1000-1600</event:schedule>
+              <event:text lang="ENG">Apron A closed S of terminal building and acft stand 9
+due to aircraft static display.
+Closed area is delimited by crowd control barriers.
+Schedule applicable only during fair weather.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:ApronElement gml:id="uuid.e0d88b6d-a7dc-4cb1-9906-c77d5f66f028">
+      <gml:identifier codeSpace="urn:uuid:">e0d88b6d-a7dc-4cb1-9906-c77d5f66f028</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:ApronElementTimeSlice gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_1">
+              <gml:beginPosition>2028-03-12T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-14T16:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_2">
+              <gml:beginPosition>2028-03-12T10:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-03-14T16:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:associatedApron xlink:href="urn:uuid:32eede55-c27f-4b77-8c02-c61ae489105e" xlink:title="APN EADF APRON A" xlink:type="simple"/>
+          <!-- Geometry -->
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_3" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <aixm:Curve gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_4">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>52.421533299579 -38.70247889076914 52.4214391646084 -38.704020171144116 52.421162543135004 -38.70396860183781
+                                52.4210853924112 -38.70372584716599 52.4211999338833 -38.70208212571363 52.421202777626 -38.7020880763437 52.421208207526
+                                -38.702099795016835 52.421213730726 -38.70211139665242 52.421219346426 -38.70212287694539 52.421225054426 -38.70213423749762 52.421230853126005
+                                -38.702145473803824 52.421236742426004 -38.70215658286047 52.421242719526006 -38.70216756636956 52.421248784526 -38.70217841982579 52.421254936426
+                                -38.702189140325764 52.421261174426 -38.70219972937123 52.421267496526006 -38.702210182557025 52.421273902926 -38.70222049848149 52.421280390726004
+                                -38.70223067714463 52.421286960026 -38.702240714241384 52.421293609826 -38.70225060816987 52.421300338326006 -38.70226036053197 52.421307144726
+                                -38.70226996542075 52.421314028026 -38.702279424438075 52.421320986326 -38.70228873307867 52.421328018926005 -38.70229789284428 52.421335124726006
+                                -38.70230689942986 52.421342302926 -38.70231575293552 52.421349550726006 -38.70232445025762 52.421356868126004 -38.70233299149627 52.421364254226006
+                                -38.70234137524982 52.421371706426 -38.70234959861487 52.421379223626005 -38.702357661591414 52.421386806026 -38.70236556127603 52.421394450726005
+                                -38.702373297668736 52.421402156826005 -38.70238086946799 52.42140992352601 -38.70238827357014 52.421417749026006 -38.70239551157709 52.421425632226004
+                                -38.70240257908363 52.421433571526 -38.70240947759156 52.421441565126 -38.70241620419744 52.421449612826 -38.70242275900141 52.421457712026005
+                                -38.70242913899992 52.421465861826 -38.70243534429309 52.421474061326 -38.70244137488094 52.421482307726 -38.70244722635827 52.421490601126
+                                -38.702452901828735 52.421498939726 -38.70245839818869 52.421507320726 -38.702463714136606 52.421515744126005 -38.702468849672485 52.421524209126005
+                                -38.70247380329455 52.421532712026 -38.70247857520305 52.421533299579 -38.70247889076914</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </aixm:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+              <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">28</aixm:elevation>
+              <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.5</aixm:verticalAccuracy>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <!-- Location and Extent Description -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_5">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_6">
+                  <aixm:note>S of terminal building and acft stand 9</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The availability status of the apron portion during the event -->
+          <aixm:availability>
+            <aixm:ApronAreaAvailability gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_7">
+              <!-- Schedule -->
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_8">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>10:00</aixm:startTime>
+                  <aixm:endTime>16:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <!-- Reason -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_9">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_10">
+                      <aixm:note>aircraft static display</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_11">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_12">
+                      <aixm:note>Closed area is delimited by crowd control barriers</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Schedule Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_13">
+                  <aixm:propertyName>timeInterval</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_14">
+                      <aixm:note>Schedule applicable only during fair weather</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ApronAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:ApronElementExtension gml:id="id_c4447eb4-3e30-4db1-b547-c4ea3531a1b3_1_0_B_15">
+              <event:theEvent xlink:href="urn:uuid:3e4ebd38-8136-4cce-8d34-536c86696f11" xlink:title="EADF APRON A DNOTAM APE.CLS" xlink:type="simple"/>
+            </event:ApronElementExtension>
+          </aixm:extension>
+        </aixm:ApronElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:ApronElement>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

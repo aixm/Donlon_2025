@@ -5319,4 +5319,239 @@
       </aixm:timeSlice>
     </aixm:VerticalStructure>
   </message:hasMember>
+  <message:hasMember>
+    <aixm:VerticalStructure gml:id="uuid.269cea01-c9b7-4e00-a382-8070a3d93b48">
+      <gml:identifier codeSpace="urn:uuid:">269cea01-c9b7-4e00-a382-8070a3d93b48</gml:identifier>
+      <!-- validTime and featureLifetime is used to code PANS-AIM Table A-6.2 "Effectivity".
+      NOTE: In case of temporary obstacles, also VerticalStructurePart.timeInterval.Timesheet may be needed to fulfill this requirement..-->
+      <aixm:timeSlice>
+        <aixm:VerticalStructureTimeSlice gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_1">
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_2">
+              <gml:beginPosition>2027-07-08T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <!-- VerticalStructure.name is used to code PANS-AIM Table A-6.2 "Obstacle Identifier"; ENR 5.4/AD 2.10 "obstacle identification or designation".-->
+          <aixm:name>OBST-EA-0001-08</aixm:name>
+          <!-- type required by PANS-AIM Table A6-2 and ENR 5.4, AD 2/3.10 -->
+          <aixm:type>ANTENNA</aixm:type>
+          <!-- lighted required by PANS-AIM Table A6-2 -->
+          <aixm:lighted>YES</aixm:lighted>
+          <!-- marking required by PANS-AIM Table A6-2 and ENR 5.4, AD 2/3.10.
+						NOTE: AIXM 5.1(.1) provides only the property MarkingICAOStandard but no 'general' marking property . 
+						In case the obstacle is marked but not acc. to ICAO standard, code "an annotation:
+						propertyName=markingICAOStandard,
+						purpose=“REMARK”,
+						translatedNote.LinguisticNote.note=”marked=YES”.
+						the other marking attributes such as markingFirstColour if applicable (as defined in CP AIXM-233). -->
+          <!-- OPEN QUESTION: Shall markingICAOStandard be coded as no or nilReason = inapplicable or not at all? -->
+          <!-- markingICAOStandard is not expclicitly required by PANS-AIM -->
+          <aixm:markingICAOStandard>YES</aixm:markingICAOStandard>
+          <!-- group not required by PANS-AIM (but should be used as best pratice for certain use cases, see group of obstacle examples). -->
+          <aixm:group>NO</aixm:group>
+          <!-- horizontalExtent required by PANS-AIM Table A6-2 
+						NOTE: Only applicable for point and line obstacles (e.g. the extend of the guy wires of the mast)
+						NOTE: It may also be used for an obstacle with polygon shape but georgaphical defined by its centre point, (e.g. a building) to provide a simplified polygon extend.
+						NOTE: Either radius or lenght and width shall be used to describe the horizontal extend. -->
+          <aixm:length xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:width xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:radius uom="M">7</aixm:radius>
+          <!-- lightingICAOStandard and synchronisedLighting is not expclicitly required by PANS-AIM -->
+          <aixm:lightingICAOStandard>NO</aixm:lightingICAOStandard>
+          <aixm:synchronisedLighting>NO</aixm:synchronisedLighting>
+          <!-- marker not required by PANS-AIM -->
+          <aixm:marker xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:part>
+            <aixm:VerticalStructurePart gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_3">
+              <aixm:timeInterval xsi:nil="true" nilReason="inapplicable"/>
+              <!-- Height is an optional attribute in PANS-AIM Table A-6-2.
+							Height is listed in ENR 5.4 and AD2/3.10. 
+							Note: Height is mandatory in RTCA/EUROCAE ED-98C/DO-276C -->
+              <!-- NOTE: In case of a single part obstacle the verticalExtent is the height (above ground) of the obstacle. 
+							In case of a multi part obstacle it may not be the height above ground, as per definition verticalExtent is the height of the obstacle part from its bottom. -->
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:verticalExtent uom="M">120</aixm:verticalExtent>
+              <aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+              <!-- In case of single part obstacle type of verticalStrcuture shall be the same as for the part.
+								 In case of multi part obstacles types may have different values. -->
+              <aixm:type>ANTENNA</aixm:type>
+              <!-- constructionStatus not requried by PANS-AIM but contained in ED-98. -->
+              <aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+              <!-- PANS-AIM table A6-2 only requires information if an obstcle is marked.
+								Marking pattern and colour is not explicitly required by PANS-AIM. -->
+              <aixm:markingPattern>HBANDS</aixm:markingPattern>
+              <aixm:markingFirstColour>RED</aixm:markingFirstColour>
+              <aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
+              <!-- mobile optional in PANS-AIM Table A6-2("operations") -->
+              <aixm:mobile>NO</aixm:mobile>
+              <!-- frangible not required by PANS-AIM -->
+              <aixm:frangible>NO</aixm:frangible>
+              <!-- visibleMaterial not required by PANS-AIM but contained in Appendix 1 "Aeronautical Data Catalogue" ("Material")-->
+              <aixm:visibleMaterial>STEEL</aixm:visibleMaterial>
+              <!-- part designator is not required by PANS-AIM (see VerticalStructure.name) but may be used for multiple part obstacles. -->
+              <aixm:designator xsi:nil="true" nilReason="inapplicable"/>
+              <!-- horizontalProjection required by PANS-AIM Table A6-2 "horizontal position" and ENR 5.4,AD 2/3.10 "obstacle position. -->
+              <aixm:horizontalProjection_location>
+                <!-- Geometry type required by PANS-AIM Table A6-2 results from the horizontalProjection choice.-->
+                <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_4">
+                  <gml:pos>52.015607306626 -30.36054261270802</gml:pos>
+                  <!-- horizontalAccuracy required by PANS-AIM Table A6-2 -->
+                  <aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+                  <!-- elevation required by PANS-AIM Table A6-2 "Elevation" and ENR 5.4,AD 2/3.10 -->
+                  <aixm:elevation uom="M">150</aixm:elevation>
+                  <!-- geoidUndulation not required by PANS-AIM -->
+                  <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                  <!-- verticalDatum required by PANS-AIM Table A6-2 "Vertical reference system" -->
+                  <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+                  <!-- verticalAccuracy required by PANS-AIM Table A6-2 -->
+                  <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+                </aixm:ElevatedPoint>
+              </aixm:horizontalProjection_location>
+              <aixm:lighting>
+                <aixm:LightElement gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_5">
+                  <!-- PANS-AIM table A-6-2 only requires information if an obstacle is lighted. 
+										However, colour and type are properties listed in the PANS-AIM Appendix 1 "Aeronautical Data Catalogue" and ENR 5.4, AD2/3.10. 
+										intensityLevel, intensity and availability is not explicitly required by PANS-AIM. 
+										(Note that there is also a lightingAvailability element for the VerticalStructure.)  -->
+                  <aixm:colour>RED</aixm:colour>
+                  <aixm:intensityLevel>LIM</aixm:intensityLevel>
+                  <aixm:intensity uom="CD">300</aixm:intensity>
+                  <aixm:type>OTHER:FLASHING</aixm:type>
+                  <aixm:location>
+                    <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_6">
+                      <gml:pos>52.015607306626 -30.36054261270802</gml:pos>
+                      <aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+                      <aixm:elevation uom="M">150</aixm:elevation>
+                      <aixm:geoidUndulation xsi:nil="true" nilReason="unknown"/>
+                      <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+                      <aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+                    </aixm:ElevatedPoint>
+                  </aixm:location>
+                  <!-- regarding availability, see also lightingAvailability, below. -->
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+                </aixm:LightElement>
+              </aixm:lighting>
+            </aixm:VerticalStructurePart>
+          </aixm:part>
+          <!-- Relationships to other "hosted/supported" AIXM features not required by PANS-AIM. -->
+          <aixm:hostedNavaidEquipment xsi:nil="true" nilReason="inapplicable"/>
+          <!-- Coding that the obstacle is marked using an annotation (acc. to CP AIXM-322).-->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_7">
+              <aixm:propertyName>markingICAOStandard</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_8">
+                  <aixm:note lang="ENG">marked=YES</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Operator/Owner not required by PANS-AIM but contained in Appendix 1 "Aeronautical Data Catalogue".
+					In AIXM 5.1(1) it may only be coded as Note for an Obstacle data set.
+					Note: For data provided by the data orginator this information will be rather coded as metadata.-->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_9">
+              <aixm:propertyName xsi:nil="true"/>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_10">
+                  <aixm:note lang="ENG">Obstacle Owner: DONLON TELECOM, Donlon Street 100, 2020 DOLNLON, Phone: +00123456789, email: info@donlontele.dl</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Horizontal Resolution required by PANS-AIM Table A6-2. -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_11">
+              <aixm:propertyName xsi:nil="true"/>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_12">
+                  <aixm:note lang="ENG">Horizontal resolution is 1 sec</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!--  Vertical Resolution required by PANS-AIM Table A6-2. -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_13">
+              <aixm:propertyName xsi:nil="true"/>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_14">
+                  <aixm:note lang="ENG">Vertical resolution is 1 m</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!--  Lighting availability -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_15">
+              <aixm:propertyName>lightingAvailability</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_16">
+                  <aixm:note lang="ENG">Obstacle lighted during the night. During the day lights can be activated dynamically.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- lightingAvailability not explicitly required by PANS-AIM.
+					NOTE: There is also the availability property for the LightElement of the VerticalStructurePart. -->
+          <aixm:lightingAvailability>
+            <aixm:VerticalStructureLightingStatus gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_17">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_18">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:dayTil>ANY</aixm:dayTil>
+                  <aixm:startEvent>SS</aixm:startEvent>
+                  <aixm:endEvent>SR</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:status>NORMAL</aixm:status>
+            </aixm:VerticalStructureLightingStatus>
+          </aixm:lightingAvailability>
+          <aixm:lightingAvailability>
+            <aixm:VerticalStructureLightingStatus gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_19">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_269cea01-c9b7-4e00-a382-8070a3d93b48_1_0_B_20">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:startDate>01-01</aixm:startDate>
+                  <aixm:endDate>31-12</aixm:endDate>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startEvent>SR</aixm:startEvent>
+                  <aixm:endEvent>SS</aixm:endEvent>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:status>OTHER:DYNAMIC</aixm:status>
+            </aixm:VerticalStructureLightingStatus>
+          </aixm:lightingAvailability>
+        </aixm:VerticalStructureTimeSlice>
+      </aixm:timeSlice>
+    </aixm:VerticalStructure>
+  </message:hasMember>
 </message:AIXMBasicMessage>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Example of Digital NOTAM for a apron usage limitation change ("Closed, Except for").
+     The apron is closed, except for scheduled flights, due to a period of high traffic at the airport:
+  
+     Airport/Heliport: EADR DONLON/INTL.
+                Apron: EADR DONLON/INTL. | APRON A
+           Start Time: 2028-02-27 08:00
+             End Time: 2028-02-27 20:00
+             Schedule: -
+      Limitation Type: Closed, Except for
+           Limitation: Prior Permission: -
+                       Prior Permission Details: -
+                       Flight - purpose: SCHEDULED
+               Reason: high gate demand
+                 Note: -
+-->
+
+<!-- 
+  A NOTAMN
+  Q) EAAD/QMNLT/IV/NBO/A/000/999/4744N03104W005
+  A) EADR B) 2802270800 C) 2802272000
+  E) Apron A closed, except for scheduled flights.
+  Due to high gate demand.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_APN.LIM_1_closed_except_for-18">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.99ebdd79-701b-4288-8dea-c6c2d416a2b5">
+      <gml:identifier codeSpace="urn:uuid:">99ebdd79-701b-4288-8dea-c6c2d416a2b5</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_8c279367-ba4c-4ec0-a7f7-6cab9e63e864_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_8c279367-ba4c-4ec0-a7f7-6cab9e63e864_1_0_B_1">
+              <gml:beginPosition>2028-02-27T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-27T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_8c279367-ba4c-4ec0-a7f7-6cab9e63e864_1_0_B_2">
+              <gml:beginPosition>2028-02-27T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-27T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADR APRON A</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>APN.LIM</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:d5bc0c5d-ad18-4b68-8c9b-394e9b381a99" xlink:title="EADR DONLON/INTL." xlink:type="simple"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_8c279367-ba4c-4ec0-a7f7-6cab9e63e864_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMNLT</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>4744N03104W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADR</event:location>
+              <event:effectiveStart>2802270800</event:effectiveStart>
+              <event:effectiveEnd>2802272000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">Apron A closed, except for scheduled flights.
+Due to high gate demand.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:Apron gml:id="uuid.aa14dc55-c2ce-4fef-a4b7-25cde23ebaf0">
+      <gml:identifier codeSpace="urn:uuid:">aa14dc55-c2ce-4fef-a4b7-25cde23ebaf0</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:ApronTimeSlice gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_1">
+              <gml:beginPosition>2028-02-27T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-27T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>3</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline status of the apron -->
+          <aixm:availability>
+            <aixm:ApronAreaAvailability gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_2">
+              <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_5">
+                          <aixm:type>LANDPLANE</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_6">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_7">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_8">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_9">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+            </aixm:ApronAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the apron during the event -->
+          <aixm:availability>
+            <aixm:ApronAreaAvailability gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_10">
+              <!-- Reason -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_11">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_12">
+                      <aixm:note>high gate demand</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+              <!-- The usage limitation -->
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_13">
+                  <aixm:type>RESERV</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_14">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:flight>
+                        <aixm:FlightCharacteristic gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_15">
+                          <aixm:purpose>SCHEDULED</aixm:purpose>
+                        </aixm:FlightCharacteristic>
+                      </aixm:flight>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+            </aixm:ApronAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:ApronExtension gml:id="id_4d3f9c06-87ab-4292-93ed-bbb9ead7c948_3_0_T_16">
+              <event:theEvent xlink:href="urn:uuid:99ebdd79-701b-4288-8dea-c6c2d416a2b5" xlink:title="EADR APRON A DNOTAM APN.LIM" xlink:type="simple"/>
+            </event:ApronExtension>
+          </aixm:extension>
+        </aixm:ApronTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Apron>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

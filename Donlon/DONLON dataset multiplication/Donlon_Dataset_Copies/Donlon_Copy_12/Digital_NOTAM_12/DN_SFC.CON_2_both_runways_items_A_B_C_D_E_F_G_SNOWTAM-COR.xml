@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+  
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- 
+  This is a Digital NOTAM for a Surface Condition Report acc. ICAO Doc 10066 (PANS-AIM) based on Appendix 4. Example SNOWTAM 2.
+  This example contains a correction update. 
+  The original latest date/time of assesment is 2028-02-17 01:35:00. 
+  The SNOWTAM is corrected after 30 minutes, for RWY 09L/27R, at 2028-02-17 02:05:00.
+  Since the SNOWTAM is corrected and not replaced, the initial validity of 8 hrs remains, so the original end of validity for all AIXM features will not change.
+  Since the correction only concerns RWY 09L/27R, the only AIXM features which will be updated are the Event and Runway 09L/27R. 
+-->
+
+<!--
+  Corrected SNOWTAM (same serial number and the text '(COR)' added to the header, according to ICAO Doc 10066 (PANS-AIM) Appendix 4):
+  
+  SWEA0001 EADL 02170135 (COR)
+  (SNOWTAM 0001
+  EADL
+  02170135 09R 5/2/2 100/50/75 NR/06/06 wet/slush/slush
+  02170055 09L 5/5/5 100/100/100 03/03/03 wet/wet/wet snow)
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR-12">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.5e297cbd-f286-4357-a380-513f40a0116c">
+      <gml:identifier codeSpace="urn:uuid:">5e297cbd-f286-4357-a380-513f40a0116c</gml:identifier>
+      <!-- termination of initial TimeSlice -->
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_77981ddd-4e67-4fd8-8586-ff1817e95be5_1_1_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_77981ddd-4e67-4fd8-8586-ff1817e95be5_1_1_B_1">
+              <gml:beginPosition>2028-02-17T01:35:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-17T02:05:00Z</gml:endPosition> <!-- modified end of validity -->
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>1</aixm:correctionNumber> <!-- new correction number -->
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_77981ddd-4e67-4fd8-8586-ff1817e95be5_1_1_B_2">
+              <gml:beginPosition>2028-02-17T01:35:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-17T02:05:00Z</gml:endPosition> <!-- modified end of life -->
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADL 09R/27L 09L/27R</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>SFC.CON</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:6a2286ff-2d32-4d85-b249-c887a038624f" xlink:title="EADL DONLON/INTL." xlink:type="simple"/>
+          <event:notification>
+            <event:SNOWTAM gml:id="id_77981ddd-4e67-4fd8-8586-ff1817e95be5_1_1_B_3">
+              <event:series xsi:nil="true" nilReason="inapplicable"/>
+              <event:number>0001</event:number>
+              <event:year>2028</event:year>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:correction>NO</event:correction>
+              <event:location>EADL</event:location>
+              <event:runwayCondition>
+                <event:RunwayAssessment gml:id="id_77981ddd-4e67-4fd8-8586-ff1817e95be5_1_1_B_4">
+                  <event:assessmentCompletion>02170135</event:assessmentCompletion>
+                  <event:runwayDesignator>09R</event:runwayDesignator>
+                  <event:conditionCode>5/2/2</event:conditionCode>
+                  <event:percentage>100/50/75</event:percentage>
+                  <event:depth>NR/06/06</event:depth>
+                  <event:condition>wet/slush/slush</event:condition>
+                </event:RunwayAssessment>
+              </event:runwayCondition>
+              <event:runwayCondition>
+                <event:RunwayAssessment gml:id="id_77981ddd-4e67-4fd8-8586-ff1817e95be5_1_1_B_5">
+                  <event:assessmentCompletion>02170055</event:assessmentCompletion>
+                  <event:runwayDesignator>09L</event:runwayDesignator>
+                  <event:conditionCode>5/5/5</event:conditionCode>
+                  <event:percentage>100/100/100</event:percentage>
+                  <event:depth>NR/NR/03</event:depth>
+                  <event:condition>wet/wet/wet snow</event:condition>
+                </event:RunwayAssessment>
+              </event:runwayCondition>
+            </event:SNOWTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+      <!-- corrected TimeSlice -->
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_cb544ced-0da6-41a6-8564-50d3eedc5ad1_2_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_cb544ced-0da6-41a6-8564-50d3eedc5ad1_2_0_B_1">
+              <gml:beginPosition>2028-02-17T02:05:00Z</gml:beginPosition> <!-- new start of validity -->
+              <gml:endPosition>2028-02-17T09:35:00Z</gml:endPosition> <!-- original end of validity -->
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber> <!-- new sequence number -->
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_cb544ced-0da6-41a6-8564-50d3eedc5ad1_2_0_B_2">
+              <gml:beginPosition>2028-02-17T02:05:00Z</gml:beginPosition> <!-- new start of life -->
+              <gml:endPosition>2028-02-17T09:35:00Z</gml:endPosition> <!-- original end of life -->
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADL 09R/27L 09L/27R</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>SFC.CON</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:6a2286ff-2d32-4d85-b249-c887a038624f" xlink:title="EADL DONLON/INTL." xlink:type="simple"/>
+          <!-- corrected SNOWTAM -->
+          <event:notification>
+            <event:SNOWTAM gml:id="id_cb544ced-0da6-41a6-8564-50d3eedc5ad1_2_0_B_3">
+              <event:series xsi:nil="true" nilReason="inapplicable"/>
+              <event:number>0001</event:number> <!-- same serial number as original SNOWTAM -->
+              <event:year>2028</event:year>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:correction>YES</event:correction> <!-- correction='YES' since this is a correction SNOWTAM -->
+              <event:location>EADL</event:location>
+              <event:runwayCondition>
+                <event:RunwayAssessment gml:id="id_cb544ced-0da6-41a6-8564-50d3eedc5ad1_2_0_B_4">
+                  <event:assessmentCompletion>02170135</event:assessmentCompletion>
+                  <event:runwayDesignator>09R</event:runwayDesignator>
+                  <event:conditionCode>5/2/2</event:conditionCode>
+                  <event:percentage>100/50/75</event:percentage>
+                  <event:depth>NR/06/06</event:depth>
+                  <event:condition>wet/slush/slush</event:condition>
+                </event:RunwayAssessment>
+              </event:runwayCondition>
+              <event:runwayCondition>
+                <event:RunwayAssessment gml:id="id_cb544ced-0da6-41a6-8564-50d3eedc5ad1_2_0_B_5">
+                  <event:assessmentCompletion>02170055</event:assessmentCompletion>
+                  <event:runwayDesignator>09L</event:runwayDesignator>
+                  <event:conditionCode>5/5/5</event:conditionCode>
+                  <event:percentage>100/100/100</event:percentage>
+                  <event:depth>03/03/03</event:depth> <!-- corrected values -->
+                  <event:condition>wet/wet/wet snow</event:condition>
+                </event:RunwayAssessment>
+              </event:runwayCondition>
+            </event:SNOWTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- RWY 09L/27R --> <!-- This feature is updated -->
+  <message:hasMember>
+    <aixm:Runway gml:id="uuid.9b347f6b-1422-479e-860d-587235c650e8">
+      <gml:identifier codeSpace="urn:uuid:">9b347f6b-1422-479e-860d-587235c650e8</gml:identifier>
+      <!-- termination of initial TimeSlice -->
+      <aixm:timeSlice>
+        <aixm:RunwayTimeSlice gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_1">
+              <gml:beginPosition>2028-02-17T01:35:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-17T02:05:00Z</gml:endPosition> <!-- modified end of validity -->
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>1</aixm:correctionNumber> <!-- new correction number -->
+          <aixm:overallContaminant>
+            <aixm:RunwayContamination gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_2">
+              <aixm:observationTime>2028-02-17T00:55:00.000Z</aixm:observationTime>
+            </aixm:RunwayContamination>
+          </aixm:overallContaminant>
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_3">
+              <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_4">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>OTHER:WET</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_5">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>1_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_6">
+              <aixm:depth nilReason="inapplicable" xsi:nil="true"/>
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_7">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>OTHER:WET</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_8">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>2_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_9">
+              <aixm:depth uom="MM">3</aixm:depth>
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_10">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>WET_SNOW</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_11">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>3_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <aixm:extension>
+            <event:RunwayExtension gml:id="id_0a004888-e5d2-44c1-84f1-37ae91b4ef3f_2_1_T_12">
+              <event:theEvent xlink:href="urn:uuid:5e297cbd-f286-4357-a380-513f40a0116c" xlink:title="EADL 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
+            </event:RunwayExtension>
+          </aixm:extension>
+        </aixm:RunwayTimeSlice>
+      </aixm:timeSlice>
+      <!-- correction TimeSlice -->
+      <aixm:timeSlice>
+        <aixm:RunwayTimeSlice gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_1">
+              <gml:beginPosition>2028-02-17T02:05:00Z</gml:beginPosition> <!-- new start of validity -->
+              <gml:endPosition>2028-02-17T09:35:00Z</gml:endPosition> <!-- original end of validity -->
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>3</aixm:sequenceNumber> <!-- new sequence number -->
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:overallContaminant>
+            <aixm:RunwayContamination gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_2">
+              <aixm:observationTime>2028-02-17T00:55:00.000Z</aixm:observationTime>
+            </aixm:RunwayContamination>
+          </aixm:overallContaminant>
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_3">
+              <aixm:depth uom="MM">3</aixm:depth> <!-- corrected value -->
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_4">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>OTHER:WET</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_5">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>1_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_6">
+              <aixm:depth uom="MM">3</aixm:depth> <!-- corrected value -->
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_7">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>OTHER:WET</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_8">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>2_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <aixm:areaContaminant>
+            <aixm:RunwaySectionContamination gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_9">
+              <aixm:depth uom="MM">3</aixm:depth>
+              <aixm:frictionEstimation>OTHER:RWYCC_5</aixm:frictionEstimation>
+              <aixm:proportion>100</aixm:proportion>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_10">
+                  <aixm:layerOrder>1</aixm:layerOrder>
+                  <aixm:type>WET_SNOW</aixm:type>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:layer>
+                <aixm:SurfaceContaminationLayer gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_11">
+                  <aixm:layerOrder>2</aixm:layerOrder>
+                  <aixm:type xsi:nil="true"/>
+                </aixm:SurfaceContaminationLayer>
+              </aixm:layer>
+              <aixm:section>3_THIRD</aixm:section>
+            </aixm:RunwaySectionContamination>
+          </aixm:areaContaminant>
+          <aixm:extension>
+            <event:RunwayExtension gml:id="id_7524edba-2913-446e-ad03-c5a7ab5e6a13_3_0_T_12">
+              <event:theEvent xlink:href="urn:uuid:5e297cbd-f286-4357-a380-513f40a0116c" xlink:title="EADL 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/>
+            </event:RunwayExtension>
+          </aixm:extension>
+        </aixm:RunwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Runway>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

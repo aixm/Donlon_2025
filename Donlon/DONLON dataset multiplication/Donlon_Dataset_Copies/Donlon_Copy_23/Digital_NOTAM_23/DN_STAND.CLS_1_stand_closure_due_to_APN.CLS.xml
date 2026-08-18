@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Paul-Adrian LAPUSAN for Eurocontrol -->
+<!-- Copyright (c) 2025, EUROCONTROL
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php -->
+
+<!-- Example of Digital NOTAM for stand closures as a consequence of a complete apron closure:
+  
+     Airport/Heliport: EADW DONLON/INTL.
+       Aircraft Stand: EADW DONLON/INTL. | APRON B | H1
+                       EADW DONLON/INTL. | APRON B | H2
+           Start Time: 2028-02-16 04:50
+             End Time: 2028-02-16 10:00
+             Schedule: -
+       Closure Reason: apron closure
+                 Note: See NOTAM Axxxx/28
+-->
+
+<!-- 
+  A NOTAMN
+  Q) EAAD/QMPLC/IV/BO/A/000/999/4523N03105W005
+  A) EADW B) 2802160450 C) 2802161000
+  E) Acft stand H1 and H2 closed due to apron closure.
+  See NOTAM Axxxx/28.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_STAND.CLS_1_stand_closure_due_to_APN.CLS-23">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.e9ad9615-947e-46eb-b8b4-b1c62b6eca4b">
+      <gml:identifier codeSpace="urn:uuid:">e9ad9615-947e-46eb-b8b4-b1c62b6eca4b</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_b61b6a14-b127-40d2-ac87-2c791ac0185d_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_b61b6a14-b127-40d2-ac87-2c791ac0185d_1_0_B_1">
+              <gml:beginPosition>2028-02-16T04:50:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-16T10:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_b61b6a14-b127-40d2-ac87-2c791ac0185d_1_0_B_2">
+              <gml:beginPosition>2028-02-16T04:50:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-16T10:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADW H1 H2</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>STAND.CLS</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:879fefd5-de17-417a-a70d-885a24a55609" xlink:title="EADW DONLON/INTL." xlink:type="simple"/>
+          <event:causeEvent xlink:href="urn:uuid:49925727-98a3-45e4-96f0-4438033ada83" xlink:title="EADW APRON B DNOTAM APN.CLS" xlink:type="simple"/> <!-- the link to the event which caused the stand closure -->
+          <event:notification>
+            <event:NOTAM gml:id="id_b61b6a14-b127-40d2-ac87-2c791ac0185d_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458857026" xlink:title="NOF LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMPLC</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>4523N03105W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADW</event:location>
+              <event:effectiveStart>2802160450</event:effectiveStart>
+              <event:effectiveEnd>2802161000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">Acft stand H1 and H2 closed due to apron closure.
+See NOTAM Axxxx/28.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:f8b52a93-ec9b-4948-9a69-85e6ed12d985" xlink:title="DONLON AIS EA-AIS AOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- Aircraft stand H1 -->
+  <message:hasMember>
+    <aixm:AircraftStand gml:id="uuid.17eb5634-bbe5-4f2c-8ab9-19d4e5306375">
+      <gml:identifier codeSpace="urn:uuid:">17eb5634-bbe5-4f2c-8ab9-19d4e5306375</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AircraftStandTimeSlice gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_1">
+              <gml:beginPosition>2028-02-16T04:50:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-16T10:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline status of the aircraft stand -->
+          <aixm:availability>
+            <aixm:ApronAreaAvailability gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_5">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_6">
+                          <aixm:type>TILT_WING</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_7">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_8">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_9">
+                          <aixm:type>LANDPLANE</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+            </aixm:ApronAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the aircraft stand during the event -->
+          <aixm:availability>
+            <aixm:ApronAreaAvailability gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_10">
+              <!-- Closure Reason -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_11">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_12">
+                      <aixm:note>apron closure</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_13">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_14">
+                      <aixm:note>See NOTAM Axxxx/28</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ApronAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:AircraftStandExtension gml:id="id_ea1bae45-ff65-48fa-a22f-12ed999390f2_1_0_T_15">
+              <event:theEvent xlink:href="urn:uuid:e9ad9615-947e-46eb-b8b4-b1c62b6eca4b" xlink:title="EADW H1 H2 DNOTAM STAND.CLS" xlink:type="simple"/>
+            </event:AircraftStandExtension>
+          </aixm:extension>
+        </aixm:AircraftStandTimeSlice>
+      </aixm:timeSlice>
+    </aixm:AircraftStand>
+  </message:hasMember>
+  
+  <!-- Aircraft stand H2 -->
+  <message:hasMember>
+    <aixm:AircraftStand gml:id="uuid.6bfd2ee1-9fe8-4d46-8107-9403a93f55be">
+      <gml:identifier codeSpace="urn:uuid:">6bfd2ee1-9fe8-4d46-8107-9403a93f55be</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AircraftStandTimeSlice gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_1">
+              <gml:beginPosition>2028-02-16T04:50:00Z</gml:beginPosition>
+              <gml:endPosition>2028-02-16T10:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline status of the aircraft stand -->
+          <aixm:availability>
+            <aixm:ApronAreaAvailability gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_5">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_6">
+                          <aixm:type>TILT_WING</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+              <aixm:usage>
+                <aixm:ApronAreaUsage gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_7">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_8">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_9">
+                          <aixm:type>LANDPLANE</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                </aixm:ApronAreaUsage>
+              </aixm:usage>
+            </aixm:ApronAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the aircraft stand during the event -->
+          <aixm:availability>
+            <aixm:ApronAreaAvailability gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_10">
+              <!-- Closure Reason -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_11">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_12">
+                      <aixm:note>apron closure</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_13">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_14">
+                      <aixm:note>See NOTAM Axxxx/28</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ApronAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:AircraftStandExtension gml:id="id_cb182a01-c9a1-46bd-bba4-4d8636c8cfee_1_0_T_15">
+              <event:theEvent xlink:href="urn:uuid:e9ad9615-947e-46eb-b8b4-b1c62b6eca4b" xlink:title="EADW H1 H2 DNOTAM STAND.CLS" xlink:type="simple"/>
+            </event:AircraftStandExtension>
+          </aixm:extension>
+        </aixm:AircraftStandTimeSlice>
+      </aixm:timeSlice>
+    </aixm:AircraftStand>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

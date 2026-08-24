@@ -68,22 +68,26 @@
   validTime: 2025-11-01T00:00:00Z - "unknown"
   featureLifetime: 2017-07-01T00:00:00Z - "unknown"
   
-  Step 1 - initial decommissioning:
+  Step 1 - nothing to do for the Navaid feature
+  
+  Step 2 - initial decommissioning:
   
   "Decommissioning" TimeSlice:
   BASELINE 1/1
   validTime: 2025-11-01T00:00:00Z - 2027-05-13T00:00:00Z
   featureLifetime: 2017-07-01T00:00:00Z - 2027-05-13T00:00:00Z
   
-  Step 2 - abandoning the decommissioning:
+  Step 3 - abandoning the decommissioning:
   
-  Abandoning the decommissioning:
+  Terminating the "Decommissioning" TimeSlice:
   BASELINE 1/2
-  validTime: 2025-11-01T00:00:00Z - "unknown"
+  validTime: 2025-11-01T00:00:00Z - 2027-03-18T00:00:00Z
   featureLifetime: 2017-07-01T00:00:00Z - "unknown"
   
-  Note: the Navaid feature does not have any data updates with the except of validTime and featureLifetime, so the
-  'Abandoning the Decommissioning of a Feature' (SDO compatible workaround #2) case is applied
+  Update before the initial decommissioning date: annotation added in order to force an update of the Navaid feature 
+  BASELINE 3/0
+  validTime: 2027-03-18T00:00:00Z - "unknown"
+  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
 -->
 
 
@@ -275,13 +279,13 @@
   <message:hasMember>
     <aixm:Navaid gml:id="uuid.8e650273-7861-4066-b6ef-696d2f71dcda">
       <gml:identifier codeSpace="urn:uuid:">8e650273-7861-4066-b6ef-696d2f71dcda</gml:identifier>
-      <!-- Abandoning the decommissioning of the Navaid feature -->
+      <!-- Correcting the "Decommissioning" TimeSlice -->
       <aixm:timeSlice>
         <aixm:NavaidTimeSlice gml:id="NAV_NDB_WNR_S1C2">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_1d47234f-888b-4afb-bb2f-20c72f5ec0bb_1_2_B_1">
               <gml:beginPosition>2025-11-01T00:00:00Z</gml:beginPosition>
-              <gml:endPosition indeterminatePosition="unknown"/>
+              <gml:endPosition>2027-03-18T00:00:00Z</gml:endPosition>
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -333,6 +337,76 @@
             </aixm:NavaidOperationalStatus>
           </aixm:availability>
           <aixm:annotation xsi:nil="true"/>
+        </aixm:NavaidTimeSlice>
+      </aixm:timeSlice>
+      <!-- Update before the initial decommissioning date (annotation added to force update) -->
+      <aixm:timeSlice>
+        <aixm:NavaidTimeSlice gml:id="NAV_NDB_WNR_S3C0">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_8f81c27a-a2ce-48e0-b7c9-7c868b3503b4_3_0_B_1">
+              <gml:beginPosition>2027-03-18T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>3</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_8f81c27a-a2ce-48e0-b7c9-7c868b3503b4_3_0_B_2">
+              <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NDB</aixm:type>
+          <aixm:designator>WNR</aixm:designator>
+          <aixm:name>WICHNOR/SLIPTON</aixm:name>
+          <aixm:flightChecked>YES</aixm:flightChecked>
+          <aixm:purpose>TERMINAL</aixm:purpose>
+          <aixm:signalPerformance xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:courseQuality xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:integrityLevel xsi:nil="true" nilReason="inapplicable"/>
+          <aixm:touchDownLiftOff xsi:nil="true"/>
+          <aixm:navaidEquipment>
+            <aixm:NavaidComponent gml:id="id_8f81c27a-a2ce-48e0-b7c9-7c868b3503b4_3_0_B_3">
+              <aixm:collocationGroup xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:markerPosition xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:providesNavigableLocation>YES</aixm:providesNavigableLocation>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:theNavaidEquipment xlink:href="urn:uuid:e978e242-02ab-456d-8497-85e79af1a533" xlink:title="NDB WNR WICHNOR/SLIPTON" xlink:type="simple"/>
+            </aixm:NavaidComponent>
+          </aixm:navaidEquipment>
+          <aixm:location>
+            <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="id_8f81c27a-a2ce-48e0-b7c9-7c868b3503b4_3_0_B_4">
+              <gml:pos>55.16833333 -38.52500000</gml:pos>
+              <aixm:horizontalAccuracy uom="M">0.5</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">60</aixm:elevation>
+              <aixm:geoidUndulation uom="M">15</aixm:geoidUndulation>
+              <aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+              <aixm:verticalAccuracy uom="M">0.1</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:runwayDirection xsi:nil="true"/>
+          <aixm:servedAirport xsi:nil="true" nilReason="unknown"/> <!-- AirportHeliport feature not yet created -->
+          <aixm:availability>
+            <aixm:NavaidOperationalStatus gml:id="id_8f81c27a-a2ce-48e0-b7c9-7c868b3503b4_3_0_B_5">
+              <aixm:timeInterval xsi:nil="true" nilReason="other:H24"/> <!-- No Timesheet coded - H24 schedule -->
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
+              <aixm:signalType xsi:nil="true" nilReason="inapplicable"/>
+            </aixm:NavaidOperationalStatus>
+          </aixm:availability>
+          <aixm:annotation>
+            <aixm:Note gml:id="id_8f81c27a-a2ce-48e0-b7c9-7c868b3503b4_3_0_B_6">
+              <aixm:propertyName xsi:nil="true"/>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_8f81c27a-a2ce-48e0-b7c9-7c868b3503b4_3_0_B_7">
+                  <aixm:note lang="ENG">NDB decommissioning cancelled by update. Frequency changed to 332KHz.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
         </aixm:NavaidTimeSlice>
       </aixm:timeSlice>
     </aixm:Navaid>

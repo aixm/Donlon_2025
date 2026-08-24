@@ -68,22 +68,26 @@
   validTime: 2025-11-01T00:00:00Z - "unknown"
   featureLifetime: 2017-07-01T00:00:00Z - "unknown"
   
-  Step 1 - initial decommissioning:
+  Step 1 - nothing to do for the Navaid feature
+  
+  Step 2 - initial decommissioning:
   
   "Decommissioning" TimeSlice:
   BASELINE 1/1
   validTime: 2025-11-01T00:00:00Z - 2027-05-13T00:00:00Z
   featureLifetime: 2017-07-01T00:00:00Z - 2027-05-13T00:00:00Z
   
-  Step 2 - abandoning the decommissioning:
+  Step 3 - abandoning the decommissioning:
   
-  Abandoning the decommissioning:
+  Terminating the "Decommissioning" TimeSlice:
   BASELINE 1/2
-  validTime: 2025-11-01T00:00:00Z - "unknown"
+  validTime: 2025-11-01T00:00:00Z - 2027-03-18T00:00:00Z
   featureLifetime: 2017-07-01T00:00:00Z - "unknown"
   
-  Note: the Navaid feature does not have any data updates with the except of validTime and featureLifetime, so the
-  'Abandoning the Decommissioning of a Feature' (SDO compatible workaround #2) case is applied
+  Update before the initial decommissioning date: annotation added in order to force an update of the Navaid feature 
+  BASELINE 3/0
+  validTime: 2027-03-18T00:00:00Z - "unknown"
+  featureLifetime: 2017-07-01T00:00:00Z - "unknown"
 -->
 
 

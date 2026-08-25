@@ -1,573 +1,116 @@
 Donlon Digital NOTAM - file upload order
-======================================================================================================================================================
+================================================================================================================================================================================
+
+Only two things constrain the order:
+  1. a NOTAM of type R or C can only be uploaded after the NOTAM it replaces/cancels is in the system
+  2. an Event with a causeEvent link can only be uploaded after the Event it points to is in the system
 
 TIER 1 - no dependencies, upload in any order
---------------------------------------------------------------------------------------------------------------------
-  #   feature      NOTAM     file
-      seq/corr     series    
---------------------------------------------------------------------------------------------------------------------
-  1   1.0T         A         DN_AD.CLS_1_ad_closed.xml
-  2   1.0T         A         DN_AD.CLS_3_ad_closed_non-ICAO_aerodrome.xml
-  3   1.0T         A         DN_AD.LIM_2_conditional_for.xml
-  4   1.0B         A         DN_APE.CLS_1_apron_portion_closed.xml
-  5   1.0B         A         DN_APE.CLS_2_apron_portion_closed_all_properties.xml
-  6   1.0B         A         DN_APE.LIM_1_closed_except_for.xml
-  7   1.0B         A         DN_APE.LIM_2_conditional_for.xml
-  8   1.0B         A         DN_APE.LIM_3_prohibited_for.xml
-  9   1.0B         A         DN_APE.LIM_4_additionally_allowed_for.xml
- 10   1.0T         A         DN_APN.CLS_1_apron_closed.xml
- 11   1.0T         B         DN_ATSA.ACT_1_sector_activation.xml
- 12   1.0T         B; B      DN_ATSA.ACT_2_activation_with_schedule.xml
- 13   1.0T         B         DN_ATSA.ACT_3_de-activation.xml
- 14   1.0B         B         DN_ATSA.NEW_1_CLASS_circle_0_airports_1_FIR.xml
- 15   1.0B         B; B; B   DN_ATSA.NEW_2_HTZ_coridor_all-properties_3_airports_1_FIR.xml
- 16   1.0T         A; A; A   DN_NAV.UNS_1_VOR-DME_all_components_unserviceable.xml
- 17   1.0T         A         DN_NAV.UNS_2_TACAN_distance_unserviceable.xml
- 18   1.0T         A         DN_NAV.UNS_4_ILS-DME_DME_on-test.xml
- 19   1.0T         A; A      DN_OBL.UNS_1.xml
- 20   1.0T         A         DN_OBL.UNS_2_with_schedule.xml
- 21   1.0B         C0001/28  DN_OBS.NEW_1_perm_antenna_point-geometry_minimum_properties_0_airports_1_FIR_NOTAMN.xml
- 22   1.0B         A; A      DN_OBS.NEW_2_temp_catenary_line-geometry_2_airports_1_FIR.xml
- 23   1.0B         A         DN_OBS.NEW_3_temp_crane_point_geometry_all_properties_1_airport_1_FIR.xml
- 24   1.0B         C0003/28  DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMN.xml
- 25   1.0B         A         DN_OBS.NEW_5_temp_rig_polygon-geometry_0_airports_3_FIRs.xml
- 26   -            A         DN_OTHER_N_variant.xml
- 27   -            W         DN_OTHER_N_variant_bilingual.xml
- 28   -            A         DN_OTHER_N_variant_non-ICAO_aerodrome.xml
- 29   1.0B         E0001/27  DN_RWE.CLS_1_first_300m_closed_RWY09R.xml
- 30   1.0B         A         DN_RWE.CLS_2_last_200m_closed_RWY09L-27R.xml
- 31   1.0T         A         DN_RWY.CLS_1_full_runway_closure.xml
- 32   1.0T         C0001/27  DN_RWY.CLS_2_fato_closed_NOTAMN.xml
- 33   1.0T         A         DN_RWY.LIM_2_conditional_for_PPR_1HR.xml
- 34   1.0T         B         DN_SAA.ACT_1_area_activation_0_airports_2_FIRs.xml
- 35   1.0T         B; B      DN_SAA.ACT_2_area_activation_changed_limits_2_airports_1_FIR.xml
- 36   1.0T         B         DN_SAA.ACT_3_area_activation_schedule_1_airport_1_FIR.xml
- 37   1.0T         B; B      DN_SAA.ACT_5_area_activation_of_two_sectors_0_airports_1_FIR.xml
- 38   1.0B         B         DN_SAA.NEW_1_R_SAR_circle_0_airports_1_FIR.xml
- 39   1.0B         B; B      DN_SAA.NEW_2_D_UAV_corridor_2_airports_1_FIR.xml
- 40   1.0B         B         DN_SAA.NEW_3_TRA_PARACHUTE_schedule_polygon_1_airport_1_FIR.xml
- 41   1.0B         B         DN_SAA.NEW_4_TSA_NAVAL-EXER_schedule_circle_0_airports_3_FIRs.xml
- 42   1.0T         A         DN_STAND.CLS_4_stand_closure.xml
- 43   1.0T         A         DN_STAND.LIM_1_closed_except_for.xml
- 44   1.0T         A         DN_STAND.LIM_2_conditional_for_due_to_APE.LIM.xml
- 45   1.0T         A         DN_STAND.LIM_3_prohibited_for.xml
- 46   1.0T         A         DN_STAND.LIM_4_additionally_allowed_for.xml
- 47   1.0T         A         DN_TWY.CLS_1_single_twy_closure.xml
- 48   1.0T         A         DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note.xml
- 49   1.0T         A         DN_TWY.LIM_2_conditional_for.xml
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DN_AD.CLS_1_ad_closed.xml
+DN_AD.CLS_2_with_schedule_reason_note.xml
+DN_AD.CLS_3_ad_closed_non-ICAO_aerodrome.xml
+DN_AD.LIM_1_closed_except_for.xml
+DN_AD.LIM_2_conditional_for.xml
+DN_AD.LIM_3_prohibited_for.xml
+DN_AD.LIM_4_additionally_allowed_for.xml
+DN_APE.CLS_1_apron_portion_closed.xml
+DN_APE.CLS_2_apron_portion_closed_all_properties.xml
+DN_APE.LIM_1_closed_except_for.xml
+DN_APE.LIM_2_conditional_for.xml
+DN_APE.LIM_3_prohibited_for.xml
+DN_APE.LIM_4_additionally_allowed_for.xml
+DN_APN.CLS_1_apron_closed.xml
+DN_APN.CLS_2_apron_closed_weekday_schedule.xml
+DN_APN.LIM_1_closed_except_for.xml
+DN_APN.LIM_2_conditional_for_with_weekdays_period_schedule.xml
+DN_APN.LIM_3_prohibited_for.xml
+DN_APN.LIM_4_additionally_allowed_for.xml
+DN_ATSA.ACT_1_sector_activation.xml
+DN_ATSA.ACT_2_activation_with_schedule.xml
+DN_ATSA.ACT_3_de-activation.xml
+DN_ATSA.NEW_1_CLASS_circle_0_airports_1_FIR.xml
+DN_ATSA.NEW_2_HTZ_coridor_all-properties_3_airports_1_FIR.xml
+DN_NAV.UNS_1_VOR-DME_all_components_unserviceable.xml
+DN_NAV.UNS_2_TACAN_distance_unserviceable.xml
+DN_NAV.UNS_3_TACAN_all-signal-types_false-indication.xml
+DN_NAV.UNS_4_ILS-DME_DME_on-test.xml
+DN_OBL.UNS_1.xml
+DN_OBL.UNS_2_with_schedule.xml
+DN_OBS.NEW_1_perm_antenna_point-geometry_minimum_properties_0_airports_1_FIR_NOTAMN.xml
+DN_OBS.NEW_2_temp_catenary_line-geometry_2_airports_1_FIR.xml
+DN_OBS.NEW_3_temp_crane_point_geometry_all_properties_1_airport_1_FIR.xml
+DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMN.xml
+DN_OBS.NEW_5_temp_rig_polygon-geometry_0_airports_3_FIRs.xml
+DN_OTHER_L_variant.xml
+DN_OTHER_N_variant.xml
+DN_OTHER_N_variant_bilingual.xml
+DN_OTHER_N_variant_non-ICAO_aerodrome.xml
+DN_RWE.CLS_1_first_300m_closed_RWY09R.xml
+DN_RWE.CLS_2_last_200m_closed_RWY09L-27R.xml
+DN_RWY.CLS_1_full_runway_closure.xml
+DN_RWY.CLS_2_fato_closed_NOTAMN.xml
+DN_RWY.LIM_1_closed_except_for_takeoff.xml
+DN_RWY.LIM_2_conditional_for_PPR_1HR.xml
+DN_RWY.LIM_3_prohibited_for_night_VFR.xml
+DN_RWY.LIM_4_additionally_allowed_for_training.xml
+DN_SAA.ACT_1_area_activation_0_airports_2_FIRs.xml
+DN_SAA.ACT_2_area_activation_changed_limits_2_airports_1_FIR.xml
+DN_SAA.ACT_3_area_activation_schedule_1_airport_1_FIR.xml
+DN_SAA.ACT_4_area_activation_changed_limits_and_schedule_0_airports_1_FIR.xml
+DN_SAA.ACT_5_area_activation_of_two_sectors_0_airports_1_FIR.xml
+DN_SAA.NEW_1_R_SAR_circle_0_airports_1_FIR.xml
+DN_SAA.NEW_2_D_UAV_corridor_2_airports_1_FIR.xml
+DN_SAA.NEW_3_TRA_PARACHUTE_schedule_polygon_1_airport_1_FIR.xml
+DN_SAA.NEW_4_TSA_NAVAL-EXER_schedule_circle_0_airports_3_FIRs.xml
+DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
+DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
+DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
+DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
+DN_SFC.CON_5_minimum_data.xml
+DN_SFC.CON_6_items_A_B_C_D_E_F_G_P_R_S_T.xml
+DN_STAND.CLS_4_stand_closure.xml
+DN_STAND.LIM_1_closed_except_for.xml
+DN_STAND.LIM_3_prohibited_for.xml
+DN_STAND.LIM_4_additionally_allowed_for.xml
+DN_TWY.CLS_1_single_twy_closure.xml
+DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note.xml
+DN_TWY.LIM_1_closed_except_for.xml
+DN_TWY.LIM_2_conditional_for.xml
+DN_TWY.LIM_3_prohibited_for.xml
+DN_TWY.LIM_4_additionally_allowed_for.xml
+
 
 TIER 2 - each file needs the file(s) listed under "depends on" to be already uploaded in the system
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  #   feature seq/corr               NOTAM series                  depends on                          file
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- 50   2.0T                           A                             #1                                  DN_AD.CLS_2_with_schedule_reason_note.xml
- 51   2.0T                           A                             #3                                  DN_AD.LIM_1_closed_except_for.xml
- 52   3.0T                           A                             #1,#50                              DN_AD.LIM_3_prohibited_for.xml
- 53   4.0T                           A                             #1,#50,#52                          DN_AD.LIM_4_additionally_allowed_for.xml
- 54   2.0T                           A                             #10                                 DN_APN.CLS_2_apron_closed_weekday_schedule.xml
- 55   3.0T                           A                             #10,#54                             DN_APN.LIM_2_conditional_for_with_weekdays_period_schedule.xml
- 56   2.0T                           A                             #17                                 DN_NAV.UNS_3_TACAN_all-signal-types_false-indication.xml
- 57   -                              C0001/28; C0002/28            #21                                 DN_OBS.NEW_1_perm_antenna_point-geometry_minimum_properties_0_airports_1_FIR_NOTAMC.xml
- 58   1.1B                           C0003/28; C0004/28            #24                                 DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMC.xml
- 59   1.0T                           E0002/27; E0003/27; E0004/27  #29                                 DN_RCP.CHG_1_multiple_RCP_displaced_on_RWY09R_due_to_RWE.CLS.xml
- 60   1.0T                           E0005/27                      #29                                 DN_RDD.CHG_1_new_declared_distances_on_RWY27L_due_to_RCP.CHG_on_RWY09R.xml
- 61   1.1T 2.0T                      C0001/27; C0002/27            #32                                 DN_RWY.CLS_2_fato_closed_NOTAMR.xml
- 62 > 2.1T                           C0002/27; C0003/27            #32,#61                             DN_RWY.CLS_2_fato_closed_NOTAMC.xml
- 63   2.0T                           A                             #31                                 DN_RWY.LIM_3_prohibited_for_night_VFR.xml
- 64   3.0T                           A                             #31,#63                             DN_RWY.LIM_4_additionally_allowed_for_training.xml
- 65 > 4.0T 3.0T                      A                             #31,#63,#64                         DN_RWY.LIM_1_closed_except_for_takeoff.xml
- 66   2.0T                           B                             #36                                 DN_SAA.ACT_4_area_activation_changed_limits_and_schedule_0_airports_1_FIR.xml
- 67   5.0T 1.0T                      -                             #1,#50,#52,#53                      DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
- 68   1.0T 2.0T                      -                             #67                                 DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
- 69   2.1T 3.0T                      -                             #67,#68                             DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
- 70   6.0T 2.0T 4.0T 1.0T            A; A; A; A                    #1,#50,#52,#53,#60,#67,#68,#69      DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
- 71 > 2.0T                           A; A                          #30,#70                             DN_RCP.CHG_2_multiple_RCP_displaced_on_RWY27R_due_to_RWE.CLS.xml
- 72 > 2.0T 1.0T                      A                             #30,#70                             DN_RDD.CHG_2_new_declared_distances_on_RWY09L_due_to_RWE.CLS_on_RWY09L-27R.xml
- 73   1.0T                           A                             #10                                 DN_STAND.CLS_1_stand_closure_due_to_APN.CLS.xml
- 74   2.0T                           A                             #54,#73                             DN_STAND.CLS_2_stand_closure_due_to_APN.CLS_with_schedule.xml
- 75   2.0T 1.0T                      A                             #4,#42                              DN_STAND.CLS_3_stand_closure_due_to_APE.CLS.xml
- 76   1.0T 2.0T                      A                             #48                                 DN_TWY.LIM_1_closed_except_for.xml
- 77   2.0T 1.0T                      A                             #48                                 DN_TWY.LIM_3_prohibited_for.xml
- 78   2.0T                           A                             #47                                 DN_TWY.LIM_4_additionally_allowed_for.xml
- 79 > 3.0T 5.0T 1.0T                 -                             #47,#67,#68,#69,#70,#78             DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
- 80 > 3.1T 4.0T 5.1T 6.0T 1.1T 2.0T  -                             #47,#67,#68,#69,#70,#78,#79         DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
- 81 > 3.0T                           A                             #79,#80                             DN_APN.LIM_1_closed_except_for.xml
- 82 > 4.0T                           A                             #79,#80,#81                         DN_APN.LIM_4_additionally_allowed_for.xml
- 83 > 5.0T                           A                             #79,#80,#81,#82                     DN_APN.LIM_3_prohibited_for.xml
- 84   7.0T                           -                             #67,#68,#69,#70,#79,#80             DN_SFC.CON_5_minimum_data.xml
- 85 > 8.0T 1.0T                      A                             #67,#68,#69,#70,#79,#80,#84         DN_OTHER_L_variant.xml
- 86   7.0T 5.0T                      -                             #1,#50,#52,#53,#67,#68,#70,#79,#80  DN_SFC.CON_6_items_A_B_C_D_E_F_G_P_R_S_T.xml
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+file                                                                                                depends on
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DN_OBS.NEW_1_perm_antenna_point-geometry_minimum_properties_0_airports_1_FIR_NOTAMC.xml             DN_OBS.NEW_1_perm_antenna_point-geometry_minimum_properties_0_airports_1_FIR_NOTAMN.xml
 
+DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMC.xml                                   DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMN.xml
 
-Why each tier-2 file depends on another
-======================================================================================================================================================
+DN_RCP.CHG_1_multiple_RCP_displaced_on_RWY09R_due_to_RWE.CLS.xml                                    DN_RWE.CLS_1_first_300m_closed_RWY09R.xml
 
-#50  DN_AD.CLS_2_with_schedule_reason_note.xml
-      after #1  DN_AD.CLS_1_ad_closed.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 1.0 before 2.0
+DN_RCP.CHG_2_multiple_RCP_displaced_on_RWY27R_due_to_RWE.CLS.xml                                    DN_RWE.CLS_2_last_200m_closed_RWY09L-27R.xml
 
-#51  DN_AD.LIM_1_closed_except_for.xml
-      after #3  DN_AD.LIM_2_conditional_for.xml
-          feature dd062d88-3e64-4a5d-bebd-89476db9ebea seq 1.0 before 2.0
+DN_RDD.CHG_1_new_declared_distances_on_RWY27L_due_to_RCP.CHG_on_RWY09R.xml                          DN_RWE.CLS_1_first_300m_closed_RWY09R.xml
 
-#52  DN_AD.LIM_3_prohibited_for.xml
-      after #1  DN_AD.CLS_1_ad_closed.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 1.0 before 3.0
-      after #50  DN_AD.CLS_2_with_schedule_reason_note.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 2.0 before 3.0
+DN_RDD.CHG_2_new_declared_distances_on_RWY09L_due_to_RWE.CLS_on_RWY09L-27R.xml                      DN_RWE.CLS_2_last_200m_closed_RWY09L-27R.xml
 
-#53  DN_AD.LIM_4_additionally_allowed_for.xml
-      after #1  DN_AD.CLS_1_ad_closed.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 1.0 before 4.0
-      after #50  DN_AD.CLS_2_with_schedule_reason_note.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 2.0 before 4.0
-      after #52  DN_AD.LIM_3_prohibited_for.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 3.0 before 4.0
+DN_RWY.CLS_2_fato_closed_NOTAMC.xml                                                                 DN_RWY.CLS_2_fato_closed_NOTAMN.xml
+                                                                                                    DN_RWY.CLS_2_fato_closed_NOTAMR.xml
 
-#54  DN_APN.CLS_2_apron_closed_weekday_schedule.xml
-      after #10  DN_APN.CLS_1_apron_closed.xml
-          feature 36a31e53-845c-4818-b278-b29367d85d13 seq 1.0 before 2.0
+DN_RWY.CLS_2_fato_closed_NOTAMR.xml                                                                 DN_RWY.CLS_2_fato_closed_NOTAMN.xml
 
-#55  DN_APN.LIM_2_conditional_for_with_weekdays_period_schedule.xml
-      after #10  DN_APN.CLS_1_apron_closed.xml
-          feature 36a31e53-845c-4818-b278-b29367d85d13 seq 1.0 before 3.0
-      after #54  DN_APN.CLS_2_apron_closed_weekday_schedule.xml
-          feature 36a31e53-845c-4818-b278-b29367d85d13 seq 2.0 before 3.0
+DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml                                       DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
 
-#56  DN_NAV.UNS_3_TACAN_all-signal-types_false-indication.xml
-      after #17  DN_NAV.UNS_2_TACAN_distance_unserviceable.xml
-          feature 3e33bd78-0b9c-4d27-9060-901fcb02fa47 seq 1.0 before 2.0
-          feature 4316fc95-f2f7-4789-a249-3afc0b5cc27a seq 1.0 before 2.0
+DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml     DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
 
-#57  DN_OBS.NEW_1_perm_antenna_point-geometry_minimum_properties_0_airports_1_FIR_NOTAMC.xml
-      after #21  DN_OBS.NEW_1_perm_antenna_point-geometry_minimum_properties_0_airports_1_FIR_NOTAMN.xml
-          Event 9e6dc9ee-fdd4-4539-8ab7-8e81f71489a7 seq 1.0 before 1.1
-          refers to NOTAM C0001/2028 issued by that file
+DN_STAND.CLS_1_stand_closure_due_to_APN.CLS.xml                                                     DN_APN.CLS_1_apron_closed.xml
 
-#58  DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMC.xml
-      after #24  DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMN.xml
-          Event 21fdfe8d-9b05-47ce-ae6f-41c92833ef93 seq 1.0 before 1.1
-          feature e48fcfbc-dec4-4e53-8f94-75dca0df4fa9 seq 1.0 before 1.1
-          refers to NOTAM C0003/2028 issued by that file
+DN_STAND.CLS_2_stand_closure_due_to_APN.CLS_with_schedule.xml                                       DN_APN.CLS_2_apron_closed_weekday_schedule.xml
 
-#59  DN_RCP.CHG_1_multiple_RCP_displaced_on_RWY09R_due_to_RWE.CLS.xml
-      after #29  DN_RWE.CLS_1_first_300m_closed_RWY09R.xml
-          refers to Event 7ab90444-501f-4473-b37c-a11ed6e0baab carried by that file
+DN_STAND.CLS_3_stand_closure_due_to_APE.CLS.xml                                                     DN_APE.CLS_1_apron_portion_closed.xml
 
-#60  DN_RDD.CHG_1_new_declared_distances_on_RWY27L_due_to_RCP.CHG_on_RWY09R.xml
-      after #29  DN_RWE.CLS_1_first_300m_closed_RWY09R.xml
-          refers to Event 7ab90444-501f-4473-b37c-a11ed6e0baab carried by that file
-
-#61  DN_RWY.CLS_2_fato_closed_NOTAMR.xml
-      after #32  DN_RWY.CLS_2_fato_closed_NOTAMN.xml
-          Event 2d39e7c4-8d1a-4f97-9f92-0f5d82eb5031 seq 1.0 before 2.0
-          feature d9972907-17ec-4d1c-a917-250acd0970c6 seq 1.0 before 1.1
-          refers to NOTAM C0001/2027 issued by that file
-
-#62  DN_RWY.CLS_2_fato_closed_NOTAMC.xml
-      after #32  DN_RWY.CLS_2_fato_closed_NOTAMN.xml
-          Event 2d39e7c4-8d1a-4f97-9f92-0f5d82eb5031 seq 1.0 before 2.1
-          feature d9972907-17ec-4d1c-a917-250acd0970c6 seq 1.0 before 2.1
-          refers to NOTAM C0001/2027 issued by that file
-      after #61  DN_RWY.CLS_2_fato_closed_NOTAMR.xml
-          Event 2d39e7c4-8d1a-4f97-9f92-0f5d82eb5031 seq 2.0 before 2.1
-          feature d9972907-17ec-4d1c-a917-250acd0970c6 seq 1.1 before 2.1
-          refers to NOTAM C0001/2027 issued by that file
-          refers to NOTAM C0002/2027 issued by that file
-
-#63  DN_RWY.LIM_3_prohibited_for_night_VFR.xml
-      after #31  DN_RWY.CLS_1_full_runway_closure.xml
-          feature 5d6513d4-a62a-49e1-9e26-0b8cbf320daf seq 1.0 before 2.0
-          feature ee6019d6-29f7-404d-8cee-b6819f325aed seq 1.0 before 2.0
-
-#64  DN_RWY.LIM_4_additionally_allowed_for_training.xml
-      after #31  DN_RWY.CLS_1_full_runway_closure.xml
-          feature 5d6513d4-a62a-49e1-9e26-0b8cbf320daf seq 1.0 before 3.0
-      after #63  DN_RWY.LIM_3_prohibited_for_night_VFR.xml
-          feature 5d6513d4-a62a-49e1-9e26-0b8cbf320daf seq 2.0 before 3.0
-
-#65  DN_RWY.LIM_1_closed_except_for_takeoff.xml
-      after #31  DN_RWY.CLS_1_full_runway_closure.xml
-          feature 5d6513d4-a62a-49e1-9e26-0b8cbf320daf seq 1.0 before 4.0
-          feature ee6019d6-29f7-404d-8cee-b6819f325aed seq 1.0 before 3.0
-      after #63  DN_RWY.LIM_3_prohibited_for_night_VFR.xml
-          feature 5d6513d4-a62a-49e1-9e26-0b8cbf320daf seq 2.0 before 4.0
-          feature ee6019d6-29f7-404d-8cee-b6819f325aed seq 2.0 before 3.0
-      after #64  DN_RWY.LIM_4_additionally_allowed_for_training.xml
-          feature 5d6513d4-a62a-49e1-9e26-0b8cbf320daf seq 3.0 before 4.0
-
-#66  DN_SAA.ACT_4_area_activation_changed_limits_and_schedule_0_airports_1_FIR.xml
-      after #36  DN_SAA.ACT_3_area_activation_schedule_1_airport_1_FIR.xml
-          feature c33565a5-a785-4a2e-afcc-a17f72d47a74 seq 1.0 before 2.0
-
-#67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-      after #1  DN_AD.CLS_1_ad_closed.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 1.0 before 5.0
-      after #50  DN_AD.CLS_2_with_schedule_reason_note.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 2.0 before 5.0
-      after #52  DN_AD.LIM_3_prohibited_for.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 3.0 before 5.0
-      after #53  DN_AD.LIM_4_additionally_allowed_for.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 4.0 before 5.0
-
-#68  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-      after #67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 1.0 before 2.0
-
-#69  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
-      after #67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 1.0 before 2.1
-      after #68  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-          Event c17a0c34-5210-476c-b5cc-cc595dbd89c3 seq 1.0 before 2.0
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.0 before 2.1
-
-#70  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      after #1  DN_AD.CLS_1_ad_closed.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 1.0 before 6.0
-      after #50  DN_AD.CLS_2_with_schedule_reason_note.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 2.0 before 6.0
-      after #52  DN_AD.LIM_3_prohibited_for.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 3.0 before 6.0
-      after #53  DN_AD.LIM_4_additionally_allowed_for.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 4.0 before 6.0
-      after #60  DN_RDD.CHG_1_new_declared_distances_on_RWY27L_due_to_RCP.CHG_on_RWY09R.xml
-          refers to Event f0bb75d2-d81c-4297-b42a-e41eb31b25bc carried by that file
-      after #67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 5.0 before 6.0
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 1.0 before 4.0
-      after #68  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 1.0 before 2.0
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.0 before 4.0
-      after #69  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.1 before 4.0
-
-#71  DN_RCP.CHG_2_multiple_RCP_displaced_on_RWY27R_due_to_RWE.CLS.xml
-      after #30  DN_RWE.CLS_2_last_200m_closed_RWY09L-27R.xml
-          refers to Event 06837083-a4dc-47eb-98d1-fd6af7275603 carried by that file
-      after #70  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-          feature 6928ccc0-f2d0-4a2c-a72e-aefeb0ed6d8f seq 1.0 before 2.0
-          feature af5c0cc5-570c-45e0-b11a-f755bbc78ebf seq 1.0 before 2.0
-
-#72  DN_RDD.CHG_2_new_declared_distances_on_RWY09L_due_to_RWE.CLS_on_RWY09L-27R.xml
-      after #30  DN_RWE.CLS_2_last_200m_closed_RWY09L-27R.xml
-          refers to Event 06837083-a4dc-47eb-98d1-fd6af7275603 carried by that file
-      after #70  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-          feature 04d3c6e5-893c-4a95-89f9-1763bf6f5672 seq 1.0 before 2.0
-          feature 2108f844-b00a-4b73-8937-0a4bbe732f00 seq 1.0 before 2.0
-          feature fcfd8876-a953-4868-8772-5acb97c51a68 seq 1.0 before 2.0
-
-#73  DN_STAND.CLS_1_stand_closure_due_to_APN.CLS.xml
-      after #10  DN_APN.CLS_1_apron_closed.xml
-          refers to Event 38eea411-6488-47b5-b47a-5edfe5d21d8b carried by that file
-
-#74  DN_STAND.CLS_2_stand_closure_due_to_APN.CLS_with_schedule.xml
-      after #54  DN_APN.CLS_2_apron_closed_weekday_schedule.xml
-          refers to Event edbed27b-76ca-454e-9308-a02279c1d086 carried by that file
-      after #73  DN_STAND.CLS_1_stand_closure_due_to_APN.CLS.xml
-          feature a08cc350-8d43-4f24-9d3e-68cd52e3b18a seq 1.0 before 2.0
-          feature c9ce2bc3-589a-40b6-870e-6f89a16125f2 seq 1.0 before 2.0
-
-#75  DN_STAND.CLS_3_stand_closure_due_to_APE.CLS.xml
-      after #4  DN_APE.CLS_1_apron_portion_closed.xml
-          refers to Event 42f68add-b55c-49a6-b5d3-ad28d8c7a755 carried by that file
-      after #42  DN_STAND.CLS_4_stand_closure.xml
-          feature d3636733-544a-46c4-b634-ba9f0cfc161c seq 1.0 before 2.0
-
-#76  DN_TWY.LIM_1_closed_except_for.xml
-      after #48  DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note.xml
-          feature c13cd2e5-34c8-40ea-acd5-f8a9d42f1470 seq 1.0 before 2.0
-          feature d243752a-7859-41a5-bbc6-3de39c07fe90 seq 1.0 before 2.0
-          feature f3cef09c-8a33-4c57-b1d7-4e2dee4e65d8 seq 1.0 before 2.0
-
-#77  DN_TWY.LIM_3_prohibited_for.xml
-      after #48  DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note.xml
-          feature 25cdac1e-175a-42d8-b1b7-3aee50a86ab1 seq 1.0 before 2.0
-
-#78  DN_TWY.LIM_4_additionally_allowed_for.xml
-      after #47  DN_TWY.CLS_1_single_twy_closure.xml
-          feature 0db92b1d-4c91-4fd8-9497-ab18922c8a6f seq 1.0 before 2.0
-          feature 2c904b78-bd3d-40a9-832a-101906f57d52 seq 1.0 before 2.0
-          feature 4b1c3b5a-e6bd-4421-ad48-8346693a8de9 seq 1.0 before 2.0
-          feature 643b090e-3121-4fc4-b737-8e3a25d6ce29 seq 1.0 before 2.0
-          feature 78396f68-9c03-438a-a6b4-331157b1a79c seq 1.0 before 2.0
-          feature 9a537294-8e62-43d1-9448-93df19e640e5 seq 1.0 before 2.0
-          feature a9848bf3-c44d-443e-ac20-5ae395070602 seq 1.0 before 2.0
-
-#79  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-      after #47  DN_TWY.CLS_1_single_twy_closure.xml
-          feature 78396f68-9c03-438a-a6b4-331157b1a79c seq 1.0 before 3.0
-      after #67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 1.0 before 5.0
-      after #68  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 1.0 before 3.0
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.0 before 5.0
-      after #69  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.1 before 5.0
-      after #70  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 2.0 before 3.0
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 4.0 before 5.0
-      after #78  DN_TWY.LIM_4_additionally_allowed_for.xml
-          feature 78396f68-9c03-438a-a6b4-331157b1a79c seq 2.0 before 3.0
-
-#80  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-      after #47  DN_TWY.CLS_1_single_twy_closure.xml
-          feature 78396f68-9c03-438a-a6b4-331157b1a79c seq 1.0 before 3.1
-      after #67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 1.0 before 5.1
-      after #68  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 1.0 before 3.1
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.0 before 5.1
-      after #69  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.1 before 5.1
-      after #70  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 2.0 before 3.1
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 4.0 before 5.1
-      after #78  DN_TWY.LIM_4_additionally_allowed_for.xml
-          feature 78396f68-9c03-438a-a6b4-331157b1a79c seq 2.0 before 3.1
-      after #79  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-          Event d9eaf605-f778-4bb7-a524-7e0d36450fd2 seq 1.0 before 1.1
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 1.0 before 1.1
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 3.0 before 3.1
-          feature 78396f68-9c03-438a-a6b4-331157b1a79c seq 3.0 before 3.1
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 5.0 before 5.1
-
-#81  DN_APN.LIM_1_closed_except_for.xml
-      after #79  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 1.0 before 3.0
-      after #80  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 1.1 before 3.0
-
-#82  DN_APN.LIM_4_additionally_allowed_for.xml
-      after #79  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 1.0 before 4.0
-      after #80  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 1.1 before 4.0
-      after #81  DN_APN.LIM_1_closed_except_for.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 3.0 before 4.0
-
-#83  DN_APN.LIM_3_prohibited_for.xml
-      after #79  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 1.0 before 5.0
-      after #80  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 1.1 before 5.0
-      after #81  DN_APN.LIM_1_closed_except_for.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 3.0 before 5.0
-      after #82  DN_APN.LIM_4_additionally_allowed_for.xml
-          feature 0dac7a5f-4cb6-41a2-b0eb-dac1c555351c seq 4.0 before 5.0
-
-#84  DN_SFC.CON_5_minimum_data.xml
-      after #67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 1.0 before 7.0
-      after #68  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.0 before 7.0
-      after #69  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.1 before 7.0
-      after #70  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 4.0 before 7.0
-      after #79  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 5.0 before 7.0
-      after #80  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 5.1 before 7.0
-
-#85  DN_OTHER_L_variant.xml
-      after #67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 1.0 before 8.0
-      after #68  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.0 before 8.0
-      after #69  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 2.1 before 8.0
-      after #70  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 4.0 before 8.0
-      after #79  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 5.0 before 8.0
-      after #80  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 5.1 before 8.0
-      after #84  DN_SFC.CON_5_minimum_data.xml
-          feature 9e51668f-bf8a-4f5b-ba6e-27087972b9b8 seq 7.0 before 8.0
-
-#86  DN_SFC.CON_6_items_A_B_C_D_E_F_G_P_R_S_T.xml
-      after #1  DN_AD.CLS_1_ad_closed.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 1.0 before 7.0
-      after #50  DN_AD.CLS_2_with_schedule_reason_note.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 2.0 before 7.0
-      after #52  DN_AD.LIM_3_prohibited_for.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 3.0 before 7.0
-      after #53  DN_AD.LIM_4_additionally_allowed_for.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 4.0 before 7.0
-      after #67  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 5.0 before 7.0
-      after #68  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 1.0 before 5.0
-      after #70  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-          feature 1b54b2d6-a5ff-4e57-94c2-f4047a381c64 seq 6.0 before 7.0
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 2.0 before 5.0
-      after #79  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 3.0 before 5.0
-      after #80  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-          feature 4428d037-1cdf-433a-9bfa-d0857aaf448a seq 3.1 before 5.0
-
-
-Features touched by more than one file
-======================================================================================================================================================
-
-Listed in the upload order above; the sequenceNumbers must come out
-ascending down each block.
-
-AirportHeliport  -  (1b54b2d6-a5ff-4e57-94c2-f4047a381c64)
-      #1    seq 1.0T  DN_AD.CLS_1_ad_closed.xml
-      #50   seq 2.0T  DN_AD.CLS_2_with_schedule_reason_note.xml
-      #52   seq 3.0T  DN_AD.LIM_3_prohibited_for.xml
-      #53   seq 4.0T  DN_AD.LIM_4_additionally_allowed_for.xml
-      #67   seq 5.0T  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-      #70   seq 6.0T  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      #86   seq 7.0T  DN_SFC.CON_6_items_A_B_C_D_E_F_G_P_R_S_T.xml
-
-AirportHeliport  -  (dd062d88-3e64-4a5d-bebd-89476db9ebea)
-      #3    seq 1.0T  DN_AD.LIM_2_conditional_for.xml
-      #51   seq 2.0T  DN_AD.LIM_1_closed_except_for.xml
-
-Apron  -  (36a31e53-845c-4818-b278-b29367d85d13)
-      #10   seq 1.0T  DN_APN.CLS_1_apron_closed.xml
-      #54   seq 2.0T  DN_APN.CLS_2_apron_closed_weekday_schedule.xml
-      #55   seq 3.0T  DN_APN.LIM_2_conditional_for_with_weekdays_period_schedule.xml
-
-Navaid  -  (4316fc95-f2f7-4789-a249-3afc0b5cc27a)
-      #17   seq 1.0T  DN_NAV.UNS_2_TACAN_distance_unserviceable.xml
-      #56   seq 2.0T  DN_NAV.UNS_3_TACAN_all-signal-types_false-indication.xml
-
-TACAN  -  (3e33bd78-0b9c-4d27-9060-901fcb02fa47)
-      #17   seq 1.0T  DN_NAV.UNS_2_TACAN_distance_unserviceable.xml
-      #56   seq 2.0T  DN_NAV.UNS_3_TACAN_all-signal-types_false-indication.xml
-
-VerticalStructure  OBST-EADD-TEMP-0009  (e48fcfbc-dec4-4e53-8f94-75dca0df4fa9)
-      #24   seq 1.0B  DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMN.xml
-      #58   seq 1.1B  DN_OBS.NEW_4_est_crane_circle-geometry_1_airport_1_FIR_NOTAMC.xml
-
-RunwayDirection  -  (5d6513d4-a62a-49e1-9e26-0b8cbf320daf)
-      #31   seq 1.0T  DN_RWY.CLS_1_full_runway_closure.xml
-      #63   seq 2.0T  DN_RWY.LIM_3_prohibited_for_night_VFR.xml
-      #64   seq 3.0T  DN_RWY.LIM_4_additionally_allowed_for_training.xml
-      #65   seq 4.0T  DN_RWY.LIM_1_closed_except_for_takeoff.xml
-
-RunwayDirection  -  (ee6019d6-29f7-404d-8cee-b6819f325aed)
-      #31   seq 1.0T  DN_RWY.CLS_1_full_runway_closure.xml
-      #63   seq 2.0T  DN_RWY.LIM_3_prohibited_for_night_VFR.xml
-      #65   seq 3.0T  DN_RWY.LIM_1_closed_except_for_takeoff.xml
-
-RunwayDirection  -  (d9972907-17ec-4d1c-a917-250acd0970c6)
-      #32   seq 1.0T  DN_RWY.CLS_2_fato_closed_NOTAMN.xml
-      #61   seq 1.1T  DN_RWY.CLS_2_fato_closed_NOTAMR.xml
-      #61   seq 2.0T  DN_RWY.CLS_2_fato_closed_NOTAMR.xml
-      #62   seq 2.1T  DN_RWY.CLS_2_fato_closed_NOTAMC.xml
-
-Airspace  -  (c33565a5-a785-4a2e-afcc-a17f72d47a74)
-      #36   seq 1.0T  DN_SAA.ACT_3_area_activation_schedule_1_airport_1_FIR.xml
-      #66   seq 2.0T  DN_SAA.ACT_4_area_activation_changed_limits_and_schedule_0_airports_1_FIR.xml
-
-AircraftStand  -  (d3636733-544a-46c4-b634-ba9f0cfc161c)
-      #42   seq 1.0T  DN_STAND.CLS_4_stand_closure.xml
-      #75   seq 2.0T  DN_STAND.CLS_3_stand_closure_due_to_APE.CLS.xml
-
-Taxiway  -  (78396f68-9c03-438a-a6b4-331157b1a79c)
-      #47   seq 1.0T  DN_TWY.CLS_1_single_twy_closure.xml
-      #78   seq 2.0T  DN_TWY.LIM_4_additionally_allowed_for.xml
-      #79   seq 3.0T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-      #80   seq 3.1T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-      #80   seq 4.0T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-
-TaxiwayElement  -  (9a537294-8e62-43d1-9448-93df19e640e5)
-      #47   seq 1.0T  DN_TWY.CLS_1_single_twy_closure.xml
-      #78   seq 2.0T  DN_TWY.LIM_4_additionally_allowed_for.xml
-
-TaxiwayElement  -  (0db92b1d-4c91-4fd8-9497-ab18922c8a6f)
-      #47   seq 1.0T  DN_TWY.CLS_1_single_twy_closure.xml
-      #78   seq 2.0T  DN_TWY.LIM_4_additionally_allowed_for.xml
-
-TaxiwayElement  -  (a9848bf3-c44d-443e-ac20-5ae395070602)
-      #47   seq 1.0T  DN_TWY.CLS_1_single_twy_closure.xml
-      #78   seq 2.0T  DN_TWY.LIM_4_additionally_allowed_for.xml
-
-TaxiwayElement  -  (4b1c3b5a-e6bd-4421-ad48-8346693a8de9)
-      #47   seq 1.0T  DN_TWY.CLS_1_single_twy_closure.xml
-      #78   seq 2.0T  DN_TWY.LIM_4_additionally_allowed_for.xml
-
-TaxiwayElement  -  (2c904b78-bd3d-40a9-832a-101906f57d52)
-      #47   seq 1.0T  DN_TWY.CLS_1_single_twy_closure.xml
-      #78   seq 2.0T  DN_TWY.LIM_4_additionally_allowed_for.xml
-
-TaxiwayElement  -  (643b090e-3121-4fc4-b737-8e3a25d6ce29)
-      #47   seq 1.0T  DN_TWY.CLS_1_single_twy_closure.xml
-      #78   seq 2.0T  DN_TWY.LIM_4_additionally_allowed_for.xml
-
-Taxiway  -  (25cdac1e-175a-42d8-b1b7-3aee50a86ab1)
-      #48   seq 1.0T  DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note.xml
-      #77   seq 2.0T  DN_TWY.LIM_3_prohibited_for.xml
-
-Taxiway  -  (d243752a-7859-41a5-bbc6-3de39c07fe90)
-      #48   seq 1.0T  DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note.xml
-      #76   seq 2.0T  DN_TWY.LIM_1_closed_except_for.xml
-
-TaxiwayElement  -  (f3cef09c-8a33-4c57-b1d7-4e2dee4e65d8)
-      #48   seq 1.0T  DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note.xml
-      #76   seq 2.0T  DN_TWY.LIM_1_closed_except_for.xml
-
-TaxiwayElement  -  (c13cd2e5-34c8-40ea-acd5-f8a9d42f1470)
-      #48   seq 1.0T  DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note.xml
-      #76   seq 2.0T  DN_TWY.LIM_1_closed_except_for.xml
-
-Runway  -  (9e51668f-bf8a-4f5b-ba6e-27087972b9b8)
-      #67   seq 1.0T  DN_SFC.CON_1_items_A_B_C_D_E_F_G_J_K_T.xml
-      #68   seq 2.0T  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-      #69   seq 2.1T  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
-      #69   seq 3.0T  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
-      #70   seq 4.0T  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      #79   seq 5.0T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-      #80   seq 5.1T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-      #80   seq 6.0T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-      #84   seq 7.0T  DN_SFC.CON_5_minimum_data.xml
-      #85   seq 8.0T  DN_OTHER_L_variant.xml
-
-Runway  -  (4428d037-1cdf-433a-9bfa-d0857aaf448a)
-      #68   seq 1.0T  DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
-      #70   seq 2.0T  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      #79   seq 3.0T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-      #80   seq 3.1T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-      #80   seq 4.0T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-      #86   seq 5.0T  DN_SFC.CON_6_items_A_B_C_D_E_F_G_P_R_S_T.xml
-
-RunwayCentrelinePoint  -  (2108f844-b00a-4b73-8937-0a4bbe732f00)
-      #70   seq 1.0T  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      #72   seq 2.0T  DN_RDD.CHG_2_new_declared_distances_on_RWY09L_due_to_RWE.CLS_on_RWY09L-27R.xml
-
-RunwayCentrelinePoint  -  (fcfd8876-a953-4868-8772-5acb97c51a68)
-      #70   seq 1.0T  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      #72   seq 2.0T  DN_RDD.CHG_2_new_declared_distances_on_RWY09L_due_to_RWE.CLS_on_RWY09L-27R.xml
-
-RunwayCentrelinePoint  -  (04d3c6e5-893c-4a95-89f9-1763bf6f5672)
-      #70   seq 1.0T  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      #72   seq 2.0T  DN_RDD.CHG_2_new_declared_distances_on_RWY09L_due_to_RWE.CLS_on_RWY09L-27R.xml
-
-RunwayCentrelinePoint  -  (6928ccc0-f2d0-4a2c-a72e-aefeb0ed6d8f)
-      #70   seq 1.0T  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      #71   seq 2.0T  DN_RCP.CHG_2_multiple_RCP_displaced_on_RWY27R_due_to_RWE.CLS.xml
-
-RunwayCentrelinePoint  -  (af5c0cc5-570c-45e0-b11a-f755bbc78ebf)
-      #70   seq 1.0T  DN_SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG.xml
-      #71   seq 2.0T  DN_RCP.CHG_2_multiple_RCP_displaced_on_RWY27R_due_to_RWE.CLS.xml
-
-AircraftStand  -  (c9ce2bc3-589a-40b6-870e-6f89a16125f2)
-      #73   seq 1.0T  DN_STAND.CLS_1_stand_closure_due_to_APN.CLS.xml
-      #74   seq 2.0T  DN_STAND.CLS_2_stand_closure_due_to_APN.CLS_with_schedule.xml
-
-AircraftStand  -  (a08cc350-8d43-4f24-9d3e-68cd52e3b18a)
-      #73   seq 1.0T  DN_STAND.CLS_1_stand_closure_due_to_APN.CLS.xml
-      #74   seq 2.0T  DN_STAND.CLS_2_stand_closure_due_to_APN.CLS_with_schedule.xml
-
-Apron  -  (0dac7a5f-4cb6-41a2-b0eb-dac1c555351c)
-      #79   seq 1.0T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
-      #80   seq 1.1T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-      #80   seq 2.0T  DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
-      #81   seq 3.0T  DN_APN.LIM_1_closed_except_for.xml
-      #82   seq 4.0T  DN_APN.LIM_4_additionally_allowed_for.xml
-      #83   seq 5.0T  DN_APN.LIM_3_prohibited_for.xml
+DN_STAND.LIM_2_conditional_for_due_to_APE.LIM.xml                                                   DN_APE.LIM_2_conditional_for.xml
 

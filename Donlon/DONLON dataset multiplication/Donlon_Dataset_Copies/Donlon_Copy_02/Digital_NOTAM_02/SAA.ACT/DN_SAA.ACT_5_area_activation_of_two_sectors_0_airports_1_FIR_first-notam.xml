@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  B NOTAMN
+  Q) EAAD/QRDCA/IV/BO/W/200/300/5421N03441W015
+  A) EAAD B) 2611050800 C) 2611062000
+  E) Danger Area EAD21A-02 ECLIPTA1 activated, missile firing.
+  F) FL200
+  G) FL300
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1" 
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_SAA.ACT_5_area_activation_of_two_sectors_0_airports_1_FIR_first-notam-02">
+  
+  <!-- Event 1 -->
+  <message:hasMember>
+    <event:Event gml:id="uuid.cdaaabf5-5952-4cab-95b2-0ebc80dc58d8">
+      <gml:identifier codeSpace="urn:uuid:">cdaaabf5-5952-4cab-95b2-0ebc80dc58d8</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_54d5fe2d-17fc-450a-98dd-e1dd5a4d5fb1_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_54d5fe2d-17fc-450a-98dd-e1dd5a4d5fb1_1_0_B_1">
+              <gml:beginPosition>2026-11-05T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-06T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_54d5fe2d-17fc-450a-98dd-e1dd5a4d5fb1_1_0_B_2">
+              <gml:beginPosition>2026-11-05T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-06T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>D EAD21A-02</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>SAA.ACT</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_54d5fe2d-17fc-450a-98dd-e1dd5a4d5fb1_1_0_B_3">
+              <event:series>B</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QWPLW</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>W</event:scope>
+              <event:minimumFL uom="FL">200</event:minimumFL>
+              <event:maximumFL uom="FL">300</event:maximumFL>
+              <event:coordinates>5421N03441W</event:coordinates>
+              <event:radius uom="NM">015</event:radius>
+              <event:location>EAAD</event:location>
+              <event:effectiveStart>2611050800</event:effectiveStart>
+              <event:effectiveEnd>2611062000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">Danger Area EAD21A-02 ECLIPTA1 activated, missile firing.</event:text>
+              <event:lowerLimit>FL200</event:lowerLimit>
+              <event:upperLimit>FL300</event:upperLimit>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- EAD21A-02 ECLIPTA1 -->
+  <message:hasMember>
+    <aixm:Airspace gml:id="uuid.b65b17a8-c9c5-4ec9-a9b6-c574f8c99c28">
+      <gml:identifier codeSpace="urn:uuid:">b65b17a8-c9c5-4ec9-a9b6-c574f8c99c28</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirspaceTimeSlice gml:id="id_19159983-5258-42e7-bb4f-e9c8bbb80375_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_19159983-5258-42e7-bb4f-e9c8bbb80375_1_0_T_1">
+              <gml:beginPosition>2026-11-05T08:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-06T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The activation status of the airspace during the event -->
+          <aixm:activation>
+            <aixm:AirspaceActivation gml:id="id_19159983-5258-42e7-bb4f-e9c8bbb80375_1_0_T_2">
+              <aixm:activity>MISSILES</aixm:activity>
+              <aixm:status>ACTIVE</aixm:status>
+              <aixm:levels>
+                <aixm:AirspaceLayer gml:id="id_19159983-5258-42e7-bb4f-e9c8bbb80375_1_0_T_3">
+                  <aixm:upperLimit>CEILING</aixm:upperLimit>
+                  <aixm:lowerLimit>FLOOR</aixm:lowerLimit>
+                </aixm:AirspaceLayer>
+              </aixm:levels>
+            </aixm:AirspaceActivation>
+          </aixm:activation>
+          <!-- The link to Event 1 -->
+          <aixm:extension>
+            <event:AirspaceExtension gml:id="id_19159983-5258-42e7-bb4f-e9c8bbb80375_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:cdaaabf5-5952-4cab-95b2-0ebc80dc58d8" xlink:title="D EAD21A-02 DNOTAM SAA.ACT" xlink:type="simple"/>
+            </event:AirspaceExtension>
+          </aixm:extension>
+        </aixm:AirspaceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Airspace>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  A NOTAMN
+  Q) EAAD/QMYLC/IV/BO/A/000/999/5446N03504W005
+  A) EADB B) 2611080400 C) 2611100500
+  D) Daily 0400-0500
+  E) TWY A between TWY B and RWY 27R, Rapid exit TWY C and TWY G closed due to maintenance works.
+  Repainting of taxiway markings.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_TWY.CLS_2_multiple_twy_closure_with_description_reason_note-02">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.35d58650-7957-4f8c-af8e-84ab13678d54">
+      <gml:identifier codeSpace="urn:uuid:">35d58650-7957-4f8c-af8e-84ab13678d54</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_ce605cdf-6fdd-47a1-90fe-5ea984e5669c_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_ce605cdf-6fdd-47a1-90fe-5ea984e5669c_1_0_B_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_ce605cdf-6fdd-47a1-90fe-5ea984e5669c_1_0_B_2">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADB A C G</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>TWY.CLS</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:4176b301-74a0-444f-8dc2-b2431a2f02df" xlink:title="EADB DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_ce605cdf-6fdd-47a1-90fe-5ea984e5669c_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMYLC</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5446N03504W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADB</event:location>
+              <event:effectiveStart>2611080400</event:effectiveStart>
+              <event:effectiveEnd>2611100500</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:schedule>Daily 0400-0500</event:schedule>
+              <event:text lang="ENG">TWY A between TWY B and RWY 27R, Rapid exit TWY C and TWY G closed due to maintenance works.
+Repainting of taxiway markings.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- Taxiway A -->
+  <message:hasMember>
+    <aixm:Taxiway gml:id="uuid.8015dbeb-a72d-4a3e-9cf6-79b46597fe18">
+      <gml:identifier codeSpace="urn:uuid:">8015dbeb-a72d-4a3e-9cf6-79b46597fe18</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayTimeSlice gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline availability of the taxiway -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_3">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_5">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the taxiway during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_6">
+              <!-- Schedule -->
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_7">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <!-- Closed Taxiway Description -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_8">
+                  <aixm:purpose>DESCRIPTION</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_9">
+                      <aixm:note>between TWY B and RWY 27R</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Reason -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_10">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_11">
+                      <aixm:note>maintenance works</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_12">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_13">
+                      <aixm:note>Repainting of taxiway markings</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayExtension gml:id="id_d130af08-e9b7-455f-8212-391e21c853db_1_0_T_14">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayExtension>
+          </aixm:extension>
+        </aixm:TaxiwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Taxiway>
+  </message:hasMember>
+  
+  <!-- Taxiway C -->
+  <message:hasMember>
+    <aixm:Taxiway gml:id="uuid.9b75480c-6c50-4b2f-8497-b90f66aa06e3">
+      <gml:identifier codeSpace="urn:uuid:">9b75480c-6c50-4b2f-8497-b90f66aa06e3</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayTimeSlice gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline availability of the taxiway -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_3">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_5">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the taxiway during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_6">
+              <!-- Schedule -->
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_7">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <!-- Reason -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_8">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_9">
+                      <aixm:note>maintenance works</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_10">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_11">
+                      <aixm:note>Repainting of taxiway markings</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayExtension gml:id="id_4eed797f-fc9b-4376-a6af-52c7d8acbfc1_1_0_T_12">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayExtension>
+          </aixm:extension>
+        </aixm:TaxiwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Taxiway>
+  </message:hasMember>
+  
+  <!-- Taxiway G -->
+  <message:hasMember>
+    <aixm:Taxiway gml:id="uuid.3d1732ce-3d4a-463b-b108-d6f68f6f3467">
+      <gml:identifier codeSpace="urn:uuid:">3d1732ce-3d4a-463b-b108-d6f68f6f3467</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayTimeSlice gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline availability of the taxiway (copied from baseline) -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_3">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_5">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the taxiway during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_6">
+              <!-- Schedule -->
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_7">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <!-- Reason -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_8">
+                  <aixm:propertyName>operationalStatus</aixm:propertyName>
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_9">
+                      <aixm:note>maintenance works</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_10">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_11">
+                      <aixm:note>Repainting of taxiway markings</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayExtension gml:id="id_6b996b80-81ed-4da7-a21e-9cccabc79713_1_0_T_12">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayExtension>
+          </aixm:extension>
+        </aixm:TaxiwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Taxiway>
+  </message:hasMember>
+  
+  <!-- Closed TaxiwayElements of TWY A -->
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.c6215aa7-4ed6-4ff1-a0f6-fe25c0242d1c">
+      <gml:identifier codeSpace="urn:uuid:">c6215aa7-4ed6-4ff1-a0f6-fe25c0242d1c</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_dc1b58f3-6624-40c2-9f1c-e1183433b22e_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_dc1b58f3-6624-40c2-9f1c-e1183433b22e_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_dc1b58f3-6624-40c2-9f1c-e1183433b22e_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_dc1b58f3-6624-40c2-9f1c-e1183433b22e_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_dc1b58f3-6624-40c2-9f1c-e1183433b22e_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.5a96134b-2836-4a0f-9f9e-98e0a25c499d">
+      <gml:identifier codeSpace="urn:uuid:">5a96134b-2836-4a0f-9f9e-98e0a25c499d</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_93b08601-055f-412a-b5da-ba9362d61b0f_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_93b08601-055f-412a-b5da-ba9362d61b0f_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_93b08601-055f-412a-b5da-ba9362d61b0f_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_93b08601-055f-412a-b5da-ba9362d61b0f_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_93b08601-055f-412a-b5da-ba9362d61b0f_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.c73b5106-c8dd-493c-a69d-c9a4048d69df">
+      <gml:identifier codeSpace="urn:uuid:">c73b5106-c8dd-493c-a69d-c9a4048d69df</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_8568b6e0-a9e8-45e3-99b6-930ae4d13c2e_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_8568b6e0-a9e8-45e3-99b6-930ae4d13c2e_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_8568b6e0-a9e8-45e3-99b6-930ae4d13c2e_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_8568b6e0-a9e8-45e3-99b6-930ae4d13c2e_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_8568b6e0-a9e8-45e3-99b6-930ae4d13c2e_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.15dcdf69-a7f9-4550-b0c0-1ec2e83ad062">
+      <gml:identifier codeSpace="urn:uuid:">15dcdf69-a7f9-4550-b0c0-1ec2e83ad062</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_6908d120-dcaf-4d7c-97cf-ceabd6cad7d3_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_6908d120-dcaf-4d7c-97cf-ceabd6cad7d3_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_6908d120-dcaf-4d7c-97cf-ceabd6cad7d3_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_6908d120-dcaf-4d7c-97cf-ceabd6cad7d3_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_6908d120-dcaf-4d7c-97cf-ceabd6cad7d3_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.d3254af8-7817-44a7-bb35-c5ea5c09ec0c">
+      <gml:identifier codeSpace="urn:uuid:">d3254af8-7817-44a7-bb35-c5ea5c09ec0c</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_ad84a2cf-1942-4248-b4ab-ad85f0c59294_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_ad84a2cf-1942-4248-b4ab-ad85f0c59294_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_ad84a2cf-1942-4248-b4ab-ad85f0c59294_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_ad84a2cf-1942-4248-b4ab-ad85f0c59294_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_ad84a2cf-1942-4248-b4ab-ad85f0c59294_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.1fd8a5e4-38ed-4006-9312-9d58c5bc5f34">
+      <gml:identifier codeSpace="urn:uuid:">1fd8a5e4-38ed-4006-9312-9d58c5bc5f34</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_585e43bd-28a8-4f55-a972-44904127300d_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_585e43bd-28a8-4f55-a972-44904127300d_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_585e43bd-28a8-4f55-a972-44904127300d_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_585e43bd-28a8-4f55-a972-44904127300d_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_585e43bd-28a8-4f55-a972-44904127300d_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <!-- Closed TaxiwayElements of TWY C -->
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.49db9d4f-387c-4d82-a144-76398636d7de">
+      <gml:identifier codeSpace="urn:uuid:">49db9d4f-387c-4d82-a144-76398636d7de</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_7c1ea192-2ea8-4271-90e4-db1ea0b235a7_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_7c1ea192-2ea8-4271-90e4-db1ea0b235a7_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_7c1ea192-2ea8-4271-90e4-db1ea0b235a7_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_7c1ea192-2ea8-4271-90e4-db1ea0b235a7_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_7c1ea192-2ea8-4271-90e4-db1ea0b235a7_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.e3a9d7ff-64de-4910-8c74-f8379982baf7">
+      <gml:identifier codeSpace="urn:uuid:">e3a9d7ff-64de-4910-8c74-f8379982baf7</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_478bde80-5f8d-4695-8958-460e92f1ec02_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_478bde80-5f8d-4695-8958-460e92f1ec02_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_478bde80-5f8d-4695-8958-460e92f1ec02_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_478bde80-5f8d-4695-8958-460e92f1ec02_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_478bde80-5f8d-4695-8958-460e92f1ec02_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.ec213a21-1f59-48d2-b3d7-65c4bfde0f23">
+      <gml:identifier codeSpace="urn:uuid:">ec213a21-1f59-48d2-b3d7-65c4bfde0f23</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_ef3e1495-620f-4e90-a8bc-6c4249badf23_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_ef3e1495-620f-4e90-a8bc-6c4249badf23_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_ef3e1495-620f-4e90-a8bc-6c4249badf23_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_ef3e1495-620f-4e90-a8bc-6c4249badf23_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_ef3e1495-620f-4e90-a8bc-6c4249badf23_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.439b04d6-be75-4c8c-ab83-3aa155bcc672">
+      <gml:identifier codeSpace="urn:uuid:">439b04d6-be75-4c8c-ab83-3aa155bcc672</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_7e5f4a8b-0dc9-4bc1-bb57-1500f0f2ea24_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_7e5f4a8b-0dc9-4bc1-bb57-1500f0f2ea24_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_7e5f4a8b-0dc9-4bc1-bb57-1500f0f2ea24_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_7e5f4a8b-0dc9-4bc1-bb57-1500f0f2ea24_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_7e5f4a8b-0dc9-4bc1-bb57-1500f0f2ea24_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.bbf219fe-1cad-4a2f-bac5-f686ac9ccd16">
+      <gml:identifier codeSpace="urn:uuid:">bbf219fe-1cad-4a2f-bac5-f686ac9ccd16</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_34091a33-45ec-44ad-882e-ba050cb6e5f6_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_34091a33-45ec-44ad-882e-ba050cb6e5f6_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_34091a33-45ec-44ad-882e-ba050cb6e5f6_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_34091a33-45ec-44ad-882e-ba050cb6e5f6_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_34091a33-45ec-44ad-882e-ba050cb6e5f6_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.3559f234-91a1-47bb-92ba-1afd40df58bd">
+      <gml:identifier codeSpace="urn:uuid:">3559f234-91a1-47bb-92ba-1afd40df58bd</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_42287cfc-6375-4412-9db7-1c9ba6c83166_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_42287cfc-6375-4412-9db7-1c9ba6c83166_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_42287cfc-6375-4412-9db7-1c9ba6c83166_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_42287cfc-6375-4412-9db7-1c9ba6c83166_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_42287cfc-6375-4412-9db7-1c9ba6c83166_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <!-- Closed TaxiwayElements of TWY G -->
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.07db2fd9-e7d8-4909-936a-fd22517cc39a">
+      <gml:identifier codeSpace="urn:uuid:">07db2fd9-e7d8-4909-936a-fd22517cc39a</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_01a149db-fa81-4445-bad5-02fb46785851_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_01a149db-fa81-4445-bad5-02fb46785851_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_01a149db-fa81-4445-bad5-02fb46785851_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_01a149db-fa81-4445-bad5-02fb46785851_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_01a149db-fa81-4445-bad5-02fb46785851_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.4ed2651b-7b48-421e-964b-39dbf71131d8">
+      <gml:identifier codeSpace="urn:uuid:">4ed2651b-7b48-421e-964b-39dbf71131d8</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_2c7a5150-cd4d-48af-b1d7-d16d23d25fb6_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_2c7a5150-cd4d-48af-b1d7-d16d23d25fb6_1_0_T_1">
+              <gml:beginPosition>2026-11-08T04:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-10T05:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element generated by the closure -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_2c7a5150-cd4d-48af-b1d7-d16d23d25fb6_1_0_T_2">
+              <aixm:timeInterval>
+                <aixm:Timesheet gml:id="id_2c7a5150-cd4d-48af-b1d7-d16d23d25fb6_1_0_T_3">
+                  <aixm:timeReference>UTC</aixm:timeReference>
+                  <aixm:day>ANY</aixm:day>
+                  <aixm:startTime>04:00</aixm:startTime>
+                  <aixm:endTime>05:00</aixm:endTime>
+                  <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                  <aixm:excluded>NO</aixm:excluded>
+                </aixm:Timesheet>
+              </aixm:timeInterval>
+              <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_2c7a5150-cd4d-48af-b1d7-d16d23d25fb6_1_0_T_4">
+              <event:theEvent xlink:href="urn:uuid:35d58650-7957-4f8c-af8e-84ab13678d54" xlink:title="EADB A C G DNOTAM TWY.CLS" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

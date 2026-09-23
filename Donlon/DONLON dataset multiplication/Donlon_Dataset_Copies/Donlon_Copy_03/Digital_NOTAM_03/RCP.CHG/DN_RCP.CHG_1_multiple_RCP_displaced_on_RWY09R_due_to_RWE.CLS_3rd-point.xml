@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  E NOTAMN
+  Q) EAAD/QMDCH/IV/NBO/A/000/999/5446N03100W005
+  A) EADC B) 2611100600 C) 2611132000
+  E) RWY 09R centreline point START-09R (physical start of RWY 09R) displaced 300m, position 544536.13N 0310048.90W. Elevation 16m.
+  TORA 2400M 
+  TODA 2700M 
+  ASDA 2400M 
+  Due to runway portion closure (see NOTAM Exxxx/26).
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_RCP.CHG_1_multiple_RCP_displaced_on_RWY09R_due_to_RWE.CLS_3rd-point-03">
+  
+  <!-- START_09R - START on RWY 09R (the physical start or RWY 09R) -->
+  <message:hasMember>
+    <event:Event gml:id="uuid.5741d4fa-0d8a-4257-bc0d-9c9ec14ea437">
+      <gml:identifier codeSpace="urn:uuid:">5741d4fa-0d8a-4257-bc0d-9c9ec14ea437</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_c5a4b2bc-d908-473a-a263-fe4de7ad8961_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_c5a4b2bc-d908-473a-a263-fe4de7ad8961_1_0_B_1">
+              <gml:beginPosition>2026-11-10T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-13T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_c5a4b2bc-d908-473a-a263-fe4de7ad8961_1_0_B_2">
+              <gml:beginPosition>2026-11-10T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-13T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADC 09R/27L 09R</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>RCP.CHG</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:2a7ecfb0-3f05-4132-9ae7-a38d4afbaf24" xlink:title="EADC DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xlink:href="urn:uuid:bd56b02c-8c2c-4eb4-9fd8-af33704c70e9" xlink:title="EADC 09R/27L 09R RWE.CLS" xlink:type="simple"/> <!-- the RWE.CLS event which caused the displacement -->
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_c5a4b2bc-d908-473a-a263-fe4de7ad8961_1_0_B_3">
+              <event:series>E</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMDCH</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL>000</event:minimumFL>
+              <event:maximumFL>999</event:maximumFL>
+              <event:coordinates>5446N03100W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADC</event:location>
+              <event:effectiveStart>2611100600</event:effectiveStart>
+              <event:effectiveEnd>2611132000</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">RWY 09R centreline point START-09R (physical start of RWY 09R) displaced 300m, position 544536.13N 0310048.90W. Elevation 16m.
+TORA 2400M 
+TODA 2700M 
+ASDA 2400M 
+Due to runway portion closure (see NOTAM Exxxx/26).</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.e4e61a51-4a82-4a50-bd45-9c03b73c8fea">
+      <gml:identifier codeSpace="urn:uuid:">e4e61a51-4a82-4a50-bd45-9c03b73c8fea</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_1">
+              <gml:beginPosition>2026-11-10T06:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-13T20:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_2" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>54.7600348541 -31.013584686</gml:pos>
+              <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">16</aixm:elevation>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <!-- all BASELINE declared distance values are changed during the event -->
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_3">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_4">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_5">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_6">
+                  <aixm:distance uom="M">2700</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_7">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_8">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <!-- Displacement Distance -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_9">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>DESCRIPTION</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_10">
+                  <aixm:note>300m</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_11">
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_12">
+                  <aixm:note>Due to runway portion closure (see NOTAM Exxxx/26)</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- Centreline Point Location Note -->
+          <aixm:annotation>
+            <aixm:Note gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_13">
+              <aixm:propertyName>location</aixm:propertyName>
+              <aixm:purpose>REMARK</aixm:purpose>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_14">
+                  <aixm:note>physical start of RWY 09R</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayCentrelinePointExtension gml:id="id_442122c4-55a4-46ec-b01a-597ee3b4014b_1_0_T_15">
+              <event:theEvent xlink:href="urn:uuid:5741d4fa-0d8a-4257-bc0d-9c9ec14ea437" xlink:title="EADC 09R/27L 09R DNOTAM RCP.CHG" xlink:type="simple"/>
+            </event:RunwayCentrelinePointExtension>
+          </aixm:extension>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

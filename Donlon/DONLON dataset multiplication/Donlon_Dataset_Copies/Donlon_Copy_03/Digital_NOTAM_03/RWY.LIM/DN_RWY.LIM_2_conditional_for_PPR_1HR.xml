@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  A NOTAMN
+  Q) EAAD/QFPAP/IV/BO/A/000/999/5446N03100W005
+  A) EADC B) 2611230000 C) 2611232359
+  E) FATO 13/31 available for not scheduled hel all operations PPR 1 HR request to be sent to AD administration.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_RWY.LIM_2_conditional_for_PPR_1HR-03">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.f0db1b25-b8da-40aa-a542-60e68e93a623">
+      <gml:identifier codeSpace="urn:uuid:">f0db1b25-b8da-40aa-a542-60e68e93a623</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_c613eeff-c0d0-4a3b-9a46-046b0ec256ed_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_c613eeff-c0d0-4a3b-9a46-046b0ec256ed_1_0_B_1">
+              <gml:beginPosition>2026-11-23T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-24T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_c613eeff-c0d0-4a3b-9a46-046b0ec256ed_1_0_B_2">
+              <gml:beginPosition>2026-11-23T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-24T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADC 13/31</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>RWY.LIM</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:2a7ecfb0-3f05-4132-9ae7-a38d4afbaf24" xlink:title="EADC DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_c613eeff-c0d0-4a3b-9a46-046b0ec256ed_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QFPAP</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>BO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5446N03100W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADC</event:location>
+              <event:effectiveStart>2611230000</event:effectiveStart>
+              <event:effectiveEnd>2611232359</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">FATO 13/31 available for not scheduled hel all operations PPR 1 HR request to be sent to AD administration.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- FATO 13 -->
+  <message:hasMember>
+    <aixm:RunwayDirection gml:id="uuid.b05341d6-f5c2-40c7-b89f-533b5250785c">
+      <gml:identifier codeSpace="urn:uuid:">b05341d6-f5c2-40c7-b89f-533b5250785c</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayDirectionTimeSlice gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_1">
+              <gml:beginPosition>2026-11-23T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-24T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline status of the fato direction -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true" nilReason="other:H24"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_5">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_6">
+                          <aixm:type>TILT_WING</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:operation>ALL</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the fato direction during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_7">
+              <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_8">
+                  <aixm:type>CONDITIONAL</aixm:type>
+                  <aixm:priorPermission uom="HR">1</aixm:priorPermission> <!-- Prior Permission -->
+                  <!-- The usage limitation -->
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_9">
+                      <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_10">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight>
+                        <aixm:FlightCharacteristic gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_11">
+                          <aixm:purpose>NON_SCHEDULED</aixm:purpose>
+                        </aixm:FlightCharacteristic>
+                      </aixm:flight>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <!-- Prior Permission Details -->
+                  <aixm:annotation>
+                    <aixm:Note gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_12">
+                      <aixm:propertyName>priorPermission</aixm:propertyName>
+                      <aixm:purpose>REMARK</aixm:purpose>
+                      <aixm:translatedNote>
+                        <aixm:LinguisticNote gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_13">
+                          <aixm:note>request to be sent to AD administration</aixm:note>
+                        </aixm:LinguisticNote>
+                      </aixm:translatedNote>
+                    </aixm:Note>
+                  </aixm:annotation>
+                  <aixm:operation>ALL</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayDirectionExtension gml:id="id_a5c6ad91-de8b-4c36-90db-74c796d74e23_1_0_T_14">
+              <event:theEvent xlink:href="urn:uuid:f0db1b25-b8da-40aa-a542-60e68e93a623" xlink:title="EADC 13/31 DNOTAM RWY.LIM" xlink:type="simple"/>
+            </event:RunwayDirectionExtension>
+          </aixm:extension>
+        </aixm:RunwayDirectionTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayDirection>
+  </message:hasMember>
+  
+  <!-- FATO 31 -->
+  <message:hasMember>
+    <aixm:RunwayDirection gml:id="uuid.4c1d7f5b-9fd6-432d-ab4d-2c18d3eaf0bc">
+      <gml:identifier codeSpace="urn:uuid:">4c1d7f5b-9fd6-432d-ab4d-2c18d3eaf0bc</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayDirectionTimeSlice gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_1">
+              <gml:beginPosition>2026-11-23T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-24T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline status of the runway direction -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_2">
+              <aixm:timeInterval xsi:nil="true" nilReason="other:H24"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_5">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_6">
+                          <aixm:type>TILT_WING</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:operation>ALL</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the fato direction during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_7">
+              <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_8">
+                  <aixm:type>CONDITIONAL</aixm:type>
+                  <aixm:priorPermission uom="HR">1</aixm:priorPermission> <!-- Prior Permission -->
+                  <!-- The usage limitation -->
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_9">
+                      <aixm:logicalOperator>AND</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_10">
+                          <aixm:type>HELICOPTER</aixm:type>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight>
+                        <aixm:FlightCharacteristic gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_11">
+                          <aixm:purpose>NON_SCHEDULED</aixm:purpose>
+                        </aixm:FlightCharacteristic>
+                      </aixm:flight>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <!-- Prior Permission Details -->
+                  <aixm:annotation>
+                    <aixm:Note gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_12">
+                      <aixm:propertyName>priorPermission</aixm:propertyName>
+                      <aixm:purpose>REMARK</aixm:purpose>
+                      <aixm:translatedNote>
+                        <aixm:LinguisticNote gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_13">
+                          <aixm:note>request to be sent to AD administration</aixm:note>
+                        </aixm:LinguisticNote>
+                      </aixm:translatedNote>
+                    </aixm:Note>
+                  </aixm:annotation>
+                  <aixm:operation>ALL</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:RunwayDirectionExtension gml:id="id_a377b33f-f82c-4786-9db9-692a5605526d_1_0_T_14">
+              <event:theEvent xlink:href="urn:uuid:f0db1b25-b8da-40aa-a542-60e68e93a623" xlink:title="EADC 13/31 DNOTAM RWY.LIM" xlink:type="simple"/>
+            </event:RunwayDirectionExtension>
+          </aixm:extension>
+        </aixm:RunwayDirectionTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayDirection>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

@@ -5,7 +5,7 @@
 <!--
   C NOTAMC Cnnnn/yy
   Q) EAAD/QOBCE/IV/M/E/000/003/5527N03539W001
-  A) EAAD B) WIE
+  A) EAAD B) xxxxxxxxxx
   E) Permanent obstacle (antenna) cancelled.
 -->
 
@@ -28,8 +28,8 @@
         <event:EventTimeSlice gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B_1">
-              <gml:beginPosition></gml:beginPosition> <!-- take the value from Event Baseline 1.1 validTime.beginPosition -->
-              <gml:endPosition indeterminatePosition="now">2026-09-14T12:45:00Z</gml:endPosition> <!-- TimeSlice is terminated With Immediate Effect -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.0 validTime.beginPosition -->
+              <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -37,8 +37,8 @@
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B_2">
-              <gml:beginPosition></gml:beginPosition> <!-- take the value from Event Baseline 1.1 validTime.beginPosition -->
-              <gml:endPosition indeterminatePosition="now">2026-09-14T12:45:00Z</gml:endPosition> <!-- Event Lifetime is terminated With Immediate Effect -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.0 validTime.beginPosition -->
+              <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <event:name>ANTENNA</event:name>
@@ -57,9 +57,9 @@
           <event:notification>
             <event:NOTAM gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B_3">
               <event:series>C</event:series>
-              <event:number></event:number> <!-- insert the value from Event Baseline 1.1 notification/NOTAM/number -->
-              <event:year></event:year> <!-- insert the value from Event Baseline 1.1 notification/NOTAM/year -->
-              <event:issued></event:issued> <!-- insert the value from Event Baseline 1.1 notification/NOTAM/issued -->
+              <event:number></event:number> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/number -->
+              <event:year></event:year> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/year -->
+              <event:issued></event:issued> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/issued -->
               <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
@@ -72,9 +72,9 @@
               <event:coordinates>5527N03539W</event:coordinates>
               <event:radius uom="NM">001</event:radius>
               <event:location>EAAD</event:location>
-              <event:effectiveStart>2801100630</event:effectiveStart>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert the value from Event Baseline 1.0 notification/NOTAM/effectiveStart -->
               <event:estimatedEnd>NO</event:estimatedEnd>
-              <event:permanent>YES</event:permanent> <!-- permanent='YES' and no event:effectiveEnd -->
+              <event:permanent>YES</event:permanent>
               <event:text lang="ENG">Permanent antenna erected:
 552708.32N 0353825.70W
 elevation 75m.
@@ -88,8 +88,8 @@ Lighted.</event:text>
               <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
               <event:type>C</event:type>
               <event:referredSeries>C</event:referredSeries>
-              <event:referredNumber></event:referredNumber> <!-- insert the number of the initial NOTAM -->
-              <event:referredYear></event:referredYear> <!-- insert the year of the initial NOTAM -->
+              <event:referredNumber></event:referredNumber> <!-- Insert the number of the initial NOTAM -->
+              <event:referredYear></event:referredYear> <!-- Insert the year of the initial NOTAM -->
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QOBCN</event:selectionCode>
               <event:traffic>IV</event:traffic>
@@ -100,7 +100,7 @@ Lighted.</event:text>
               <event:coordinates>5703N03403W</event:coordinates>
               <event:radius uom="NM">001</event:radius>
               <event:location>EAAD</event:location>
-              <event:effectiveStart>2803030000</event:effectiveStart>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
               <event:text lang="ENG">Permanent obstacle (antenna) cancelled.</event:text>
             </event:NOTAM>
           </event:notification>

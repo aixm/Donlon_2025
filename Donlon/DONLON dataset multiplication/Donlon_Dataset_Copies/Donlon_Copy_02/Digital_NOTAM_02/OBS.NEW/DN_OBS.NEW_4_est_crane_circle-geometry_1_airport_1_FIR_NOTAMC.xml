@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Cancellation NOTAM - both the Event and the VerticalStructure are cancellled -->
+<!-- Cancellation NOTAM - both the Event and the VerticalStructure are cancelled -->
 
 <!--
   C NOTAMC Cnnnn/yy
   Q) EAAD/QOBCN/IV/M/AE/000/999/5445N03504W001
-  A) EADB B) 2802281245
+  A) EADB B) xxxxxxxxxx
   E) Temporary obstacle (crane) cancelled.
 -->
 
@@ -28,8 +28,8 @@
         <event:EventTimeSlice gml:id="id_6dc9e945-8d1d-490d-bf2f-66774106e56e_1_2_B">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_6dc9e945-8d1d-490d-bf2f-66774106e56e_1_2_B_1">
-              <gml:beginPosition></gml:beginPosition> <!-- take the value from Event Baseline 1.1 validTime.beginPosition -->
-              <gml:endPosition indeterminatePosition="now">2026-09-14T12:45:00Z</gml:endPosition> <!-- TimeSlice is terminated With Immediate Effect -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.0 validTime.beginPosition -->
+              <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -37,8 +37,8 @@
           <aixm:correctionNumber>2</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_6dc9e945-8d1d-490d-bf2f-66774106e56e_1_2_B_2">
-              <gml:beginPosition></gml:beginPosition> <!-- take the value from Event Baseline 1.1 validTime.beginPosition -->
-              <gml:endPosition indeterminatePosition="now">2026-09-14T12:45:00Z</gml:endPosition> <!-- Event Lifetime is terminated With Immediate Effect -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.0 validTime.beginPosition -->
+              <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <event:name>EADB CRANE OBST-EADB-TEMP-0009</event:name>
@@ -57,9 +57,9 @@
           <event:notification>
             <event:NOTAM gml:id="id_6dc9e945-8d1d-490d-bf2f-66774106e56e_1_2_B_3">
               <event:series>C</event:series>
-              <event:number></event:number> <!-- insert the value from Event Baseline 1.1 notification/NOTAM/number -->
-              <event:year></event:year> <!-- insert the value from Event Baseline 1.1 notification/NOTAM/year -->
-              <event:issued></event:issued> <!-- insert the value from Event Baseline 1.1 notification/NOTAM/issued -->
+              <event:number></event:number> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/number -->
+              <event:year></event:year> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/year -->
+              <event:issued></event:issued> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/issued -->
               <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
               <event:type>N</event:type>
               <event:affectedFIR>EAAD</event:affectedFIR>
@@ -72,8 +72,8 @@
               <event:coordinates>5445N03504W</event:coordinates>
               <event:radius uom="NM">001</event:radius>
               <event:location>EADB</event:location>
-              <event:effectiveStart></event:effectiveStart> <!-- take the value from Event Baseline 1.1 notification/NOTAM/effectiveStart -->
-              <event:effectiveEnd>2803011000</event:effectiveEnd>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert the value from Event Baseline 1.0 notification/NOTAM/effectiveStart -->
+              <event:effectiveEnd>2611011000</event:effectiveEnd>
               <event:estimatedEnd>YES</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
               <event:text lang="ENG">Temporary Mobile crane erected (ID: OBST-EADB-TEMP-0009):
@@ -89,8 +89,8 @@ Lighted. Marking color: yellow.</event:text>
               <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
               <event:type>C</event:type>
               <event:referredSeries>C</event:referredSeries>
-              <event:referredNumber></event:referredNumber> <!-- insert the number of the initial NOTAM -->
-              <event:referredYear></event:referredYear> <!-- insert the year of the initial NOTAM -->
+              <event:referredNumber></event:referredNumber> <!-- Insert the number of the initial NOTAM -->
+              <event:referredYear></event:referredYear> <!-- Insert the year of the initial NOTAM -->
               <event:affectedFIR>EAAD</event:affectedFIR>
               <event:selectionCode>QOBCN</event:selectionCode>
               <event:traffic>IV</event:traffic>
@@ -101,7 +101,7 @@ Lighted. Marking color: yellow.</event:text>
               <event:coordinates>5445N03504W</event:coordinates>
               <event:radius uom="NM">001</event:radius>
               <event:location>EADB</event:location>
-              <event:effectiveStart>WIE</event:effectiveStart>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
               <event:text lang="ENG">Temporary obstacle (crane) cancelled.</event:text>
             </event:NOTAM>
           </event:notification>
@@ -120,8 +120,8 @@ Lighted. Marking color: yellow.</event:text>
         <aixm:VerticalStructureTimeSlice gml:id="id_8e6c9142-e413-4107-b538-90b2c0ea74bd_1_1_B">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_8e6c9142-e413-4107-b538-90b2c0ea74bd_1_1_B_1">
-              <gml:beginPosition></gml:beginPosition> <!-- take the value from Event Baseline 1.1 validTime.beginPosition -->
-              <gml:endPosition indeterminatePosition="now">2026-09-14T12:45:00Z</gml:endPosition> <!-- TimeSlice is terminated With Immediate Effect -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.0 validTime.beginPosition -->
+              <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
             </gml:TimePeriod>
           </gml:validTime>
           <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -129,8 +129,8 @@ Lighted. Marking color: yellow.</event:text>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_8e6c9142-e413-4107-b538-90b2c0ea74bd_1_1_B_2">
-              <gml:beginPosition></gml:beginPosition> <!-- take the value from Event Baseline 1.1 validTime.beginPosition -->
-              <gml:endPosition indeterminatePosition="now">2026-09-14T12:45:00Z</gml:endPosition> <!-- Feature Lifetime is terminated With Immediate Effect -->
+              <gml:beginPosition></gml:beginPosition> <!-- take the value from Event Baseline 1.0 validTime.beginPosition -->
+              <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
             </gml:TimePeriod>
           </aixm:featureLifetime>
           <aixm:name>OBST-EADB-TEMP-0009</aixm:name> <!-- Obstacle Identification -->

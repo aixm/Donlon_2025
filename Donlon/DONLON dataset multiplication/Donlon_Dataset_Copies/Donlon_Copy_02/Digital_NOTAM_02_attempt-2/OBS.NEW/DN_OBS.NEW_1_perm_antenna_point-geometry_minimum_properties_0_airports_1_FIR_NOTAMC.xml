@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Cancellation NOTAM - Only the Event is cancelled -->
+
+<!--
+  Cnnnn/yy NOTAMC Cnnnn/yy
+  Q) EAAD/QOBCE/IV/M/E/000/003/5527N03539W001
+  A) EAAD B) xxxxxxxxxx
+  E) Permanent obstacle (antenna) cancelled.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_OBS.NEW_1_antenna_point-geometry_minimum_properties_0_airports_1_FIR_NOTAMC-02">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.6f497a33-e36e-45a5-8377-897baca61bac">
+      <gml:identifier codeSpace="urn:uuid:">6f497a33-e36e-45a5-8377-897baca61bac</gml:identifier>
+      <!-- Cancellation TimeSlice -->
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B_1">
+              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.0 validTime.beginPosition -->
+              <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>2</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B_2">
+              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.0 validTime.beginPosition -->
+              <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>ANTENNA</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>OBS.NEW</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xsi:nil="true"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <!-- Initial NOTAM -->
+          <event:notification>
+            <event:NOTAM gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B_3">
+              <event:series>C</event:series>
+              <event:number></event:number> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/number -->
+              <event:year></event:year> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/year -->
+              <event:issued></event:issued> <!-- Insert the value from Event Baseline 1.1 notification/NOTAM/issued -->
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOBCE</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>E</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">003</event:maximumFL>
+              <event:coordinates>5527N03539W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EAAD</event:location>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert the value from Event Baseline 1.0 notification/NOTAM/effectiveStart -->
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>YES</event:permanent>
+              <event:text lang="ENG">Permanent antenna erected:
+552708.32N 0353825.70W
+elevation 75m.
+Lighted.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <!-- Cancellation NOTAM -->
+          <event:notification>
+            <event:NOTAM gml:id="id_93ead739-9345-4d95-98d4-d1c0355bbdcf_1_2_B_4">
+              <event:series>C</event:series>
+              <event:number></event:number> <!-- Specify number -->
+              <event:year></event:year> <!-- Specify year -->
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>C</event:type>
+              <event:referredSeries>C</event:referredSeries>
+              <event:referredNumber></event:referredNumber> <!-- Insert the number of the initial NOTAM -->
+              <event:referredYear></event:referredYear> <!-- Insert the year of the initial NOTAM -->
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOBCN</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>E</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">003</event:maximumFL>
+              <event:coordinates>5703N03403W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EAAD</event:location>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
+              <event:text lang="ENG">Permanent obstacle (antenna) cancelled.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>

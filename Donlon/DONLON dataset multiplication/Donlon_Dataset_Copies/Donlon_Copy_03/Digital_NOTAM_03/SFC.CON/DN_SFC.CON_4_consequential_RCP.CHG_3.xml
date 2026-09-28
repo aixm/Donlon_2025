@@ -29,7 +29,7 @@
         <event:EventTimeSlice gml:id="id_5da1fb5f-9f97-4995-8fe8-956b31395d40_1_0_B">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_5da1fb5f-9f97-4995-8fe8-956b31395d40_1_0_B_1">
-              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from SNOWTAM Event BASELINE 1.0 validTime.beginPosition -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert current time (UTC) + 10min, format yyyy-mm-ddThh:mm:ssZ -->
               <gml:endPosition></gml:endPosition> <!-- Insert the value from SNOWTAM Event BASELINE 1.0 validTime.endPosition -->
             </gml:TimePeriod>
           </gml:validTime>
@@ -38,7 +38,7 @@
           <aixm:correctionNumber>0</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_5da1fb5f-9f97-4995-8fe8-956b31395d40_1_0_B_2">
-              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from SNOWTAM Event BASELINE 1.0 validTime.beginPosition -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert current time (UTC) + 10min, format yyyy-mm-ddThh:mm:ssZ -->
               <gml:endPosition></gml:endPosition> <!-- Insert the value from SNOWTAM Event BASELINE 1.0 validTime.endPosition -->
             </gml:TimePeriod>
           </aixm:featureLifetime>
@@ -52,7 +52,7 @@
           <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
           <event:concernedAirportHeliport xlink:href="urn:uuid:2a7ecfb0-3f05-4132-9ae7-a38d4afbaf24" xlink:title="EADC DONLON/INTL." xlink:type="simple"/>
           <event:parentEvent xsi:nil="true"/>
-          <event:causeEvent xlink:href="urn:uuid:0dcc77a0-1511-4d3f-a8f3-d2daa3853239" xlink:title="EADC 09R/27L 09L/27R DNOTAM SFC.CON" xlink:type="simple"/> <!-- the SFC.CON event which caused the displacement -->
+          <event:causeEvent xsi:nil="true"/>
           <event:container xsi:nil="true"/>
           <event:notification>
             <event:NOTAM gml:id="id_5da1fb5f-9f97-4995-8fe8-956b31395d40_1_0_B_3">
@@ -94,7 +94,7 @@ Due to SNOWTAM in effect (see EADC SNOWTAM nnnn).</event:text>
         <aixm:RunwayCentrelinePointTimeSlice gml:id="id_3ece46ec-65d3-4318-a286-a0a8747d07b2_1_0_T">
           <gml:validTime>
             <gml:TimePeriod gml:id="id_3ece46ec-65d3-4318-a286-a0a8747d07b2_1_0_T_1">
-              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from SNOWTAM Event BASELINE 1.0 validTime.beginPosition -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert current time (UTC) + 10min, format yyyy-mm-ddThh:mm:ssZ -->
               <gml:endPosition></gml:endPosition> <!-- Insert the value from SNOWTAM Event BASELINE 1.0 validTime.endPosition -->
             </gml:TimePeriod>
           </gml:validTime>
@@ -108,7 +108,7 @@ Due to SNOWTAM in effect (see EADC SNOWTAM nnnn).</event:text>
               <aixm:elevation uom="M">29</aixm:elevation>
             </aixm:ElevatedPoint>
           </aixm:location>
-          <!-- all BASELINE declared distance values are changed during the event -->
+          <!-- All BASELINE declared distance values are changed during the event -->
           <aixm:associatedDeclaredDistance>
             <aixm:RunwayDeclaredDistance gml:id="id_3ece46ec-65d3-4318-a286-a0a8747d07b2_1_0_T_3">
               <aixm:type>TORA</aixm:type>

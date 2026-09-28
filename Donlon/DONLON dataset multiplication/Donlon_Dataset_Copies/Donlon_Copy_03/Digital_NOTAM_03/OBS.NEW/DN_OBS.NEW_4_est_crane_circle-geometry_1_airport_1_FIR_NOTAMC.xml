@@ -3,9 +3,9 @@
 <!-- Cancellation NOTAM - both the Event and the VerticalStructure are cancelled -->
 
 <!--
-  C NOTAMC Cnnnn/yy
+  Cnnnn/yy NOTAMC Cnnnn/yy
   Q) EAAD/QOBCN/IV/M/AE/000/999/5445N03100W001
-  A) EADC B) WIE
+  A) EADC B) xxxxxxxxxx
   E) Temporary obstacle (crane) cancelled.
 -->
 
@@ -53,6 +53,31 @@
           <event:parentEvent xsi:nil="true"/>
           <event:causeEvent xsi:nil="true"/>
           <event:container xsi:nil="true"/>
+          <!-- Cancellation NOTAM -->
+          <event:notification>
+            <event:NOTAM gml:id="id_563df1f5-015e-4db3-8ebd-2ce3c77e8664_1_2_B_4">
+              <event:series>C</event:series>
+              <event:number></event:number> <!-- Specify number -->
+              <event:year></event:year> <!-- Specify year -->
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>C</event:type>
+              <event:referredSeries>C</event:referredSeries>
+              <event:referredNumber></event:referredNumber> <!-- Insert the number of the initial NOTAM -->
+              <event:referredYear></event:referredYear> <!-- Insert the year of the initial NOTAM -->
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOBCN</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>AE</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5445N03100W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EADC</event:location>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
+              <event:text lang="ENG">Temporary obstacle (crane) cancelled.</event:text>
+            </event:NOTAM>
+          </event:notification>
           <!-- Initial NOTAM -->
           <event:notification>
             <event:NOTAM gml:id="id_563df1f5-015e-4db3-8ebd-2ce3c77e8664_1_2_B_3">
@@ -82,29 +107,6 @@ elevation 65m (height 35m).
 Lighted. Marking color: yellow.</event:text>
             </event:NOTAM>
           </event:notification>
-          <!-- Cancellation NOTAM -->
-          <event:notification>
-            <event:NOTAM gml:id="id_563df1f5-015e-4db3-8ebd-2ce3c77e8664_1_2_B_4">
-              <event:series>C</event:series>
-              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
-              <event:type>C</event:type>
-              <event:referredSeries>C</event:referredSeries>
-              <event:referredNumber></event:referredNumber> <!-- Insert the number of the initial NOTAM -->
-              <event:referredYear></event:referredYear> <!-- Insert the year of the initial NOTAM -->
-              <event:affectedFIR>EAAD</event:affectedFIR>
-              <event:selectionCode>QOBCN</event:selectionCode>
-              <event:traffic>IV</event:traffic>
-              <event:purpose>M</event:purpose>
-              <event:scope>AE</event:scope>
-              <event:minimumFL uom="FL">000</event:minimumFL>
-              <event:maximumFL uom="FL">999</event:maximumFL>
-              <event:coordinates>5445N03100W</event:coordinates>
-              <event:radius uom="NM">001</event:radius>
-              <event:location>EADC</event:location>
-              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
-              <event:text lang="ENG">Temporary obstacle (crane) cancelled.</event:text>
-            </event:NOTAM>
-          </event:notification>
           <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
           <event:annotation xsi:nil="true"/>
         </event:EventTimeSlice>
@@ -129,7 +131,7 @@ Lighted. Marking color: yellow.</event:text>
           <aixm:correctionNumber>1</aixm:correctionNumber>
           <aixm:featureLifetime>
             <gml:TimePeriod gml:id="id_ff410215-52bc-4f1b-970a-329fbf282111_1_1_B_2">
-              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.1 validTime.beginPosition -->
+              <gml:beginPosition></gml:beginPosition> <!-- Insert the value from Event Baseline 1.0 validTime.beginPosition -->
               <gml:endPosition></gml:endPosition> <!-- Insert current time (UTC), format yyyy-mm-ddThh:mm:ssZ -->
             </gml:TimePeriod>
           </aixm:featureLifetime>

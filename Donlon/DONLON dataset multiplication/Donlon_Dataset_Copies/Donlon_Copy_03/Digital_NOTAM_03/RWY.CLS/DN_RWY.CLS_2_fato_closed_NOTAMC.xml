@@ -3,10 +3,10 @@
 <!-- Cancellation NOTAM -->
 
 <!-- 
-  C NOTAMC Cnnnn/yy
+  Cnnnn/yy NOTAMC Cnnnn/yy
   Q) EAAD/QFHAK/IV/NBO/A/000/999/5441N03106W005
   A) EAHC B) xxxxxxxxxx
-  E) FATO 03 resumed normal operations.
+  E) FATO 03 resumed normal operation.
 -->
 
 <message:AIXMBasicMessage 
@@ -52,6 +52,33 @@
           <event:parentEvent xsi:nil="true"/>
           <event:causeEvent xsi:nil="true"/>
           <event:container xsi:nil="true"/>
+          <!-- Cancellation NOTAM -->
+          <event:notification>
+            <event:NOTAM gml:id="id_b265d9bc-2dda-49cd-9fe4-255fc6b13017_2_2_B_4">
+              <event:series>C</event:series>
+              <event:number></event:number> <!-- Specify number -->
+              <event:year></event:year> <!-- Specify year -->
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>C</event:type>
+              <event:referredSeries>C</event:referredSeries>
+              <event:referredNumber></event:referredNumber> <!-- Insert the number of the replacement NOTAM -->
+              <event:referredYear></event:referredYear> <!-- Insert the year of the replacement NOTAM -->
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QFHLC</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>NBO</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5441N03106W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EAHC</event:location>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">FATO 03 resumed normal operation.</event:text>
+            </event:NOTAM>
+          </event:notification>
           <!-- Replacement NOTAM -->
           <event:notification>
             <event:NOTAM gml:id="id_b265d9bc-2dda-49cd-9fe4-255fc6b13017_2_2_B_3">
@@ -79,31 +106,6 @@
               <event:estimatedEnd>NO</event:estimatedEnd>
               <event:permanent>NO</event:permanent>
               <event:text lang="ENG">FATO 03 closed.</event:text>
-            </event:NOTAM>
-          </event:notification>
-          <!-- Cancellation NOTAM -->
-          <event:notification>
-            <event:NOTAM gml:id="id_b265d9bc-2dda-49cd-9fe4-255fc6b13017_2_2_B_4">
-              <event:series>C</event:series>
-              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
-              <event:type>C</event:type>
-              <event:referredSeries>C</event:referredSeries>
-              <event:referredNumber></event:referredNumber> <!-- Insert the number of the replacement NOTAM -->
-              <event:referredYear></event:referredYear> <!-- Insert the year of the replacement NOTAM -->
-              <event:affectedFIR>EAAD</event:affectedFIR>
-              <event:selectionCode>QFHLC</event:selectionCode>
-              <event:traffic>IV</event:traffic>
-              <event:purpose>NBO</event:purpose>
-              <event:scope>A</event:scope>
-              <event:minimumFL uom="FL">000</event:minimumFL>
-              <event:maximumFL uom="FL">999</event:maximumFL>
-              <event:coordinates>5441N03106W</event:coordinates>
-              <event:radius uom="NM">005</event:radius>
-              <event:location>EAHC</event:location>
-              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
-              <event:estimatedEnd>NO</event:estimatedEnd>
-              <event:permanent>NO</event:permanent>
-              <event:text lang="ENG">FATO 03 resumed normal operations.</event:text>
             </event:NOTAM>
           </event:notification>
           <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>

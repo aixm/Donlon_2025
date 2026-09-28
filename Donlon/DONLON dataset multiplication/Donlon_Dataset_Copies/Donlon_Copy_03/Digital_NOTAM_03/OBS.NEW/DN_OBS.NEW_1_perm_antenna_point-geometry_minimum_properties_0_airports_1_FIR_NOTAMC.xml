@@ -3,7 +3,7 @@
 <!-- Cancellation NOTAM - Only the Event is cancelled -->
 
 <!--
-  C NOTAMC Cnnnn/yy
+  Cnnnn/yy NOTAMC Cnnnn/yy
   Q) EAAD/QOBCE/IV/M/E/000/003/5527N03135W001
   A) EAAD B) xxxxxxxxxx
   E) Permanent obstacle (antenna) cancelled.
@@ -53,6 +53,31 @@
           <event:parentEvent xsi:nil="true"/>
           <event:causeEvent xsi:nil="true"/>
           <event:container xsi:nil="true"/>
+          <!-- Cancellation NOTAM -->
+          <event:notification>
+            <event:NOTAM gml:id="id_73b4ab90-9613-4d1a-bb37-0b6331282da9_1_2_B_4">
+              <event:series>C</event:series>
+              <event:number></event:number> <!-- Specify number -->
+              <event:year></event:year> <!-- Specify year -->
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>C</event:type>
+              <event:referredSeries>C</event:referredSeries>
+              <event:referredNumber></event:referredNumber> <!-- Insert the number of the initial NOTAM -->
+              <event:referredYear></event:referredYear> <!-- Insert the year of the initial NOTAM -->
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QOBCN</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>E</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">003</event:maximumFL>
+              <event:coordinates>5703N03000W</event:coordinates>
+              <event:radius uom="NM">001</event:radius>
+              <event:location>EAAD</event:location>
+              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
+              <event:text lang="ENG">Permanent obstacle (antenna) cancelled.</event:text>
+            </event:NOTAM>
+          </event:notification>
           <!-- Initial NOTAM -->
           <event:notification>
             <event:NOTAM gml:id="id_73b4ab90-9613-4d1a-bb37-0b6331282da9_1_2_B_3">
@@ -74,34 +99,11 @@
               <event:location>EAAD</event:location>
               <event:effectiveStart></event:effectiveStart> <!-- Insert the value from Event Baseline 1.0 notification/NOTAM/effectiveStart -->
               <event:estimatedEnd>NO</event:estimatedEnd>
-              <event:permanent>YES</event:permanent> <!-- permanent='YES' and no event:effectiveEnd -->
+              <event:permanent>YES</event:permanent>
               <event:text lang="ENG">Permanent antenna erected:
 552708.32N 0313450.10W
 elevation 75m.
 Lighted.</event:text>
-            </event:NOTAM>
-          </event:notification>
-          <!-- Cancellation NOTAM -->
-          <event:notification>
-            <event:NOTAM gml:id="id_73b4ab90-9613-4d1a-bb37-0b6331282da9_1_2_B_4">
-              <event:series>C</event:series>
-              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
-              <event:type>C</event:type>
-              <event:referredSeries>C</event:referredSeries>
-              <event:referredNumber></event:referredNumber> <!-- Insert the number of the initial NOTAM -->
-              <event:referredYear></event:referredYear> <!-- Insert the year of the initial NOTAM -->
-              <event:affectedFIR>EAAD</event:affectedFIR>
-              <event:selectionCode>QOBCN</event:selectionCode>
-              <event:traffic>IV</event:traffic>
-              <event:purpose>M</event:purpose>
-              <event:scope>E</event:scope>
-              <event:minimumFL uom="FL">000</event:minimumFL>
-              <event:maximumFL uom="FL">003</event:maximumFL>
-              <event:coordinates>5703N03000W</event:coordinates>
-              <event:radius uom="NM">001</event:radius>
-              <event:location>EAAD</event:location>
-              <event:effectiveStart></event:effectiveStart> <!-- Insert current time (UTC), format yymmddhhmm -->
-              <event:text lang="ENG">Permanent obstacle (antenna) cancelled.</event:text>
             </event:NOTAM>
           </event:notification>
           <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>

@@ -1,0 +1,33 @@
+!!! Before uploading any file:
+- set all Runway.overallContaminant.observationTime a few minutes in the past (if there are multiple runways, set the observationTimes with a few minutes difference between them)
+- set all validTime.beginPosition and featureLifetime.beginPosition to the latest Runway.overallContaminant.observationTime
+- set all validTime.endPosition and featureLifetime.endPosition to validTime.beginPosition + 8h
+
+
+
+When uploading the files for SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_with_correction_update test case, please follow these guidelines:
+
+-> upload order is:
+DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM.xml
+then DN_SFC.CON_2_both_runways_items_A_B_C_D_E_F_G_SNOWTAM-COR.xml
+
+-> before uploading COR.xml files some modifications need to be made in the files for validTime, featureLifetime and in the notification/SNOWTAM objects (see the comments in the file).
+
+
+
+When uploading the files for SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_with_new_SNOWTAM_cancelling_existing_one test case, please follow these guidelines:
+
+-> upload order is:
+DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_initial_SNOWTAM.xml
+then DN_SFC.CON_3_both_runways_items_A_B_C_D_E_F_G_M_O_N_P_R_new_SNOWTAM_cancelling_existing_one.xml
+
+-> before uploading new_SNOWTAM_cancelling_existing_one.xml some modifications need to be made in the files for validTime, featureLifetime and in the notification/SNOWTAM objects (see the comments in the file)
+
+
+
+When uploading the files for SFC.CON_4_both_runways_items_A_B_C_D_E_F_G_H_I_J_K_L_with_consequential_RCP.CHG_and_RDD.CHG test case, please follow these guidelines:
+
+-> upload order is:
+DN_SFC.CON_4_items_A_B_C_D_E_F_G_H_I_J_K_L.xml
+then DN_SFC.CON_4_consequential_RCP.CHG.xml and DN_SFC.CON_4_consequential_RDD.CHG.xml
+

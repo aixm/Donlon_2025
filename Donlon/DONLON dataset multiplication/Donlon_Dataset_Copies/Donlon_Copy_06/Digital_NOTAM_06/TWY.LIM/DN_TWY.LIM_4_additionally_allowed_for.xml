@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  A NOTAMN
+  Q) EAAD/QMXLT/IV/M/A/000/999/5225N03842W005
+  A) EADF B) 2611250000 C) 2611252359
+  E) TWY B now available for landplanes acft with wingspan equal to or more than 52m taxiing
+  Only with follow-me car or marshaller assistance.
+-->
+
+<message:AIXMBasicMessage 
+  xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+  xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+  http://www.aixm.aero/schema/5.1.1/event https://aixm.aero/schema/5.1.1/event/version_5.1.1-k/Event_Features.xsd"
+  gml:id="DN_TWY.LIM_4_additionally_allowed_for-06">
+  
+  <message:hasMember>
+    <event:Event gml:id="uuid.ad24a764-51ab-479e-a8fe-88f07cba4f06">
+      <gml:identifier codeSpace="urn:uuid:">ad24a764-51ab-479e-a8fe-88f07cba4f06</gml:identifier>
+      <event:timeSlice>
+        <event:EventTimeSlice gml:id="id_3ee4010f-cc4a-4f54-8f44-249dc988e7bb_1_0_B">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_3ee4010f-cc4a-4f54-8f44-249dc988e7bb_1_0_B_1">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="id_3ee4010f-cc4a-4f54-8f44-249dc988e7bb_1_0_B_2">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <event:name>EADF B</event:name>
+          <event:designator>DNOTAM</event:designator>
+          <event:scenario>TWY.LIM</event:scenario>
+          <event:version>2.0</event:version>
+          <event:estimatedValidity xsi:nil="true"/>
+          <event:activity xsi:nil="true"/>
+          <event:summary xsi:nil="true"/>
+          <event:concernedAirspace xlink:href="urn:uuid:bfccfb05-2b79-4105-99aa-3cf2602f7c2e" xlink:title="EAAD FIR AMSWELL FIR" xlink:type="simple"/>
+          <event:concernedAirportHeliport xlink:href="urn:uuid:3ac31a6b-c032-4af4-bc5d-0d01d265827b" xlink:title="EADF DONLON/INTL." xlink:type="simple"/>
+          <event:parentEvent xsi:nil="true"/>
+          <event:causeEvent xsi:nil="true"/>
+          <event:container xsi:nil="true"/>
+          <event:notification>
+            <event:NOTAM gml:id="id_3ee4010f-cc4a-4f54-8f44-249dc988e7bb_1_0_B_3">
+              <event:series>A</event:series>
+              <event:publisher xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+              <event:type>N</event:type>
+              <event:affectedFIR>EAAD</event:affectedFIR>
+              <event:selectionCode>QMXLT</event:selectionCode>
+              <event:traffic>IV</event:traffic>
+              <event:purpose>M</event:purpose>
+              <event:scope>A</event:scope>
+              <event:minimumFL uom="FL">000</event:minimumFL>
+              <event:maximumFL uom="FL">999</event:maximumFL>
+              <event:coordinates>5225N03842W</event:coordinates>
+              <event:radius uom="NM">005</event:radius>
+              <event:location>EADF</event:location>
+              <event:effectiveStart>2611250000</event:effectiveStart>
+              <event:effectiveEnd>2611252359</event:effectiveEnd>
+              <event:estimatedEnd>NO</event:estimatedEnd>
+              <event:permanent>NO</event:permanent>
+              <event:text lang="ENG">TWY B now available for acft with wingspan equal to or more than 52m taxiing
+Only with follow-me car or marshaller assistance.</event:text>
+            </event:NOTAM>
+          </event:notification>
+          <event:provider xlink:href="urn:uuid:b5dff1da-26c7-46c5-a45d-f3b458852026" xlink:title="LIIA NOF" xlink:type="simple"/>
+          <event:annotation xsi:nil="true"/>
+        </event:EventTimeSlice>
+      </event:timeSlice>
+    </event:Event>
+  </message:hasMember>
+  
+  <!-- Taxiway B -->
+  <message:hasMember>
+    <aixm:Taxiway gml:id="uuid.457d9d46-1ca1-46a4-8441-e87433f9b555">
+      <gml:identifier codeSpace="urn:uuid:">457d9d46-1ca1-46a4-8441-e87433f9b555</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayTimeSlice gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_1">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline status of the taxiway -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_2">
+              <aixm:timeInterval xsi:nil="true"/>
+              <aixm:annotation xsi:nil="true"/>
+              <aixm:specialDateAuthority xsi:nil="true"/>
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+              <aixm:warning xsi:nil="true" nilReason="inapplicable"/>
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_3">
+                  <aixm:type>FORBID</aixm:type>
+                  <aixm:priorPermission xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:contact xsi:nil="true" nilReason="inapplicable"/>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_4">
+                      <aixm:timeInterval xsi:nil="true"/>
+                      <aixm:annotation xsi:nil="true"/>
+                      <aixm:specialDateAuthority xsi:nil="true"/>
+                      <aixm:logicalOperator>OR</aixm:logicalOperator>
+                      <aixm:weather xsi:nil="true"/>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_5">
+                          <aixm:classWingSpan>V</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_6">
+                          <aixm:classWingSpan>VI</aixm:classWingSpan>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                      <aixm:flight xsi:nil="true"/>
+                      <aixm:subCondition xsi:nil="true"/>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:annotation xsi:nil="true"/>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The availability status of the taxiway during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_7">
+              <!-- Note -->
+              <aixm:annotation>
+                <aixm:Note gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_8">
+                  <aixm:purpose>REMARK</aixm:purpose>
+                  <aixm:translatedNote>
+                    <aixm:LinguisticNote gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_9">
+                      <aixm:note>Only with follow-me car or marshaller assistance</aixm:note>
+                    </aixm:LinguisticNote>
+                  </aixm:translatedNote>
+                </aixm:Note>
+              </aixm:annotation>
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
+              <!-- Limitation -->
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_10">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_11">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_12">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayExtension gml:id="id_502982a2-29f3-4bc8-b933-02363da509a2_2_0_T_13">
+              <event:theEvent xlink:href="urn:uuid:ad24a764-51ab-479e-a8fe-88f07cba4f06" xlink:title="EADF B DNOTAM TWY.LIM" xlink:type="simple"/>
+            </event:TaxiwayExtension>
+          </aixm:extension>
+        </aixm:TaxiwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Taxiway>
+  </message:hasMember>
+  
+  <!-- Affected TaxiwayElements of TWY B -->
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.41e614a7-3fe4-487a-a90a-4781d454b0ec">
+      <gml:identifier codeSpace="urn:uuid:">41e614a7-3fe4-487a-a90a-4781d454b0ec</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_4cd6495a-df10-4895-a859-127338be91bd_2_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_4cd6495a-df10-4895-a859-127338be91bd_2_0_T_1">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_4cd6495a-df10-4895-a859-127338be91bd_2_0_T_2">
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
+              <!-- Limitation -->
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_4cd6495a-df10-4895-a859-127338be91bd_2_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_4cd6495a-df10-4895-a859-127338be91bd_2_0_T_4">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_4cd6495a-df10-4895-a859-127338be91bd_2_0_T_5">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_4cd6495a-df10-4895-a859-127338be91bd_2_0_T_6">
+              <event:theEvent xlink:href="urn:uuid:ad24a764-51ab-479e-a8fe-88f07cba4f06" xlink:title="EADF B DNOTAM TWY.LIM" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.0a001faf-a047-4721-b56a-a5d8bbce8703">
+      <gml:identifier codeSpace="urn:uuid:">0a001faf-a047-4721-b56a-a5d8bbce8703</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_75657d19-d729-41b3-b06f-cc8232a251c4_2_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_75657d19-d729-41b3-b06f-cc8232a251c4_2_0_T_1">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_75657d19-d729-41b3-b06f-cc8232a251c4_2_0_T_2">
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
+              <!-- Limitation -->
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_75657d19-d729-41b3-b06f-cc8232a251c4_2_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_75657d19-d729-41b3-b06f-cc8232a251c4_2_0_T_4">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_75657d19-d729-41b3-b06f-cc8232a251c4_2_0_T_5">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_75657d19-d729-41b3-b06f-cc8232a251c4_2_0_T_6">
+              <event:theEvent xlink:href="urn:uuid:ad24a764-51ab-479e-a8fe-88f07cba4f06" xlink:title="EADF B DNOTAM TWY.LIM" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.fe386003-c1f6-49e1-afd6-a09e8d16cc43">
+      <gml:identifier codeSpace="urn:uuid:">fe386003-c1f6-49e1-afd6-a09e8d16cc43</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_1438692e-9aa1-4cf2-b190-3ec02e9b5ba3_2_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_1438692e-9aa1-4cf2-b190-3ec02e9b5ba3_2_0_T_1">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_1438692e-9aa1-4cf2-b190-3ec02e9b5ba3_2_0_T_2">
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
+              <!-- Limitation -->
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_1438692e-9aa1-4cf2-b190-3ec02e9b5ba3_2_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_1438692e-9aa1-4cf2-b190-3ec02e9b5ba3_2_0_T_4">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_1438692e-9aa1-4cf2-b190-3ec02e9b5ba3_2_0_T_5">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_1438692e-9aa1-4cf2-b190-3ec02e9b5ba3_2_0_T_6">
+              <event:theEvent xlink:href="urn:uuid:ad24a764-51ab-479e-a8fe-88f07cba4f06" xlink:title="EADF B DNOTAM TWY.LIM" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.f87456b8-d4ba-4b03-86d1-d7fffc2c6ffc">
+      <gml:identifier codeSpace="urn:uuid:">f87456b8-d4ba-4b03-86d1-d7fffc2c6ffc</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_02d55ba8-aa1f-406b-975b-b8a16df144ab_2_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_02d55ba8-aa1f-406b-975b-b8a16df144ab_2_0_T_1">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_02d55ba8-aa1f-406b-975b-b8a16df144ab_2_0_T_2">
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
+              <!-- Limitation -->
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_02d55ba8-aa1f-406b-975b-b8a16df144ab_2_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_02d55ba8-aa1f-406b-975b-b8a16df144ab_2_0_T_4">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_02d55ba8-aa1f-406b-975b-b8a16df144ab_2_0_T_5">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_02d55ba8-aa1f-406b-975b-b8a16df144ab_2_0_T_6">
+              <event:theEvent xlink:href="urn:uuid:ad24a764-51ab-479e-a8fe-88f07cba4f06" xlink:title="EADF B DNOTAM TWY.LIM" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.af09cedc-88f9-41ec-ba36-14d21118efb5">
+      <gml:identifier codeSpace="urn:uuid:">af09cedc-88f9-41ec-ba36-14d21118efb5</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_829ef3ad-1a6b-4ef4-a6eb-33e73c9aefb6_2_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_829ef3ad-1a6b-4ef4-a6eb-33e73c9aefb6_2_0_T_1">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_829ef3ad-1a6b-4ef4-a6eb-33e73c9aefb6_2_0_T_2">
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
+              <!-- Limitation -->
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_829ef3ad-1a6b-4ef4-a6eb-33e73c9aefb6_2_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_829ef3ad-1a6b-4ef4-a6eb-33e73c9aefb6_2_0_T_4">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_829ef3ad-1a6b-4ef4-a6eb-33e73c9aefb6_2_0_T_5">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_829ef3ad-1a6b-4ef4-a6eb-33e73c9aefb6_2_0_T_6">
+              <event:theEvent xlink:href="urn:uuid:ad24a764-51ab-479e-a8fe-88f07cba4f06" xlink:title="EADF B DNOTAM TWY.LIM" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.006c217c-e05a-44dd-bd8a-715494087767">
+      <gml:identifier codeSpace="urn:uuid:">006c217c-e05a-44dd-bd8a-715494087767</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="id_f51e369f-fb73-47cc-b3c5-344da4042c6f_2_0_T">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="id_f51e369f-fb73-47cc-b3c5-344da4042c6f_2_0_T_1">
+              <gml:beginPosition>2026-11-25T00:00:00Z</gml:beginPosition>
+              <gml:endPosition>2026-11-26T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+          <aixm:sequenceNumber>2</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <!-- The baseline data of this TaxiwayElement has no ManoeuvringAreaAvailability -->
+          <!-- The availability status of the taxiway element during the event -->
+          <aixm:availability>
+            <aixm:ManoeuvringAreaAvailability gml:id="id_f51e369f-fb73-47cc-b3c5-344da4042c6f_2_0_T_2">
+              <aixm:operationalStatus>OTHER:EXTENDED</aixm:operationalStatus>
+              <!-- Limitation -->
+              <aixm:usage>
+                <aixm:ManoeuvringAreaUsage gml:id="id_f51e369f-fb73-47cc-b3c5-344da4042c6f_2_0_T_3">
+                  <aixm:type>PERMIT</aixm:type>
+                  <aixm:selection>
+                    <aixm:ConditionCombination gml:id="id_f51e369f-fb73-47cc-b3c5-344da4042c6f_2_0_T_4">
+                      <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                      <aixm:aircraft>
+                        <aixm:AircraftCharacteristic gml:id="id_f51e369f-fb73-47cc-b3c5-344da4042c6f_2_0_T_5">
+                          <aixm:wingSpan uom="M">52</aixm:wingSpan>
+                          <aixm:wingSpanInterpretation>AT_OR_ABOVE</aixm:wingSpanInterpretation>
+                        </aixm:AircraftCharacteristic>
+                      </aixm:aircraft>
+                    </aixm:ConditionCombination>
+                  </aixm:selection>
+                  <aixm:operation>TAXIING</aixm:operation>
+                </aixm:ManoeuvringAreaUsage>
+              </aixm:usage>
+            </aixm:ManoeuvringAreaAvailability>
+          </aixm:availability>
+          <!-- The link to the event -->
+          <aixm:extension>
+            <event:TaxiwayElementExtension gml:id="id_f51e369f-fb73-47cc-b3c5-344da4042c6f_2_0_T_6">
+              <event:theEvent xlink:href="urn:uuid:ad24a764-51ab-479e-a8fe-88f07cba4f06" xlink:title="EADF B DNOTAM TWY.LIM" xlink:type="simple"/>
+            </event:TaxiwayElementExtension>
+          </aixm:extension>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  
+</message:AIXMBasicMessage>
